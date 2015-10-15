@@ -17,8 +17,8 @@
  * ndnSIM, e.g., in COPYING.md file.  If not, see <http://www.gnu.org/licenses/>.
  **/
 
-#ifndef NDN_PRODUCER_H
-#define NDN_PRODUCER_H
+#ifndef NDN_PRODUCER_SPONTANEOUS_H
+#define NDN_PRODUCER_SPONTANEOUS_H
 
 #include "ns3/ndnSIM/model/ndn-common.hpp"
 
