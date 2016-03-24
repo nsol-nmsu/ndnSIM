@@ -50,6 +50,8 @@ Consumer::GetTypeId(void)
     TypeId("ns3::ndn::Consumer")
       .SetGroupName("Ndn")
       .SetParent<App>()
+      //.AddConstructor<Consumer>()
+
       .AddAttribute("StartSeq", "Initial sequence number", IntegerValue(0),
                     MakeIntegerAccessor(&Consumer::m_seq), MakeIntegerChecker<int32_t>())
 
@@ -85,6 +87,10 @@ Consumer::Consumer()
   NS_LOG_FUNCTION_NOARGS();
 
   m_rtt = CreateObject<RttMeanDeviation>();
+}
+
+Consumer::~Consumer()
+{
 }
 
 void

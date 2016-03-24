@@ -57,7 +57,7 @@ public:
    * Sets up randomizer function and packet sequence number
    */
   Consumer();
-  virtual ~Consumer(){};
+  virtual ~Consumer();
 
   // From App
   virtual void

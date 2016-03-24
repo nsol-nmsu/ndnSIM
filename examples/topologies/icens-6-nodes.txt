@@ -1,0 +1,33 @@
+# topo-6-node.txt
+
+#   /------\	                                                /------\
+#   | Con1 |<--+                                            +-->| Con2 |
+#   \------/    \                                          /    \------/
+#            	 \                                        /     
+#                 +-->/------\                 /------\<-+      
+#                     | Rtr1 |<===============>| Rtr2 |         
+#                 +-->\------/                 \------/<-+      
+#                /                                        \
+#   /------\    /                                          \    /------\
+#   | Pro1 |<--+                                            +-->| Pro2 |
+#   \------/                                                    \------/
+
+router
+
+# node  comment     yPos    xPos
+Pro1   NA        1       3
+Con1   NA        3       3
+Rtr1   NA        2       5
+Rtr2   NA        2       7
+Pro2   NA        1       9
+Con2   NA        3       9
+
+link
+
+# srcNode   dstNode     bandwidth   metric  delay   queue
+Pro1        Rtr1        10Mbps      1        10ms    20
+Con1        Rtr1        10Mbps      1        10ms    20
+Rtr1        Rtr2        10Mbps      1        10ms    20
+Pro2        Rtr2        10Mbps      1        10ms    20
+Con2        Rtr2        10Mbps      1        10ms    20
+

@@ -57,7 +57,7 @@ public:
    * Sets up randomizer function and packet sequence number
    */
   Subscriber();
-  virtual ~Subscriber(){};
+  virtual ~Subscriber();
 
   // From App
   virtual void
@@ -68,6 +68,19 @@ public:
    */
   void
   SendPacket();
+
+   /**
+   * @brief An event that is fired just before an Interest packet is actually send out (send is
+   *inevitable)
+   *
+   * The reason for "before" even is that in certain cases (when it is possible to satisfy from the
+   *local cache),
+   * the send call will immediately return data, and if "after" even was used, this after would be
+   *called after
+   * all processing of incoming data, potentially producing unexpected results.
+   */
+  virtual void
+  WillSendOutInterest(uint32_t sequenceNumber);
 
 protected:
   // from App
@@ -93,6 +106,63 @@ protected:
   Name m_interestName;     ///< \brief NDN Name of the Interest (use Name)
   Time m_interestLifeTime; ///< \brief LifeTime for interest packet
   bool m_firstTime;
+
+//--------------------------DAN started
+
+  Ptr<RttEstimator> m_rtt; ///< @brief RTT estimator
+
+  /**
+   * \struct This struct contains a pair of packet sequence number and its timeout
+   */
+  struct SeqTimeout {
+    SeqTimeout(uint32_t _seq, Time _time)
+      : seq(_seq)
+      , time(_time)
+    {
+    }
+
+    uint32_t seq;
+    Time time;
+  };
+  /// @endcond
+
+  /// @cond include_hidden
+  class i_seq {
+  };
+  class i_timestamp {
+  };
+  /// @endcond
+
+  /// @cond include_hidden
+   /**
+   * \struct This struct contains a multi-index for the set of SeqTimeout structs
+   */
+  struct SeqTimeoutsContainer
+    : public boost::multi_index::
+        multi_index_container<SeqTimeout,
+                              boost::multi_index::
+                                indexed_by<boost::multi_index::
+                                             ordered_unique<boost::multi_index::tag<i_seq>,
+                                                            boost::multi_index::
+                                                              member<SeqTimeout, uint32_t,
+                                                                     &SeqTimeout::seq>>,
+                                           boost::multi_index::
+                                             ordered_non_unique<boost::multi_index::
+                                                                  tag<i_timestamp>,
+                                                                boost::multi_index::
+                                                                  member<SeqTimeout, Time,
+                                                                         &SeqTimeout::time>>>> {
+  };
+
+  SeqTimeoutsContainer m_seqTimeouts; ///< \brief multi-index for the set of SeqTimeout structs
+
+  SeqTimeoutsContainer m_seqLastDelay;
+  SeqTimeoutsContainer m_seqFullDelay;
+
+  std::map<uint32_t, uint32_t> m_seqRetxCounts;
+
+//--------------------------DAN ended
+
 };
 
 } // namespace ndn

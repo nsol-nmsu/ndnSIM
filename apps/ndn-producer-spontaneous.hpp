@@ -44,15 +44,15 @@ public:
 
   SpontaneousProducer();
   
+  // inherited from NdnApp
+  virtual void
+  OnInterest(shared_ptr<const Interest> interest);
+
   void
   SendData(const Name &dataName);
   
   void
   SendTimeout();
-
-  // inherited from NdnApp
-  virtual void
-  OnInterest(shared_ptr<const Interest> interest);
 
 protected:
   // inherited from Application base class.
@@ -69,6 +69,8 @@ private:
   Time m_freshness;
   Time m_frequency;
   EventId m_txEvent;
+  bool m_firstTime;
+  uint32_t m_subscription;
 
   uint32_t m_signature;
   Name m_keyLocator;

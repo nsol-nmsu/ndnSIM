@@ -95,6 +95,7 @@ Producer::StopApplication()
 void
 Producer::OnInterest(shared_ptr<const Interest> interest)
 {
+
   App::OnInterest(interest); // tracing inside
 
   NS_LOG_FUNCTION(this << interest);

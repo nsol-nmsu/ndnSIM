@@ -59,7 +59,7 @@ SpontaneousProducer::GetTypeId(void)
                     TimeValue(Seconds(0)), MakeTimeAccessor(&SpontaneousProducer::m_freshness),
                     MakeTimeChecker())
       .AddAttribute("Frequency", "Frequency of data packets, if 0, then no spontaneous publish",
-                    TimeValue(Seconds(60)), MakeTimeAccessor(&SpontaneousProducer::m_frequency),
+                    TimeValue(Seconds(5)), MakeTimeAccessor(&SpontaneousProducer::m_frequency),
                     MakeTimeChecker())
       .AddAttribute(
          "Signature",
@@ -73,6 +73,8 @@ SpontaneousProducer::GetTypeId(void)
 }
 
 SpontaneousProducer::SpontaneousProducer()
+  :m_firstTime(true)
+  , m_subscription(0)
 {
   NS_LOG_FUNCTION_NOARGS();
 }
@@ -98,16 +100,48 @@ SpontaneousProducer::StopApplication()
 }
 
 void
+SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
+{
+
+  NS_LOG_INFO("SUBSCRIPTION value = " << interest->getSubscription());
+
+  App::OnInterest(interest); // tracing inside
+
+  NS_LOG_FUNCTION(this << interest);
+
+  if (!m_active)
+    return;
+
+  //Send data if there's a subscription
+  m_subscription = interest->getSubscription();
+
+  if (m_subscription == 1) {
+        SendData(interest->getName());
+  }
+
+}
+
+void
 SpontaneousProducer::SendTimeout(){
-        SendData(m_prefix);
-        if(m_frequency != 0){
-                m_txEvent = Simulator::Schedule(m_frequency, &SpontaneousProducer::SendTimeout, this);
+        //Do not send initial data before scheduling with the input frequency
+        if(m_firstTime) {
+            m_firstTime = false;
         }
+        else {
+	    //Only send data for subscription value of 1
+	    if (m_subscription == 1)
+	    	SendData(m_prefix);
+	}
+        if(m_frequency != 0){
+               	m_txEvent = Simulator::Schedule(m_frequency, &SpontaneousProducer::SendTimeout, this);
+        }
+
 }
 
 void
 SpontaneousProducer::SendData(const Name &dataName)
 {
+
 
   if (!m_active)
     return;
@@ -136,19 +170,7 @@ SpontaneousProducer::SendData(const Name &dataName)
 
   m_transmittedDatas(data, this, m_face);
   m_face->onReceiveData(*data);
-}
 
-void
-SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
-{
-  App::OnInterest(interest); // tracing inside
-
-  NS_LOG_FUNCTION(this << interest);
-
-  if (!m_active)
-    return;
-
-  SendData(interest->getName());
 }
 
 } // namespace ndn

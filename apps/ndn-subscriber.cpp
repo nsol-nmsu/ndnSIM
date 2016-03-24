@@ -31,6 +31,7 @@
 
 #include "utils/ndn-ns3-packet-tag.hpp"
 #include "model/ndn-app-face.hpp"
+#include "utils/ndn-rtt-mean-deviation.hpp"
 
 #include <boost/lexical_cast.hpp>
 #include <boost/ref.hpp>
@@ -49,6 +50,8 @@ Subscriber::GetTypeId(void)
     TypeId("ns3::ndn::Subscriber")
       .SetGroupName("Ndn")
       .SetParent<App>()
+      .AddConstructor<Subscriber>()
+
       .AddAttribute("StartSeq", "Initial sequence number", IntegerValue(0),
                     MakeIntegerAccessor(&Subscriber::m_seq), MakeIntegerChecker<int32_t>())
       .AddAttribute("Prefix", "Name of the Interest", StringValue("/"),
@@ -57,7 +60,7 @@ Subscriber::GetTypeId(void)
                     MakeTimeAccessor(&Subscriber::m_interestLifeTime), MakeTimeChecker())
       .AddAttribute("TxTimer",
                     "Timeout defining how frequently subscription should be reinforced",
-                    StringValue("60s"),
+		    TimeValue(Seconds(9)),
                     MakeTimeAccessor(&Subscriber::m_txInterval), MakeTimeChecker())
       ;
 
@@ -65,24 +68,33 @@ Subscriber::GetTypeId(void)
 }
 
 Subscriber::Subscriber()
-  : m_rand(CreateObject<UniformRandomVariable>())
-  , m_seq(0)
-  , m_seqMax(0) // don't request anything
-  , m_firstTime (true)
+    : m_rand(CreateObject<UniformRandomVariable>())
+    , m_seq(0)
+    , m_seqMax(std::numeric_limits<uint32_t>::max()) // set to max value on uint32
+    , m_firstTime (true)
+
 {
   NS_LOG_FUNCTION_NOARGS();
+
+  m_rtt = CreateObject<RttMeanDeviation>();
 }
+
+
+Subscriber::~Subscriber()
+{
+}
+
 
 void
 Subscriber::ScheduleNextPacket()
 {
-
   if (m_firstTime) {
     m_sendEvent = Simulator::Schedule(Seconds(0.0), &Subscriber::SendPacket, this);
     m_firstTime = false;
   }
-  else if (!m_sendEvent.IsRunning())
-    m_sendEvent = Simulator::Schedule(Seconds(m_txInterval), &Subscriber::SendPacket, this);
+  else if (!m_sendEvent.IsRunning()) {
+    m_sendEvent = Simulator::Schedule(m_txInterval, &Subscriber::SendPacket, this);
+  }
 }
 
 void
@@ -104,6 +116,7 @@ Subscriber::StopApplication() // Called at time specified by Stop
 void
 Subscriber::SendPacket()
 {
+
   if (!m_active)
     return;
 
@@ -121,7 +134,7 @@ Subscriber::SendPacket()
 
   //
   shared_ptr<Name> nameWithSequence = make_shared<Name>(m_interestName);
-  // nameWithSequence->appendSequenceNumber(seq);
+  //nameWithSequence->appendSequenceNumber(seq);
   //
 
   shared_ptr<Interest> interest = make_shared<Interest>();
@@ -132,12 +145,17 @@ Subscriber::SendPacket()
   interest->setInterestLifetime(interestLifeTime);
 
   // NS_LOG_INFO ("Requesting Interest: \n" << *interest);
-  NS_LOG_INFO("> Interest for " << seq);
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > Interest for " << interest->getName());
 
+  WillSendOutInterest(seq);
+
+  m_transmittedInterests(interest, this, m_face);
   m_face->onReceiveInterest(*interest);
 
   ScheduleNextPacket();
+
 }
+
 
 ///////////////////////////////////////////////////
 //          Process incoming packets             //
@@ -153,20 +171,30 @@ Subscriber::OnData(shared_ptr<const Data> data)
 
   NS_LOG_FUNCTION(this << data);
 
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << data->getName());
+
   // NS_LOG_INFO ("Received content object: " << boost::cref(*data));
 
-  /*
-  int hopCount = 0;
-  auto ns3PacketTag = data->getTag<Ns3PacketTag>();
-  if (ns3PacketTag != nullptr) { // e.g., packet came from local node's cache
-    FwHopCountTag hopCountTag;
-    if (ns3PacketTag->getPacket()->PeekPacketTag(hopCountTag)) {
-      hopCount = hopCountTag.Get();
-      NS_LOG_DEBUG("Hop count: " << hopCount);
-    }
-  }
-  */
+
   
+}
+
+void
+Subscriber::WillSendOutInterest(uint32_t sequenceNumber)
+{
+  NS_LOG_DEBUG("Trying to add " << sequenceNumber << " with " << Simulator::Now() << ". already "
+                                << m_seqTimeouts.size() << " items");
+
+  m_seqTimeouts.insert(SeqTimeout(sequenceNumber, Simulator::Now()));
+  m_seqFullDelay.insert(SeqTimeout(sequenceNumber, Simulator::Now()));
+
+  m_seqLastDelay.erase(sequenceNumber);
+  m_seqLastDelay.insert(SeqTimeout(sequenceNumber, Simulator::Now()));
+
+  m_seqRetxCounts[sequenceNumber]++;
+
+  m_rtt->SentSeq(SequenceNumber32(sequenceNumber), 1);
+
 }
 
 
