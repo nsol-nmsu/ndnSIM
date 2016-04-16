@@ -86,8 +86,10 @@ SpontaneousProducer::StartApplication()
   NS_LOG_FUNCTION_NOARGS();
   App::StartApplication();
 
+  m_prefixWithoutSequence = m_prefix; //store prefix without sequence using to be used in log output
+
   FibHelper::AddRoute(GetNode(), m_prefix, m_face, 0);
-  
+
   SendTimeout();
 }
 
@@ -115,8 +117,10 @@ SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
   //Send data if there's a subscription
   m_subscription = interest->getSubscription();
 
-  if (m_subscription == 1) {
-        SendData(interest->getName());
+  m_prefix = interest->getName();
+
+  if (m_subscription == 0) {
+        SendData(m_prefix);
   }
 
 }
@@ -142,7 +146,6 @@ void
 SpontaneousProducer::SendData(const Name &dataName)
 {
 
-
   if (!m_active)
     return;
 
@@ -163,7 +166,7 @@ SpontaneousProducer::SendData(const Name &dataName)
 
   data->setSignature(signature);
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending Data: " << data->getName());
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending Data: " << m_prefixWithoutSequence /*data->getName()*/);
 
   // to create real wire encoding
   data->wireEncode();

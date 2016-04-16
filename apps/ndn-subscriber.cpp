@@ -62,6 +62,22 @@ Subscriber::GetTypeId(void)
                     "Timeout defining how frequently subscription should be reinforced",
 		    TimeValue(Seconds(9)),
                     MakeTimeAccessor(&Subscriber::m_txInterval), MakeTimeChecker())
+
+      .AddAttribute("RetxTimer",
+                    "Timeout defining how frequent retransmission timeouts should be checked",
+                    StringValue("50ms"),
+                    MakeTimeAccessor(&Subscriber::GetRetxTimer, &Subscriber::SetRetxTimer),
+                    MakeTimeChecker())
+
+      .AddTraceSource("LastRetransmittedInterestDataDelay",
+                      "Delay between last retransmitted Interest and received Data",
+                      MakeTraceSourceAccessor(&Subscriber::m_lastRetransmittedInterestDataDelay),
+                      "ns3::ndn::Subscriber::LastRetransmittedInterestDataDelayCallback")
+
+      .AddTraceSource("FirstInterestDataDelay",
+                      "Delay between first transmitted Interest and received Data",
+                      MakeTraceSourceAccessor(&Subscriber::m_firstInterestDataDelay),
+                      "ns3::ndn::Subscriber::FirstInterestDataDelayCallback");
       ;
 
   return tid;
@@ -97,6 +113,52 @@ Subscriber::ScheduleNextPacket()
   }
 }
 
+
+void
+Subscriber::SetRetxTimer(Time retxTimer)
+{
+  m_retxTimer = retxTimer;
+  if (m_retxEvent.IsRunning()) {
+    // m_retxEvent.Cancel (); // cancel any scheduled cleanup events
+    Simulator::Remove(m_retxEvent); // slower, but better for memory
+  }
+
+  // schedule even with new timeout
+  m_retxEvent = Simulator::Schedule(m_retxTimer, &Subscriber::CheckRetxTimeout, this);
+}
+
+Time
+Subscriber::GetRetxTimer() const
+{
+  return m_retxTimer;
+}
+
+void
+Subscriber::CheckRetxTimeout()
+{
+  Time now = Simulator::Now();
+
+  Time rto = m_rtt->RetransmitTimeout();
+  // NS_LOG_DEBUG ("Current RTO: " << rto.ToDouble (Time::S) << "s");
+
+  while (!m_seqTimeouts.empty()) {
+    SeqTimeoutsContainer::index<i_timestamp>::type::iterator entry =
+      m_seqTimeouts.get<i_timestamp>().begin();
+    if (entry->time + rto <= now) // timeout expired?
+    {
+      uint32_t seqNo = entry->seq;
+      m_seqTimeouts.get<i_timestamp>().erase(entry);
+      OnTimeout(seqNo);
+    }
+    else
+      break; // nothing else to do. All later packets need not be retransmitted
+  }
+
+  m_retxEvent = Simulator::Schedule(m_retxTimer, &Subscriber::CheckRetxTimeout, this);
+}
+
+// Application methods
+
 void
 Subscriber::StartApplication()
 {
@@ -124,6 +186,12 @@ Subscriber::SendPacket()
 
   uint32_t seq = std::numeric_limits<uint32_t>::max();
 
+  while (m_retxSeqs.size()) {
+    seq = *m_retxSeqs.begin();
+    m_retxSeqs.erase(m_retxSeqs.begin());
+    break;
+  }
+
   if (m_seqMax != std::numeric_limits<uint32_t>::max()) {
       if (m_seq >= m_seqMax) {
         return;
@@ -134,7 +202,7 @@ Subscriber::SendPacket()
 
   //
   shared_ptr<Name> nameWithSequence = make_shared<Name>(m_interestName);
-  //nameWithSequence->appendSequenceNumber(seq);
+  nameWithSequence->appendSequenceNumber(seq); //required to ndn::AppDelayTracer to calculate RTT
   //
 
   shared_ptr<Interest> interest = make_shared<Interest>();
@@ -145,7 +213,7 @@ Subscriber::SendPacket()
   interest->setInterestLifetime(interestLifeTime);
 
   // NS_LOG_INFO ("Requesting Interest: \n" << *interest);
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > Interest for " << interest->getName());
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > Subscription Interest for " << m_interestName /*interest->getName()*/ );
 
   WillSendOutInterest(seq);
 
@@ -171,12 +239,54 @@ Subscriber::OnData(shared_ptr<const Data> data)
 
   NS_LOG_FUNCTION(this << data);
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << data->getName());
+  // This could be a problem......
+  uint32_t seq = data->getName().at(-1).toSequenceNumber();
 
-  // NS_LOG_INFO ("Received content object: " << boost::cref(*data));
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << m_interestName /*data->getName()*/);
 
+  int hopCount = 0;
+  auto ns3PacketTag = data->getTag<Ns3PacketTag>();
+  if (ns3PacketTag != nullptr) { // e.g., packet came from local node's cache
+    FwHopCountTag hopCountTag;
+    if (ns3PacketTag->getPacket()->PeekPacketTag(hopCountTag)) {
+      hopCount = hopCountTag.Get();
+      NS_LOG_DEBUG("Hop count: " << hopCount);
+    }
+  }
 
-  
+  SeqTimeoutsContainer::iterator entry = m_seqLastDelay.find(seq);
+  if (entry != m_seqLastDelay.end()) {
+    m_lastRetransmittedInterestDataDelay(this, seq, Simulator::Now() - entry->time, hopCount);
+  }
+
+  entry = m_seqFullDelay.find(seq);
+  if (entry != m_seqFullDelay.end()) {
+    m_firstInterestDataDelay(this, seq, Simulator::Now() - entry->time, m_seqRetxCounts[seq], hopCount);
+  }
+
+  m_seqRetxCounts.erase(seq);
+  m_seqFullDelay.erase(seq);
+  m_seqLastDelay.erase(seq);
+
+  m_seqTimeouts.erase(seq);
+  m_retxSeqs.erase(seq);
+
+  m_rtt->AckSeq(SequenceNumber32(seq));
+
+}
+
+void
+Subscriber::OnTimeout(uint32_t sequenceNumber)
+{
+  //NS_LOG_FUNCTION(sequenceNumber);
+  // std::cout << Simulator::Now () << ", TO: " << sequenceNumber << ", current RTO: " <<
+  // m_rtt->RetransmitTimeout ().ToDouble (Time::S) << "s\n";
+
+  m_rtt->IncreaseMultiplier(); // Double the next RTO
+  m_rtt->SentSeq(SequenceNumber32(sequenceNumber),
+                 1); // make sure to disable RTT calculation for this sample
+  m_retxSeqs.insert(sequenceNumber);
+  ScheduleNextPacket();
 }
 
 void

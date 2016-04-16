@@ -71,6 +71,7 @@ private:
   EventId m_txEvent;
   bool m_firstTime;
   uint32_t m_subscription;
+  Name m_prefixWithoutSequence;
 
   uint32_t m_signature;
   Name m_keyLocator;
