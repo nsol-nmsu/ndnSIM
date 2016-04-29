@@ -119,6 +119,7 @@ SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
 
   m_prefix = interest->getName();
 
+  //Normal interest, without a subscription
   if (m_subscription == 0) {
         SendData(m_prefix);
   }
@@ -132,12 +133,18 @@ SpontaneousProducer::SendTimeout(){
             m_firstTime = false;
         }
         else {
-	    //Only send data for subscription value of 1
-	    if (m_subscription == 1)
+	    //Only send data when there is a subscription (1-soft or 2-hard)
+	    if (m_subscription == 1 || m_subscription == 2)
 	    	SendData(m_prefix);
+	    //else
+		//NS_LOG_INFO("COULD NOT SEND DATA, sub value = " << m_subscription);
 	}
+
         if(m_frequency != 0){
-               	m_txEvent = Simulator::Schedule(m_frequency, &SpontaneousProducer::SendTimeout, this);
+		//Do not sechedule anymore is unsubscribe inerest is received
+		if(m_subscription != 3) {
+        		m_txEvent = Simulator::Schedule(m_frequency, &SpontaneousProducer::SendTimeout, this);
+		}
         }
 
 }

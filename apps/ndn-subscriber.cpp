@@ -69,6 +69,9 @@ Subscriber::GetTypeId(void)
                     MakeTimeAccessor(&Subscriber::GetRetxTimer, &Subscriber::SetRetxTimer),
                     MakeTimeChecker())
 
+      .AddAttribute("Subscription", "Subscription value for the interest. 0-normal interest, 1-soft subscribe, 2-hard subscriber, 3-unsubsribe", IntegerValue(2),
+                    MakeIntegerAccessor(&Subscriber::m_subscription), MakeIntegerChecker<int32_t>())
+
       .AddTraceSource("LastRetransmittedInterestDataDelay",
                       "Delay between last retransmitted Interest and received Data",
                       MakeTraceSourceAccessor(&Subscriber::m_lastRetransmittedInterestDataDelay),
@@ -202,18 +205,19 @@ Subscriber::SendPacket()
 
   //
   shared_ptr<Name> nameWithSequence = make_shared<Name>(m_interestName);
-  nameWithSequence->appendSequenceNumber(seq); //required to ndn::AppDelayTracer to calculate RTT
+  //nameWithSequence->appendSequenceNumber(seq); //required to ndn::AppDelayTracer to calculate RTT
   //
 
   shared_ptr<Interest> interest = make_shared<Interest>();
   interest->setNonce(m_rand->GetValue(0, std::numeric_limits<uint32_t>::max()));
   interest->setName(*nameWithSequence);
-  interest->setSubscription(1);
+  interest->setSubscription(m_subscription);
   time::milliseconds interestLifeTime(m_interestLifeTime.GetMilliSeconds());
   interest->setInterestLifetime(interestLifeTime);
 
   // NS_LOG_INFO ("Requesting Interest: \n" << *interest);
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > Subscription Interest for " << m_interestName /*interest->getName()*/ );
+
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > Subscription Interest for " << interest->getName() /*m_interestName*/ );
 
   WillSendOutInterest(seq);
 
@@ -240,9 +244,10 @@ Subscriber::OnData(shared_ptr<const Data> data)
   NS_LOG_FUNCTION(this << data);
 
   // This could be a problem......
-  uint32_t seq = data->getName().at(-1).toSequenceNumber();
+  //uint32_t seq = data->getName().at(-1).toSequenceNumber();
 
   NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << m_interestName /*data->getName()*/);
+
 
   int hopCount = 0;
   auto ns3PacketTag = data->getTag<Ns3PacketTag>();
@@ -254,6 +259,7 @@ Subscriber::OnData(shared_ptr<const Data> data)
     }
   }
 
+/*
   SeqTimeoutsContainer::iterator entry = m_seqLastDelay.find(seq);
   if (entry != m_seqLastDelay.end()) {
     m_lastRetransmittedInterestDataDelay(this, seq, Simulator::Now() - entry->time, hopCount);
@@ -272,7 +278,7 @@ Subscriber::OnData(shared_ptr<const Data> data)
   m_retxSeqs.erase(seq);
 
   m_rtt->AckSeq(SequenceNumber32(seq));
-
+*/
 }
 
 void

@@ -120,20 +120,23 @@ main(int argc, char* argv[])
 
   // Subscriber
   ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
+
   // Subscriber send out subscription interest for a prefix...
   consumerHelper.SetPrefix("/icens/node2");
   consumerHelper.SetAttribute("TxTimer", StringValue("2")); //resend subscription interest every 5 seconds
+  consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
   consumerHelper.Install(nodes.Get(0));
 
-/*
+
   consumerHelper.SetPrefix("/icens/node2");
   consumerHelper.SetAttribute("TxTimer", StringValue("2")); //resend subscription interest every 5 seconds
-  consumerHelper.Install(nodes.Get(1));
-*/
+  consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
+  consumerHelper.Install(nodes.Get(3));
+
 
   Simulator::Stop(Seconds(4.0));
 
-  ndn::AppDelayTracer::InstallAll("icens-delay-trace.txt");
+  ndn::AppDelayTracer::InstallAll("icens-delay-trace.txt"); //calculate RTT for packets and save into file, valid for only interests with sequence
 
   Simulator::Run();
   Simulator::Destroy();

@@ -136,7 +136,7 @@ protected:
   Name m_interestName;     ///< \brief NDN Name of the Interest (use Name)
   Time m_interestLifeTime; ///< \brief LifeTime for interest packet
   bool m_firstTime;
-
+  uint32_t m_subscription; //subscription value set by the application
 
   Ptr<RttEstimator> m_rtt; ///< @brief RTT estimator
 
