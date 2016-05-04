@@ -75,6 +75,7 @@ SpontaneousProducer::GetTypeId(void)
 SpontaneousProducer::SpontaneousProducer()
   :m_firstTime(true)
   , m_subscription(0)
+  , m_receivedpayload(0)
 {
   NS_LOG_FUNCTION_NOARGS();
 }
@@ -105,7 +106,7 @@ void
 SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
 {
 
-  NS_LOG_INFO("SUBSCRIPTION value = " << interest->getSubscription());
+  NS_LOG_INFO("SUBSCRIPTION value = " << interest->getSubscription() << " & PAYLOAD = " << interest->getPayloadLength() << "bytes");
 
   App::OnInterest(interest); // tracing inside
 
@@ -116,6 +117,7 @@ SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
 
   //Send data if there's a subscription
   m_subscription = interest->getSubscription();
+  m_receivedpayload = interest->getPayloadLength();
 
   m_prefix = interest->getName();
 
@@ -136,15 +138,10 @@ SpontaneousProducer::SendTimeout(){
 	    //Only send data when there is a subscription (1-soft or 2-hard)
 	    if (m_subscription == 1 || m_subscription == 2)
 	    	SendData(m_prefix);
-	    //else
-		//NS_LOG_INFO("COULD NOT SEND DATA, sub value = " << m_subscription);
 	}
 
         if(m_frequency != 0){
-		//Do not sechedule anymore is unsubscribe inerest is received
-		if(m_subscription != 3) {
-        		m_txEvent = Simulator::Schedule(m_frequency, &SpontaneousProducer::SendTimeout, this);
-		}
+       		m_txEvent = Simulator::Schedule(m_frequency, &SpontaneousProducer::SendTimeout, this);
         }
 
 }
@@ -155,6 +152,11 @@ SpontaneousProducer::SendData(const Name &dataName)
 
   if (!m_active)
     return;
+
+  //send only ACK (payload size = 0) if payloaded interest was received
+  if (m_subscription == 0 && m_receivedpayload > 0) {
+	m_virtualPayloadSize = 0;
+  }
 
   auto data = make_shared<Data>();
   data->setName(dataName);
@@ -173,7 +175,10 @@ SpontaneousProducer::SendData(const Name &dataName)
 
   data->setSignature(signature);
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending Data: " << m_prefixWithoutSequence /*data->getName()*/);
+  if (m_subscription == 0 && m_receivedpayload > 0) 
+  	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending ACK: " << /* m_prefixWithoutSequence */data->getName());
+  else
+	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending Data: " << /* m_prefixWithoutSequence */data->getName());
 
   // to create real wire encoding
   data->wireEncode();

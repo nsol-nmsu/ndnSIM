@@ -1,4 +1,4 @@
-0 con1 physical
-1 rou1 physical
-2 pro1 physical
-3 con1 physical
+0 phy0 physical
+1 agg0 physical
+2 com0 physical
+3 phy1 physical

@@ -77,7 +77,6 @@ main(int argc, char* argv[])
   ndn::GlobalRoutingHelper ndnGlobalRoutingHelper;
   ndnGlobalRoutingHelper.InstallAll();
 
-
   //--- Configure manual/static routes on all nodes
   //--- Install spontaneous producer application for each prefix that a node serves
   ifstream rfile("src/ndnSIM/examples/a-routing.txt", std::ios::in);
@@ -86,7 +85,7 @@ main(int argc, char* argv[])
   int metric;
 
   if (rfile.is_open ()) {
-	// Spontaneuos producer helper
+	// Spontaneous producer helper
 	ndn::AppHelper spHelper("ns3::ndn::SpontaneousProducer");
 
         while (rfile >> strfrom >> prefixtoroute >> strnexthop >> strmetric) {
@@ -100,7 +99,7 @@ main(int argc, char* argv[])
 			 //std::cout << "installing " << prefixtoroute << " on node " << strfrom << std::endl;
 		}
 		else {
-			// Configure statuc route on node
+			// Configure static route on node
 			currentnode = nodes.Get(std::stoi(strfrom)); // node to add route on
 			prefixtoroute = prefixtoroute; // prefix to add route for
 			nexthopnode = nodes.Get(std::stoi(strnexthop));     // next hop node
@@ -118,25 +117,32 @@ main(int argc, char* argv[])
 
   // Installing applications
 
+  // Aggregator
+  ndn::AppHelper aggHelper("ns3::ndn::Aggregator");
+  aggHelper.SetPrefix("/icens/agg0"); //prefix beng served by node
+  aggHelper.SetAttribute("UpstreamPrefix", StringValue("/icens/com0")); //prefix to which aggregated payload interest is forwarded
+  aggHelper.SetAttribute("Frequency",  StringValue("0.5")); //how often to perform payload aggregation
+  aggHelper.SetAttribute("PayloadSize", StringValue("0"));
+  aggHelper.Install(nodes.Get(1));
+
   // Subscriber
   ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
 
   // Subscriber send out subscription interest for a prefix...
-  consumerHelper.SetPrefix("/icens/node2");
-  consumerHelper.SetAttribute("TxTimer", StringValue("2")); //resend subscription interest every 5 seconds
-  consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
+  consumerHelper.SetPrefix("/icens/agg0/node0");
+  consumerHelper.SetAttribute("TxTimer",  StringValue("1")); //resend subscription interest every 5 seconds
+  consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //set the subscription value
   consumerHelper.Install(nodes.Get(0));
 
-
-  consumerHelper.SetPrefix("/icens/node2");
-  consumerHelper.SetAttribute("TxTimer", StringValue("2")); //resend subscription interest every 5 seconds
-  consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
+  consumerHelper.SetPrefix("/icens/agg0/node3");
+  consumerHelper.SetAttribute("TxTimer", StringValue("1")); //resend subscription interest every 5 seconds
+  consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //set the subscription value
   consumerHelper.Install(nodes.Get(3));
 
 
-  Simulator::Stop(Seconds(4.0));
+  Simulator::Stop(Seconds(2.0));
 
-  ndn::AppDelayTracer::InstallAll("icens-delay-trace.txt"); //calculate RTT for packets and save into file, valid for only interests with sequence
+  //ndn::AppDelayTracer::InstallAll("icens-delay-trace.txt");
 
   Simulator::Run();
   Simulator::Destroy();

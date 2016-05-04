@@ -203,21 +203,24 @@ Subscriber::SendPacket()
 
   seq = m_seq++;
 
+  uint8_t payload[1] = {1};
+
   //
   shared_ptr<Name> nameWithSequence = make_shared<Name>(m_interestName);
-  //nameWithSequence->appendSequenceNumber(seq); //required to ndn::AppDelayTracer to calculate RTT
   //
 
   shared_ptr<Interest> interest = make_shared<Interest>();
   interest->setNonce(m_rand->GetValue(0, std::numeric_limits<uint32_t>::max()));
-  interest->setName(*nameWithSequence);
   interest->setSubscription(m_subscription);
+  if (interest->getSubscription() == 0) {
+	nameWithSequence->appendSequenceNumber(seq); //Required for demand-response scheme [payload interest] (also usefule for ndn::AppDelayTracer)
+  	interest->setPayload(payload, 5); //add 3-byte payload to interest
+  }
+  interest->setName(*nameWithSequence);
   time::milliseconds interestLifeTime(m_interestLifeTime.GetMilliSeconds());
   interest->setInterestLifetime(interestLifeTime);
 
-  // NS_LOG_INFO ("Requesting Interest: \n" << *interest);
-
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > Subscription Interest for " << interest->getName() /*m_interestName*/ );
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > sending Interest for " << interest->getName() /*m_interestName*/ << " with Payload = " << interest->getPayloadLength() << "bytes");
 
   WillSendOutInterest(seq);
 
@@ -246,7 +249,7 @@ Subscriber::OnData(shared_ptr<const Data> data)
   // This could be a problem......
   //uint32_t seq = data->getName().at(-1).toSequenceNumber();
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << m_interestName /*data->getName()*/);
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << /*m_interestName*/ data->getName());
 
 
   int hopCount = 0;

@@ -72,6 +72,7 @@ private:
   bool m_firstTime;
   uint32_t m_subscription;
   Name m_prefixWithoutSequence;
+  size_t m_receivedpayload;
 
   uint32_t m_signature;
   Name m_keyLocator;
