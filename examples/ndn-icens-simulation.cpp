@@ -21,16 +21,16 @@ bool PrefixAdded(std::string, std::string);
 // Vectors to store the various node types
 vector<int> com_nodes, agg_nodes, phy_nodes;
 // Vector to store distinct prefixes being served by the node types
-vector<string> com_prefixes;
+vector<string> com_prefixes, agg_prefixes;
 
 int
 main(int argc, char* argv[])
 {
 
   //--- Count the number of nodes to create
-  ifstream nfile ("src/ndnSIM/examples/icens-nodes.txt", std::ios::in);
+  ifstream nfile ("src/ndnSIM/examples/a-nodes.txt", std::ios::in);
   std::string nodeid, nodename, nodetype;
-  int nodecount = 0;
+  int nodecount = 0; //used to create number of nodes in simulation topology
 
   if (nfile.is_open ()) {
   	while (nfile >> nodeid >> nodename >> nodetype) {
@@ -73,7 +73,7 @@ main(int argc, char* argv[])
   PointToPointHelper p2p;
 
   //--- Get the edges of the graph from file and connect them
-  ifstream efile ("src/ndnSIM/examples/icens-edges.txt", std::ios::in);
+  ifstream efile ("src/ndnSIM/examples/a-edges.txt", std::ios::in);
   std::string srcnode, dstnode, bw, delay, edgetype;
 
   if (efile.is_open ()) {
@@ -93,7 +93,7 @@ main(int argc, char* argv[])
 
   //--- Configure manual/static routes on all nodes
   //--- Install spontaneous producer application for each prefix that a node serves
-  ifstream rfile("src/ndnSIM/examples/icens-routing-tables.txt", std::ios::in);
+  ifstream rfile("src/ndnSIM/examples/a-routing.txt", std::ios::in);
   Ptr<Node> currentnode, nexthopnode;
   std::string strfrom, prefixtoroute, strnexthop, strmetric;
   int metric;
@@ -102,31 +102,62 @@ main(int argc, char* argv[])
   if (rfile.is_open ()) {
 	// Spontaneuos producer helper
 	ndn::AppHelper spHelper("ns3::ndn::SpontaneousProducer");
+	ndn::AppHelper aggHelper("ns3::ndn::Aggregator");
 
         while (rfile >> strfrom >> prefixtoroute >> strnexthop >> strmetric) {
 
 		if (strnexthop == "local") {
-			 // Install spontaneous producer on the node for the prefix being served
-			 spHelper.SetPrefix(prefixtoroute);
-  			 spHelper.SetAttribute("Frequency", StringValue("1")); //how many seconds to wait before sending data for subscription interest
-  			 spHelper.SetAttribute("PayloadSize", StringValue("1024"));
-  			 spHelper.Install(nodes.Get(std::stoi(strfrom)));
 
-			// Store the prefix, will be used by physical nodes for subscription requests
+			// Install aggregator app on aggregation nodes only
+			if (prefixtoroute.find("agg") != std::string::npos) {
+  				aggHelper.SetPrefix(prefixtoroute);
+  				aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com")); //prefix to which aggregated payload interest is forwarded
+  				aggHelper.SetAttribute("Frequency",  StringValue("10")); //aggregation payload interests every 20sec
+  				aggHelper.Install(nodes.Get(std::stoi(strfrom)));
+			}
+			else {
+				// Install spontaneous producer on the node for subscription and payload interests served by "direct" (compute and physical nodes)
+				if (prefixtoroute.find("direct") != std::string::npos) {
+                         		spHelper.SetPrefix(prefixtoroute + "/subscription");
+                         		spHelper.SetAttribute("Frequency", StringValue("15")); //how many seconds to wait before sending data for subscription interest
+                         		spHelper.SetAttribute("PayloadSize", StringValue("1024"));
+                         		spHelper.Install(nodes.Get(std::stoi(strfrom)));
+
+					// Install a second spontaneous producer on node to serve error reporting with payload interest
+					spHelper.SetPrefix(prefixtoroute + "/error");
+                                        spHelper.SetAttribute("Frequency", StringValue("0")); //how many seconds to wait before sending data for subscription interest
+                                        spHelper.SetAttribute("PayloadSize", StringValue("1024"));
+                                        spHelper.Install(nodes.Get(std::stoi(strfrom)));
+
+				}
+				else {
+					// Install a second spontaneous producer on node to serve error reporting with payload interest
+					spHelper.SetPrefix(prefixtoroute);
+                                	spHelper.SetAttribute("Frequency", StringValue("15")); //how many seconds to wait before sending data for subscription interest
+                                	spHelper.SetAttribute("PayloadSize", StringValue("1024"));
+                                	spHelper.Install(nodes.Get(std::stoi(strfrom)));
+				}
+
+			}
+
+			// Store the prefixes served by compute nodes, will be used by physical nodes for subscription requests
 			if (ns3::ValidatePrefix(std::stoi(strfrom), prefixtoroute, "com_") == true) {
 				com_prefixes.push_back(prefixtoroute);
 			}
 
-			 //std::cout << "installing " << prefixtoroute << " on node " << strfrom << std::endl;
+			// Store the prefixes served by agg nodes, will be used aggregate interest payloads at aggregation layer
+                        if (ns3::ValidatePrefix(std::stoi(strfrom), prefixtoroute, "agg_") == true) {
+                                agg_prefixes.push_back(prefixtoroute);
+                        }
+
 		}
 		else {
-			// Configure statuc route on node
+			// Configure static route on node
 			currentnode = nodes.Get(std::stoi(strfrom)); // node to add route on
 			prefixtoroute = prefixtoroute; // prefix to add route for
 			nexthopnode = nodes.Get(std::stoi(strnexthop));     // next hop node
 			metric = std::stoi(strmetric);     // metric or cost
 			ndn::FibHelper::AddRoute(currentnode, prefixtoroute, nexthopnode, metric);
-			//std::cout << "configuring static route for prefix " << prefixtoroute << " on node " << strfrom << endl;
 		}
         }
   }
@@ -144,16 +175,48 @@ main(int argc, char* argv[])
   ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
   // Subscriber send out subscription interest for a prefix...
 
-  // Each physical layer node, subscribes to prefixe being served by all computes nodes
+  // Each physical layer node, subscribes to "direct" prefix being served by computes nodes
   for (int i=0; i<(int)com_prefixes.size(); i++) {
-  	for (int j=0; j<(int)phy_nodes.size(); j++) {
-		consumerHelper.SetPrefix(com_prefixes[i]);
-		consumerHelper.SetAttribute("TxTimer", StringValue("15")); //resend subscription interest every 5 seconds
-  		consumerHelper.Install(nodes.Get(phy_nodes[j]));
-  	}
+	//Subscribe to direct prefix
+	if(com_prefixes[i].find("direct") != std::string::npos) {
+  		for (int j=0; j<(int)phy_nodes.size(); j++) {
+			consumerHelper.SetPrefix(com_prefixes[i] + "/subscription");
+			consumerHelper.SetAttribute("TxTimer", StringValue("150")); //resend subscription interest every x seconds
+			consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
+  			consumerHelper.Install(nodes.Get(phy_nodes[j]));
+  		}
+	}
   }
 
-  Simulator::Stop(Seconds(5.0));
+  // Each physical layer node sends payload interests to aggregation layer for smart metering using "overlay" prefix
+  for (int i=0; i<(int)agg_prefixes.size(); i++) {
+  	//Subscribe to overlay prefix
+        if(agg_prefixes[i].find("overlay") != std::string::npos) {
+  		for (int j=0; j<(int)phy_nodes.size(); j++) {
+  			consumerHelper.SetPrefix(agg_prefixes[i] + "/phy" + std::to_string(phy_nodes[j]));
+  			consumerHelper.SetAttribute("TxTimer", StringValue("20")); //resend payload interest every x seconds
+  			consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
+  			consumerHelper.SetAttribute("PayloadSize", StringValue("7")); //payload size in bytes
+  			consumerHelper.Install(nodes.Get(phy_nodes[j]));
+		}
+	}
+  }
+
+  // Each physical layer node, sends payload interest to compute node for error reporting using "direct" prefix
+  for (int i=0; i<(int)com_prefixes.size(); i++) {
+        //Subscribe to direct prefix
+        if(com_prefixes[i].find("direct") != std::string::npos) {
+                for (int j=0; j<(int)phy_nodes.size(); j++) {
+                        consumerHelper.SetPrefix(com_prefixes[i] + "/error");
+                        consumerHelper.SetAttribute("TxTimer", StringValue("10")); //resend subscription interest every x seconds
+                        consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
+			consumerHelper.SetAttribute("PayloadSize", StringValue("6")); //payload size in bytes
+                        consumerHelper.Install(nodes.Get(phy_nodes[j]));
+                }
+        }
+  }
+
+  Simulator::Stop(Seconds(31.0));
 
   Simulator::Run();
   Simulator::Destroy();
@@ -175,7 +238,13 @@ bool ValidatePrefix(int nodeid, std::string prefix, std::string nodetype) {
                 }
         }
 	else if (nodetype == "agg_") {
-
+		for (int i=0; i<(int)agg_nodes.size(); i++) {
+                        if (agg_nodes[i] == nodeid) {
+                                if (PrefixAdded(prefix, nodetype) == false) {
+                                        return true;
+                                }
+                        }
+                }
 	}
         else if (nodetype == "phy_") {
 
@@ -195,7 +264,12 @@ bool PrefixAdded(std::string prefix, std::string nodetype) {
 		}
 	}
 	else if (nodetype == "agg_") {
-
+		// check if prefix is already detected as being served by aggregation node
+                for (int i=0; i<(int)agg_prefixes.size(); i++) {
+                        if (prefix == agg_prefixes[i]) {
+                                return true;
+                        }
+                }
 	}
 	else if (nodetype == "phy_") {
 

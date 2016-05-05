@@ -1,4 +1,9 @@
-0 phy0 physical
-1 agg0 physical
-2 com0 physical
-3 phy1 physical
+0 com_n0 compute
+1 com_n1 compute
+2 com_n2 compute
+3 agg_n0 aggregation
+4 agg_n1 aggregation
+5 phy_0 physical
+6 phy_1 physical
+7 phy_2 physical
+8 phy_3 physical

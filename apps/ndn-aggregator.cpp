@@ -138,7 +138,7 @@ Aggregator::OnInterest(shared_ptr<const Interest> interest)
 void
 Aggregator::ScheduleAggPackets()
 {
-	NS_LOG_FUNCTION_NOARGS();
+	//NS_LOG_FUNCTION_NOARGS();
 
 	if (m_firstTime == true) {
 		m_firstTime = false;

@@ -137,6 +137,7 @@ protected:
   Time m_interestLifeTime; ///< \brief LifeTime for interest packet
   bool m_firstTime;
   uint32_t m_subscription; //subscription value set by the application
+  uint32_t m_virtualPayloadSize; //payload size for interest packet
 
   Ptr<RttEstimator> m_rtt; ///< @brief RTT estimator
 

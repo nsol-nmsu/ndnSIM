@@ -72,6 +72,10 @@ Subscriber::GetTypeId(void)
       .AddAttribute("Subscription", "Subscription value for the interest. 0-normal interest, 1-soft subscribe, 2-hard subscriber, 3-unsubsribe", IntegerValue(2),
                     MakeIntegerAccessor(&Subscriber::m_subscription), MakeIntegerChecker<int32_t>())
 
+      .AddAttribute("PayloadSize", "Virtual payload size for interest packets", UintegerValue(0),
+                    MakeUintegerAccessor(&Subscriber::m_virtualPayloadSize),
+                    MakeUintegerChecker<uint32_t>())
+
       .AddTraceSource("LastRetransmittedInterestDataDelay",
                       "Delay between last retransmitted Interest and received Data",
                       MakeTraceSourceAccessor(&Subscriber::m_lastRetransmittedInterestDataDelay),
@@ -182,6 +186,10 @@ void
 Subscriber::SendPacket()
 {
 
+  //Set default size for payload interets
+  if (m_subscription == 0 && m_virtualPayloadSize == 0)
+	m_virtualPayloadSize = 4;
+
   if (!m_active)
     return;
 
@@ -214,7 +222,7 @@ Subscriber::SendPacket()
   interest->setSubscription(m_subscription);
   if (interest->getSubscription() == 0) {
 	nameWithSequence->appendSequenceNumber(seq); //Required for demand-response scheme [payload interest] (also usefule for ndn::AppDelayTracer)
-  	interest->setPayload(payload, 5); //add 3-byte payload to interest
+  	interest->setPayload(payload, m_virtualPayloadSize); //add payload to interest
   }
   interest->setName(*nameWithSequence);
   time::milliseconds interestLifeTime(m_interestLifeTime.GetMilliSeconds());

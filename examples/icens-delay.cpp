@@ -96,7 +96,6 @@ main(int argc, char* argv[])
   			 spHelper.SetAttribute("Frequency", StringValue("1")); //how many seconds to wait before sending data for subscription interest
   			 spHelper.SetAttribute("PayloadSize", StringValue("1024"));
   			 spHelper.Install(nodes.Get(std::stoi(strfrom)));
-			 //std::cout << "installing " << prefixtoroute << " on node " << strfrom << std::endl;
 		}
 		else {
 			// Configure static route on node
@@ -105,7 +104,6 @@ main(int argc, char* argv[])
 			nexthopnode = nodes.Get(std::stoi(strnexthop));     // next hop node
 			metric = std::stoi(strmetric);     // metric or cost
 			ndn::FibHelper::AddRoute(currentnode, prefixtoroute, nexthopnode, metric);
-			//std::cout << "configuring static route for prefix " << prefixtoroute << " on node " << strfrom << endl;
 		}
         }
   }
@@ -116,7 +114,7 @@ main(int argc, char* argv[])
 
 
   // Installing applications
-
+/*
   // Aggregator
   ndn::AppHelper aggHelper("ns3::ndn::Aggregator");
   aggHelper.SetPrefix("/icens/agg0"); //prefix beng served by node
@@ -124,23 +122,24 @@ main(int argc, char* argv[])
   aggHelper.SetAttribute("Frequency",  StringValue("0.5")); //how often to perform payload aggregation
   aggHelper.SetAttribute("PayloadSize", StringValue("0"));
   aggHelper.Install(nodes.Get(1));
+*/
 
   // Subscriber
   ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
 
   // Subscriber send out subscription interest for a prefix...
-  consumerHelper.SetPrefix("/icens/agg0/node0");
-  consumerHelper.SetAttribute("TxTimer",  StringValue("1")); //resend subscription interest every 5 seconds
-  consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //set the subscription value
-  consumerHelper.Install(nodes.Get(0));
+  consumerHelper.SetPrefix("/overlay/com");
+  consumerHelper.SetAttribute("TxTimer",  StringValue("3")); //resend subscription interest every 5 seconds
+  consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
+  consumerHelper.Install(nodes.Get(5));
 
-  consumerHelper.SetPrefix("/icens/agg0/node3");
+  consumerHelper.SetPrefix("/direct/agg");
   consumerHelper.SetAttribute("TxTimer", StringValue("1")); //resend subscription interest every 5 seconds
-  consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //set the subscription value
-  consumerHelper.Install(nodes.Get(3));
+  consumerHelper.SetAttribute("Subscription", IntegerValue(2)); //set the subscription value
+  consumerHelper.Install(nodes.Get(7));
 
 
-  Simulator::Stop(Seconds(2.0));
+  Simulator::Stop(Seconds(3.0));
 
   //ndn::AppDelayTracer::InstallAll("icens-delay-trace.txt");
 
