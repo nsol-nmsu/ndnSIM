@@ -59,7 +59,7 @@ main(int argc, char* argv[])
 
   // setting default parameters for PointToPoint links and channels
   Config::SetDefault("ns3::PointToPointNetDevice::DataRate", StringValue("1Mbps"));
-  Config::SetDefault("ns3::PointToPointChannel::Delay", StringValue("10ms"));
+  Config::SetDefault("ns3::PointToPointChannel::Delay", StringValue("2ms"));
   Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("20"));
 
   // Read optional command-line parameters (e.g., enable visualizer with ./waf --run=<> --visualize
@@ -255,7 +255,7 @@ main(int argc, char* argv[])
 
   Simulator::Stop(Seconds(3600.0));
 
-  //ndn::AppDelayTracer::InstallAll("icens-simulation-trace.txt");
+  ndn::AppDelayTracer::InstallAll("icens-simulation-trace.txt");
 
   Simulator::Run();
   Simulator::Destroy();

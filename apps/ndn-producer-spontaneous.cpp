@@ -176,9 +176,9 @@ SpontaneousProducer::SendData(const Name &dataName)
   data->setSignature(signature);
 
   if (m_subscription == 0 && m_receivedpayload > 0) 
-  	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending ACK: " << /* m_prefixWithoutSequence */data->getName());
+  	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending ACK: " << /* m_prefixWithoutSequence */data->getName() << " TIME: " << Simulator::Now());
   else
-	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending DATA for " << /* m_prefixWithoutSequence */data->getName());
+	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending DATA for " << /* m_prefixWithoutSequence */data->getName() << " TIME: " << Simulator::Now());
 
   // to create real wire encoding
   data->wireEncode();

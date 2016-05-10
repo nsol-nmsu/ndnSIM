@@ -56,16 +56,16 @@ Subscriber::GetTypeId(void)
                     MakeIntegerAccessor(&Subscriber::m_seq), MakeIntegerChecker<int32_t>())
       .AddAttribute("Prefix", "Name of the Interest", StringValue("/"),
                     MakeNameAccessor(&Subscriber::m_interestName), MakeNameChecker())
-      .AddAttribute("LifeTime", "LifeTime for subscription packet", StringValue("1200s"),
+      .AddAttribute("LifeTime", "LifeTime for subscription packet", StringValue("5400s"),
                     MakeTimeAccessor(&Subscriber::m_interestLifeTime), MakeTimeChecker())
       .AddAttribute("TxTimer",
                     "Timeout defining how frequently subscription should be reinforced",
-		    TimeValue(Seconds(9)),
+		    TimeValue(Seconds(60)),
                     MakeTimeAccessor(&Subscriber::m_txInterval), MakeTimeChecker())
 
       .AddAttribute("RetxTimer",
                     "Timeout defining how frequent retransmission timeouts should be checked",
-                    StringValue("1ms"),
+                    StringValue("50ms"),
                     MakeTimeAccessor(&Subscriber::GetRetxTimer, &Subscriber::SetRetxTimer),
                     MakeTimeChecker())
 
@@ -266,7 +266,7 @@ Subscriber::OnData(shared_ptr<const Data> data)
   // This could be a problem......
   //uint32_t seq = data->getName().at(-1).toSequenceNumber();
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << /*m_interestName*/ data->getName());
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << /*m_interestName*/ data->getName() << " TIME: " << Simulator::Now());
 
   int hopCount = 0;
   auto ns3PacketTag = data->getTag<Ns3PacketTag>();

@@ -128,7 +128,7 @@ Aggregator::OnInterest(shared_ptr<const Interest> interest)
   App::OnInterest(interest); // tracing inside
 
   //NS_LOG_FUNCTION(this << interest);
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") received: " << interest->getName());
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") received: " << interest->getName() << " TIME: " << Simulator::Now());
 
   //Aggregate payload size
   m_totalpayload += interest->getPayloadLength();
