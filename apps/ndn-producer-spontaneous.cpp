@@ -178,7 +178,7 @@ SpontaneousProducer::SendData(const Name &dataName)
   if (m_subscription == 0 && m_receivedpayload > 0) 
   	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending ACK: " << /* m_prefixWithoutSequence */data->getName());
   else
-	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending Data: " << /* m_prefixWithoutSequence */data->getName());
+	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending DATA for " << /* m_prefixWithoutSequence */data->getName());
 
   // to create real wire encoding
   data->wireEncode();

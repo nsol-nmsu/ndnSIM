@@ -65,9 +65,12 @@ Subscriber::GetTypeId(void)
 
       .AddAttribute("RetxTimer",
                     "Timeout defining how frequent retransmission timeouts should be checked",
-                    StringValue("50ms"),
+                    StringValue("1ms"),
                     MakeTimeAccessor(&Subscriber::GetRetxTimer, &Subscriber::SetRetxTimer),
                     MakeTimeChecker())
+
+      .AddAttribute("RetransmitPackets", "Retransmit lost packets if set to 1, otherwise do not perform retransmission", IntegerValue(1),
+                    MakeIntegerAccessor(&Subscriber::m_doRetransmission), MakeIntegerChecker<int32_t>())
 
       .AddAttribute("Subscription", "Subscription value for the interest. 0-normal interest, 1-soft subscribe, 2-hard subscriber, 3-unsubsribe", IntegerValue(2),
                     MakeIntegerAccessor(&Subscriber::m_subscription), MakeIntegerChecker<int32_t>())
@@ -124,6 +127,10 @@ Subscriber::ScheduleNextPacket()
 void
 Subscriber::SetRetxTimer(Time retxTimer)
 {
+
+//Do not restranmit lost packets, if set to 0
+if(m_doRetransmission == 1) {
+
   m_retxTimer = retxTimer;
   if (m_retxEvent.IsRunning()) {
     // m_retxEvent.Cancel (); // cancel any scheduled cleanup events
@@ -132,6 +139,8 @@ Subscriber::SetRetxTimer(Time retxTimer)
 
   // schedule even with new timeout
   m_retxEvent = Simulator::Schedule(m_retxTimer, &Subscriber::CheckRetxTimeout, this);
+}
+
 }
 
 Time
@@ -220,7 +229,7 @@ Subscriber::SendPacket()
   shared_ptr<Interest> interest = make_shared<Interest>();
   interest->setNonce(m_rand->GetValue(0, std::numeric_limits<uint32_t>::max()));
   interest->setSubscription(m_subscription);
-  if (interest->getSubscription() == 0) {
+  if (m_subscription == 0) {
 	nameWithSequence->appendSequenceNumber(seq); //Required for demand-response scheme [payload interest] (also usefule for ndn::AppDelayTracer)
   	interest->setPayload(payload, m_virtualPayloadSize); //add payload to interest
   }
@@ -228,7 +237,7 @@ Subscriber::SendPacket()
   time::milliseconds interestLifeTime(m_interestLifeTime.GetMilliSeconds());
   interest->setInterestLifetime(interestLifeTime);
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > sending Interest for " << interest->getName() /*m_interestName*/ << " with Payload = " << interest->getPayloadLength() << "bytes");
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > sending Interest: " << interest->getName() /*m_interestName*/ << " with Payload = " << interest->getPayloadLength() << "bytes");
 
   WillSendOutInterest(seq);
 
@@ -259,7 +268,6 @@ Subscriber::OnData(shared_ptr<const Data> data)
 
   NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << /*m_interestName*/ data->getName());
 
-
   int hopCount = 0;
   auto ns3PacketTag = data->getTag<Ns3PacketTag>();
   if (ns3PacketTag != nullptr) { // e.g., packet came from local node's cache
@@ -270,26 +278,32 @@ Subscriber::OnData(shared_ptr<const Data> data)
     }
   }
 
-/*
-  SeqTimeoutsContainer::iterator entry = m_seqLastDelay.find(seq);
-  if (entry != m_seqLastDelay.end()) {
-    m_lastRetransmittedInterestDataDelay(this, seq, Simulator::Now() - entry->time, hopCount);
+  //Enable trace file for Interests with sequence number (subscription = 0)
+  if (m_subscription == 0) {
+
+	// This could be a problem......
+  	uint32_t seq = data->getName().at(-1).toSequenceNumber();
+
+  	SeqTimeoutsContainer::iterator entry = m_seqLastDelay.find(seq);
+  	if (entry != m_seqLastDelay.end()) {
+    		m_lastRetransmittedInterestDataDelay(this, seq, Simulator::Now() - entry->time, hopCount);
+  	}
+
+  	entry = m_seqFullDelay.find(seq);
+  	if (entry != m_seqFullDelay.end()) {
+    		m_firstInterestDataDelay(this, seq, Simulator::Now() - entry->time, m_seqRetxCounts[seq], hopCount);
+  	}
+
+  	m_seqRetxCounts.erase(seq);
+  	m_seqFullDelay.erase(seq);
+  	m_seqLastDelay.erase(seq);
+
+  	m_seqTimeouts.erase(seq);
+  	m_retxSeqs.erase(seq);
+
+  	m_rtt->AckSeq(SequenceNumber32(seq));
   }
 
-  entry = m_seqFullDelay.find(seq);
-  if (entry != m_seqFullDelay.end()) {
-    m_firstInterestDataDelay(this, seq, Simulator::Now() - entry->time, m_seqRetxCounts[seq], hopCount);
-  }
-
-  m_seqRetxCounts.erase(seq);
-  m_seqFullDelay.erase(seq);
-  m_seqLastDelay.erase(seq);
-
-  m_seqTimeouts.erase(seq);
-  m_retxSeqs.erase(seq);
-
-  m_rtt->AckSeq(SequenceNumber32(seq));
-*/
 }
 
 void

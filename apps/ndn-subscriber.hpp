@@ -138,6 +138,7 @@ protected:
   bool m_firstTime;
   uint32_t m_subscription; //subscription value set by the application
   uint32_t m_virtualPayloadSize; //payload size for interest packet
+  uint32_t m_doRetransmission; //retransmit lost interest packets if set to 1
 
   Ptr<RttEstimator> m_rtt; ///< @brief RTT estimator
 

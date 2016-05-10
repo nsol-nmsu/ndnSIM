@@ -128,7 +128,7 @@ Aggregator::OnInterest(shared_ptr<const Interest> interest)
   App::OnInterest(interest); // tracing inside
 
   //NS_LOG_FUNCTION(this << interest);
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") received " << interest->getName());
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") received: " << interest->getName());
 
   //Aggregate payload size
   m_totalpayload += interest->getPayloadLength();
@@ -150,8 +150,6 @@ Aggregator::ScheduleAggPackets()
                 if (!m_txEvent.IsRunning())
 			m_txEvent = Simulator::Schedule(m_frequency, &Aggregator::SendAggInterest, this);
 
-		//reset the total payload size to start accumulating subsequent ones
-                m_totalpayload = 0;
 	}
 }
 
@@ -197,12 +195,15 @@ if (m_totalpayload > 0)
   interest->setInterestLifetime(interestLifeTime);
   interest->setPayload(payload, m_totalpayload); //concatenated payload
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > forwarding Interest for " << interest->getName() << " with aggregated Payload = " << m_totalpayload << "bytes");
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > forwarding Interest: " << interest->getName() << " with aggregated Payload = " << m_totalpayload << "bytes");
 
   WillSendOutInterest(seq);
 
   m_transmittedInterests(interest, this, m_face);
   m_face->onReceiveInterest(*interest);
+
+  //reset the total payload size to start accumulating subsequent ones
+  m_totalpayload = 0;
 }
 
   //Shedule next aggregated payload interest
