@@ -29,6 +29,7 @@ main(int argc, char* argv[])
 
   //--- Count the number of nodes to create
   ifstream nfile ("src/ndnSIM/examples/icens-nodes.txt", std::ios::in);
+  //ifstream nfile ("src/ndnSIM/examples/a-nodes.txt", std::ios::in);
   std::string nodeid, nodename, nodetype;
   int nodecount = 0; //number of nodes in topology
   int numOfPMUs = 20; //number of PMUs
@@ -58,8 +59,8 @@ main(int argc, char* argv[])
   nfile.close();
 
   // setting default parameters for PointToPoint links and channels
-  Config::SetDefault("ns3::PointToPointNetDevice::DataRate", StringValue("1000Mbps"));
-  Config::SetDefault("ns3::PointToPointChannel::Delay", StringValue("2ms"));
+  //Config::SetDefault("ns3::PointToPointNetDevice::DataRate", StringValue("1000Mbps"));
+  //Config::SetDefault("ns3::PointToPointChannel::Delay", StringValue("2ms"));
   Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("20"));
 
   // Read optional command-line parameters (e.g., enable visualizer with ./waf --run=<> --visualize
@@ -75,10 +76,14 @@ main(int argc, char* argv[])
 
   //--- Get the edges of the graph from file and connect them
   ifstream efile ("src/ndnSIM/examples/icens-edges.txt", std::ios::in);
+  //ifstream efile ("src/ndnSIM/examples/a-edges.txt", std::ios::in);
   std::string srcnode, dstnode, bw, delay, edgetype;
 
   if (efile.is_open ()) {
         while (efile >> srcnode >> dstnode >> bw >> delay >> edgetype) {
+		//Set delay and bandwidth parameters for point-to-point links
+		p2p.SetDeviceAttribute("DataRate", StringValue(bw+"Mbps"));
+		p2p.SetChannelAttribute("Delay", StringValue(delay+"ms"));
 		p2p.Install(nodes.Get(std::stoi(srcnode)), nodes.Get(std::stoi(dstnode)));
         }
   }
@@ -94,9 +99,9 @@ main(int argc, char* argv[])
   //--- Configure manual/static routes on all nodes
   //--- Install spontaneous producer application for each prefix that a node serves
   ifstream rfile("src/ndnSIM/examples/icens-routing-tables.txt", std::ios::in);
+  //ifstream rfile("src/ndnSIM/examples/a-routing.txt", std::ios::in);
   Ptr<Node> currentnode, nexthopnode;
-  std::string strfrom, prefixtoroute, strnexthop, strmetric;
-  int metric;
+  std::string strfrom, prefixtoroute, strnexthop, strmetric; int metric;
 
 
   if (rfile.is_open ()) {
@@ -113,13 +118,13 @@ main(int argc, char* argv[])
 					// Install aggregator app for AMI payload aggregation - "overlay"
   					aggHelper.SetPrefix(prefixtoroute + "/ami");
  	 				aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com/ami")); //forward to com node prefix
-  					aggHelper.SetAttribute("Frequency",  StringValue("1")); //wait seconds before aggregatiion
+  					aggHelper.SetAttribute("Frequency",  StringValue("2")); //wait seconds before aggregatiion
   					aggHelper.Install(nodes.Get(std::stoi(strfrom)));
 
 					// Install aggregator app for PMU payload aggregation - "overlay"
                                 	aggHelper.SetPrefix(prefixtoroute + "/pmu");
                                 	aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com/pmu")); //forward to com node prefix
-                                	aggHelper.SetAttribute("Frequency",  StringValue("0.1")); ////wait seconds before aggregatiion
+                                	aggHelper.SetAttribute("Frequency",  StringValue("0.2")); ////wait seconds before aggregatiion
                                 	aggHelper.Install(nodes.Get(std::stoi(strfrom)));
 				}
 				else {
@@ -130,7 +135,7 @@ main(int argc, char* argv[])
 				// Install spontaneous producer on the node for subscription and payload interests served by "direct"
 				if (prefixtoroute.find("direct") != std::string::npos) {
                          		spHelper.SetPrefix(prefixtoroute + "/subscription");
-                         		spHelper.SetAttribute("Frequency", StringValue("60")); //wait x seconds and send data for subscriptions
+                         		spHelper.SetAttribute("Frequency", StringValue("240")); //wait x seconds and send data for subscriptions
                          		spHelper.SetAttribute("PayloadSize", StringValue("1024"));
                          		spHelper.Install(nodes.Get(std::stoi(strfrom)));
 
@@ -203,7 +208,7 @@ main(int argc, char* argv[])
 			//PMUs should not subscribe to data
 			if ( j >= numOfPMUs) {
 				consumerHelper.SetPrefix(com_prefixes[i] + "/subscription");
-				consumerHelper.SetAttribute("TxTimer", StringValue("4500")); //resend subscription interest every x seconds
+				consumerHelper.SetAttribute("TxTimer", StringValue("1200")); //resend subscription interest every x seconds
 				consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
   				consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
@@ -220,7 +225,7 @@ main(int argc, char* argv[])
 			if ( j < numOfPMUs) {
 				 //PMU messages - hihger send rate
                                 consumerHelper.SetPrefix(agg_prefixes[i] + "/pmu/phy" + std::to_string(phy_nodes[j]));
-                                consumerHelper.SetAttribute("TxTimer", StringValue("0.1")); //resend payload interest every x seconds
+                                consumerHelper.SetAttribute("TxTimer", StringValue("0.2")); //resend payload interest every x seconds
                                 consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
                                 consumerHelper.SetAttribute("PayloadSize", StringValue("9")); //payload size in bytes
 				consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0)); //1 for retransmit, any other value does not retransmit
@@ -230,7 +235,7 @@ main(int argc, char* argv[])
 
 				//For smart metering - AMI
   				consumerHelper.SetPrefix(agg_prefixes[i] + "/ami/phy" + std::to_string(phy_nodes[j]));
-  				consumerHelper.SetAttribute("TxTimer", StringValue("1")); //resend payload interest every x seconds
+  				consumerHelper.SetAttribute("TxTimer", StringValue("2")); //resend payload interest every x seconds
   				consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
   				consumerHelper.SetAttribute("PayloadSize", StringValue("7")); //payload size in bytes
   				consumerHelper.Install(nodes.Get(phy_nodes[j]));
@@ -245,7 +250,7 @@ main(int argc, char* argv[])
         if(com_prefixes[i].find("direct") != std::string::npos) {
                 for (int j=0; j<(int)phy_nodes.size(); j++) {
                        	consumerHelper.SetPrefix(com_prefixes[i] + "/error/phy" + std::to_string(phy_nodes[j]));
-                       	consumerHelper.SetAttribute("TxTimer", StringValue("120")); //resend subscription interest every x seconds
+                       	consumerHelper.SetAttribute("TxTimer", StringValue("240")); //resend subscription interest every x seconds
                        	consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
 			consumerHelper.SetAttribute("PayloadSize", StringValue("6")); //payload size in bytes
                        	consumerHelper.Install(nodes.Get(phy_nodes[j]));

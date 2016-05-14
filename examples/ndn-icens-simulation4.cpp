@@ -29,6 +29,7 @@ main(int argc, char* argv[])
 
   //--- Count the number of nodes to create
   ifstream nfile ("src/ndnSIM/examples/icens-nodes.txt", std::ios::in);
+  //ifstream nfile ("src/ndnSIM/examples/a-nodes.txt", std::ios::in);
   std::string nodeid, nodename, nodetype;
   int nodecount = 0; //number of nodes in topology
   int numOfPMUs = 20; //number of PMUs
@@ -58,8 +59,8 @@ main(int argc, char* argv[])
   nfile.close();
 
   // setting default parameters for PointToPoint links and channels
-  Config::SetDefault("ns3::PointToPointNetDevice::DataRate", StringValue("1000Mbps"));
-  Config::SetDefault("ns3::PointToPointChannel::Delay", StringValue("2ms"));
+  //Config::SetDefault("ns3::PointToPointNetDevice::DataRate", StringValue("1000Mbps"));
+  //Config::SetDefault("ns3::PointToPointChannel::Delay", StringValue("2ms"));
   Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("20"));
 
   // Read optional command-line parameters (e.g., enable visualizer with ./waf --run=<> --visualize
@@ -75,10 +76,14 @@ main(int argc, char* argv[])
 
   //--- Get the edges of the graph from file and connect them
   ifstream efile ("src/ndnSIM/examples/icens-edges.txt", std::ios::in);
+  //ifstream efile ("src/ndnSIM/examples/a-edges.txt", std::ios::in);
   std::string srcnode, dstnode, bw, delay, edgetype;
 
   if (efile.is_open ()) {
         while (efile >> srcnode >> dstnode >> bw >> delay >> edgetype) {
+		//Set delay and bandwidth parameters for point-to-point links
+		p2p.SetDeviceAttribute("DataRate", StringValue(bw+"Mbps"));
+		p2p.SetChannelAttribute("Delay", StringValue(delay+"ms"));
 		p2p.Install(nodes.Get(std::stoi(srcnode)), nodes.Get(std::stoi(dstnode)));
         }
   }
@@ -94,9 +99,9 @@ main(int argc, char* argv[])
   //--- Configure manual/static routes on all nodes
   //--- Install spontaneous producer application for each prefix that a node serves
   ifstream rfile("src/ndnSIM/examples/icens-routing-tables.txt", std::ios::in);
+  //ifstream rfile("src/ndnSIM/examples/a-routing.txt", std::ios::in);
   Ptr<Node> currentnode, nexthopnode;
-  std::string strfrom, prefixtoroute, strnexthop, strmetric;
-  int metric;
+  std::string strfrom, prefixtoroute, strnexthop, strmetric; int metric;
 
 
   if (rfile.is_open ()) {
@@ -203,7 +208,7 @@ main(int argc, char* argv[])
 			//PMUs should not subscribe to data
 			if ( j >= numOfPMUs) {
 				consumerHelper.SetPrefix(com_prefixes[i] + "/subscription");
-				consumerHelper.SetAttribute("TxTimer", StringValue("4500")); //resend subscription interest every x seconds
+				consumerHelper.SetAttribute("TxTimer", StringValue("300")); //resend subscription interest every x seconds
 				consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
   				consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}

@@ -30,6 +30,7 @@
 #include "helper/ndn-fib-helper.hpp"
 
 #include <memory>
+#include <fstream>
 
 #include "utils/ndn-rtt-mean-deviation.hpp"
 #include "utils/ndn-ns3-packet-tag.hpp"
@@ -89,6 +90,9 @@ Aggregator::GetTypeId(void)
   return tid;
 }
 
+//Write logs directly to file
+std::ofstream afile("ndn-aggregator.log", std::ios::out);
+
 Aggregator::Aggregator()
   : m_totalpayload(0)
   , m_firstTime(true)
@@ -128,7 +132,8 @@ Aggregator::OnInterest(shared_ptr<const Interest> interest)
   App::OnInterest(interest); // tracing inside
 
   //NS_LOG_FUNCTION(this << interest);
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") received: " << interest->getName() << " TIME: " << Simulator::Now());
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") received: " << interest->getName() << " Payload = " << interest->getPayloadLength() << " TIME: " << Simulator::Now());
+  afile << "node( " << GetNode()->GetId() << " ) received: " << interest->getName() << " Payload = " << interest->getPayloadLength() << " TIME: " << Simulator::Now() << std::endl;
 
   //Aggregate payload size
   m_totalpayload += interest->getPayloadLength();
@@ -195,7 +200,8 @@ if (m_totalpayload > 0)
   interest->setInterestLifetime(interestLifeTime);
   interest->setPayload(payload, m_totalpayload); //concatenated payload
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > forwarding Interest: " << interest->getName() << " with aggregated Payload = " << m_totalpayload << "bytes");
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") > forwarding Interest: " << interest->getName() << " with aggregated Payload = " << m_totalpayload << " TIME: " << Simulator::Now());
+  afile << "node( " << GetNode()->GetId() << " ) > forwarding Interest: " << interest->getName() << " with aggregated Payload = " << m_totalpayload << " TIME: " << Simulator::Now() << std::endl;
 
   WillSendOutInterest(seq);
 

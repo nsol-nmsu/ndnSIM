@@ -30,6 +30,7 @@
 #include "helper/ndn-fib-helper.hpp"
 
 #include <memory>
+#include <fstream>
 
 NS_LOG_COMPONENT_DEFINE("ndn.SpontaneousProducer");
 
@@ -72,6 +73,9 @@ SpontaneousProducer::GetTypeId(void)
   return tid;
 }
 
+//Write logs directly to file
+std::ofstream spfile("ndn-producer-spontaneous.log", std::ios::out);
+
 SpontaneousProducer::SpontaneousProducer()
   :m_firstTime(true)
   , m_subscription(0)
@@ -106,7 +110,8 @@ void
 SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
 {
 
-  NS_LOG_INFO("SUBSCRIPTION value = " << interest->getSubscription() << " & PAYLOAD = " << interest->getPayloadLength() << "bytes");
+  NS_LOG_INFO("SUBSCRIPTION value = " << interest->getSubscription() << " & PAYLOAD = " << interest->getPayloadLength() << " TIME: " << Simulator::Now());
+  spfile << "SUBSCRIPTION value = " << interest->getSubscription() << " node( " << GetNode()->GetId() << " ) received Interest: " << interest->getName() << " & PAYLOAD: " << interest->getPayloadLength() << " TIME: " << Simulator::Now() << std::endl;
 
   App::OnInterest(interest); // tracing inside
 
@@ -175,10 +180,14 @@ SpontaneousProducer::SendData(const Name &dataName)
 
   data->setSignature(signature);
 
-  if (m_subscription == 0 && m_receivedpayload > 0) 
+  if (m_subscription == 0 && m_receivedpayload > 0) {
   	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending ACK: " << /* m_prefixWithoutSequence */data->getName() << " TIME: " << Simulator::Now());
-  else
+	spfile << "node( " << GetNode()->GetId() << " ) sending ACK: " << data->getName() << " TIME: " << Simulator::Now() << std::endl;
+  }
+  else {
 	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending DATA for " << /* m_prefixWithoutSequence */data->getName() << " TIME: " << Simulator::Now());
+        spfile << "node( " << GetNode()->GetId() << " ) sending DATA for " << data->getName() << " TIME: " << Simulator::Now() << std::endl;
+  }
 
   // to create real wire encoding
   data->wireEncode();

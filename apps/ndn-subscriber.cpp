@@ -36,6 +36,8 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/ref.hpp>
 
+#include <fstream>
+
 NS_LOG_COMPONENT_DEFINE("ndn.Subscriber");
 
 namespace ns3 {
@@ -92,6 +94,9 @@ Subscriber::GetTypeId(void)
 
   return tid;
 }
+
+//Write logs directly to file
+std::ofstream sfile("ndn-subscriber.log", std::ios::out);
 
 Subscriber::Subscriber()
     : m_rand(CreateObject<UniformRandomVariable>())
@@ -238,6 +243,7 @@ Subscriber::SendPacket()
   interest->setInterestLifetime(interestLifeTime);
 
   NS_LOG_INFO("node(" << GetNode()->GetId() << ") > sending Interest: " << interest->getName() /*m_interestName*/ << " with Payload = " << interest->getPayloadLength() << "bytes");
+  sfile << "node( " << GetNode()->GetId() << " ) > sending Interest: " << interest->getName() << " with Payload = " << interest->getPayloadLength() << " TIME: " << Simulator::Now() << std::endl;
 
   WillSendOutInterest(seq);
 
@@ -267,6 +273,7 @@ Subscriber::OnData(shared_ptr<const Data> data)
   //uint32_t seq = data->getName().at(-1).toSequenceNumber();
 
   NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << /*m_interestName*/ data->getName() << " TIME: " << Simulator::Now());
+  sfile << "node( " << GetNode()->GetId() << " ) < Received DATA for " << data->getName() << " TIME: " << Simulator::Now() << std::endl;
 
   int hopCount = 0;
   auto ns3PacketTag = data->getTag<Ns3PacketTag>();
