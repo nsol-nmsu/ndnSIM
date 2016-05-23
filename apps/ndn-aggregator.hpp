@@ -87,6 +87,10 @@ public:
   virtual void
   OnTimeout(uint32_t sequenceNumber);
 
+public:
+  typedef void (*ReceivedInterestTraceCallback)( uint32_t, shared_ptr<const Interest> );
+  typedef void (*SentInterestTraceCallback)( uint32_t, shared_ptr<const Interest> );
+
 protected:
   // inherited from Application base class.
   virtual void
@@ -196,6 +200,10 @@ private:
   Time m_retxTimer;    ///< @brief Currently estimated retransmission timer
   EventId m_retxEvent; ///< @brief Event to check whether or not retransmission should be performed
   Time m_agg_offset;
+
+protected:
+  TracedCallback <  uint32_t, shared_ptr<const Interest> > m_receivedInterest;
+  TracedCallback <  uint32_t, shared_ptr<const Interest> > m_sentInterest;
 };
 
 } // namespace ndn

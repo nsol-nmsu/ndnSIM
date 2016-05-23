@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License along with
  * ndnSIM, e.g., in COPYING.md file.  If not, see <http://www.gnu.org/licenses/>.
  **/
-
+#include "ndn-app.hpp"
 #include "ndn-subscriber.hpp"
 #include "ns3/ptr.h"
 #include "ns3/log.h"
@@ -77,6 +77,9 @@ Subscriber::GetTypeId(void)
       .AddAttribute("Subscription", "Subscription value for the interest. 0-normal interest, 1-soft subscribe, 2-hard subscriber, 3-unsubsribe", IntegerValue(2),
                     MakeIntegerAccessor(&Subscriber::m_subscription), MakeIntegerChecker<int32_t>())
 
+      .AddAttribute("Offset", "Random offset to randomize sending of interets", IntegerValue(0),
+                    MakeIntegerAccessor(&Subscriber::m_offset), MakeIntegerChecker<int32_t>())
+
       .AddAttribute("PayloadSize", "Virtual payload size for interest packets", UintegerValue(0),
                     MakeUintegerAccessor(&Subscriber::m_virtualPayloadSize),
                     MakeUintegerChecker<uint32_t>())
@@ -89,14 +92,19 @@ Subscriber::GetTypeId(void)
       .AddTraceSource("FirstInterestDataDelay",
                       "Delay between first transmitted Interest and received Data",
                       MakeTraceSourceAccessor(&Subscriber::m_firstInterestDataDelay),
-                      "ns3::ndn::Subscriber::FirstInterestDataDelayCallback");
+                      "ns3::ndn::Subscriber::FirstInterestDataDelayCallback")
+
+      .AddTraceSource("ReceivedData", "ReceivedData",
+                      MakeTraceSourceAccessor(&Subscriber::m_receivedData),
+                      "ns3::ndn::Subscriber::ReceivedDataTraceCallback")
+
+      .AddTraceSource("SentInterest", "SentInterest",
+                      MakeTraceSourceAccessor(&Subscriber::m_sentInterest),
+                      "ns3::ndn::Subscriber::SentInterestTraceCallback");
       ;
 
   return tid;
 }
-
-//Write logs directly to file
-std::ofstream sfile("ndn-subscriber.log", std::ios::out);
 
 Subscriber::Subscriber()
     : m_rand(CreateObject<UniformRandomVariable>())
@@ -120,7 +128,8 @@ void
 Subscriber::ScheduleNextPacket()
 {
   if (m_firstTime) {
-    m_sendEvent = Simulator::Schedule(Seconds(0.0), &Subscriber::SendPacket, this);
+    m_sendEvent = Simulator::Schedule(Seconds(double(m_offset)), &Subscriber::SendPacket, this);
+
     m_firstTime = false;
   }
   else if (!m_sendEvent.IsRunning()) {
@@ -243,12 +252,14 @@ Subscriber::SendPacket()
   interest->setInterestLifetime(interestLifeTime);
 
   NS_LOG_INFO("node(" << GetNode()->GetId() << ") > sending Interest: " << interest->getName() /*m_interestName*/ << " with Payload = " << interest->getPayloadLength() << "bytes");
-  sfile << "node( " << GetNode()->GetId() << " ) > sending Interest: " << interest->getName() << " with Payload = " << interest->getPayloadLength() << " TIME: " << Simulator::Now() << std::endl;
 
   WillSendOutInterest(seq);
 
   m_transmittedInterests(interest, this, m_face);
   m_face->onReceiveInterest(*interest);
+
+  // Callback for sent payload interests
+  m_sentInterest(GetNode()->GetId(), interest);
 
   ScheduleNextPacket();
 
@@ -273,7 +284,9 @@ Subscriber::OnData(shared_ptr<const Data> data)
   //uint32_t seq = data->getName().at(-1).toSequenceNumber();
 
   NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << /*m_interestName*/ data->getName() << " TIME: " << Simulator::Now());
-  sfile << "node( " << GetNode()->GetId() << " ) < Received DATA for " << data->getName() << " TIME: " << Simulator::Now() << std::endl;
+
+  // Callback for received subscription data
+  m_receivedData(GetNode()->GetId(), data);
 
   int hopCount = 0;
   auto ns3PacketTag = data->getTag<Ns3PacketTag>();
@@ -285,6 +298,7 @@ Subscriber::OnData(shared_ptr<const Data> data)
     }
   }
 
+/*
   //Enable trace file for Interests with sequence number (subscription = 0)
   if (m_subscription == 0) {
 
@@ -310,6 +324,8 @@ Subscriber::OnData(shared_ptr<const Data> data)
 
   	m_rtt->AckSeq(SequenceNumber32(seq));
   }
+*/
+
 
 }
 

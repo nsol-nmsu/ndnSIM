@@ -54,6 +54,10 @@ public:
   void
   SendTimeout();
 
+public:
+  typedef void (*ReceivedInterestTraceCallback)( uint32_t, shared_ptr<const Interest> );
+  typedef void (*SentDataTraceCallback)( uint32_t, shared_ptr<const Data> );
+
 protected:
   // inherited from Application base class.
   virtual void
@@ -76,6 +80,11 @@ private:
 
   uint32_t m_signature;
   Name m_keyLocator;
+
+protected:
+  TracedCallback <  uint32_t, shared_ptr<const Interest> > m_receivedInterest;
+  TracedCallback <  uint32_t, shared_ptr<const Data> > m_sentData;
+
 };
 
 } // namespace ndn

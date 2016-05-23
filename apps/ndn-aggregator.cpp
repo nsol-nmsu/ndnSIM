@@ -85,13 +85,18 @@ Aggregator::GetTypeId(void)
 
       .AddAttribute("Frequency", "How often payload interests are aggreagted and forwarded to compute nodes",
                     TimeValue(Seconds(1)), MakeTimeAccessor(&Aggregator::m_frequency),
-                    MakeTimeChecker());
+                    MakeTimeChecker())
+
+      .AddTraceSource("SentInterest", "SentInterest",
+                      MakeTraceSourceAccessor(&Aggregator::m_sentInterest),
+                      "ns3::ndn::Aggregator::SentInterestTraceCallback")
+
+      .AddTraceSource("ReceivedInterest", "ReceivedInterest",
+                      MakeTraceSourceAccessor(&Aggregator::m_receivedInterest),
+                      "ns3::ndn::Aggregator::ReceivedInterestTraceCallback");
 
   return tid;
 }
-
-//Write logs directly to file
-std::ofstream afile("ndn-aggregator.log", std::ios::out);
 
 Aggregator::Aggregator()
   : m_totalpayload(0)
@@ -133,7 +138,9 @@ Aggregator::OnInterest(shared_ptr<const Interest> interest)
 
   //NS_LOG_FUNCTION(this << interest);
   NS_LOG_INFO("node(" << GetNode()->GetId() << ") received: " << interest->getName() << " Payload = " << interest->getPayloadLength() << " TIME: " << Simulator::Now());
-  afile << "node( " << GetNode()->GetId() << " ) received: " << interest->getName() << " Payload = " << interest->getPayloadLength() << " TIME: " << Simulator::Now() << std::endl;
+
+  // Callback for received payload interest
+  m_receivedInterest(GetNode()->GetId(), interest);
 
   //Aggregate payload size
   m_totalpayload += interest->getPayloadLength();
@@ -201,7 +208,6 @@ if (m_totalpayload > 0)
   interest->setPayload(payload, m_totalpayload); //concatenated payload
 
   NS_LOG_INFO("node(" << GetNode()->GetId() << ") > forwarding Interest: " << interest->getName() << " with aggregated Payload = " << m_totalpayload << " TIME: " << Simulator::Now());
-  afile << "node( " << GetNode()->GetId() << " ) > forwarding Interest: " << interest->getName() << " with aggregated Payload = " << m_totalpayload << " TIME: " << Simulator::Now() << std::endl;
 
   WillSendOutInterest(seq);
 
@@ -210,6 +216,10 @@ if (m_totalpayload > 0)
 
   //reset the total payload size to start accumulating subsequent ones
   m_totalpayload = 0;
+
+  //Call back for sent aggregated interests
+  m_sentInterest(GetNode()->GetId(), interest);
+
 }
 
   //Shedule next aggregated payload interest

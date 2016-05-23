@@ -89,6 +89,12 @@ public:
   virtual void
   WillSendOutInterest(uint32_t sequenceNumber);
 
+public:
+  //typedef void (*FirstInterestDataDelayCallback)(Ptr<App> app, uint32_t seqno, Time delay, uint32_t retxCount, int32_t hopCount);
+
+  typedef void (*SentInterestTraceCallback)( uint32_t, shared_ptr<const Interest> );
+  typedef void (*ReceivedDataTraceCallback)( uint32_t, shared_ptr<const Data> );
+
 protected:
   // from App
   virtual void
@@ -139,6 +145,7 @@ protected:
   uint32_t m_subscription; //subscription value set by the application
   uint32_t m_virtualPayloadSize; //payload size for interest packet
   uint32_t m_doRetransmission; //retransmit lost interest packets if set to 1
+  uint32_t m_offset; //random offset
 
   Ptr<RttEstimator> m_rtt; ///< @brief RTT estimator
 
@@ -206,6 +213,9 @@ protected:
     m_lastRetransmittedInterestDataDelay;
   TracedCallback<Ptr<App> /* app */, uint32_t /* seqno */, Time /* delay */,
                  uint32_t /*retx count*/, int32_t /*hop count*/> m_firstInterestDataDelay;
+
+  TracedCallback < uint32_t, shared_ptr<const Interest> > m_sentInterest;
+  TracedCallback < uint32_t, shared_ptr<const Data> > m_receivedData;
 
 };
 
