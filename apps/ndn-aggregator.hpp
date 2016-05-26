@@ -133,6 +133,7 @@ private:
   EventId m_txEvent;
   bool m_firstTime;
   Name m_upstream_prefix; ///< \brief NDN Name of the Interest (use Name)
+  uint32_t m_offset; //random offset
 
   /// @cond include_hidden
   /**

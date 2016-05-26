@@ -77,7 +77,7 @@ Subscriber::GetTypeId(void)
       .AddAttribute("Subscription", "Subscription value for the interest. 0-normal interest, 1-soft subscribe, 2-hard subscriber, 3-unsubsribe", IntegerValue(2),
                     MakeIntegerAccessor(&Subscriber::m_subscription), MakeIntegerChecker<int32_t>())
 
-      .AddAttribute("Offset", "Random offset to randomize sending of interets", IntegerValue(0),
+      .AddAttribute("Offset", "Random offset to randomize sending of interests", IntegerValue(0),
                     MakeIntegerAccessor(&Subscriber::m_offset), MakeIntegerChecker<int32_t>())
 
       .AddAttribute("PayloadSize", "Virtual payload size for interest packets", UintegerValue(0),

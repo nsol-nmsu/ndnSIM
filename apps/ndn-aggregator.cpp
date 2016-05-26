@@ -23,6 +23,7 @@
 #include "ns3/uinteger.h"
 #include "ns3/packet.h"
 #include "ns3/simulator.h"
+#include "ns3/integer.h"
 
 #include "model/ndn-app-face.hpp"
 #include "model/ndn-ns3.hpp"
@@ -86,6 +87,9 @@ Aggregator::GetTypeId(void)
       .AddAttribute("Frequency", "How often payload interests are aggreagted and forwarded to compute nodes",
                     TimeValue(Seconds(1)), MakeTimeAccessor(&Aggregator::m_frequency),
                     MakeTimeChecker())
+
+      .AddAttribute("Offset", "Random offset to randomize sending of interests", IntegerValue(0),
+                    MakeIntegerAccessor(&Aggregator::m_offset), MakeIntegerChecker<int32_t>())
 
       .AddTraceSource("SentInterest", "SentInterest",
                       MakeTraceSourceAccessor(&Aggregator::m_sentInterest),
@@ -155,7 +159,8 @@ Aggregator::ScheduleAggPackets()
 	if (m_firstTime == true) {
 		m_firstTime = false;
 		//Schedule next interest with aggreagated payload
-		m_txEvent = Simulator::Schedule(Seconds(0.0), &Aggregator::ScheduleAggPackets, this);
+		//Set the offset for AMI/PMU traffic to milliseconds
+		m_txEvent = Simulator::Schedule(Seconds( double(m_offset)/1000 ), &Aggregator::ScheduleAggPackets, this);
 	}
 	else {
 		//Schedule next interest with aggregated payload
@@ -194,8 +199,14 @@ if (m_totalpayload > 0)
 
   uint8_t payload[1] = {1};
 
+
+  //Append source aggregation node ID to the aggregated prefix
+  std::stringstream ss;
+  ss << m_upstream_prefix;
+  std::string dst_com_prefix = ss.str() + "/agg" + std::to_string(GetNode()->GetId());
+
   //
-  shared_ptr<Name> nameWithSequence = make_shared<Name>(m_upstream_prefix);
+  shared_ptr<Name> nameWithSequence = make_shared<Name>(dst_com_prefix);
   nameWithSequence->appendSequenceNumber(seq);
   //
 

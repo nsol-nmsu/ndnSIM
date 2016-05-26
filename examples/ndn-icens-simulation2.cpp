@@ -133,13 +133,15 @@ main(int argc, char* argv[])
                                 	aggHelper.SetPrefix(prefixtoroute + "/pmu");
                                 	aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com/pmu")); //forward to com node prefix
                                 	aggHelper.SetAttribute("Frequency",  StringValue("0.6")); ////wait seconds before aggregatiion
+					aggHelper.SetAttribute("Offset", IntegerValue(0));
                                 	aggHelper.Install(nodes.Get(std::stoi(strfrom)));
-
 
 					// Install aggregator app for AMI payload aggregation - "overlay"
                                         aggHelper.SetPrefix(prefixtoroute + "/ami");
                                         aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com/ami")); //forward to com node prefix
                                         aggHelper.SetAttribute("Frequency",  StringValue("6")); //wait seconds before aggregatiion
+					int offset = (rand() % 900) + 100; //random offset between 100 and 999 (used as milliseconds in aggregator app)
+					aggHelper.SetAttribute("Offset", IntegerValue(offset));
                                         aggHelper.Install(nodes.Get(std::stoi(strfrom)));
 				}
 				else {
@@ -155,15 +157,15 @@ main(int argc, char* argv[])
                          		spHelper.Install(nodes.Get(std::stoi(strfrom)));
 
 				}
-				else {
-
-					// Install spontaneous producer for error reporting with payload interest
+				else if (prefixtoroute.find("urgent") != std::string::npos) {
+       					// Install spontaneous producer for Error Reporting with payload interest
                                         spHelper.SetPrefix(prefixtoroute + "/error");
                                         spHelper.SetAttribute("Frequency", StringValue("0"));
                                         spHelper.SetAttribute("PayloadSize", StringValue("1024"));
                                         spHelper.Install(nodes.Get(std::stoi(strfrom)));
-
-					  // Install a spontaneous producer for aggregated PMU
+				}
+				else {
+					// Install a spontaneous producer for aggregated PMU
                                         spHelper.SetPrefix(prefixtoroute + "/pmu");
                                         spHelper.SetAttribute("Frequency", StringValue("0")); //how many seconds to wait before sending data
                                         spHelper.SetAttribute("PayloadSize", StringValue("1024"));
@@ -174,7 +176,6 @@ main(int argc, char* argv[])
                                 	spHelper.SetAttribute("Frequency", StringValue("0")); //how many seconds to wait before sending data
                                 	spHelper.SetAttribute("PayloadSize", StringValue("1024"));
                                 	spHelper.Install(nodes.Get(std::stoi(strfrom)));
-
 				}
 
 			}
@@ -191,7 +192,6 @@ main(int argc, char* argv[])
                         if (ns3::ValidatePrefix(std::stoi(strfrom), prefixtoroute, "agg_") == true) {
                                 agg_prefixes.push_back(prefixtoroute);
                         }
-
 		}
 		else {
 
@@ -237,9 +237,9 @@ main(int argc, char* argv[])
   // Each physical layer node, sends payload interest to compute node for error reporting using - "/direct/com"
   for (int i=0; i<(int)com_prefixes.size(); i++) {
         //Subscribe to direct prefix
-        if(com_prefixes[i].find("direct") != std::string::npos) {
+        if(com_prefixes[i].find("urgent") != std::string::npos) {
 
-		srand(15); //seed for random offset
+		srand(5); //seed for random offset
 
                 for (int j=0; j<(int)phy_nodes.size(); j++) {
 			// Only the PMU nodes need to send error messages
@@ -248,7 +248,7 @@ main(int argc, char* argv[])
                         	consumerHelper.SetAttribute("TxTimer", StringValue("360")); //resend subscription interest every x seconds
                         	consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
                         	consumerHelper.SetAttribute("PayloadSize", StringValue("60")); //payload size in bytes
-				int offset = (rand() % 41) + 1; //random offset between 1 and 40
+				int offset = (rand() % 91) + 1; //random offset between 1 and 91
 				consumerHelper.SetAttribute("Offset", IntegerValue(offset)); //randomize offset
                         	consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
@@ -272,15 +272,13 @@ main(int argc, char* argv[])
                                 consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
 			else {
-
 				//For smart metering - AMI
   				consumerHelper.SetPrefix(agg_prefixes[i] + "/ami/phy" + std::to_string(phy_nodes[j]));
   				consumerHelper.SetAttribute("TxTimer", StringValue("6")); //resend payload interest every x seconds
   				consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
-  				consumerHelper.SetAttribute("PayloadSize", StringValue("70")); //payload size in bytes
+  				consumerHelper.SetAttribute("PayloadSize", StringValue("60")); //payload size in bytes
 				consumerHelper.SetAttribute("Offset", IntegerValue(0));
   				consumerHelper.Install(nodes.Get(phy_nodes[j]));
-
 			}
 		}
 	}
@@ -343,7 +341,7 @@ main(int argc, char* argv[])
 //Define callbacks for writing to tracefile
 void SentInterestCallbackPhy(uint32_t nodeid, shared_ptr<const ndn::Interest> interest) {
 	if (interest->getSubscription() == 1 || interest->getSubscription() == 2) {
-		//Do not log subscription inetrests from phy nodes
+		//Do not log subscription interests from phy nodes
 	}
 	else {
 		tfile << nodeid << ", sent, " << interest->getName() << ", " << interest->getPayloadLength() << ", " << std::fixed << setprecision(9) << (Simulator::Now().GetNanoSeconds())/1000000000.0 << std::endl;
