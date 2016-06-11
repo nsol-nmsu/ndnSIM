@@ -132,8 +132,9 @@ main(int argc, char* argv[])
 					// Install aggregator app for PMU payload aggregation - "overlay"
                                 	aggHelper.SetPrefix(prefixtoroute + "/pmu");
                                 	aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com/pmu")); //forward to com node prefix
-                                	aggHelper.SetAttribute("Frequency",  StringValue("0.2")); ////wait seconds before aggregatiion
+                                	aggHelper.SetAttribute("Frequency",  StringValue("0.008")); ////wait seconds before aggregatiion
                                 	aggHelper.SetAttribute("Offset", IntegerValue(0));
+					aggHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
 					aggHelper.Install(nodes.Get(std::stoi(strfrom)));
 
 					// Install aggregator app for AMI payload aggregation - "overlay"
@@ -142,6 +143,7 @@ main(int argc, char* argv[])
                                         aggHelper.SetAttribute("Frequency",  StringValue("2")); //wait seconds before aggregatiion
 					int offset = (rand() % 900) + 100; //random offset between 100 and 999 (used as milliseconds in aggregator app)
 					aggHelper.SetAttribute("Offset", IntegerValue(offset));
+					aggHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
                                         aggHelper.Install(nodes.Get(std::stoi(strfrom)));
 				}
 				else {
@@ -228,6 +230,7 @@ main(int argc, char* argv[])
 				consumerHelper.SetAttribute("TxTimer", StringValue("1500")); //resend subscription interest every x seconds
 				consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
 				consumerHelper.SetAttribute("Offset", IntegerValue(0));
+				consumerHelper.SetAttribute("LifeTime", StringValue("1510")); //interest packet lifetime
   				consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
   		}
@@ -250,6 +253,7 @@ main(int argc, char* argv[])
                         	consumerHelper.SetAttribute("PayloadSize", StringValue("60")); //payload size in bytes
 				int offset = (rand() % 91) + 1; //random offset between 1 and 91
 				consumerHelper.SetAttribute("Offset", IntegerValue(offset)); //randomize offset
+				consumerHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
                         	consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
                 }
@@ -264,11 +268,12 @@ main(int argc, char* argv[])
 			if ( j < numOfPMUs) {
 				 //PMU messages - higher send rate
                                 consumerHelper.SetPrefix(agg_prefixes[i] + "/pmu/phy" + std::to_string(phy_nodes[j]));
-                                consumerHelper.SetAttribute("TxTimer", StringValue("0.2")); //resend payload interest every x seconds
+                                consumerHelper.SetAttribute("TxTimer", StringValue("0.008")); //resend payload interest every x seconds
                                 consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
                                 consumerHelper.SetAttribute("PayloadSize", StringValue("90")); //payload size in bytes
 				consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0)); //1 for retransmit, any other value does not retransmit
 				consumerHelper.SetAttribute("Offset", IntegerValue(0));
+				consumerHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
                                 consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
 			else {
@@ -278,6 +283,7 @@ main(int argc, char* argv[])
   				consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
   				consumerHelper.SetAttribute("PayloadSize", StringValue("60")); //payload size in bytes
 				consumerHelper.SetAttribute("Offset", IntegerValue(0));
+				consumerHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
   				consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
 		}

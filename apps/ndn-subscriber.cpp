@@ -111,7 +111,7 @@ Subscriber::Subscriber()
     , m_seq(0)
     , m_seqMax(std::numeric_limits<uint32_t>::max()) // set to max value on uint32
     , m_firstTime (true)
-
+    , m_doRetransmission(1)
 {
   NS_LOG_FUNCTION_NOARGS();
 
@@ -298,7 +298,6 @@ Subscriber::OnData(shared_ptr<const Data> data)
     }
   }
 
-/*
   //Enable trace file for Interests with sequence number (subscription = 0)
   if (m_subscription == 0) {
 
@@ -324,7 +323,6 @@ Subscriber::OnData(shared_ptr<const Data> data)
 
   	m_rtt->AckSeq(SequenceNumber32(seq));
   }
-*/
 
 
 }
