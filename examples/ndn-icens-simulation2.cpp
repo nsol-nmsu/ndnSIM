@@ -42,9 +42,20 @@ int
 main(int argc, char* argv[])
 {
 
+  //Declare the command-line variables
+  std::string pTraceFile, pNodes, pEdges, pRoutingTable;
+
+  // Read optional command-line parameters (e.g., enable visualizer with ./waf --run=<> --visualize
+  CommandLine cmd;
+  cmd.AddValue("pTraceFile", "Output file for simulation results", pTraceFile);
+  cmd.AddValue("pNodes", "Nodes in the topology", pNodes);
+  cmd.AddValue("pEdges", "Edges in the topology", pEdges);
+  cmd.AddValue("pRoutingTable", "Routing table of nodes in the topology", pRoutingTable);
+  cmd.Parse(argc, argv);
+
   //--- Count the number of nodes to create
-  ifstream nfile ("src/ndnSIM/examples/icens-nodes.txt", std::ios::in);
-  //ifstream nfile ("src/ndnSIM/examples/a-nodes.txt", std::ios::in);
+  ifstream nfile (pNodes, std::ios::in);
+
   std::string nodeid, nodename, nodetype;
   int nodecount = 0; //number of nodes in topology
   int numOfPMUs = 20; //number of PMUs
@@ -70,15 +81,12 @@ main(int argc, char* argv[])
   }
   else {
 	std::cout << "Error::Cannot open nodes file!!!" << std::endl;
+	return 1;
   }
   nfile.close();
 
   // setting default parameters for PointToPoint links and channels
   Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("5"));
-
-  // Read optional command-line parameters (e.g., enable visualizer with ./waf --run=<> --visualize
-  CommandLine cmd;
-  cmd.Parse(argc, argv);
 
   // Creating the number of nodes counted in the nodes file
   NodeContainer nodes;
@@ -88,8 +96,8 @@ main(int argc, char* argv[])
   PointToPointHelper p2p;
 
   //--- Get the edges of the graph from file and connect them
-  ifstream efile ("src/ndnSIM/examples/icens-edges.txt", std::ios::in);
-  //ifstream efile ("src/ndnSIM/examples/a-edges.txt", std::ios::in);
+  ifstream efile (pEdges, std::ios::in);
+
   std::string srcnode, dstnode, bw, delay, edgetype;
 
   if (efile.is_open ()) {
@@ -102,6 +110,7 @@ main(int argc, char* argv[])
   }
   else {
         std::cout << "Error::Cannot open edges file!!!" << std::endl;
+	return 1;
   }
   efile.close();
 
@@ -111,8 +120,8 @@ main(int argc, char* argv[])
 
   //--- Configure manual/static routes on all nodes
   //--- Install spontaneous producer application for each prefix that a node serves
-  ifstream rfile("src/ndnSIM/examples/icens-routing-tables.txt", std::ios::in);
-  //ifstream rfile("src/ndnSIM/examples/a-routing.txt", std::ios::in);
+  ifstream rfile(pRoutingTable, std::ios::in);
+
   Ptr<Node> currentnode, nexthopnode;
   std::string strfrom, prefixtoroute, strnexthop, strmetric; int metric;
 
@@ -208,6 +217,7 @@ main(int argc, char* argv[])
   }
   else {
         std::cout << "Error::Cannot open routing table file!!!" << std::endl;
+	return 1;
   }
   rfile.close();
 
@@ -291,7 +301,7 @@ main(int argc, char* argv[])
   }
 
   //Open trace file for writing
-  tfile.open("icens-trace.csv", std::ios::out);
+  tfile.open(pTraceFile, std::ios::out);
   tfile << "nodeid, event, name, payloadsize, time" << std::endl;
 
   std::string strcallback;

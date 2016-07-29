@@ -5,6 +5,10 @@
 
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
+#include <iomanip>
+
+#include "apps/ndn-app.hpp" //this header is required for Trace Sink
 
 namespace ns3 {
 
@@ -14,24 +18,47 @@ namespace ns3 {
  *     NS_LOG=ndn.Subscriber::ndn.Aggregator::ndn.SpontaneousProducer ./waf --run ndn-icens-simulation
  */
 
-
 bool ValidatePrefix(int, std::string, std::string);
 bool PrefixAdded(std::string, std::string);
+
+
+void SentInterestCallbackPhy(uint32_t, shared_ptr<const ndn::Interest>);
+void ReceivedInterestCallbackCom(uint32_t, shared_ptr<const ndn::Interest>);
+
+void SentDataCallbackCom(uint32_t, shared_ptr<const ndn::Data>);
+void ReceivedDataCallbackPhy(uint32_t, shared_ptr<const ndn::Data>);
+
+void SentInterestCallbackAgg(uint32_t, shared_ptr<const ndn::Interest>);
+void ReceivedInterestCallbackAgg(uint32_t, shared_ptr<const ndn::Interest>);
 
 // Vectors to store the various node types
 vector<int> com_nodes, agg_nodes, phy_nodes;
 // Vector to store distinct prefixes being served by the node types
 vector<string> com_prefixes, agg_prefixes;
+//Trace file
+std::ofstream tfile;
 
 int
 main(int argc, char* argv[])
 {
 
+  //Declare the command-line variables
+  std::string pTraceFile, pNodes, pEdges, pRoutingTable;
+
+  // Read optional command-line parameters (e.g., enable visualizer with ./waf --run=<> --visualize
+  CommandLine cmd;
+  cmd.AddValue("pTraceFile", "Output file for simulation results", pTraceFile);
+  cmd.AddValue("pNodes", "Nodes in the topology", pNodes);
+  cmd.AddValue("pEdges", "Edges in the topology", pEdges);
+  cmd.AddValue("pRoutingTable", "Routing table of nodes in the topology", pRoutingTable);
+  cmd.Parse(argc, argv);
+
   //--- Count the number of nodes to create
-  ifstream nfile ("src/ndnSIM/examples/icens-nodes.txt", std::ios::in);
+  //ifstream nfile ("src/ndnSIM/examples/icens-nodes.txt", std::ios::in);
+  ifstream nfile (pNodes, std::ios::in);
   std::string nodeid, nodename, nodetype;
   int nodecount = 0; //number of nodes in topology
-  int numOfPMUs = 20; //number of PMUs
+  int numOfPMUs = 2; //number of PMUs
 
   if (nfile.is_open ()) {
   	while (nfile >> nodeid >> nodename >> nodetype) {
@@ -54,17 +81,12 @@ main(int argc, char* argv[])
   }
   else {
 	std::cout << "Error::Cannot open nodes file!!!" << std::endl;
+	return 1;
   }
   nfile.close();
 
   // setting default parameters for PointToPoint links and channels
-  Config::SetDefault("ns3::PointToPointNetDevice::DataRate", StringValue("1000Mbps"));
-  Config::SetDefault("ns3::PointToPointChannel::Delay", StringValue("2ms"));
-  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("20"));
-
-  // Read optional command-line parameters (e.g., enable visualizer with ./waf --run=<> --visualize
-  CommandLine cmd;
-  cmd.Parse(argc, argv);
+  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("5"));
 
   // Creating the number of nodes counted in the nodes file
   NodeContainer nodes;
@@ -74,16 +96,21 @@ main(int argc, char* argv[])
   PointToPointHelper p2p;
 
   //--- Get the edges of the graph from file and connect them
-  ifstream efile ("src/ndnSIM/examples/icens-edges.txt", std::ios::in);
+  //ifstream efile ("src/ndnSIM/examples/icens-edges.txt", std::ios::in);
+  ifstream efile (pEdges, std::ios::in);
   std::string srcnode, dstnode, bw, delay, edgetype;
 
   if (efile.is_open ()) {
         while (efile >> srcnode >> dstnode >> bw >> delay >> edgetype) {
+		//Set delay and bandwidth parameters for point-to-point links
+		p2p.SetDeviceAttribute("DataRate", StringValue(bw+"Mbps"));
+		p2p.SetChannelAttribute("Delay", StringValue(delay+"ms"));
 		p2p.Install(nodes.Get(std::stoi(srcnode)), nodes.Get(std::stoi(dstnode)));
         }
   }
   else {
         std::cout << "Error::Cannot open edges file!!!" << std::endl;
+	return 1;
   }
   efile.close();
 
@@ -93,11 +120,10 @@ main(int argc, char* argv[])
 
   //--- Configure manual/static routes on all nodes
   //--- Install spontaneous producer application for each prefix that a node serves
-  ifstream rfile("src/ndnSIM/examples/icens-routing-tables.txt", std::ios::in);
+  //ifstream rfile("src/ndnSIM/examples/icens-routing-tables.txt", std::ios::in);
+  ifstream rfile(pRoutingTable, std::ios::in);
   Ptr<Node> currentnode, nexthopnode;
-  std::string strfrom, prefixtoroute, strnexthop, strmetric;
-  int metric;
-
+  std::string strfrom, prefixtoroute, strnexthop, strmetric; int metric;
 
   if (rfile.is_open ()) {
 	// Spontaneuos producer helper
@@ -109,50 +135,57 @@ main(int argc, char* argv[])
 		if (strnexthop == "local") {
 
 			if (prefixtoroute.find("agg") != std::string::npos) {
-				if (prefixtoroute.find("overlay") != std::string::npos) {
-					// Install aggregator app for AMI payload aggregation - "overlay"
-  					aggHelper.SetPrefix(prefixtoroute + "/ami");
- 	 				aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com/ami")); //forward to com node prefix
-  					aggHelper.SetAttribute("Frequency",  StringValue("1")); //wait seconds before aggregatiion
-  					aggHelper.Install(nodes.Get(std::stoi(strfrom)));
+				if (prefixtoroute.find("direct") != std::string::npos) {
 
 					// Install aggregator app for PMU payload aggregation - "overlay"
                                 	aggHelper.SetPrefix(prefixtoroute + "/pmu");
                                 	aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com/pmu")); //forward to com node prefix
                                 	aggHelper.SetAttribute("Frequency",  StringValue("0.1")); ////wait seconds before aggregatiion
+					aggHelper.SetAttribute("Offset", IntegerValue(0));
+					aggHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
                                 	aggHelper.Install(nodes.Get(std::stoi(strfrom)));
+
+					// Install aggregator app for AMI payload aggregation - "overlay"
+                                        aggHelper.SetPrefix(prefixtoroute + "/ami");
+                                        aggHelper.SetAttribute("UpstreamPrefix", StringValue(prefixtoroute.substr(0,prefixtoroute.find("agg"))+ "com/ami")); //forward to com node prefix
+                                        aggHelper.SetAttribute("Frequency",  StringValue("30")); //wait seconds before aggregatiion
+					int offset = (rand() % 900) + 100; //random offset between 100 and 999 (used as milliseconds in aggregator app)
+					aggHelper.SetAttribute("Offset", IntegerValue(offset));
+					aggHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
+                                        aggHelper.Install(nodes.Get(std::stoi(strfrom)));
 				}
 				else {
-					// serves /direct/agg
+					// serves
 				}
 			}
 			else if (prefixtoroute.find("com") != std::string::npos){
 				// Install spontaneous producer on the node for subscription and payload interests served by "direct"
-				if (prefixtoroute.find("direct") != std::string::npos) {
+				if (prefixtoroute.find("overlay") != std::string::npos) {
                          		spHelper.SetPrefix(prefixtoroute + "/subscription");
-                         		spHelper.SetAttribute("Frequency", StringValue("60")); //wait x seconds and send data for subscriptions
+                         		spHelper.SetAttribute("Frequency", StringValue("900")); //wait x seconds and send data for subscriptions
                          		spHelper.SetAttribute("PayloadSize", StringValue("1024"));
                          		spHelper.Install(nodes.Get(std::stoi(strfrom)));
 
-					// Install spontaneous producer for error reporting with payload interest
-					spHelper.SetPrefix(prefixtoroute + "/error");
+				}
+				else if (prefixtoroute.find("urgent") != std::string::npos) {
+       					// Install spontaneous producer for Error Reporting with payload interest
+                                        spHelper.SetPrefix(prefixtoroute + "/error");
                                         spHelper.SetAttribute("Frequency", StringValue("0"));
                                         spHelper.SetAttribute("PayloadSize", StringValue("1024"));
                                         spHelper.Install(nodes.Get(std::stoi(strfrom)));
-
 				}
 				else {
-					// Install a spontaneous producer for aggregated AMI "overlay"
-					spHelper.SetPrefix(prefixtoroute + "/ami");
-                                	spHelper.SetAttribute("Frequency", StringValue("0")); //how many seconds to wait before sending data
-                                	spHelper.SetAttribute("PayloadSize", StringValue("1024"));
-                                	spHelper.Install(nodes.Get(std::stoi(strfrom)));
-
-					// Install a spontaneous producer for aggregated PMU "overlay"
+					// Install a spontaneous producer for aggregated PMU
                                         spHelper.SetPrefix(prefixtoroute + "/pmu");
                                         spHelper.SetAttribute("Frequency", StringValue("0")); //how many seconds to wait before sending data
                                         spHelper.SetAttribute("PayloadSize", StringValue("1024"));
                                         spHelper.Install(nodes.Get(std::stoi(strfrom)));
+
+					// Install a spontaneous producer for aggregated AMI
+					spHelper.SetPrefix(prefixtoroute + "/ami");
+                                	spHelper.SetAttribute("Frequency", StringValue("0")); //how many seconds to wait before sending data
+                                	spHelper.SetAttribute("PayloadSize", StringValue("1024"));
+                                	spHelper.Install(nodes.Get(std::stoi(strfrom)));
 				}
 
 			}
@@ -169,9 +202,9 @@ main(int argc, char* argv[])
                         if (ns3::ValidatePrefix(std::stoi(strfrom), prefixtoroute, "agg_") == true) {
                                 agg_prefixes.push_back(prefixtoroute);
                         }
-
 		}
 		else {
+
 			// Configure static route on node
 			currentnode = nodes.Get(std::stoi(strfrom)); // node to add route on
 			prefixtoroute = prefixtoroute; // prefix to add route for
@@ -183,84 +216,194 @@ main(int argc, char* argv[])
   }
   else {
         std::cout << "Error::Cannot open routing table file!!!" << std::endl;
+	return 1;
   }
   rfile.close();
 
   // Choosing forwarding strategy
-  ndn::StrategyChoiceHelper::InstallAll("/prefix", "/localhost/nfd/strategy/multicast");
+  ndn::StrategyChoiceHelper::InstallAll("/prefix", "/localhost/nfd/strategy/best-route");
 
   // Installing applications
 
   // Subscriber
   ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
-  // Subscriber send out subscription interest for a prefix...
 
   // Each physical layer node, subscribes to "direct" prefix being served by computes nodes
   for (int i=0; i<(int)com_prefixes.size(); i++) {
 	//Subscribe to direct prefix
-	if(com_prefixes[i].find("direct") != std::string::npos) {
+	if(com_prefixes[i].find("overlay") != std::string::npos) {
   		for (int j=0; j<(int)phy_nodes.size(); j++) {
 			//PMUs should not subscribe to data
 			if ( j >= numOfPMUs) {
 				consumerHelper.SetPrefix(com_prefixes[i] + "/subscription");
 				consumerHelper.SetAttribute("TxTimer", StringValue("4500")); //resend subscription interest every x seconds
 				consumerHelper.SetAttribute("Subscription", IntegerValue(1)); //set the subscription value
+				consumerHelper.SetAttribute("Offset", IntegerValue(0));
+				consumerHelper.SetAttribute("LifeTime", StringValue("4510")); //interest packet lifetime
   				consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
   		}
 	}
   }
 
-  // Each physical layer node sends payload interests to aggregation layer - "overlay"
-  for (int i=0; i<(int)agg_prefixes.size(); i++) {
-  	//Subscribe to overlay prefix
-        if(agg_prefixes[i].find("overlay") != std::string::npos) {
-  		for (int j=0; j<(int)phy_nodes.size(); j++) {
+  // Each physical layer node, sends payload interest to compute node for error reporting using - "/direct/com"
+  for (int i=0; i<(int)com_prefixes.size(); i++) {
+        //Subscribe to direct prefix
+        if(com_prefixes[i].find("urgent") != std::string::npos) {
 
+		srand(5); //seed for random offset
+
+                for (int j=0; j<(int)phy_nodes.size(); j++) {
+			// Only the PMU nodes need to send error messages
 			if ( j < numOfPMUs) {
-				 //PMU messages - hihger send rate
+                        	consumerHelper.SetPrefix(com_prefixes[i] + "/error/phy" + std::to_string(phy_nodes[j]));
+                        	consumerHelper.SetAttribute("TxTimer", StringValue("480")); //resend subscription interest every x seconds
+                        	consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
+                        	consumerHelper.SetAttribute("PayloadSize", StringValue("60")); //payload size in bytes
+				int offset = (rand() % 91) + 1; //random offset between 1 and 91
+				consumerHelper.SetAttribute("Offset", IntegerValue(offset)); //randomize offset
+				consumerHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
+                        	consumerHelper.Install(nodes.Get(phy_nodes[j]));
+			}
+                }
+        }
+  }
+
+  // Each physical layer node sends payload interests to aggregation layer - "/direct/com"
+  for (int i=0; i<(int)agg_prefixes.size(); i++) {
+  	//Subscribe to direct prefix
+        if(agg_prefixes[i].find("direct") != std::string::npos) {
+  		for (int j=0; j<(int)phy_nodes.size(); j++) {
+			if ( j < numOfPMUs) {
+				 //PMU messages - higher send rate
                                 consumerHelper.SetPrefix(agg_prefixes[i] + "/pmu/phy" + std::to_string(phy_nodes[j]));
                                 consumerHelper.SetAttribute("TxTimer", StringValue("0.1")); //resend payload interest every x seconds
                                 consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
-                                consumerHelper.SetAttribute("PayloadSize", StringValue("9")); //payload size in bytes
+                                consumerHelper.SetAttribute("PayloadSize", StringValue("90")); //payload size in bytes
 				consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0)); //1 for retransmit, any other value does not retransmit
+				consumerHelper.SetAttribute("Offset", IntegerValue(0));
+				consumerHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
                                 consumerHelper.Install(nodes.Get(phy_nodes[j]));
 			}
 			else {
 
 				//For smart metering - AMI
   				consumerHelper.SetPrefix(agg_prefixes[i] + "/ami/phy" + std::to_string(phy_nodes[j]));
-  				consumerHelper.SetAttribute("TxTimer", StringValue("1")); //resend payload interest every x seconds
+  				consumerHelper.SetAttribute("TxTimer", StringValue("30")); //resend payload interest every x seconds
   				consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
-  				consumerHelper.SetAttribute("PayloadSize", StringValue("7")); //payload size in bytes
+  				consumerHelper.SetAttribute("PayloadSize", StringValue("60")); //payload size in bytes
+				consumerHelper.SetAttribute("Offset", IntegerValue(0));
+				consumerHelper.SetAttribute("LifeTime", StringValue("10")); //interest packet lifetime
   				consumerHelper.Install(nodes.Get(phy_nodes[j]));
+
 			}
 		}
 	}
   }
 
-  // Each physical layer node, sends payload interest to compute node for error reporting using "direct" prefix
-  for (int i=0; i<(int)com_prefixes.size(); i++) {
-        //Subscribe to direct prefix
-        if(com_prefixes[i].find("direct") != std::string::npos) {
-                for (int j=0; j<(int)phy_nodes.size(); j++) {
-                       	consumerHelper.SetPrefix(com_prefixes[i] + "/error/phy" + std::to_string(phy_nodes[j]));
-                       	consumerHelper.SetAttribute("TxTimer", StringValue("120")); //resend subscription interest every x seconds
-                       	consumerHelper.SetAttribute("Subscription", IntegerValue(0)); //payload interest (0 value)
-			consumerHelper.SetAttribute("PayloadSize", StringValue("6")); //payload size in bytes
-                       	consumerHelper.Install(nodes.Get(phy_nodes[j]));
-                }
-        }
+  //Open trace file for writing
+  tfile.open(pTraceFile, std::ios::out);
+  tfile << "nodeid, event, name, payloadsize, time" << std::endl;
+
+  std::string strcallback;
+
+  //Trace transmitted payload interest from [physical nodes]
+  for (int i=0; i<(int)phy_nodes.size(); i++) {
+	strcallback = "/NodeList/" + std::to_string(phy_nodes[i]) + "/ApplicationList/" + "*/SentInterest";
+	Config::ConnectWithoutContext(strcallback, MakeCallback(&SentInterestCallbackPhy));
   }
 
-  Simulator::Stop(Seconds(3600.0));
+  //Trace received payload interest at [compute nodes]
+  for (int i=0; i<(int)com_nodes.size(); i++) {
+	strcallback = "/NodeList/" + std::to_string(com_nodes[i]) + "/ApplicationList/" + "*/ReceivedInterest";
+        Config::ConnectWithoutContext(strcallback, MakeCallback(&ReceivedInterestCallbackCom));
+  }
 
-  //ndn::AppDelayTracer::InstallAll("icens-simulation-trace.txt");
+  //Trace sent data from [compute nodes]
+  for (int i=0; i<(int)com_nodes.size(); i++) {
+        strcallback = "/NodeList/" + std::to_string(com_nodes[i]) + "/ApplicationList/" + "*/SentData";
+        Config::ConnectWithoutContext(strcallback, MakeCallback(&SentDataCallbackCom));
+  }
+
+  //Trace received data at [physical nodes]
+  for (int i=0; i<(int)phy_nodes.size(); i++) {
+       	strcallback = "/NodeList/" + std::to_string(phy_nodes[i]) + "/ApplicationList/" + "*/ReceivedData";
+      	Config::ConnectWithoutContext(strcallback, MakeCallback(&ReceivedDataCallbackPhy));
+  }
+
+  //Trace received interest at [aggregation nodes]
+  for (int i=0; i<(int)agg_nodes.size(); i++) {
+        strcallback = "/NodeList/" + std::to_string(agg_nodes[i]) + "/ApplicationList/" + "*/ReceivedInterest";
+        Config::ConnectWithoutContext(strcallback, MakeCallback(&ReceivedInterestCallbackAgg));
+  }
+
+  //Trace sent interest at [aggregation nodes]
+  for (int i=0; i<(int)agg_nodes.size(); i++) {
+        strcallback = "/NodeList/" + std::to_string(agg_nodes[i]) + "/ApplicationList/" + "*/SentInterest";
+        Config::ConnectWithoutContext(strcallback, MakeCallback(&SentInterestCallbackAgg));
+  }
+
+  Simulator::Stop(Seconds(10.0));
 
   Simulator::Run();
   Simulator::Destroy();
 
+  //Close the trace file
+  tfile.close();
+
   return 0;
+}
+
+
+//Define callbacks for writing to tracefile
+void SentInterestCallbackPhy(uint32_t nodeid, shared_ptr<const ndn::Interest> interest) {
+	if (interest->getSubscription() == 1 || interest->getSubscription() == 2) {
+		//Do not log subscription interests from phy nodes
+	}
+	else {
+		tfile << nodeid << ", sent, " << interest->getName() << ", " << interest->getPayloadLength() << ", " << std::fixed << setprecision(9) << (Simulator::Now().GetNanoSeconds())/1000000000.0 << std::endl;
+	}
+}
+
+void ReceivedInterestCallbackCom(uint32_t nodeid, shared_ptr<const ndn::Interest> interest) {
+	if (interest->getSubscription() == 1 || interest->getSubscription() == 2) {
+		//Do not log subscription interests received at com nodes
+	}
+	else {
+		tfile << nodeid << ", recv, " << interest->getName() << ", " << interest->getPayloadLength() << ", " << std::fixed << setprecision(9) << (Simulator::Now().GetNanoSeconds())/1000000000.0 << std::endl;
+	}
+}
+
+
+void SentDataCallbackCom(uint32_t nodeid, shared_ptr<const ndn::Data> data) {
+	if (
+		(std::to_string(data->getName())).find("error") != std::string::npos ||
+		(std::to_string(data->getName())).find("pmu") != std::string::npos ||
+		(std::to_string(data->getName())).find("ami") != std::string::npos
+
+	) {
+		//Do not log data for error, PMU ACK, AMI ACK from compute
+	}
+	else {
+		tfile << nodeid << ", sent, " << data->getName() << ", 1024, " << std::fixed << setprecision(9) << (Simulator::Now().GetNanoSeconds())/1000000000.0 << std::endl;
+	}
+}
+
+void ReceivedDataCallbackPhy(uint32_t nodeid, shared_ptr<const ndn::Data> data) {
+	if ((std::to_string(data->getName())).find("error") != std::string::npos) {
+		//Do not log data received in response to payload interest
+	}
+	else {
+		tfile << nodeid << ", recv, " << data->getName() << ", 1024, " << std::fixed << setprecision(9) << (Simulator::Now().GetNanoSeconds())/1000000000.0 << std::endl;
+	}
+}
+
+void ReceivedInterestCallbackAgg(uint32_t nodeid, shared_ptr<const ndn::Interest> interest) {
+        tfile << nodeid << ", recv, " << interest->getName() << ", " << interest->getPayloadLength() << ", " << std::fixed << setprecision(9) << (Simulator::Now().GetNanoSeconds())/1000000000.0 << std::endl;
+}
+
+void SentInterestCallbackAgg(uint32_t nodeid, shared_ptr<const ndn::Interest> interest) {
+        tfile << nodeid << ", sent, " << interest->getName() << ", " << interest->getPayloadLength() << ", " << std::fixed << setprecision(9) << (Simulator::Now().GetNanoSeconds())/1000000000.0 << std::endl;
 }
 
 
@@ -292,6 +435,7 @@ bool ValidatePrefix(int nodeid, std::string prefix, std::string nodetype) {
         return false;
 }
 
+// Check if prefix is already added to vector (global variable)
 bool PrefixAdded(std::string prefix, std::string nodetype) {
 
 	if (nodetype == "com_") {
