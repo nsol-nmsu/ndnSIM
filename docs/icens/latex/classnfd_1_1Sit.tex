@@ -1,0 +1,126 @@
+\hypertarget{classnfd_1_1Sit}{}\section{nfd\+:\+:Sit Class Reference}
+\label{classnfd_1_1Sit}\index{nfd\+::\+Sit@{nfd\+::\+Sit}}
+
+
+represents the Interest Table  
+
+
+
+
+{\ttfamily \#include $<$sit.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Sit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1Sit}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1Sit_1_1const__iterator}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Sit} (\hyperlink{classnfd_1_1NameTree}{Name\+Tree} \&name\+Tree)\hypertarget{classnfd_1_1Sit_af6f70d0ddbd0512d4240f181c7e807cf}{}\label{classnfd_1_1Sit_af6f70d0ddbd0512d4240f181c7e807cf}
+
+\item 
+std\+::pair$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1SitEntry}{pit\+::\+Sit\+Entry} $>$, bool $>$ \hyperlink{classnfd_1_1Sit_a7817c368b4e76b16b1e349e1aec9bd07}{insert} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)
+\begin{DoxyCompactList}\small\item\em inserts a P\+IT entry for Interest \end{DoxyCompactList}\item 
+pit\+::\+Sit\+Data\+Match\+Result \hyperlink{classnfd_1_1Sit_a359e5521f258501715d677276c5596d7}{find\+All\+Data\+Matches} (const \hyperlink{classndn_1_1Data}{Data} \&data) const
+\begin{DoxyCompactList}\small\item\em performs a Data match \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Sit_acc3e1ae79cf7875071189c509d58a234}{erase} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1SitEntry}{pit\+::\+Sit\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1Sit_acc3e1ae79cf7875071189c509d58a234}{}\label{classnfd_1_1Sit_acc3e1ae79cf7875071189c509d58a234}
+
+\begin{DoxyCompactList}\small\item\em erases a P\+IT Entry \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1Sit_1_1const__iterator}{const\+\_\+iterator} \hyperlink{classnfd_1_1Sit_a0075b80cf091a7f6f54bc35bcfc10f88}{begin} () const
+\begin{DoxyCompactList}\small\item\em returns an iterator pointing to the first P\+IT entry \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1Sit_1_1const__iterator}{const\+\_\+iterator} \hyperlink{classnfd_1_1Sit_a5d895950170cb8b3261c526a06a75266}{end} () const
+\begin{DoxyCompactList}\small\item\em returns an iterator referring to the past-\/the-\/end P\+IT entry \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+represents the Interest Table 
+
+Definition at line 49 of file sit.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Sit@{nfd\+::\+Sit}!begin@{begin}}
+\index{begin@{begin}!nfd\+::\+Sit@{nfd\+::\+Sit}}
+\subsubsection[{\texorpdfstring{begin() const}{begin() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sit\+::const\+\_\+iterator} nfd\+::\+Sit\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1Sit_a0075b80cf091a7f6f54bc35bcfc10f88}{}\label{classnfd_1_1Sit_a0075b80cf091a7f6f54bc35bcfc10f88}
+
+
+returns an iterator pointing to the first P\+IT entry 
+
+\begin{DoxyNote}{Note}
+Iteration order is implementation-\/specific and is undefined 
+
+The returned iterator may get invalidated if P\+IT or another Name\+Tree-\/based table is modified 
+\end{DoxyNote}
+
+
+Definition at line 120 of file sit.\+cpp.
+
+\index{nfd\+::\+Sit@{nfd\+::\+Sit}!end@{end}}
+\index{end@{end}!nfd\+::\+Sit@{nfd\+::\+Sit}}
+\subsubsection[{\texorpdfstring{end() const}{end() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\+\_\+iterator} nfd\+::\+Sit\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1Sit_a5d895950170cb8b3261c526a06a75266}{}\label{classnfd_1_1Sit_a5d895950170cb8b3261c526a06a75266}
+
+
+returns an iterator referring to the past-\/the-\/end P\+IT entry 
+
+\begin{DoxyNote}{Note}
+The returned iterator may get invalidated if P\+IT or another Name\+Tree-\/based table is modified 
+\end{DoxyNote}
+\index{nfd\+::\+Sit@{nfd\+::\+Sit}!find\+All\+Data\+Matches@{find\+All\+Data\+Matches}}
+\index{find\+All\+Data\+Matches@{find\+All\+Data\+Matches}!nfd\+::\+Sit@{nfd\+::\+Sit}}
+\subsubsection[{\texorpdfstring{find\+All\+Data\+Matches(const Data \&data) const}{findAllDataMatches(const Data \&data) const}}]{\setlength{\rightskip}{0pt plus 5cm}pit\+::\+Sit\+Data\+Match\+Result nfd\+::\+Sit\+::find\+All\+Data\+Matches (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1Sit_a359e5521f258501715d677276c5596d7}{}\label{classnfd_1_1Sit_a359e5521f258501715d677276c5596d7}
+
+
+performs a Data match 
+
+\begin{DoxyReturn}{Returns}
+an iterable of all P\+IT entries matching data 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file sit.\+cpp.
+
+\index{nfd\+::\+Sit@{nfd\+::\+Sit}!insert@{insert}}
+\index{insert@{insert}!nfd\+::\+Sit@{nfd\+::\+Sit}}
+\subsubsection[{\texorpdfstring{insert(const Interest \&interest)}{insert(const Interest \&interest)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ shared\+\_\+ptr$<$ {\bf pit\+::\+Sit\+Entry} $>$, bool $>$ nfd\+::\+Sit\+::insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Sit_a7817c368b4e76b16b1e349e1aec9bd07}{}\label{classnfd_1_1Sit_a7817c368b4e76b16b1e349e1aec9bd07}
+
+
+inserts a P\+IT entry for Interest 
+
+If an entry for exact same name and selectors exists, that entry is returned. \begin{DoxyReturn}{Returns}
+the entry, and true for new entry, false for existing entry 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file sit.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/sit.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/sit.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{classndn_1_1security_1_1conf_1_1Checker}{}\section{ndn\+:\+:security\+:\+:conf\+:\+:Checker Class Reference}
+\label{classndn_1_1security_1_1conf_1_1Checker}\index{ndn\+::security\+::conf\+::\+Checker@{ndn\+::security\+::conf\+::\+Checker}}
+Inheritance diagram for ndn\+:\+:security\+:\+:conf\+:\+:Checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1security_1_1conf_1_1Checker}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries I\+N\+T\+E\+R\+E\+S\+T\+\_\+\+S\+I\+G\+\_\+\+V\+A\+L\+UE} = -\/1, 
+{\bfseries I\+N\+T\+E\+R\+E\+S\+T\+\_\+\+S\+I\+G\+\_\+\+I\+N\+FO} = -\/2
+ \}\hypertarget{classndn_1_1security_1_1conf_1_1Checker_a5d61d7e5b5ada1a5c2638fb963ba1351}{}\label{classndn_1_1security_1_1conf_1_1Checker_a5d61d7e5b5ada1a5c2638fb963ba1351}
+
+\item 
+typedef function$<$ void(const shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{Interest} $>$ \&)$>$ {\bfseries On\+Interest\+Checked}\hypertarget{classndn_1_1security_1_1conf_1_1Checker_aaa5fa4506939dc22ab62114185172d2e}{}\label{classndn_1_1security_1_1conf_1_1Checker_aaa5fa4506939dc22ab62114185172d2e}
+
+\item 
+typedef function$<$ void(const shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{Interest} $>$ \&, const std\+::string \&)$>$ {\bfseries On\+Interest\+Check\+Failed}\hypertarget{classndn_1_1security_1_1conf_1_1Checker_a497732cf5523038c956a3ca9f5b9e807}{}\label{classndn_1_1security_1_1conf_1_1Checker_a497732cf5523038c956a3ca9f5b9e807}
+
+\item 
+typedef function$<$ void(const shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{Data} $>$ \&)$>$ {\bfseries On\+Data\+Checked}\hypertarget{classndn_1_1security_1_1conf_1_1Checker_a492cb83f7fa894669460b1a2036e78a8}{}\label{classndn_1_1security_1_1conf_1_1Checker_a492cb83f7fa894669460b1a2036e78a8}
+
+\item 
+typedef function$<$ void(const shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{Data} $>$ \&, const std\+::string \&)$>$ {\bfseries On\+Data\+Check\+Failed}\hypertarget{classndn_1_1security_1_1conf_1_1Checker_aa434d3d96996bf0298c4cd2f67758886}{}\label{classndn_1_1security_1_1conf_1_1Checker_aa434d3d96996bf0298c4cd2f67758886}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int8\+\_\+t \hyperlink{classndn_1_1security_1_1conf_1_1Checker_a64a071792f5a3c1fe9dac673d89f75c2}{check} (const \hyperlink{classndn_1_1Data}{Data} \&data, const On\+Data\+Checked \&on\+Validated, const On\+Data\+Check\+Failed \&on\+Validation\+Failed)=0
+\begin{DoxyCompactList}\small\item\em check if data satisfies condition defined in the specific checker implementation \end{DoxyCompactList}\item 
+virtual int8\+\_\+t \hyperlink{classndn_1_1security_1_1conf_1_1Checker_ad2b264b924798134a3b1aafee06ad8de}{check} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const On\+Interest\+Checked \&on\+Validated, const On\+Interest\+Check\+Failed \&on\+Validation\+Failed)=0
+\begin{DoxyCompactList}\small\item\em check if interest satisfies condition defined in the specific checker implementation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 42 of file checker.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::conf\+::\+Checker@{ndn\+::security\+::conf\+::\+Checker}!check@{check}}
+\index{check@{check}!ndn\+::security\+::conf\+::\+Checker@{ndn\+::security\+::conf\+::\+Checker}}
+\subsubsection[{\texorpdfstring{check(const Data \&data, const On\+Data\+Checked \&on\+Validated, const On\+Data\+Check\+Failed \&on\+Validation\+Failed)=0}{check(const Data \&data, const OnDataChecked \&onValidated, const OnDataCheckFailed \&onValidationFailed)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int8\+\_\+t ndn\+::security\+::conf\+::\+Checker\+::check (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data, }
+\item[{const On\+Data\+Checked \&}]{on\+Validated, }
+\item[{const On\+Data\+Check\+Failed \&}]{on\+Validation\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1conf_1_1Checker_a64a071792f5a3c1fe9dac673d89f75c2}{}\label{classndn_1_1security_1_1conf_1_1Checker_a64a071792f5a3c1fe9dac673d89f75c2}
+
+
+check if data satisfies condition defined in the specific checker implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \hyperlink{classndn_1_1Data}{Data} packet \\
+\hline
+{\em on\+Validated} & Callback function which is called when data is immediately valid \\
+\hline
+{\em on\+Validation\+Failed} & Call function which is called when data is immediately invalid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if data is immediately invalid (on\+Validation\+Failed has been called) 1 if data is immediately valid (on\+Validated has been called) 0 if further signature verification is needed. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1conf_1_1FixedSignerChecker_ab285c81cf9d21bdac01c64d9f943fd82}{ndn\+::security\+::conf\+::\+Fixed\+Signer\+Checker}, and \hyperlink{classndn_1_1security_1_1conf_1_1CustomizedChecker_a581b8e9d0eee9d3989190ab45e19723c}{ndn\+::security\+::conf\+::\+Customized\+Checker}.
+
+\index{ndn\+::security\+::conf\+::\+Checker@{ndn\+::security\+::conf\+::\+Checker}!check@{check}}
+\index{check@{check}!ndn\+::security\+::conf\+::\+Checker@{ndn\+::security\+::conf\+::\+Checker}}
+\subsubsection[{\texorpdfstring{check(const Interest \&interest, const On\+Interest\+Checked \&on\+Validated, const On\+Interest\+Check\+Failed \&on\+Validation\+Failed)=0}{check(const Interest \&interest, const OnInterestChecked \&onValidated, const OnInterestCheckFailed \&onValidationFailed)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int8\+\_\+t ndn\+::security\+::conf\+::\+Checker\+::check (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{const On\+Interest\+Checked \&}]{on\+Validated, }
+\item[{const On\+Interest\+Check\+Failed \&}]{on\+Validation\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1conf_1_1Checker_ad2b264b924798134a3b1aafee06ad8de}{}\label{classndn_1_1security_1_1conf_1_1Checker_ad2b264b924798134a3b1aafee06ad8de}
+
+
+check if interest satisfies condition defined in the specific checker implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & \hyperlink{classndn_1_1Interest}{Interest} packet \\
+\hline
+{\em on\+Validated} & Callback function which is called when interest is immediately valid \\
+\hline
+{\em on\+Validation\+Failed} & Call function which is called when interest is immediately invalid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if interest is immediately invalid (on\+Validation\+Failed has been called) 1 if interest is immediately valid (on\+Validated has been called) 0 if further signature verification is needed. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1conf_1_1FixedSignerChecker_a2f90ad1706711e7fed52efd326456dd5}{ndn\+::security\+::conf\+::\+Fixed\+Signer\+Checker}, and \hyperlink{classndn_1_1security_1_1conf_1_1CustomizedChecker_ae51fcc1726ee34157817203072a80da9}{ndn\+::security\+::conf\+::\+Customized\+Checker}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/conf/checker.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,135 @@
+\hypertarget{classns3_1_1ndn_1_1ConsumerWindow}{}\section{ns3\+:\+:ndn\+:\+:Consumer\+Window Class Reference}
+\label{classns3_1_1ndn_1_1ConsumerWindow}\index{ns3\+::ndn\+::\+Consumer\+Window@{ns3\+::ndn\+::\+Consumer\+Window}}
+
+
+Ndn application for sending out Interest packets (window-\/based)  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/consumer-\/window.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Consumer\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classns3_1_1ndn_1_1ConsumerWindow}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Window\+Trace\+Callback}) (uint32\+\_\+t)\hypertarget{classns3_1_1ndn_1_1ConsumerWindow_a679a990b4bdc077b7051d76c0e7f8d76}{}\label{classns3_1_1ndn_1_1ConsumerWindow_a679a990b4bdc077b7051d76c0e7f8d76}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1ConsumerWindow_aca4a5a8e5fdb321126cb6e235ce59d65}{Consumer\+Window} ()\hypertarget{classns3_1_1ndn_1_1ConsumerWindow_aca4a5a8e5fdb321126cb6e235ce59d65}{}\label{classns3_1_1ndn_1_1ConsumerWindow_aca4a5a8e5fdb321126cb6e235ce59d65}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1ConsumerWindow_a2a1df9fda4576e100d7d04658fd0311e}{On\+Data} (shared\+\_\+ptr$<$ const Data $>$ content\+Object)
+\begin{DoxyCompactList}\small\item\em Method that will be called every time new Data arrives. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1ConsumerWindow_a543852ddf580b55045b798f21f850e78}{On\+Timeout} (uint32\+\_\+t sequence\+Number)
+\begin{DoxyCompactList}\small\item\em Timeout event. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1ConsumerWindow_ae3a121e015d5470dc26d756ec620c111}{Will\+Send\+Out\+Interest} (uint32\+\_\+t sequence\+Number)
+\begin{DoxyCompactList}\small\item\em An event that is fired just before an Interest packet is actually send out (send is inevitable) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} ()\hypertarget{classns3_1_1ndn_1_1ConsumerWindow_afec658d2d37faecb20f61ea138226e85}{}\label{classns3_1_1ndn_1_1ConsumerWindow_afec658d2d37faecb20f61ea138226e85}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1ConsumerWindow_a6f70ff23627a90c3b6ad044447a46636}{Schedule\+Next\+Packet} ()\hypertarget{classns3_1_1ndn_1_1ConsumerWindow_a6f70ff23627a90c3b6ad044447a46636}{}\label{classns3_1_1ndn_1_1ConsumerWindow_a6f70ff23627a90c3b6ad044447a46636}
+
+\begin{DoxyCompactList}\small\item\em Constructs the Interest packet and sends it using a callback to the underlying N\+DN protocol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Ndn application for sending out Interest packets (window-\/based) 
+
+!!! A\+T\+T\+E\+N\+T\+I\+ON !!! This is highly experimental and relies on experimental features of the simulator. Behavior may be unpredictable if used incorrectly. 
+
+Definition at line 39 of file ndn-\/consumer-\/window.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Consumer\+Window@{ns3\+::ndn\+::\+Consumer\+Window}!On\+Data@{On\+Data}}
+\index{On\+Data@{On\+Data}!ns3\+::ndn\+::\+Consumer\+Window@{ns3\+::ndn\+::\+Consumer\+Window}}
+\subsubsection[{\texorpdfstring{On\+Data(shared\+\_\+ptr$<$ const Data $>$ content\+Object)}{OnData(shared\_ptr< const Data > contentObject)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Consumer\+Window\+::\+On\+Data (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1ConsumerWindow_a2a1df9fda4576e100d7d04658fd0311e}{}\label{classns3_1_1ndn_1_1ConsumerWindow_a2a1df9fda4576e100d7d04658fd0311e}
+
+
+Method that will be called every time new Data arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+Object} & Data header \\
+\hline
+{\em payload} & payload (potentially virtual) of the Data packet (may include packet tags of original packet) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1Consumer_a1d32a655a013ce7404a1ce7fe4eb2dad}{ns3\+::ndn\+::\+Consumer}.
+
+
+
+Definition at line 185 of file ndn-\/consumer-\/window.\+cpp.
+
+\index{ns3\+::ndn\+::\+Consumer\+Window@{ns3\+::ndn\+::\+Consumer\+Window}!On\+Timeout@{On\+Timeout}}
+\index{On\+Timeout@{On\+Timeout}!ns3\+::ndn\+::\+Consumer\+Window@{ns3\+::ndn\+::\+Consumer\+Window}}
+\subsubsection[{\texorpdfstring{On\+Timeout(uint32\+\_\+t sequence\+Number)}{OnTimeout(uint32\_t sequenceNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Consumer\+Window\+::\+On\+Timeout (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{sequence\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1ConsumerWindow_a543852ddf580b55045b798f21f850e78}{}\label{classns3_1_1ndn_1_1ConsumerWindow_a543852ddf580b55045b798f21f850e78}
+
+
+Timeout event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence\+Number} & time outed sequence number \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1Consumer_acdd845fd285cd7d63ea87c2e2dfa3234}{ns3\+::ndn\+::\+Consumer}.
+
+
+
+Definition at line 199 of file ndn-\/consumer-\/window.\+cpp.
+
+\index{ns3\+::ndn\+::\+Consumer\+Window@{ns3\+::ndn\+::\+Consumer\+Window}!Will\+Send\+Out\+Interest@{Will\+Send\+Out\+Interest}}
+\index{Will\+Send\+Out\+Interest@{Will\+Send\+Out\+Interest}!ns3\+::ndn\+::\+Consumer\+Window@{ns3\+::ndn\+::\+Consumer\+Window}}
+\subsubsection[{\texorpdfstring{Will\+Send\+Out\+Interest(uint32\+\_\+t sequence\+Number)}{WillSendOutInterest(uint32\_t sequenceNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Consumer\+Window\+::\+Will\+Send\+Out\+Interest (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{sequence\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1ConsumerWindow_ae3a121e015d5470dc26d756ec620c111}{}\label{classns3_1_1ndn_1_1ConsumerWindow_ae3a121e015d5470dc26d756ec620c111}
+
+
+An event that is fired just before an Interest packet is actually send out (send is inevitable) 
+
+The reason for \char`\"{}before\char`\"{} even is that in certain cases (when it is possible to satisfy from the local cache), the send call will immediately return data, and if \char`\"{}after\char`\"{} even was used, this after would be called after all processing of incoming data, potentially producing unexpected results. 
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1Consumer_a61f73750ef40b39a7f4f15cd952bb36a}{ns3\+::ndn\+::\+Consumer}.
+
+
+
+Definition at line 214 of file ndn-\/consumer-\/window.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/consumer-\/window.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/consumer-\/window.\+cpp\end{DoxyCompactItemize}

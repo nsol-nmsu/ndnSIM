@@ -1,0 +1,277 @@
+\hypertarget{classndn_1_1security_1_1Identity}{}\section{ndn\+:\+:security\+:\+:Identity Class Reference}
+\label{classndn_1_1security_1_1Identity}\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+
+
+represents an identity  
+
+
+
+
+{\ttfamily \#include $<$identity.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1security_1_1Identity_aef7673e7ae7900a5550b247484b6e270}{Identity} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1security_1_1Identity_a02aad28cf65c118a2b88350db69b2da3}{get\+Name} () const\hypertarget{classndn_1_1security_1_1Identity_a02aad28cf65c118a2b88350db69b2da3}{}\label{classndn_1_1security_1_1Identity_a02aad28cf65c118a2b88350db69b2da3}
+
+\begin{DoxyCompactList}\small\item\em Get the name of the identity. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Key}{Key} \hyperlink{classndn_1_1security_1_1Identity_a9645d0e8550da95f067d18b95150f208}{get\+Key} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id) const
+\begin{DoxyCompactList}\small\item\em Get a key with id . \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1security_1_1KeyContainer}{Key\+Container} \& \hyperlink{classndn_1_1security_1_1Identity_a3e4e9662b6b183861a4192ed057e4621}{get\+Keys} () const\hypertarget{classndn_1_1security_1_1Identity_a3e4e9662b6b183861a4192ed057e4621}{}\label{classndn_1_1security_1_1Identity_a3e4e9662b6b183861a4192ed057e4621}
+
+\begin{DoxyCompactList}\small\item\em Get all the keys for this \hyperlink{classndn_1_1security_1_1Identity}{Identity}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Key}{Key} \& \hyperlink{classndn_1_1security_1_1Identity_a9d91e6b127b62156bda9b62a497b1d07}{get\+Default\+Key} () const
+\begin{DoxyCompactList}\small\item\em Get the default key for this \hyperlink{classndn_1_1security_1_1Identity}{Identity}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Identity_aad751af39cbdc5819b4febbc62f88f70}{operator bool} () const\hypertarget{classndn_1_1security_1_1Identity_aad751af39cbdc5819b4febbc62f88f70}{}\label{classndn_1_1security_1_1Identity_aad751af39cbdc5819b4febbc62f88f70}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classndn_1_1security_1_1Identity}{Identity} instance is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1security_1_1Identity_a9aca4636fa08216e5b8da39896033027}{operator!} () const\hypertarget{classndn_1_1security_1_1Identity_a9aca4636fa08216e5b8da39896033027}{}\label{classndn_1_1security_1_1Identity_a9aca4636fa08216e5b8da39896033027}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classndn_1_1security_1_1Identity}{Identity} instance is invalid. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1Identity_a1c55e641d6a81ca1596f690aa23a457e}{remove\+Key} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id)
+\begin{DoxyCompactList}\small\item\em Remove a key. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Key}{Key} \& \hyperlink{classndn_1_1security_1_1Identity_aac7227d1760f894706d9b46831ad2623}{set\+Default\+Key} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id)
+\begin{DoxyCompactList}\small\item\em Set the key with id {\ttfamily key\+Id} as the default key. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Key}{Key} \& \hyperlink{classndn_1_1security_1_1Identity_a039ead9d41508dc8fea587a223c8fe27}{set\+Default\+Key} (const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id=\hyperlink{classndn_1_1security_1_1Identity_a4cbc752ea1f032e469cd886d6ba6ed96}{E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID})
+\begin{DoxyCompactList}\small\item\em Set the default key. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1Identity_a8a2d19cb40640fc9e6ebe57d1bb9ae2e}{validity\+Check} () const
+\begin{DoxyCompactList}\small\item\em Check the validity of this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: \hyperlink{classndn_1_1security_1_1Key}{Key} add\+Key(const \hyperlink{classndn_1_1PublicKey}{Public\+Key}\& public\+Key\hypertarget{classndn_1_1security_1_1Identity_a9e8b2c3b5c2434c685f099bec64def1d}{}\label{classndn_1_1security_1_1Identity_a9e8b2c3b5c2434c685f099bec64def1d}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \& {\bfseries key\+Id} = \hyperlink{classndn_1_1security_1_1Identity_a4cbc752ea1f032e469cd886d6ba6ed96}{E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID})\hypertarget{classndn_1_1security_1_1Identity_a943c06b36ccaa5eda2cf47334d2a9e68}{}\label{classndn_1_1security_1_1Identity_a943c06b36ccaa5eda2cf47334d2a9e68}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: \hyperlink{classndn_1_1security_1_1Identity}{Identity}(const \hyperlink{classndn_1_1Name}{Name}\& identity\+Name\hypertarget{classndn_1_1security_1_1Identity_ab651f985e4891e4a9ef404dba44ffd4d}{}\label{classndn_1_1security_1_1Identity_ab651f985e4891e4a9ef404dba44ffd4d}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1PibImpl}{Pib\+Impl} $>$ {\bfseries impl}\hypertarget{classndn_1_1security_1_1Identity_a91f6ff14f256420ceb087b2a342267b6}{}\label{classndn_1_1security_1_1Identity_a91f6ff14f256420ceb087b2a342267b6}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1PibImpl}{Pib\+Impl} $>$ bool {\bfseries need\+Init} = false)\hypertarget{classndn_1_1security_1_1Identity_a1ece7f485daaff50e061449594593585}{}\label{classndn_1_1security_1_1Identity_a1ece7f485daaff50e061449594593585}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \hyperlink{classndn_1_1security_1_1Identity_a4cbc752ea1f032e469cd886d6ba6ed96}{E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID}
+\begin{DoxyCompactList}\small\item\em The default value of key\+Id when add a new key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Pib}\hypertarget{classndn_1_1security_1_1Identity_ad5330cedd6d218ab8ffe8a3c603bb2ca}{}\label{classndn_1_1security_1_1Identity_ad5330cedd6d218ab8ffe8a3c603bb2ca}
+
+\item 
+class {\bfseries Identity\+Container}\hypertarget{classndn_1_1security_1_1Identity_ae5d8d658f9d92ad82312b7f52b4c5ef1}{}\label{classndn_1_1security_1_1Identity_ae5d8d658f9d92ad82312b7f52b4c5ef1}
+
+\item 
+class {\bfseries Key\+Chain}\hypertarget{classndn_1_1security_1_1Identity_a4575cb0348247df0457c276b54b06764}{}\label{classndn_1_1security_1_1Identity_a4575cb0348247df0457c276b54b06764}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents an identity 
+
+\hyperlink{classndn_1_1security_1_1Identity}{Identity} is at the top level in P\+IB\textquotesingle{}s Identity-\/\+Key-\/\+Certificate hierarchy. An identity has a \hyperlink{classndn_1_1Name}{Name}, and contains one or more keys, one of which is set as the default key of this identity. Properties of a key can be accessed after obtaining a \hyperlink{classndn_1_1security_1_1Key}{Key} object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1PibImpl_1_1Error}{Pib\+Impl\+::\+Error}} & when underlying implementation has non-\/semantic error. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 44 of file identity.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}!Identity@{Identity}}
+\index{Identity@{Identity}!ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+\subsubsection[{\texorpdfstring{Identity()}{Identity()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::security\+::\+Identity\+::\+Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Identity_aef7673e7ae7900a5550b247484b6e270}{}\label{classndn_1_1security_1_1Identity_aef7673e7ae7900a5550b247484b6e270}
+
+
+Default Constructor. 
+
+\hyperlink{classndn_1_1security_1_1Identity}{Identity} created using this default constructor is just a place holder. It must obtain an actual instance from \hyperlink{classndn_1_1security_1_1Pib_a4b202f6abfb3eb138ccd0d04e39b5d00}{Pib\+::get\+Identity}(...). A typical usage would be for exception handling\+:
+
+\hyperlink{classndn_1_1security_1_1Identity}{Identity} id; try \{ id = pib.\+get\+Identity(...); \} catch (\hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}\&) \{ ... \}
+
+An \hyperlink{classndn_1_1security_1_1Identity}{Identity} instance created using the constructor is invalid. Calling a member method on an invalid \hyperlink{classndn_1_1security_1_1Identity}{Identity} instance may cause an std\+::domain\+\_\+error. 
+
+Definition at line 31 of file identity.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}!get\+Default\+Key@{get\+Default\+Key}}
+\index{get\+Default\+Key@{get\+Default\+Key}!ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+\subsubsection[{\texorpdfstring{get\+Default\+Key() const}{getDefaultKey() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key} \& ndn\+::security\+::\+Identity\+::get\+Default\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1Identity_a9d91e6b127b62156bda9b62a497b1d07}{}\label{classndn_1_1security_1_1Identity_a9d91e6b127b62156bda9b62a497b1d07}
+
+
+Get the default key for this \hyperlink{classndn_1_1security_1_1Identity}{Identity}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the default key does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 133 of file identity.\+cpp.
+
+\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+\subsubsection[{\texorpdfstring{get\+Key(const name\+::\+Component \&key\+Id) const}{getKey(const name::Component \&keyId) const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key} ndn\+::security\+::\+Identity\+::get\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1Identity_a9645d0e8550da95f067d18b95150f208}{}\label{classndn_1_1security_1_1Identity_a9645d0e8550da95f067d18b95150f208}
+
+
+Get a key with id . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name for the identity to get. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the identity does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 93 of file identity.\+cpp.
+
+\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}!remove\+Key@{remove\+Key}}
+\index{remove\+Key@{remove\+Key}!ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+\subsubsection[{\texorpdfstring{remove\+Key(const name\+::\+Component \&key\+Id)}{removeKey(const name::Component \&keyId)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Identity\+::remove\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Identity_a1c55e641d6a81ca1596f690aa23a457e}{}\label{classndn_1_1security_1_1Identity_a1c55e641d6a81ca1596f690aa23a457e}
+
+
+Remove a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & The key id component of the key to delete. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 81 of file identity.\+cpp.
+
+\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}!set\+Default\+Key@{set\+Default\+Key}}
+\index{set\+Default\+Key@{set\+Default\+Key}!ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+\subsubsection[{\texorpdfstring{set\+Default\+Key(const name\+::\+Component \&key\+Id)}{setDefaultKey(const name::Component \&keyId)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key} \& ndn\+::security\+::\+Identity\+::set\+Default\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Identity_aac7227d1760f894706d9b46831ad2623}{}\label{classndn_1_1security_1_1Identity_aac7227d1760f894706d9b46831ad2623}
+
+
+Set the key with id {\ttfamily key\+Id} as the default key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & The key id component of the default key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The default key 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the key does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 114 of file identity.\+cpp.
+
+\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}!set\+Default\+Key@{set\+Default\+Key}}
+\index{set\+Default\+Key@{set\+Default\+Key}!ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+\subsubsection[{\texorpdfstring{set\+Default\+Key(const Public\+Key \&public\+Key, const name\+::\+Component \&key\+Id=\+E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+I\+D)}{setDefaultKey(const PublicKey \&publicKey, const name::Component \&keyId=EMPTY\_KEY\_ID)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key} \& ndn\+::security\+::\+Identity\+::set\+Default\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Public\+Key} \&}]{public\+Key, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id = {\ttfamily {\bf E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Identity_a039ead9d41508dc8fea587a223c8fe27}{}\label{classndn_1_1security_1_1Identity_a039ead9d41508dc8fea587a223c8fe27}
+
+
+Set the default key. 
+
+If the key does not exist, add the key and set it as the default of the \hyperlink{classndn_1_1security_1_1Identity}{Identity}. If the key exists, simply set it as the default key of the \hyperlink{classndn_1_1security_1_1Identity}{Identity}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em public\+Key} & The public key to add. \\
+\hline
+{\em key\+Id} & The key id component of the default key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the default key 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file identity.\+cpp.
+
+\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}!validity\+Check@{validity\+Check}}
+\index{validity\+Check@{validity\+Check}!ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+\subsubsection[{\texorpdfstring{validity\+Check() const}{validityCheck() const}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Identity\+::validity\+Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1Identity_a8a2d19cb40640fc9e6ebe57d1bb9ae2e}{}\label{classndn_1_1security_1_1Identity_a8a2d19cb40640fc9e6ebe57d1bb9ae2e}
+
+
+Check the validity of this instance. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::domain\+\_\+error} & if the instance is invalid \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 157 of file identity.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}!E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID@{E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID}}
+\index{E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID@{E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID}!ndn\+::security\+::\+Identity@{ndn\+::security\+::\+Identity}}
+\subsubsection[{\texorpdfstring{E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID}{EMPTY\_KEY\_ID}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf name\+::\+Component} ndn\+::security\+::\+Identity\+::\+E\+M\+P\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+ID\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1security_1_1Identity_a4cbc752ea1f032e469cd886d6ba6ed96}{}\label{classndn_1_1security_1_1Identity_a4cbc752ea1f032e469cd886d6ba6ed96}
+
+
+The default value of key\+Id when add a new key. 
+
+An empty key\+Id implies that the key digest should be used as the actual key\+Id. 
+
+Definition at line 177 of file identity.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/identity.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/identity.\+cpp\end{DoxyCompactItemize}

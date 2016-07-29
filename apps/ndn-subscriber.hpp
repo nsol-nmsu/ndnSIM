@@ -45,7 +45,8 @@ namespace ndn {
 
 /**
  * @ingroup ndn-apps
- * \brief NDN application for sending out Interest packets
+ * \brief NDN application for sending out Interest packets. Installed on nodes at physical layer (prosumers)
+ * of the Smart Grid architecture (iCenS)
  */
 class Subscriber : public App {
 public:
@@ -71,7 +72,7 @@ public:
   OnTimeout(uint32_t sequenceNumber);
 
   /**
-   * @brief Actually send packet
+   * @brief Actually send packet. Subscription interests do not carry payload information
    */
   void
   SendPacket();
@@ -200,6 +201,7 @@ protected:
                                                                   member<SeqTimeout, Time,
                                                                          &SeqTimeout::time>>>> {
   };
+  /// @endcond
 
   SeqTimeoutsContainer m_seqTimeouts; ///< \brief multi-index for the set of SeqTimeout structs
 

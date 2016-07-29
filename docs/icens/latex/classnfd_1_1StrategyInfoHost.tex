@@ -1,0 +1,110 @@
+\hypertarget{classnfd_1_1StrategyInfoHost}{}\section{nfd\+:\+:Strategy\+Info\+Host Class Reference}
+\label{classnfd_1_1StrategyInfoHost}\index{nfd\+::\+Strategy\+Info\+Host@{nfd\+::\+Strategy\+Info\+Host}}
+
+
+base class for an entity onto which Strategy\+Info objects may be placed  
+
+
+
+
+{\ttfamily \#include $<$strategy-\/info-\/host.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Strategy\+Info\+Host\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.500000cm]{classnfd_1_1StrategyInfoHost}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\shared\+\_\+ptr$<$ T $>$ \hyperlink{classnfd_1_1StrategyInfoHost_a8b135136ee3b4fea210a3827b1faae15}{get\+Strategy\+Info} () const
+\begin{DoxyCompactList}\small\item\em get a Strategy\+Info item \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classnfd_1_1StrategyInfoHost_aea86d997d5ade02e0567b8368ecbb808}{set\+Strategy\+Info} (shared\+\_\+ptr$<$ T $>$ strategy\+Info)
+\begin{DoxyCompactList}\small\item\em set a Strategy\+Info item \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename ... A$>$ }\\shared\+\_\+ptr$<$ T $>$ \hyperlink{classnfd_1_1StrategyInfoHost_a99d0587a80ab78927c626ab6f98c86b9}{get\+Or\+Create\+Strategy\+Info} (A \&\&... args)
+\begin{DoxyCompactList}\small\item\em get or create a Strategy\+Info item \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1StrategyInfoHost_a9c9c0c4321856a36ac07f152932afcc5}{clear\+Strategy\+Info} ()\hypertarget{classnfd_1_1StrategyInfoHost_a9c9c0c4321856a36ac07f152932afcc5}{}\label{classnfd_1_1StrategyInfoHost_a9c9c0c4321856a36ac07f152932afcc5}
+
+\begin{DoxyCompactList}\small\item\em clear all Strategy\+Info items \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+base class for an entity onto which Strategy\+Info objects may be placed 
+
+Definition at line 35 of file strategy-\/info-\/host.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Strategy\+Info\+Host@{nfd\+::\+Strategy\+Info\+Host}!get\+Or\+Create\+Strategy\+Info@{get\+Or\+Create\+Strategy\+Info}}
+\index{get\+Or\+Create\+Strategy\+Info@{get\+Or\+Create\+Strategy\+Info}!nfd\+::\+Strategy\+Info\+Host@{nfd\+::\+Strategy\+Info\+Host}}
+\subsubsection[{\texorpdfstring{get\+Or\+Create\+Strategy\+Info(\+A \&\&... args)}{getOrCreateStrategyInfo(A \&\&... args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename ... A$>$ shared\+\_\+ptr$<$ T $>$ nfd\+::\+Strategy\+Info\+Host\+::get\+Or\+Create\+Strategy\+Info (
+\begin{DoxyParamCaption}
+\item[{A \&\&...}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1StrategyInfoHost_a99d0587a80ab78927c626ab6f98c86b9}{}\label{classnfd_1_1StrategyInfoHost_a99d0587a80ab78927c626ab6f98c86b9}
+
+
+get or create a Strategy\+Info item 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of Strategy\+Info, must be a subclass of from \hyperlink{classnfd_1_1fw_1_1StrategyInfo}{nfd\+::fw\+::\+Strategy\+Info}\\
+\hline
+\end{DoxyTemplParams}
+If no Strategy\+Info of type T is stored, it\textquotesingle{}s created with {\ttfamily args}; otherwise, the existing item is returned. 
+
+Definition at line 104 of file strategy-\/info-\/host.\+hpp.
+
+\index{nfd\+::\+Strategy\+Info\+Host@{nfd\+::\+Strategy\+Info\+Host}!get\+Strategy\+Info@{get\+Strategy\+Info}}
+\index{get\+Strategy\+Info@{get\+Strategy\+Info}!nfd\+::\+Strategy\+Info\+Host@{nfd\+::\+Strategy\+Info\+Host}}
+\subsubsection[{\texorpdfstring{get\+Strategy\+Info() const}{getStrategyInfo() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ shared\+\_\+ptr$<$ T $>$ nfd\+::\+Strategy\+Info\+Host\+::get\+Strategy\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1StrategyInfoHost_a8b135136ee3b4fea210a3827b1faae15}{}\label{classnfd_1_1StrategyInfoHost_a8b135136ee3b4fea210a3827b1faae15}
+
+
+get a Strategy\+Info item 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of Strategy\+Info, must be a subclass of from \hyperlink{classnfd_1_1fw_1_1StrategyInfo}{nfd\+::fw\+::\+Strategy\+Info} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em nullptr} & if no Strategy\+Info of type T is stored \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 75 of file strategy-\/info-\/host.\+hpp.
+
+\index{nfd\+::\+Strategy\+Info\+Host@{nfd\+::\+Strategy\+Info\+Host}!set\+Strategy\+Info@{set\+Strategy\+Info}}
+\index{set\+Strategy\+Info@{set\+Strategy\+Info}!nfd\+::\+Strategy\+Info\+Host@{nfd\+::\+Strategy\+Info\+Host}}
+\subsubsection[{\texorpdfstring{set\+Strategy\+Info(shared\+\_\+ptr$<$ T $>$ strategy\+Info)}{setStrategyInfo(shared\_ptr< T > strategyInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void nfd\+::\+Strategy\+Info\+Host\+::set\+Strategy\+Info (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ T $>$}]{strategy\+Info}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1StrategyInfoHost_aea86d997d5ade02e0567b8368ecbb808}{}\label{classnfd_1_1StrategyInfoHost_aea86d997d5ade02e0567b8368ecbb808}
+
+
+set a Strategy\+Info item 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of Strategy\+Info, must be a subclass of from \hyperlink{classnfd_1_1fw_1_1StrategyInfo}{nfd\+::fw\+::\+Strategy\+Info} \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 89 of file strategy-\/info-\/host.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/strategy-\/info-\/host.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/strategy-\/info-\/host.\+cpp\end{DoxyCompactItemize}

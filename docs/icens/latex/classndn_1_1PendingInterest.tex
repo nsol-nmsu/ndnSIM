@@ -1,0 +1,108 @@
+\hypertarget{classndn_1_1PendingInterest}{}\section{ndn\+:\+:Pending\+Interest Class Reference}
+\label{classndn_1_1PendingInterest}\index{ndn\+::\+Pending\+Interest@{ndn\+::\+Pending\+Interest}}
+Inheritance diagram for ndn\+:\+:Pending\+Interest\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1PendingInterest}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void(const \hyperlink{classndn_1_1Interest}{Interest} \&, \hyperlink{classndn_1_1Data}{Data} \&)$>$ {\bfseries On\+Data}\hypertarget{classndn_1_1PendingInterest_a8f051d07bd4efe3aa9b81094ab64f8b8}{}\label{classndn_1_1PendingInterest_a8f051d07bd4efe3aa9b81094ab64f8b8}
+
+\item 
+typedef function$<$ void(const \hyperlink{classndn_1_1Interest}{Interest} \&)$>$ {\bfseries On\+Timeout}\hypertarget{classndn_1_1PendingInterest_acdb0c0e4e0a3f63a152c60fda52b05d7}{}\label{classndn_1_1PendingInterest_acdb0c0e4e0a3f63a152c60fda52b05d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1PendingInterest_a2a2fc0e0e29bfcb0bc2caaa5cdc2236c}{Pending\+Interest} (shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{Interest} $>$ interest, const On\+Data \&on\+Data, const On\+Timeout \&on\+Timeout, \hyperlink{classndn_1_1util_1_1scheduler_1_1Scheduler}{Scheduler} \&scheduler)
+\begin{DoxyCompactList}\small\item\em Create a new Pit\+Entry and set the timeout based on the current time and the interest lifetime. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Interest}{Interest} \& \hyperlink{classndn_1_1PendingInterest_a493b1545d78ab0873e61bbd3eab94056}{get\+Interest} () const
+\item 
+void \hyperlink{classndn_1_1PendingInterest_afdbcf4e6d022c0298878d200e9e1c3da}{invoke\+Data\+Callback} (const \hyperlink{classndn_1_1Data}{Data} \&data)
+\begin{DoxyCompactList}\small\item\em invokes the Data\+Callback \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1PendingInterest_a44c80adf0726cbeae49f0e32b750b635}{set\+Deleter} (const std\+::function$<$ void()$>$ \&deleter)\hypertarget{classndn_1_1PendingInterest_a44c80adf0726cbeae49f0e32b750b635}{}\label{classndn_1_1PendingInterest_a44c80adf0726cbeae49f0e32b750b635}
+
+\begin{DoxyCompactList}\small\item\em Set cleanup function to be called after interest times out. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file pending-\/interest.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Pending\+Interest@{ndn\+::\+Pending\+Interest}!Pending\+Interest@{Pending\+Interest}}
+\index{Pending\+Interest@{Pending\+Interest}!ndn\+::\+Pending\+Interest@{ndn\+::\+Pending\+Interest}}
+\subsubsection[{\texorpdfstring{Pending\+Interest(shared\+\_\+ptr$<$ const Interest $>$ interest, const On\+Data \&on\+Data, const On\+Timeout \&on\+Timeout, Scheduler \&scheduler)}{PendingInterest(shared\_ptr< const Interest > interest, const OnData \&onData, const OnTimeout \&onTimeout, Scheduler \&scheduler)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Pending\+Interest\+::\+Pending\+Interest (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const {\bf Interest} $>$}]{interest, }
+\item[{const On\+Data \&}]{on\+Data, }
+\item[{const On\+Timeout \&}]{on\+Timeout, }
+\item[{{\bf Scheduler} \&}]{scheduler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1PendingInterest_a2a2fc0e0e29bfcb0bc2caaa5cdc2236c}{}\label{classndn_1_1PendingInterest_a2a2fc0e0e29bfcb0bc2caaa5cdc2236c}
+
+
+Create a new Pit\+Entry and set the timeout based on the current time and the interest lifetime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & A shared\+\_\+ptr for the interest \\
+\hline
+{\em on\+Data} & A function object to call when a matching data packet is received. \\
+\hline
+{\em on\+Timeout} & A function object to call if the interest times out. If on\+Timeout is an empty On\+Timeout(), this does not use it. \\
+\hline
+{\em scheduler} & Scheduler instance to use to schedule a timeout event. The scheduled event will be automatically cancelled when pending interest is destroyed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file pending-\/interest.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Pending\+Interest@{ndn\+::\+Pending\+Interest}!get\+Interest@{get\+Interest}}
+\index{get\+Interest@{get\+Interest}!ndn\+::\+Pending\+Interest@{ndn\+::\+Pending\+Interest}}
+\subsubsection[{\texorpdfstring{get\+Interest() const}{getInterest() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Interest}\& ndn\+::\+Pending\+Interest\+::get\+Interest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1PendingInterest_a493b1545d78ab0873e61bbd3eab94056}{}\label{classndn_1_1PendingInterest_a493b1545d78ab0873e61bbd3eab94056}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classndn_1_1Interest}{Interest} 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file pending-\/interest.\+hpp.
+
+\index{ndn\+::\+Pending\+Interest@{ndn\+::\+Pending\+Interest}!invoke\+Data\+Callback@{invoke\+Data\+Callback}}
+\index{invoke\+Data\+Callback@{invoke\+Data\+Callback}!ndn\+::\+Pending\+Interest@{ndn\+::\+Pending\+Interest}}
+\subsubsection[{\texorpdfstring{invoke\+Data\+Callback(const Data \&data)}{invokeDataCallback(const Data \&data)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Pending\+Interest\+::invoke\+Data\+Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1PendingInterest_afdbcf4e6d022c0298878d200e9e1c3da}{}\label{classndn_1_1PendingInterest_afdbcf4e6d022c0298878d200e9e1c3da}
+
+
+invokes the Data\+Callback 
+
+\begin{DoxyNote}{Note}
+If the Data\+Callback is an empty function, this method does nothing. 
+\end{DoxyNote}
+
+
+Definition at line 79 of file pending-\/interest.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/detail/pending-\/interest.\+hpp\end{DoxyCompactItemize}

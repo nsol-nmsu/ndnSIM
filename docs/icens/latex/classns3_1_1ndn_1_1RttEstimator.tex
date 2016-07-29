@@ -1,0 +1,310 @@
+\hypertarget{classns3_1_1ndn_1_1RttEstimator}{}\section{ns3\+:\+:ndn\+:\+:Rtt\+Estimator Class Reference}
+\label{classns3_1_1ndn_1_1RttEstimator}\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+
+
+Base class for all R\+TT Estimators.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/rtt-\/estimator.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Rtt\+Estimator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1RttEstimator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rtt\+Estimator} (const \hyperlink{classns3_1_1ndn_1_1RttEstimator}{Rtt\+Estimator} \&)\hypertarget{classns3_1_1ndn_1_1RttEstimator_a8adf9c25e6c88ff4e7b398d09fa596b1}{}\label{classns3_1_1ndn_1_1RttEstimator_a8adf9c25e6c88ff4e7b398d09fa596b1}
+
+\item 
+virtual Type\+Id {\bfseries Get\+Instance\+Type\+Id} (void) const\hypertarget{classns3_1_1ndn_1_1RttEstimator_a48c1992f5fc97462fc7ca58d00e97c5d}{}\label{classns3_1_1ndn_1_1RttEstimator_a48c1992f5fc97462fc7ca58d00e97c5d}
+
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1RttEstimator_ab1e5b96ab70fa4c33689868f16879c09}{Sent\+Seq} (Sequence\+Number32 seq, uint32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Note that a particular sequence has been sent. \end{DoxyCompactList}\item 
+virtual Time \hyperlink{classns3_1_1ndn_1_1RttEstimator_a950ad5e00fc80522219811ab0f14b4c8}{Ack\+Seq} (Sequence\+Number32 ack\+Seq)
+\begin{DoxyCompactList}\small\item\em Note that a particular ack sequence has been received. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1RttEstimator_a66d4789bb680ec40be57d6c45547bf4b}{Clear\+Sent} ()\hypertarget{classns3_1_1ndn_1_1RttEstimator_a66d4789bb680ec40be57d6c45547bf4b}{}\label{classns3_1_1ndn_1_1RttEstimator_a66d4789bb680ec40be57d6c45547bf4b}
+
+\begin{DoxyCompactList}\small\item\em Clear all history entries. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1RttEstimator_ad0a023a78ab3412cd3cc115d3e3f20f8}{Measurement} (Time t)=0
+\begin{DoxyCompactList}\small\item\em Add a new measurement to the estimator. Pure virtual function. \end{DoxyCompactList}\item 
+virtual Time \hyperlink{classns3_1_1ndn_1_1RttEstimator_a2a698a250c27dc78e9fdfcbacf3bfb34}{Retransmit\+Timeout} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the estimated R\+TO. Pure virtual function. \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1RttEstimator}{Rtt\+Estimator} $>$ {\bfseries Copy} () const =0\hypertarget{classns3_1_1ndn_1_1RttEstimator_a1826c0ce22c5a72e5b5ba5c4b8513bab}{}\label{classns3_1_1ndn_1_1RttEstimator_a1826c0ce22c5a72e5b5ba5c4b8513bab}
+
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1RttEstimator_ab13362dd70be76778cf6ed7768a3c5ac}{Increase\+Multiplier} ()\hypertarget{classns3_1_1ndn_1_1RttEstimator_ab13362dd70be76778cf6ed7768a3c5ac}{}\label{classns3_1_1ndn_1_1RttEstimator_ab13362dd70be76778cf6ed7768a3c5ac}
+
+\begin{DoxyCompactList}\small\item\em Increase the estimation multiplier up to Max\+Multiplier. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1RttEstimator_a3e791c0e292b0694798ca2590dc57bef}{Reset\+Multiplier} ()\hypertarget{classns3_1_1ndn_1_1RttEstimator_a3e791c0e292b0694798ca2590dc57bef}{}\label{classns3_1_1ndn_1_1RttEstimator_a3e791c0e292b0694798ca2590dc57bef}
+
+\begin{DoxyCompactList}\small\item\em Resets the estimation multiplier to 1. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1RttEstimator_ad67208872e6bf804be2c1b2c3f1da46a}{Reset} ()\hypertarget{classns3_1_1ndn_1_1RttEstimator_ad67208872e6bf804be2c1b2c3f1da46a}{}\label{classns3_1_1ndn_1_1RttEstimator_ad67208872e6bf804be2c1b2c3f1da46a}
+
+\begin{DoxyCompactList}\small\item\em Resets the estimation to its initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1RttEstimator_ac7f64ba82356a18e0aa07ca441b4c669}{Set\+Min\+Rto} (Time min\+Rto)
+\begin{DoxyCompactList}\small\item\em Sets the Minimum R\+TO. \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1RttEstimator_a304c2f277057dd594175997cc4043efc}{Get\+Min\+Rto} (void) const
+\begin{DoxyCompactList}\small\item\em Get the Minimum R\+TO. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1RttEstimator_a8fc1f1d24921e2cfc842317a775a3c08}{Set\+Max\+Rto} (Time max\+Rto)
+\begin{DoxyCompactList}\small\item\em Sets the Maximum R\+TO. \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1RttEstimator_adbe162ca33ea296fd52f34b05bd02794}{Get\+Max\+Rto} (void) const
+\begin{DoxyCompactList}\small\item\em Get the Maximum R\+TO. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1RttEstimator_a408f1fcd62c5350e414ed03d0b0a705c}{Set\+Current\+Estimate} (Time estimate)
+\begin{DoxyCompactList}\small\item\em Sets the current R\+TT estimate (forcefully). \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1RttEstimator_ade22674457f67c746380929030d8f90c}{Get\+Current\+Estimate} (void) const
+\begin{DoxyCompactList}\small\item\em gets the current R\+TT estimate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)\hypertarget{classns3_1_1ndn_1_1RttEstimator_a2d92740c64eb929214b95bc9104b5c35}{}\label{classns3_1_1ndn_1_1RttEstimator_a2d92740c64eb929214b95bc9104b5c35}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Time {\bfseries m\+\_\+current\+Estimated\+Rtt}\hypertarget{classns3_1_1ndn_1_1RttEstimator_a9354e17746d8b7529ad9dd82415571f9}{}\label{classns3_1_1ndn_1_1RttEstimator_a9354e17746d8b7529ad9dd82415571f9}
+
+\item 
+Time {\bfseries m\+\_\+min\+Rto}\hypertarget{classns3_1_1ndn_1_1RttEstimator_a4d9d1072ded7a3ae5c7c5f831b064f60}{}\label{classns3_1_1ndn_1_1RttEstimator_a4d9d1072ded7a3ae5c7c5f831b064f60}
+
+\item 
+Time {\bfseries m\+\_\+max\+Rto}\hypertarget{classns3_1_1ndn_1_1RttEstimator_adb87ed5ce3615f20be524c25c5a17058}{}\label{classns3_1_1ndn_1_1RttEstimator_adb87ed5ce3615f20be524c25c5a17058}
+
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+n\+Samples}\hypertarget{classns3_1_1ndn_1_1RttEstimator_abd26e0af35ffa74b0bbeb5f4af688b74}{}\label{classns3_1_1ndn_1_1RttEstimator_abd26e0af35ffa74b0bbeb5f4af688b74}
+
+\item 
+uint16\+\_\+t {\bfseries m\+\_\+multiplier}\hypertarget{classns3_1_1ndn_1_1RttEstimator_ab7f389855733b89d753b67a393a17dd2}{}\label{classns3_1_1ndn_1_1RttEstimator_ab7f389855733b89d753b67a393a17dd2}
+
+\item 
+Rtt\+History\+\_\+t {\bfseries m\+\_\+history}\hypertarget{classns3_1_1ndn_1_1RttEstimator_a2c90b3bf8b88d3840bbe9d38fb7d3c91}{}\label{classns3_1_1ndn_1_1RttEstimator_a2c90b3bf8b88d3840bbe9d38fb7d3c91}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all R\+TT Estimators. 
+
+Definition at line 61 of file ndn-\/rtt-\/estimator.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Ack\+Seq@{Ack\+Seq}}
+\index{Ack\+Seq@{Ack\+Seq}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Ack\+Seq(\+Sequence\+Number32 ack\+Seq)}{AckSeq(SequenceNumber32 ackSeq)}}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Ack\+Seq (
+\begin{DoxyParamCaption}
+\item[{Sequence\+Number32}]{ack\+Seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1RttEstimator_a950ad5e00fc80522219811ab0f14b4c8}{}\label{classns3_1_1ndn_1_1RttEstimator_a950ad5e00fc80522219811ab0f14b4c8}
+
+
+Note that a particular ack sequence has been received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ack\+Seq} & the ack sequence number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The measured R\+TT for this ack. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_a291b9b4a6847dbc64898aea22c49e206}{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}.
+
+
+
+Definition at line 194 of file ndn-\/rtt-\/estimator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Get\+Current\+Estimate@{Get\+Current\+Estimate}}
+\index{Get\+Current\+Estimate@{Get\+Current\+Estimate}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Get\+Current\+Estimate(void) const}{GetCurrentEstimate(void) const}}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Get\+Current\+Estimate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1RttEstimator_ade22674457f67c746380929030d8f90c}{}\label{classns3_1_1ndn_1_1RttEstimator_ade22674457f67c746380929030d8f90c}
+
+
+gets the current R\+TT estimate. 
+
+\begin{DoxyReturn}{Returns}
+The current R\+TT estimate. 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file ndn-\/rtt-\/estimator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Get\+Max\+Rto@{Get\+Max\+Rto}}
+\index{Get\+Max\+Rto@{Get\+Max\+Rto}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Get\+Max\+Rto(void) const}{GetMaxRto(void) const}}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Get\+Max\+Rto (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1RttEstimator_adbe162ca33ea296fd52f34b05bd02794}{}\label{classns3_1_1ndn_1_1RttEstimator_adbe162ca33ea296fd52f34b05bd02794}
+
+
+Get the Maximum R\+TO. 
+
+\begin{DoxyReturn}{Returns}
+The maximum R\+TO returned by the estimator. 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file ndn-\/rtt-\/estimator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Get\+Min\+Rto@{Get\+Min\+Rto}}
+\index{Get\+Min\+Rto@{Get\+Min\+Rto}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Get\+Min\+Rto(void) const}{GetMinRto(void) const}}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Get\+Min\+Rto (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1RttEstimator_a304c2f277057dd594175997cc4043efc}{}\label{classns3_1_1ndn_1_1RttEstimator_a304c2f277057dd594175997cc4043efc}
+
+
+Get the Minimum R\+TO. 
+
+\begin{DoxyReturn}{Returns}
+The minimum R\+TO returned by the estimator. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file ndn-\/rtt-\/estimator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Measurement(\+Time t)=0}{Measurement(Time t)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Measurement (
+\begin{DoxyParamCaption}
+\item[{Time}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classns3_1_1ndn_1_1RttEstimator_ad0a023a78ab3412cd3cc115d3e3f20f8}{}\label{classns3_1_1ndn_1_1RttEstimator_ad0a023a78ab3412cd3cc115d3e3f20f8}
+
+
+Add a new measurement to the estimator. Pure virtual function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & the new R\+TT measure. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_ab175e70e52d5e239fc4c21ee5d2aa557}{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Retransmit\+Timeout@{Retransmit\+Timeout}}
+\index{Retransmit\+Timeout@{Retransmit\+Timeout}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Retransmit\+Timeout()=0}{RetransmitTimeout()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Time ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Retransmit\+Timeout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classns3_1_1ndn_1_1RttEstimator_a2a698a250c27dc78e9fdfcbacf3bfb34}{}\label{classns3_1_1ndn_1_1RttEstimator_a2a698a250c27dc78e9fdfcbacf3bfb34}
+
+
+Returns the estimated R\+TO. Pure virtual function. 
+
+\begin{DoxyReturn}{Returns}
+the estimated R\+TO. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_ab7df92b998bac93fcfc533e0d422f061}{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Sent\+Seq@{Sent\+Seq}}
+\index{Sent\+Seq@{Sent\+Seq}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Sent\+Seq(\+Sequence\+Number32 seq, uint32\+\_\+t size)}{SentSeq(SequenceNumber32 seq, uint32\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Sent\+Seq (
+\begin{DoxyParamCaption}
+\item[{Sequence\+Number32}]{seq, }
+\item[{uint32\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1RttEstimator_ab1e5b96ab70fa4c33689868f16879c09}{}\label{classns3_1_1ndn_1_1RttEstimator_ab1e5b96ab70fa4c33689868f16879c09}
+
+
+Note that a particular sequence has been sent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & the packet sequence number. \\
+\hline
+{\em size} & the packet size. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_accd6536614537e19c1cef85e4ecf8368}{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}.
+
+
+
+Definition at line 170 of file ndn-\/rtt-\/estimator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Set\+Current\+Estimate@{Set\+Current\+Estimate}}
+\index{Set\+Current\+Estimate@{Set\+Current\+Estimate}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Set\+Current\+Estimate(\+Time estimate)}{SetCurrentEstimate(Time estimate)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Set\+Current\+Estimate (
+\begin{DoxyParamCaption}
+\item[{Time}]{estimate}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1RttEstimator_a408f1fcd62c5350e414ed03d0b0a705c}{}\label{classns3_1_1ndn_1_1RttEstimator_a408f1fcd62c5350e414ed03d0b0a705c}
+
+
+Sets the current R\+TT estimate (forcefully). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em estimate} & The current R\+TT estimate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file ndn-\/rtt-\/estimator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Set\+Max\+Rto@{Set\+Max\+Rto}}
+\index{Set\+Max\+Rto@{Set\+Max\+Rto}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Set\+Max\+Rto(\+Time max\+Rto)}{SetMaxRto(Time maxRto)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Set\+Max\+Rto (
+\begin{DoxyParamCaption}
+\item[{Time}]{max\+Rto}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1RttEstimator_a8fc1f1d24921e2cfc842317a775a3c08}{}\label{classns3_1_1ndn_1_1RttEstimator_a8fc1f1d24921e2cfc842317a775a3c08}
+
+
+Sets the Maximum R\+TO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Rto} & The maximum R\+TO returned by the estimator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 82 of file ndn-\/rtt-\/estimator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}!Set\+Min\+Rto@{Set\+Min\+Rto}}
+\index{Set\+Min\+Rto@{Set\+Min\+Rto}!ns3\+::ndn\+::\+Rtt\+Estimator@{ns3\+::ndn\+::\+Rtt\+Estimator}}
+\subsubsection[{\texorpdfstring{Set\+Min\+Rto(\+Time min\+Rto)}{SetMinRto(Time minRto)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Rtt\+Estimator\+::\+Set\+Min\+Rto (
+\begin{DoxyParamCaption}
+\item[{Time}]{min\+Rto}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1RttEstimator_ac7f64ba82356a18e0aa07ca441b4c669}{}\label{classns3_1_1ndn_1_1RttEstimator_ac7f64ba82356a18e0aa07ca441b4c669}
+
+
+Sets the Minimum R\+TO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Rto} & The minimum R\+TO returned by the estimator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file ndn-\/rtt-\/estimator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/ndn-\/rtt-\/estimator.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/ndn-\/rtt-\/estimator.\+cpp\end{DoxyCompactItemize}

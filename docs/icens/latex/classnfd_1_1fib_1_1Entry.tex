@@ -1,0 +1,130 @@
+\hypertarget{classnfd_1_1fib_1_1Entry}{}\section{nfd\+:\+:fib\+:\+:Entry Class Reference}
+\label{classnfd_1_1fib_1_1Entry}\index{nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}}
+
+
+represents a F\+IB entry  
+
+
+
+
+{\ttfamily \#include $<$fib-\/entry.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fib\+:\+:Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1fib_1_1Entry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Entry} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)\hypertarget{classnfd_1_1fib_1_1Entry_aba0878ececf2c8c34c8c6edc7a1a872d}{}\label{classnfd_1_1fib_1_1Entry_aba0878ececf2c8c34c8c6edc7a1a872d}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Prefix} () const\hypertarget{classnfd_1_1fib_1_1Entry_a4a2cb146ce202ec872159632c6914db9}{}\label{classnfd_1_1fib_1_1Entry_a4a2cb146ce202ec872159632c6914db9}
+
+\item 
+const \hyperlink{classNextHopList}{Next\+Hop\+List} \& {\bfseries get\+Next\+Hops} () const\hypertarget{classnfd_1_1fib_1_1Entry_ac094af2d61fcad2bb5b1f83d451ed746}{}\label{classnfd_1_1fib_1_1Entry_ac094af2d61fcad2bb5b1f83d451ed746}
+
+\item 
+bool \hyperlink{classnfd_1_1fib_1_1Entry_a8681519d746bc3514ec28f5a00e344db}{has\+Next\+Hops} () const
+\item 
+bool \hyperlink{classnfd_1_1fib_1_1Entry_ac1173a808d3c921cb8df7479e6700315}{has\+Next\+Hop} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face) const
+\item 
+void \hyperlink{classnfd_1_1fib_1_1Entry_ade33e38be7399331455b7fd902e2c657}{add\+Next\+Hop} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face, uint64\+\_\+t cost)
+\begin{DoxyCompactList}\small\item\em adds a \hyperlink{classnfd_1_1fib_1_1NextHop}{Next\+Hop} record \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1fib_1_1Entry_a1f3a9e13663b2e40f89c0501426795d2}{remove\+Next\+Hop} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)
+\begin{DoxyCompactList}\small\item\em removes a \hyperlink{classnfd_1_1fib_1_1NextHop}{Next\+Hop} record \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries nfd\+::\+Name\+Tree}\hypertarget{classnfd_1_1fib_1_1Entry_a6c9695e8b2951b18e0243f6b40a26735}{}\label{classnfd_1_1fib_1_1Entry_a6c9695e8b2951b18e0243f6b40a26735}
+
+\item 
+class {\bfseries nfd\+::name\+\_\+tree\+::\+Entry}\hypertarget{classnfd_1_1fib_1_1Entry_a79163783eb509656535bce49e536ba56}{}\label{classnfd_1_1fib_1_1Entry_a79163783eb509656535bce49e536ba56}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a F\+IB entry 
+
+Definition at line 53 of file fib-\/entry.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}!add\+Next\+Hop@{add\+Next\+Hop}}
+\index{add\+Next\+Hop@{add\+Next\+Hop}!nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}}
+\subsubsection[{\texorpdfstring{add\+Next\+Hop(shared\+\_\+ptr$<$ Face $>$ face, uint64\+\_\+t cost)}{addNextHop(shared\_ptr< Face > face, uint64\_t cost)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::fib\+::\+Entry\+::add\+Next\+Hop (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face, }
+\item[{uint64\+\_\+t}]{cost}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1fib_1_1Entry_ade33e38be7399331455b7fd902e2c657}{}\label{classnfd_1_1fib_1_1Entry_ade33e38be7399331455b7fd902e2c657}
+
+
+adds a \hyperlink{classnfd_1_1fib_1_1NextHop}{Next\+Hop} record 
+
+If a \hyperlink{classnfd_1_1fib_1_1NextHop}{Next\+Hop} record for face already exists, its cost is updated. \begin{DoxyNote}{Note}
+shared\+\_\+ptr is passed by value because this function will take shared ownership 
+\end{DoxyNote}
+
+
+Definition at line 52 of file fib-\/entry.\+cpp.
+
+\index{nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}!has\+Next\+Hop@{has\+Next\+Hop}}
+\index{has\+Next\+Hop@{has\+Next\+Hop}!nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}}
+\subsubsection[{\texorpdfstring{has\+Next\+Hop(shared\+\_\+ptr$<$ Face $>$ face) const}{hasNextHop(shared\_ptr< Face > face) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::fib\+::\+Entry\+::has\+Next\+Hop (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1fib_1_1Entry_ac1173a808d3c921cb8df7479e6700315}{}\label{classnfd_1_1fib_1_1Entry_ac1173a808d3c921cb8df7479e6700315}
+\begin{DoxyReturn}{Returns}
+whether there is a \hyperlink{classnfd_1_1fib_1_1NextHop}{Next\+Hop} record for face
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000024}{Todo}]change parameter type to \hyperlink{classnfd_1_1Face}{Face}\& \end{DoxyRefDesc}
+
+
+Definition at line 46 of file fib-\/entry.\+cpp.
+
+\index{nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}!has\+Next\+Hops@{has\+Next\+Hops}}
+\index{has\+Next\+Hops@{has\+Next\+Hops}!nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}}
+\subsubsection[{\texorpdfstring{has\+Next\+Hops() const}{hasNextHops() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::fib\+::\+Entry\+::has\+Next\+Hops (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1fib_1_1Entry_a8681519d746bc3514ec28f5a00e344db}{}\label{classnfd_1_1fib_1_1Entry_a8681519d746bc3514ec28f5a00e344db}
+\begin{DoxyReturn}{Returns}
+whether this \hyperlink{classnfd_1_1fib_1_1Entry}{Entry} has any \hyperlink{classnfd_1_1fib_1_1NextHop}{Next\+Hop} record 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file fib-\/entry.\+hpp.
+
+\index{nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}!remove\+Next\+Hop@{remove\+Next\+Hop}}
+\index{remove\+Next\+Hop@{remove\+Next\+Hop}!nfd\+::fib\+::\+Entry@{nfd\+::fib\+::\+Entry}}
+\subsubsection[{\texorpdfstring{remove\+Next\+Hop(shared\+\_\+ptr$<$ Face $>$ face)}{removeNextHop(shared\_ptr< Face > face)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::fib\+::\+Entry\+::remove\+Next\+Hop (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1fib_1_1Entry_a1f3a9e13663b2e40f89c0501426795d2}{}\label{classnfd_1_1fib_1_1Entry_a1f3a9e13663b2e40f89c0501426795d2}
+
+
+removes a \hyperlink{classnfd_1_1fib_1_1NextHop}{Next\+Hop} record 
+
+If no \hyperlink{classnfd_1_1fib_1_1NextHop}{Next\+Hop} record for face exists, do nothing.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000025}{Todo}]change parameter type to \hyperlink{classnfd_1_1Face}{Face}\& \end{DoxyRefDesc}
+
+
+Definition at line 68 of file fib-\/entry.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/fib-\/entry.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/fib-\/entry.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{classndn_1_1util_1_1signal_1_1ScopedConnection}{}\section{ndn\+:\+:util\+:\+:signal\+:\+:Scoped\+Connection Class Reference}
+\label{classndn_1_1util_1_1signal_1_1ScopedConnection}\index{ndn\+::util\+::signal\+::\+Scoped\+Connection@{ndn\+::util\+::signal\+::\+Scoped\+Connection}}
+
+
+disconnects a \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} automatically upon destruction  
+
+
+
+
+{\ttfamily \#include $<$signal-\/scoped-\/connection.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:signal\+:\+:Scoped\+Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1signal_1_1ScopedConnection}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection_ab63a5bb8ff287c5be7688f14abc6c5a9}{Scoped\+Connection} (const \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} \&connection)
+\begin{DoxyCompactList}\small\item\em implicit constructor from \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection_af2a4f1e36f252c6d95973c2d3bc16cfd}{Scoped\+Connection} (\hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection}{Scoped\+Connection} \&\&other) noexcept\hypertarget{classndn_1_1util_1_1signal_1_1ScopedConnection_af2a4f1e36f252c6d95973c2d3bc16cfd}{}\label{classndn_1_1util_1_1signal_1_1ScopedConnection_af2a4f1e36f252c6d95973c2d3bc16cfd}
+
+\begin{DoxyCompactList}\small\item\em move constructor \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection}{Scoped\+Connection} \& \hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection_a93bebd7b755bf29b7d14ee0420e8d1b2}{operator=} (const \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} \&connection)
+\begin{DoxyCompactList}\small\item\em assigns a connection \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection_adb31a6c16ed18f73e8d95a1578423b9b}{$\sim$\+Scoped\+Connection} ()\hypertarget{classndn_1_1util_1_1signal_1_1ScopedConnection_adb31a6c16ed18f73e8d95a1578423b9b}{}\label{classndn_1_1util_1_1signal_1_1ScopedConnection_adb31a6c16ed18f73e8d95a1578423b9b}
+
+\begin{DoxyCompactList}\small\item\em disconnects the connection \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection_a81d1fc31aaaa1ed42ff0c218f94691e5}{disconnect} ()\hypertarget{classndn_1_1util_1_1signal_1_1ScopedConnection_a81d1fc31aaaa1ed42ff0c218f94691e5}{}\label{classndn_1_1util_1_1signal_1_1ScopedConnection_a81d1fc31aaaa1ed42ff0c218f94691e5}
+
+\begin{DoxyCompactList}\small\item\em disconnects the connection manually \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection_a6e0a13efac0b2b246f0a852576b74df7}{is\+Connected} () const
+\begin{DoxyCompactList}\small\item\em check if the connection is connected to the signal \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection_a9e17f33145796979da280fc2a402cdfd}{release} ()\hypertarget{classndn_1_1util_1_1signal_1_1ScopedConnection_a9e17f33145796979da280fc2a402cdfd}{}\label{classndn_1_1util_1_1signal_1_1ScopedConnection_a9e17f33145796979da280fc2a402cdfd}
+
+\begin{DoxyCompactList}\small\item\em releases the connection so that it won\textquotesingle{}t be disconnected when this \hyperlink{classndn_1_1util_1_1signal_1_1ScopedConnection}{Scoped\+Connection} is destructed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+disconnects a \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} automatically upon destruction 
+
+Definition at line 33 of file signal-\/scoped-\/connection.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::util\+::signal\+::\+Scoped\+Connection@{ndn\+::util\+::signal\+::\+Scoped\+Connection}!Scoped\+Connection@{Scoped\+Connection}}
+\index{Scoped\+Connection@{Scoped\+Connection}!ndn\+::util\+::signal\+::\+Scoped\+Connection@{ndn\+::util\+::signal\+::\+Scoped\+Connection}}
+\subsubsection[{\texorpdfstring{Scoped\+Connection(const Connection \&connection)}{ScopedConnection(const Connection \&connection)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::util\+::signal\+::\+Scoped\+Connection\+::\+Scoped\+Connection (
+\begin{DoxyParamCaption}
+\item[{const {\bf Connection} \&}]{connection}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1signal_1_1ScopedConnection_ab63a5bb8ff287c5be7688f14abc6c5a9}{}\label{classndn_1_1util_1_1signal_1_1ScopedConnection_ab63a5bb8ff287c5be7688f14abc6c5a9}
+
+
+implicit constructor from \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & the \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} to be disconnected upon destruction \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file signal-\/scoped-\/connection.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::signal\+::\+Scoped\+Connection@{ndn\+::util\+::signal\+::\+Scoped\+Connection}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!ndn\+::util\+::signal\+::\+Scoped\+Connection@{ndn\+::util\+::signal\+::\+Scoped\+Connection}}
+\subsubsection[{\texorpdfstring{is\+Connected() const}{isConnected() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::util\+::signal\+::\+Scoped\+Connection\+::is\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1signal_1_1ScopedConnection_a6e0a13efac0b2b246f0a852576b74df7}{}\label{classndn_1_1util_1_1signal_1_1ScopedConnection_a6e0a13efac0b2b246f0a852576b74df7}
+
+
+check if the connection is connected to the signal 
+
+\begin{DoxyReturn}{Returns}
+false when a default-\/constructed connection is used, the connection is released, or the connection is disconnected 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file signal-\/scoped-\/connection.\+cpp.
+
+\index{ndn\+::util\+::signal\+::\+Scoped\+Connection@{ndn\+::util\+::signal\+::\+Scoped\+Connection}!operator=@{operator=}}
+\index{operator=@{operator=}!ndn\+::util\+::signal\+::\+Scoped\+Connection@{ndn\+::util\+::signal\+::\+Scoped\+Connection}}
+\subsubsection[{\texorpdfstring{operator=(const Connection \&connection)}{operator=(const Connection \&connection)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scoped\+Connection} \& ndn\+::util\+::signal\+::\+Scoped\+Connection\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Connection} \&}]{connection}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1signal_1_1ScopedConnection_a93bebd7b755bf29b7d14ee0420e8d1b2}{}\label{classndn_1_1util_1_1signal_1_1ScopedConnection_a93bebd7b755bf29b7d14ee0420e8d1b2}
+
+
+assigns a connection 
+
+If a different connection has been assigned to this instance previously, that connection will be disconnected immediately. 
+
+Definition at line 49 of file signal-\/scoped-\/connection.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/signal-\/scoped-\/connection.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/signal-\/scoped-\/connection.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,22 @@
+\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket}{}\section{websocketpp\+:\+:transport\+:\+:asio\+:\+:tls\+\_\+socket Namespace Reference}
+\label{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket}\index{websocketpp\+::transport\+::asio\+::tls\+\_\+socket@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1connection}{connection}
+\begin{DoxyCompactList}\small\item\em T\+LS enabled Boost A\+S\+IO connection socket component. \end{DoxyCompactList}\item 
+class \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint}{endpoint}
+\begin{DoxyCompactList}\small\item\em T\+LS enabled Boost A\+S\+IO endpoint socket component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef lib\+::function$<$ void(\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{connection\+\_\+hdl}, boost\+::asio\+::ssl\+::stream$<$ boost\+::asio\+::ip\+::tcp\+::socket $>$ \&)$>$ \hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket_a1d7e715c2f7c5fc7add88d6a37724abb}{socket\+\_\+init\+\_\+handler}\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket_a1d7e715c2f7c5fc7add88d6a37724abb}{}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket_a1d7e715c2f7c5fc7add88d6a37724abb}
+
+\begin{DoxyCompactList}\small\item\em The signature of the socket\+\_\+init\+\_\+handler for this socket policy. \end{DoxyCompactList}\item 
+typedef lib\+::function$<$ lib\+::shared\+\_\+ptr$<$ boost\+::asio\+::ssl\+::context $>$\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{connection\+\_\+hdl})$>$ \hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket_a8213f20abc47626ab3bf8db285fff3b3}{tls\+\_\+init\+\_\+handler}\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket_a8213f20abc47626ab3bf8db285fff3b3}{}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket_a8213f20abc47626ab3bf8db285fff3b3}
+
+\begin{DoxyCompactList}\small\item\em The signature of the tls\+\_\+init\+\_\+handler for this socket policy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A socket policy for the asio transport that implements a T\+LS encrypted socket by wrapping with an asio\+::ssl\+::stream 

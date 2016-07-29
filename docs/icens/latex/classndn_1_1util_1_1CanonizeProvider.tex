@@ -1,0 +1,37 @@
+\hypertarget{classndn_1_1util_1_1CanonizeProvider}{}\section{ndn\+:\+:util\+:\+:Canonize\+Provider Class Reference}
+\label{classndn_1_1util_1_1CanonizeProvider}\index{ndn\+::util\+::\+Canonize\+Provider@{ndn\+::util\+::\+Canonize\+Provider}}
+
+
+a \hyperlink{classndn_1_1util_1_1CanonizeProvider}{Canonize\+Provider} provides \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} canonization functionality for a group of schemes  
+
+
+Inheritance diagram for ndn\+:\+:util\+:\+:Canonize\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.686747cm]{classndn_1_1util_1_1CanonizeProvider}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::set$<$ std\+::string $>$ {\bfseries get\+Schemes} () const =0\hypertarget{classndn_1_1util_1_1CanonizeProvider_ae65477a4f97516df4a4d181a8cdacec7}{}\label{classndn_1_1util_1_1CanonizeProvider_ae65477a4f97516df4a4d181a8cdacec7}
+
+\item 
+virtual bool {\bfseries is\+Canonical} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&face\+Uri) const =0\hypertarget{classndn_1_1util_1_1CanonizeProvider_a6da84f87e0865ab6888a8afb01e75093}{}\label{classndn_1_1util_1_1CanonizeProvider_a6da84f87e0865ab6888a8afb01e75093}
+
+\item 
+virtual void {\bfseries canonize} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&face\+Uri, const Face\+Uri\+::\+Canonize\+Success\+Callback \&on\+Success, const Face\+Uri\+::\+Canonize\+Failure\+Callback \&on\+Failure, boost\+::asio\+::io\+\_\+service \&io, const time\+::nanoseconds \&timeout) const =0\hypertarget{classndn_1_1util_1_1CanonizeProvider_a8ab7279b6f0c410d1c58186402ef2156}{}\label{classndn_1_1util_1_1CanonizeProvider_a8ab7279b6f0c410d1c58186402ef2156}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a \hyperlink{classndn_1_1util_1_1CanonizeProvider}{Canonize\+Provider} provides \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} canonization functionality for a group of schemes 
+
+Definition at line 211 of file face-\/uri.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/face-\/uri.\+cpp\end{DoxyCompactItemize}

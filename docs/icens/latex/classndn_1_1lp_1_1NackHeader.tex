@@ -1,0 +1,85 @@
+\hypertarget{classndn_1_1lp_1_1NackHeader}{}\section{ndn\+:\+:lp\+:\+:Nack\+Header Class Reference}
+\label{classndn_1_1lp_1_1NackHeader}\index{ndn\+::lp\+::\+Nack\+Header@{ndn\+::lp\+::\+Nack\+Header}}
+
+
+represents a Network N\+A\+CK header  
+
+
+
+
+{\ttfamily \#include $<$nack-\/header.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Nack\+Header} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1lp_1_1NackHeader_a07fb7874c11b0f5578889f4f39cb3f2b}{}\label{classndn_1_1lp_1_1NackHeader_a07fb7874c11b0f5578889f4f39cb3f2b}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t {\bfseries wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1lp_1_1NackHeader_a02a8ae95a03b6d13f7b93ddb473b80b5}{}\label{classndn_1_1lp_1_1NackHeader_a02a8ae95a03b6d13f7b93ddb473b80b5}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& {\bfseries wire\+Encode} () const\hypertarget{classndn_1_1lp_1_1NackHeader_a127d2a7bf43d311befdbb0f3b8e58475}{}\label{classndn_1_1lp_1_1NackHeader_a127d2a7bf43d311befdbb0f3b8e58475}
+
+\item 
+void {\bfseries wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1lp_1_1NackHeader_ad039ddeb6890180a52d4fee1a6558922}{}\label{classndn_1_1lp_1_1NackHeader_ad039ddeb6890180a52d4fee1a6558922}
+
+\item 
+Nack\+Reason \hyperlink{classndn_1_1lp_1_1NackHeader_a551d35d5d63cffb46f1d96487b045960}{get\+Reason} () const
+\item 
+\hyperlink{classndn_1_1lp_1_1NackHeader}{Nack\+Header} \& \hyperlink{classndn_1_1lp_1_1NackHeader_a2030cdeb3eaa619d533a259f45fd84d2}{set\+Reason} (Nack\+Reason reason)
+\begin{DoxyCompactList}\small\item\em set reason code \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a Network N\+A\+CK header 
+
+Definition at line 52 of file nack-\/header.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::lp\+::\+Nack\+Header@{ndn\+::lp\+::\+Nack\+Header}!get\+Reason@{get\+Reason}}
+\index{get\+Reason@{get\+Reason}!ndn\+::lp\+::\+Nack\+Header@{ndn\+::lp\+::\+Nack\+Header}}
+\subsubsection[{\texorpdfstring{get\+Reason() const}{getReason() const}}]{\setlength{\rightskip}{0pt plus 5cm}Nack\+Reason ndn\+::lp\+::\+Nack\+Header\+::get\+Reason (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1lp_1_1NackHeader_a551d35d5d63cffb46f1d96487b045960}{}\label{classndn_1_1lp_1_1NackHeader_a551d35d5d63cffb46f1d96487b045960}
+\begin{DoxyReturn}{Returns}
+reason code 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em Nack\+Reason\+::\+N\+O\+NE} & if Nack\+Reason element does not exist or has an unknown code \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 119 of file nack-\/header.\+cpp.
+
+\index{ndn\+::lp\+::\+Nack\+Header@{ndn\+::lp\+::\+Nack\+Header}!set\+Reason@{set\+Reason}}
+\index{set\+Reason@{set\+Reason}!ndn\+::lp\+::\+Nack\+Header@{ndn\+::lp\+::\+Nack\+Header}}
+\subsubsection[{\texorpdfstring{set\+Reason(\+Nack\+Reason reason)}{setReason(NackReason reason)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nack\+Header} \& ndn\+::lp\+::\+Nack\+Header\+::set\+Reason (
+\begin{DoxyParamCaption}
+\item[{Nack\+Reason}]{reason}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1lp_1_1NackHeader_a2030cdeb3eaa619d533a259f45fd84d2}{}\label{classndn_1_1lp_1_1NackHeader_a2030cdeb3eaa619d533a259f45fd84d2}
+
+
+set reason code 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reason} & a reason code; Nack\+Reason\+::\+N\+O\+NE clears the reason \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 132 of file nack-\/header.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/lp/nack-\/header.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/lp/nack-\/header.\+cpp\end{DoxyCompactItemize}

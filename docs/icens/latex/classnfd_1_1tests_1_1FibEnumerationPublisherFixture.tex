@@ -1,0 +1,62 @@
+\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture}{}\section{nfd\+:\+:tests\+:\+:Fib\+Enumeration\+Publisher\+Fixture Class Reference}
+\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture}\index{nfd\+::tests\+::\+Fib\+Enumeration\+Publisher\+Fixture@{nfd\+::tests\+::\+Fib\+Enumeration\+Publisher\+Fixture}}
+Inheritance diagram for nfd\+:\+:tests\+:\+:Fib\+Enumeration\+Publisher\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1tests_1_1FibEnumerationPublisherFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries has\+Next\+Hop\+With\+Cost} (const fib\+::\+Next\+Hop\+List \&next\+Hops, \hyperlink{classFaceId}{Face\+Id} face\+Id, uint64\+\_\+t cost)\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a09f8ef6abcaff1cf2a6a5b00281d39b5}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a09f8ef6abcaff1cf2a6a5b00281d39b5}
+
+\item 
+bool {\bfseries entry\+Has\+Prefix} (const shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ entry, const \hyperlink{classndn_1_1Name}{Name} \&prefix)\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a93595d8d093bcfbe9b8f73c1928466d3}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a93595d8d093bcfbe9b8f73c1928466d3}
+
+\item 
+void {\bfseries validate\+Fib\+Entry} (const \hyperlink{classndn_1_1Block}{Block} \&entry)\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a77d1c3846098bc650ea8a7b36fd82d29}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a77d1c3846098bc650ea8a7b36fd82d29}
+
+\item 
+void {\bfseries decode\+Fib\+Entry\+Block} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_ad767e0d4cb8df0225646f5c2b52e7703}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_ad767e0d4cb8df0225646f5c2b52e7703}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1NameTree}{Name\+Tree} {\bfseries m\+\_\+name\+Tree}\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_aa0d33dcf5660a44ac319dfcbd56b7fb8}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_aa0d33dcf5660a44ac319dfcbd56b7fb8}
+
+\item 
+\hyperlink{classnfd_1_1Fib}{Fib} {\bfseries m\+\_\+fib}\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_afaa50c1583d27d204de4b77754543375}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_afaa50c1583d27d204de4b77754543375}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ {\bfseries m\+\_\+face}\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a20490200b3ebd33ece9a64e5dded9b58}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a20490200b3ebd33ece9a64e5dded9b58}
+
+\item 
+\hyperlink{classnfd_1_1FibEnumerationPublisher}{Fib\+Enumeration\+Publisher} {\bfseries m\+\_\+publisher}\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_ae85ad6299b29da171aa16977e8f901f4}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_ae85ad6299b29da171aa16977e8f901f4}
+
+\item 
+ndn\+::\+Encoding\+Buffer {\bfseries m\+\_\+buffer}\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a5b683b5bf795750876453323ed17ac8c}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a5b683b5bf795750876453323ed17ac8c}
+
+\item 
+std\+::set$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ $>$ {\bfseries m\+\_\+reference\+Entries}\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a358362d573fe3d96425b65f0cc2c2270}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a358362d573fe3d96425b65f0cc2c2270}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries m\+\_\+key\+Chain}\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_aa5230d3e1170a16b7d2f3e4ae0b281cf}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_aa5230d3e1170a16b7d2f3e4ae0b281cf}
+
+\item 
+bool {\bfseries m\+\_\+finished}\hypertarget{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a99151eccfa119439a5182f51c5e55d4c}{}\label{classnfd_1_1tests_1_1FibEnumerationPublisherFixture_a99151eccfa119439a5182f51c5e55d4c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 74 of file fib-\/enumeration-\/publisher-\/common.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/mgmt/fib-\/enumeration-\/publisher-\/common.\+hpp\end{DoxyCompactItemize}

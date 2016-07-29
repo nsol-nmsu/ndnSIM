@@ -1,0 +1,48 @@
+\hypertarget{classnfd_1_1tests_1_1EnumerationVerifier}{}\section{nfd\+:\+:tests\+:\+:Enumeration\+Verifier Class Reference}
+\label{classnfd_1_1tests_1_1EnumerationVerifier}\index{nfd\+::tests\+::\+Enumeration\+Verifier@{nfd\+::tests\+::\+Enumeration\+Verifier}}
+
+
+verify a \hyperlink{classnfd_1_1NameTree}{Name\+Tree} enumeration contains expected entries  
+
+
+Inheritance diagram for nfd\+:\+:tests\+:\+:Enumeration\+Verifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1tests_1_1EnumerationVerifier}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Enumerable $>$ }\\{\bfseries Enumeration\+Verifier} (Enumerable \&\&enumerable)\hypertarget{classnfd_1_1tests_1_1EnumerationVerifier_a33480ae1c00a53768536f07d68e2d98f}{}\label{classnfd_1_1tests_1_1EnumerationVerifier_a33480ae1c00a53768536f07d68e2d98f}
+
+\item 
+\hyperlink{classnfd_1_1tests_1_1EnumerationVerifier}{Enumeration\+Verifier} \& {\bfseries expect} (const \hyperlink{classndn_1_1Name}{Name} \&name)\hypertarget{classnfd_1_1tests_1_1EnumerationVerifier_abe27578ebcbc5ae822d12e440403dd6d}{}\label{classnfd_1_1tests_1_1EnumerationVerifier_abe27578ebcbc5ae822d12e440403dd6d}
+
+\item 
+void {\bfseries end} ()\hypertarget{classnfd_1_1tests_1_1EnumerationVerifier_af6a0c0fd03d5ba2a424ed6f0dfc7011a}{}\label{classnfd_1_1tests_1_1EnumerationVerifier_af6a0c0fd03d5ba2a424ed6f0dfc7011a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+verify a \hyperlink{classnfd_1_1NameTree}{Name\+Tree} enumeration contains expected entries 
+
+Example\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{auto}& enumerable = ...;
+EnumerationVerifier(enumerable)
+  .expect(\textcolor{stringliteral}{"/A"})
+  .expect(\textcolor{stringliteral}{"/B"})
+  .end();
+\textcolor{comment}{// enumerable must have /A /B and nothing else to pass the test.}
+\end{DoxyCode}
+ 
+
+Definition at line 256 of file name-\/tree.\+t.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/table/name-\/tree.\+t.\+cpp\end{DoxyCompactItemize}

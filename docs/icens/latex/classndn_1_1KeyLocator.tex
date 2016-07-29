@@ -1,0 +1,291 @@
+\hypertarget{classndn_1_1KeyLocator}{}\section{ndn\+:\+:Key\+Locator Class Reference}
+\label{classndn_1_1KeyLocator}\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1KeyLocator_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689}{Type} \{ \hyperlink{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a8e362258492b2ee32bc1ba1b2ad0753d}{Key\+Locator\+\_\+\+None} = 65535, 
+\hyperlink{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a3bd27486d6e08187e6e61c32e870cb01}{Key\+Locator\+\_\+\+Name} = 0, 
+\hyperlink{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a750280e5bc9852648a92aa337d935c76}{Key\+Locator\+\_\+\+Key\+Digest} = 1, 
+\hyperlink{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689abf88ec309ba29b12ff05f1017eb7b1cf}{Key\+Locator\+\_\+\+Unknown} = 255
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1KeyLocator_a60b5e38717998c0f761edc935c1dc8f3}{Key\+Locator} ()\hypertarget{classndn_1_1KeyLocator_a60b5e38717998c0f761edc935c1dc8f3}{}\label{classndn_1_1KeyLocator_a60b5e38717998c0f761edc935c1dc8f3}
+
+\begin{DoxyCompactList}\small\item\em construct an empty \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1KeyLocator_a7549472652d52bdbc3c1b77bcc79f084}{Key\+Locator} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1KeyLocator_a7549472652d52bdbc3c1b77bcc79f084}{}\label{classndn_1_1KeyLocator_a7549472652d52bdbc3c1b77bcc79f084}
+
+\begin{DoxyCompactList}\small\item\em construct from wire encoding \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1KeyLocator_ac139151007b9706707ce3cade92825ca}{Key\+Locator} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em construct from \hyperlink{classndn_1_1Name}{Name} \end{DoxyCompactList}\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1KeyLocator_ada3677e2784d731bd6fae7769a1d2039}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const
+\begin{DoxyCompactList}\small\item\em prepend wire encoding \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1KeyLocator_a6d7327d49d99dcd6a4f5f1c8fb579e8b}{wire\+Encode} () const
+\item 
+void \hyperlink{classndn_1_1KeyLocator_a9c52c1f1e358ab736003e5aea689f60d}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em decode from wire encoding \end{DoxyCompactList}\item 
+bool {\bfseries empty} () const\hypertarget{classndn_1_1KeyLocator_af52101e4f02a829991222a6ee92b0462}{}\label{classndn_1_1KeyLocator_af52101e4f02a829991222a6ee92b0462}
+
+\item 
+\hyperlink{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689}{Type} {\bfseries get\+Type} () const\hypertarget{classndn_1_1KeyLocator_a498c8fb7a1f06d4c02a5f5d908e3b27e}{}\label{classndn_1_1KeyLocator_a498c8fb7a1f06d4c02a5f5d908e3b27e}
+
+\item 
+\hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \& \hyperlink{classndn_1_1KeyLocator_ac2139fe79a7f789724762a56e3fcd356}{clear} ()
+\begin{DoxyCompactList}\small\item\em clear \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1KeyLocator_a4be534ac984e227d578e01625e723add}{get\+Name} () const
+\begin{DoxyCompactList}\small\item\em get \hyperlink{classndn_1_1Name}{Name} element \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \& \hyperlink{classndn_1_1KeyLocator_ac89c7b3c1b0c79b4a4cbe2883a0d4982}{set\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em set \hyperlink{classndn_1_1Name}{Name} element \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1KeyLocator_a1845b503c6f1d16f295cca4b9bc72a60}{get\+Key\+Digest} () const
+\begin{DoxyCompactList}\small\item\em get Key\+Digest element \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \& \hyperlink{classndn_1_1KeyLocator_ab49ef0512a400e8c7f71e8ff2dcbcc75}{set\+Key\+Digest} (const \hyperlink{classndn_1_1Block}{Block} \&key\+Digest)
+\begin{DoxyCompactList}\small\item\em set Key\+Digest element \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \& \hyperlink{classndn_1_1KeyLocator_a07e3da80a54635615e76508bf7bf60d2}{set\+Key\+Digest} (const Const\+Buffer\+Ptr \&key\+Digest)
+\begin{DoxyCompactList}\small\item\em set Key\+Digest value \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \&other) const\hypertarget{classndn_1_1KeyLocator_a9ca6d643e13ad35a46212c02e5833cad}{}\label{classndn_1_1KeyLocator_a9ca6d643e13ad35a46212c02e5833cad}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \&other) const\hypertarget{classndn_1_1KeyLocator_a638b9c7a49033160c4da1604763fb326}{}\label{classndn_1_1KeyLocator_a638b9c7a49033160c4da1604763fb326}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file key-\/locator.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!Type@{Type}}
+\index{Type@{Type}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{Type}{Type}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ndn\+::\+Key\+Locator\+::\+Type}}\hypertarget{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689}{}\label{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Key\+Locator\+\_\+\+None@{Key\+Locator\+\_\+\+None}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!Key\+Locator\+\_\+\+None@{Key\+Locator\+\_\+\+None}}\item[{\em 
+Key\+Locator\+\_\+\+None\hypertarget{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a8e362258492b2ee32bc1ba1b2ad0753d}{}\label{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a8e362258492b2ee32bc1ba1b2ad0753d}
+}]indicates \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} is empty (internal use only) \index{Key\+Locator\+\_\+\+Name@{Key\+Locator\+\_\+\+Name}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!Key\+Locator\+\_\+\+Name@{Key\+Locator\+\_\+\+Name}}\item[{\em 
+Key\+Locator\+\_\+\+Name\hypertarget{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a3bd27486d6e08187e6e61c32e870cb01}{}\label{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a3bd27486d6e08187e6e61c32e870cb01}
+}]indicates \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} contains a \hyperlink{classndn_1_1Name}{Name} \index{Key\+Locator\+\_\+\+Key\+Digest@{Key\+Locator\+\_\+\+Key\+Digest}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!Key\+Locator\+\_\+\+Key\+Digest@{Key\+Locator\+\_\+\+Key\+Digest}}\item[{\em 
+Key\+Locator\+\_\+\+Key\+Digest\hypertarget{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a750280e5bc9852648a92aa337d935c76}{}\label{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689a750280e5bc9852648a92aa337d935c76}
+}]indicates \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} contains a Key\+Digest \index{Key\+Locator\+\_\+\+Unknown@{Key\+Locator\+\_\+\+Unknown}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!Key\+Locator\+\_\+\+Unknown@{Key\+Locator\+\_\+\+Unknown}}\item[{\em 
+Key\+Locator\+\_\+\+Unknown\hypertarget{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689abf88ec309ba29b12ff05f1017eb7b1cf}{}\label{classndn_1_1KeyLocator_acede373a69c62b274b2356134ff1d689abf88ec309ba29b12ff05f1017eb7b1cf}
+}]indicates \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} contains an unknown element \end{description}
+\end{Desc}
+
+
+Definition at line 43 of file key-\/locator.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!Key\+Locator@{Key\+Locator}}
+\index{Key\+Locator@{Key\+Locator}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{Key\+Locator(const Name \&name)}{KeyLocator(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Key\+Locator\+::\+Key\+Locator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1KeyLocator_ac139151007b9706707ce3cade92825ca}{}\label{classndn_1_1KeyLocator_ac139151007b9706707ce3cade92825ca}
+
+
+construct from \hyperlink{classndn_1_1Name}{Name} 
+
+\begin{DoxyNote}{Note}
+implicit conversion is permitted 
+\end{DoxyNote}
+
+
+Definition at line 44 of file key-\/locator.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!clear@{clear}}
+\index{clear@{clear}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\+Locator} \& ndn\+::\+Key\+Locator\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1KeyLocator_ac2139fe79a7f789724762a56e3fcd356}{}\label{classndn_1_1KeyLocator_ac2139fe79a7f789724762a56e3fcd356}
+
+
+clear \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} 
+
+type becomes Key\+Locator\+\_\+\+None \begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 128 of file key-\/locator.\+cpp.
+
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!get\+Key\+Digest@{get\+Key\+Digest}}
+\index{get\+Key\+Digest@{get\+Key\+Digest}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{get\+Key\+Digest() const}{getKeyDigest() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block} \& ndn\+::\+Key\+Locator\+::get\+Key\+Digest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1KeyLocator_a1845b503c6f1d16f295cca4b9bc72a60}{}\label{classndn_1_1KeyLocator_a1845b503c6f1d16f295cca4b9bc72a60}
+
+
+get Key\+Digest element 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1KeyLocator_1_1Error}{Error}} & if type is not Key\+Locator\+\_\+\+Key\+Digest \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 156 of file key-\/locator.\+cpp.
+
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{get\+Name() const}{getName() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name} \& ndn\+::\+Key\+Locator\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1KeyLocator_a4be534ac984e227d578e01625e723add}{}\label{classndn_1_1KeyLocator_a4be534ac984e227d578e01625e723add}
+
+
+get \hyperlink{classndn_1_1Name}{Name} element 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1KeyLocator_1_1Error}{Error}} & if type is not Key\+Locator\+\_\+\+Name \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 138 of file key-\/locator.\+cpp.
+
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!set\+Key\+Digest@{set\+Key\+Digest}}
+\index{set\+Key\+Digest@{set\+Key\+Digest}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{set\+Key\+Digest(const Block \&key\+Digest)}{setKeyDigest(const Block \&keyDigest)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\+Locator} \& ndn\+::\+Key\+Locator\+::set\+Key\+Digest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{key\+Digest}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1KeyLocator_ab49ef0512a400e8c7f71e8ff2dcbcc75}{}\label{classndn_1_1KeyLocator_ab49ef0512a400e8c7f71e8ff2dcbcc75}
+
+
+set Key\+Digest element 
+
+type becomes Key\+Locator\+\_\+\+Key\+Digest 
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1KeyLocator_1_1Error}{Error}} & if \hyperlink{classndn_1_1Block}{Block} type is not Key\+Digest \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file key-\/locator.\+cpp.
+
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!set\+Key\+Digest@{set\+Key\+Digest}}
+\index{set\+Key\+Digest@{set\+Key\+Digest}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{set\+Key\+Digest(const Const\+Buffer\+Ptr \&key\+Digest)}{setKeyDigest(const ConstBufferPtr \&keyDigest)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\+Locator} \& ndn\+::\+Key\+Locator\+::set\+Key\+Digest (
+\begin{DoxyParamCaption}
+\item[{const Const\+Buffer\+Ptr \&}]{key\+Digest}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1KeyLocator_a07e3da80a54635615e76508bf7bf60d2}{}\label{classndn_1_1KeyLocator_a07e3da80a54635615e76508bf7bf60d2}
+
+
+set Key\+Digest value 
+
+type becomes Key\+Locator\+\_\+\+Key\+Digest \begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file key-\/locator.\+cpp.
+
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{set\+Name(const Name \&name)}{setName(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Key\+Locator} \& ndn\+::\+Key\+Locator\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1KeyLocator_ac89c7b3c1b0c79b4a4cbe2883a0d4982}{}\label{classndn_1_1KeyLocator_ac89c7b3c1b0c79b4a4cbe2883a0d4982}
+
+
+set \hyperlink{classndn_1_1Name}{Name} element 
+
+type becomes Key\+Locator\+\_\+\+Name \begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file key-\/locator.\+cpp.
+
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!wire\+Decode@{wire\+Decode}}
+\index{wire\+Decode@{wire\+Decode}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{wire\+Decode(const Block \&wire)}{wireDecode(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Key\+Locator\+::wire\+Decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1KeyLocator_a9c52c1f1e358ab736003e5aea689f60d}{}\label{classndn_1_1KeyLocator_a9c52c1f1e358ab736003e5aea689f60d}
+
+
+decode from wire encoding 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1KeyLocator_1_1Error}{Error}} & outer T\+LV type is not \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+No error is thrown for unrecognized inner T\+LV, but type becomes Key\+Locator\+\_\+\+Unknown. 
+\end{DoxyNote}
+
+
+Definition at line 99 of file key-\/locator.\+cpp.
+
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!wire\+Encode@{wire\+Encode}}
+\index{wire\+Encode@{wire\+Encode}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{wire\+Encode(\+Encoding\+Impl$<$ T\+A\+G $>$ \&encoder) const}{wireEncode(EncodingImpl< TAG > \&encoder) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$encoding\+::\+Tag T\+AG$>$ size\+\_\+t ndn\+::\+Key\+Locator\+::wire\+Encode (
+\begin{DoxyParamCaption}
+\item[{{\bf Encoding\+Impl}$<$ T\+AG $>$ \&}]{encoder}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1KeyLocator_ada3677e2784d731bd6fae7769a1d2039}{}\label{classndn_1_1KeyLocator_ada3677e2784d731bd6fae7769a1d2039}
+
+
+prepend wire encoding 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder} & Encoding\+Buffer or Estimator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file key-\/locator.\+cpp.
+
+\index{ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}!wire\+Encode@{wire\+Encode}}
+\index{wire\+Encode@{wire\+Encode}!ndn\+::\+Key\+Locator@{ndn\+::\+Key\+Locator}}
+\subsubsection[{\texorpdfstring{wire\+Encode() const}{wireEncode() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block} \& ndn\+::\+Key\+Locator\+::wire\+Encode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1KeyLocator_a6d7327d49d99dcd6a4f5f1c8fb579e8b}{}\label{classndn_1_1KeyLocator_a6d7327d49d99dcd6a4f5f1c8fb579e8b}
+\begin{DoxyReturn}{Returns}
+wire encoding 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file key-\/locator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/key-\/locator.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/key-\/locator.\+cpp\end{DoxyCompactItemize}

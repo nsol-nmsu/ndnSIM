@@ -1,0 +1,1123 @@
+\hypertarget{classndn_1_1name_1_1Component}{}\section{ndn\+:\+:name\+:\+:Component Class Reference}
+\label{classndn_1_1name_1_1Component}\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+
+
+\hyperlink{classndn_1_1name_1_1Component}{Component} holds a read-\/only name component value.  
+
+
+
+
+{\ttfamily \#include $<$name-\/component.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:name\+:\+:Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1name_1_1Component}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error} that can be thrown from \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1name_1_1Component_ad63b21d43607576a13a4b4a3117b161c}{Component} ()
+\item 
+\hyperlink{classndn_1_1name_1_1Component_ac0f32a97dc1437366660a8060c4791ab}{Component} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from a wire block. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1name_1_1Component_a6b774677a2b7b02d357c8a73e1e1287f}{Component} (const Const\+Buffer\+Ptr \&buffer)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the buffer pointer (buffer pointer will be copied) \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1name_1_1Component_a407c1d4c690d05564274c19b0440d5fa}{Component} (const \hyperlink{classndn_1_1Buffer}{Buffer} \&buffer)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the buffer (data from buffer will be copied) \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1name_1_1Component_a85183824c2b1e292706435d42fdebad3}{Component} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the buffer (data from buffer will be copied) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Iterator $>$ }\\\hyperlink{classndn_1_1name_1_1Component_a912b748104361288e14629cce044da0b}{Component} (Iterator first, Iterator last)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} frome the range \mbox{[}{\ttfamily first}, {\ttfamily last}) of bytes. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1name_1_1Component_a3c47893a929db1f777292dd0831546c8}{Component} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the C string (data from string will be copied) \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1name_1_1Component_aaae6517ff81fb1e085dc2e441c1d13e7}{Component} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the S\+TL string (data from string will be copied) \end{DoxyCompactList}\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1name_1_1Component_abbfde2552812b1f51420a30655d92871}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1name_1_1Component_abbfde2552812b1f51420a30655d92871}{}\label{classndn_1_1name_1_1Component_abbfde2552812b1f51420a30655d92871}
+
+\begin{DoxyCompactList}\small\item\em Fast encoding or block size estimation. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1name_1_1Component_a0e872178143798b34a57cdd092e98d4f}{wire\+Encode} () const\hypertarget{classndn_1_1name_1_1Component_a0e872178143798b34a57cdd092e98d4f}{}\label{classndn_1_1name_1_1Component_a0e872178143798b34a57cdd092e98d4f}
+
+\begin{DoxyCompactList}\small\item\em Encode to a wire format. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1name_1_1Component_ab50fb587f611071ea6695f4dbe3a286c}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1name_1_1Component_ab50fb587f611071ea6695f4dbe3a286c}{}\label{classndn_1_1name_1_1Component_ab50fb587f611071ea6695f4dbe3a286c}
+
+\begin{DoxyCompactList}\small\item\em Decode from the wire format. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1name_1_1Component_ae0a7d2ceecae01153319e5185eb7238d}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (void to\+Escaped\+String(std\+::ostream \&os) const)
+\begin{DoxyCompactList}\small\item\em Write $\ast$this to the output stream, escaping characters according to the N\+DN U\+RI Scheme. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1name_1_1Component_a5eacacf66c30c34b34ebf8735d1e08df}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (std\+::string to\+Escaped\+String() const)
+\begin{DoxyCompactList}\small\item\em Convert $\ast$this by escaping characters according to the N\+DN U\+RI Scheme. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1name_1_1Component_a822f3053b5ddc45e19cb35fd0ae5fb29}{to\+Uri} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Write $\ast$this to the output stream, escaping characters according to the N\+DN U\+RI Scheme. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1name_1_1Component_a23eb559728bd6a72edb5732d5546ac6c}{to\+Uri} () const
+\begin{DoxyCompactList}\small\item\em Convert $\ast$this by escaping characters according to the N\+DN U\+RI Scheme. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_ab108a2c2dab47ca90894ae2a1783f9db}{is\+Number} () const
+\begin{DoxyCompactList}\small\item\em Check if the component is non\+Negative\+Integer. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_aacab577718d5d19e500b55fc495975aa}{is\+Number\+With\+Marker} (uint8\+\_\+t marker) const
+\begin{DoxyCompactList}\small\item\em Check if the component is Name\+Component\+With\+Marker per N\+DN naming conventions. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_aa6b97277b8e99d24e5e84856effc8c71}{is\+Version} () const
+\begin{DoxyCompactList}\small\item\em Check if the component is version per N\+DN naming conventions. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_a32622d5d2cdc51bba6ee1895e85a2ad4}{is\+Segment} () const
+\begin{DoxyCompactList}\small\item\em Check if the component is segment number per N\+DN naming conventions. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_aaa54289dae0f25ff3e26e0cced0061fa}{is\+Segment\+Offset} () const
+\begin{DoxyCompactList}\small\item\em Check if the component is segment offset per N\+DN naming conventions. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_a56201e898870ea292e374c8f29506902}{is\+Timestamp} () const
+\begin{DoxyCompactList}\small\item\em Check if the component is timestamp per N\+DN naming conventions. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_a782ced113da5879112fa66557822220b}{is\+Sequence\+Number} () const
+\begin{DoxyCompactList}\small\item\em Check if the component is sequence number per N\+DN naming conventions. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classndn_1_1name_1_1Component_aec06747cc8f5566cccf308fe4916d3b7}{to\+Number} () const
+\begin{DoxyCompactList}\small\item\em Interpret this name component as non\+Negative\+Integer. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classndn_1_1name_1_1Component_a494076d15fe1b6e4b4717b8f466e7c8a}{to\+Number\+With\+Marker} (uint8\+\_\+t marker) const
+\begin{DoxyCompactList}\small\item\em Interpret this name component as Name\+Component\+With\+Marker. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classndn_1_1name_1_1Component_afa91a98934f383905669fde40bd3c8df}{to\+Version} () const
+\begin{DoxyCompactList}\small\item\em Interpret as version component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classndn_1_1name_1_1Component_a0143d8803b4179a5ef4ed086bdc9af94}{to\+Segment} () const
+\begin{DoxyCompactList}\small\item\em Interpret as segment number component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classndn_1_1name_1_1Component_a266822576225e866bc4d2893a56697f2}{to\+Segment\+Offset} () const
+\begin{DoxyCompactList}\small\item\em Interpret as segment offset component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+time\+::system\+\_\+clock\+::\+Time\+Point \hyperlink{classndn_1_1name_1_1Component_ac265e3551bf81279c9042f402d898729}{to\+Timestamp} () const
+\begin{DoxyCompactList}\small\item\em Interpret as timestamp component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{classndn_1_1name_1_1Component_a6feb418c51675843250d409291e1e517}{to\+Sequence\+Number} () const
+\begin{DoxyCompactList}\small\item\em Interpret as sequence number component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_a1573a8ddf0e3817db4f11cc4f32541c5}{is\+Generic} () const\hypertarget{classndn_1_1name_1_1Component_a1573a8ddf0e3817db4f11cc4f32541c5}{}\label{classndn_1_1name_1_1Component_a1573a8ddf0e3817db4f11cc4f32541c5}
+
+\begin{DoxyCompactList}\small\item\em Check if the component is Generic\+Component. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_af10acba4423f250c9045fa87353b2b7a}{is\+Implicit\+Sha256\+Digest} () const\hypertarget{classndn_1_1name_1_1Component_af10acba4423f250c9045fa87353b2b7a}{}\label{classndn_1_1name_1_1Component_af10acba4423f250c9045fa87353b2b7a}
+
+\begin{DoxyCompactList}\small\item\em Check if the component is Implicit\+Sha256\+Digest\+Component. \end{DoxyCompactList}\item 
+bool {\bfseries empty} () const\hypertarget{classndn_1_1name_1_1Component_a484b6b6063e6f99db3cd3e1b46691539}{}\label{classndn_1_1name_1_1Component_a484b6b6063e6f99db3cd3e1b46691539}
+
+\item 
+\hyperlink{classndn_1_1name_1_1Component}{Component} {\bfseries get\+Successor} () const\hypertarget{classndn_1_1name_1_1Component_a14ae58a3b633a46d475c602034772f52}{}\label{classndn_1_1name_1_1Component_a14ae58a3b633a46d475c602034772f52}
+
+\item 
+bool \hyperlink{classndn_1_1name_1_1Component_ad44312885a279b5790052f930a491cce}{equals} (const \hyperlink{classndn_1_1name_1_1Component}{Component} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if this is the same component as other. \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1name_1_1Component_aeb8e560119f3270bc8db6780f0cb34db}{compare} (const \hyperlink{classndn_1_1name_1_1Component}{Component} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare this to the other \hyperlink{classndn_1_1name_1_1Component}{Component} using N\+DN canonical ordering. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_af6952bbb7b759494c85f3977218ae802}{operator==} (const \hyperlink{classndn_1_1name_1_1Component}{Component} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if this is the same component as other. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_ac4952f9299f1d62b5ec26612c5dc8699}{operator!=} (const \hyperlink{classndn_1_1name_1_1Component}{Component} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if this is not the same component as other. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_a1c056dbd4993db2a92119d928c8aee22}{operator$<$=} (const \hyperlink{classndn_1_1name_1_1Component}{Component} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if the $\ast$this is less than or equal to the other in N\+DN canonical ordering. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_ae26e0637af302eff661e298ca1fb13c4}{operator$<$} (const \hyperlink{classndn_1_1name_1_1Component}{Component} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if the $\ast$this is less than the other in N\+DN canonical ordering. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_a7febeb332189c09afe05dd0f0b188ebf}{operator$>$=} (const \hyperlink{classndn_1_1name_1_1Component}{Component} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if the $\ast$this is greater or equal than the other in N\+DN canonical ordering. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1name_1_1Component_abac17ecbbd8c064ae8072fb38014797d}{operator$>$} (const \hyperlink{classndn_1_1name_1_1Component}{Component} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if the $\ast$this is greater than the other in N\+DN canonical ordering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a561266857d8cae243d41d822f1ea4941}{from\+Escaped\+String} (const char $\ast$escaped\+String, size\+\_\+t begin\+Offset, size\+\_\+t end\+Offset)
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} by decoding the escaped\+String between begin\+Offset and end\+Offset according to the N\+DN U\+RI Scheme. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a557d6d773627e250c8066af0c91358ea}{from\+Escaped\+String} (const char $\ast$escaped\+String)
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} by decoding the escaped\+String according to the N\+DN U\+RI Scheme. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a00d0e7fa96ea7c6db0663654ad03e6d1}{from\+Escaped\+String} (const std\+::string \&escaped\+String)
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} by decoding the escaped\+String according to the N\+DN U\+RI Scheme. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a43fb414b1a5c2111eca5637aa66f6fd1}{from\+Number} (uint64\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em Create a component encoded as non\+Negative\+Integer. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_ab30d7a4a1a67d4409581f6db9d09a463}{from\+Number\+With\+Marker} (uint8\+\_\+t marker, uint64\+\_\+t number)
+\begin{DoxyCompactList}\small\item\em Create a component encoded as Name\+Component\+With\+Marker. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a6ae06c9e1c0865270a00f8b4e301e4a9}{from\+Version} (uint64\+\_\+t version)
+\begin{DoxyCompactList}\small\item\em Create version component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a0469ffbfb32700a728fa003e9d39a9dc}{from\+Segment} (uint64\+\_\+t segment\+No)
+\begin{DoxyCompactList}\small\item\em Create segment number component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a92e625d6fe3df170c626f766ab1dda2a}{from\+Segment\+Offset} (uint64\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Create segment offset component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_ac2d60ae7f9ba6cf4003c6a880f2e613e}{from\+Timestamp} (const time\+::system\+\_\+clock\+::\+Time\+Point \&time\+Point)
+\begin{DoxyCompactList}\small\item\em Create sequence number component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a6756d5d45ac8389f9ba1c2817c38c51a}{from\+Sequence\+Number} (uint64\+\_\+t seq\+No)
+\begin{DoxyCompactList}\small\item\em Create sequence number component using N\+DN naming conventions. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_a849d3336bd7a4cadd72b112d88673fbd}{from\+Implicit\+Sha256\+Digest} (const Const\+Buffer\+Ptr \&digest)\hypertarget{classndn_1_1name_1_1Component_a849d3336bd7a4cadd72b112d88673fbd}{}\label{classndn_1_1name_1_1Component_a849d3336bd7a4cadd72b112d88673fbd}
+
+\begin{DoxyCompactList}\small\item\em Create Implicit\+Sha256\+Digest\+Component component. \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1name_1_1Component}{Component} \hyperlink{classndn_1_1name_1_1Component_af8d4f25b24930926afafb4cdb10f31bf}{from\+Implicit\+Sha256\+Digest} (const uint8\+\_\+t $\ast$digest, size\+\_\+t digest\+Size)\hypertarget{classndn_1_1name_1_1Component_af8d4f25b24930926afafb4cdb10f31bf}{}\label{classndn_1_1name_1_1Component_af8d4f25b24930926afafb4cdb10f31bf}
+
+\begin{DoxyCompactList}\small\item\em Create Implicit\+Sha256\+Digest\+Component component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1name_1_1Component}{Component} holds a read-\/only name component value. 
+
+Definition at line 47 of file name-\/component.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component()}{Component()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1name_1_1Component_ad63b21d43607576a13a4b4a3117b161c}{}\label{classndn_1_1name_1_1Component_ad63b21d43607576a13a4b4a3117b161c}
+Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} with an empty value 
+
+Definition at line 53 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component(const Block \&wire)}{Component(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1name_1_1Component_ac0f32a97dc1437366660a8060c4791ab}{}\label{classndn_1_1name_1_1Component_ac0f32a97dc1437366660a8060c4791ab}
+
+
+Create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from a wire block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wire} & tlv\+::\+Name\+Component \hyperlink{classndn_1_1Block}{Block} from which to create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error}} & if wire.\+type() is not tlv\+::\+Name\+Component\\
+\hline
+\end{DoxyExceptions}
+Any block can be implicitly converted to \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} 
+
+Definition at line 58 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component(const Const\+Buffer\+Ptr \&buffer)}{Component(const ConstBufferPtr \&buffer)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+\item[{const Const\+Buffer\+Ptr \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1name_1_1Component_a6b774677a2b7b02d357c8a73e1e1287f}{}\label{classndn_1_1name_1_1Component_a6b774677a2b7b02d357c8a73e1e1287f}
+
+
+Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the buffer pointer (buffer pointer will be copied) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to an immutable buffer\\
+\hline
+\end{DoxyParams}
+This constructor will create a new tlv\+::\+Name\+Component \hyperlink{classndn_1_1Block}{Block} with {\ttfamily buffer} as a payload. Note that this method {\bfseries will not} allocate new memory for and copy the payload until to\+Wire() method is called. 
+
+Definition at line 66 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component(const Buffer \&buffer)}{Component(const Buffer \&buffer)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+\item[{const {\bf Buffer} \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1name_1_1Component_a407c1d4c690d05564274c19b0440d5fa}{}\label{classndn_1_1name_1_1Component_a407c1d4c690d05564274c19b0440d5fa}
+
+
+Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the buffer (data from buffer will be copied) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A reference to the buffer\\
+\hline
+\end{DoxyParams}
+This constructor will create a new tlv\+::\+Name\+Component \hyperlink{classndn_1_1Block}{Block} with {\ttfamily buffer} as a payload. Note that this method {\bfseries will} allocate new memory for and copy the payload. 
+
+Definition at line 71 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component(const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Size)}{Component(const uint8\_t *buffer, size\_t bufferSize)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1name_1_1Component_a85183824c2b1e292706435d42fdebad3}{}\label{classndn_1_1name_1_1Component_a85183824c2b1e292706435d42fdebad3}
+
+
+Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the buffer (data from buffer will be copied) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to the first byte of the buffer \\
+\hline
+{\em buffer\+Size} & Size of the buffer\\
+\hline
+\end{DoxyParams}
+This constructor will create a new tlv\+::\+Name\+Component \hyperlink{classndn_1_1Block}{Block} with {\ttfamily buffer} as a payload. Note that this method {\bfseries will} allocate new memory for and copy the payload. 
+
+Definition at line 76 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component(\+Iterator first, Iterator last)}{Component(Iterator first, Iterator last)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Iterator $>$ ndn\+::name\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+\item[{Iterator}]{first, }
+\item[{Iterator}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_a912b748104361288e14629cce044da0b}{}\label{classndn_1_1name_1_1Component_a912b748104361288e14629cce044da0b}
+
+
+Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} frome the range \mbox{[}{\ttfamily first}, {\ttfamily last}) of bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Iterator pointing to the beginning of the buffer \\
+\hline
+{\em last} & Iterator pointing to the ending of the buffer \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Iterator} & iterator type satisfying at least Input\+Iterator concept. Implementation is more optimal when the iterator type satisfies Random\+Access\+Iterator concept. It is required that sizeof(std\+::iterator\+\_\+traits$<$\+Iterator$>$\+::value\+\_\+type) == 1.\\
+\hline
+\end{DoxyTemplParams}
+This constructor will create a new tlv\+::\+Name\+Component \hyperlink{classndn_1_1Block}{Block} with {\ttfamily buffer} as a payload. Note that this method {\bfseries will} allocate new memory for and copy the payload. 
+
+Definition at line 621 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component(const char $\ast$str)}{Component(const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1name_1_1Component_a3c47893a929db1f777292dd0831546c8}{}\label{classndn_1_1name_1_1Component_a3c47893a929db1f777292dd0831546c8}
+
+
+Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the C string (data from string will be copied) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Zero-\/ended string. Note that this string will be interpreted as is (i.\+e., it will not be interpreted as U\+RI)\\
+\hline
+\end{DoxyParams}
+This constructor will create a new tlv\+::\+Name\+Component \hyperlink{classndn_1_1Block}{Block} with {\ttfamily buffer} as a payload. Note that this method {\bfseries will} allocate new memory for and copy the payload. 
+
+Definition at line 81 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!Component@{Component}}
+\index{Component@{Component}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{Component(const std\+::string \&str)}{Component(const std::string \&str)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+Component (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1name_1_1Component_aaae6517ff81fb1e085dc2e441c1d13e7}{}\label{classndn_1_1name_1_1Component_aaae6517ff81fb1e085dc2e441c1d13e7}
+
+
+Create a new \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} from the S\+TL string (data from string will be copied) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Const reference to S\+TL string. Note that this string will be interpreted as is (i.\+e., it will not be interpreted as U\+RI)\\
+\hline
+\end{DoxyParams}
+This constructor will create a new tlv\+::\+Name\+Component \hyperlink{classndn_1_1Block}{Block} with {\ttfamily buffer} as a payload. Note that this method {\bfseries will} allocate new memory for and copy the payload. 
+
+Definition at line 86 of file name-\/component.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!compare@{compare}}
+\index{compare@{compare}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{compare(const Component \&other) const}{compare(const Component \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}int ndn\+::name\+::\+Component\+::compare (
+\begin{DoxyParamCaption}
+\item[{const {\bf Component} \&}]{other}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_aeb8e560119f3270bc8db6780f0cb34db}{}\label{classndn_1_1name_1_1Component_aeb8e560119f3270bc8db6780f0cb34db}
+
+
+Compare this to the other \hyperlink{classndn_1_1name_1_1Component}{Component} using N\+DN canonical ordering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{classndn_1_1name_1_1Component}{Component} to compare with. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em negative} & this comes before other in canonical ordering \\
+\hline
+{\em zero} & this equals other \\
+\hline
+{\em positive} & this comes after other in canonical ordering\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/name.html#canonical-order}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/name.\+html\#canonical-\/order} 
+\end{DoxySeeAlso}
+
+
+Definition at line 387 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(void to\+Escaped\+String(std\+::ostream \&os) const)}{DEPRECATED(void toEscapedString(std::ostream \&os) const)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{void to\+Escaped\+String(std\+::ostream \&os)}]{const}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_ae0a7d2ceecae01153319e5185eb7238d}{}\label{classndn_1_1name_1_1Component_ae0a7d2ceecae01153319e5185eb7238d}
+
+
+Write $\ast$this to the output stream, escaping characters according to the N\+DN U\+RI Scheme. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000026}{Deprecated}]Use to\+Uri(std\+::ostream\&) instead\end{DoxyRefDesc}
+
+
+This also adds \char`\"{}...\char`\"{} to a value with zero or more \char`\"{}.\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to where write the U\+RI escaped version $\ast$this \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 215 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(std\+::string to\+Escaped\+String() const)}{DEPRECATED(std::string toEscapedString() const)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::name\+::\+Component\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{std\+::string to\+Escaped\+String()}]{const}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_a5eacacf66c30c34b34ebf8735d1e08df}{}\label{classndn_1_1name_1_1Component_a5eacacf66c30c34b34ebf8735d1e08df}
+
+
+Convert $\ast$this by escaping characters according to the N\+DN U\+RI Scheme. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000027}{Deprecated}]Use \hyperlink{classndn_1_1name_1_1Component_a822f3053b5ddc45e19cb35fd0ae5fb29}{to\+Uri()} instead\end{DoxyRefDesc}
+
+
+This also adds \char`\"{}...\char`\"{} to a value with zero or more \char`\"{}.\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+The escaped string 
+\end{DoxyReturn}
+
+
+Definition at line 231 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!equals@{equals}}
+\index{equals@{equals}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{equals(const Component \&other) const}{equals(const Component \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::equals (
+\begin{DoxyParamCaption}
+\item[{const {\bf Component} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_ad44312885a279b5790052f930a491cce}{}\label{classndn_1_1name_1_1Component_ad44312885a279b5790052f930a491cce}
+
+
+Check if this is the same component as other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{classndn_1_1name_1_1Component}{Component} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the components are equal, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line 510 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Escaped\+String@{from\+Escaped\+String}}
+\index{from\+Escaped\+String@{from\+Escaped\+String}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Escaped\+String(const char $\ast$escaped\+String, size\+\_\+t begin\+Offset, size\+\_\+t end\+Offset)}{fromEscapedString(const char *escapedString, size\_t beginOffset, size\_t endOffset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component} ndn\+::name\+::\+Component\+::from\+Escaped\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{escaped\+String, }
+\item[{size\+\_\+t}]{begin\+Offset, }
+\item[{size\+\_\+t}]{end\+Offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_a561266857d8cae243d41d822f1ea4941}{}\label{classndn_1_1name_1_1Component_a561266857d8cae243d41d822f1ea4941}
+
+
+Create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} by decoding the escaped\+String between begin\+Offset and end\+Offset according to the N\+DN U\+RI Scheme. 
+
+If the escaped string is \char`\"{}\char`\"{}, \char`\"{}.\char`\"{} or \char`\"{}..\char`\"{} then return an empty \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component}. Note that an empty \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} should not be added to \hyperlink{classndn_1_1Name}{Name} and if attempted, an exception will be thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em escaped\+String} & String containing N\+DN U\+R\+I-\/encoded name component. \mbox{[}escaped\+String+begin\+Offset, begin\+Offset+end\+Offset) must be a valid memory buffer. \\
+\hline
+{\em begin\+Offset} & The offset in escaped\+String of the beginning of the portion to decode. \\
+\hline
+{\em end\+Offset} & The offset in escaped\+String of the end of the portion to decode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 93 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Escaped\+String@{from\+Escaped\+String}}
+\index{from\+Escaped\+String@{from\+Escaped\+String}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Escaped\+String(const char $\ast$escaped\+String)}{fromEscapedString(const char *escapedString)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Component} ndn\+::name\+::\+Component\+::from\+Escaped\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{escaped\+String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_a557d6d773627e250c8066af0c91358ea}{}\label{classndn_1_1name_1_1Component_a557d6d773627e250c8066af0c91358ea}
+
+
+Create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} by decoding the escaped\+String according to the N\+DN U\+RI Scheme. 
+
+This overload is a convenience wrapper for from\+Escaped\+String(char$\ast$,size\+\_\+t,size) 
+
+Definition at line 190 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Escaped\+String@{from\+Escaped\+String}}
+\index{from\+Escaped\+String@{from\+Escaped\+String}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Escaped\+String(const std\+::string \&escaped\+String)}{fromEscapedString(const std::string \&escapedString)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Component} ndn\+::name\+::\+Component\+::from\+Escaped\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{escaped\+String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_a00d0e7fa96ea7c6db0663654ad03e6d1}{}\label{classndn_1_1name_1_1Component_a00d0e7fa96ea7c6db0663654ad03e6d1}
+
+
+Create \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} by decoding the escaped\+String according to the N\+DN U\+RI Scheme. 
+
+This overload is a convenience wrapper for from\+Escaped\+String(char$\ast$,size\+\_\+t,size) 
+
+Definition at line 201 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Number@{from\+Number}}
+\index{from\+Number@{from\+Number}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Number(uint64\+\_\+t number)}{fromNumber(uint64\_t number)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component} ndn\+::name\+::\+Component\+::from\+Number (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_a43fb414b1a5c2111eca5637aa66f6fd1}{}\label{classndn_1_1name_1_1Component_a43fb414b1a5c2111eca5637aa66f6fd1}
+
+
+Create a component encoded as non\+Negative\+Integer. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/tlv.html#non-negative-integer-encoding}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/tlv.\+html\#non-\/negative-\/integer-\/encoding}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & The non-\/negative number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The component value. 
+\end{DoxyReturn}
+
+
+Definition at line 292 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Number\+With\+Marker@{from\+Number\+With\+Marker}}
+\index{from\+Number\+With\+Marker@{from\+Number\+With\+Marker}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Number\+With\+Marker(uint8\+\_\+t marker, uint64\+\_\+t number)}{fromNumberWithMarker(uint8\_t marker, uint64\_t number)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component} ndn\+::name\+::\+Component\+::from\+Number\+With\+Marker (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{marker, }
+\item[{uint64\+\_\+t}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_ab30d7a4a1a67d4409581f6db9d09a463}{}\label{classndn_1_1name_1_1Component_ab30d7a4a1a67d4409581f6db9d09a463}
+
+
+Create a component encoded as Name\+Component\+With\+Marker. 
+
+Name\+Component\+With\+Marker is defined as\+: \begin{DoxyVerb}NameComponentWithMarker ::= NAME-COMPONENT-TYPE TLV-LEGTH
+                              Marker
+                              includedNonNegativeInteger
+Marker ::= BYTE
+includedNonNegativeInteger ::= BYTE{1,2,4,8}
+NDN-TLV := TLV-TYPE TLV-LENGTH TLV-VALUE?
+TLV-TYPE := VAR-NUMBER
+TLV-LENGTH := VAR-NUMBER
+TLV-VALUE := BYTE+
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & 1-\/byte marker octet \\
+\hline
+{\em number} & The non-\/negative number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The component value. 
+\end{DoxyReturn}
+
+
+Definition at line 298 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Segment@{from\+Segment}}
+\index{from\+Segment@{from\+Segment}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Segment(uint64\+\_\+t segment\+No)}{fromSegment(uint64\_t segmentNo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component} ndn\+::name\+::\+Component\+::from\+Segment (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{segment\+No}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_a0469ffbfb32700a728fa003e9d39a9dc}{}\label{classndn_1_1name_1_1Component_a0469ffbfb32700a728fa003e9d39a9dc}
+
+
+Create segment number component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 324 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Segment\+Offset@{from\+Segment\+Offset}}
+\index{from\+Segment\+Offset@{from\+Segment\+Offset}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Segment\+Offset(uint64\+\_\+t offset)}{fromSegmentOffset(uint64\_t offset)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component} ndn\+::name\+::\+Component\+::from\+Segment\+Offset (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_a92e625d6fe3df170c626f766ab1dda2a}{}\label{classndn_1_1name_1_1Component_a92e625d6fe3df170c626f766ab1dda2a}
+
+
+Create segment offset component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 330 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Sequence\+Number@{from\+Sequence\+Number}}
+\index{from\+Sequence\+Number@{from\+Sequence\+Number}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Sequence\+Number(uint64\+\_\+t seq\+No)}{fromSequenceNumber(uint64\_t seqNo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component} ndn\+::name\+::\+Component\+::from\+Sequence\+Number (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{seq\+No}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_a6756d5d45ac8389f9ba1c2817c38c51a}{}\label{classndn_1_1name_1_1Component_a6756d5d45ac8389f9ba1c2817c38c51a}
+
+
+Create sequence number component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 344 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Timestamp@{from\+Timestamp}}
+\index{from\+Timestamp@{from\+Timestamp}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Timestamp(const time\+::system\+\_\+clock\+::\+Time\+Point \&time\+Point)}{fromTimestamp(const time::system\_clock::TimePoint \&timePoint)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component} ndn\+::name\+::\+Component\+::from\+Timestamp (
+\begin{DoxyParamCaption}
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{time\+Point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_ac2d60ae7f9ba6cf4003c6a880f2e613e}{}\label{classndn_1_1name_1_1Component_ac2d60ae7f9ba6cf4003c6a880f2e613e}
+
+
+Create sequence number component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 336 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!from\+Version@{from\+Version}}
+\index{from\+Version@{from\+Version}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{from\+Version(uint64\+\_\+t version)}{fromVersion(uint64\_t version)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component} ndn\+::name\+::\+Component\+::from\+Version (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1name_1_1Component_a6ae06c9e1c0865270a00f8b4e301e4a9}{}\label{classndn_1_1name_1_1Component_a6ae06c9e1c0865270a00f8b4e301e4a9}
+
+
+Create version component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 318 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!is\+Number@{is\+Number}}
+\index{is\+Number@{is\+Number}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{is\+Number() const}{isNumber() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::is\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_ab108a2c2dab47ca90894ae2a1783f9db}{}\label{classndn_1_1name_1_1Component_ab108a2c2dab47ca90894ae2a1783f9db}
+
+
+Check if the component is non\+Negative\+Integer. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/tlv.html#non-negative-integer-encoding}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/tlv.\+html\#non-\/negative-\/integer-\/encoding} 
+\end{DoxySeeAlso}
+
+
+Definition at line 192 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!is\+Number\+With\+Marker@{is\+Number\+With\+Marker}}
+\index{is\+Number\+With\+Marker@{is\+Number\+With\+Marker}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{is\+Number\+With\+Marker(uint8\+\_\+t marker) const}{isNumberWithMarker(uint8\_t marker) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::is\+Number\+With\+Marker (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{marker}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_aacab577718d5d19e500b55fc495975aa}{}\label{classndn_1_1name_1_1Component_aacab577718d5d19e500b55fc495975aa}
+
+
+Check if the component is Name\+Component\+With\+Marker per N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 199 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!is\+Segment@{is\+Segment}}
+\index{is\+Segment@{is\+Segment}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{is\+Segment() const}{isSegment() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::is\+Segment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a32622d5d2cdc51bba6ee1895e85a2ad4}{}\label{classndn_1_1name_1_1Component_a32622d5d2cdc51bba6ee1895e85a2ad4}
+
+
+Check if the component is segment number per N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 213 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!is\+Segment\+Offset@{is\+Segment\+Offset}}
+\index{is\+Segment\+Offset@{is\+Segment\+Offset}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{is\+Segment\+Offset() const}{isSegmentOffset() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::is\+Segment\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_aaa54289dae0f25ff3e26e0cced0061fa}{}\label{classndn_1_1name_1_1Component_aaa54289dae0f25ff3e26e0cced0061fa}
+
+
+Check if the component is segment offset per N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 219 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!is\+Sequence\+Number@{is\+Sequence\+Number}}
+\index{is\+Sequence\+Number@{is\+Sequence\+Number}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{is\+Sequence\+Number() const}{isSequenceNumber() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::is\+Sequence\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a782ced113da5879112fa66557822220b}{}\label{classndn_1_1name_1_1Component_a782ced113da5879112fa66557822220b}
+
+
+Check if the component is sequence number per N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 231 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!is\+Timestamp@{is\+Timestamp}}
+\index{is\+Timestamp@{is\+Timestamp}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{is\+Timestamp() const}{isTimestamp() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::is\+Timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a56201e898870ea292e374c8f29506902}{}\label{classndn_1_1name_1_1Component_a56201e898870ea292e374c8f29506902}
+
+
+Check if the component is timestamp per N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 225 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!is\+Version@{is\+Version}}
+\index{is\+Version@{is\+Version}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{is\+Version() const}{isVersion() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::is\+Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_aa6b97277b8e99d24e5e84856effc8c71}{}\label{classndn_1_1name_1_1Component_aa6b97277b8e99d24e5e84856effc8c71}
+
+
+Check if the component is version per N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf} 
+\end{DoxySeeAlso}
+
+
+Definition at line 207 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{operator"!=(const Component \&other) const}{operator!=(const Component \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Component} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_ac4952f9299f1d62b5ec26612c5dc8699}{}\label{classndn_1_1name_1_1Component_ac4952f9299f1d62b5ec26612c5dc8699}
+
+
+Check if this is not the same component as other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{classndn_1_1name_1_1Component}{Component} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the components are not equal, otherwise false 
+\end{DoxyReturn}
+
+
+Definition at line 553 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{operator$<$(const Component \&other) const}{operator<(const Component \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Component} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_ae26e0637af302eff661e298ca1fb13c4}{}\label{classndn_1_1name_1_1Component_ae26e0637af302eff661e298ca1fb13c4}
+
+
+Check if the $\ast$this is less than the other in N\+DN canonical ordering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{classndn_1_1name_1_1Component}{Component} to compare with\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/name.html#canonical-order}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/name.\+html\#canonical-\/order} 
+\end{DoxySeeAlso}
+
+
+Definition at line 577 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{operator$<$=(const Component \&other) const}{operator<=(const Component \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Component} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_a1c056dbd4993db2a92119d928c8aee22}{}\label{classndn_1_1name_1_1Component_a1c056dbd4993db2a92119d928c8aee22}
+
+
+Check if the $\ast$this is less than or equal to the other in N\+DN canonical ordering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{classndn_1_1name_1_1Component}{Component} to compare with\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/name.html#canonical-order}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/name.\+html\#canonical-\/order} 
+\end{DoxySeeAlso}
+
+
+Definition at line 565 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!operator==@{operator==}}
+\index{operator==@{operator==}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{operator==(const Component \&other) const}{operator==(const Component \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Component} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_af6952bbb7b759494c85f3977218ae802}{}\label{classndn_1_1name_1_1Component_af6952bbb7b759494c85f3977218ae802}
+
+
+Check if this is the same component as other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{classndn_1_1name_1_1Component}{Component} to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the components are equal, otherwise false. 
+\end{DoxyReturn}
+
+
+Definition at line 542 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{operator$>$(const Component \&other) const}{operator>(const Component \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Component} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_abac17ecbbd8c064ae8072fb38014797d}{}\label{classndn_1_1name_1_1Component_abac17ecbbd8c064ae8072fb38014797d}
+
+
+Check if the $\ast$this is greater than the other in N\+DN canonical ordering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{classndn_1_1name_1_1Component}{Component} to compare with\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/name.html#canonical-order}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/name.\+html\#canonical-\/order} 
+\end{DoxySeeAlso}
+
+
+Definition at line 601 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{operator$>$=(const Component \&other) const}{operator>=(const Component \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::name\+::\+Component\+::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Component} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1name_1_1Component_a7febeb332189c09afe05dd0f0b188ebf}{}\label{classndn_1_1name_1_1Component_a7febeb332189c09afe05dd0f0b188ebf}
+
+
+Check if the $\ast$this is greater or equal than the other in N\+DN canonical ordering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{classndn_1_1name_1_1Component}{Component} to compare with\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/name.html#canonical-order}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/name.\+html\#canonical-\/order} 
+\end{DoxySeeAlso}
+
+
+Definition at line 589 of file name-\/component.\+hpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Number@{to\+Number}}
+\index{to\+Number@{to\+Number}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Number() const}{toNumber() const}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t ndn\+::name\+::\+Component\+::to\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_aec06747cc8f5566cccf308fe4916d3b7}{}\label{classndn_1_1name_1_1Component_aec06747cc8f5566cccf308fe4916d3b7}
+
+
+Interpret this name component as non\+Negative\+Integer. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/tlv.html#non-negative-integer-encoding}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/tlv.\+html\#non-\/negative-\/integer-\/encoding}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The integer number. 
+\end{DoxyReturn}
+
+
+Definition at line 239 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Number\+With\+Marker@{to\+Number\+With\+Marker}}
+\index{to\+Number\+With\+Marker@{to\+Number\+With\+Marker}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Number\+With\+Marker(uint8\+\_\+t marker) const}{toNumberWithMarker(uint8\_t marker) const}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t ndn\+::name\+::\+Component\+::to\+Number\+With\+Marker (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{marker}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a494076d15fe1b6e4b4717b8f466e7c8a}{}\label{classndn_1_1name_1_1Component_a494076d15fe1b6e4b4717b8f466e7c8a}
+
+
+Interpret this name component as Name\+Component\+With\+Marker. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & 1-\/byte octet of the marker \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The integer number. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error}} & if name component does not have the specified marker. \hyperlink{classndn_1_1tlv_1_1Error}{tlv\+::\+Error} if format does not follow Name\+Component\+With\+Marker specification. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 248 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Segment@{to\+Segment}}
+\index{to\+Segment@{to\+Segment}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Segment() const}{toSegment() const}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t ndn\+::name\+::\+Component\+::to\+Segment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a0143d8803b4179a5ef4ed086bdc9af94}{}\label{classndn_1_1name_1_1Component_a0143d8803b4179a5ef4ed086bdc9af94}
+
+
+Interpret as segment number component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error}} & if name component does not have the specified marker. \hyperlink{classndn_1_1tlv_1_1Error}{tlv\+::\+Error} if format does not follow Name\+Component\+With\+Marker specification. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 265 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Segment\+Offset@{to\+Segment\+Offset}}
+\index{to\+Segment\+Offset@{to\+Segment\+Offset}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Segment\+Offset() const}{toSegmentOffset() const}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t ndn\+::name\+::\+Component\+::to\+Segment\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a266822576225e866bc4d2893a56697f2}{}\label{classndn_1_1name_1_1Component_a266822576225e866bc4d2893a56697f2}
+
+
+Interpret as segment offset component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error}} & if name component does not have the specified marker. \hyperlink{classndn_1_1tlv_1_1Error}{tlv\+::\+Error} if format does not follow Name\+Component\+With\+Marker specification. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 271 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Sequence\+Number@{to\+Sequence\+Number}}
+\index{to\+Sequence\+Number@{to\+Sequence\+Number}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Sequence\+Number() const}{toSequenceNumber() const}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t ndn\+::name\+::\+Component\+::to\+Sequence\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a6feb418c51675843250d409291e1e517}{}\label{classndn_1_1name_1_1Component_a6feb418c51675843250d409291e1e517}
+
+
+Interpret as sequence number component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error}} & if name component does not have the specified marker. \hyperlink{classndn_1_1tlv_1_1Error}{tlv\+::\+Error} if format does not follow Name\+Component\+With\+Marker specification. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 284 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Timestamp@{to\+Timestamp}}
+\index{to\+Timestamp@{to\+Timestamp}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Timestamp() const}{toTimestamp() const}}]{\setlength{\rightskip}{0pt plus 5cm}time\+::system\+\_\+clock\+::\+Time\+Point ndn\+::name\+::\+Component\+::to\+Timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_ac265e3551bf81279c9042f402d898729}{}\label{classndn_1_1name_1_1Component_ac265e3551bf81279c9042f402d898729}
+
+
+Interpret as timestamp component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error}} & if name component does not have the specified marker. \hyperlink{classndn_1_1tlv_1_1Error}{tlv\+::\+Error} if format does not follow Name\+Component\+With\+Marker specification. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 277 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Uri@{to\+Uri}}
+\index{to\+Uri@{to\+Uri}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Uri(std\+::ostream \&os) const}{toUri(std::ostream \&os) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::name\+::\+Component\+::to\+Uri (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a822f3053b5ddc45e19cb35fd0ae5fb29}{}\label{classndn_1_1name_1_1Component_a822f3053b5ddc45e19cb35fd0ae5fb29}
+
+
+Write $\ast$this to the output stream, escaping characters according to the N\+DN U\+RI Scheme. 
+
+This also adds \char`\"{}...\char`\"{} to a value with zero or more \char`\"{}.\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to where write the U\+RI escaped version $\ast$this \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 132 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Uri@{to\+Uri}}
+\index{to\+Uri@{to\+Uri}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Uri() const}{toUri() const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ndn\+::name\+::\+Component\+::to\+Uri (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_a23eb559728bd6a72edb5732d5546ac6c}{}\label{classndn_1_1name_1_1Component_a23eb559728bd6a72edb5732d5546ac6c}
+
+
+Convert $\ast$this by escaping characters according to the N\+DN U\+RI Scheme. 
+
+This also adds \char`\"{}...\char`\"{} to a value with zero or more \char`\"{}.\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+The escaped string 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file name-\/component.\+cpp.
+
+\index{ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}!to\+Version@{to\+Version}}
+\index{to\+Version@{to\+Version}!ndn\+::name\+::\+Component@{ndn\+::name\+::\+Component}}
+\subsubsection[{\texorpdfstring{to\+Version() const}{toVersion() const}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t ndn\+::name\+::\+Component\+::to\+Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1name_1_1Component_afa91a98934f383905669fde40bd3c8df}{}\label{classndn_1_1name_1_1Component_afa91a98934f383905669fde40bd3c8df}
+
+
+Interpret as version component using N\+DN naming conventions. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/tech-memos/naming-conventions.pdf}{\tt http\+://named-\/data.\+net/doc/tech-\/memos/naming-\/conventions.\+pdf}
+\end{DoxySeeAlso}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1name_1_1Component_1_1Error}{Error}} & if name component does not have the specified marker. \hyperlink{classndn_1_1tlv_1_1Error}{tlv\+::\+Error} if format does not follow Name\+Component\+With\+Marker specification. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 259 of file name-\/component.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/name-\/component.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/name-\/component.\+cpp\end{DoxyCompactItemize}

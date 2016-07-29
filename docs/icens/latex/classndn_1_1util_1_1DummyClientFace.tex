@@ -1,0 +1,148 @@
+\hypertarget{classndn_1_1util_1_1DummyClientFace}{}\section{ndn\+:\+:util\+:\+:Dummy\+Client\+Face Class Reference}
+\label{classndn_1_1util_1_1DummyClientFace}\index{ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}}
+
+
+a client-\/side face for unit testing  
+
+
+
+
+{\ttfamily \#include $<$dummy-\/client-\/face.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:Dummy\+Client\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1util_1_1DummyClientFace}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structndn_1_1util_1_1DummyClientFace_1_1Options}{Options}
+\begin{DoxyCompactList}\small\item\em options for \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face} \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1util_1_1DummyClientFace_1_1Transport}{Transport}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Packet $>$ }\\void \hyperlink{classndn_1_1util_1_1DummyClientFace_a7795d8e3f4cc79f0e0f8b5a67b8af6b1}{receive} (const Packet \&packet)
+\begin{DoxyCompactList}\small\item\em cause the \hyperlink{classndn_1_1Face}{Face} to receive a packet \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classndn_1_1Interest}{Interest} $>$ \hyperlink{classndn_1_1util_1_1DummyClientFace_a0abd6e1b6f8a0fcf525fc521509dafd5}{sent\+Interests}
+\begin{DoxyCompactList}\small\item\em Interests sent out of this \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classndn_1_1util_1_1DummyClientFace_a34a36f52fa4a5c1380747eb0ff660c9f}{sent\+Datas}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1Data}{Data} sent out of this \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{Signal}$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face}, \hyperlink{classndn_1_1Interest}{Interest} $>$ \hyperlink{classndn_1_1util_1_1DummyClientFace_a1c28a5ebe1a4164c8f3f73584ef68d92}{on\+Send\+Interest}
+\begin{DoxyCompactList}\small\item\em emits whenever an \hyperlink{classndn_1_1Interest}{Interest} is sent \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{Signal}$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face}, \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classndn_1_1util_1_1DummyClientFace_a8580730478c59a520b28cb87e6a1acf7}{on\+Send\+Data}
+\begin{DoxyCompactList}\small\item\em emits whenever a \hyperlink{classndn_1_1Data}{Data} packet is sent \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{structndn_1_1util_1_1DummyClientFace_1_1Options}{Options} \hyperlink{classndn_1_1util_1_1DummyClientFace_a4b7a8fe8f1bad715ad1df6ba68458dfb}{D\+E\+F\+A\+U\+L\+T\+\_\+\+O\+P\+T\+I\+O\+NS} \{ true, false \}
+\begin{DoxyCompactList}\small\item\em default options \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face} $>$ {\bfseries make\+Dummy\+Client\+Face} (const \hyperlink{structndn_1_1util_1_1DummyClientFace_1_1Options}{Dummy\+Client\+Face\+::\+Options} \&options)\hypertarget{classndn_1_1util_1_1DummyClientFace_a3ba9722e89de7fb2a0141feac96eeb11}{}\label{classndn_1_1util_1_1DummyClientFace_a3ba9722e89de7fb2a0141feac96eeb11}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face} $>$ {\bfseries make\+Dummy\+Client\+Face} (boost\+::asio\+::io\+\_\+service \&io\+Service, const \hyperlink{structndn_1_1util_1_1DummyClientFace_1_1Options}{Dummy\+Client\+Face\+::\+Options} \&options)\hypertarget{classndn_1_1util_1_1DummyClientFace_a40dd2d15781df64a865359dcce82ce5f}{}\label{classndn_1_1util_1_1DummyClientFace_a40dd2d15781df64a865359dcce82ce5f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a client-\/side face for unit testing 
+
+Definition at line 33 of file dummy-\/client-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}!receive@{receive}}
+\index{receive@{receive}!ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}}
+\subsubsection[{\texorpdfstring{receive(const Packet \&packet)}{receive(const Packet \&packet)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Packet $>$ template void ndn\+::util\+::\+Dummy\+Client\+Face\+::receive$<$ {\bf Data} $>$ (
+\begin{DoxyParamCaption}
+\item[{const Packet \&}]{packet}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1DummyClientFace_a7795d8e3f4cc79f0e0f8b5a67b8af6b1}{}\label{classndn_1_1util_1_1DummyClientFace_a7795d8e3f4cc79f0e0f8b5a67b8af6b1}
+
+
+cause the \hyperlink{classndn_1_1Face}{Face} to receive a packet 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Packet} & either \hyperlink{classndn_1_1Interest}{Interest} or \hyperlink{classndn_1_1Data}{Data} \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 169 of file dummy-\/client-\/face.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}!D\+E\+F\+A\+U\+L\+T\+\_\+\+O\+P\+T\+I\+O\+NS@{D\+E\+F\+A\+U\+L\+T\+\_\+\+O\+P\+T\+I\+O\+NS}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+O\+P\+T\+I\+O\+NS@{D\+E\+F\+A\+U\+L\+T\+\_\+\+O\+P\+T\+I\+O\+NS}!ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+O\+P\+T\+I\+O\+NS}{DEFAULT\_OPTIONS}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Dummy\+Client\+Face\+::\+Options} ndn\+::util\+::\+Dummy\+Client\+Face\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+O\+P\+T\+I\+O\+NS \{ true, false \}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1util_1_1DummyClientFace_a4b7a8fe8f1bad715ad1df6ba68458dfb}{}\label{classndn_1_1util_1_1DummyClientFace_a4b7a8fe8f1bad715ad1df6ba68458dfb}
+
+
+default options 
+
+enable\+Packet\+Logging=true enable\+Registration\+Reply=false 
+
+Definition at line 89 of file dummy-\/client-\/face.\+hpp.
+
+\index{ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}!on\+Send\+Data@{on\+Send\+Data}}
+\index{on\+Send\+Data@{on\+Send\+Data}!ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}}
+\subsubsection[{\texorpdfstring{on\+Send\+Data}{onSendData}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal}$<${\bf Dummy\+Client\+Face}, {\bf Data}$>$ ndn\+::util\+::\+Dummy\+Client\+Face\+::on\+Send\+Data}\hypertarget{classndn_1_1util_1_1DummyClientFace_a8580730478c59a520b28cb87e6a1acf7}{}\label{classndn_1_1util_1_1DummyClientFace_a8580730478c59a520b28cb87e6a1acf7}
+
+
+emits whenever a \hyperlink{classndn_1_1Data}{Data} packet is sent 
+
+After .put, .process\+Events must be called before this signal would be emitted. 
+
+Definition at line 117 of file dummy-\/client-\/face.\+hpp.
+
+\index{ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}!on\+Send\+Interest@{on\+Send\+Interest}}
+\index{on\+Send\+Interest@{on\+Send\+Interest}!ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}}
+\subsubsection[{\texorpdfstring{on\+Send\+Interest}{onSendInterest}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signal}$<${\bf Dummy\+Client\+Face}, {\bf Interest}$>$ ndn\+::util\+::\+Dummy\+Client\+Face\+::on\+Send\+Interest}\hypertarget{classndn_1_1util_1_1DummyClientFace_a1c28a5ebe1a4164c8f3f73584ef68d92}{}\label{classndn_1_1util_1_1DummyClientFace_a1c28a5ebe1a4164c8f3f73584ef68d92}
+
+
+emits whenever an \hyperlink{classndn_1_1Interest}{Interest} is sent 
+
+After .express\+Interest, .process\+Events must be called before this signal would be emitted. 
+
+Definition at line 111 of file dummy-\/client-\/face.\+hpp.
+
+\index{ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}!sent\+Datas@{sent\+Datas}}
+\index{sent\+Datas@{sent\+Datas}!ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}}
+\subsubsection[{\texorpdfstring{sent\+Datas}{sentDatas}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Data}$>$ ndn\+::util\+::\+Dummy\+Client\+Face\+::sent\+Datas}\hypertarget{classndn_1_1util_1_1DummyClientFace_a34a36f52fa4a5c1380747eb0ff660c9f}{}\label{classndn_1_1util_1_1DummyClientFace_a34a36f52fa4a5c1380747eb0ff660c9f}
+
+
+\hyperlink{classndn_1_1Data}{Data} sent out of this \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face}. 
+
+Sent \hyperlink{classndn_1_1Data}{Data} are appended to this container if options.\+enable\+Packet\+Logger is true. User of this class is responsible for cleaning up the container, if necessary. After .put, .process\+Events must be called before the \hyperlink{classndn_1_1Data}{Data} would show up here. 
+
+Definition at line 105 of file dummy-\/client-\/face.\+hpp.
+
+\index{ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}!sent\+Interests@{sent\+Interests}}
+\index{sent\+Interests@{sent\+Interests}!ndn\+::util\+::\+Dummy\+Client\+Face@{ndn\+::util\+::\+Dummy\+Client\+Face}}
+\subsubsection[{\texorpdfstring{sent\+Interests}{sentInterests}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Interest}$>$ ndn\+::util\+::\+Dummy\+Client\+Face\+::sent\+Interests}\hypertarget{classndn_1_1util_1_1DummyClientFace_a0abd6e1b6f8a0fcf525fc521509dafd5}{}\label{classndn_1_1util_1_1DummyClientFace_a0abd6e1b6f8a0fcf525fc521509dafd5}
+
+
+Interests sent out of this \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face}. 
+
+Sent Interests are appended to this container if options.\+enable\+Packet\+Logger is true. User of this class is responsible for cleaning up the container, if necessary. After .express\+Interest, .process\+Events must be called before the \hyperlink{classndn_1_1Interest}{Interest} would show up here. 
+
+Definition at line 97 of file dummy-\/client-\/face.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/dummy-\/client-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/dummy-\/client-\/face.\+cpp\end{DoxyCompactItemize}

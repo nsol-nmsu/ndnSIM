@@ -1,0 +1,76 @@
+\hypertarget{classnfd_1_1pit_1_1FaceRecord}{}\section{nfd\+:\+:pit\+:\+:Face\+Record Class Reference}
+\label{classnfd_1_1pit_1_1FaceRecord}\index{nfd\+::pit\+::\+Face\+Record@{nfd\+::pit\+::\+Face\+Record}}
+
+
+contains information about an Interest on an incoming or outgoing face  
+
+
+
+
+{\ttfamily \#include $<$pit-\/face-\/record.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:pit\+:\+:Face\+Record\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classnfd_1_1pit_1_1FaceRecord}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Face\+Record} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1pit_1_1FaceRecord_abac4cf51d76228ad6dbc23d8c56e76b8}{}\label{classnfd_1_1pit_1_1FaceRecord_abac4cf51d76228ad6dbc23d8c56e76b8}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ {\bfseries get\+Face} () const\hypertarget{classnfd_1_1pit_1_1FaceRecord_a6ff4c5d1e7f49cfefe83464fcaa6fe44}{}\label{classnfd_1_1pit_1_1FaceRecord_a6ff4c5d1e7f49cfefe83464fcaa6fe44}
+
+\item 
+uint32\+\_\+t {\bfseries get\+Last\+Nonce} () const\hypertarget{classnfd_1_1pit_1_1FaceRecord_a99e10831e9df270cdc102d0c7c30c718}{}\label{classnfd_1_1pit_1_1FaceRecord_a99e10831e9df270cdc102d0c7c30c718}
+
+\item 
+time\+::steady\+\_\+clock\+::\+Time\+Point {\bfseries get\+Last\+Renewed} () const\hypertarget{classnfd_1_1pit_1_1FaceRecord_a07ec06ecc875fbe29d34324e25ea9cac}{}\label{classnfd_1_1pit_1_1FaceRecord_a07ec06ecc875fbe29d34324e25ea9cac}
+
+\item 
+time\+::steady\+\_\+clock\+::\+Time\+Point \hyperlink{classnfd_1_1pit_1_1FaceRecord_a89e17bac83d5040ee4d952d01f5fd718}{get\+Expiry} () const
+\begin{DoxyCompactList}\small\item\em gives the time point this record expires \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1pit_1_1FaceRecord_a3c6d92b8e27aa86c269c8dc64401dee7}{update} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classnfd_1_1pit_1_1FaceRecord_a3c6d92b8e27aa86c269c8dc64401dee7}{}\label{classnfd_1_1pit_1_1FaceRecord_a3c6d92b8e27aa86c269c8dc64401dee7}
+
+\begin{DoxyCompactList}\small\item\em updates last\+Nonce, last\+Renewed, expiry fields \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains information about an Interest on an incoming or outgoing face 
+
+\begin{DoxyNote}{Note}
+This is an implementation detail to extract common functionality of \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} and \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} 
+\end{DoxyNote}
+
+
+Definition at line 40 of file pit-\/face-\/record.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::pit\+::\+Face\+Record@{nfd\+::pit\+::\+Face\+Record}!get\+Expiry@{get\+Expiry}}
+\index{get\+Expiry@{get\+Expiry}!nfd\+::pit\+::\+Face\+Record@{nfd\+::pit\+::\+Face\+Record}}
+\subsubsection[{\texorpdfstring{get\+Expiry() const}{getExpiry() const}}]{\setlength{\rightskip}{0pt plus 5cm}time\+::steady\+\_\+clock\+::\+Time\+Point nfd\+::pit\+::\+Face\+Record\+::get\+Expiry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1pit_1_1FaceRecord_a89e17bac83d5040ee4d952d01f5fd718}{}\label{classnfd_1_1pit_1_1FaceRecord_a89e17bac83d5040ee4d952d01f5fd718}
+
+
+gives the time point this record expires 
+
+\begin{DoxyReturn}{Returns}
+get\+Last\+Renewed() + Interest\+Lifetime 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file pit-\/face-\/record.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/pit-\/face-\/record.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/pit-\/face-\/record.\+cpp\end{DoxyCompactItemize}

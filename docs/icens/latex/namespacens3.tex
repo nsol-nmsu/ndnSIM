@@ -1,0 +1,429 @@
+\hypertarget{namespacens3}{}\section{ns3 Namespace Reference}
+\label{namespacens3}\index{ns3@{ns3}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classns3_1_1AnnotatedTopologyReader}{Annotated\+Topology\+Reader}
+\begin{DoxyCompactList}\small\item\em This class reads annotated topology and apply settings to the corresponding nodes and links. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1Batches}{Batches}
+\begin{DoxyCompactList}\small\item\em Class representing sets of (time, number) tuples with support of reading writing to streams. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1CustomApp}{Custom\+App}
+\begin{DoxyCompactList}\small\item\em A simple custom application. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1Hijacker}{Hijacker}
+\item 
+class \hyperlink{classns3_1_1L2RateTracer}{L2\+Rate\+Tracer}
+\begin{DoxyCompactList}\small\item\em Tracer to collect link-\/layer rate information about links. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1L2Tracer}{L2\+Tracer}
+\begin{DoxyCompactList}\small\item\em Link-\/layer tracer. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1OneInterestRequester}{One\+Interest\+Requester}
+\begin{DoxyCompactList}\small\item\em A dumb requester application. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1PcapWriter}{Pcap\+Writer}
+\item 
+class \hyperlink{classns3_1_1RealAppStarter}{Real\+App\+Starter}
+\item 
+class \hyperlink{classns3_1_1RocketfuelMapReader}{Rocketfuel\+Map\+Reader}
+\begin{DoxyCompactList}\small\item\em Topology file reader and topology estimator (extension of Rocketfuel-\/format type). \end{DoxyCompactList}\item 
+struct \hyperlink{structns3_1_1RocketfuelParams}{Rocketfuel\+Params}
+\item 
+class \hyperlink{classns3_1_1RocketfuelWeightsReader}{Rocketfuel\+Weights\+Reader}
+\begin{DoxyCompactList}\small\item\em Topology file reader (extension of Rocketfuel-\/format type). \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1Tester}{Tester}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespacens3_a11d2b7457dda0c471b957d8216132f4e}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+{\bfseries N\+S\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+E\+N\+S\+U\+R\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+ED} (\hyperlink{classns3_1_1CustomApp}{Custom\+App})\hypertarget{namespacens3_a1d0470bad8c7659ab713f00ebbc3689a}{}\label{namespacens3_a1d0470bad8c7659ab713f00ebbc3689a}
+
+\item 
+{\bfseries N\+S\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+E\+N\+S\+U\+R\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+ED} (\hyperlink{classns3_1_1Hijacker}{Hijacker})\hypertarget{namespacens3_ad199b4ea5291c484b7ff7258a0ebb6bb}{}\label{namespacens3_ad199b4ea5291c484b7ff7258a0ebb6bb}
+
+\item 
+{\bfseries N\+S\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+E\+N\+S\+U\+R\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+ED} (\hyperlink{classns3_1_1RealAppStarter}{Real\+App\+Starter})\hypertarget{namespacens3_a4d988cdfd16a2755094d987b1867dabe}{}\label{namespacens3_a4d988cdfd16a2755094d987b1867dabe}
+
+\item 
+bool \hyperlink{namespacens3_a476c8d1f7445caf7372d7fd2366a48a1}{Validate\+Prefix} (int, std\+::string, std\+::string)
+\item 
+bool {\bfseries Prefix\+Added} (std\+::string, std\+::string)\hypertarget{namespacens3_ab8702fd5e4ae318696f3b6fafbd62100}{}\label{namespacens3_ab8702fd5e4ae318696f3b6fafbd62100}
+
+\item 
+void {\bfseries Sent\+Interest\+Callback\+Phy} (uint32\+\_\+t, shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{ndn\+::\+Interest} $>$)\hypertarget{namespacens3_a20e6957af9e34afef03f7c4e3d1a66ef}{}\label{namespacens3_a20e6957af9e34afef03f7c4e3d1a66ef}
+
+\item 
+void {\bfseries Received\+Interest\+Callback\+Com} (uint32\+\_\+t, shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{ndn\+::\+Interest} $>$)\hypertarget{namespacens3_ae4ce5cb5813ac7bd8f13cf1eee385b1b}{}\label{namespacens3_ae4ce5cb5813ac7bd8f13cf1eee385b1b}
+
+\item 
+void {\bfseries Sent\+Data\+Callback\+Com} (uint32\+\_\+t, shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{ndn\+::\+Data} $>$)\hypertarget{namespacens3_af3dedcbad1672d86d6a9bb701d12f726}{}\label{namespacens3_af3dedcbad1672d86d6a9bb701d12f726}
+
+\item 
+void {\bfseries Received\+Data\+Callback\+Phy} (uint32\+\_\+t, shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{ndn\+::\+Data} $>$)\hypertarget{namespacens3_add66ff205f726a699e2e3d41f5436e75}{}\label{namespacens3_add66ff205f726a699e2e3d41f5436e75}
+
+\item 
+void {\bfseries Sent\+Interest\+Callback\+Agg} (uint32\+\_\+t, shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{ndn\+::\+Interest} $>$)\hypertarget{namespacens3_ab3606bac05583adb9012c2c94399c1b7}{}\label{namespacens3_ab3606bac05583adb9012c2c94399c1b7}
+
+\item 
+void {\bfseries Received\+Interest\+Callback\+Agg} (uint32\+\_\+t, shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{ndn\+::\+Interest} $>$)\hypertarget{namespacens3_ad79b3e89de009a475d0ab9f5cfad2ed9}{}\label{namespacens3_ad79b3e89de009a475d0ab9f5cfad2ed9}
+
+\item 
+{\bfseries N\+S\+\_\+\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+D\+E\+F\+I\+NE} (\char`\"{}ndn.\+Wifi\+Example\char`\"{})\hypertarget{namespacens3_a30242db4b05f90dc3a20fa09f0af5658}{}\label{namespacens3_a30242db4b05f90dc3a20fa09f0af5658}
+
+\item 
+{\bfseries N\+S\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+E\+N\+S\+U\+R\+E\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+ED} (\hyperlink{classns3_1_1OneInterestRequester}{One\+Interest\+Requester})\hypertarget{namespacens3_adc0de4aaacc509b4a73f8e0b93b1b8d7}{}\label{namespacens3_adc0de4aaacc509b4a73f8e0b93b1b8d7}
+
+\item 
+{\bfseries A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+H\+E\+L\+P\+E\+R\+\_\+\+C\+PP} (\hyperlink{classns3_1_1Batches}{Batches})\hypertarget{namespacens3_a2d7fedbd3a0894fa001804748d199ebd}{}\label{namespacens3_a2d7fedbd3a0894fa001804748d199ebd}
+
+\item 
+std\+::ostream \& \hyperlink{namespacens3_a3c923cf458e4aa84254888f2fd1552a4}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classns3_1_1Batches}{Batches} \&batch)
+\begin{DoxyCompactList}\small\item\em Output contents of the \hyperlink{classns3_1_1Batches}{Batches} to the std\+::ostream. \end{DoxyCompactList}\item 
+std\+::istream \& \hyperlink{namespacens3_a84f24e359f644ec41ebe1951428d79eb}{operator$>$$>$} (std\+::istream \&is, \hyperlink{classns3_1_1Batches}{Batches} \&batch)\hypertarget{namespacens3_a84f24e359f644ec41ebe1951428d79eb}{}\label{namespacens3_a84f24e359f644ec41ebe1951428d79eb}
+
+\begin{DoxyCompactList}\small\item\em Read components from input and add them to components. Will read input stream till eof Substrings separated by slashes will become separate components. \end{DoxyCompactList}\item 
+{\bfseries A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+H\+E\+L\+P\+E\+R\+\_\+\+H\+E\+A\+D\+ER} (\hyperlink{classns3_1_1Batches}{Batches})\hypertarget{namespacens3_a0f4a213a000e51344c8a2a2150f71d35}{}\label{namespacens3_a0f4a213a000e51344c8a2a2150f71d35}
+
+\item 
+{\bfseries N\+S\+\_\+\+L\+O\+G\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+D\+E\+F\+I\+NE} (\char`\"{}Annotated\+Topology\+Reader\char`\"{})\hypertarget{namespacens3_adefe2287381fb28c49c86edfe978590f}{}\label{namespacens3_adefe2287381fb28c49c86edfe978590f}
+
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classns3_1_1L2Tracer}{L2\+Tracer} \&tracer)\hypertarget{namespacens3_a6b06290ef49ec3c98a4fdd0059c6371b}{}\label{namespacens3_a6b06290ef49ec3c98a4fdd0059c6371b}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ {\bfseries com\+\_\+nodes}\hypertarget{namespacens3_a0ac7235e1fa11da0e39314a7aa7d4d8f}{}\label{namespacens3_a0ac7235e1fa11da0e39314a7aa7d4d8f}
+
+\item 
+vector$<$ int $>$ {\bfseries agg\+\_\+nodes}\hypertarget{namespacens3_aec5009cc827393c47563606ea9e3b767}{}\label{namespacens3_aec5009cc827393c47563606ea9e3b767}
+
+\item 
+vector$<$ int $>$ {\bfseries phy\+\_\+nodes}\hypertarget{namespacens3_a91e4dd0ab7435c4c78215a3d6a02124b}{}\label{namespacens3_a91e4dd0ab7435c4c78215a3d6a02124b}
+
+\item 
+vector$<$ string $>$ {\bfseries com\+\_\+prefixes}\hypertarget{namespacens3_ad2cb85ec0057d369036382fc4175e073}{}\label{namespacens3_ad2cb85ec0057d369036382fc4175e073}
+
+\item 
+vector$<$ string $>$ {\bfseries agg\+\_\+prefixes}\hypertarget{namespacens3_a3ada5fca75f5c55f2af773e18900fc5e}{}\label{namespacens3_a3ada5fca75f5c55f2af773e18900fc5e}
+
+\item 
+std\+::ofstream {\bfseries tfile}\hypertarget{namespacens3_a5e4b80891b7972ac81c6b6c17a755492}{}\label{namespacens3_a5e4b80891b7972ac81c6b6c17a755492}
+
+\item 
+const double {\bfseries alpha} = 0.\+8\hypertarget{namespacens3_a010367f66586d549bcee7861a914d6b2}{}\label{namespacens3_a010367f66586d549bcee7861a914d6b2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright (c) 2011-\/2015 Regents of the University of California.
+
+This file is part of ndn\+S\+IM. See A\+U\+T\+H\+O\+RS for complete list of ndn\+S\+IM authors and contributors.
+
+ndn\+S\+IM is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+ndn\+S\+IM is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with ndn\+S\+IM, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}.
+
+Copyright (c) 2011-\/2015 Tsinghua University, P.\+R.\+China.
+
+This file is part of ndn\+S\+IM. See A\+U\+T\+H\+O\+RS for complete list of ndn\+S\+IM authors and contributors.
+
+ndn\+S\+IM is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+ndn\+S\+IM is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with ndn\+S\+IM, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}.
+
+\begin{DoxyAuthor}{Author}
+Xiaoke Jiang \href{mailto:shock.jiang@gmail.com}{\tt shock.\+jiang@gmail.\+com}
+\end{DoxyAuthor}
+Copyright (c) 2011-\/2015 Regents of the University of California.
+
+This file is part of ndn\+S\+IM. See A\+U\+T\+H\+O\+RS for complete list of ndn\+S\+IM authors and contributors.
+
+ndn\+S\+IM is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+ndn\+S\+IM is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with ndn\+S\+IM, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. This scenario demonstrates how to dump raw N\+DN packets into tcpdump-\/format
+
+Run scenario\+: \begin{DoxyVerb}./waf --run ndn-simple-with-pcap
+\end{DoxyVerb}
+
+
+After simulation finishes, it produces {\ttfamily ndn-\/simple-\/trace.\+pcap} that can be read using tcpdump or ndndump tools\+:
+
+ndndump -\/r ndn-\/simple-\/trace.\+pcap not ip tcpdump -\/r ndn-\/simple-\/trace.\+pcap
+
+Copyright (c) 2013-\/2015 Regents of the University of California.
+
+This file is part of ndn-\/cxx library (N\+DN C++ library with e\+Xperimental e\+Xtensions).
+
+ndn-\/cxx library is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+ndn-\/cxx library is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU Lesser General Public License for more details.
+
+You should have received copies of the G\+NU General Public License and G\+NU Lesser General Public License along with ndn-\/cxx, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}.
+
+See A\+U\+T\+H\+O\+R\+S.\+md for complete list of ndn-\/cxx authors and contributors.
+
+Copyright (c) 2014-\/2015, Regents of the University of California, Arizona Board of Regents, Colorado State University, University Pierre \& Marie Curie, Sorbonne University, Washington University in St. Louis, Beijing Institute of Technology, The University of Memphis.
+
+This file is part of N\+FD (Named Data Networking Forwarding Daemon). See A\+U\+T\+H\+O\+R\+S.\+md for complete list of N\+FD authors and contributors.
+
+N\+FD is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+N\+FD is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with N\+FD, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+\subsection{Function Documentation}
+\index{ns3@{ns3}!main@{main}}
+\index{main@{main}!ns3@{ns3}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int ns3\+::main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacens3_a11d2b7457dda0c471b957d8216132f4e}{}\label{namespacens3_a11d2b7457dda0c471b957d8216132f4e}
+This scenario simulates network graph generated by Topo\+Mux (N\+M\+SU N\+S\+OL)\+: \begin{DoxyVerb}NS_LOG=ndn.Subscriber::ndn.SpontaneousProducer ./waf --run ndn-icens-simulation\end{DoxyVerb}
+
+
+This scenario simulates a very simple network topology\+:
+
+\begin{DoxyVerb} +----------+     1Mbps      +--------+     1Mbps      +----------+
+ | consumer | <------------> | router | <------------> | producer |
+ +----------+         10ms   +--------+          10ms  +----------+
+\end{DoxyVerb}
+
+
+Consumer requests data from producer with frequency 10 interests per second (interests contain constantly increasing sequence number).
+
+For every received interest, producer replies with a data packet, containing 1024 bytes of virtual payload.
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-simple\end{DoxyVerb}
+
+
+/-\/-\/-\/---\textbackslash{} 0 0 /-\/-\/-\/---\textbackslash{} $\vert$ c1 $\vert$$<$-\/-\/---+ +-\/-\/---$>$$\vert$ p1 $\vert$ -\/-\/-\/---/ \textbackslash{} / -\/-\/-\/---/ \textbackslash{} /-\/-\/---\textbackslash{} / /-\/-\/-\/---\textbackslash{} 0 \textbackslash{} +==$>$$\vert$ r12 $\vert$$<$==+ / 0 /-\/-\/-\/---\textbackslash{} $\vert$ c2 $\vert$$<$--+ \textbackslash{} / -\/-\/-\/--/ \textbackslash{} / +--$>$$\vert$ p2 $\vert$ -\/-\/-\/---/ \textbackslash{} \textbackslash{} $\vert$ $\vert$ / / -\/-\/-\/---/ \textbackslash{} $\vert$ $\vert$ 1\+Mbps links $\vert$ $\vert$ / \textbackslash{} 1 v0 v5 1v 2v 3 / +-\/$>$/-\/-\/-\/---\textbackslash{} /-\/-\/-\/---$<$-\/+ 2$\vert$ r1 $\vert$$<$===============$>$$\vert$ r2 $\vert$4 +-\/$>$-\/-\/-\/---/4 0-\/-\/-\/---/$<$-\/+ / 3$^\wedge$ $^\wedge$5 \textbackslash{} / $\vert$ $\vert$ \textbackslash{} /-\/-\/-\/---\textbackslash{} 0 / / \textbackslash{} \textbackslash{} 0 /-\/-\/-\/---\textbackslash{} $\vert$ c3 $\vert$$<$--+ / \textbackslash{} +--$>$$\vert$ p3 $\vert$ -\/-\/-\/---/ / \textbackslash{} -\/-\/-\/---/ / \char`\"{}\+All consumer-\/router and\char`\"{} \textbackslash{} /-\/-\/-\/---\textbackslash{} 0 / \char`\"{}router-\/producer links are\char`\"{} \textbackslash{} 0 /-\/-\/-\/---\textbackslash{} $\vert$ c4 $\vert$$<$-\/-\/---+ \char`\"{}10\+Mbps\char`\"{} +-\/---$>$$\vert$ p4 $\vert$ -\/-\/-\/---/ -\/-\/-\/---/
+
+\char`\"{}\+Numbers near nodes denote face I\+Ds. Face I\+D is assigned based on the order of link\char`\"{} \char`\"{}definitions in the topology file\char`\"{}
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-congestion-alt-topo-plugin\end{DoxyVerb}
+
+
+This scenario simulates a grid topology (using topology reader module)
+
+/-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} $\vert$ Src1 $\vert$$<$--+ +--$>$$\vert$ Dst1 $\vert$ -\/-\/-\/---/ \textbackslash{} / -\/-\/-\/---/ \textbackslash{} / +--$>$/-\/-\/-\/---\textbackslash{} \char`\"{}bottleneck\char`\"{} /-\/-\/-\/---$<$-\/+ $\vert$ Rtr1 $\vert$$<$===============$>$$\vert$ Rtr2 $\vert$ +--$>$-\/-\/-\/---/ -\/-\/-\/---/$<$-\/+ / \textbackslash{} /-\/-\/-\/---\textbackslash{} / \textbackslash{} /-\/-\/-\/---\textbackslash{} $\vert$ Src2 $\vert$$<$--+ +--$>$$\vert$ Dst2 $\vert$ -\/-\/-\/---/ -\/-\/-\/---/
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-congestion-topo-plugin\end{DoxyVerb}
+
+
+This scenario simulates a very simple network topology\+: \begin{DoxyVerb}                       CSMA bus (1Mbps, 10ms)
+      +--------------------------+--------------------------+
+      |                          |                          |
+
+ +----------+                +--------+                +----------+
+ | consumer |                | router |                | producer |
+ +----------+                +--------+                +----------+
+\end{DoxyVerb}
+
+
+Consumer requests data from producer with frequency 10 interests per second (interests contain constantly increasing sequence number).
+
+For every received interest, producer replies with a data packet, containing 1024 bytes of virtual payload.
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-csma\end{DoxyVerb}
+
+
+This scenario simulates a one-\/node two-\/custom-\/app scenario\+:
+
++-\/-\/-\/---+ $<$-\/-\/---$>$ (\hyperlink{classns3_1_1CustomApp}{Custom\+App}) $\vert$ Node $\vert$ +-\/-\/-\/---+ $<$-\/-\/---$>$ (\hyperlink{classns3_1_1Hijacker}{Hijacker})
+
+N\+S\+\_\+\+L\+OG=\hyperlink{classns3_1_1CustomApp}{Custom\+App} ./waf --run=ndn-\/custom-\/apps
+
+This scenario simulates a grid topology (using topology reader module)
+
+(consumer) -- ( ) -\/-\/--- ( ) $\vert$ $\vert$ $\vert$ ( ) -\/-\/-\/--- ( ) -\/-\/--- ( ) $\vert$ $\vert$ $\vert$ ( ) -\/-\/-\/--- ( ) -- (producer)
+
+All links are 1\+Mbps with propagation 10ms delay.
+
+F\+IB is populated using Ndn\+Global\+Routing\+Helper.
+
+Consumer requests data from producer with frequency 10 interests per second (interests contain constantly increasing sequence number).
+
+For every received interest, producer replies with a data packet, containing 1024 bytes of virtual payload.
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-grid-topo-plugin\end{DoxyVerb}
+
+
+This scenario simulates a grid topology (using topology reader module)
+
+(consumer) -- ( ) -\/-\/--- ( ) $\vert$ $\vert$ $\vert$ ( ) -\/-\/-\/--- ( ) -\/-\/--- ( ) $\vert$ $\vert$ $\vert$ ( ) -\/-\/-\/--- ( ) -- (producer)
+
+All links are 1\+Mbps with propagation 10ms delay.
+
+F\+IB is populated using \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper}{ndn\+::\+Global\+Routing\+Helper}.
+
+Consumer requests data from producer with frequency 10 interests per second (interests contain constantly increasing sequence number).
+
+For every received interest, producer replies with a data packet, containing 1024 bytes of virtual payload.
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-grid-topo-plugin\end{DoxyVerb}
+
+
+This scenario simulates a grid topology (using Point\+To\+Point\+Grid module)
+
+(consumer) -- ( ) -\/-\/--- ( ) $\vert$ $\vert$ $\vert$ ( ) -\/-\/-\/--- ( ) -\/-\/--- ( ) $\vert$ $\vert$ $\vert$ ( ) -\/-\/-\/--- ( ) -- (producer)
+
+All links are 1\+Mbps with propagation 10ms delay.
+
+F\+IB is populated using Ndn\+Global\+Routing\+Helper.
+
+Consumer requests data from producer with frequency 100 interests per second (interests contain constantly increasing sequence number).
+
+For every received interest, producer replies with a data packet, containing 1024 bytes of virtual payload.
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-grid\end{DoxyVerb}
+
+
+This scenario simulates a grid topology (using topology reader module)
+
+/-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} $\vert$ Pro1 $\vert$$<$--+ +--$>$$\vert$ Pro2 $\vert$ -\/-\/-\/---/ \textbackslash{} / -\/-\/-\/---/ \textbackslash{} / +--$>$/-\/-\/-\/---\textbackslash{} /-\/-\/-\/---$<$-\/+ $\vert$ Rtr1 $\vert$$<$===============$>$$\vert$ Rtr2 $\vert$ +--$>$-\/-\/-\/---/ -\/-\/-\/---/$<$-\/+ / \textbackslash{} /-\/-\/-\/---\textbackslash{} / \textbackslash{} /-\/-\/-\/---\textbackslash{} $\vert$ Con1 $\vert$$<$--+ +--$>$$\vert$ Con2 $\vert$ -\/-\/-\/---/ -\/-\/-\/---/
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-congestion-topo-plugin\end{DoxyVerb}
+
+
+This scenario simulates a very simple network topology using mpi\+:
+
+\begin{DoxyVerb} +----------+     1 Mbps     +----------+
+ | consumer | <------------> | producer |
+ +----------+      10ms      +----------+
+\end{DoxyVerb}
+
+
+Consumer requests data from producer with frequency 10 interests per second (interests contain constantly increasing sequence number).
+
+For every received interest, producer replies with a data packet, containing 1024 bytes of virtual payload.
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer mpirun -np 2 ./waf --run=ndn-simple-mpi
+\end{DoxyVerb}
+
+
+The default parallel synchronization strategy implemented in the Distributed\+Simulator\+Impl class is based on a globally synchronized algorithm using an M\+PI collective operation to synchronize simulation time across all L\+Ps. A second synchronization strategy based on local communication and null messages is implemented in the Null\+Message\+Simulator\+Impl class, For the null message strategy the global all to all gather is not required; L\+Ps only need to communication with L\+Ps that have shared point-\/to-\/point links. The algorithm to use is controlled by which the ns-\/3 global value Simulator\+Implementation\+Type.
+
+The strategy can be selected according to the value of nullmsg. If nullmsg is true, then the local communication strategy is selected. If nullmsg is false, then the globally synchronized strategy is selected. This parameter can be passed either as a command line argument or by directly modifying the simulation scenario.
+
+This scenario simulates a very simple network topology\+:
+
+\begin{DoxyVerb} +----------+     1Mbps      +--------+     1Mbps      +----------+
+ | consumer | <------------> | router | <------------> | producer |
+ +----------+         10ms   +--------+          10ms  +----------+
+\end{DoxyVerb}
+
+
+This scenario demonstrates how to use content store that responds to Freshness parameter set in data packets. In other words, if the producer set Freshness\+Period field to 2 seconds, the corresponding data packet will not be considered fresh for more than 2 seconds (can be cached for a shorter time, if entry is evicted earlier) \begin{DoxyVerb}NS_LOG=DumbRequester ./waf --run ndn-simple-with-content-freshness\end{DoxyVerb}
+
+
+This scenario simulates a very simple network topology\+:
+
+\begin{DoxyVerb}  +----------+     1Mbps      +--------+     1Mbps      +----------+
+  | consumer | <------------> | router | <------------> | producer |
+  +----------+         10ms   +--------+          10ms  +----------+
+\end{DoxyVerb}
+
+
+This scenario demonstrates how to use content store that responds to Freshness parameter set in Datas. That is, if producer set Freshness field to 2 seconds, the corresponding content object will not be cached more than 2 seconds (can be cached for a shorter time, if entry is evicted earlier) \begin{DoxyVerb}NS_LOG=ndn.Consumer ./waf --run ndn-simple-with-different-sizes-content-store\end{DoxyVerb}
+
+
+This scenario simulates a very simple network topology\+:
+
+\begin{DoxyVerb} +----------+     1Mbps      +--------+     1Mbps      +----------+
+ | consumer | <------------> | router | <------------> | producer |
+ +----------+         10ms   +--------+          10ms  +----------+
+\end{DoxyVerb}
+
+
+Consumer requests data from producer with frequency 10 interests per second (interests contain constantly increasing sequence number).
+
+For every received interest, producer replies with a data packet, containing 1024 bytes of virtual payload.
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.Producer ./waf --run=ndn-simple-with-link-failure\end{DoxyVerb}
+
+
+This scenario simulates a tree topology (using topology reader module)
+
+/-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} $\vert$leaf-\/1$\vert$ $\vert$leaf-\/2$\vert$ $\vert$leaf-\/3$\vert$ $\vert$leaf-\/4$\vert$ -\/-\/-\/---/ -\/-\/-\/---/ -\/-\/-\/---/ -\/-\/-\/---/ $^\wedge$ $^\wedge$ $^\wedge$ $^\wedge$ $\vert$ $\vert$ $\vert$ $\vert$ \textbackslash{} / \textbackslash{} / \textbackslash{} / \textbackslash{} / 10\+Mbps / 1ms \textbackslash{} / \textbackslash{} / $\vert$ $\vert$ $\vert$ $\vert$ v v v v /-\/-\/-\/-\/---\textbackslash{} /-\/-\/-\/-\/---\textbackslash{} $\vert$ rtr-\/1 $\vert$ $\vert$ rtr-\/2 $\vert$ -\/-\/-\/-\/---/ -\/-\/-\/-\/---/ $^\wedge$ $^\wedge$ $\vert$ $\vert$ \textbackslash{} / 10 Mpbs / 1ms +-\/-\/-\/-\/-\/---+ +-\/-\/-\/-\/-\/---+ $\vert$ $\vert$ v v /-\/-\/-\/-\/-\/---\textbackslash{} $\vert$ root $\vert$ -\/-\/-\/-\/-\/---/
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}./waf --run=ndn-tree-app-delay-tracer\end{DoxyVerb}
+
+
+This scenario simulates a tree topology (using topology reader module)
+
+/-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} $\vert$leaf-\/1$\vert$ $\vert$leaf-\/2$\vert$ $\vert$leaf-\/3$\vert$ $\vert$leaf-\/4$\vert$ -\/-\/-\/---/ -\/-\/-\/---/ -\/-\/-\/---/ -\/-\/-\/---/ $^\wedge$ $^\wedge$ $^\wedge$ $^\wedge$ $\vert$ $\vert$ $\vert$ $\vert$ \textbackslash{} / \textbackslash{} / \textbackslash{} / \textbackslash{} / 10\+Mbps / 1ms \textbackslash{} / \textbackslash{} / $\vert$ $\vert$ $\vert$ $\vert$ v v v v /-\/-\/-\/-\/---\textbackslash{} /-\/-\/-\/-\/---\textbackslash{} $\vert$ rtr-\/1 $\vert$ $\vert$ rtr-\/2 $\vert$ -\/-\/-\/-\/---/ -\/-\/-\/-\/---/ $^\wedge$ $^\wedge$ $\vert$ $\vert$ \textbackslash{} / 10 Mpbs / 1ms +-\/-\/-\/-\/-\/---+ +-\/-\/-\/-\/-\/---+ $\vert$ $\vert$ v v /-\/-\/-\/-\/-\/---\textbackslash{} $\vert$ root $\vert$ -\/-\/-\/-\/-\/---/
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}./waf --run=ndn-tree-cs-tracers\end{DoxyVerb}
+
+
+This scenario simulates a tree topology (using topology reader module)
+
+/-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} /-\/-\/-\/---\textbackslash{} $\vert$leaf-\/1$\vert$ $\vert$leaf-\/2$\vert$ $\vert$leaf-\/3$\vert$ $\vert$leaf-\/4$\vert$ -\/-\/-\/---/ -\/-\/-\/---/ -\/-\/-\/---/ -\/-\/-\/---/ $^\wedge$ $^\wedge$ $^\wedge$ $^\wedge$ $\vert$ $\vert$ $\vert$ $\vert$ \textbackslash{} / \textbackslash{} / \textbackslash{} / \textbackslash{} / 10\+Mbps / 1ms \textbackslash{} / \textbackslash{} / $\vert$ $\vert$ $\vert$ $\vert$ v v v v /-\/-\/-\/-\/---\textbackslash{} /-\/-\/-\/-\/---\textbackslash{} $\vert$ rtr-\/1 $\vert$ $\vert$ rtr-\/2 $\vert$ -\/-\/-\/-\/---/ -\/-\/-\/-\/---/ $^\wedge$ $^\wedge$ $\vert$ $\vert$ \textbackslash{} / 10 Mpbs / 1ms +-\/-\/-\/-\/-\/---+ +-\/-\/-\/-\/-\/---+ $\vert$ $\vert$ v v /-\/-\/-\/-\/-\/---\textbackslash{} $\vert$ root $\vert$ -\/-\/-\/-\/-\/---/
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}./waf --run=ndn-tree-tracers\end{DoxyVerb}
+
+
+This scenario simulates a grid topology (using Point\+To\+Point\+Grid module)
+
+(consumer) -- ( ) -\/-\/--- ( ) $\vert$ $\vert$ $\vert$ ( ) -\/-\/-\/--- ( ) -\/-\/--- ( ) $\vert$ $\vert$ $\vert$ ( ) -\/-\/-\/--- ( ) -- (producer)(2,2)
+
+All links are 1\+Mbps with propagation 10ms delay.
+
+F\+IB is populated using Ndn\+Global\+Routing\+Helper.
+
+Consumer requests data from producer with frequency 100 interests per second (interests contain constantly increasing sequence number).
+
+For every received interest, producer replies with a data packet, containing 1024 bytes of virtual payload.
+
+To run scenario and see what is happening, use the following command\+: \begin{DoxyVerb}NS_LOG=ndn.Consumer:ndn.ConsumerZipfMandelbrot:ndn.Producer ./waf --run=ndn-zipf-mandelbrot\end{DoxyVerb}
+ 
+
+Definition at line 19 of file icens-\/delay.\+cpp.
+
+\index{ns3@{ns3}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ns3@{ns3}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Batches \&batch)}{operator<<(std::ostream \&os, const Batches \&batch)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream \& ns3\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Batches} \&}]{batch}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacens3_a3c923cf458e4aa84254888f2fd1552a4}{}\label{namespacens3_a3c923cf458e4aa84254888f2fd1552a4}
+
+
+Output contents of the \hyperlink{classns3_1_1Batches}{Batches} to the std\+::ostream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to std\+::ostream \\
+\hline
+{\em batch} & constant reference to Batch object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file batches.\+cpp.
+
+\index{ns3@{ns3}!Validate\+Prefix@{Validate\+Prefix}}
+\index{Validate\+Prefix@{Validate\+Prefix}!ns3@{ns3}}
+\subsubsection[{\texorpdfstring{Validate\+Prefix(int, std\+::string, std\+::string)}{ValidatePrefix(int, std::string, std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\+::\+Validate\+Prefix (
+\begin{DoxyParamCaption}
+\item[{int}]{nodeid, }
+\item[{std\+::string}]{prefix, }
+\item[{std\+::string}]{nodetype}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacens3_a476c8d1f7445caf7372d7fd2366a48a1}{}\label{namespacens3_a476c8d1f7445caf7372d7fd2366a48a1}
+This scenario simulates network graph generated by Topo\+Mux (N\+M\+SU N\+S\+OL)\+: \begin{DoxyVerb}NS_LOG=ndn.Subscriber::ndn.Aggregator::ndn.SpontaneousProducer ./waf --run ndn-icens-simulation\end{DoxyVerb}
+ 
+
+Definition at line 268 of file ndn-\/icens-\/simulation.\+cpp.
+

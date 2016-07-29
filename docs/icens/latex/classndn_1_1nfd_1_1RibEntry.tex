@@ -1,0 +1,85 @@
+\hypertarget{classndn_1_1nfd_1_1RibEntry}{}\section{ndn\+:\+:nfd\+:\+:Rib\+Entry Class Reference}
+\label{classndn_1_1nfd_1_1RibEntry}\index{ndn\+::nfd\+::\+Rib\+Entry@{ndn\+::nfd\+::\+Rib\+Entry}}
+
+
+\hyperlink{classndn_1_1Data}{Data} abstraction for R\+IB entry.  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/rib-\/entry.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1RibEntry_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list$<$ \hyperlink{classndn_1_1nfd_1_1Route}{Route} $>$ {\bfseries Route\+List}\hypertarget{classndn_1_1nfd_1_1RibEntry_a42acc595283fe902a3ba85e934db2f2b}{}\label{classndn_1_1nfd_1_1RibEntry_a42acc595283fe902a3ba85e934db2f2b}
+
+\item 
+typedef Route\+List\+::const\+\_\+iterator {\bfseries iterator}\hypertarget{classndn_1_1nfd_1_1RibEntry_a4c99dbeca0ccec5254a010edebbf48a3}{}\label{classndn_1_1nfd_1_1RibEntry_a4c99dbeca0ccec5254a010edebbf48a3}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rib\+Entry} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1nfd_1_1RibEntry_aa2748c8fa3f59b588706ceca478202e4}{}\label{classndn_1_1nfd_1_1RibEntry_aa2748c8fa3f59b588706ceca478202e4}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Name} () const\hypertarget{classndn_1_1nfd_1_1RibEntry_a7f3588cac48f8e312d7a4e9e2a24ccff}{}\label{classndn_1_1nfd_1_1RibEntry_a7f3588cac48f8e312d7a4e9e2a24ccff}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1RibEntry}{Rib\+Entry} \& {\bfseries set\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)\hypertarget{classndn_1_1nfd_1_1RibEntry_a2e1a23b5a39b14789417a4355e34032f}{}\label{classndn_1_1nfd_1_1RibEntry_a2e1a23b5a39b14789417a4355e34032f}
+
+\item 
+const std\+::list$<$ \hyperlink{classndn_1_1nfd_1_1Route}{Route} $>$ \& {\bfseries get\+Routes} () const\hypertarget{classndn_1_1nfd_1_1RibEntry_a92169b7111df587434ca9e2a25c6df90}{}\label{classndn_1_1nfd_1_1RibEntry_a92169b7111df587434ca9e2a25c6df90}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1RibEntry}{Rib\+Entry} \& {\bfseries add\+Route} (const \hyperlink{classndn_1_1nfd_1_1Route}{Route} \&route)\hypertarget{classndn_1_1nfd_1_1RibEntry_acbb04576bffe2188a139a172f1095b11}{}\label{classndn_1_1nfd_1_1RibEntry_acbb04576bffe2188a139a172f1095b11}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1RibEntry}{Rib\+Entry} \& {\bfseries clear\+Routes} ()\hypertarget{classndn_1_1nfd_1_1RibEntry_accb954087e8a09797c0d2290f5eb0cab}{}\label{classndn_1_1nfd_1_1RibEntry_accb954087e8a09797c0d2290f5eb0cab}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t {\bfseries wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&block) const\hypertarget{classndn_1_1nfd_1_1RibEntry_ad6829fecae9fb96b571c689116bc4b78}{}\label{classndn_1_1nfd_1_1RibEntry_ad6829fecae9fb96b571c689116bc4b78}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& {\bfseries wire\+Encode} () const\hypertarget{classndn_1_1nfd_1_1RibEntry_ae9a113819d406caa92be70ee3f6cfd0d}{}\label{classndn_1_1nfd_1_1RibEntry_ae9a113819d406caa92be70ee3f6cfd0d}
+
+\item 
+void {\bfseries wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1nfd_1_1RibEntry_a7a621fa190ab527bd4699d81e52bb100}{}\label{classndn_1_1nfd_1_1RibEntry_a7a621fa190ab527bd4699d81e52bb100}
+
+\item 
+iterator {\bfseries begin} () const\hypertarget{classndn_1_1nfd_1_1RibEntry_ada9a2987ccbebd98ec88cfecad89064c}{}\label{classndn_1_1nfd_1_1RibEntry_ada9a2987ccbebd98ec88cfecad89064c}
+
+\item 
+iterator {\bfseries end} () const\hypertarget{classndn_1_1nfd_1_1RibEntry_a6ee2f83aad4acc89c601218f4d851661}{}\label{classndn_1_1nfd_1_1RibEntry_a6ee2f83aad4acc89c601218f4d851661}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1Data}{Data} abstraction for R\+IB entry. 
+
+A R\+IB entry contains one or more routes for the name prefix \begin{DoxyVerb}RibEntry := RIB-ENTRY-TYPE TLV-LENGTH
+           Name
+           Route+
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/RibMgmt}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Rib\+Mgmt} 
+\end{DoxySeeAlso}
+
+
+Definition at line 192 of file nfd-\/rib-\/entry.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/rib-\/entry.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/rib-\/entry.\+cpp\end{DoxyCompactItemize}

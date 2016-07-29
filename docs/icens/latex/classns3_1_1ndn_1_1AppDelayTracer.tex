@@ -1,0 +1,238 @@
+\hypertarget{classns3_1_1ndn_1_1AppDelayTracer}{}\section{ns3\+:\+:ndn\+:\+:App\+Delay\+Tracer Class Reference}
+\label{classns3_1_1ndn_1_1AppDelayTracer}\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+
+
+Tracer to obtain application-\/level delays.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/app-\/delay-\/tracer.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:App\+Delay\+Tracer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1ndn_1_1AppDelayTracer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1AppDelayTracer_a15388726d82d36088e93bdb37c30cf4e}{App\+Delay\+Tracer} (shared\+\_\+ptr$<$ std\+::ostream $>$ os, Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Trace constructor that attaches to all applications on the node using node\textquotesingle{}s pointer. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1AppDelayTracer_a4d45930f4de3ae93b0c4513607f67f09}{App\+Delay\+Tracer} (shared\+\_\+ptr$<$ std\+::ostream $>$ os, const std\+::string \&node)
+\begin{DoxyCompactList}\small\item\em Trace constructor that attaches to all applications on the node using node\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1AppDelayTracer_acd8526f70557892d115daa86249119b9}{$\sim$\+App\+Delay\+Tracer} ()\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_acd8526f70557892d115daa86249119b9}{}\label{classns3_1_1ndn_1_1AppDelayTracer_acd8526f70557892d115daa86249119b9}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1AppDelayTracer_ad588c108a7f965851805c95a7f0b8fff}{Print\+Header} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Print head of the trace (e.\+g., for post-\/processing) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classns3_1_1ndn_1_1AppDelayTracer_a1fe7d0148795fd68668d4667288b8996}{Install\+All} (const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on all simulation nodes. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1AppDelayTracer_aac9f5405fc413adfe56703acca357df9}{Install} (const Node\+Container \&nodes, const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on the selected simulation nodes. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1AppDelayTracer_a1f37e4055e9675f9fb3f2e899986c8de}{Install} (Ptr$<$ Node $>$ node, const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on a specific simulation node. \end{DoxyCompactList}\item 
+static Ptr$<$ \hyperlink{classns3_1_1ndn_1_1AppDelayTracer}{App\+Delay\+Tracer} $>$ \hyperlink{classns3_1_1ndn_1_1AppDelayTracer_aaeb0c41324a9c911696e5585c2f2e9a0}{Install} (Ptr$<$ Node $>$ node, shared\+\_\+ptr$<$ std\+::ostream $>$ output\+Stream)
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on a specific simulation node. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1AppDelayTracer_a3abbc4bf0296057842b59fa1351883c3}{Destroy} ()
+\begin{DoxyCompactList}\small\item\em Explicit request to remove all statically created tracers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tracer to obtain application-\/level delays. 
+
+Definition at line 47 of file ndn-\/app-\/delay-\/tracer.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}!App\+Delay\+Tracer@{App\+Delay\+Tracer}}
+\index{App\+Delay\+Tracer@{App\+Delay\+Tracer}!ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+\subsubsection[{\texorpdfstring{App\+Delay\+Tracer(shared\+\_\+ptr$<$ std\+::ostream $>$ os, Ptr$<$ Node $>$ node)}{AppDelayTracer(shared\_ptr< std::ostream > os, Ptr< Node > node)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+App\+Delay\+Tracer\+::\+App\+Delay\+Tracer (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{os, }
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_a15388726d82d36088e93bdb37c30cf4e}{}\label{classns3_1_1ndn_1_1AppDelayTracer_a15388726d82d36088e93bdb37c30cf4e}
+
+
+Trace constructor that attaches to all applications on the node using node\textquotesingle{}s pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to the output stream \\
+\hline
+{\em node} & pointer to the node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 174 of file ndn-\/app-\/delay-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}!App\+Delay\+Tracer@{App\+Delay\+Tracer}}
+\index{App\+Delay\+Tracer@{App\+Delay\+Tracer}!ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+\subsubsection[{\texorpdfstring{App\+Delay\+Tracer(shared\+\_\+ptr$<$ std\+::ostream $>$ os, const std\+::string \&node)}{AppDelayTracer(shared\_ptr< std::ostream > os, const std::string \&node)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+App\+Delay\+Tracer\+::\+App\+Delay\+Tracer (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{os, }
+\item[{const std\+::string \&}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_a4d45930f4de3ae93b0c4513607f67f09}{}\label{classns3_1_1ndn_1_1AppDelayTracer_a4d45930f4de3ae93b0c4513607f67f09}
+
+
+Trace constructor that attaches to all applications on the node using node\textquotesingle{}s name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to the output stream \\
+\hline
+{\em node\+Name} & name of the node registered using Names\+::\+Add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 188 of file ndn-\/app-\/delay-\/tracer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+\subsubsection[{\texorpdfstring{Destroy()}{Destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+Delay\+Tracer\+::\+Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_a3abbc4bf0296057842b59fa1351883c3}{}\label{classns3_1_1ndn_1_1AppDelayTracer_a3abbc4bf0296057842b59fa1351883c3}
+
+
+Explicit request to remove all statically created tracers. 
+
+This method can be helpful if simulation scenario contains several independent run, or if it is desired to do a postprocessing of the resulting data 
+
+Definition at line 46 of file ndn-\/app-\/delay-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(const Node\+Container \&nodes, const std\+::string \&file)}{Install(const NodeContainer \&nodes, const std::string \&file)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+Delay\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{const Node\+Container \&}]{nodes, }
+\item[{const std\+::string \&}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_aac9f5405fc413adfe56703acca357df9}{}\label{classns3_1_1ndn_1_1AppDelayTracer_aac9f5405fc413adfe56703acca357df9}
+
+
+Helper method to install tracers on the selected simulation nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file ndn-\/app-\/delay-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node, const std\+::string \&file)}{Install(Ptr< Node > node, const std::string \&file)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+Delay\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const std\+::string \&}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_a1f37e4055e9675f9fb3f2e899986c8de}{}\label{classns3_1_1ndn_1_1AppDelayTracer_a1f37e4055e9675f9fb3f2e899986c8de}
+
+
+Helper method to install tracers on a specific simulation node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 126 of file ndn-\/app-\/delay-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node, shared\+\_\+ptr$<$ std\+::ostream $>$ output\+Stream)}{Install(Ptr< Node > node, shared\_ptr< std::ostream > outputStream)}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ {\bf App\+Delay\+Tracer} $>$ ns3\+::ndn\+::\+App\+Delay\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{output\+Stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_aaeb0c41324a9c911696e5585c2f2e9a0}{}\label{classns3_1_1ndn_1_1AppDelayTracer_aaeb0c41324a9c911696e5585c2f2e9a0}
+
+
+Helper method to install tracers on a specific simulation node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em output\+Stream} & Smart pointer to a stream \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a tuple of reference to output stream and list of tracers. !!! Attention !!! This tuple needs to be preserved for the lifetime of simulation, otherwise S\+E\+G\+F\+A\+U\+L\+Ts are inevitable 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file ndn-\/app-\/delay-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}!Install\+All@{Install\+All}}
+\index{Install\+All@{Install\+All}!ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+\subsubsection[{\texorpdfstring{Install\+All(const std\+::string \&file)}{InstallAll(const std::string \&file)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+Delay\+Tracer\+::\+Install\+All (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_a1fe7d0148795fd68668d4667288b8996}{}\label{classns3_1_1ndn_1_1AppDelayTracer_a1fe7d0148795fd68668d4667288b8996}
+
+
+Helper method to install tracers on all simulation nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file ndn-\/app-\/delay-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}!Print\+Header@{Print\+Header}}
+\index{Print\+Header@{Print\+Header}!ns3\+::ndn\+::\+App\+Delay\+Tracer@{ns3\+::ndn\+::\+App\+Delay\+Tracer}}
+\subsubsection[{\texorpdfstring{Print\+Header(std\+::ostream \&os) const}{PrintHeader(std::ostream \&os) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+Delay\+Tracer\+::\+Print\+Header (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1AppDelayTracer_ad588c108a7f965851805c95a7f0b8fff}{}\label{classns3_1_1ndn_1_1AppDelayTracer_ad588c108a7f965851805c95a7f0b8fff}
+
+
+Print head of the trace (e.\+g., for post-\/processing) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to output stream \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 210 of file ndn-\/app-\/delay-\/tracer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/ndn-\/app-\/delay-\/tracer.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/ndn-\/app-\/delay-\/tracer.\+cpp\end{DoxyCompactItemize}

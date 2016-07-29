@@ -1,0 +1,74 @@
+\hypertarget{classndn_1_1ContainerWithOnEmptySignal}{}\section{ndn\+:\+:Container\+With\+On\+Empty\+Signal$<$ T $>$ Class Template Reference}
+\label{classndn_1_1ContainerWithOnEmptySignal}\index{ndn\+::\+Container\+With\+On\+Empty\+Signal$<$ T $>$@{ndn\+::\+Container\+With\+On\+Empty\+Signal$<$ T $>$}}
+
+
+A simple container that will fire up on\+Empty signal when there are no entries left.  
+
+
+
+
+{\ttfamily \#include $<$container-\/with-\/on-\/empty-\/signal.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list$<$ T $>$ {\bfseries Base}\hypertarget{classndn_1_1ContainerWithOnEmptySignal_a805d6da8f4253f36839bdb596f27b04b}{}\label{classndn_1_1ContainerWithOnEmptySignal_a805d6da8f4253f36839bdb596f27b04b}
+
+\item 
+typedef Base\+::value\+\_\+type {\bfseries value\+\_\+type}\hypertarget{classndn_1_1ContainerWithOnEmptySignal_a9e2b7cdcf4aa499be0eab5cd22bfb9bf}{}\label{classndn_1_1ContainerWithOnEmptySignal_a9e2b7cdcf4aa499be0eab5cd22bfb9bf}
+
+\item 
+typedef Base\+::iterator {\bfseries iterator}\hypertarget{classndn_1_1ContainerWithOnEmptySignal_aa3156bf879a96921a224c37bbae2cfb9}{}\label{classndn_1_1ContainerWithOnEmptySignal_aa3156bf879a96921a224c37bbae2cfb9}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+iterator {\bfseries begin} ()\hypertarget{classndn_1_1ContainerWithOnEmptySignal_a14163b6d4975e2fa5be61b651350cdc1}{}\label{classndn_1_1ContainerWithOnEmptySignal_a14163b6d4975e2fa5be61b651350cdc1}
+
+\item 
+iterator {\bfseries end} ()\hypertarget{classndn_1_1ContainerWithOnEmptySignal_a8057bdf3ce5f290abfd5b5fc26acd2e9}{}\label{classndn_1_1ContainerWithOnEmptySignal_a8057bdf3ce5f290abfd5b5fc26acd2e9}
+
+\item 
+size\+\_\+t {\bfseries size} ()\hypertarget{classndn_1_1ContainerWithOnEmptySignal_a868b36f1e23d670e5e6814da6883b949}{}\label{classndn_1_1ContainerWithOnEmptySignal_a868b36f1e23d670e5e6814da6883b949}
+
+\item 
+bool {\bfseries empty} ()\hypertarget{classndn_1_1ContainerWithOnEmptySignal_a94218489ec9624b9ba829544c1c3faa6}{}\label{classndn_1_1ContainerWithOnEmptySignal_a94218489ec9624b9ba829544c1c3faa6}
+
+\item 
+iterator {\bfseries erase} (iterator item)\hypertarget{classndn_1_1ContainerWithOnEmptySignal_af5bd772542596ce4449ab2d183be1f4d}{}\label{classndn_1_1ContainerWithOnEmptySignal_af5bd772542596ce4449ab2d183be1f4d}
+
+\item 
+void {\bfseries clear} ()\hypertarget{classndn_1_1ContainerWithOnEmptySignal_a522eeefbcf0891f2c656b2e92cf2a3d6}{}\label{classndn_1_1ContainerWithOnEmptySignal_a522eeefbcf0891f2c656b2e92cf2a3d6}
+
+\item 
+std\+::pair$<$ iterator, bool $>$ {\bfseries insert} (const value\+\_\+type \&value)\hypertarget{classndn_1_1ContainerWithOnEmptySignal_ac5112f2ee5bb90e9d36aa8593bc66f9c}{}\label{classndn_1_1ContainerWithOnEmptySignal_ac5112f2ee5bb90e9d36aa8593bc66f9c}
+
+\item 
+{\footnotesize template$<$class Predicate $>$ }\\void {\bfseries remove\+\_\+if} (Predicate p)\hypertarget{classndn_1_1ContainerWithOnEmptySignal_af8121f38bb489b0a719d71122070c5ef}{}\label{classndn_1_1ContainerWithOnEmptySignal_af8121f38bb489b0a719d71122070c5ef}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Base {\bfseries m\+\_\+container}\hypertarget{classndn_1_1ContainerWithOnEmptySignal_ab8996b023afc4cc728920341bb3b2eed}{}\label{classndn_1_1ContainerWithOnEmptySignal_ab8996b023afc4cc728920341bb3b2eed}
+
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{util\+::\+Signal}$<$ \hyperlink{classndn_1_1ContainerWithOnEmptySignal}{Container\+With\+On\+Empty\+Signal}$<$ T $>$ $>$ \hyperlink{classndn_1_1ContainerWithOnEmptySignal_a7e8e4033c2474063270f9cc3fc9f00b8}{on\+Empty}\hypertarget{classndn_1_1ContainerWithOnEmptySignal_a7e8e4033c2474063270f9cc3fc9f00b8}{}\label{classndn_1_1ContainerWithOnEmptySignal_a7e8e4033c2474063270f9cc3fc9f00b8}
+
+\begin{DoxyCompactList}\small\item\em Signal to be fired when container becomes empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\\*
+class ndn\+::\+Container\+With\+On\+Empty\+Signal$<$ T $>$}
+
+A simple container that will fire up on\+Empty signal when there are no entries left. 
+
+Definition at line 34 of file container-\/with-\/on-\/empty-\/signal.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/detail/container-\/with-\/on-\/empty-\/signal.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,107 @@
+\hypertarget{classndn_1_1TagHost}{}\section{ndn\+:\+:Tag\+Host Class Reference}
+\label{classndn_1_1TagHost}\index{ndn\+::\+Tag\+Host@{ndn\+::\+Tag\+Host}}
+
+
+Base class to store tag information (e.\+g., inside \hyperlink{classndn_1_1Interest}{Interest} and \hyperlink{classndn_1_1Data}{Data} packets)  
+
+
+
+
+{\ttfamily \#include $<$tag-\/host.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Tag\+Host\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.862069cm]{classndn_1_1TagHost}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\shared\+\_\+ptr$<$ T $>$ \hyperlink{classndn_1_1TagHost_a6b0430435db7f26dc5be6262afed10bf}{get\+Tag} () const
+\begin{DoxyCompactList}\small\item\em get a tag item \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classndn_1_1TagHost_aa6f608ab7714c5ca6f099f942eedfa3a}{set\+Tag} (shared\+\_\+ptr$<$ T $>$ tag) const
+\begin{DoxyCompactList}\small\item\em set a tag item \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classndn_1_1TagHost_a02a42daab9735d666a073819ef605cfc}{remove\+Tag} () const
+\begin{DoxyCompactList}\small\item\em remove tag item \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class to store tag information (e.\+g., inside \hyperlink{classndn_1_1Interest}{Interest} and \hyperlink{classndn_1_1Data}{Data} packets) 
+
+Definition at line 34 of file tag-\/host.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Tag\+Host@{ndn\+::\+Tag\+Host}!get\+Tag@{get\+Tag}}
+\index{get\+Tag@{get\+Tag}!ndn\+::\+Tag\+Host@{ndn\+::\+Tag\+Host}}
+\subsubsection[{\texorpdfstring{get\+Tag() const}{getTag() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ shared\+\_\+ptr$<$ T $>$ ndn\+::\+Tag\+Host\+::get\+Tag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1TagHost_a6b0430435db7f26dc5be6262afed10bf}{}\label{classndn_1_1TagHost_a6b0430435db7f26dc5be6262afed10bf}
+
+
+get a tag item 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the tag, which must be a subclass of \hyperlink{classndn_1_1Tag}{ndn\+::\+Tag} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em nullptr} & if no \hyperlink{classndn_1_1Tag}{Tag} of type T is stored \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 67 of file tag-\/host.\+hpp.
+
+\index{ndn\+::\+Tag\+Host@{ndn\+::\+Tag\+Host}!remove\+Tag@{remove\+Tag}}
+\index{remove\+Tag@{remove\+Tag}!ndn\+::\+Tag\+Host@{ndn\+::\+Tag\+Host}}
+\subsubsection[{\texorpdfstring{remove\+Tag() const}{removeTag() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void ndn\+::\+Tag\+Host\+::remove\+Tag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1TagHost_a02a42daab9735d666a073819ef605cfc}{}\label{classndn_1_1TagHost_a02a42daab9735d666a073819ef605cfc}
+
+
+remove tag item 
+
+\begin{DoxyNote}{Note}
+\hyperlink{classndn_1_1Tag}{Tag} can be removed even on a const tag host instance 
+\end{DoxyNote}
+
+
+Definition at line 94 of file tag-\/host.\+hpp.
+
+\index{ndn\+::\+Tag\+Host@{ndn\+::\+Tag\+Host}!set\+Tag@{set\+Tag}}
+\index{set\+Tag@{set\+Tag}!ndn\+::\+Tag\+Host@{ndn\+::\+Tag\+Host}}
+\subsubsection[{\texorpdfstring{set\+Tag(shared\+\_\+ptr$<$ T $>$ tag) const}{setTag(shared\_ptr< T > tag) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void ndn\+::\+Tag\+Host\+::set\+Tag (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ T $>$}]{tag}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1TagHost_aa6f608ab7714c5ca6f099f942eedfa3a}{}\label{classndn_1_1TagHost_aa6f608ab7714c5ca6f099f942eedfa3a}
+
+
+set a tag item 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & type of the tag, which must be a subclass of \hyperlink{classndn_1_1Tag}{ndn\+::\+Tag} \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+\hyperlink{classndn_1_1Tag}{Tag} can be set even on a const tag host instance 
+\end{DoxyNote}
+
+
+Definition at line 80 of file tag-\/host.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/tag-\/host.\+hpp\end{DoxyCompactItemize}

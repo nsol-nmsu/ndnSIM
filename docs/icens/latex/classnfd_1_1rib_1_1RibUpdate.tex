@@ -1,0 +1,78 @@
+\hypertarget{classnfd_1_1rib_1_1RibUpdate}{}\section{nfd\+:\+:rib\+:\+:Rib\+Update Class Reference}
+\label{classnfd_1_1rib_1_1RibUpdate}\index{nfd\+::rib\+::\+Rib\+Update@{nfd\+::rib\+::\+Rib\+Update}}
+
+
+represents a route that will be added to or removed from a namespace  
+
+
+
+
+{\ttfamily \#include $<$rib-\/update.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classnfd_1_1rib_1_1RibUpdate_aab70f45176a2e455a92b555dba35b91e}{Action} \{ {\bfseries R\+E\+G\+I\+S\+T\+ER} = 0, 
+{\bfseries U\+N\+R\+E\+G\+I\+S\+T\+ER} = 1, 
+\hyperlink{classnfd_1_1rib_1_1RibUpdate_aab70f45176a2e455a92b555dba35b91eae2772cc285a7b66f79fdb6cfa4fd4282}{R\+E\+M\+O\+V\+E\+\_\+\+F\+A\+CE} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1rib_1_1RibUpdate}{Rib\+Update} \& {\bfseries set\+Action} (\hyperlink{classnfd_1_1rib_1_1RibUpdate_aab70f45176a2e455a92b555dba35b91e}{Action} \hyperlink{structaction}{action})\hypertarget{classnfd_1_1rib_1_1RibUpdate_a48bd795085828e8e761bf7f9ba64bec8}{}\label{classnfd_1_1rib_1_1RibUpdate_a48bd795085828e8e761bf7f9ba64bec8}
+
+\item 
+\hyperlink{classnfd_1_1rib_1_1RibUpdate_aab70f45176a2e455a92b555dba35b91e}{Action} {\bfseries get\+Action} () const\hypertarget{classnfd_1_1rib_1_1RibUpdate_abe0e76dfc19d008168a58493f3c33853}{}\label{classnfd_1_1rib_1_1RibUpdate_abe0e76dfc19d008168a58493f3c33853}
+
+\item 
+\hyperlink{classnfd_1_1rib_1_1RibUpdate}{Rib\+Update} \& {\bfseries set\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name)\hypertarget{classnfd_1_1rib_1_1RibUpdate_ac426f8ce218e27aee54c62cac69b5b13}{}\label{classnfd_1_1rib_1_1RibUpdate_ac426f8ce218e27aee54c62cac69b5b13}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Name} () const\hypertarget{classnfd_1_1rib_1_1RibUpdate_a08d01365c043e59582c0762cb9426278}{}\label{classnfd_1_1rib_1_1RibUpdate_a08d01365c043e59582c0762cb9426278}
+
+\item 
+\hyperlink{classnfd_1_1rib_1_1RibUpdate}{Rib\+Update} \& {\bfseries set\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)\hypertarget{classnfd_1_1rib_1_1RibUpdate_ae5199f4beaded80e25c0056ecb6c8fc6}{}\label{classnfd_1_1rib_1_1RibUpdate_ae5199f4beaded80e25c0056ecb6c8fc6}
+
+\item 
+const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \& {\bfseries get\+Route} () const\hypertarget{classnfd_1_1rib_1_1RibUpdate_a0b43229079ece99ba0e98b3f520b4fb7}{}\label{classnfd_1_1rib_1_1RibUpdate_a0b43229079ece99ba0e98b3f520b4fb7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a route that will be added to or removed from a namespace 
+
+\hyperlink{classnfd_1_1rib_1_1RibUpdate}{Rib\+Update} \begin{DoxyNote}{Note}
+This type is copyable so that it can be stored in S\+TL containers. 
+\end{DoxyNote}
+
+
+Definition at line 40 of file rib-\/update.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{nfd\+::rib\+::\+Rib\+Update@{nfd\+::rib\+::\+Rib\+Update}!Action@{Action}}
+\index{Action@{Action}!nfd\+::rib\+::\+Rib\+Update@{nfd\+::rib\+::\+Rib\+Update}}
+\subsubsection[{\texorpdfstring{Action}{Action}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf nfd\+::rib\+::\+Rib\+Update\+::\+Action}}\hypertarget{classnfd_1_1rib_1_1RibUpdate_aab70f45176a2e455a92b555dba35b91e}{}\label{classnfd_1_1rib_1_1RibUpdate_aab70f45176a2e455a92b555dba35b91e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\+E\+M\+O\+V\+E\+\_\+\+F\+A\+CE@{R\+E\+M\+O\+V\+E\+\_\+\+F\+A\+CE}!nfd\+::rib\+::\+Rib\+Update@{nfd\+::rib\+::\+Rib\+Update}}\index{nfd\+::rib\+::\+Rib\+Update@{nfd\+::rib\+::\+Rib\+Update}!R\+E\+M\+O\+V\+E\+\_\+\+F\+A\+CE@{R\+E\+M\+O\+V\+E\+\_\+\+F\+A\+CE}}\item[{\em 
+R\+E\+M\+O\+V\+E\+\_\+\+F\+A\+CE\hypertarget{classnfd_1_1rib_1_1RibUpdate_aab70f45176a2e455a92b555dba35b91eae2772cc285a7b66f79fdb6cfa4fd4282}{}\label{classnfd_1_1rib_1_1RibUpdate_aab70f45176a2e455a92b555dba35b91eae2772cc285a7b66f79fdb6cfa4fd4282}
+}]An update triggered by a face destruction notification. \begin{DoxyNote}{Note}
+indicates a \hyperlink{classnfd_1_1rib_1_1Route}{Route} needs to be removed after a face is destroyed 
+\end{DoxyNote}
+\end{description}
+\end{Desc}
+
+
+Definition at line 43 of file rib-\/update.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/rib-\/update.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/rib-\/update.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{classnfd_1_1StreamFace}{}\section{nfd\+:\+:Stream\+Face$<$ Protocol, Face\+Base $>$ Class Template Reference}
+\label{classnfd_1_1StreamFace}\index{nfd\+::\+Stream\+Face$<$ Protocol, Face\+Base $>$@{nfd\+::\+Stream\+Face$<$ Protocol, Face\+Base $>$}}
+Inheritance diagram for nfd\+:\+:Stream\+Face$<$ Protocol, Face\+Base $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1StreamFace}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Protocol {\bfseries protocol}\hypertarget{classnfd_1_1StreamFace_a4271f95ffe86272fcd25f0c776769d36}{}\label{classnfd_1_1StreamFace_a4271f95ffe86272fcd25f0c776769d36}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Stream\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&remote\+Uri, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&local\+Uri, typename protocol\+::socket socket, bool is\+On\+Demand)\hypertarget{classnfd_1_1StreamFace_ac3392ae8ded031d7fd43762ebb2e6a83}{}\label{classnfd_1_1StreamFace_ac3392ae8ded031d7fd43762ebb2e6a83}
+
+\item 
+void {\bfseries send\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1StreamFace_a9be685193e73982b71b5797ffa96ed51}{}\label{classnfd_1_1StreamFace_a9be685193e73982b71b5797ffa96ed51}
+
+\item 
+void {\bfseries send\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1StreamFace_ab10e99ae87bc8ad069d6a804f39f9048}{}\label{classnfd_1_1StreamFace_ab10e99ae87bc8ad069d6a804f39f9048}
+
+\item 
+void {\bfseries close} () D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1StreamFace_a4e436f0e5dbcdf8e8fdf3a0ad0d5eb9d}{}\label{classnfd_1_1StreamFace_a4e436f0e5dbcdf8e8fdf3a0ad0d5eb9d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries process\+Error\+Code} (const boost\+::system\+::error\+\_\+code \&error)\hypertarget{classnfd_1_1StreamFace_aa2a0b2969f5d8af4526dda103a01ff88}{}\label{classnfd_1_1StreamFace_aa2a0b2969f5d8af4526dda103a01ff88}
+
+\item 
+void {\bfseries send\+From\+Queue} ()\hypertarget{classnfd_1_1StreamFace_aa49e643da901e6078420bfbb5ed256e3}{}\label{classnfd_1_1StreamFace_aa49e643da901e6078420bfbb5ed256e3}
+
+\item 
+void {\bfseries handle\+Send} (const boost\+::system\+::error\+\_\+code \&error, size\+\_\+t n\+Bytes\+Sent)\hypertarget{classnfd_1_1StreamFace_a948fcfefa70cb4fc4fd277b1319fdc85}{}\label{classnfd_1_1StreamFace_a948fcfefa70cb4fc4fd277b1319fdc85}
+
+\item 
+void {\bfseries handle\+Receive} (const boost\+::system\+::error\+\_\+code \&error, size\+\_\+t n\+Bytes\+Received)\hypertarget{classnfd_1_1StreamFace_a802c2bcf579af5d7627cc9e8a7ce27ce}{}\label{classnfd_1_1StreamFace_a802c2bcf579af5d7627cc9e8a7ce27ce}
+
+\item 
+void {\bfseries shutdown\+Socket} ()\hypertarget{classnfd_1_1StreamFace_ab16743153960fea254e368e1adf3d108}{}\label{classnfd_1_1StreamFace_ab16743153960fea254e368e1adf3d108}
+
+\item 
+void {\bfseries deferred\+Close} (const shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \&face)\hypertarget{classnfd_1_1StreamFace_a044b3b02dc9b524b983959f9699fa54d}{}\label{classnfd_1_1StreamFace_a044b3b02dc9b524b983959f9699fa54d}
+
+\item 
+{\bfseries N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+I\+N\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE} ()\hypertarget{classnfd_1_1StreamFace_a3a186264aa2e798c72e14773ff14df4e}{}\label{classnfd_1_1StreamFace_a3a186264aa2e798c72e14773ff14df4e}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+protocol\+::socket {\bfseries m\+\_\+socket}\hypertarget{classnfd_1_1StreamFace_a5aa7f908c106e69ab9b3a668a9b5af03}{}\label{classnfd_1_1StreamFace_a5aa7f908c106e69ab9b3a668a9b5af03}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Stream\+Face\+Sender\+Impl$<$ Protocol, Face\+Base, Interest $>$}\hypertarget{classnfd_1_1StreamFace_acc568d8d6abbaf79707eb5545c4b8d3d}{}\label{classnfd_1_1StreamFace_acc568d8d6abbaf79707eb5545c4b8d3d}
+
+\item 
+struct {\bfseries Stream\+Face\+Sender\+Impl$<$ Protocol, Face\+Base, Data $>$}\hypertarget{classnfd_1_1StreamFace_a28119b6368569ed75527dfb57c40a6b7}{}\label{classnfd_1_1StreamFace_a28119b6368569ed75527dfb57c40a6b7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Protocol, class Face\+Base = Face$>$\\*
+class nfd\+::\+Stream\+Face$<$ Protocol, Face\+Base $>$}
+
+
+
+Definition at line 39 of file stream-\/face.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/stream-\/face.\+hpp\end{DoxyCompactItemize}

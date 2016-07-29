@@ -1,0 +1,154 @@
+\hypertarget{classns3_1_1ndn_1_1App}{}\section{ns3\+:\+:ndn\+:\+:App Class Reference}
+\label{classns3_1_1ndn_1_1App}\index{ns3\+::ndn\+::\+App@{ns3\+::ndn\+::\+App}}
+
+
+Base class that all N\+DN applications should be derived from.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/app.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:App\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{classns3_1_1ndn_1_1App}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Interest\+Trace\+Callback}) (shared\+\_\+ptr$<$ const Interest $>$, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$)\hypertarget{classns3_1_1ndn_1_1App_acdfaca571fefc75291387ee0534f819f}{}\label{classns3_1_1ndn_1_1App_acdfaca571fefc75291387ee0534f819f}
+
+\item 
+typedef void($\ast$ {\bfseries Data\+Trace\+Callback}) (shared\+\_\+ptr$<$ const Data $>$, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$)\hypertarget{classns3_1_1ndn_1_1App_ac786fbfe28ad52a3648a1f95db47a46f}{}\label{classns3_1_1ndn_1_1App_ac786fbfe28ad52a3648a1f95db47a46f}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1App_aaedddf331628139511f33bdaef6cb7e7}{App} ()\hypertarget{classns3_1_1ndn_1_1App_aaedddf331628139511f33bdaef6cb7e7}{}\label{classns3_1_1ndn_1_1App_aaedddf331628139511f33bdaef6cb7e7}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classns3_1_1ndn_1_1App_a8fde2d80f8bb09b8e4a233ef733dc8e8}{Get\+Id} () const\hypertarget{classns3_1_1ndn_1_1App_a8fde2d80f8bb09b8e4a233ef733dc8e8}{}\label{classns3_1_1ndn_1_1App_a8fde2d80f8bb09b8e4a233ef733dc8e8}
+
+\begin{DoxyCompactList}\small\item\em Get application ID (ID of applications face) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1App_a7aab3dd5e62169430795a2d6e1060f95}{On\+Interest} (shared\+\_\+ptr$<$ const Interest $>$ interest)
+\begin{DoxyCompactList}\small\item\em Method that will be called every time new Interest arrives. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1App_a3f6f593a1557aa22c01bfbab6590b240}{On\+Data} (shared\+\_\+ptr$<$ const Data $>$ data)
+\begin{DoxyCompactList}\small\item\em Method that will be called every time new Data arrives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} ()\hypertarget{classns3_1_1ndn_1_1App_af25dc1439a11d24f04dc0946a4f6f316}{}\label{classns3_1_1ndn_1_1App_af25dc1439a11d24f04dc0946a4f6f316}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Do\+Initialize} ()\hypertarget{classns3_1_1ndn_1_1App_a48f6595605db3186d9cdca77a3247886}{}\label{classns3_1_1ndn_1_1App_a48f6595605db3186d9cdca77a3247886}
+
+\item 
+virtual void {\bfseries Do\+Dispose} ()\hypertarget{classns3_1_1ndn_1_1App_aa60240fd0f101d9845f813e63dfb34fd}{}\label{classns3_1_1ndn_1_1App_aa60240fd0f101d9845f813e63dfb34fd}
+
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1App_a20fd3ef630b6d05dc139911d1ef1b17f}{Start\+Application} ()\hypertarget{classns3_1_1ndn_1_1App_a20fd3ef630b6d05dc139911d1ef1b17f}{}\label{classns3_1_1ndn_1_1App_a20fd3ef630b6d05dc139911d1ef1b17f}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Start. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1App_af1efb7281aa29014eb4574ce452dc705}{Stop\+Application} ()\hypertarget{classns3_1_1ndn_1_1App_af1efb7281aa29014eb4574ce452dc705}{}\label{classns3_1_1ndn_1_1App_af1efb7281aa29014eb4574ce452dc705}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Stop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classns3_1_1ndn_1_1App_a098c5a782a53ecdbb1e0163a563a38fd}{m\+\_\+active}\hypertarget{classns3_1_1ndn_1_1App_a098c5a782a53ecdbb1e0163a563a38fd}{}\label{classns3_1_1ndn_1_1App_a098c5a782a53ecdbb1e0163a563a38fd}
+
+\begin{DoxyCompactList}\small\item\em Flag to indicate that application is active (set by Start\+Application and Stop\+Application) \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classns3_1_1ndn_1_1AppFace}{App\+Face} $>$ \hyperlink{classns3_1_1ndn_1_1App_a846e29a550aaa76e39a74fbaf6c1e50a}{m\+\_\+face}\hypertarget{classns3_1_1ndn_1_1App_a846e29a550aaa76e39a74fbaf6c1e50a}{}\label{classns3_1_1ndn_1_1App_a846e29a550aaa76e39a74fbaf6c1e50a}
+
+\begin{DoxyCompactList}\small\item\em automatically created application face through which application communicates \end{DoxyCompactList}\item 
+uint32\+\_\+t {\bfseries m\+\_\+app\+Id}\hypertarget{classns3_1_1ndn_1_1App_aabacad975c11d34dbc564532fc831694}{}\label{classns3_1_1ndn_1_1App_aabacad975c11d34dbc564532fc831694}
+
+\item 
+Traced\+Callback$<$ shared\+\_\+ptr$<$ const Interest $>$, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ \hyperlink{classns3_1_1ndn_1_1App_ab11ae6b76b847ff28bfc7ea3a782ab26}{m\+\_\+received\+Interests}\hypertarget{classns3_1_1ndn_1_1App_ab11ae6b76b847ff28bfc7ea3a782ab26}{}\label{classns3_1_1ndn_1_1App_ab11ae6b76b847ff28bfc7ea3a782ab26}
+
+\begin{DoxyCompactList}\small\item\em App-\/level trace of received Interests. \end{DoxyCompactList}\item 
+Traced\+Callback$<$ shared\+\_\+ptr$<$ const Data $>$, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ \hyperlink{classns3_1_1ndn_1_1App_a1c7d1cec740ce060d5603bc82b85974e}{m\+\_\+received\+Datas}\hypertarget{classns3_1_1ndn_1_1App_a1c7d1cec740ce060d5603bc82b85974e}{}\label{classns3_1_1ndn_1_1App_a1c7d1cec740ce060d5603bc82b85974e}
+
+\begin{DoxyCompactList}\small\item\em App-\/level trace of received Data. \end{DoxyCompactList}\item 
+Traced\+Callback$<$ shared\+\_\+ptr$<$ const Interest $>$, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ \hyperlink{classns3_1_1ndn_1_1App_a1a5407730c55c227cfab534513b2d156}{m\+\_\+transmitted\+Interests}\hypertarget{classns3_1_1ndn_1_1App_a1a5407730c55c227cfab534513b2d156}{}\label{classns3_1_1ndn_1_1App_a1a5407730c55c227cfab534513b2d156}
+
+\begin{DoxyCompactList}\small\item\em App-\/level trace of transmitted Interests. \end{DoxyCompactList}\item 
+Traced\+Callback$<$ shared\+\_\+ptr$<$ const Data $>$, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ \hyperlink{classns3_1_1ndn_1_1App_a561f51cc1a75ea61581d2c14766fda96}{m\+\_\+transmitted\+Datas}\hypertarget{classns3_1_1ndn_1_1App_a561f51cc1a75ea61581d2c14766fda96}{}\label{classns3_1_1ndn_1_1App_a561f51cc1a75ea61581d2c14766fda96}
+
+\begin{DoxyCompactList}\small\item\em App-\/level trace of transmitted Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class that all N\+DN applications should be derived from. 
+
+The class implements virtual calls on\+Interest, on\+Nack, and on\+Data 
+
+Definition at line 47 of file ndn-\/app.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+App@{ns3\+::ndn\+::\+App}!On\+Data@{On\+Data}}
+\index{On\+Data@{On\+Data}!ns3\+::ndn\+::\+App@{ns3\+::ndn\+::\+App}}
+\subsubsection[{\texorpdfstring{On\+Data(shared\+\_\+ptr$<$ const Data $>$ data)}{OnData(shared\_ptr< const Data > data)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+::\+On\+Data (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1App_a3f6f593a1557aa22c01bfbab6590b240}{}\label{classns3_1_1ndn_1_1App_a3f6f593a1557aa22c01bfbab6590b240}
+
+
+Method that will be called every time new Data arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+Object} & Data header \\
+\hline
+{\em payload} & payload (potentially virtual) of the Data packet (may include packet tags of original packet) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classns3_1_1ndn_1_1Subscriber_a72abe1eed4b4b2cdc4fe04f453492f49}{ns3\+::ndn\+::\+Subscriber}, \hyperlink{classns3_1_1ndn_1_1Consumer_a1d32a655a013ce7404a1ce7fe4eb2dad}{ns3\+::ndn\+::\+Consumer}, \hyperlink{classns3_1_1ndn_1_1Aggregator_ad9d72ff664a7dd9483abca9050bb78b7}{ns3\+::ndn\+::\+Aggregator}, and \hyperlink{classns3_1_1ndn_1_1ConsumerWindow_a2a1df9fda4576e100d7d04658fd0311e}{ns3\+::ndn\+::\+Consumer\+Window}.
+
+
+
+Definition at line 112 of file ndn-\/app.\+cpp.
+
+\index{ns3\+::ndn\+::\+App@{ns3\+::ndn\+::\+App}!On\+Interest@{On\+Interest}}
+\index{On\+Interest@{On\+Interest}!ns3\+::ndn\+::\+App@{ns3\+::ndn\+::\+App}}
+\subsubsection[{\texorpdfstring{On\+Interest(shared\+\_\+ptr$<$ const Interest $>$ interest)}{OnInterest(shared\_ptr< const Interest > interest)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+::\+On\+Interest (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Interest $>$}]{interest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1App_a7aab3dd5e62169430795a2d6e1060f95}{}\label{classns3_1_1ndn_1_1App_a7aab3dd5e62169430795a2d6e1060f95}
+
+
+Method that will be called every time new Interest arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & Interest header \\
+\hline
+{\em packet} & \char`\"{}\+Payload\char`\"{} of the interests packet. The actual payload should be zero, but packet itself may be useful to get packet tags \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classns3_1_1ndn_1_1Aggregator_a80c9a59e3870a53e513fab803c342bb9}{ns3\+::ndn\+::\+Aggregator}, \hyperlink{classns3_1_1ndn_1_1Producer_aec531ffef54f9970c6d8cba664ef5107}{ns3\+::ndn\+::\+Producer}, and \hyperlink{classns3_1_1ndn_1_1SpontaneousProducer_a602d1c44a34c565b9f428bb5c25add4f}{ns3\+::ndn\+::\+Spontaneous\+Producer}.
+
+
+
+Definition at line 105 of file ndn-\/app.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/app.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/app.\+cpp\end{DoxyCompactItemize}

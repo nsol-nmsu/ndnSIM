@@ -1,0 +1,103 @@
+\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage}{}\section{nfd\+:\+:ndnlp\+:\+:Partial\+Message Class Reference}
+\label{classnfd_1_1ndnlp_1_1PartialMessage}\index{nfd\+::ndnlp\+::\+Partial\+Message@{nfd\+::ndnlp\+::\+Partial\+Message}}
+
+
+represents a partially received message  
+
+
+
+
+{\ttfamily \#include $<$ndnlp-\/partial-\/message-\/store.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Partial\+Message} (const \hyperlink{classnfd_1_1ndnlp_1_1PartialMessage}{Partial\+Message} \&)=delete\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_ae6b26d97c3627ec61283ce9eaa0abc81}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_ae6b26d97c3627ec61283ce9eaa0abc81}
+
+\item 
+\hyperlink{classnfd_1_1ndnlp_1_1PartialMessage}{Partial\+Message} \& {\bfseries operator=} (const \hyperlink{classnfd_1_1ndnlp_1_1PartialMessage}{Partial\+Message} \&)=delete\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_aeee173a6bfdb087f589f22fd9eceb752}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_aeee173a6bfdb087f589f22fd9eceb752}
+
+\item 
+{\bfseries Partial\+Message} (\hyperlink{classnfd_1_1ndnlp_1_1PartialMessage}{Partial\+Message} \&\&)=default\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_a4d528ea94554c4c17f0348bc29ec8e8e}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_a4d528ea94554c4c17f0348bc29ec8e8e}
+
+\item 
+\hyperlink{classnfd_1_1ndnlp_1_1PartialMessage}{Partial\+Message} \& {\bfseries operator=} (\hyperlink{classnfd_1_1ndnlp_1_1PartialMessage}{Partial\+Message} \&\&)=default\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_a81924a7815c7a37572b17ab1c333e861}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_a81924a7815c7a37572b17ab1c333e861}
+
+\item 
+bool {\bfseries add} (uint16\+\_\+t frag\+Index, uint16\+\_\+t frag\+Count, const \hyperlink{classndn_1_1Block}{Block} \&payload)\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_a163e0f54b2207be63427c4649b5c38bb}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_a163e0f54b2207be63427c4649b5c38bb}
+
+\item 
+bool {\bfseries is\+Complete} () const\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_ade860ab6d668d293d2e74e0f19c97890}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_ade860ab6d668d293d2e74e0f19c97890}
+
+\item 
+std\+::tuple$<$ bool, \hyperlink{classndn_1_1Block}{Block} $>$ \hyperlink{classnfd_1_1ndnlp_1_1PartialMessage_aa2b967ff8e0d3135a458fa93be6f2d8f}{reassemble} ()
+\begin{DoxyCompactList}\small\item\em reassemble network layer packet \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::tuple$<$ bool, \hyperlink{classndn_1_1Block}{Block} $>$ \hyperlink{classnfd_1_1ndnlp_1_1PartialMessage_ad386a982787fc6ace05611d0314c155e}{reassemble\+Single} (const \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} \&fragment)
+\begin{DoxyCompactList}\small\item\em reassemble network layer packet from a single fragment \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1scheduler_1_1ScopedEventId}{scheduler\+::\+Scoped\+Event\+Id} {\bfseries expiry}\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_a24d73a81e3569cd13929c8f9bae1ad9e}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_a24d73a81e3569cd13929c8f9bae1ad9e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a partially received message 
+
+Definition at line 37 of file ndnlp-\/partial-\/message-\/store.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::ndnlp\+::\+Partial\+Message@{nfd\+::ndnlp\+::\+Partial\+Message}!reassemble@{reassemble}}
+\index{reassemble@{reassemble}!nfd\+::ndnlp\+::\+Partial\+Message@{nfd\+::ndnlp\+::\+Partial\+Message}}
+\subsubsection[{\texorpdfstring{reassemble()}{reassemble()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::tuple$<$ bool, {\bf Block} $>$ nfd\+::ndnlp\+::\+Partial\+Message\+::reassemble (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_aa2b967ff8e0d3135a458fa93be6f2d8f}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_aa2b967ff8e0d3135a458fa93be6f2d8f}
+
+
+reassemble network layer packet 
+
+\begin{DoxyPrecond}{Precondition}
+is\+Complete() == true 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+whether success, network layer packet 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file ndnlp-\/partial-\/message-\/store.\+cpp.
+
+\index{nfd\+::ndnlp\+::\+Partial\+Message@{nfd\+::ndnlp\+::\+Partial\+Message}!reassemble\+Single@{reassemble\+Single}}
+\index{reassemble\+Single@{reassemble\+Single}!nfd\+::ndnlp\+::\+Partial\+Message@{nfd\+::ndnlp\+::\+Partial\+Message}}
+\subsubsection[{\texorpdfstring{reassemble\+Single(const Ndnlp\+Data \&fragment)}{reassembleSingle(const NdnlpData \&fragment)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::tuple$<$ bool, {\bf Block} $>$ nfd\+::ndnlp\+::\+Partial\+Message\+::reassemble\+Single (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ndnlp\+Data} \&}]{fragment}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classnfd_1_1ndnlp_1_1PartialMessage_ad386a982787fc6ace05611d0314c155e}{}\label{classnfd_1_1ndnlp_1_1PartialMessage_ad386a982787fc6ace05611d0314c155e}
+
+
+reassemble network layer packet from a single fragment 
+
+\begin{DoxyPrecond}{Precondition}
+fragment.\+frag\+Count == 1 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+whether success, network layer packet 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file ndnlp-\/partial-\/message-\/store.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ndnlp-\/partial-\/message-\/store.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ndnlp-\/partial-\/message-\/store.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,180 @@
+\hypertarget{classnfd_1_1TcpFactory}{}\section{nfd\+:\+:Tcp\+Factory Class Reference}
+\label{classnfd_1_1TcpFactory}\index{nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}}
+Inheritance diagram for nfd\+:\+:Tcp\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1TcpFactory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfd_1_1TcpFactory_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Exception of \hyperlink{classnfd_1_1TcpFactory}{Tcp\+Factory}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Tcp\+Factory} (const std\+::string \&default\+Port=\char`\"{}6363\char`\"{})\hypertarget{classnfd_1_1TcpFactory_a714355dce6deef7a76ed84e8c002a940}{}\label{classnfd_1_1TcpFactory_a714355dce6deef7a76ed84e8c002a940}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1TcpChannel}{Tcp\+Channel} $>$ \hyperlink{classnfd_1_1TcpFactory_a0cf360603f5e7eaa783dfb54708ca8a6}{create\+Channel} (const tcp\+::\+Endpoint \&local\+Endpoint)
+\begin{DoxyCompactList}\small\item\em Create T\+C\+P-\/based channel using tcp\+::\+Endpoint. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1TcpChannel}{Tcp\+Channel} $>$ \hyperlink{classnfd_1_1TcpFactory_ad889634e6d883f56467efd4eb5ce2067}{create\+Channel} (const std\+::string \&local\+Ip, const std\+::string \&local\+Port)
+\begin{DoxyCompactList}\small\item\em Create T\+C\+P-\/based channel using specified IP address and port number. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1TcpFactory_adae42421216ea295e35ef9177d0fe95f}{create\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const \hyperlink{namespacenfd_a6d4b91580c829552a452c53458381b0f}{Face\+Created\+Callback} \&on\+Created, const \hyperlink{namespacenfd_ae87d4f07de26f4939691439b51f2dd83}{Face\+Connect\+Failed\+Callback} \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. \end{DoxyCompactList}\item 
+virtual std\+::list$<$ shared\+\_\+ptr$<$ const \hyperlink{classnfd_1_1Channel}{Channel} $>$ $>$ {\bfseries get\+Channels} () const\hypertarget{classnfd_1_1TcpFactory_aa9cbd49415ee572ae069246ae783c6fe}{}\label{classnfd_1_1TcpFactory_aa9cbd49415ee572ae069246ae783c6fe}
+
+\item 
+void {\bfseries prohibit\+All\+Ipv4\+Endpoints} (const uint16\+\_\+t port)\hypertarget{classnfd_1_1TcpFactory_a13aa7294e91c9cb565ac41ba643ffd07}{}\label{classnfd_1_1TcpFactory_a13aa7294e91c9cb565ac41ba643ffd07}
+
+\item 
+void {\bfseries prohibit\+All\+Ipv6\+Endpoints} (const uint16\+\_\+t port)\hypertarget{classnfd_1_1TcpFactory_a06191fa4b81d6abca0995155c74349ea}{}\label{classnfd_1_1TcpFactory_a06191fa4b81d6abca0995155c74349ea}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1TcpChannel}{Tcp\+Channel} $>$ \hyperlink{classnfd_1_1TcpFactory_a214d6667fc97b165c241130d2510cd1c}{find\+Channel} (const tcp\+::\+Endpoint \&local\+Endpoint)
+\begin{DoxyCompactList}\small\item\em Look up \hyperlink{classnfd_1_1TcpChannel}{Tcp\+Channel} using specified local endpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void prohibit\+Endpoint(const tcp\+::\+Endpoint\& endpoint)\hypertarget{classnfd_1_1TcpFactory_a519df59559a5b6a75511c9a1d0f91548}{}\label{classnfd_1_1TcpFactory_a519df59559a5b6a75511c9a1d0f91548}
+
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: typedef std\+::map$<$ tcp\+::\+Endpoint\hypertarget{classnfd_1_1TcpFactory_ad7e323737ed2d8ad61135c6995bcbbc7}{}\label{classnfd_1_1TcpFactory_ad7e323737ed2d8ad61135c6995bcbbc7}
+
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1TcpChannel}{Tcp\+Channel} $>$ {\bfseries Channel\+Map}\hypertarget{classnfd_1_1TcpFactory_a75c6e211dd704378c8ffdbfee2a79374}{}\label{classnfd_1_1TcpFactory_a75c6e211dd704378c8ffdbfee2a79374}
+
+\item 
+Channel\+Map {\bfseries m\+\_\+channels}\hypertarget{classnfd_1_1TcpFactory_a934d109a04dc7676a5fe0843189c2055}{}\label{classnfd_1_1TcpFactory_a934d109a04dc7676a5fe0843189c2055}
+
+\item 
+std\+::string {\bfseries m\+\_\+default\+Port}\hypertarget{classnfd_1_1TcpFactory_aac0763157a8f0da4d7900db204e6ef3c}{}\label{classnfd_1_1TcpFactory_aac0763157a8f0da4d7900db204e6ef3c}
+
+\item 
+std\+::set$<$ tcp\+::\+Endpoint $>$ {\bfseries m\+\_\+prohibited\+Endpoints}\hypertarget{classnfd_1_1TcpFactory_a28369c4b015a9114444003310ddfbb2d}{}\label{classnfd_1_1TcpFactory_a28369c4b015a9114444003310ddfbb2d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file tcp-\/factory.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}!create\+Channel@{create\+Channel}}
+\index{create\+Channel@{create\+Channel}!nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Channel(const tcp\+::\+Endpoint \&local\+Endpoint)}{createChannel(const tcp::Endpoint \&localEndpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tcp\+Channel} $>$ nfd\+::\+Tcp\+Factory\+::create\+Channel (
+\begin{DoxyParamCaption}
+\item[{const tcp\+::\+Endpoint \&}]{local\+Endpoint}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1TcpFactory_a0cf360603f5e7eaa783dfb54708ca8a6}{}\label{classnfd_1_1TcpFactory_a0cf360603f5e7eaa783dfb54708ca8a6}
+
+
+Create T\+C\+P-\/based channel using tcp\+::\+Endpoint. 
+
+tcp\+::\+Endpoint is really an alias for boost\+::asio\+::ip\+::tcp\+::endpoint.
+
+If this method called twice with the same endpoint, only one channel will be created. The second call will just retrieve the existing channel.
+
+\begin{DoxyReturn}{Returns}
+always a valid pointer to a \hyperlink{classnfd_1_1TcpChannel}{Tcp\+Channel} object, an exception is thrown if it cannot be created.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{structnfd_1_1TcpFactory_1_1Error}{Tcp\+Factory\+::\+Error}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.boost.org/doc/libs/1_42_0/doc/html/boost_asio/reference/ip__tcp/endpoint.html}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+42\+\_\+0/doc/html/boost\+\_\+asio/reference/ip\+\_\+\+\_\+tcp/endpoint.\+html} for details on ways to create tcp\+::\+Endpoint 
+\end{DoxySeeAlso}
+
+
+Definition at line 96 of file tcp-\/factory.\+cpp.
+
+\index{nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}!create\+Channel@{create\+Channel}}
+\index{create\+Channel@{create\+Channel}!nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Channel(const std\+::string \&local\+Ip, const std\+::string \&local\+Port)}{createChannel(const std::string \&localIp, const std::string \&localPort)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tcp\+Channel} $>$ nfd\+::\+Tcp\+Factory\+::create\+Channel (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{local\+Ip, }
+\item[{const std\+::string \&}]{local\+Port}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1TcpFactory_ad889634e6d883f56467efd4eb5ce2067}{}\label{classnfd_1_1TcpFactory_ad889634e6d883f56467efd4eb5ce2067}
+
+
+Create T\+C\+P-\/based channel using specified IP address and port number. 
+
+This method is just a helper that converts a string representation of local\+Ip and port to tcp\+::\+Endpoint and calls the other create\+Channel overload.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{structnfd_1_1TcpFactory_1_1Error}{Tcp\+Factory\+::\+Error}} & or std\+::runtime\+\_\+error \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 111 of file tcp-\/factory.\+cpp.
+
+\index{nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}!create\+Face@{create\+Face}}
+\index{create\+Face@{create\+Face}!nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Face(const Face\+Uri \&uri, ndn\+::nfd\+::\+Face\+Persistency persistency, const Face\+Created\+Callback \&on\+Created, const Face\+Connect\+Failed\+Callback \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{createFace(const FaceUri \&uri, ndn::nfd::FacePersistency persistency, const FaceCreatedCallback \&onCreated, const FaceConnectFailedCallback \&onConnectFailed) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Tcp\+Factory\+::create\+Face (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{uri, }
+\item[{{\bf ndn\+::nfd\+::\+Face\+Persistency}}]{persistency, }
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Created, }
+\item[{const {\bf Face\+Connect\+Failed\+Callback} \&}]{on\+Connect\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1TcpFactory_adae42421216ea295e35ef9177d0fe95f}{}\label{classnfd_1_1TcpFactory_adae42421216ea295e35ef9177d0fe95f}
+
+
+Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. 
+
+This method should automatically choose channel, based on supplied Face\+Uri and create face.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{structnfd_1_1TcpFactory_1_1Error}{Error}} & Factory does not support connect operation \\
+\hline
+{\em \hyperlink{structnfd_1_1TcpFactory_1_1Error}{Error}} & specified {\ttfamily persistency} is not supported \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}{nfd\+::\+Protocol\+Factory}.
+
+
+
+Definition at line 129 of file tcp-\/factory.\+cpp.
+
+\index{nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}!find\+Channel@{find\+Channel}}
+\index{find\+Channel@{find\+Channel}!nfd\+::\+Tcp\+Factory@{nfd\+::\+Tcp\+Factory}}
+\subsubsection[{\texorpdfstring{find\+Channel(const tcp\+::\+Endpoint \&local\+Endpoint)}{findChannel(const tcp::Endpoint \&localEndpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Tcp\+Channel} $>$ nfd\+::\+Tcp\+Factory\+::find\+Channel (
+\begin{DoxyParamCaption}
+\item[{const tcp\+::\+Endpoint \&}]{local\+Endpoint}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1TcpFactory_a214d6667fc97b165c241130d2510cd1c}{}\label{classnfd_1_1TcpFactory_a214d6667fc97b165c241130d2510cd1c}
+
+
+Look up \hyperlink{classnfd_1_1TcpChannel}{Tcp\+Channel} using specified local endpoint. 
+
+\begin{DoxyReturn}{Returns}
+shared pointer to the existing \hyperlink{classnfd_1_1TcpChannel}{Tcp\+Channel} object or empty shared pointer when such channel does not exist
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em never} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 119 of file tcp-\/factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/tcp-\/factory.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/tcp-\/factory.\+cpp\end{DoxyCompactItemize}

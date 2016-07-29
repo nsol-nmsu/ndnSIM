@@ -1,0 +1,62 @@
+\hypertarget{classnfd_1_1rib_1_1FibUpdate}{}\section{nfd\+:\+:rib\+:\+:Fib\+Update Class Reference}
+\label{classnfd_1_1rib_1_1FibUpdate}\index{nfd\+::rib\+::\+Fib\+Update@{nfd\+::rib\+::\+Fib\+Update}}
+
+
+represents a F\+IB update  
+
+
+
+
+{\ttfamily \#include $<$fib-\/update.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Action} \{ {\bfseries A\+D\+D\+\_\+\+N\+E\+X\+T\+H\+OP} = 0, 
+{\bfseries R\+E\+M\+O\+V\+E\+\_\+\+N\+E\+X\+T\+H\+OP} = 1
+ \}\hypertarget{classnfd_1_1rib_1_1FibUpdate_a13ef2c5b7b067f325e0d4e674bba8b0a}{}\label{classnfd_1_1rib_1_1FibUpdate_a13ef2c5b7b067f325e0d4e674bba8b0a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries operator==} (const \hyperlink{classnfd_1_1rib_1_1FibUpdate}{Fib\+Update} \&other) const\hypertarget{classnfd_1_1rib_1_1FibUpdate_ab70f5ee7040cfe879f19144a162793ce}{}\label{classnfd_1_1rib_1_1FibUpdate_ab70f5ee7040cfe879f19144a162793ce}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classnfd_1_1rib_1_1FibUpdate}{Fib\+Update} {\bfseries create\+Add\+Update} (const \hyperlink{classndn_1_1Name}{Name} \&name, const uint64\+\_\+t face\+Id, const uint64\+\_\+t cost)\hypertarget{classnfd_1_1rib_1_1FibUpdate_a7e1620d21bb4c6152cb5a43f7fe4ebc8}{}\label{classnfd_1_1rib_1_1FibUpdate_a7e1620d21bb4c6152cb5a43f7fe4ebc8}
+
+\item 
+static \hyperlink{classnfd_1_1rib_1_1FibUpdate}{Fib\+Update} {\bfseries create\+Remove\+Update} (const \hyperlink{classndn_1_1Name}{Name} \&name, const uint64\+\_\+t face\+Id)\hypertarget{classnfd_1_1rib_1_1FibUpdate_a405c1ef83d6be84287c2a418a056f42c}{}\label{classnfd_1_1rib_1_1FibUpdate_a405c1ef83d6be84287c2a418a056f42c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries name}\hypertarget{classnfd_1_1rib_1_1FibUpdate_a4d21919c8080fee3d88a317a0419659a}{}\label{classnfd_1_1rib_1_1FibUpdate_a4d21919c8080fee3d88a317a0419659a}
+
+\item 
+uint64\+\_\+t {\bfseries face\+Id}\hypertarget{classnfd_1_1rib_1_1FibUpdate_a0bbd858e23e3e8663be021781009f0e3}{}\label{classnfd_1_1rib_1_1FibUpdate_a0bbd858e23e3e8663be021781009f0e3}
+
+\item 
+uint64\+\_\+t {\bfseries cost}\hypertarget{classnfd_1_1rib_1_1FibUpdate_a1de8298d913e8f4ac582b036ddd0e382}{}\label{classnfd_1_1rib_1_1FibUpdate_a1de8298d913e8f4ac582b036ddd0e382}
+
+\item 
+Action {\bfseries action}\hypertarget{classnfd_1_1rib_1_1FibUpdate_a454b27ce6a46f55345cf2ebdf7330469}{}\label{classnfd_1_1rib_1_1FibUpdate_a454b27ce6a46f55345cf2ebdf7330469}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a F\+IB update 
+
+Definition at line 37 of file fib-\/update.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/fib-\/update.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/fib-\/update.\+cpp\end{DoxyCompactItemize}

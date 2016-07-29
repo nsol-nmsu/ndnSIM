@@ -1,0 +1,13 @@
+ndn\+S\+IM uses \href{http://www.boost.org/doc/libs/1_48_0/libs/test/doc/html/index.html}{\tt Boost Unit Test Framework} for testing features of the implementation.
+
+ndn\+S\+IM unit tests should be placed into {\ttfamily ndn\+S\+I\+M/tests/unit-\/tests/} folder. All {\ttfamily .cpp} files placed in this folder will be automatically compiled together.
+
+\subsection*{Running unit-\/tests }
+
+To run unit tests, N\+S-\/3 and ndn\+S\+IM need to be configured and build with the unit test support. To enable both general N\+S-\/3 unit tests and ndn\+S\+IM unit tests, add {\ttfamily -\/-\/enable-\/tests} during configuration phase. For example, run the following from the N\+S-\/3 root folder\+: \begin{DoxyVerb}./waf configure --enable-tests
+./waf build
+\end{DoxyVerb}
+
+
+To run unit tests\+: \begin{DoxyVerb}./waf --run ndnSIM-unit-tests\end{DoxyVerb}
+ 

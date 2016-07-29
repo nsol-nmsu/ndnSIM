@@ -1,0 +1,142 @@
+\hypertarget{classns3_1_1ndn_1_1GlobalRouter}{}\section{ns3\+:\+:ndn\+:\+:Global\+Router Class Reference}
+\label{classns3_1_1ndn_1_1GlobalRouter}\index{ns3\+::ndn\+::\+Global\+Router@{ns3\+::ndn\+::\+Global\+Router}}
+
+
+Class representing global router interface for ndn\+S\+IM.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/global-\/router.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Global\+Router\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1ndn_1_1GlobalRouter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::tuple$<$ Ptr$<$ \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} $>$ $>$ \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a9254e959f876b01f8d70f77ad04a071a}{Incidency}\hypertarget{classns3_1_1ndn_1_1GlobalRouter_a9254e959f876b01f8d70f77ad04a071a}{}\label{classns3_1_1ndn_1_1GlobalRouter_a9254e959f876b01f8d70f77ad04a071a}
+
+\begin{DoxyCompactList}\small\item\em Graph edge. \end{DoxyCompactList}\item 
+typedef std\+::list$<$ \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a9254e959f876b01f8d70f77ad04a071a}{Incidency} $>$ \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a48a657a3cc734401b488ace8b6cd2ddb}{Incidency\+List}\hypertarget{classns3_1_1ndn_1_1GlobalRouter_a48a657a3cc734401b488ace8b6cd2ddb}{}\label{classns3_1_1ndn_1_1GlobalRouter_a48a657a3cc734401b488ace8b6cd2ddb}
+
+\begin{DoxyCompactList}\small\item\em List of graph edges. \end{DoxyCompactList}\item 
+typedef std\+::list$<$ shared\+\_\+ptr$<$ Name $>$ $>$ \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a06c10324453a7a931a105fba937ba9b8}{Local\+Prefix\+List}\hypertarget{classns3_1_1ndn_1_1GlobalRouter_a06c10324453a7a931a105fba937ba9b8}{}\label{classns3_1_1ndn_1_1GlobalRouter_a06c10324453a7a931a105fba937ba9b8}
+
+\begin{DoxyCompactList}\small\item\em List of locally exported prefixes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1GlobalRouter_ae46a993b3572c38759766b9766c0db6b}{Global\+Router} ()\hypertarget{classns3_1_1ndn_1_1GlobalRouter_ae46a993b3572c38759766b9766c0db6b}{}\label{classns3_1_1ndn_1_1GlobalRouter_ae46a993b3572c38759766b9766c0db6b}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classns3_1_1ndn_1_1GlobalRouter_adc4eaf5709935674f16212e52a6b5e15}{Get\+Id} () const\hypertarget{classns3_1_1ndn_1_1GlobalRouter_adc4eaf5709935674f16212e52a6b5e15}{}\label{classns3_1_1ndn_1_1GlobalRouter_adc4eaf5709935674f16212e52a6b5e15}
+
+\begin{DoxyCompactList}\small\item\em Get numeric ID of the node (internally assigned) \end{DoxyCompactList}\item 
+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1L3Protocol}{L3\+Protocol} $>$ \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a367dfea691e4173f14fd1d63e5107d27}{Get\+L3\+Protocol} () const\hypertarget{classns3_1_1ndn_1_1GlobalRouter_a367dfea691e4173f14fd1d63e5107d27}{}\label{classns3_1_1ndn_1_1GlobalRouter_a367dfea691e4173f14fd1d63e5107d27}
+
+\begin{DoxyCompactList}\small\item\em Helper function to get smart pointer to \hyperlink{classns3_1_1ndn_1_1L3Protocol}{ndn\+::\+L3\+Protocol} object (basically, self) \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRouter_afe4f8a6580f4bf9e9b3ab2b7a443f5c3}{Add\+Local\+Prefix} (shared\+\_\+ptr$<$ Name $>$ prefix)
+\begin{DoxyCompactList}\small\item\em Add new locally exported prefix. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a3e438e17fae9b59dce350dc32bd47af3}{Add\+Incidency} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} $>$ ndn)
+\begin{DoxyCompactList}\small\item\em Add edge to the node. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1GlobalRouter_a48a657a3cc734401b488ace8b6cd2ddb}{Incidency\+List} \& \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a587b709038705efe2a13855a528e2920}{Get\+Incidencies} ()\hypertarget{classns3_1_1ndn_1_1GlobalRouter_a587b709038705efe2a13855a528e2920}{}\label{classns3_1_1ndn_1_1GlobalRouter_a587b709038705efe2a13855a528e2920}
+
+\begin{DoxyCompactList}\small\item\em Get list of edges that are connected to this node. \end{DoxyCompactList}\item 
+const \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a06c10324453a7a931a105fba937ba9b8}{Local\+Prefix\+List} \& \hyperlink{classns3_1_1ndn_1_1GlobalRouter_ad9a7a7b6d6076c3506e7c91291141f9a}{Get\+Local\+Prefixes} () const\hypertarget{classns3_1_1ndn_1_1GlobalRouter_ad9a7a7b6d6076c3506e7c91291141f9a}{}\label{classns3_1_1ndn_1_1GlobalRouter_ad9a7a7b6d6076c3506e7c91291141f9a}
+
+\begin{DoxyCompactList}\small\item\em Get list of locally exported prefixes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id \hyperlink{classns3_1_1ndn_1_1GlobalRouter_ab29773e613a1a1f3d4371e487dea6bba}{Get\+Type\+Id} ()
+\begin{DoxyCompactList}\small\item\em Interface ID. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1GlobalRouter_a67bc50e507dd80e85bfc6c85d902e9c9}{clear} ()\hypertarget{classns3_1_1ndn_1_1GlobalRouter_a67bc50e507dd80e85bfc6c85d902e9c9}{}\label{classns3_1_1ndn_1_1GlobalRouter_a67bc50e507dd80e85bfc6c85d902e9c9}
+
+\begin{DoxyCompactList}\small\item\em Clear global state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1GlobalRouter_adb21938458efac48e06d37e7dfcee946}{Notify\+New\+Aggregate} ()\hypertarget{classns3_1_1ndn_1_1GlobalRouter_adb21938458efac48e06d37e7dfcee946}{}\label{classns3_1_1ndn_1_1GlobalRouter_adb21938458efac48e06d37e7dfcee946}
+
+\begin{DoxyCompactList}\small\item\em Notify when the object is aggregated to another object (e.\+g., Node) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing global router interface for ndn\+S\+IM. 
+
+Definition at line 44 of file ndn-\/global-\/router.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Global\+Router@{ns3\+::ndn\+::\+Global\+Router}!Add\+Incidency@{Add\+Incidency}}
+\index{Add\+Incidency@{Add\+Incidency}!ns3\+::ndn\+::\+Global\+Router@{ns3\+::ndn\+::\+Global\+Router}}
+\subsubsection[{\texorpdfstring{Add\+Incidency(shared\+\_\+ptr$<$ Face $>$ face, Ptr$<$ Global\+Router $>$ ndn)}{AddIncidency(shared\_ptr< Face > face, Ptr< GlobalRouter > ndn)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Router\+::\+Add\+Incidency (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face, }
+\item[{Ptr$<$ {\bf Global\+Router} $>$}]{ndn}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1GlobalRouter_a3e438e17fae9b59dce350dc32bd47af3}{}\label{classns3_1_1ndn_1_1GlobalRouter_a3e438e17fae9b59dce350dc32bd47af3}
+
+
+Add edge to the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & Face of the edge \\
+\hline
+{\em ndn} & \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} of another node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file ndn-\/global-\/router.\+cpp.
+
+\index{ns3\+::ndn\+::\+Global\+Router@{ns3\+::ndn\+::\+Global\+Router}!Add\+Local\+Prefix@{Add\+Local\+Prefix}}
+\index{Add\+Local\+Prefix@{Add\+Local\+Prefix}!ns3\+::ndn\+::\+Global\+Router@{ns3\+::ndn\+::\+Global\+Router}}
+\subsubsection[{\texorpdfstring{Add\+Local\+Prefix(shared\+\_\+ptr$<$ Name $>$ prefix)}{AddLocalPrefix(shared\_ptr< Name > prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Router\+::\+Add\+Local\+Prefix (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ Name $>$}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1GlobalRouter_afe4f8a6580f4bf9e9b3ab2b7a443f5c3}{}\label{classns3_1_1ndn_1_1GlobalRouter_afe4f8a6580f4bf9e9b3ab2b7a443f5c3}
+
+
+Add new locally exported prefix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & Prefix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file ndn-\/global-\/router.\+cpp.
+
+\index{ns3\+::ndn\+::\+Global\+Router@{ns3\+::ndn\+::\+Global\+Router}!Get\+Type\+Id@{Get\+Type\+Id}}
+\index{Get\+Type\+Id@{Get\+Type\+Id}!ns3\+::ndn\+::\+Global\+Router@{ns3\+::ndn\+::\+Global\+Router}}
+\subsubsection[{\texorpdfstring{Get\+Type\+Id()}{GetTypeId()}}]{\setlength{\rightskip}{0pt plus 5cm}Type\+Id ns3\+::ndn\+::\+Global\+Router\+::\+Get\+Type\+Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1GlobalRouter_ab29773e613a1a1f3d4371e487dea6bba}{}\label{classns3_1_1ndn_1_1GlobalRouter_ab29773e613a1a1f3d4371e487dea6bba}
+
+
+Interface ID. 
+
+\begin{DoxyReturn}{Returns}
+interface ID 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file ndn-\/global-\/router.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/ndn-\/global-\/router.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/ndn-\/global-\/router.\+cpp\end{DoxyCompactItemize}

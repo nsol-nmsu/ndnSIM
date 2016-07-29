@@ -1,0 +1,88 @@
+\hypertarget{classnfd_1_1FaceTable}{}\section{nfd\+:\+:Face\+Table Class Reference}
+\label{classnfd_1_1FaceTable}\index{nfd\+::\+Face\+Table@{nfd\+::\+Face\+Table}}
+
+
+container of all Faces  
+
+
+
+
+{\ttfamily \#include $<$face-\/table.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Face\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1FaceTable}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \hyperlink{classFaceId}{Face\+Id}, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ {\bfseries Face\+Map}\hypertarget{classnfd_1_1FaceTable_a1f40d9e47aaddcc3cc629defeef386c5}{}\label{classnfd_1_1FaceTable_a1f40d9e47aaddcc3cc629defeef386c5}
+
+\item 
+typedef boost\+::select\+\_\+second\+\_\+const\+\_\+range$<$ Face\+Map $>$ {\bfseries Forward\+Range}\hypertarget{classnfd_1_1FaceTable_a45f5962c58ddbd44cda40bca77a0bc40}{}\label{classnfd_1_1FaceTable_a45f5962c58ddbd44cda40bca77a0bc40}
+
+\item 
+typedef boost\+::range\+\_\+iterator$<$ Forward\+Range $>$\+::type \hyperlink{classnfd_1_1FaceTable_ac46211392a2e8640782e802e414ca52d}{const\+\_\+iterator}\hypertarget{classnfd_1_1FaceTable_ac46211392a2e8640782e802e414ca52d}{}\label{classnfd_1_1FaceTable_ac46211392a2e8640782e802e414ca52d}
+
+\begin{DoxyCompactList}\small\item\em Forward\+Iterator for shared\+\_\+ptr$<$\+Face$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Face\+Table} (\hyperlink{classnfd_1_1Forwarder}{Forwarder} \&forwarder)\hypertarget{classnfd_1_1FaceTable_a9cb5f508f18d98c2070fde1940f06259}{}\label{classnfd_1_1FaceTable_a9cb5f508f18d98c2070fde1940f06259}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void {\bfseries add} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1FaceTable_aa3c99356cabcb953d813539995917973}{}\label{classnfd_1_1FaceTable_aa3c99356cabcb953d813539995917973}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1FaceTable_ac8ab2b76ba95c23bf5c6e2cb42385e25}{add\+Reserved} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face, \hyperlink{classFaceId}{Face\+Id} face\+Id)\hypertarget{classnfd_1_1FaceTable_ac8ab2b76ba95c23bf5c6e2cb42385e25}{}\label{classnfd_1_1FaceTable_ac8ab2b76ba95c23bf5c6e2cb42385e25}
+
+\begin{DoxyCompactList}\small\item\em add a special \hyperlink{classnfd_1_1Face}{Face} with a reserved \hyperlink{classFaceId}{Face\+Id} \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ {\bfseries get} (\hyperlink{classFaceId}{Face\+Id} id) const\hypertarget{classnfd_1_1FaceTable_ab0e84da83f303e18133d05d99bcbc6d3}{}\label{classnfd_1_1FaceTable_ab0e84da83f303e18133d05d99bcbc6d3}
+
+\item 
+size\+\_\+t {\bfseries size} () const\hypertarget{classnfd_1_1FaceTable_a8e9a16831062403ba6e52bef6972cad6}{}\label{classnfd_1_1FaceTable_a8e9a16831062403ba6e52bef6972cad6}
+
+\item 
+\hyperlink{classnfd_1_1FaceTable_ac46211392a2e8640782e802e414ca52d}{const\+\_\+iterator} {\bfseries begin} () const\hypertarget{classnfd_1_1FaceTable_aa2866e0e0bfa6327afc4800c784be611}{}\label{classnfd_1_1FaceTable_aa2866e0e0bfa6327afc4800c784be611}
+
+\item 
+\hyperlink{classnfd_1_1FaceTable_ac46211392a2e8640782e802e414ca52d}{const\+\_\+iterator} {\bfseries end} () const\hypertarget{classnfd_1_1FaceTable_a1c03857d6d6355ea06c791cc8e7b271e}{}\label{classnfd_1_1FaceTable_a1c03857d6d6355ea06c791cc8e7b271e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1FaceTable}{Face\+Table}, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ \hyperlink{classnfd_1_1FaceTable_ad3b093103b86367194def37a3f97ea92}{on\+Add}\hypertarget{classnfd_1_1FaceTable_ad3b093103b86367194def37a3f97ea92}{}\label{classnfd_1_1FaceTable_ad3b093103b86367194def37a3f97ea92}
+
+\begin{DoxyCompactList}\small\item\em fires after a \hyperlink{classnfd_1_1Face}{Face} is added \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1FaceTable}{Face\+Table}, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ \hyperlink{classnfd_1_1FaceTable_adfd530ba7b6df010f7915d7fd182d7f2}{on\+Remove}
+\begin{DoxyCompactList}\small\item\em fires before a \hyperlink{classnfd_1_1Face}{Face} is removed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+container of all Faces 
+
+Definition at line 38 of file face-\/table.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{nfd\+::\+Face\+Table@{nfd\+::\+Face\+Table}!on\+Remove@{on\+Remove}}
+\index{on\+Remove@{on\+Remove}!nfd\+::\+Face\+Table@{nfd\+::\+Face\+Table}}
+\subsubsection[{\texorpdfstring{on\+Remove}{onRemove}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf signal\+::\+Signal}$<${\bf Face\+Table}, shared\+\_\+ptr$<${\bf Face}$>$ $>$ nfd\+::\+Face\+Table\+::on\+Remove}\hypertarget{classnfd_1_1FaceTable_adfd530ba7b6df010f7915d7fd182d7f2}{}\label{classnfd_1_1FaceTable_adfd530ba7b6df010f7915d7fd182d7f2}
+
+
+fires before a \hyperlink{classnfd_1_1Face}{Face} is removed 
+
+\hyperlink{classFaceId}{Face\+Id} is valid when this event is fired 
+
+Definition at line 84 of file face-\/table.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/face-\/table.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/face-\/table.\+cpp\end{DoxyCompactItemize}

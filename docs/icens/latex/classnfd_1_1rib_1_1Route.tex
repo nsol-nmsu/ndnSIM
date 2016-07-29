@@ -1,0 +1,60 @@
+\hypertarget{classnfd_1_1rib_1_1Route}{}\section{nfd\+:\+:rib\+:\+:Route Class Reference}
+\label{classnfd_1_1rib_1_1Route}\index{nfd\+::rib\+::\+Route@{nfd\+::rib\+::\+Route}}
+
+
+represents a route for a name prefix  
+
+
+
+
+{\ttfamily \#include $<$route.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries operator==} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&other) const\hypertarget{classnfd_1_1rib_1_1Route_abd68db1116477eb87087e255c3773cc5}{}\label{classnfd_1_1rib_1_1Route_abd68db1116477eb87087e255c3773cc5}
+
+\item 
+void {\bfseries set\+Expiration\+Event} (const scheduler\+::\+Event\+Id eid)\hypertarget{classnfd_1_1rib_1_1Route_ab0a70dbdc1f6001e95e8fd8942440c10}{}\label{classnfd_1_1rib_1_1Route_ab0a70dbdc1f6001e95e8fd8942440c10}
+
+\item 
+const scheduler\+::\+Event\+Id \& {\bfseries get\+Expiration\+Event} () const\hypertarget{classnfd_1_1rib_1_1Route_ad9a1fdac16dab33eb69321bad3c89bba}{}\label{classnfd_1_1rib_1_1Route_ad9a1fdac16dab33eb69321bad3c89bba}
+
+\item 
+bool {\bfseries is\+Child\+Inherit} () const\hypertarget{classnfd_1_1rib_1_1Route_a6b256b3314160b037335c62271cd9a97}{}\label{classnfd_1_1rib_1_1Route_a6b256b3314160b037335c62271cd9a97}
+
+\item 
+bool {\bfseries is\+Capture} () const\hypertarget{classnfd_1_1rib_1_1Route_a67f9bc988becf66dfa07e0dadee85653}{}\label{classnfd_1_1rib_1_1Route_a67f9bc988becf66dfa07e0dadee85653}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t {\bfseries face\+Id}\hypertarget{classnfd_1_1rib_1_1Route_ad50078c42e303f2fca57ebb3cf9ba61d}{}\label{classnfd_1_1rib_1_1Route_ad50078c42e303f2fca57ebb3cf9ba61d}
+
+\item 
+uint64\+\_\+t {\bfseries origin}\hypertarget{classnfd_1_1rib_1_1Route_a233be12824c4fea87d63431dc90bb50a}{}\label{classnfd_1_1rib_1_1Route_a233be12824c4fea87d63431dc90bb50a}
+
+\item 
+uint64\+\_\+t {\bfseries flags}\hypertarget{classnfd_1_1rib_1_1Route_a088e9d6d36a22b64d90e775399e6645b}{}\label{classnfd_1_1rib_1_1Route_a088e9d6d36a22b64d90e775399e6645b}
+
+\item 
+uint64\+\_\+t {\bfseries cost}\hypertarget{classnfd_1_1rib_1_1Route_a2422574f71f01009f9e6e6f2c00ece92}{}\label{classnfd_1_1rib_1_1Route_a2422574f71f01009f9e6e6f2c00ece92}
+
+\item 
+time\+::steady\+\_\+clock\+::\+Time\+Point {\bfseries expires}\hypertarget{classnfd_1_1rib_1_1Route_a6a1e842ad529f8e99eceeda9fd75ec93}{}\label{classnfd_1_1rib_1_1Route_a6a1e842ad529f8e99eceeda9fd75ec93}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a route for a name prefix 
+
+Definition at line 37 of file route.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/route.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/route.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\hypertarget{classnfd_1_1DeadNonceList}{}\section{nfd\+:\+:Dead\+Nonce\+List Class Reference}
+\label{classnfd_1_1DeadNonceList}\index{nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}}
+
+
+represents the Dead Nonce list  
+
+
+
+
+{\ttfamily \#include $<$dead-\/nonce-\/list.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Dead\+Nonce\+List\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1DeadNonceList}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1DeadNonceList_a9bb957fb8255097b73106f4c25298086}{Dead\+Nonce\+List} (const time\+::nanoseconds \&lifetime=\hyperlink{classnfd_1_1DeadNonceList_a920d3d1b46f04b27cb162b12c482a3fc}{D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+F\+E\+T\+I\+ME})
+\begin{DoxyCompactList}\small\item\em constructs the Dead Nonce List \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1DeadNonceList_a72d5cc819a5424be2ebf3320ef450113}{has} (const \hyperlink{classndn_1_1Name}{Name} \&name, uint32\+\_\+t nonce) const
+\begin{DoxyCompactList}\small\item\em determines if name+nonce exists \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1DeadNonceList_aa4e1ae3a3078544fe1d28fac037c2d6e}{add} (const \hyperlink{classndn_1_1Name}{Name} \&name, uint32\+\_\+t nonce)\hypertarget{classnfd_1_1DeadNonceList_aa4e1ae3a3078544fe1d28fac037c2d6e}{}\label{classnfd_1_1DeadNonceList_aa4e1ae3a3078544fe1d28fac037c2d6e}
+
+\begin{DoxyCompactList}\small\item\em records name+nonce \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnfd_1_1DeadNonceList_a7ae6e2e76d15154c40e51122eb6f7145}{size} () const
+\item 
+const time\+::nanoseconds \& \hyperlink{classnfd_1_1DeadNonceList_a967388241d9be15f0a194b7be2727490}{get\+Lifetime} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const time\+::nanoseconds \hyperlink{classnfd_1_1DeadNonceList_a920d3d1b46f04b27cb162b12c482a3fc}{D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+F\+E\+T\+I\+ME} = time\+::seconds(6)\hypertarget{classnfd_1_1DeadNonceList_a920d3d1b46f04b27cb162b12c482a3fc}{}\label{classnfd_1_1DeadNonceList_a920d3d1b46f04b27cb162b12c482a3fc}
+
+\begin{DoxyCompactList}\small\item\em default entry lifetime \end{DoxyCompactList}\item 
+static const time\+::nanoseconds \hyperlink{classnfd_1_1DeadNonceList_ab381814adcd0b687b47162e2a0445535}{M\+I\+N\+\_\+\+L\+I\+F\+E\+T\+I\+ME} = time\+::milliseconds(1)\hypertarget{classnfd_1_1DeadNonceList_ab381814adcd0b687b47162e2a0445535}{}\label{classnfd_1_1DeadNonceList_ab381814adcd0b687b47162e2a0445535}
+
+\begin{DoxyCompactList}\small\item\em minimum entry lifetime \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the Dead Nonce list 
+
+The Dead Nonce List is a global table that supplements P\+IT for loop detection. When a Nonce is erased (dead) from P\+IT entry, the Nonce and the Interest Name is added to Dead Nonce List, and kept for a duration in which most loops are expected to have occured.
+
+To reduce memory usage, the Interest Name and Nonce are stored as a 64-\/bit hash. There could be false positives (non-\/looping Interest could be considered looping), but the probability is small, and the error is recoverable when consumer retransmits with a different Nonce.
+
+To reduce memory usage, entries do not have associated timestamps. Instead, lifetime of entries is controlled by dynamically adjusting the capacity of the container. At fixed intervals, the M\+A\+RK, an entry with a special value, is inserted into the container. The number of M\+A\+R\+Ks stored in the container reflects the lifetime of entries, because M\+A\+R\+Ks are inserted at fixed intervals. 
+
+Definition at line 54 of file dead-\/nonce-\/list.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}!Dead\+Nonce\+List@{Dead\+Nonce\+List}}
+\index{Dead\+Nonce\+List@{Dead\+Nonce\+List}!nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}}
+\subsubsection[{\texorpdfstring{Dead\+Nonce\+List(const time\+::nanoseconds \&lifetime=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+F\+E\+T\+I\+M\+E)}{DeadNonceList(const time::nanoseconds \&lifetime=DEFAULT\_LIFETIME)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::\+Dead\+Nonce\+List\+::\+Dead\+Nonce\+List (
+\begin{DoxyParamCaption}
+\item[{const time\+::nanoseconds \&}]{lifetime = {\ttfamily {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+F\+E\+T\+I\+ME}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classnfd_1_1DeadNonceList_a9bb957fb8255097b73106f4c25298086}{}\label{classnfd_1_1DeadNonceList_a9bb957fb8255097b73106f4c25298086}
+
+
+constructs the Dead Nonce List 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lifetime} & duration of the expected lifetime of each nonce, must be no less than M\+I\+N\+\_\+\+L\+I\+F\+E\+T\+I\+ME. This should be set to the duration in which most loops would have occured. A loop cannot be detected if delay of the cycle is greater than lifetime. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if lifetime is less than M\+I\+N\+\_\+\+L\+I\+F\+E\+T\+I\+ME \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 45 of file dead-\/nonce-\/list.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}!get\+Lifetime@{get\+Lifetime}}
+\index{get\+Lifetime@{get\+Lifetime}!nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}}
+\subsubsection[{\texorpdfstring{get\+Lifetime() const}{getLifetime() const}}]{\setlength{\rightskip}{0pt plus 5cm}const time\+::nanoseconds \& nfd\+::\+Dead\+Nonce\+List\+::get\+Lifetime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1DeadNonceList_a967388241d9be15f0a194b7be2727490}{}\label{classnfd_1_1DeadNonceList_a967388241d9be15f0a194b7be2727490}
+\begin{DoxyReturn}{Returns}
+expected lifetime 
+\end{DoxyReturn}
+
+
+Definition at line 215 of file dead-\/nonce-\/list.\+hpp.
+
+\index{nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}!has@{has}}
+\index{has@{has}!nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}}
+\subsubsection[{\texorpdfstring{has(const Name \&name, uint32\+\_\+t nonce) const}{has(const Name \&name, uint32\_t nonce) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Dead\+Nonce\+List\+::has (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name, }
+\item[{uint32\+\_\+t}]{nonce}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1DeadNonceList_a72d5cc819a5424be2ebf3320ef450113}{}\label{classnfd_1_1DeadNonceList_a72d5cc819a5424be2ebf3320ef450113}
+
+
+determines if name+nonce exists 
+
+\begin{DoxyReturn}{Returns}
+true if name+nonce exists 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file dead-\/nonce-\/list.\+cpp.
+
+\index{nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}!size@{size}}
+\index{size@{size}!nfd\+::\+Dead\+Nonce\+List@{nfd\+::\+Dead\+Nonce\+List}}
+\subsubsection[{\texorpdfstring{size() const}{size() const}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t nfd\+::\+Dead\+Nonce\+List\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1DeadNonceList_a7ae6e2e76d15154c40e51122eb6f7145}{}\label{classnfd_1_1DeadNonceList_a7ae6e2e76d15154c40e51122eb6f7145}
+\begin{DoxyReturn}{Returns}
+number of stored Nonces 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The return value does not contain non-\/\+Nonce entries in the index, if any. 
+\end{DoxyNote}
+
+
+Definition at line 84 of file dead-\/nonce-\/list.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/dead-\/nonce-\/list.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/dead-\/nonce-\/list.\+cpp\end{DoxyCompactItemize}

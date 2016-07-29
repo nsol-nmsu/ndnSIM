@@ -1,0 +1,89 @@
+\hypertarget{classndn_1_1Selectors}{}\section{ndn\+:\+:Selectors Class Reference}
+\label{classndn_1_1Selectors}\index{ndn\+::\+Selectors@{ndn\+::\+Selectors}}
+
+
+Abstraction implementing \hyperlink{classndn_1_1Interest}{Interest} selectors.  
+
+
+
+
+{\ttfamily \#include $<$selectors.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Selectors_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Selectors_af1a9d2e19a33dbb677ca7a4c8fe547b8}{Selectors} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1Selectors_af1a9d2e19a33dbb677ca7a4c8fe547b8}{}\label{classndn_1_1Selectors_af1a9d2e19a33dbb677ca7a4c8fe547b8}
+
+\begin{DoxyCompactList}\small\item\em Create from wire encoding. \end{DoxyCompactList}\item 
+bool {\bfseries empty} () const\hypertarget{classndn_1_1Selectors_acc440b11a53126c7ae1a9b4f38439a84}{}\label{classndn_1_1Selectors_acc440b11a53126c7ae1a9b4f38439a84}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1Selectors_add0b547f0ce130b1b7b23ef3f4592aa7}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1Selectors_add0b547f0ce130b1b7b23ef3f4592aa7}{}\label{classndn_1_1Selectors_add0b547f0ce130b1b7b23ef3f4592aa7}
+
+\begin{DoxyCompactList}\small\item\em Fast encoding or block size estimation. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Selectors_ab88f62d352d106b496b48b763afda743}{wire\+Encode} () const\hypertarget{classndn_1_1Selectors_ab88f62d352d106b496b48b763afda743}{}\label{classndn_1_1Selectors_ab88f62d352d106b496b48b763afda743}
+
+\begin{DoxyCompactList}\small\item\em Encode to a wire format. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Selectors_a8d28bc216edbe27d42b9dca9a460d97d}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1Selectors_a8d28bc216edbe27d42b9dca9a460d97d}{}\label{classndn_1_1Selectors_a8d28bc216edbe27d42b9dca9a460d97d}
+
+\begin{DoxyCompactList}\small\item\em Decode the input from wire format. \end{DoxyCompactList}\item 
+int {\bfseries get\+Min\+Suffix\+Components} () const\hypertarget{classndn_1_1Selectors_a62efc57699b8a47454ee5f87c93fe1e6}{}\label{classndn_1_1Selectors_a62efc57699b8a47454ee5f87c93fe1e6}
+
+\item 
+\hyperlink{classndn_1_1Selectors}{Selectors} \& {\bfseries set\+Min\+Suffix\+Components} (int min\+Suffix\+Components)\hypertarget{classndn_1_1Selectors_a8d19afca54a41834dac16cf3e15045e3}{}\label{classndn_1_1Selectors_a8d19afca54a41834dac16cf3e15045e3}
+
+\item 
+int {\bfseries get\+Max\+Suffix\+Components} () const\hypertarget{classndn_1_1Selectors_a21b4aeb2739382acfe209ab82b17d2f7}{}\label{classndn_1_1Selectors_a21b4aeb2739382acfe209ab82b17d2f7}
+
+\item 
+\hyperlink{classndn_1_1Selectors}{Selectors} \& {\bfseries set\+Max\+Suffix\+Components} (int max\+Suffix\+Components)\hypertarget{classndn_1_1Selectors_a4438fca5794d4c23b4f9a0ed93f4f781}{}\label{classndn_1_1Selectors_a4438fca5794d4c23b4f9a0ed93f4f781}
+
+\item 
+const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \& {\bfseries get\+Publisher\+Public\+Key\+Locator} () const\hypertarget{classndn_1_1Selectors_ae7b9afd0ae86071eaa6ceadab00eee89}{}\label{classndn_1_1Selectors_ae7b9afd0ae86071eaa6ceadab00eee89}
+
+\item 
+\hyperlink{classndn_1_1Selectors}{Selectors} \& {\bfseries set\+Publisher\+Public\+Key\+Locator} (const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \&key\+Locator)\hypertarget{classndn_1_1Selectors_a66063d155afebfea3bd72cc85cd5322a}{}\label{classndn_1_1Selectors_a66063d155afebfea3bd72cc85cd5322a}
+
+\item 
+const \hyperlink{classndn_1_1Exclude}{Exclude} \& {\bfseries get\+Exclude} () const\hypertarget{classndn_1_1Selectors_ade7caf557685724a33f56f05be286a97}{}\label{classndn_1_1Selectors_ade7caf557685724a33f56f05be286a97}
+
+\item 
+\hyperlink{classndn_1_1Selectors}{Selectors} \& {\bfseries set\+Exclude} (const \hyperlink{classndn_1_1Exclude}{Exclude} \&exclude)\hypertarget{classndn_1_1Selectors_a3368c3ec702d9ed2704d8118b1caf9e9}{}\label{classndn_1_1Selectors_a3368c3ec702d9ed2704d8118b1caf9e9}
+
+\item 
+int {\bfseries get\+Child\+Selector} () const\hypertarget{classndn_1_1Selectors_a9838f41307bedc62609d2a12824f0488}{}\label{classndn_1_1Selectors_a9838f41307bedc62609d2a12824f0488}
+
+\item 
+\hyperlink{classndn_1_1Selectors}{Selectors} \& {\bfseries set\+Child\+Selector} (int child\+Selector)\hypertarget{classndn_1_1Selectors_a3680bd91f1bcf708835da0b4792a2bc3}{}\label{classndn_1_1Selectors_a3680bd91f1bcf708835da0b4792a2bc3}
+
+\item 
+int {\bfseries get\+Must\+Be\+Fresh} () const\hypertarget{classndn_1_1Selectors_a78bb56531b6332f265b7b83226172cd6}{}\label{classndn_1_1Selectors_a78bb56531b6332f265b7b83226172cd6}
+
+\item 
+\hyperlink{classndn_1_1Selectors}{Selectors} \& {\bfseries set\+Must\+Be\+Fresh} (bool must\+Be\+Fresh)\hypertarget{classndn_1_1Selectors_ae9463ad04e3b26fca818d3798a66abb3}{}\label{classndn_1_1Selectors_ae9463ad04e3b26fca818d3798a66abb3}
+
+\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1Selectors}{Selectors} \&other) const\hypertarget{classndn_1_1Selectors_ac2e2be0d9fb6d875eb6e865310373f64}{}\label{classndn_1_1Selectors_ac2e2be0d9fb6d875eb6e865310373f64}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1Selectors}{Selectors} \&other) const\hypertarget{classndn_1_1Selectors_ac89631718d50231cb1d20683145746d9}{}\label{classndn_1_1Selectors_ac89631718d50231cb1d20683145746d9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstraction implementing \hyperlink{classndn_1_1Interest}{Interest} selectors. 
+
+Definition at line 34 of file selectors.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/selectors.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/selectors.\+cpp\end{DoxyCompactItemize}

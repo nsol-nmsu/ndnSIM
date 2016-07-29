@@ -1,0 +1,115 @@
+O\+SX provides a standard way to start system daemons, monitor their health, and restart when they die.
+
+\subsection*{Initial setup }
+
+Edit {\ttfamily net.\+named-\/data.\+nfd} correcting paths for {\ttfamily nfd} binary, configuration and log files. \begin{DoxyVerb}# Copy launchd.plist for NFD
+sudo cp net.named-data.nfd.plist /Library/LaunchDaemons/
+sudo chown root /Library/LaunchDaemons/net.named-data.nfd.plist
+\end{DoxyVerb}
+
+
+\subsubsection*{Assumptions in the default scripts}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily nfd} is installed into {\ttfamily /usr/local/bin}
+\item Configuration file is {\ttfamily /usr/local/etc/ndn/nfd.conf}
+\item {\ttfamily nfd} will be run as root
+\item Log files will be written to {\ttfamily /usr/local/var/log/ndn} folder, which is owned by user {\ttfamily ndn}
+\end{DoxyItemize}
+
+\subsubsection*{Creating users}
+
+If {\ttfamily ndn} user does not exists, it needs to be manually created (procedure copied from \href{https://trac.macports.org/browser/trunk/base/src/port1.0/portutil.tcl}{\tt macports script}). Update uid/gid if 6363 is already used. \begin{DoxyVerb}# Create user `ndn`
+sudo dscl . -create /Users/ndn UniqueID 6363
+
+# These are implicitly added on Mac OSX Lion.  AuthenticationAuthority
+# causes the user to be visible in the Users & Groups Preference Pane,
+# and the others are just noise, so delete them.
+# https://trac.macports.org/ticket/30168
+sudo dscl . -delete /Users/ndn AuthenticationAuthority
+sudo dscl . -delete /Users/ndn PasswordPolicyOptions
+sudo dscl . -delete /Users/ndn dsAttrTypeNative:KerberosKeys
+sudo dscl . -delete /Users/ndn dsAttrTypeNative:ShadowHashData
+
+sudo dscl . -create /Users/ndn RealName "NDN User"
+sudo dscl . -create /Users/ndn Password "{*}"
+sudo dscl . -create /Users/ndn PrimaryGroupID 6363
+sudo dscl . -create /Users/ndn NFSHomeDirectory /var/empty
+sudo dscl . -create /Users/ndn UserShell /usr/bin/false
+
+# Create group `ndn`
+sudo dscl . -create /Groupsndn Password "{*}"
+sudo dscl . -create /Groups/ndn RealName "NDN User"
+sudo dscl . -create /Groups/ndn PrimaryGroupID 6363
+\end{DoxyVerb}
+
+
+\subsubsection*{Creating folders}
+
+Folder {\ttfamily /usr/local/var/log/ndn} should be created and assigned proper user and group\+: \begin{DoxyVerb}sudo mkdir -p /usr/local/var/log/ndn
+sudo chown -R ndn:ndn /usr/local/var/log/ndn
+\end{DoxyVerb}
+
+
+{\ttfamily H\+O\+ME} directory for {\ttfamily nfd} should be created and configured with correct library\textquotesingle{}s config file and contain proper N\+DN security credentials for signing Data packets. This is necessary since default private key storage on O\+SX ({\ttfamily osx-\/keychain}) does not support non-\/interactive access, and file-\/based private key storage needs to be used\+: \begin{DoxyVerb}# Create HOME and generate self-signed NDN certificate for nfd
+sudo -s -- ' \
+  mkdir -p /usr/local/var/lib/ndn/nfd/.ndn; \
+  export HOME=/usr/local/var/lib/ndn/nfd; \
+  echo tpm=tpm-file > /usr/local/var/lib/ndn/nfd/.ndn/client.conf; \
+  ndnsec-keygen /localhost/daemons/nfd | ndnsec-install-cert -; \
+'
+\end{DoxyVerb}
+
+
+\subsubsection*{Configuring N\+FD\textquotesingle{}s security}
+
+N\+FD sample configuration allows anybody to create faces, add nexthops to F\+IB, and set strategy choice for namespaces. While such settings could be a good start, it is generally not a good idea to run N\+FD in this mode.
+
+While thorough discussion about security configuration of N\+FD is outside the scope of this document, at least the following change should be done to nfd.\+conf in authorize section\+: \begin{DoxyVerb}authorizations
+{
+  authorize
+  {
+    certfile certs/localhost_daemons_nfd.ndncert
+    privileges
+    {
+        faces
+        fib
+        strategy-choice
+    }
+  }
+
+  authorize
+  {
+    certfile any
+    privileges
+    {
+        faces
+        strategy-choice
+    }
+  }
+}
+\end{DoxyVerb}
+
+
+While this configuration still allows management of faces and updating strategy choice by anybody, only N\+FD\textquotesingle{}s R\+IB Manager (i.\+e., N\+FD itself) is allowed to manage F\+IB.
+
+As the final step to make this configuration work, N\+FD\textquotesingle{}s self-\/signed certificate needs to be exported into {\ttfamily localhost\+\_\+daemons\+\_\+nfd.\+ndncert} file\+: \begin{DoxyVerb}sudo -s -- '\
+  mkdir -p /usr/local/etc/ndn/certs || true; \
+  export HOME=/usr/local/var/lib/ndn/nfd; \
+  ndnsec-dump-certificate -i /localhost/daemons/nfd > \
+    /usr/local/etc/ndn/certs/localhost_daemons_nfd.ndncert; \
+  '
+\end{DoxyVerb}
+
+
+\subsection*{Enable auto-\/start }
+
+\begin{DoxyVerb}sudo launchctl load -w /Library/LaunchDaemons/net.named-data.nfd.plist
+\end{DoxyVerb}
+
+
+\subsection*{Disable auto-\/start }
+
+\begin{DoxyVerb}sudo launchctl unload -w /Library/LaunchDaemons/net.named-data.nfd.plist\end{DoxyVerb}
+ 

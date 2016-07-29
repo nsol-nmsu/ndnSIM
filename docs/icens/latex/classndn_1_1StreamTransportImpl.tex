@@ -1,0 +1,126 @@
+\hypertarget{classndn_1_1StreamTransportImpl}{}\section{ndn\+:\+:Stream\+Transport\+Impl$<$ Base\+Transport, Protocol $>$ Class Template Reference}
+\label{classndn_1_1StreamTransportImpl}\index{ndn\+::\+Stream\+Transport\+Impl$<$ Base\+Transport, Protocol $>$@{ndn\+::\+Stream\+Transport\+Impl$<$ Base\+Transport, Protocol $>$}}
+Inheritance diagram for ndn\+:\+:Stream\+Transport\+Impl$<$ Base\+Transport, Protocol $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1StreamTransportImpl}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classndn_1_1StreamTransportImpl}{Stream\+Transport\+Impl}$<$ Base\+Transport, Protocol $>$ {\bfseries Impl}\hypertarget{classndn_1_1StreamTransportImpl_a138bb46f364a7bc7db0f2d0691529196}{}\label{classndn_1_1StreamTransportImpl_a138bb46f364a7bc7db0f2d0691529196}
+
+\item 
+typedef std\+::list$<$ \hyperlink{classndn_1_1Block}{Block} $>$ {\bfseries Block\+Sequence}\hypertarget{classndn_1_1StreamTransportImpl_a36c9079f49f9a194cccb6c1f0a79803a}{}\label{classndn_1_1StreamTransportImpl_a36c9079f49f9a194cccb6c1f0a79803a}
+
+\item 
+typedef std\+::list$<$ Block\+Sequence $>$ {\bfseries Transmission\+Queue}\hypertarget{classndn_1_1StreamTransportImpl_afdca3b6b21361e136fa9b364124d5606}{}\label{classndn_1_1StreamTransportImpl_afdca3b6b21361e136fa9b364124d5606}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Stream\+Transport\+Impl} (Base\+Transport \&transport, boost\+::asio\+::io\+\_\+service \&io\+Service)\hypertarget{classndn_1_1StreamTransportImpl_ae29a210b327deef1c52bde95d1d3b35d}{}\label{classndn_1_1StreamTransportImpl_ae29a210b327deef1c52bde95d1d3b35d}
+
+\item 
+void {\bfseries connect\+Handler} (const boost\+::system\+::error\+\_\+code \&error)\hypertarget{classndn_1_1StreamTransportImpl_af03dc0e8267d1f937fe570e64148117f}{}\label{classndn_1_1StreamTransportImpl_af03dc0e8267d1f937fe570e64148117f}
+
+\item 
+void {\bfseries connect\+Timeout\+Handler} (const boost\+::system\+::error\+\_\+code \&error)\hypertarget{classndn_1_1StreamTransportImpl_ad8d4c2a31366712fb74e22663d0c906d}{}\label{classndn_1_1StreamTransportImpl_ad8d4c2a31366712fb74e22663d0c906d}
+
+\item 
+void \hyperlink{classndn_1_1StreamTransportImpl_a18f5d3a18d375d9cb9ce075e5f10aef8}{connect} (const typename Protocol\+::endpoint \&endpoint)
+\item 
+void {\bfseries close} ()\hypertarget{classndn_1_1StreamTransportImpl_ae89e2ecd27402a1c9bebd3b1c99c7067}{}\label{classndn_1_1StreamTransportImpl_ae89e2ecd27402a1c9bebd3b1c99c7067}
+
+\item 
+void {\bfseries pause} ()\hypertarget{classndn_1_1StreamTransportImpl_a16a0693baa8833d444ff8fc5e0f53034}{}\label{classndn_1_1StreamTransportImpl_a16a0693baa8833d444ff8fc5e0f53034}
+
+\item 
+void \hyperlink{classndn_1_1StreamTransportImpl_a655262fb39e654898f610dfe57bb8091}{resume} ()
+\item 
+void {\bfseries send} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1StreamTransportImpl_a3118594ff0bf31acc5bc83f2c8161cec}{}\label{classndn_1_1StreamTransportImpl_a3118594ff0bf31acc5bc83f2c8161cec}
+
+\item 
+void {\bfseries send} (const \hyperlink{classndn_1_1Block}{Block} \&header, const \hyperlink{classndn_1_1Block}{Block} \&payload)\hypertarget{classndn_1_1StreamTransportImpl_af8dad3c46a8e6d3670630252e9824207}{}\label{classndn_1_1StreamTransportImpl_af8dad3c46a8e6d3670630252e9824207}
+
+\item 
+void {\bfseries handle\+Async\+Write} (const boost\+::system\+::error\+\_\+code \&error, Transmission\+Queue\+::iterator queue\+Item)\hypertarget{classndn_1_1StreamTransportImpl_abac5397856a32c8f3fd282de95b2ee2f}{}\label{classndn_1_1StreamTransportImpl_abac5397856a32c8f3fd282de95b2ee2f}
+
+\item 
+bool {\bfseries process\+All} (uint8\+\_\+t $\ast$buffer, size\+\_\+t \&offset, size\+\_\+t n\+Bytes\+Available)\hypertarget{classndn_1_1StreamTransportImpl_a5ebf33656496f6b4e386b05ee2a68d69}{}\label{classndn_1_1StreamTransportImpl_a5ebf33656496f6b4e386b05ee2a68d69}
+
+\item 
+void {\bfseries handle\+Async\+Receive} (const boost\+::system\+::error\+\_\+code \&error, std\+::size\+\_\+t n\+Bytes\+Recvd)\hypertarget{classndn_1_1StreamTransportImpl_a8b1c0dc70c0355c981446ff585ca525b}{}\label{classndn_1_1StreamTransportImpl_a8b1c0dc70c0355c981446ff585ca525b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Base\+Transport \& {\bfseries m\+\_\+transport}\hypertarget{classndn_1_1StreamTransportImpl_ab2df0f9bde365006e96f2f2c157351d6}{}\label{classndn_1_1StreamTransportImpl_ab2df0f9bde365006e96f2f2c157351d6}
+
+\item 
+Protocol\+::socket {\bfseries m\+\_\+socket}\hypertarget{classndn_1_1StreamTransportImpl_a17a3dd00745aafffa42b6224518ad9f6}{}\label{classndn_1_1StreamTransportImpl_a17a3dd00745aafffa42b6224518ad9f6}
+
+\item 
+uint8\+\_\+t {\bfseries m\+\_\+input\+Buffer} \mbox{[}\hyperlink{namespacendn_a8117ecf631e92bab09eb41b92ac9b2b6}{M\+A\+X\+\_\+\+N\+D\+N\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE}\mbox{]}\hypertarget{classndn_1_1StreamTransportImpl_ab5332373a5beda15055259347db4bb5b}{}\label{classndn_1_1StreamTransportImpl_ab5332373a5beda15055259347db4bb5b}
+
+\item 
+size\+\_\+t {\bfseries m\+\_\+input\+Buffer\+Size}\hypertarget{classndn_1_1StreamTransportImpl_a1189d8fa8756641f76ab9231ccf5dc9f}{}\label{classndn_1_1StreamTransportImpl_a1189d8fa8756641f76ab9231ccf5dc9f}
+
+\item 
+Transmission\+Queue {\bfseries m\+\_\+transmission\+Queue}\hypertarget{classndn_1_1StreamTransportImpl_ab154e2c774a5af9049acb6d0e70e178e}{}\label{classndn_1_1StreamTransportImpl_ab154e2c774a5af9049acb6d0e70e178e}
+
+\item 
+bool {\bfseries m\+\_\+connection\+In\+Progress}\hypertarget{classndn_1_1StreamTransportImpl_a5d0946f8c9bb739e4cf895b8faabeaf9}{}\label{classndn_1_1StreamTransportImpl_a5d0946f8c9bb739e4cf895b8faabeaf9}
+
+\item 
+boost\+::asio\+::deadline\+\_\+timer {\bfseries m\+\_\+connect\+Timer}\hypertarget{classndn_1_1StreamTransportImpl_ab14cd2f94d3547933ca98e1396fc6d1d}{}\label{classndn_1_1StreamTransportImpl_ab14cd2f94d3547933ca98e1396fc6d1d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Base\+Transport, class Protocol$>$\\*
+class ndn\+::\+Stream\+Transport\+Impl$<$ Base\+Transport, Protocol $>$}
+
+
+
+Definition at line 32 of file stream-\/transport.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Stream\+Transport\+Impl@{ndn\+::\+Stream\+Transport\+Impl}!connect@{connect}}
+\index{connect@{connect}!ndn\+::\+Stream\+Transport\+Impl@{ndn\+::\+Stream\+Transport\+Impl}}
+\subsubsection[{\texorpdfstring{connect(const typename Protocol\+::endpoint \&endpoint)}{connect(const typename Protocol::endpoint \&endpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Base\+Transport, class Protocol$>$ void {\bf ndn\+::\+Stream\+Transport\+Impl}$<$ Base\+Transport, Protocol $>$\+::connect (
+\begin{DoxyParamCaption}
+\item[{const typename Protocol\+::endpoint \&}]{endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1StreamTransportImpl_a18f5d3a18d375d9cb9ce075e5f10aef8}{}\label{classndn_1_1StreamTransportImpl_a18f5d3a18d375d9cb9ce075e5f10aef8}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000011}{Todo}]Decide whether this number should be configurable \end{DoxyRefDesc}
+
+
+Definition at line 86 of file stream-\/transport.\+hpp.
+
+\index{ndn\+::\+Stream\+Transport\+Impl@{ndn\+::\+Stream\+Transport\+Impl}!resume@{resume}}
+\index{resume@{resume}!ndn\+::\+Stream\+Transport\+Impl@{ndn\+::\+Stream\+Transport\+Impl}}
+\subsubsection[{\texorpdfstring{resume()}{resume()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Base\+Transport, class Protocol$>$ void {\bf ndn\+::\+Stream\+Transport\+Impl}$<$ Base\+Transport, Protocol $>$\+::resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1StreamTransportImpl_a655262fb39e654898f610dfe57bb8091}{}\label{classndn_1_1StreamTransportImpl_a655262fb39e654898f610dfe57bb8091}
+\begin{DoxyWarning}{Warning}
+Must not be called directly or indirectly from within handle\+Async\+Receive invocation 
+\end{DoxyWarning}
+
+
+Definition at line 134 of file stream-\/transport.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/transport/stream-\/transport.\+hpp\end{DoxyCompactItemize}

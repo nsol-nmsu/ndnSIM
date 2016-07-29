@@ -1,0 +1,209 @@
+\hypertarget{classns3_1_1ndn_1_1L3Protocol}{}\section{ns3\+:\+:ndn\+:\+:L3\+Protocol Class Reference}
+\label{classns3_1_1ndn_1_1L3Protocol}\index{ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}}
+
+
+Implementation network-\/layer of N\+DN stack.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/l3-\/protocol.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:L3\+Protocol\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1ndn_1_1L3Protocol}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classns3_1_1ndn_1_1L3Protocol_1_1Impl}{Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Interest\+Trace\+Callback}) (const Interest \&, const \hyperlink{classnfd_1_1Face}{Face} \&)\hypertarget{classns3_1_1ndn_1_1L3Protocol_ab5b370a7a6c85bf68f6a11a87b8962af}{}\label{classns3_1_1ndn_1_1L3Protocol_ab5b370a7a6c85bf68f6a11a87b8962af}
+
+\item 
+typedef void($\ast$ {\bfseries Data\+Trace\+Callback}) (const Data \&, const \hyperlink{classnfd_1_1Face}{Face} \&)\hypertarget{classns3_1_1ndn_1_1L3Protocol_a6c030730fdf44b7e4b52eb4ff700b076}{}\label{classns3_1_1ndn_1_1L3Protocol_a6c030730fdf44b7e4b52eb4ff700b076}
+
+\item 
+typedef void($\ast$ {\bfseries Satisfied\+Interests\+Callback}) (const \hyperlink{classnfd_1_1pit_1_1Entry}{nfd\+::pit\+::\+Entry} \&pit\+Entry, const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const Data \&data)\hypertarget{classns3_1_1ndn_1_1L3Protocol_ab37e69db1b87fc4d98c68df0bbf306b0}{}\label{classns3_1_1ndn_1_1L3Protocol_ab37e69db1b87fc4d98c68df0bbf306b0}
+
+\item 
+typedef void($\ast$ {\bfseries Timed\+Out\+Interests\+Callback}) (const \hyperlink{classnfd_1_1pit_1_1Entry}{nfd\+::pit\+::\+Entry} \&pit\+Entry)\hypertarget{classns3_1_1ndn_1_1L3Protocol_afcc85949c6978cdd5cd7f458e59be72f}{}\label{classns3_1_1ndn_1_1L3Protocol_afcc85949c6978cdd5cd7f458e59be72f}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1L3Protocol_a3d798a7eaf77ae8c8af8c195d667f0c5}{L3\+Protocol} ()\hypertarget{classns3_1_1ndn_1_1L3Protocol_a3d798a7eaf77ae8c8af8c195d667f0c5}{}\label{classns3_1_1ndn_1_1L3Protocol_a3d798a7eaf77ae8c8af8c195d667f0c5}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates an empty stack without forwarding strategy set. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Forwarder}{nfd\+::\+Forwarder} $>$ \hyperlink{classns3_1_1ndn_1_1L3Protocol_a99e50a33b78f8dbe205499a7bc23f888}{get\+Forwarder} ()\hypertarget{classns3_1_1ndn_1_1L3Protocol_a99e50a33b78f8dbe205499a7bc23f888}{}\label{classns3_1_1ndn_1_1L3Protocol_a99e50a33b78f8dbe205499a7bc23f888}
+
+\begin{DoxyCompactList}\small\item\em Get smart pointer to \hyperlink{classnfd_1_1Forwarder}{nfd\+::\+Forwarder} installed on the node. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1FibManager}{nfd\+::\+Fib\+Manager} $>$ \hyperlink{classns3_1_1ndn_1_1L3Protocol_acd87119ac6467ed5eb5d84770e8b1414}{get\+Fib\+Manager} ()\hypertarget{classns3_1_1ndn_1_1L3Protocol_acd87119ac6467ed5eb5d84770e8b1414}{}\label{classns3_1_1ndn_1_1L3Protocol_acd87119ac6467ed5eb5d84770e8b1414}
+
+\begin{DoxyCompactList}\small\item\em Get smart pointer to \hyperlink{classnfd_1_1FibManager}{nfd\+::\+Fib\+Manager}, used by node\textquotesingle{}s N\+FD. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1StrategyChoiceManager}{nfd\+::\+Strategy\+Choice\+Manager} $>$ \hyperlink{classns3_1_1ndn_1_1L3Protocol_ae93294753f0c40d9ba4f4027382d9417}{get\+Strategy\+Choice\+Manager} ()\hypertarget{classns3_1_1ndn_1_1L3Protocol_ae93294753f0c40d9ba4f4027382d9417}{}\label{classns3_1_1ndn_1_1L3Protocol_ae93294753f0c40d9ba4f4027382d9417}
+
+\begin{DoxyCompactList}\small\item\em Get smart pointer to \hyperlink{classnfd_1_1StrategyChoiceManager}{nfd\+::\+Strategy\+Choice\+Manager}, used by node\textquotesingle{}s N\+FD. \end{DoxyCompactList}\item 
+nfd\+::\+Face\+Id \hyperlink{classns3_1_1ndn_1_1L3Protocol_a24f0ec708616b619f8e263db3eaedca2}{add\+Face} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)
+\begin{DoxyCompactList}\small\item\em Add face to N\+DN stack. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \hyperlink{classns3_1_1ndn_1_1L3Protocol_a01d318e6840684e6089edd2cbe429570}{get\+Face\+By\+Id} (nfd\+::\+Face\+Id face) const
+\begin{DoxyCompactList}\small\item\em Get face by face ID. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \hyperlink{classns3_1_1ndn_1_1L3Protocol_a42cf6b110df4c620a3fb46b0be23decb}{get\+Face\+By\+Net\+Device} (Ptr$<$ Net\+Device $>$ net\+Device) const
+\begin{DoxyCompactList}\small\item\em Remove face from ndn stack (remove callbacks) \end{DoxyCompactList}\item 
+nfd\+::\+Config\+Section \& \hyperlink{classns3_1_1ndn_1_1L3Protocol_a9e22fc46fedaf271f0f28238075c9857}{get\+Config} ()\hypertarget{classns3_1_1ndn_1_1L3Protocol_a9e22fc46fedaf271f0f28238075c9857}{}\label{classns3_1_1ndn_1_1L3Protocol_a9e22fc46fedaf271f0f28238075c9857}
+
+\begin{DoxyCompactList}\small\item\em Get N\+FD config (boost\+::property\+\_\+tree) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id \hyperlink{classns3_1_1ndn_1_1L3Protocol_a63a73159fe984d369b1ef794e5b271ea}{Get\+Type\+Id} ()
+\begin{DoxyCompactList}\small\item\em Interface ID. \end{DoxyCompactList}\item 
+static Ptr$<$ \hyperlink{classns3_1_1ndn_1_1L3Protocol}{L3\+Protocol} $>$ {\bfseries get\+L3\+Protocol} (Ptr$<$ Object $>$ node)\hypertarget{classns3_1_1ndn_1_1L3Protocol_a41b587333a8c4120d55c36ce3e1adcd8}{}\label{classns3_1_1ndn_1_1L3Protocol_a41b587333a8c4120d55c36ce3e1adcd8}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint16\+\_\+t \hyperlink{classns3_1_1ndn_1_1L3Protocol_ae964ffae6ec488df129aa7ac898f8c61}{E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+T\+Y\+PE} = 0x7777\hypertarget{classns3_1_1ndn_1_1L3Protocol_ae964ffae6ec488df129aa7ac898f8c61}{}\label{classns3_1_1ndn_1_1L3Protocol_ae964ffae6ec488df129aa7ac898f8c61}
+
+\begin{DoxyCompactList}\small\item\em Ethernet Frame Type of Ndn. \end{DoxyCompactList}\item 
+static const uint16\+\_\+t \hyperlink{classns3_1_1ndn_1_1L3Protocol_ab1751fa071c4d83968c866062fa0aa95}{I\+P\+\_\+\+S\+T\+A\+C\+K\+\_\+\+P\+O\+RT} = 9695\hypertarget{classns3_1_1ndn_1_1L3Protocol_ab1751fa071c4d83968c866062fa0aa95}{}\label{classns3_1_1ndn_1_1L3Protocol_ab1751fa071c4d83968c866062fa0aa95}
+
+\begin{DoxyCompactList}\small\item\em T\+C\+P/\+U\+DP port for N\+DN stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1L3Protocol_a73cafd0adc52ac5909a974bb3203f923}{Do\+Dispose} (void)\hypertarget{classns3_1_1ndn_1_1L3Protocol_a73cafd0adc52ac5909a974bb3203f923}{}\label{classns3_1_1ndn_1_1L3Protocol_a73cafd0adc52ac5909a974bb3203f923}
+
+\begin{DoxyCompactList}\small\item\em Do cleanup. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1L3Protocol_a7f55324e375e710367bed078b146c081}{Notify\+New\+Aggregate} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation network-\/layer of N\+DN stack. 
+
+This class defines the A\+PI to manipulate the following aspects of the N\+DN stack implementation\+:
+\begin{DoxyEnumerate}
+\item register a face (Face-\/derived object) for use by the N\+DN layer
+\end{DoxyEnumerate}
+
+Each Face-\/derived object has conceptually a single N\+DN interface associated with it.
+
+In addition, this class defines N\+DN packet coding constants
+
+\begin{DoxySeeAlso}{See also}
+Face, Forwarding\+Strategy 
+\end{DoxySeeAlso}
+
+
+Definition at line 75 of file ndn-\/l3-\/protocol.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}!add\+Face@{add\+Face}}
+\index{add\+Face@{add\+Face}!ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}}
+\subsubsection[{\texorpdfstring{add\+Face(shared\+\_\+ptr$<$ Face $>$ face)}{addFace(shared\_ptr< Face > face)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::\+Face\+Id ns3\+::ndn\+::\+L3\+Protocol\+::add\+Face (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1L3Protocol_a24f0ec708616b619f8e263db3eaedca2}{}\label{classns3_1_1ndn_1_1L3Protocol_a24f0ec708616b619f8e263db3eaedca2}
+
+
+Add face to N\+DN stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & smart pointer to Face-\/derived object (\hyperlink{classns3_1_1ndn_1_1AppFace}{App\+Face}, \hyperlink{classns3_1_1ndn_1_1NetDeviceFace}{Net\+Device\+Face}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nfd\+::\+Face\+Id
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classns3_1_1ndn_1_1AppFace}{App\+Face}, \hyperlink{classns3_1_1ndn_1_1NetDeviceFace}{Net\+Device\+Face} 
+\end{DoxySeeAlso}
+
+
+Definition at line 359 of file ndn-\/l3-\/protocol.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}!get\+Face\+By\+Id@{get\+Face\+By\+Id}}
+\index{get\+Face\+By\+Id@{get\+Face\+By\+Id}!ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}}
+\subsubsection[{\texorpdfstring{get\+Face\+By\+Id(nfd\+::\+Face\+Id face) const}{getFaceById(nfd::FaceId face) const}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Face} $>$ ns3\+::ndn\+::\+L3\+Protocol\+::get\+Face\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{nfd\+::\+Face\+Id}]{face}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1L3Protocol_a01d318e6840684e6089edd2cbe429570}{}\label{classns3_1_1ndn_1_1L3Protocol_a01d318e6840684e6089edd2cbe429570}
+
+
+Get face by face ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The face ID number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Face associated with the Ndn face number. 
+\end{DoxyReturn}
+
+
+Definition at line 386 of file ndn-\/l3-\/protocol.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}!get\+Face\+By\+Net\+Device@{get\+Face\+By\+Net\+Device}}
+\index{get\+Face\+By\+Net\+Device@{get\+Face\+By\+Net\+Device}!ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}}
+\subsubsection[{\texorpdfstring{get\+Face\+By\+Net\+Device(\+Ptr$<$ Net\+Device $>$ net\+Device) const}{getFaceByNetDevice(Ptr< NetDevice > netDevice) const}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Face} $>$ ns3\+::ndn\+::\+L3\+Protocol\+::get\+Face\+By\+Net\+Device (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Net\+Device $>$}]{net\+Device}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1L3Protocol_a42cf6b110df4c620a3fb46b0be23decb}{}\label{classns3_1_1ndn_1_1L3Protocol_a42cf6b110df4c620a3fb46b0be23decb}
+
+
+Remove face from ndn stack (remove callbacks) 
+
+Get face for Net\+Device 
+
+Definition at line 392 of file ndn-\/l3-\/protocol.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}!Get\+Type\+Id@{Get\+Type\+Id}}
+\index{Get\+Type\+Id@{Get\+Type\+Id}!ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}}
+\subsubsection[{\texorpdfstring{Get\+Type\+Id()}{GetTypeId()}}]{\setlength{\rightskip}{0pt plus 5cm}Type\+Id ns3\+::ndn\+::\+L3\+Protocol\+::\+Get\+Type\+Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1L3Protocol_a63a73159fe984d369b1ef794e5b271ea}{}\label{classns3_1_1ndn_1_1L3Protocol_a63a73159fe984d369b1ef794e5b271ea}
+
+
+Interface ID. 
+
+\begin{DoxyReturn}{Returns}
+interface ID 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file ndn-\/l3-\/protocol.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}!Notify\+New\+Aggregate@{Notify\+New\+Aggregate}}
+\index{Notify\+New\+Aggregate@{Notify\+New\+Aggregate}!ns3\+::ndn\+::\+L3\+Protocol@{ns3\+::ndn\+::\+L3\+Protocol}}
+\subsubsection[{\texorpdfstring{Notify\+New\+Aggregate()}{NotifyNewAggregate()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+L3\+Protocol\+::\+Notify\+New\+Aggregate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1L3Protocol_a7f55324e375e710367bed078b146c081}{}\label{classns3_1_1ndn_1_1L3Protocol_a7f55324e375e710367bed078b146c081}
+This function will notify other components connected to the node that a new stack member is now connected This will be used to notify Layer 3 protocol of layer 4 protocol stack to connect them together. 
+
+Definition at line 330 of file ndn-\/l3-\/protocol.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/ndn-\/l3-\/protocol.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/ndn-\/l3-\/protocol.\+cpp\end{DoxyCompactItemize}

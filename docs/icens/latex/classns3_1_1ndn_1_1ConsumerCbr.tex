@@ -1,0 +1,109 @@
+\hypertarget{classns3_1_1ndn_1_1ConsumerCbr}{}\section{ns3\+:\+:ndn\+:\+:Consumer\+Cbr Class Reference}
+\label{classns3_1_1ndn_1_1ConsumerCbr}\index{ns3\+::ndn\+::\+Consumer\+Cbr@{ns3\+::ndn\+::\+Consumer\+Cbr}}
+
+
+Ndn application for sending out Interest packets at a \char`\"{}constant\char`\"{} rate (Poisson process)  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/consumer-\/cbr.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Consumer\+Cbr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classns3_1_1ndn_1_1ConsumerCbr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1ConsumerCbr_a3db86ee504c87a06c7a972706f0cd5ff}{Consumer\+Cbr} ()\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_a3db86ee504c87a06c7a972706f0cd5ff}{}\label{classns3_1_1ndn_1_1ConsumerCbr_a3db86ee504c87a06c7a972706f0cd5ff}
+
+\begin{DoxyCompactList}\small\item\em Default constructor Sets up randomizer function and packet sequence number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} ()\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_aceb273c0a5cf6c83028eaca72041f691}{}\label{classns3_1_1ndn_1_1ConsumerCbr_aceb273c0a5cf6c83028eaca72041f691}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1ConsumerCbr_ab64b723e571debefced5abe3bd492080}{Schedule\+Next\+Packet} ()\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_ab64b723e571debefced5abe3bd492080}{}\label{classns3_1_1ndn_1_1ConsumerCbr_ab64b723e571debefced5abe3bd492080}
+
+\begin{DoxyCompactList}\small\item\em Constructs the Interest packet and sends it using a callback to the underlying N\+DN protocol. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1ConsumerCbr_a437caf4ce25094b75e2c9103d9882e8a}{Set\+Randomize} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Set type of frequency randomization. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classns3_1_1ndn_1_1ConsumerCbr_ab43fafc85b3c4f616700a16011e27908}{Get\+Randomize} () const
+\begin{DoxyCompactList}\small\item\em Get type of frequency randomization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries m\+\_\+frequency}\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_a17d275f737c43be48a0a1e19ae393890}{}\label{classns3_1_1ndn_1_1ConsumerCbr_a17d275f737c43be48a0a1e19ae393890}
+
+\item 
+bool {\bfseries m\+\_\+first\+Time}\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_a814639309e9e302ec0d3e00c123019bf}{}\label{classns3_1_1ndn_1_1ConsumerCbr_a814639309e9e302ec0d3e00c123019bf}
+
+\item 
+Ptr$<$ Random\+Variable\+Stream $>$ {\bfseries m\+\_\+random}\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_a870c87e088646858f209fc07a80ad968}{}\label{classns3_1_1ndn_1_1ConsumerCbr_a870c87e088646858f209fc07a80ad968}
+
+\item 
+std\+::string {\bfseries m\+\_\+random\+Type}\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_ab52fb6a1d6b6114a8e5feae9ca5764e9}{}\label{classns3_1_1ndn_1_1ConsumerCbr_ab52fb6a1d6b6114a8e5feae9ca5764e9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Ndn application for sending out Interest packets at a \char`\"{}constant\char`\"{} rate (Poisson process) 
+
+Definition at line 34 of file ndn-\/consumer-\/cbr.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Consumer\+Cbr@{ns3\+::ndn\+::\+Consumer\+Cbr}!Get\+Randomize@{Get\+Randomize}}
+\index{Get\+Randomize@{Get\+Randomize}!ns3\+::ndn\+::\+Consumer\+Cbr@{ns3\+::ndn\+::\+Consumer\+Cbr}}
+\subsubsection[{\texorpdfstring{Get\+Randomize() const}{GetRandomize() const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ns3\+::ndn\+::\+Consumer\+Cbr\+::\+Get\+Randomize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_ab43fafc85b3c4f616700a16011e27908}{}\label{classns3_1_1ndn_1_1ConsumerCbr_ab43fafc85b3c4f616700a16011e27908}
+
+
+Get type of frequency randomization. 
+
+\begin{DoxyReturn}{Returns}
+either \textquotesingle{}none\textquotesingle{}, \textquotesingle{}uniform\textquotesingle{}, or \textquotesingle{}exponential\textquotesingle{} 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file ndn-\/consumer-\/cbr.\+cpp.
+
+\index{ns3\+::ndn\+::\+Consumer\+Cbr@{ns3\+::ndn\+::\+Consumer\+Cbr}!Set\+Randomize@{Set\+Randomize}}
+\index{Set\+Randomize@{Set\+Randomize}!ns3\+::ndn\+::\+Consumer\+Cbr@{ns3\+::ndn\+::\+Consumer\+Cbr}}
+\subsubsection[{\texorpdfstring{Set\+Randomize(const std\+::string \&value)}{SetRandomize(const std::string \&value)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Consumer\+Cbr\+::\+Set\+Randomize (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classns3_1_1ndn_1_1ConsumerCbr_a437caf4ce25094b75e2c9103d9882e8a}{}\label{classns3_1_1ndn_1_1ConsumerCbr_a437caf4ce25094b75e2c9103d9882e8a}
+
+
+Set type of frequency randomization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Either \textquotesingle{}none\textquotesingle{}, \textquotesingle{}uniform\textquotesingle{}, or \textquotesingle{}exponential\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file ndn-\/consumer-\/cbr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/consumer-\/cbr.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/consumer-\/cbr.\+cpp\end{DoxyCompactItemize}

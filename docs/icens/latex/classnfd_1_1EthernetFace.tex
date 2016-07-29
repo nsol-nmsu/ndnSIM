@@ -1,0 +1,72 @@
+\hypertarget{classnfd_1_1EthernetFace}{}\section{nfd\+:\+:Ethernet\+Face Class Reference}
+\label{classnfd_1_1EthernetFace}\index{nfd\+::\+Ethernet\+Face@{nfd\+::\+Ethernet\+Face}}
+
+
+Implementation of \hyperlink{classnfd_1_1Face}{Face} abstraction that uses raw Ethernet frames as underlying transport mechanism.  
+
+
+
+
+{\ttfamily \#include $<$ethernet-\/face.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Ethernet\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1EthernetFace}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfd_1_1EthernetFace_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Ethernet\+Face-\/related error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Ethernet\+Face} (boost\+::asio\+::posix\+::stream\+\_\+descriptor socket, const \hyperlink{classnfd_1_1NetworkInterfaceInfo}{Network\+Interface\+Info} \&interface, const \hyperlink{classndn_1_1util_1_1ethernet_1_1Address}{ethernet\+::\+Address} \&address)\hypertarget{classnfd_1_1EthernetFace_aecd33637a404fd2772a5fec9c565a6fe}{}\label{classnfd_1_1EthernetFace_aecd33637a404fd2772a5fec9c565a6fe}
+
+\item 
+void \hyperlink{classnfd_1_1EthernetFace_a86405c58e9ffe464bb508680b9922ae7}{send\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1EthernetFace_a86405c58e9ffe464bb508680b9922ae7}{}\label{classnfd_1_1EthernetFace_a86405c58e9ffe464bb508680b9922ae7}
+
+\begin{DoxyCompactList}\small\item\em send an Interest \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1EthernetFace_aee1163cd7ec7614aa410e474e550e6f8}{send\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1EthernetFace_aee1163cd7ec7614aa410e474e550e6f8}{}\label{classnfd_1_1EthernetFace_aee1163cd7ec7614aa410e474e550e6f8}
+
+\begin{DoxyCompactList}\small\item\em send a Data \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1EthernetFace_a03dc750b6519a5de012cf6e42f78b204}{close} () D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Closes the face. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of \hyperlink{classnfd_1_1Face}{Face} abstraction that uses raw Ethernet frames as underlying transport mechanism. 
+
+Definition at line 52 of file ethernet-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Ethernet\+Face@{nfd\+::\+Ethernet\+Face}!close@{close}}
+\index{close@{close}!nfd\+::\+Ethernet\+Face@{nfd\+::\+Ethernet\+Face}}
+\subsubsection[{\texorpdfstring{close() D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{close() DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Ethernet\+Face\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1EthernetFace_a03dc750b6519a5de012cf6e42f78b204}{}\label{classnfd_1_1EthernetFace_a03dc750b6519a5de012cf6e42f78b204}
+
+
+Closes the face. 
+
+This terminates all communication on the face and triggers the \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail()} event. 
+
+Implements \hyperlink{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{nfd\+::\+Face}.
+
+
+
+Definition at line 147 of file ethernet-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ethernet-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ethernet-\/face.\+cpp\end{DoxyCompactItemize}

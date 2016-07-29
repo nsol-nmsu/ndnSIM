@@ -1,0 +1,156 @@
+\hypertarget{classnfd_1_1fw_1_1NccStrategy}{}\section{nfd\+:\+:fw\+:\+:Ncc\+Strategy Class Reference}
+\label{classnfd_1_1fw_1_1NccStrategy}\index{nfd\+::fw\+::\+Ncc\+Strategy@{nfd\+::fw\+::\+Ncc\+Strategy}}
+
+
+a forwarding strategy similar to C\+C\+Nx 0.\+7.\+2  
+
+
+
+
+{\ttfamily \#include $<$ncc-\/strategy.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fw\+:\+:Ncc\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1fw_1_1NccStrategy}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo}{Measurements\+Entry\+Info}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnfd_1_1fw_1_1StrategyInfo}{Strategy\+Info} on \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry}. \end{DoxyCompactList}\item 
+class \hyperlink{classnfd_1_1fw_1_1NccStrategy_1_1PitEntryInfo}{Pit\+Entry\+Info}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classnfd_1_1fw_1_1StrategyInfo}{Strategy\+Info} on \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Ncc\+Strategy} (\hyperlink{classnfd_1_1Forwarder}{Forwarder} \&forwarder, const \hyperlink{classndn_1_1Name}{Name} \&name=S\+T\+R\+A\+T\+E\+G\+Y\+\_\+\+N\+A\+ME)\hypertarget{classnfd_1_1fw_1_1NccStrategy_ae6b9f60e4770ed045ec0500e4338f8df}{}\label{classnfd_1_1fw_1_1NccStrategy_ae6b9f60e4770ed045ec0500e4338f8df}
+
+\item 
+virtual void \hyperlink{classnfd_1_1fw_1_1NccStrategy_af2615219a128332ad6582293a3614b6e}{after\+Receive\+Interest} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ fib\+Entry, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em trigger after Interest is received \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1fw_1_1NccStrategy_a16bd8028a9b9d29dc4f6dd53e8d0764f}{before\+Satisfy\+Interest} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Data}{Data} \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em trigger before P\+IT entry is satisfied \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classndn_1_1Name}{Name} {\bfseries S\+T\+R\+A\+T\+E\+G\+Y\+\_\+\+N\+A\+ME}\hypertarget{classnfd_1_1fw_1_1NccStrategy_aee156d541aec9295b3d470958b83032c}{}\label{classnfd_1_1fw_1_1NccStrategy_aee156d541aec9295b3d470958b83032c}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo}{Measurements\+Entry\+Info} $>$ {\bfseries get\+Measurements\+Entry\+Info} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ entry)\hypertarget{classnfd_1_1fw_1_1NccStrategy_ac1986fcc6f8c4fa0e8ef894812cf8ec8}{}\label{classnfd_1_1fw_1_1NccStrategy_ac1986fcc6f8c4fa0e8ef894812cf8ec8}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo}{Measurements\+Entry\+Info} $>$ {\bfseries get\+Measurements\+Entry\+Info} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ entry)\hypertarget{classnfd_1_1fw_1_1NccStrategy_a600c4f2fa588ae14d334e4fbfd8f9c13}{}\label{classnfd_1_1fw_1_1NccStrategy_a600c4f2fa588ae14d334e4fbfd8f9c13}
+
+\item 
+void \hyperlink{classnfd_1_1fw_1_1NccStrategy_ad8236933d8510b83295e1274a50ad5c2}{do\+Propagate} (weak\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry\+Weak, weak\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ fib\+Entry\+Weak)\hypertarget{classnfd_1_1fw_1_1NccStrategy_ad8236933d8510b83295e1274a50ad5c2}{}\label{classnfd_1_1fw_1_1NccStrategy_ad8236933d8510b83295e1274a50ad5c2}
+
+\begin{DoxyCompactList}\small\item\em propagate to another upstream \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1fw_1_1NccStrategy_aa0be46b8ee331b10c6cf479077fa61e8}{timeout\+On\+Best\+Face} (weak\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry\+Weak)\hypertarget{classnfd_1_1fw_1_1NccStrategy_aa0be46b8ee331b10c6cf479077fa61e8}{}\label{classnfd_1_1fw_1_1NccStrategy_aa0be46b8ee331b10c6cf479077fa61e8}
+
+\begin{DoxyCompactList}\small\item\em best face did not reply within prediction \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const time\+::microseconds {\bfseries D\+E\+F\+E\+R\+\_\+\+F\+I\+R\+S\+T\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+B\+E\+S\+T\+\_\+\+F\+A\+CE} = time\+::microseconds(4000)\hypertarget{classnfd_1_1fw_1_1NccStrategy_a4f9c123c2b8c1f798de83f6404a180c8}{}\label{classnfd_1_1fw_1_1NccStrategy_a4f9c123c2b8c1f798de83f6404a180c8}
+
+\item 
+static const time\+::microseconds {\bfseries D\+E\+F\+E\+R\+\_\+\+R\+A\+N\+G\+E\+\_\+\+W\+I\+T\+H\+O\+U\+T\+\_\+\+B\+E\+S\+T\+\_\+\+F\+A\+CE} = time\+::microseconds(75000)\hypertarget{classnfd_1_1fw_1_1NccStrategy_a3d4249a228f211aa005303ab85b7883f}{}\label{classnfd_1_1fw_1_1NccStrategy_a3d4249a228f211aa005303ab85b7883f}
+
+\item 
+static const int {\bfseries U\+P\+D\+A\+T\+E\+\_\+\+M\+E\+A\+S\+U\+R\+E\+M\+E\+N\+T\+S\+\_\+\+N\+\_\+\+L\+E\+V\+E\+LS} = 2\hypertarget{classnfd_1_1fw_1_1NccStrategy_aa34a908c9205b7bb9af412f263f54c3d}{}\label{classnfd_1_1fw_1_1NccStrategy_aa34a908c9205b7bb9af412f263f54c3d}
+
+\item 
+static const time\+::nanoseconds {\bfseries M\+E\+A\+S\+U\+R\+E\+M\+E\+N\+T\+S\+\_\+\+L\+I\+F\+E\+T\+I\+ME} = time\+::seconds(16)\hypertarget{classnfd_1_1fw_1_1NccStrategy_a8358bba681a9df31000d57071efc6934}{}\label{classnfd_1_1fw_1_1NccStrategy_a8358bba681a9df31000d57071efc6934}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+a forwarding strategy similar to C\+C\+Nx 0.\+7.\+2 
+
+Definition at line 36 of file ncc-\/strategy.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::fw\+::\+Ncc\+Strategy@{nfd\+::fw\+::\+Ncc\+Strategy}!after\+Receive\+Interest@{after\+Receive\+Interest}}
+\index{after\+Receive\+Interest@{after\+Receive\+Interest}!nfd\+::fw\+::\+Ncc\+Strategy@{nfd\+::fw\+::\+Ncc\+Strategy}}
+\subsubsection[{\texorpdfstring{after\+Receive\+Interest(const Face \&in\+Face, const Interest \&interest, shared\+\_\+ptr$<$ fib\+::\+Entry $>$ fib\+Entry, shared\+\_\+ptr$<$ pit\+::\+Entry $>$ pit\+Entry) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{afterReceiveInterest(const Face \&inFace, const Interest \&interest, shared\_ptr< fib::Entry > fibEntry, shared\_ptr< pit::Entry > pitEntry) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::fw\+::\+Ncc\+Strategy\+::after\+Receive\+Interest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face} \&}]{in\+Face, }
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{shared\+\_\+ptr$<$ {\bf fib\+::\+Entry} $>$}]{fib\+Entry, }
+\item[{shared\+\_\+ptr$<$ {\bf pit\+::\+Entry} $>$}]{pit\+Entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1fw_1_1NccStrategy_af2615219a128332ad6582293a3614b6e}{}\label{classnfd_1_1fw_1_1NccStrategy_af2615219a128332ad6582293a3614b6e}
+
+
+trigger after Interest is received 
+
+The Interest\+:
+\begin{DoxyItemize}
+\item does not violate Scope
+\item is not looped
+\item cannot be satisfied by Content\+Store
+\item is under a namespace managed by this strategy
+\end{DoxyItemize}
+
+The strategy should decide whether and where to forward this Interest.
+\begin{DoxyItemize}
+\item If the strategy decides to forward this Interest, invoke this-\/$>$send\+Interest one or more times, either now or shortly after
+\item If strategy concludes that this Interest cannot be forwarded, invoke this-\/$>$reject\+Pending\+Interest so that P\+IT entry will be deleted shortly
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The strategy is permitted to store a weak reference to fib\+Entry. Do not store a shared reference, because P\+IT entry may be deleted at any moment. fib\+Entry is passed by value to allow obtaining a weak reference from it. 
+
+The strategy is permitted to store a shared reference to pit\+Entry. pit\+Entry is passed by value to reflect this fact. 
+\end{DoxyNote}
+
+
+Implements \hyperlink{classnfd_1_1fw_1_1Strategy_a1193c1881f92b1618a1004f92669eaaa}{nfd\+::fw\+::\+Strategy}.
+
+
+
+Definition at line 50 of file ncc-\/strategy.\+cpp.
+
+\index{nfd\+::fw\+::\+Ncc\+Strategy@{nfd\+::fw\+::\+Ncc\+Strategy}!before\+Satisfy\+Interest@{before\+Satisfy\+Interest}}
+\index{before\+Satisfy\+Interest@{before\+Satisfy\+Interest}!nfd\+::fw\+::\+Ncc\+Strategy@{nfd\+::fw\+::\+Ncc\+Strategy}}
+\subsubsection[{\texorpdfstring{before\+Satisfy\+Interest(shared\+\_\+ptr$<$ pit\+::\+Entry $>$ pit\+Entry, const Face \&in\+Face, const Data \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{beforeSatisfyInterest(shared\_ptr< pit::Entry > pitEntry, const Face \&inFace, const Data \&data) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::fw\+::\+Ncc\+Strategy\+::before\+Satisfy\+Interest (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf pit\+::\+Entry} $>$}]{pit\+Entry, }
+\item[{const {\bf Face} \&}]{in\+Face, }
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1fw_1_1NccStrategy_a16bd8028a9b9d29dc4f6dd53e8d0764f}{}\label{classnfd_1_1fw_1_1NccStrategy_a16bd8028a9b9d29dc4f6dd53e8d0764f}
+
+
+trigger before P\+IT entry is satisfied 
+
+This trigger is invoked when an incoming Data satisfies the P\+IT entry. It can be invoked even if the P\+IT entry has already been satisfied.
+
+In this base class this method does nothing.
+
+\begin{DoxyNote}{Note}
+The strategy is permitted to store a shared reference to pit\+Entry. pit\+Entry is passed by value to reflect this fact. 
+\end{DoxyNote}
+
+
+Reimplemented from \hyperlink{classnfd_1_1fw_1_1Strategy_a31387ec5c8204841e407bced9902c203}{nfd\+::fw\+::\+Strategy}.
+
+
+
+Definition at line 191 of file ncc-\/strategy.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/ncc-\/strategy.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/ncc-\/strategy.\+cpp\end{DoxyCompactItemize}

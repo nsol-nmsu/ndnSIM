@@ -1,0 +1,76 @@
+\hypertarget{classndn_1_1CertificateSubjectDescription}{}\section{ndn\+:\+:Certificate\+Subject\+Description Class Reference}
+\label{classndn_1_1CertificateSubjectDescription}\index{ndn\+::\+Certificate\+Subject\+Description@{ndn\+::\+Certificate\+Subject\+Description}}
+
+
+{\ttfamily \#include $<$certificate-\/subject-\/description.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Certificate\+Subject\+Description} (Crypto\+P\+P\+::\+Buffered\+Transformation \&in)\hypertarget{classndn_1_1CertificateSubjectDescription_a4abe3bb379cc5b85c2c933edc853b0e7}{}\label{classndn_1_1CertificateSubjectDescription_a4abe3bb379cc5b85c2c933edc853b0e7}
+
+\item 
+\hyperlink{classndn_1_1CertificateSubjectDescription_ad2a80406490e61d509a2c3ddb7e1cb11}{Certificate\+Subject\+Description} (const \hyperlink{classndn_1_1OID}{O\+ID} \&oid, const std\+::string \&value)
+\item 
+void {\bfseries encode} (Crypto\+P\+P\+::\+Buffered\+Transformation \&out) const\hypertarget{classndn_1_1CertificateSubjectDescription_a11a446ca178821db44b1699a7cf44d9e}{}\label{classndn_1_1CertificateSubjectDescription_a11a446ca178821db44b1699a7cf44d9e}
+
+\item 
+void \hyperlink{classndn_1_1CertificateSubjectDescription_a9a4b924eac644c0ca0cf209f06d81931}{decode} (Crypto\+P\+P\+::\+Buffered\+Transformation \&in)
+\item 
+std\+::string {\bfseries get\+Oid\+String} () const\hypertarget{classndn_1_1CertificateSubjectDescription_ab4abd8f3f66eb19178f6de1138113a75}{}\label{classndn_1_1CertificateSubjectDescription_ab4abd8f3f66eb19178f6de1138113a75}
+
+\item 
+const std\+::string \& {\bfseries get\+Value} () const\hypertarget{classndn_1_1CertificateSubjectDescription_ac6b9aec3db859527e6142ba02b81a7e0}{}\label{classndn_1_1CertificateSubjectDescription_ac6b9aec3db859527e6142ba02b81a7e0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classndn_1_1CertificateSubjectDescription}{Certificate\+Subject\+Description} represents the Subject\+Description entry in a \hyperlink{classndn_1_1Certificate}{Certificate}. 
+
+Definition at line 41 of file certificate-\/subject-\/description.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Certificate\+Subject\+Description@{ndn\+::\+Certificate\+Subject\+Description}!Certificate\+Subject\+Description@{Certificate\+Subject\+Description}}
+\index{Certificate\+Subject\+Description@{Certificate\+Subject\+Description}!ndn\+::\+Certificate\+Subject\+Description@{ndn\+::\+Certificate\+Subject\+Description}}
+\subsubsection[{\texorpdfstring{Certificate\+Subject\+Description(const O\+I\+D \&oid, const std\+::string \&value)}{CertificateSubjectDescription(const OID \&oid, const std::string \&value)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Certificate\+Subject\+Description\+::\+Certificate\+Subject\+Description (
+\begin{DoxyParamCaption}
+\item[{const {\bf O\+ID} \&}]{oid, }
+\item[{const std\+::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1CertificateSubjectDescription_ad2a80406490e61d509a2c3ddb7e1cb11}{}\label{classndn_1_1CertificateSubjectDescription_ad2a80406490e61d509a2c3ddb7e1cb11}
+Create a new \hyperlink{classndn_1_1CertificateSubjectDescription}{Certificate\+Subject\+Description}. 
+\begin{DoxyParams}{Parameters}
+{\em oid} & The oid of the subject description entry. \\
+\hline
+{\em value} & The value of the subject description entry. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file certificate-\/subject-\/description.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Certificate\+Subject\+Description@{ndn\+::\+Certificate\+Subject\+Description}!decode@{decode}}
+\index{decode@{decode}!ndn\+::\+Certificate\+Subject\+Description@{ndn\+::\+Certificate\+Subject\+Description}}
+\subsubsection[{\texorpdfstring{decode(\+Crypto\+P\+P\+::\+Buffered\+Transformation \&in)}{decode(CryptoPP::BufferedTransformation \&in)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Certificate\+Subject\+Description\+::decode (
+\begin{DoxyParamCaption}
+\item[{Crypto\+P\+P\+::\+Buffered\+Transformation \&}]{in}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1CertificateSubjectDescription_a9a4b924eac644c0ca0cf209f06d81931}{}\label{classndn_1_1CertificateSubjectDescription_a9a4b924eac644c0ca0cf209f06d81931}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000006}{Todo}]May be add more intelligent processing, since the following may fail if somebody encoded attribute that uses non P\+R\+I\+N\+T\+A\+B\+L\+E\+\_\+\+S\+T\+R\+I\+NG as value \end{DoxyRefDesc}
+
+
+Definition at line 57 of file certificate-\/subject-\/description.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate-\/subject-\/description.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate-\/subject-\/description.\+cpp\end{DoxyCompactItemize}

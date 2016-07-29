@@ -1,0 +1,69 @@
+\hypertarget{classnfd_1_1InternalFace}{}\section{nfd\+:\+:Internal\+Face Class Reference}
+\label{classnfd_1_1InternalFace}\index{nfd\+::\+Internal\+Face@{nfd\+::\+Internal\+Face}}
+Inheritance diagram for nfd\+:\+:Internal\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.362869cm]{classnfd_1_1InternalFace}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1InternalFace_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Internal\+Face-\/related error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1CommandValidator}{Command\+Validator} \& {\bfseries get\+Validator} ()\hypertarget{classnfd_1_1InternalFace_a01bd69722e832a865c97f145b9e5461c}{}\label{classnfd_1_1InternalFace_a01bd69722e832a865c97f145b9e5461c}
+
+\item 
+virtual void \hyperlink{classnfd_1_1InternalFace_a3cff8c863714bc322f83343ced8ebf45}{send\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classnfd_1_1InternalFace_a3cff8c863714bc322f83343ced8ebf45}{}\label{classnfd_1_1InternalFace_a3cff8c863714bc322f83343ced8ebf45}
+
+\begin{DoxyCompactList}\small\item\em send an Interest \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1InternalFace_afd0f09ce7347c26155ccba5500cf4960}{send\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1InternalFace_afd0f09ce7347c26155ccba5500cf4960}{}\label{classnfd_1_1InternalFace_afd0f09ce7347c26155ccba5500cf4960}
+
+\begin{DoxyCompactList}\small\item\em send a Data \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1InternalFace_aa99a85d1632f5991836e327092ad252a}{close} ()
+\begin{DoxyCompactList}\small\item\em Close the face. \end{DoxyCompactList}\item 
+virtual void {\bfseries set\+Interest\+Filter} (const \hyperlink{classndn_1_1Name}{Name} \&filter, On\+Interest on\+Interest)\hypertarget{classnfd_1_1InternalFace_a37444c4538db19b434038359737d11e8}{}\label{classnfd_1_1InternalFace_a37444c4538db19b434038359737d11e8}
+
+\item 
+virtual void {\bfseries put} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1InternalFace_abece52e8154e8ac39cd4f4ff759c3248}{}\label{classnfd_1_1InternalFace_abece52e8154e8ac39cd4f4ff759c3248}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file internal-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Internal\+Face@{nfd\+::\+Internal\+Face}!close@{close}}
+\index{close@{close}!nfd\+::\+Internal\+Face@{nfd\+::\+Internal\+Face}}
+\subsubsection[{\texorpdfstring{close()}{close()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Internal\+Face\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1InternalFace_aa99a85d1632f5991836e327092ad252a}{}\label{classnfd_1_1InternalFace_aa99a85d1632f5991836e327092ad252a}
+
+
+Close the face. 
+
+This terminates all communication on the face and cause \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail()} method event to be invoked 
+
+Implements \hyperlink{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{nfd\+::\+Face}.
+
+
+
+Definition at line 129 of file internal-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/mgmt/internal-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/mgmt/internal-\/face.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{classndn_1_1RegexTopMatcher}{}\section{ndn\+:\+:Regex\+Top\+Matcher Class Reference}
+\label{classndn_1_1RegexTopMatcher}\index{ndn\+::\+Regex\+Top\+Matcher@{ndn\+::\+Regex\+Top\+Matcher}}
+Inheritance diagram for ndn\+:\+:Regex\+Top\+Matcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1RegexTopMatcher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Regex\+Top\+Matcher} (const std\+::string \&expr, const std\+::string \&expand=\char`\"{}\char`\"{})\hypertarget{classndn_1_1RegexTopMatcher_ab92c64fcc7b324d4e86628e8f799eca4}{}\label{classndn_1_1RegexTopMatcher_ab92c64fcc7b324d4e86628e8f799eca4}
+
+\item 
+bool {\bfseries match} (const \hyperlink{classndn_1_1Name}{Name} \&name)\hypertarget{classndn_1_1RegexTopMatcher_a5fbdd5c88f047639c9463fe6cf319d6d}{}\label{classndn_1_1RegexTopMatcher_a5fbdd5c88f047639c9463fe6cf319d6d}
+
+\item 
+virtual bool {\bfseries match} (const \hyperlink{classndn_1_1Name}{Name} \&name, size\+\_\+t offset, size\+\_\+t len)\hypertarget{classndn_1_1RegexTopMatcher_aa11e44b83f0e46f6d8b19dc151b04d1f}{}\label{classndn_1_1RegexTopMatcher_aa11e44b83f0e46f6d8b19dc151b04d1f}
+
+\item 
+virtual \hyperlink{classndn_1_1Name}{Name} {\bfseries expand} (const std\+::string \&expand=\char`\"{}\char`\"{})\hypertarget{classndn_1_1RegexTopMatcher_a9f5d7069c24c2272626f7c668a607833}{}\label{classndn_1_1RegexTopMatcher_a9f5d7069c24c2272626f7c668a607833}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \hyperlink{classndn_1_1RegexTopMatcher}{Regex\+Top\+Matcher} $>$ {\bfseries from\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name, bool has\+Anchor=false)\hypertarget{classndn_1_1RegexTopMatcher_a38a82ad19b9b5b0360c131c9a1445182}{}\label{classndn_1_1RegexTopMatcher_a38a82ad19b9b5b0360c131c9a1445182}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1RegexTopMatcher_a55044d0ea803276628db5df2e567fc7b}{compile} ()
+\begin{DoxyCompactList}\small\item\em Compile the regular expression to generate the more matchers when necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file regex-\/top-\/matcher.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Regex\+Top\+Matcher@{ndn\+::\+Regex\+Top\+Matcher}!compile@{compile}}
+\index{compile@{compile}!ndn\+::\+Regex\+Top\+Matcher@{ndn\+::\+Regex\+Top\+Matcher}}
+\subsubsection[{\texorpdfstring{compile()}{compile()}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Regex\+Top\+Matcher\+::compile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1RegexTopMatcher_a55044d0ea803276628db5df2e567fc7b}{}\label{classndn_1_1RegexTopMatcher_a55044d0ea803276628db5df2e567fc7b}
+
+
+Compile the regular expression to generate the more matchers when necessary. 
+
+\begin{DoxyReturn}{Returns}
+true if compiling succeeds 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1RegexMatcher_a95189df49e9119adcced9b555a721e9a}{ndn\+::\+Regex\+Matcher}.
+
+
+
+Definition at line 48 of file regex-\/top-\/matcher.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/regex/regex-\/top-\/matcher.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/regex/regex-\/top-\/matcher.\+cpp\end{DoxyCompactItemize}

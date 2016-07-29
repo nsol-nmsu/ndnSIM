@@ -1,0 +1,334 @@
+\hypertarget{classndn_1_1encoding_1_1Encoder}{}\section{ndn\+:\+:encoding\+:\+:Encoder Class Reference}
+\label{classndn_1_1encoding_1_1Encoder}\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+
+
+Helper class to perform T\+LV encoding Interface of this class (mostly) matches interface of \hyperlink{classndn_1_1encoding_1_1Estimator}{Estimator} class.  
+
+
+
+
+{\ttfamily \#include $<$encoder.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:encoding\+:\+:Encoder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1encoding_1_1Encoder}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Buffer\+::value\+\_\+type {\bfseries value\+\_\+type}\hypertarget{classndn_1_1encoding_1_1Encoder_a9299bb5e4f75ae4d6317af098f77eab2}{}\label{classndn_1_1encoding_1_1Encoder_a9299bb5e4f75ae4d6317af098f77eab2}
+
+\item 
+typedef Buffer\+::iterator {\bfseries iterator}\hypertarget{classndn_1_1encoding_1_1Encoder_a63096403e5420d473c1225a3a10a454f}{}\label{classndn_1_1encoding_1_1Encoder_a63096403e5420d473c1225a3a10a454f}
+
+\item 
+typedef Buffer\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}\hypertarget{classndn_1_1encoding_1_1Encoder_a49318fee170789d2ec1fb28dfb9def30}{}\label{classndn_1_1encoding_1_1Encoder_a49318fee170789d2ec1fb28dfb9def30}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1encoding_1_1Encoder_a48af655910219944a6939cdc862793d9}{Encoder} (size\+\_\+t total\+Reserve=8800, size\+\_\+t reserve\+From\+Back=400)
+\begin{DoxyCompactList}\small\item\em Create instance of the encoder with the specified reserved sizes. \end{DoxyCompactList}\item 
+{\bfseries Encoder} (const \hyperlink{classndn_1_1encoding_1_1Encoder}{Encoder} \&)=delete\hypertarget{classndn_1_1encoding_1_1Encoder_a432c1c578cf03d8c7529186033a471f8}{}\label{classndn_1_1encoding_1_1Encoder_a432c1c578cf03d8c7529186033a471f8}
+
+\item 
+\hyperlink{classndn_1_1encoding_1_1Encoder}{Encoder} \& {\bfseries operator=} (const \hyperlink{classndn_1_1encoding_1_1Encoder}{Encoder} \&)=delete\hypertarget{classndn_1_1encoding_1_1Encoder_abbc106d277674d1b0bebdee0afe4c1d9}{}\label{classndn_1_1encoding_1_1Encoder_abbc106d277674d1b0bebdee0afe4c1d9}
+
+\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ab09ba501d367fb0abbb715251b614a9b}{prepend\+Byte} (uint8\+\_\+t value)\hypertarget{classndn_1_1encoding_1_1Encoder_ab09ba501d367fb0abbb715251b614a9b}{}\label{classndn_1_1encoding_1_1Encoder_ab09ba501d367fb0abbb715251b614a9b}
+
+\begin{DoxyCompactList}\small\item\em Prepend a byte. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_a347378d4f2a99b7514e05c0b3ea26400}{append\+Byte} (uint8\+\_\+t value)\hypertarget{classndn_1_1encoding_1_1Encoder_a347378d4f2a99b7514e05c0b3ea26400}{}\label{classndn_1_1encoding_1_1Encoder_a347378d4f2a99b7514e05c0b3ea26400}
+
+\begin{DoxyCompactList}\small\item\em Append a byte. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_a644e71a78448ced49aa2e1419dfd94a8}{prepend\+Byte\+Array} (const uint8\+\_\+t $\ast$array, size\+\_\+t length)\hypertarget{classndn_1_1encoding_1_1Encoder_a644e71a78448ced49aa2e1419dfd94a8}{}\label{classndn_1_1encoding_1_1Encoder_a644e71a78448ced49aa2e1419dfd94a8}
+
+\begin{DoxyCompactList}\small\item\em Prepend a byte array {\ttfamily array} of length {\ttfamily length}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ad974b739952dbcc71d04627516f9f84e}{append\+Byte\+Array} (const uint8\+\_\+t $\ast$array, size\+\_\+t length)\hypertarget{classndn_1_1encoding_1_1Encoder_ad974b739952dbcc71d04627516f9f84e}{}\label{classndn_1_1encoding_1_1Encoder_ad974b739952dbcc71d04627516f9f84e}
+
+\begin{DoxyCompactList}\small\item\em Append a byte array {\ttfamily array} of length {\ttfamily length}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Iterator $>$ }\\size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_a60b8a2705f34a4f63d0a0e5b5865624e}{prepend\+Range} (Iterator first, Iterator last)\hypertarget{classndn_1_1encoding_1_1Encoder_a60b8a2705f34a4f63d0a0e5b5865624e}{}\label{classndn_1_1encoding_1_1Encoder_a60b8a2705f34a4f63d0a0e5b5865624e}
+
+\begin{DoxyCompactList}\small\item\em Prepend range of bytes from the range \mbox{[}{\ttfamily first}, {\ttfamily last}) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Iterator $>$ }\\size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ac7e83ae5db018c99dfe8fd7fd8bcb914}{append\+Range} (Iterator first, Iterator last)\hypertarget{classndn_1_1encoding_1_1Encoder_ac7e83ae5db018c99dfe8fd7fd8bcb914}{}\label{classndn_1_1encoding_1_1Encoder_ac7e83ae5db018c99dfe8fd7fd8bcb914}
+
+\begin{DoxyCompactList}\small\item\em Append range of bytes from the range \mbox{[}{\ttfamily first}, {\ttfamily last}) \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_af864de9dc84d1e6b872e4486f56dd308}{prepend\+Var\+Number} (uint64\+\_\+t var\+Number)
+\begin{DoxyCompactList}\small\item\em Prepend Var\+Number {\ttfamily var\+Number} of N\+DN T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_a760930a359053a7fe2363a2d7a3106e7}{append\+Var\+Number} (uint64\+\_\+t var\+Number)
+\begin{DoxyCompactList}\small\item\em Prepend Var\+Number {\ttfamily var\+Number} of N\+DN T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_a83a39ad200bb0f55f0c615b3907632b4}{prepend\+Non\+Negative\+Integer} (uint64\+\_\+t integer)
+\begin{DoxyCompactList}\small\item\em Prepend non-\/negative integer {\ttfamily integer} of N\+DN T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ac47943e2b053cd801e282f97edf2b99c}{append\+Non\+Negative\+Integer} (uint64\+\_\+t integer)
+\begin{DoxyCompactList}\small\item\em Append non-\/negative integer {\ttfamily integer} of N\+DN T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_afaa656e23f557204c7a484ff3ab2f50e}{prepend\+Byte\+Array\+Block} (uint32\+\_\+t type, const uint8\+\_\+t $\ast$array, size\+\_\+t array\+Size)\hypertarget{classndn_1_1encoding_1_1Encoder_afaa656e23f557204c7a484ff3ab2f50e}{}\label{classndn_1_1encoding_1_1Encoder_afaa656e23f557204c7a484ff3ab2f50e}
+
+\begin{DoxyCompactList}\small\item\em Prepend T\+LV block of type {\ttfamily type} and value from buffer {\ttfamily array} of size {\ttfamily array\+Size}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_aa9f33a1dd5bda58caeeaa14447fbf3bf}{append\+Byte\+Array\+Block} (uint32\+\_\+t type, const uint8\+\_\+t $\ast$array, size\+\_\+t array\+Size)\hypertarget{classndn_1_1encoding_1_1Encoder_aa9f33a1dd5bda58caeeaa14447fbf3bf}{}\label{classndn_1_1encoding_1_1Encoder_aa9f33a1dd5bda58caeeaa14447fbf3bf}
+
+\begin{DoxyCompactList}\small\item\em Append T\+LV block of type {\ttfamily type} and value from buffer {\ttfamily array} of size {\ttfamily array\+Size}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_af847018c1d27f58dfd1c531be97366e7}{prepend\+Block} (const \hyperlink{classndn_1_1Block}{Block} \&\hyperlink{classndn_1_1encoding_1_1Encoder_a37a3f9744f1fe2be7b35a5fd7827bd3b}{block})\hypertarget{classndn_1_1encoding_1_1Encoder_af847018c1d27f58dfd1c531be97366e7}{}\label{classndn_1_1encoding_1_1Encoder_af847018c1d27f58dfd1c531be97366e7}
+
+\begin{DoxyCompactList}\small\item\em Prepend T\+LV block {\ttfamily block}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ab87232010aadf291f642847d07f20f8e}{append\+Block} (const \hyperlink{classndn_1_1Block}{Block} \&\hyperlink{classndn_1_1encoding_1_1Encoder_a37a3f9744f1fe2be7b35a5fd7827bd3b}{block})\hypertarget{classndn_1_1encoding_1_1Encoder_ab87232010aadf291f642847d07f20f8e}{}\label{classndn_1_1encoding_1_1Encoder_ab87232010aadf291f642847d07f20f8e}
+
+\begin{DoxyCompactList}\small\item\em Append T\+LV block {\ttfamily block}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1encoding_1_1Encoder_aaf7a731bc554b93454fe1d4006aa4d5f}{Encoder} (const \hyperlink{classndn_1_1Block}{Block} \&\hyperlink{classndn_1_1encoding_1_1Encoder_a37a3f9744f1fe2be7b35a5fd7827bd3b}{block})
+\begin{DoxyCompactList}\small\item\em Create Encoding\+Block from existing block. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1encoding_1_1Encoder_a076c8f06a4cb772896621e3737e34ede}{reserve} (size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ae5a65e998b6f12594897b30f9cf90943}{size}, bool add\+In\+Front)
+\begin{DoxyCompactList}\small\item\em Reserve {\ttfamily size} bytes for the underlying buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1encoding_1_1Encoder_ade19fdbfcae1a23d1fca14e075cde0fa}{reserve\+Back} (size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ae5a65e998b6f12594897b30f9cf90943}{size})
+\begin{DoxyCompactList}\small\item\em Reserve at least {\ttfamily size} bytes at the back of the underlying buffer. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1encoding_1_1Encoder_a2d9fae4b2cf5c6b3a7631f71954cec6a}{reserve\+Front} (size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ae5a65e998b6f12594897b30f9cf90943}{size})
+\begin{DoxyCompactList}\small\item\em Reserve at least {\ttfamily isze} bytes at the beginning of the underlying buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_adadea72523c770590a8a350d78cd6d89}{capacity} () const\hypertarget{classndn_1_1encoding_1_1Encoder_adadea72523c770590a8a350d78cd6d89}{}\label{classndn_1_1encoding_1_1Encoder_adadea72523c770590a8a350d78cd6d89}
+
+\begin{DoxyCompactList}\small\item\em Get size of the underlying buffer. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1Buffer}{Buffer} $>$ \hyperlink{classndn_1_1encoding_1_1Encoder_a9755ef423314e14568f8766b3f3890f1}{get\+Buffer} ()\hypertarget{classndn_1_1encoding_1_1Encoder_a9755ef423314e14568f8766b3f3890f1}{}\label{classndn_1_1encoding_1_1Encoder_a9755ef423314e14568f8766b3f3890f1}
+
+\begin{DoxyCompactList}\small\item\em Get underlying buffer. \end{DoxyCompactList}\item 
+iterator \hyperlink{classndn_1_1encoding_1_1Encoder_aadc9e46721459fb80310088bd7ae70c0}{begin} ()\hypertarget{classndn_1_1encoding_1_1Encoder_aadc9e46721459fb80310088bd7ae70c0}{}\label{classndn_1_1encoding_1_1Encoder_aadc9e46721459fb80310088bd7ae70c0}
+
+\begin{DoxyCompactList}\small\item\em Get an iterator pointing to the first byte of the encoded buffer. \end{DoxyCompactList}\item 
+iterator \hyperlink{classndn_1_1encoding_1_1Encoder_a538f62a04491340a072406ba1d8b06b1}{end} ()\hypertarget{classndn_1_1encoding_1_1Encoder_a538f62a04491340a072406ba1d8b06b1}{}\label{classndn_1_1encoding_1_1Encoder_a538f62a04491340a072406ba1d8b06b1}
+
+\begin{DoxyCompactList}\small\item\em Get an iterator pointing to the past-\/the-\/end byte of the encoded buffer. \end{DoxyCompactList}\item 
+const\+\_\+iterator \hyperlink{classndn_1_1encoding_1_1Encoder_a73297077555bcc2ae5203f1a7fec9ba8}{begin} () const\hypertarget{classndn_1_1encoding_1_1Encoder_a73297077555bcc2ae5203f1a7fec9ba8}{}\label{classndn_1_1encoding_1_1Encoder_a73297077555bcc2ae5203f1a7fec9ba8}
+
+\begin{DoxyCompactList}\small\item\em Get an iterator pointing to the first byte of the encoded buffer. \end{DoxyCompactList}\item 
+const\+\_\+iterator {\bfseries end} () const\hypertarget{classndn_1_1encoding_1_1Encoder_a467d6e4a511b8aaf8085dc083e640bf5}{}\label{classndn_1_1encoding_1_1Encoder_a467d6e4a511b8aaf8085dc083e640bf5}
+
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{classndn_1_1encoding_1_1Encoder_a975e84acfea557a66e1fea1146728294}{buf} ()\hypertarget{classndn_1_1encoding_1_1Encoder_a975e84acfea557a66e1fea1146728294}{}\label{classndn_1_1encoding_1_1Encoder_a975e84acfea557a66e1fea1146728294}
+
+\begin{DoxyCompactList}\small\item\em Get a pointer to the first byte of the encoded buffer. \end{DoxyCompactList}\item 
+const uint8\+\_\+t $\ast$ \hyperlink{classndn_1_1encoding_1_1Encoder_a0cd115fa4809145fadc76aa6a9e0e504}{buf} () const\hypertarget{classndn_1_1encoding_1_1Encoder_a0cd115fa4809145fadc76aa6a9e0e504}{}\label{classndn_1_1encoding_1_1Encoder_a0cd115fa4809145fadc76aa6a9e0e504}
+
+\begin{DoxyCompactList}\small\item\em Get a pointer to the first byte of the encoded buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Encoder_ae5a65e998b6f12594897b30f9cf90943}{size} () const\hypertarget{classndn_1_1encoding_1_1Encoder_ae5a65e998b6f12594897b30f9cf90943}{}\label{classndn_1_1encoding_1_1Encoder_ae5a65e998b6f12594897b30f9cf90943}
+
+\begin{DoxyCompactList}\small\item\em Get size of the encoded buffer. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block}{Block} \hyperlink{classndn_1_1encoding_1_1Encoder_a37a3f9744f1fe2be7b35a5fd7827bd3b}{block} (bool verify\+Length=true) const
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classndn_1_1Block}{Block} from the underlying buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class to perform T\+LV encoding Interface of this class (mostly) matches interface of \hyperlink{classndn_1_1encoding_1_1Estimator}{Estimator} class. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1encoding_1_1Estimator}{Estimator} 
+\end{DoxySeeAlso}
+
+
+Definition at line 36 of file encoder.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!Encoder@{Encoder}}
+\index{Encoder@{Encoder}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{Encoder(size\+\_\+t total\+Reserve=8800, size\+\_\+t reserve\+From\+Back=400)}{Encoder(size\_t totalReserve=8800, size\_t reserveFromBack=400)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::encoding\+::\+Encoder\+::\+Encoder (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{total\+Reserve = {\ttfamily 8800}, }
+\item[{size\+\_\+t}]{reserve\+From\+Back = {\ttfamily 400}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1encoding_1_1Encoder_a48af655910219944a6939cdc862793d9}{}\label{classndn_1_1encoding_1_1Encoder_a48af655910219944a6939cdc862793d9}
+
+
+Create instance of the encoder with the specified reserved sizes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Reserve} & initial buffer size to reserve \\
+\hline
+{\em total\+From\+Back} & number of bytes to reserve for append$\ast$ operations \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file encoder.\+cpp.
+
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!Encoder@{Encoder}}
+\index{Encoder@{Encoder}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{Encoder(const Block \&block)}{Encoder(const Block \&block)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::encoding\+::\+Encoder\+::\+Encoder (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1encoding_1_1Encoder_aaf7a731bc554b93454fe1d4006aa4d5f}{}\label{classndn_1_1encoding_1_1Encoder_aaf7a731bc554b93454fe1d4006aa4d5f}
+
+
+Create Encoding\+Block from existing block. 
+
+This is a dangerous constructor and should be used with caution. It will modify contents of the buffer that is used by block and may impact data in other blocks.
+
+The primary purpose for this method is to be used to extend \hyperlink{classndn_1_1Block}{Block} after sign operation. 
+
+Definition at line 34 of file encoder.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!append\+Non\+Negative\+Integer@{append\+Non\+Negative\+Integer}}
+\index{append\+Non\+Negative\+Integer@{append\+Non\+Negative\+Integer}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{append\+Non\+Negative\+Integer(uint64\+\_\+t integer)}{appendNonNegativeInteger(uint64\_t integer)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::encoding\+::\+Encoder\+::append\+Non\+Negative\+Integer (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{integer}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Encoder_ac47943e2b053cd801e282f97edf2b99c}{}\label{classndn_1_1encoding_1_1Encoder_ac47943e2b053cd801e282f97edf2b99c}
+
+
+Append non-\/negative integer {\ttfamily integer} of N\+DN T\+LV encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 221 of file encoder.\+cpp.
+
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!append\+Var\+Number@{append\+Var\+Number}}
+\index{append\+Var\+Number@{append\+Var\+Number}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{append\+Var\+Number(uint64\+\_\+t var\+Number)}{appendVarNumber(uint64\_t varNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::encoding\+::\+Encoder\+::append\+Var\+Number (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{var\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Encoder_a760930a359053a7fe2363a2d7a3106e7}{}\label{classndn_1_1encoding_1_1Encoder_a760930a359053a7fe2363a2d7a3106e7}
+
+
+Prepend Var\+Number {\ttfamily var\+Number} of N\+DN T\+LV encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 173 of file encoder.\+cpp.
+
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!block@{block}}
+\index{block@{block}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{block(bool verify\+Length=true) const}{block(bool verifyLength=true) const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} ndn\+::encoding\+::\+Encoder\+::block (
+\begin{DoxyParamCaption}
+\item[{bool}]{verify\+Length = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1encoding_1_1Encoder_a37a3f9744f1fe2be7b35a5fd7827bd3b}{}\label{classndn_1_1encoding_1_1Encoder_a37a3f9744f1fe2be7b35a5fd7827bd3b}
+
+
+Create \hyperlink{classndn_1_1Block}{Block} from the underlying buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verify\+Length} & If this parameter set to true, \hyperlink{classndn_1_1Block}{Block}\textquotesingle{}s constructor will be requested to verify consistency of the encoded length in the \hyperlink{classndn_1_1Block}{Block}, otherwise ignored \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file encoder.\+cpp.
+
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!prepend\+Non\+Negative\+Integer@{prepend\+Non\+Negative\+Integer}}
+\index{prepend\+Non\+Negative\+Integer@{prepend\+Non\+Negative\+Integer}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{prepend\+Non\+Negative\+Integer(uint64\+\_\+t integer)}{prependNonNegativeInteger(uint64\_t integer)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::encoding\+::\+Encoder\+::prepend\+Non\+Negative\+Integer (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{integer}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Encoder_a83a39ad200bb0f55f0c615b3907632b4}{}\label{classndn_1_1encoding_1_1Encoder_a83a39ad200bb0f55f0c615b3907632b4}
+
+
+Prepend non-\/negative integer {\ttfamily integer} of N\+DN T\+LV encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 201 of file encoder.\+cpp.
+
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!prepend\+Var\+Number@{prepend\+Var\+Number}}
+\index{prepend\+Var\+Number@{prepend\+Var\+Number}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{prepend\+Var\+Number(uint64\+\_\+t var\+Number)}{prependVarNumber(uint64\_t varNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::encoding\+::\+Encoder\+::prepend\+Var\+Number (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{var\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Encoder_af864de9dc84d1e6b872e4486f56dd308}{}\label{classndn_1_1encoding_1_1Encoder_af864de9dc84d1e6b872e4486f56dd308}
+
+
+Prepend Var\+Number {\ttfamily var\+Number} of N\+DN T\+LV encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 146 of file encoder.\+cpp.
+
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!reserve@{reserve}}
+\index{reserve@{reserve}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{reserve(size\+\_\+t size, bool add\+In\+Front)}{reserve(size\_t size, bool addInFront)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::encoding\+::\+Encoder\+::reserve (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size, }
+\item[{bool}]{add\+In\+Front}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Encoder_a076c8f06a4cb772896621e3737e34ede}{}\label{classndn_1_1encoding_1_1Encoder_a076c8f06a4cb772896621e3737e34ede}
+
+
+Reserve {\ttfamily size} bytes for the underlying buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em add\+In\+Front} & if true, then {\ttfamily size} bytes will be available in front (i.\+e., subsequent call to prepend$\ast$ will not need to allocate memory). If false, then reservation will be done at the end of the buffer (i.\+d., for subsequent append$\ast$ calls) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Reserve size is exact, unlike reserve\+Front and reserve\+Back methods 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1encoding_1_1Encoder_a2d9fae4b2cf5c6b3a7631f71954cec6a}{reserve\+Front}, \hyperlink{classndn_1_1encoding_1_1Encoder_ade19fdbfcae1a23d1fca14e075cde0fa}{reserve\+Back} 
+\end{DoxySeeAlso}
+
+
+Definition at line 68 of file encoder.\+cpp.
+
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!reserve\+Back@{reserve\+Back}}
+\index{reserve\+Back@{reserve\+Back}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{reserve\+Back(size\+\_\+t size)}{reserveBack(size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::encoding\+::\+Encoder\+::reserve\+Back (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Encoder_ade19fdbfcae1a23d1fca14e075cde0fa}{}\label{classndn_1_1encoding_1_1Encoder_ade19fdbfcae1a23d1fca14e075cde0fa}
+
+
+Reserve at least {\ttfamily size} bytes at the back of the underlying buffer. 
+
+\begin{DoxyNote}{Note}
+the actual reserve size can be (and in most cases is) larger than specified reservation length 
+\end{DoxyNote}
+
+
+Definition at line 45 of file encoder.\+cpp.
+
+\index{ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}!reserve\+Front@{reserve\+Front}}
+\index{reserve\+Front@{reserve\+Front}!ndn\+::encoding\+::\+Encoder@{ndn\+::encoding\+::\+Encoder}}
+\subsubsection[{\texorpdfstring{reserve\+Front(size\+\_\+t size)}{reserveFront(size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::encoding\+::\+Encoder\+::reserve\+Front (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Encoder_a2d9fae4b2cf5c6b3a7631f71954cec6a}{}\label{classndn_1_1encoding_1_1Encoder_a2d9fae4b2cf5c6b3a7631f71954cec6a}
+
+
+Reserve at least {\ttfamily isze} bytes at the beginning of the underlying buffer. 
+
+\begin{DoxyNote}{Note}
+the actual reserve size can be (and in most cases is) larger than specified reservation length 
+\end{DoxyNote}
+
+
+Definition at line 52 of file encoder.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/encoder.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/encoder.\+cpp\end{DoxyCompactItemize}

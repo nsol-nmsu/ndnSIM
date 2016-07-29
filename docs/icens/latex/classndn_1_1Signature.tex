@@ -1,0 +1,179 @@
+\hypertarget{classndn_1_1Signature}{}\section{ndn\+:\+:Signature Class Reference}
+\label{classndn_1_1Signature}\index{ndn\+::\+Signature@{ndn\+::\+Signature}}
+
+
+{\ttfamily \#include $<$signature.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Signature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.839080cm]{classndn_1_1Signature}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Signature_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries Sha256} = tlv\+:\+:Digest\+Sha256, 
+{\bfseries Sha256\+With\+Rsa} = tlv\+:\+:Signature\+Sha256\+With\+Rsa, 
+{\bfseries Sha256\+With\+Ecdsa} = tlv\+:\+:Signature\+Sha256\+With\+Ecdsa
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Signature} (const \hyperlink{classndn_1_1Block}{Block} \&info, const \hyperlink{classndn_1_1Block}{Block} \&value=\hyperlink{classndn_1_1Block}{Block}())\hypertarget{classndn_1_1Signature_ae79628836f4441fa28da032c3f2dea8a}{}\label{classndn_1_1Signature_ae79628836f4441fa28da032c3f2dea8a}
+
+\item 
+{\bfseries Signature} (const \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} \&info, const \hyperlink{classndn_1_1Block}{Block} \&value=\hyperlink{classndn_1_1Block}{Block}())\hypertarget{classndn_1_1Signature_aecec900eed192e4af4d7d30ba4618b9b}{}\label{classndn_1_1Signature_aecec900eed192e4af4d7d30ba4618b9b}
+
+\item 
+{\bfseries operator bool} () const\hypertarget{classndn_1_1Signature_acad3d8bcba44a2b7a34d449144c3a4f6}{}\label{classndn_1_1Signature_acad3d8bcba44a2b7a34d449144c3a4f6}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Signature_a2457c3d2a6d1d42a90fda0f21242a461}{get\+Info} () const\hypertarget{classndn_1_1Signature_a2457c3d2a6d1d42a90fda0f21242a461}{}\label{classndn_1_1Signature_a2457c3d2a6d1d42a90fda0f21242a461}
+
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} in the wire format. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Signature_afaf518c9fbe44898b20fd60a8c8e8921}{set\+Info} (const \hyperlink{classndn_1_1Block}{Block} \&info)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} from a block. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Signature_a8b525c4b64e0e39a47ab126bfccd1430}{set\+Info} (const \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} \&info)\hypertarget{classndn_1_1Signature_a8b525c4b64e0e39a47ab126bfccd1430}{}\label{classndn_1_1Signature_a8b525c4b64e0e39a47ab126bfccd1430}
+
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info}. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Signature_a58d707d8fbaedeba54f9572faa3a1333}{get\+Value} () const\hypertarget{classndn_1_1Signature_a58d707d8fbaedeba54f9572faa3a1333}{}\label{classndn_1_1Signature_a58d707d8fbaedeba54f9572faa3a1333}
+
+\begin{DoxyCompactList}\small\item\em Get Signature\+Value in the wire format. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Signature_af05df098210e986687abb196cbdb8b92}{set\+Value} (const \hyperlink{classndn_1_1Block}{Block} \&value)
+\begin{DoxyCompactList}\small\item\em Get Signature\+Value from a block. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classndn_1_1Signature_a8a6f9cd01c78d530652caa8f98926751}{get\+Type} () const\hypertarget{classndn_1_1Signature_a8a6f9cd01c78d530652caa8f98926751}{}\label{classndn_1_1Signature_a8a6f9cd01c78d530652caa8f98926751}
+
+\begin{DoxyCompactList}\small\item\em Get signature type. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Signature_ab194076d9b50f42687f684e7d7cbdbcb}{has\+Key\+Locator} () const\hypertarget{classndn_1_1Signature_ab194076d9b50f42687f684e7d7cbdbcb}{}\label{classndn_1_1Signature_ab194076d9b50f42687f684e7d7cbdbcb}
+
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} block has a \hyperlink{classndn_1_1KeyLocator}{Key\+Locator}. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \& \hyperlink{classndn_1_1Signature_acccb3dbc17f32f4abc7c4cbb19395448}{get\+Key\+Locator} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classndn_1_1KeyLocator}{Key\+Locator}. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Signature_af4ff2d73719170f7a4e26db5a5598b30}{set\+Key\+Locator} (const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \&key\+Locator)\hypertarget{classndn_1_1Signature_af4ff2d73719170f7a4e26db5a5598b30}{}\label{classndn_1_1Signature_af4ff2d73719170f7a4e26db5a5598b30}
+
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1KeyLocator}{Key\+Locator}. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Signature_a5bd5533cadbb807d3ba3175470de746f}{unset\+Key\+Locator} ()
+\begin{DoxyCompactList}\small\item\em Unset \hyperlink{classndn_1_1KeyLocator}{Key\+Locator}. \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1Signature}{Signature} \&other) const\hypertarget{classndn_1_1Signature_a22fc80e22556b6c53adb9f42501a4ed1}{}\label{classndn_1_1Signature_a22fc80e22556b6c53adb9f42501a4ed1}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1Signature}{Signature} \&other) const\hypertarget{classndn_1_1Signature_ad8bad9cade6674553b8413808a301a40}{}\label{classndn_1_1Signature_ad8bad9cade6674553b8413808a301a40}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} {\bfseries m\+\_\+info}\hypertarget{classndn_1_1Signature_a08fb250d80fd532b723db29c959539c7}{}\label{classndn_1_1Signature_a08fb250d80fd532b723db29c959539c7}
+
+\item 
+\hyperlink{classndn_1_1Block}{Block} {\bfseries m\+\_\+value}\hypertarget{classndn_1_1Signature_a6a658d03507d2c4c07cc7143408f2101}{}\label{classndn_1_1Signature_a6a658d03507d2c4c07cc7143408f2101}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classndn_1_1Signature}{Signature} is storage for the signature-\/related information (info and value) in a \hyperlink{classndn_1_1Data}{Data} packet. 
+
+Definition at line 33 of file signature.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{classndn_1_1Signature_a7dd536599b024b860f556b5af8e5bfd2}{}\label{classndn_1_1Signature_a7dd536599b024b860f556b5af8e5bfd2}
+\begin{DoxyRefDesc}{Deprecated}
+\item[{\bf Deprecated}]use tlv\+::\+Signature\+Type\+Value instead. \end{DoxyRefDesc}
+
+
+Definition at line 47 of file signature.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Signature@{ndn\+::\+Signature}!get\+Key\+Locator@{get\+Key\+Locator}}
+\index{get\+Key\+Locator@{get\+Key\+Locator}!ndn\+::\+Signature@{ndn\+::\+Signature}}
+\subsubsection[{\texorpdfstring{get\+Key\+Locator() const}{getKeyLocator() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Key\+Locator}\& ndn\+::\+Signature\+::get\+Key\+Locator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Signature_acccb3dbc17f32f4abc7c4cbb19395448}{}\label{classndn_1_1Signature_acccb3dbc17f32f4abc7c4cbb19395448}
+
+
+Get \hyperlink{classndn_1_1KeyLocator}{Key\+Locator}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Signature_1_1Error}{Signature\+::\+Error}} & if \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} does not exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 134 of file signature.\+hpp.
+
+\index{ndn\+::\+Signature@{ndn\+::\+Signature}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!ndn\+::\+Signature@{ndn\+::\+Signature}}
+\subsubsection[{\texorpdfstring{set\+Info(const Block \&info)}{setInfo(const Block \&info)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Signature\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Signature_afaf518c9fbe44898b20fd60a8c8e8921}{}\label{classndn_1_1Signature_afaf518c9fbe44898b20fd60a8c8e8921}
+
+
+Set \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} from a block. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1tlv_1_1Error}{tlv\+::\+Error}} & if supplied block is not formatted correctly \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 44 of file signature.\+cpp.
+
+\index{ndn\+::\+Signature@{ndn\+::\+Signature}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!ndn\+::\+Signature@{ndn\+::\+Signature}}
+\subsubsection[{\texorpdfstring{set\+Value(const Block \&value)}{setValue(const Block \&value)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Signature\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Signature_af05df098210e986687abb196cbdb8b92}{}\label{classndn_1_1Signature_af05df098210e986687abb196cbdb8b92}
+
+
+Get Signature\+Value from a block. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1tlv_1_1Error}{tlv\+::\+Error}} & if supplied block has type different from Signature\+Value \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 50 of file signature.\+cpp.
+
+\index{ndn\+::\+Signature@{ndn\+::\+Signature}!unset\+Key\+Locator@{unset\+Key\+Locator}}
+\index{unset\+Key\+Locator@{unset\+Key\+Locator}!ndn\+::\+Signature@{ndn\+::\+Signature}}
+\subsubsection[{\texorpdfstring{unset\+Key\+Locator()}{unsetKeyLocator()}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Signature\+::unset\+Key\+Locator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Signature_a5bd5533cadbb807d3ba3175470de746f}{}\label{classndn_1_1Signature_a5bd5533cadbb807d3ba3175470de746f}
+
+
+Unset \hyperlink{classndn_1_1KeyLocator}{Key\+Locator}. 
+
+Note that specific signature types may provide advisory (non-\/virtual) override to prevent unsetting \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} if it is required by the specification. 
+
+Definition at line 155 of file signature.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/signature.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/signature.\+cpp\end{DoxyCompactItemize}

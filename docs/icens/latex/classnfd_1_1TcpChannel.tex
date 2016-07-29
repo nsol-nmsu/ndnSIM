@@ -1,0 +1,96 @@
+\hypertarget{classnfd_1_1TcpChannel}{}\section{nfd\+:\+:Tcp\+Channel Class Reference}
+\label{classnfd_1_1TcpChannel}\index{nfd\+::\+Tcp\+Channel@{nfd\+::\+Tcp\+Channel}}
+
+
+Class implementing T\+C\+P-\/based channel to create faces.  
+
+
+
+
+{\ttfamily \#include $<$tcp-\/channel.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Tcp\+Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1TcpChannel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1TcpChannel_a3a7559bdecc4a76e08046ebc1f3c93c4}{Tcp\+Channel} (const tcp\+::\+Endpoint \&local\+Endpoint)
+\begin{DoxyCompactList}\small\item\em Create T\+CP channel for the local endpoint. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1TcpChannel_ab2c06032e8775433fc01ce11937f7ca9}{listen} (const \hyperlink{classnfd_1_1Channel_a47f1a8874228ad9dfa38b4e96f6f8d57}{Face\+Created\+Callback} \&on\+Face\+Created, const \hyperlink{classnfd_1_1Channel_a090bac376b438fb150ce740c2839375b}{Connect\+Failed\+Callback} \&on\+Accept\+Failed, int backlog=boost\+::asio\+::ip\+::tcp\+::acceptor\+::max\+\_\+connections)
+\begin{DoxyCompactList}\small\item\em Enable listening on the local endpoint, accept connections, and create faces when remote host makes a connection. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1TcpChannel_aecd445a7df92fd55daa14bb6059796f4}{connect} (const tcp\+::\+Endpoint \&remote\+Endpoint, const \hyperlink{classnfd_1_1Channel_a47f1a8874228ad9dfa38b4e96f6f8d57}{Face\+Created\+Callback} \&on\+Face\+Created, const \hyperlink{classnfd_1_1Channel_a090bac376b438fb150ce740c2839375b}{Connect\+Failed\+Callback} \&on\+Connect\+Failed, const time\+::seconds \&timeout=time\+::seconds(4))\hypertarget{classnfd_1_1TcpChannel_aecd445a7df92fd55daa14bb6059796f4}{}\label{classnfd_1_1TcpChannel_aecd445a7df92fd55daa14bb6059796f4}
+
+\begin{DoxyCompactList}\small\item\em Create a face by establishing connection to remote endpoint. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnfd_1_1TcpChannel_ad4d8610d64af2b03468357d29c2e9f92}{size} () const\hypertarget{classnfd_1_1TcpChannel_ad4d8610d64af2b03468357d29c2e9f92}{}\label{classnfd_1_1TcpChannel_ad4d8610d64af2b03468357d29c2e9f92}
+
+\begin{DoxyCompactList}\small\item\em Get number of faces in the channel. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Listening} () const\hypertarget{classnfd_1_1TcpChannel_ab5a8445c69e2d2c1a8c2ad4c1c8f5cae}{}\label{classnfd_1_1TcpChannel_ab5a8445c69e2d2c1a8c2ad4c1c8f5cae}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class implementing T\+C\+P-\/based channel to create faces. 
+
+\hyperlink{classnfd_1_1Channel}{Channel} can create faces as a response to incoming T\+CP connections (\hyperlink{classnfd_1_1TcpChannel_ab2c06032e8775433fc01ce11937f7ca9}{Tcp\+Channel\+::listen} needs to be called for that to work) or explicitly after using \hyperlink{classnfd_1_1TcpChannel_aecd445a7df92fd55daa14bb6059796f4}{Tcp\+Channel\+::connect} method. 
+
+Definition at line 45 of file tcp-\/channel.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::\+Tcp\+Channel@{nfd\+::\+Tcp\+Channel}!Tcp\+Channel@{Tcp\+Channel}}
+\index{Tcp\+Channel@{Tcp\+Channel}!nfd\+::\+Tcp\+Channel@{nfd\+::\+Tcp\+Channel}}
+\subsubsection[{\texorpdfstring{Tcp\+Channel(const tcp\+::\+Endpoint \&local\+Endpoint)}{TcpChannel(const tcp::Endpoint \&localEndpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::\+Tcp\+Channel\+::\+Tcp\+Channel (
+\begin{DoxyParamCaption}
+\item[{const tcp\+::\+Endpoint \&}]{local\+Endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classnfd_1_1TcpChannel_a3a7559bdecc4a76e08046ebc1f3c93c4}{}\label{classnfd_1_1TcpChannel_a3a7559bdecc4a76e08046ebc1f3c93c4}
+
+
+Create T\+CP channel for the local endpoint. 
+
+To enable creation faces upon incoming connections, one needs to explicitly call \hyperlink{classnfd_1_1TcpChannel_ab2c06032e8775433fc01ce11937f7ca9}{Tcp\+Channel\+::listen} method. 
+
+Definition at line 36 of file tcp-\/channel.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Tcp\+Channel@{nfd\+::\+Tcp\+Channel}!listen@{listen}}
+\index{listen@{listen}!nfd\+::\+Tcp\+Channel@{nfd\+::\+Tcp\+Channel}}
+\subsubsection[{\texorpdfstring{listen(const Face\+Created\+Callback \&on\+Face\+Created, const Connect\+Failed\+Callback \&on\+Accept\+Failed, int backlog=boost\+::asio\+::ip\+::tcp\+::acceptor\+::max\+\_\+connections)}{listen(const FaceCreatedCallback \&onFaceCreated, const ConnectFailedCallback \&onAcceptFailed, int backlog=boost::asio::ip::tcp::acceptor::max\_connections)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Tcp\+Channel\+::listen (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Face\+Created, }
+\item[{const {\bf Connect\+Failed\+Callback} \&}]{on\+Accept\+Failed, }
+\item[{int}]{backlog = {\ttfamily boost\+:\+:asio\+:\+:ip\+:\+:tcp\+:\+:acceptor\+:\+:max\+\_\+connections}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1TcpChannel_ab2c06032e8775433fc01ce11937f7ca9}{}\label{classnfd_1_1TcpChannel_ab2c06032e8775433fc01ce11937f7ca9}
+
+
+Enable listening on the local endpoint, accept connections, and create faces when remote host makes a connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Face\+Created} & Callback to notify successful creation of the face \\
+\hline
+{\em on\+Accept\+Failed} & Callback to notify when channel fails (accept call returns an error) \\
+\hline
+{\em backlog} & The maximum length of the queue of pending incoming connections \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file tcp-\/channel.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/tcp-\/channel.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/tcp-\/channel.\+cpp\end{DoxyCompactItemize}

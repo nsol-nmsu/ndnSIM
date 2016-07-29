@@ -1,0 +1,47 @@
+\hypertarget{classndn_1_1CertificateCache}{}\section{ndn\+:\+:Certificate\+Cache Class Reference}
+\label{classndn_1_1CertificateCache}\index{ndn\+::\+Certificate\+Cache@{ndn\+::\+Certificate\+Cache}}
+
+
+Interface for the cache of validated certificates.  
+
+
+
+
+{\ttfamily \#include $<$certificate-\/cache.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Certificate\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1CertificateCache}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries insert\+Certificate} (shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ certificate)=0\hypertarget{classndn_1_1CertificateCache_ab07f8997612bd1ee143bbc5ab22f8956}{}\label{classndn_1_1CertificateCache_ab07f8997612bd1ee143bbc5ab22f8956}
+
+\item 
+virtual shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ {\bfseries get\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name\+Without\+Version)=0\hypertarget{classndn_1_1CertificateCache_ac4546b64906ba959f9fa6cfd09d6069c}{}\label{classndn_1_1CertificateCache_ac4546b64906ba959f9fa6cfd09d6069c}
+
+\item 
+virtual void {\bfseries reset} ()=0\hypertarget{classndn_1_1CertificateCache_ade0fcb13ed61bf34145c83ec16544fc7}{}\label{classndn_1_1CertificateCache_ade0fcb13ed61bf34145c83ec16544fc7}
+
+\item 
+virtual size\+\_\+t {\bfseries get\+Size} ()=0\hypertarget{classndn_1_1CertificateCache_a57575fbd8258e17d89b25f3280cd88fd}{}\label{classndn_1_1CertificateCache_a57575fbd8258e17d89b25f3280cd88fd}
+
+\item 
+bool {\bfseries is\+Empty} ()\hypertarget{classndn_1_1CertificateCache_abf5339b863b8d8844e8956097f61c7fc}{}\label{classndn_1_1CertificateCache_abf5339b863b8d8844e8956097f61c7fc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for the cache of validated certificates. 
+
+Definition at line 35 of file certificate-\/cache.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate-\/cache.\+hpp\end{DoxyCompactItemize}

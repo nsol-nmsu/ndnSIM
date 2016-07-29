@@ -1,0 +1,109 @@
+\hypertarget{classns3_1_1ndn_1_1StrategyChoiceHelper}{}\section{ns3\+:\+:ndn\+:\+:Strategy\+Choice\+Helper Class Reference}
+\label{classns3_1_1ndn_1_1StrategyChoiceHelper}\index{ns3\+::ndn\+::\+Strategy\+Choice\+Helper@{ns3\+::ndn\+::\+Strategy\+Choice\+Helper}}
+
+
+N\+FD Strategy Choice Helper (F\+IB) helper.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/strategy-\/choice-\/helper.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classns3_1_1ndn_1_1StrategyChoiceHelper_a8772c04eb91b1b57630f8149bf874b4e}{Install} (Ptr$<$ Node $>$ node, const Name \&name\+Prefix, const Name \&strategy)\hypertarget{classns3_1_1ndn_1_1StrategyChoiceHelper_a8772c04eb91b1b57630f8149bf874b4e}{}\label{classns3_1_1ndn_1_1StrategyChoiceHelper_a8772c04eb91b1b57630f8149bf874b4e}
+
+\begin{DoxyCompactList}\small\item\em Install a built-\/in strategy {\ttfamily strategy} on {\ttfamily node} for {\ttfamily name\+Prefix} namespace. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1StrategyChoiceHelper_a166064669d862c000e4b3996f476dde9}{Install} (const Node\+Container \&c, const Name \&name\+Prefix, const Name \&strategy)\hypertarget{classns3_1_1ndn_1_1StrategyChoiceHelper_a166064669d862c000e4b3996f476dde9}{}\label{classns3_1_1ndn_1_1StrategyChoiceHelper_a166064669d862c000e4b3996f476dde9}
+
+\begin{DoxyCompactList}\small\item\em Install a built-\/in strategy {\ttfamily strategy} on nodes in {\ttfamily c} container for {\ttfamily name\+Prefix} namespace. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1StrategyChoiceHelper_a726f392b22b0acb1e450e21918240e50}{Install\+All} (const Name \&name\+Prefix, const Name \&strategy)\hypertarget{classns3_1_1ndn_1_1StrategyChoiceHelper_a726f392b22b0acb1e450e21918240e50}{}\label{classns3_1_1ndn_1_1StrategyChoiceHelper_a726f392b22b0acb1e450e21918240e50}
+
+\begin{DoxyCompactList}\small\item\em Install a built-\/in strategy {\ttfamily strategy} on all nodes for {\ttfamily name\+Prefix} namespace. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Strategy $>$ }\\static void \hyperlink{classns3_1_1ndn_1_1StrategyChoiceHelper_a1c2aefe5164f9236ed5aae108af955fb}{Install} (Ptr$<$ Node $>$ node, const Name \&name\+Prefix)
+\begin{DoxyCompactList}\small\item\em Install a custom strategy on {\ttfamily node} for {\ttfamily name\+Prefix} namespace. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Strategy $>$ }\\static void \hyperlink{classns3_1_1ndn_1_1StrategyChoiceHelper_a528fac1abeff8de3534d5fe647a7bd62}{Install} (const Node\+Container \&c, const Name \&name\+Prefix)
+\begin{DoxyCompactList}\small\item\em Install a custom strategy on nodes in {\ttfamily c} container for {\ttfamily name\+Prefix} namespace. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Strategy $>$ }\\static void \hyperlink{classns3_1_1ndn_1_1StrategyChoiceHelper_aa76d7d0e8e5690c1b62b7eff427cda54}{Install\+All} (const Name \&name\+Prefix)
+\begin{DoxyCompactList}\small\item\em Install a custom strategy on all nodes for {\ttfamily name\+Prefix} namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+FD Strategy Choice Helper (F\+IB) helper. 
+
+The Strategy Choice helper interacts with the Strategy Choice manager of N\+FD by sending special Interest commands to the manager in order to specify the desired per-\/name prefix forwarding strategy for one, more or all the nodes of a topology. 
+
+Definition at line 60 of file ndn-\/strategy-\/choice-\/helper.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Strategy\+Choice\+Helper@{ns3\+::ndn\+::\+Strategy\+Choice\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Strategy\+Choice\+Helper@{ns3\+::ndn\+::\+Strategy\+Choice\+Helper}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node, const Name \&name\+Prefix)}{Install(Ptr< Node > node, const Name \&namePrefix)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Strategy $>$ void ns3\+::ndn\+::\+Strategy\+Choice\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const Name \&}]{name\+Prefix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1StrategyChoiceHelper_a1c2aefe5164f9236ed5aae108af955fb}{}\label{classns3_1_1ndn_1_1StrategyChoiceHelper_a1c2aefe5164f9236ed5aae108af955fb}
+
+
+Install a custom strategy on {\ttfamily node} for {\ttfamily name\+Prefix} namespace. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Strategy} & Class name of the custom strategy \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 113 of file ndn-\/strategy-\/choice-\/helper.\+hpp.
+
+\index{ns3\+::ndn\+::\+Strategy\+Choice\+Helper@{ns3\+::ndn\+::\+Strategy\+Choice\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Strategy\+Choice\+Helper@{ns3\+::ndn\+::\+Strategy\+Choice\+Helper}}
+\subsubsection[{\texorpdfstring{Install(const Node\+Container \&c, const Name \&name\+Prefix)}{Install(const NodeContainer \&c, const Name \&namePrefix)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Strategy $>$ void ns3\+::ndn\+::\+Strategy\+Choice\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{const Node\+Container \&}]{c, }
+\item[{const Name \&}]{name\+Prefix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1StrategyChoiceHelper_a528fac1abeff8de3534d5fe647a7bd62}{}\label{classns3_1_1ndn_1_1StrategyChoiceHelper_a528fac1abeff8de3534d5fe647a7bd62}
+
+
+Install a custom strategy on nodes in {\ttfamily c} container for {\ttfamily name\+Prefix} namespace. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Strategy} & Class name of the custom strategy \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 131 of file ndn-\/strategy-\/choice-\/helper.\+hpp.
+
+\index{ns3\+::ndn\+::\+Strategy\+Choice\+Helper@{ns3\+::ndn\+::\+Strategy\+Choice\+Helper}!Install\+All@{Install\+All}}
+\index{Install\+All@{Install\+All}!ns3\+::ndn\+::\+Strategy\+Choice\+Helper@{ns3\+::ndn\+::\+Strategy\+Choice\+Helper}}
+\subsubsection[{\texorpdfstring{Install\+All(const Name \&name\+Prefix)}{InstallAll(const Name \&namePrefix)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Strategy $>$ void ns3\+::ndn\+::\+Strategy\+Choice\+Helper\+::\+Install\+All (
+\begin{DoxyParamCaption}
+\item[{const Name \&}]{name\+Prefix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1StrategyChoiceHelper_aa76d7d0e8e5690c1b62b7eff427cda54}{}\label{classns3_1_1ndn_1_1StrategyChoiceHelper_aa76d7d0e8e5690c1b62b7eff427cda54}
+
+
+Install a custom strategy on all nodes for {\ttfamily name\+Prefix} namespace. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Strategy} & Class name of the custom strategy \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 140 of file ndn-\/strategy-\/choice-\/helper.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/strategy-\/choice-\/helper.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/strategy-\/choice-\/helper.\+cpp\end{DoxyCompactItemize}

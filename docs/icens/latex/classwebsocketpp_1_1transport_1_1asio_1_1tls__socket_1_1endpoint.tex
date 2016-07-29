@@ -1,0 +1,156 @@
+\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint}{}\section{websocketpp\+:\+:transport\+:\+:asio\+:\+:tls\+\_\+socket\+:\+:endpoint Class Reference}
+\label{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint}\index{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}}
+
+
+T\+LS enabled Boost A\+S\+IO endpoint socket component.  
+
+
+
+
+{\ttfamily \#include $<$tls.\+hpp$>$}
+
+Inheritance diagram for websocketpp\+:\+:transport\+:\+:asio\+:\+:tls\+\_\+socket\+:\+:endpoint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.666667cm]{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint}{endpoint} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_adc98054310e74703eb102760e85f5cd9}{type}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_adc98054310e74703eb102760e85f5cd9}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_adc98054310e74703eb102760e85f5cd9}
+
+\begin{DoxyCompactList}\small\item\em The type of this endpoint socket component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1connection}{connection} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_a690393b3da13e389cf025f88a3d38f3f}{socket\+\_\+con\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_a690393b3da13e389cf025f88a3d38f3f}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_a690393b3da13e389cf025f88a3d38f3f}
+
+\begin{DoxyCompactList}\small\item\em The type of the corresponding connection socket component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1connection_a2aa605c27a476eba644e062dc5bc4f6d}{socket\+\_\+con\+\_\+type\+::ptr} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_ad0babd14e53524633840467d072710c3}{socket\+\_\+con\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_aaaf0047506bbbd83d2da026970fc3bf8}{is\+\_\+secure} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the endpoint creates secure connections. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_ae9466b3c3169eb1757ca64a1462ac86e}{set\+\_\+socket\+\_\+init\+\_\+handler} (\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket_a1d7e715c2f7c5fc7add88d6a37724abb}{socket\+\_\+init\+\_\+handler} h)
+\begin{DoxyCompactList}\small\item\em Set socket init handler. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_aaa8973ceabe2423f535f6cfd2f7cbd53}{set\+\_\+tls\+\_\+init\+\_\+handler} (\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket_a8213f20abc47626ab3bf8db285fff3b3}{tls\+\_\+init\+\_\+handler} h)
+\begin{DoxyCompactList}\small\item\em Set T\+LS init handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+lib\+::error\+\_\+code \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_a3fcd99c817947b9e23f0438c976edc64}{init} (\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_ad0babd14e53524633840467d072710c3}{socket\+\_\+con\+\_\+ptr} scon)
+\begin{DoxyCompactList}\small\item\em Initialize a connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+LS enabled Boost A\+S\+IO endpoint socket component. 
+
+\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint}{transport\+::asio\+::tls\+\_\+socket\+::endpoint} implements a secure endpoint socket component that uses Boost A\+S\+IO\textquotesingle{}s ssl\+::stream to wrap an ip\+::tcp\+::socket. 
+
+Definition at line 350 of file tls.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\index{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}!socket\+\_\+con\+\_\+ptr@{socket\+\_\+con\+\_\+ptr}}
+\index{socket\+\_\+con\+\_\+ptr@{socket\+\_\+con\+\_\+ptr}!websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}}
+\subsubsection[{\texorpdfstring{socket\+\_\+con\+\_\+ptr}{socket\_con\_ptr}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf socket\+\_\+con\+\_\+type\+::ptr} {\bf websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint\+::socket\+\_\+con\+\_\+ptr}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_ad0babd14e53524633840467d072710c3}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_ad0babd14e53524633840467d072710c3}
+The type of a shared pointer to the corresponding connection socket component. 
+
+Definition at line 359 of file tls.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}!init@{init}}
+\index{init@{init}!websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}}
+\subsubsection[{\texorpdfstring{init(socket\+\_\+con\+\_\+ptr scon)}{init(socket\_con\_ptr scon)}}]{\setlength{\rightskip}{0pt plus 5cm}lib\+::error\+\_\+code websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint\+::init (
+\begin{DoxyParamCaption}
+\item[{{\bf socket\+\_\+con\+\_\+ptr}}]{scon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_a3fcd99c817947b9e23f0438c976edc64}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_a3fcd99c817947b9e23f0438c976edc64}
+
+
+Initialize a connection. 
+
+Called by the transport after a new connection is created to initialize the socket component of the connection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scon} & Pointer to the socket component of the connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error code (empty on success) 
+\end{DoxyReturn}
+
+
+Definition at line 405 of file tls.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}!is\+\_\+secure@{is\+\_\+secure}}
+\index{is\+\_\+secure@{is\+\_\+secure}!websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}}
+\subsubsection[{\texorpdfstring{is\+\_\+secure() const}{is\_secure() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint\+::is\+\_\+secure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_aaaf0047506bbbd83d2da026970fc3bf8}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_aaaf0047506bbbd83d2da026970fc3bf8}
+
+
+Checks whether the endpoint creates secure connections. 
+
+\begin{DoxyReturn}{Returns}
+Whether or not the endpoint creates secure connections 
+\end{DoxyReturn}
+
+
+Definition at line 367 of file tls.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}!set\+\_\+socket\+\_\+init\+\_\+handler@{set\+\_\+socket\+\_\+init\+\_\+handler}}
+\index{set\+\_\+socket\+\_\+init\+\_\+handler@{set\+\_\+socket\+\_\+init\+\_\+handler}!websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}}
+\subsubsection[{\texorpdfstring{set\+\_\+socket\+\_\+init\+\_\+handler(socket\+\_\+init\+\_\+handler h)}{set\_socket\_init\_handler(socket\_init\_handler h)}}]{\setlength{\rightskip}{0pt plus 5cm}void websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint\+::set\+\_\+socket\+\_\+init\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{{\bf socket\+\_\+init\+\_\+handler}}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_ae9466b3c3169eb1757ca64a1462ac86e}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_ae9466b3c3169eb1757ca64a1462ac86e}
+
+
+Set socket init handler. 
+
+The socket init handler is called after a connection\textquotesingle{}s socket is created but before it is used. This gives the end application an opportunity to set asio socket specific parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The new socket\+\_\+init\+\_\+handler \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 379 of file tls.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}!set\+\_\+tls\+\_\+init\+\_\+handler@{set\+\_\+tls\+\_\+init\+\_\+handler}}
+\index{set\+\_\+tls\+\_\+init\+\_\+handler@{set\+\_\+tls\+\_\+init\+\_\+handler}!websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint@{websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint}}
+\subsubsection[{\texorpdfstring{set\+\_\+tls\+\_\+init\+\_\+handler(tls\+\_\+init\+\_\+handler h)}{set\_tls\_init\_handler(tls\_init\_handler h)}}]{\setlength{\rightskip}{0pt plus 5cm}void websocketpp\+::transport\+::asio\+::tls\+\_\+socket\+::endpoint\+::set\+\_\+tls\+\_\+init\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{{\bf tls\+\_\+init\+\_\+handler}}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_aaa8973ceabe2423f535f6cfd2f7cbd53}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_aaa8973ceabe2423f535f6cfd2f7cbd53}
+
+
+Set T\+LS init handler. 
+
+The tls init handler is called when needed to request a T\+LS context for the library to use. A T\+LS init handler must be set and it must return a valid T\+LS context in order for this endpoint to be able to initialize T\+LS connections
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The new tls\+\_\+init\+\_\+handler \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 392 of file tls.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/websocketpp/websocketpp/transport/asio/security/tls.\+hpp\end{DoxyCompactItemize}

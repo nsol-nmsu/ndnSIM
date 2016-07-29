@@ -1,0 +1,253 @@
+\hypertarget{classns3_1_1ndn_1_1Subscriber}{}\section{ns3\+:\+:ndn\+:\+:Subscriber Class Reference}
+\label{classns3_1_1ndn_1_1Subscriber}\index{ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}}
+
+
+N\+DN application for sending out Interest packets. Installed on nodes at physical layer (prosumers) of the Smart Grid architecture (i\+CenS)  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/subscriber.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Subscriber\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1Subscriber}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Sent\+Interest\+Trace\+Callback}) (uint32\+\_\+t, shared\+\_\+ptr$<$ const Interest $>$)\hypertarget{classns3_1_1ndn_1_1Subscriber_a22726a1cbc00a7731da1d572e0a050ae}{}\label{classns3_1_1ndn_1_1Subscriber_a22726a1cbc00a7731da1d572e0a050ae}
+
+\item 
+typedef void($\ast$ {\bfseries Received\+Data\+Trace\+Callback}) (uint32\+\_\+t, shared\+\_\+ptr$<$ const Data $>$)\hypertarget{classns3_1_1ndn_1_1Subscriber_a21c0ce221409431ca0dfed232eaa63d1}{}\label{classns3_1_1ndn_1_1Subscriber_a21c0ce221409431ca0dfed232eaa63d1}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1Subscriber_a75cc9a8a2f5c908b0168973c5bad7b36}{Subscriber} ()\hypertarget{classns3_1_1ndn_1_1Subscriber_a75cc9a8a2f5c908b0168973c5bad7b36}{}\label{classns3_1_1ndn_1_1Subscriber_a75cc9a8a2f5c908b0168973c5bad7b36}
+
+\begin{DoxyCompactList}\small\item\em Default constructor Sets up randomizer function and packet sequence number. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Subscriber_a72abe1eed4b4b2cdc4fe04f453492f49}{On\+Data} (shared\+\_\+ptr$<$ const Data $>$ content\+Object)
+\begin{DoxyCompactList}\small\item\em Method that will be called every time new Data arrives. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Subscriber_af8e14e2e11c6a7920cff3730bf5fdb9b}{On\+Timeout} (uint32\+\_\+t sequence\+Number)
+\begin{DoxyCompactList}\small\item\em Timeout event. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1Subscriber_a84f920b3ada70761dee3e6da1e548004}{Send\+Packet} ()\hypertarget{classns3_1_1ndn_1_1Subscriber_a84f920b3ada70761dee3e6da1e548004}{}\label{classns3_1_1ndn_1_1Subscriber_a84f920b3ada70761dee3e6da1e548004}
+
+\begin{DoxyCompactList}\small\item\em Actually send packet. Subscription interests do not carry payload information. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Subscriber_aa8356a7d2bb6129d34efb0aa8aa11bc7}{Will\+Send\+Out\+Interest} (uint32\+\_\+t sequence\+Number)
+\begin{DoxyCompactList}\small\item\em An event that is fired just before an Interest packet is actually send out (send is inevitable) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} ()\hypertarget{classns3_1_1ndn_1_1Subscriber_a990d941c64d34c6ac2b402279336ea82}{}\label{classns3_1_1ndn_1_1Subscriber_a990d941c64d34c6ac2b402279336ea82}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Subscriber_aeb069ea76d7203c8206066746775d8c8}{Start\+Application} ()\hypertarget{classns3_1_1ndn_1_1Subscriber_aeb069ea76d7203c8206066746775d8c8}{}\label{classns3_1_1ndn_1_1Subscriber_aeb069ea76d7203c8206066746775d8c8}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Start. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Subscriber_a03abd87c94d4e545abf70e545cb5e51d}{Stop\+Application} ()\hypertarget{classns3_1_1ndn_1_1Subscriber_a03abd87c94d4e545abf70e545cb5e51d}{}\label{classns3_1_1ndn_1_1Subscriber_a03abd87c94d4e545abf70e545cb5e51d}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Stop. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1Subscriber_ac327c79bcec09c054a79ed0eafaaa701}{Schedule\+Next\+Packet} ()\hypertarget{classns3_1_1ndn_1_1Subscriber_ac327c79bcec09c054a79ed0eafaaa701}{}\label{classns3_1_1ndn_1_1Subscriber_ac327c79bcec09c054a79ed0eafaaa701}
+
+\begin{DoxyCompactList}\small\item\em Constructs the Interest packet and sends it using a callback to the underlying N\+DN protocol. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1Subscriber_a222ee83f9c41902f8e96c889b3555c89}{Check\+Retx\+Timeout} ()\hypertarget{classns3_1_1ndn_1_1Subscriber_a222ee83f9c41902f8e96c889b3555c89}{}\label{classns3_1_1ndn_1_1Subscriber_a222ee83f9c41902f8e96c889b3555c89}
+
+\begin{DoxyCompactList}\small\item\em Checks if the packet need to be retransmitted becuase of retransmission timer expiration. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1Subscriber_a7a1eb7cc21e8a395d2339198ffa8fb25}{Set\+Retx\+Timer} (Time retx\+Timer)
+\begin{DoxyCompactList}\small\item\em Modifies the frequency of checking the retransmission timeouts. \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1Subscriber_a80a0c94ded4df046ddcfb5f72ea3b6a7}{Get\+Retx\+Timer} () const
+\begin{DoxyCompactList}\small\item\em Returns the frequency of checking the retransmission timeouts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ptr$<$ Uniform\+Random\+Variable $>$ \hyperlink{classns3_1_1ndn_1_1Subscriber_a6e1211634925b991222ec302aef42e3d}{m\+\_\+rand}\hypertarget{classns3_1_1ndn_1_1Subscriber_a6e1211634925b991222ec302aef42e3d}{}\label{classns3_1_1ndn_1_1Subscriber_a6e1211634925b991222ec302aef42e3d}
+
+\begin{DoxyCompactList}\small\item\em nonce generator \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classns3_1_1ndn_1_1Subscriber_a2463400a9d405c40e53e76f5c89c25f4}{m\+\_\+seq}\hypertarget{classns3_1_1ndn_1_1Subscriber_a2463400a9d405c40e53e76f5c89c25f4}{}\label{classns3_1_1ndn_1_1Subscriber_a2463400a9d405c40e53e76f5c89c25f4}
+
+\begin{DoxyCompactList}\small\item\em currently requested sequence number \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classns3_1_1ndn_1_1Subscriber_ad7bfdbbf64b30afeb916a46dc7344303}{m\+\_\+seq\+Max}\hypertarget{classns3_1_1ndn_1_1Subscriber_ad7bfdbbf64b30afeb916a46dc7344303}{}\label{classns3_1_1ndn_1_1Subscriber_ad7bfdbbf64b30afeb916a46dc7344303}
+
+\begin{DoxyCompactList}\small\item\em maximum number of sequence number \end{DoxyCompactList}\item 
+\hyperlink{classEventId}{Event\+Id} \hyperlink{classns3_1_1ndn_1_1Subscriber_a660f56f69bed601435b1264388a9feee}{m\+\_\+send\+Event}\hypertarget{classns3_1_1ndn_1_1Subscriber_a660f56f69bed601435b1264388a9feee}{}\label{classns3_1_1ndn_1_1Subscriber_a660f56f69bed601435b1264388a9feee}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classEventId}{Event\+Id} of pending \char`\"{}send packet\char`\"{} event. \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1Subscriber_a396207bf0eb311c18d375a7df717da7d}{m\+\_\+retx\+Timer}\hypertarget{classns3_1_1ndn_1_1Subscriber_a396207bf0eb311c18d375a7df717da7d}{}\label{classns3_1_1ndn_1_1Subscriber_a396207bf0eb311c18d375a7df717da7d}
+
+\begin{DoxyCompactList}\small\item\em Currently estimated retransmission timer. \end{DoxyCompactList}\item 
+\hyperlink{classEventId}{Event\+Id} \hyperlink{classns3_1_1ndn_1_1Subscriber_a11afb56a7bcfff8053b8d70e97f9d548}{m\+\_\+retx\+Event}\hypertarget{classns3_1_1ndn_1_1Subscriber_a11afb56a7bcfff8053b8d70e97f9d548}{}\label{classns3_1_1ndn_1_1Subscriber_a11afb56a7bcfff8053b8d70e97f9d548}
+
+\begin{DoxyCompactList}\small\item\em Event to check whether or not retransmission should be performed. \end{DoxyCompactList}\item 
+Time {\bfseries m\+\_\+tx\+Interval}\hypertarget{classns3_1_1ndn_1_1Subscriber_ac8b6e246ff574a42b171bee41b5bec3a}{}\label{classns3_1_1ndn_1_1Subscriber_ac8b6e246ff574a42b171bee41b5bec3a}
+
+\item 
+Name \hyperlink{classns3_1_1ndn_1_1Subscriber_a61a25e6264a43f40772619a47402fdce}{m\+\_\+interest\+Name}\hypertarget{classns3_1_1ndn_1_1Subscriber_a61a25e6264a43f40772619a47402fdce}{}\label{classns3_1_1ndn_1_1Subscriber_a61a25e6264a43f40772619a47402fdce}
+
+\begin{DoxyCompactList}\small\item\em N\+DN Name of the Interest (use Name) \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1Subscriber_ad164ef812873c4f61823527f29ed835a}{m\+\_\+interest\+Life\+Time}\hypertarget{classns3_1_1ndn_1_1Subscriber_ad164ef812873c4f61823527f29ed835a}{}\label{classns3_1_1ndn_1_1Subscriber_ad164ef812873c4f61823527f29ed835a}
+
+\begin{DoxyCompactList}\small\item\em Life\+Time for interest packet. \end{DoxyCompactList}\item 
+bool {\bfseries m\+\_\+first\+Time}\hypertarget{classns3_1_1ndn_1_1Subscriber_a01a5146e8ac0bab2d8e6676d442dce8c}{}\label{classns3_1_1ndn_1_1Subscriber_a01a5146e8ac0bab2d8e6676d442dce8c}
+
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+subscription}\hypertarget{classns3_1_1ndn_1_1Subscriber_aa36c66f276ebe6e6188dac28977d1499}{}\label{classns3_1_1ndn_1_1Subscriber_aa36c66f276ebe6e6188dac28977d1499}
+
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+virtual\+Payload\+Size}\hypertarget{classns3_1_1ndn_1_1Subscriber_a4ea7ed933b5a95c9eb2b762b64e2e07b}{}\label{classns3_1_1ndn_1_1Subscriber_a4ea7ed933b5a95c9eb2b762b64e2e07b}
+
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+do\+Retransmission}\hypertarget{classns3_1_1ndn_1_1Subscriber_ac3eafab1c9499248664280ea811cfe7d}{}\label{classns3_1_1ndn_1_1Subscriber_ac3eafab1c9499248664280ea811cfe7d}
+
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+offset}\hypertarget{classns3_1_1ndn_1_1Subscriber_a49e208e6096c5f1252aa06a10faac9d4}{}\label{classns3_1_1ndn_1_1Subscriber_a49e208e6096c5f1252aa06a10faac9d4}
+
+\item 
+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1RttEstimator}{Rtt\+Estimator} $>$ \hyperlink{classns3_1_1ndn_1_1Subscriber_a5bfb96edbd1a6dab7e132bdbdd3fa9e5}{m\+\_\+rtt}\hypertarget{classns3_1_1ndn_1_1Subscriber_a5bfb96edbd1a6dab7e132bdbdd3fa9e5}{}\label{classns3_1_1ndn_1_1Subscriber_a5bfb96edbd1a6dab7e132bdbdd3fa9e5}
+
+\begin{DoxyCompactList}\small\item\em R\+TT estimator. \end{DoxyCompactList}\item 
+Seq\+Timeouts\+Container \hyperlink{classns3_1_1ndn_1_1Subscriber_a3e847de0d67441368d93a207278c4df3}{m\+\_\+seq\+Timeouts}\hypertarget{classns3_1_1ndn_1_1Subscriber_a3e847de0d67441368d93a207278c4df3}{}\label{classns3_1_1ndn_1_1Subscriber_a3e847de0d67441368d93a207278c4df3}
+
+\begin{DoxyCompactList}\small\item\em multi-\/index for the set of Seq\+Timeout structs \end{DoxyCompactList}\item 
+Seq\+Timeouts\+Container {\bfseries m\+\_\+seq\+Last\+Delay}\hypertarget{classns3_1_1ndn_1_1Subscriber_ada178bfb81493913a37c3a825a803ad7}{}\label{classns3_1_1ndn_1_1Subscriber_ada178bfb81493913a37c3a825a803ad7}
+
+\item 
+Seq\+Timeouts\+Container {\bfseries m\+\_\+seq\+Full\+Delay}\hypertarget{classns3_1_1ndn_1_1Subscriber_a6099ad374944c1904dfbf53df0e62f56}{}\label{classns3_1_1ndn_1_1Subscriber_a6099ad374944c1904dfbf53df0e62f56}
+
+\item 
+std\+::map$<$ uint32\+\_\+t, uint32\+\_\+t $>$ {\bfseries m\+\_\+seq\+Retx\+Counts}\hypertarget{classns3_1_1ndn_1_1Subscriber_ada864cb826bca471b0593f7e9b41602e}{}\label{classns3_1_1ndn_1_1Subscriber_ada864cb826bca471b0593f7e9b41602e}
+
+\item 
+Traced\+Callback$<$ Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$, uint32\+\_\+t, Time, int32\+\_\+t $>$ {\bfseries m\+\_\+last\+Retransmitted\+Interest\+Data\+Delay}\hypertarget{classns3_1_1ndn_1_1Subscriber_a9567a1960a661a1fadd1bf485316ee89}{}\label{classns3_1_1ndn_1_1Subscriber_a9567a1960a661a1fadd1bf485316ee89}
+
+\item 
+Traced\+Callback$<$ Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$, uint32\+\_\+t, Time, uint32\+\_\+t, int32\+\_\+t $>$ {\bfseries m\+\_\+first\+Interest\+Data\+Delay}\hypertarget{classns3_1_1ndn_1_1Subscriber_a63dbd29971ccfb811ce12a063c02f071}{}\label{classns3_1_1ndn_1_1Subscriber_a63dbd29971ccfb811ce12a063c02f071}
+
+\item 
+Traced\+Callback$<$ uint32\+\_\+t, shared\+\_\+ptr$<$ const Interest $>$ $>$ {\bfseries m\+\_\+sent\+Interest}\hypertarget{classns3_1_1ndn_1_1Subscriber_ac6113d109a830bf5ad51999db193ea44}{}\label{classns3_1_1ndn_1_1Subscriber_ac6113d109a830bf5ad51999db193ea44}
+
+\item 
+Traced\+Callback$<$ uint32\+\_\+t, shared\+\_\+ptr$<$ const Data $>$ $>$ {\bfseries m\+\_\+received\+Data}\hypertarget{classns3_1_1ndn_1_1Subscriber_a1aac97698bae88bd9707cc84e3764dcd}{}\label{classns3_1_1ndn_1_1Subscriber_a1aac97698bae88bd9707cc84e3764dcd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+DN application for sending out Interest packets. Installed on nodes at physical layer (prosumers) of the Smart Grid architecture (i\+CenS) 
+
+Definition at line 51 of file ndn-\/subscriber.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}!Get\+Retx\+Timer@{Get\+Retx\+Timer}}
+\index{Get\+Retx\+Timer@{Get\+Retx\+Timer}!ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{Get\+Retx\+Timer() const}{GetRetxTimer() const}}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\+::ndn\+::\+Subscriber\+::\+Get\+Retx\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classns3_1_1ndn_1_1Subscriber_a80a0c94ded4df046ddcfb5f72ea3b6a7}{}\label{classns3_1_1ndn_1_1Subscriber_a80a0c94ded4df046ddcfb5f72ea3b6a7}
+
+
+Returns the frequency of checking the retransmission timeouts. 
+
+\begin{DoxyReturn}{Returns}
+Timeout defining how frequent retransmission timeouts should be checked 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file ndn-\/subscriber.\+cpp.
+
+\index{ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}!On\+Data@{On\+Data}}
+\index{On\+Data@{On\+Data}!ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{On\+Data(shared\+\_\+ptr$<$ const Data $>$ content\+Object)}{OnData(shared\_ptr< const Data > contentObject)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Subscriber\+::\+On\+Data (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1Subscriber_a72abe1eed4b4b2cdc4fe04f453492f49}{}\label{classns3_1_1ndn_1_1Subscriber_a72abe1eed4b4b2cdc4fe04f453492f49}
+
+
+Method that will be called every time new Data arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+Object} & Data header \\
+\hline
+{\em payload} & payload (potentially virtual) of the Data packet (may include packet tags of original packet) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1App_a3f6f593a1557aa22c01bfbab6590b240}{ns3\+::ndn\+::\+App}.
+
+
+
+Definition at line 274 of file ndn-\/subscriber.\+cpp.
+
+\index{ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}!On\+Timeout@{On\+Timeout}}
+\index{On\+Timeout@{On\+Timeout}!ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{On\+Timeout(uint32\+\_\+t sequence\+Number)}{OnTimeout(uint32\_t sequenceNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Subscriber\+::\+On\+Timeout (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{sequence\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1Subscriber_af8e14e2e11c6a7920cff3730bf5fdb9b}{}\label{classns3_1_1ndn_1_1Subscriber_af8e14e2e11c6a7920cff3730bf5fdb9b}
+
+
+Timeout event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence\+Number} & time outed sequence number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 331 of file ndn-\/subscriber.\+cpp.
+
+\index{ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}!Set\+Retx\+Timer@{Set\+Retx\+Timer}}
+\index{Set\+Retx\+Timer@{Set\+Retx\+Timer}!ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{Set\+Retx\+Timer(\+Time retx\+Timer)}{SetRetxTimer(Time retxTimer)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Subscriber\+::\+Set\+Retx\+Timer (
+\begin{DoxyParamCaption}
+\item[{Time}]{retx\+Timer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classns3_1_1ndn_1_1Subscriber_a7a1eb7cc21e8a395d2339198ffa8fb25}{}\label{classns3_1_1ndn_1_1Subscriber_a7a1eb7cc21e8a395d2339198ffa8fb25}
+
+
+Modifies the frequency of checking the retransmission timeouts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em retx\+Timer} & Timeout defining how frequent retransmission timeouts should be checked \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 142 of file ndn-\/subscriber.\+cpp.
+
+\index{ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}!Will\+Send\+Out\+Interest@{Will\+Send\+Out\+Interest}}
+\index{Will\+Send\+Out\+Interest@{Will\+Send\+Out\+Interest}!ns3\+::ndn\+::\+Subscriber@{ns3\+::ndn\+::\+Subscriber}}
+\subsubsection[{\texorpdfstring{Will\+Send\+Out\+Interest(uint32\+\_\+t sequence\+Number)}{WillSendOutInterest(uint32\_t sequenceNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Subscriber\+::\+Will\+Send\+Out\+Interest (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{sequence\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1Subscriber_aa8356a7d2bb6129d34efb0aa8aa11bc7}{}\label{classns3_1_1ndn_1_1Subscriber_aa8356a7d2bb6129d34efb0aa8aa11bc7}
+
+
+An event that is fired just before an Interest packet is actually send out (send is inevitable) 
+
+The reason for \char`\"{}before\char`\"{} even is that in certain cases (when it is possible to satisfy from the local cache), the send call will immediately return data, and if \char`\"{}after\char`\"{} even was used, this after would be called after all processing of incoming data, potentially producing unexpected results. 
+
+Definition at line 345 of file ndn-\/subscriber.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/subscriber.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/subscriber.\+cpp\end{DoxyCompactItemize}

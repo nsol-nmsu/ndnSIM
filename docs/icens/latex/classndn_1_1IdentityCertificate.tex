@@ -1,0 +1,129 @@
+\hypertarget{classndn_1_1IdentityCertificate}{}\section{ndn\+:\+:Identity\+Certificate Class Reference}
+\label{classndn_1_1IdentityCertificate}\index{ndn\+::\+Identity\+Certificate@{ndn\+::\+Identity\+Certificate}}
+Inheritance diagram for ndn\+:\+:Identity\+Certificate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classndn_1_1IdentityCertificate}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1IdentityCertificate_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1IdentityCertificate_a389340a7c76bf11065eba17a3849ca03}{Identity\+Certificate} ()\hypertarget{classndn_1_1IdentityCertificate_a389340a7c76bf11065eba17a3849ca03}{}\label{classndn_1_1IdentityCertificate_a389340a7c76bf11065eba17a3849ca03}
+
+\begin{DoxyCompactList}\small\item\em The default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1IdentityCertificate_a8e586362bb73010e1b952460f23b6ca4}{Identity\+Certificate} (const \hyperlink{classndn_1_1Data}{Data} \&data)
+\begin{DoxyCompactList}\small\item\em Create an \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} from the content in the data packet. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1IdentityCertificate_a90d5307d47ce14d6149fc94132e89dd2}{Identity\+Certificate} (const \hyperlink{classndn_1_1Block}{Block} \&block)
+\begin{DoxyCompactList}\small\item\em Create an \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} from a block. \end{DoxyCompactList}\item 
+void {\bfseries wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1IdentityCertificate_a46469492d51405b9ce67334b849dac8e}{}\label{classndn_1_1IdentityCertificate_a46469492d51405b9ce67334b849dac8e}
+
+\item 
+void {\bfseries set\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name)\hypertarget{classndn_1_1IdentityCertificate_a7f29a8907c271109cd713e0d55d45f89}{}\label{classndn_1_1IdentityCertificate_a7f29a8907c271109cd713e0d55d45f89}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Public\+Key\+Name} () const\hypertarget{classndn_1_1IdentityCertificate_aebc53b9ffab92d0617831aa25ba4957c}{}\label{classndn_1_1IdentityCertificate_aebc53b9ffab92d0617831aa25ba4957c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bfseries is\+Identity\+Certificate} (const \hyperlink{classndn_1_1Certificate}{Certificate} \&certificate)\hypertarget{classndn_1_1IdentityCertificate_afc18f225c70626be093976e1ad723a5c}{}\label{classndn_1_1IdentityCertificate_afc18f225c70626be093976e1ad723a5c}
+
+\item 
+static \hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1IdentityCertificate_adb2f8c0ace38d8c8413d1054cbea7768}{certificate\+Name\+To\+Public\+Key\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)
+\begin{DoxyCompactList}\small\item\em Get the public key name from the full certificate name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries m\+\_\+public\+Key\+Name}\hypertarget{classndn_1_1IdentityCertificate_a9086eae1e30c89c53af4f19e0eae1bc6}{}\label{classndn_1_1IdentityCertificate_a9086eae1e30c89c53af4f19e0eae1bc6}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file identity-\/certificate.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Identity\+Certificate@{ndn\+::\+Identity\+Certificate}!Identity\+Certificate@{Identity\+Certificate}}
+\index{Identity\+Certificate@{Identity\+Certificate}!ndn\+::\+Identity\+Certificate@{ndn\+::\+Identity\+Certificate}}
+\subsubsection[{\texorpdfstring{Identity\+Certificate(const Data \&data)}{IdentityCertificate(const Data \&data)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Identity\+Certificate\+::\+Identity\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1IdentityCertificate_a8e586362bb73010e1b952460f23b6ca4}{}\label{classndn_1_1IdentityCertificate_a8e586362bb73010e1b952460f23b6ca4}
+
+
+Create an \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} from the content in the data packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data packet with the content to decode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file identity-\/certificate.\+cpp.
+
+\index{ndn\+::\+Identity\+Certificate@{ndn\+::\+Identity\+Certificate}!Identity\+Certificate@{Identity\+Certificate}}
+\index{Identity\+Certificate@{Identity\+Certificate}!ndn\+::\+Identity\+Certificate@{ndn\+::\+Identity\+Certificate}}
+\subsubsection[{\texorpdfstring{Identity\+Certificate(const Block \&block)}{IdentityCertificate(const Block \&block)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Identity\+Certificate\+::\+Identity\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1IdentityCertificate_a90d5307d47ce14d6149fc94132e89dd2}{}\label{classndn_1_1IdentityCertificate_a90d5307d47ce14d6149fc94132e89dd2}
+
+
+Create an \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} from a block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & The raw block of the certificate. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file identity-\/certificate.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Identity\+Certificate@{ndn\+::\+Identity\+Certificate}!certificate\+Name\+To\+Public\+Key\+Name@{certificate\+Name\+To\+Public\+Key\+Name}}
+\index{certificate\+Name\+To\+Public\+Key\+Name@{certificate\+Name\+To\+Public\+Key\+Name}!ndn\+::\+Identity\+Certificate@{ndn\+::\+Identity\+Certificate}}
+\subsubsection[{\texorpdfstring{certificate\+Name\+To\+Public\+Key\+Name(const Name \&certificate\+Name)}{certificateNameToPublicKeyName(const Name \&certificateName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::\+Identity\+Certificate\+::certificate\+Name\+To\+Public\+Key\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{certificate\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1IdentityCertificate_adb2f8c0ace38d8c8413d1054cbea7768}{}\label{classndn_1_1IdentityCertificate_adb2f8c0ace38d8c8413d1054cbea7768}
+
+
+Get the public key name from the full certificate name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em certificate\+Name} & The full certificate name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The related public key name. 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file identity-\/certificate.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/identity-\/certificate.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/identity-\/certificate.\+cpp\end{DoxyCompactItemize}

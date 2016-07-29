@@ -1,0 +1,90 @@
+\hypertarget{classnfd_1_1CommandValidator}{}\section{nfd\+:\+:Command\+Validator Class Reference}
+\label{classnfd_1_1CommandValidator}\index{nfd\+::\+Command\+Validator@{nfd\+::\+Command\+Validator}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1CommandValidator_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Config\+File} (\hyperlink{classnfd_1_1ConfigFile}{Config\+File} \&config\+File)\hypertarget{classnfd_1_1CommandValidator_ac50da248251173556c7c2c11a6ba373a}{}\label{classnfd_1_1CommandValidator_ac50da248251173556c7c2c11a6ba373a}
+
+\item 
+void \hyperlink{classnfd_1_1CommandValidator_af229d8cefc38d313d6fd3da492c0084b}{on\+Config} (const Config\+Section \&section, bool is\+Dry\+Run, const std\+::string \&filename)
+\item 
+void \hyperlink{classnfd_1_1CommandValidator_a51f6397aaaab1b05a5e38cd03c549280}{add\+Supported\+Privilege} (const std\+::string \&privilege)
+\item 
+void {\bfseries add\+Interest\+Rule} (const std\+::string \&regex, const \hyperlink{classndn_1_1IdentityCertificate}{ndn\+::\+Identity\+Certificate} \&certificate)\hypertarget{classnfd_1_1CommandValidator_a8803d353b5868658ae19afebf67f1c43}{}\label{classnfd_1_1CommandValidator_a8803d353b5868658ae19afebf67f1c43}
+
+\item 
+void {\bfseries add\+Interest\+Rule} (const std\+::string \&regex, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1PublicKey}{ndn\+::\+Public\+Key} \&public\+Key)\hypertarget{classnfd_1_1CommandValidator_a7842431c0ffbdda4f3032362f41b195b}{}\label{classnfd_1_1CommandValidator_a7842431c0ffbdda4f3032362f41b195b}
+
+\item 
+void {\bfseries validate} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{namespacendn_a90fe4b4d97a7870d87f2fce8fdc88f95}{ndn\+::\+On\+Interest\+Validated} \&on\+Validated, const \hyperlink{namespacendn_a6cb4f04de7c1e8da06d8f5865b3d2877}{ndn\+::\+On\+Interest\+Validation\+Failed} \&on\+Validation\+Failed)\hypertarget{classnfd_1_1CommandValidator_a36ed252d40b07e95fca035662918c42b}{}\label{classnfd_1_1CommandValidator_a36ed252d40b07e95fca035662918c42b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file command-\/validator.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Command\+Validator@{nfd\+::\+Command\+Validator}!add\+Supported\+Privilege@{add\+Supported\+Privilege}}
+\index{add\+Supported\+Privilege@{add\+Supported\+Privilege}!nfd\+::\+Command\+Validator@{nfd\+::\+Command\+Validator}}
+\subsubsection[{\texorpdfstring{add\+Supported\+Privilege(const std\+::string \&privilege)}{addSupportedPrivilege(const std::string \&privilege)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Command\+Validator\+::add\+Supported\+Privilege (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{privilege}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1CommandValidator_a51f6397aaaab1b05a5e38cd03c549280}{}\label{classnfd_1_1CommandValidator_a51f6397aaaab1b05a5e38cd03c549280}
+
+\begin{DoxyParams}{Parameters}
+{\em privilege} & name of privilege to add \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1CommandValidator_1_1Error}{Command\+Validator\+::\+Error}} & on duplicated privilege \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 213 of file command-\/validator.\+cpp.
+
+\index{nfd\+::\+Command\+Validator@{nfd\+::\+Command\+Validator}!on\+Config@{on\+Config}}
+\index{on\+Config@{on\+Config}!nfd\+::\+Command\+Validator@{nfd\+::\+Command\+Validator}}
+\subsubsection[{\texorpdfstring{on\+Config(const Config\+Section \&section, bool is\+Dry\+Run, const std\+::string \&filename)}{onConfig(const ConfigSection \&section, bool isDryRun, const std::string \&filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Command\+Validator\+::on\+Config (
+\begin{DoxyParamCaption}
+\item[{const Config\+Section \&}]{section, }
+\item[{bool}]{is\+Dry\+Run, }
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1CommandValidator_af229d8cefc38d313d6fd3da492c0084b}{}\label{classnfd_1_1CommandValidator_af229d8cefc38d313d6fd3da492c0084b}
+
+\begin{DoxyParams}{Parameters}
+{\em section} & \char`\"{}authorizations\char`\"{} section to parse \\
+\hline
+{\em is\+Dry\+Run} & true if performing a dry run of configuration, false otherwise \\
+\hline
+{\em filename} & filename of configuration file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & on parse error \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 66 of file command-\/validator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/mgmt/command-\/validator.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/mgmt/command-\/validator.\+cpp\end{DoxyCompactItemize}

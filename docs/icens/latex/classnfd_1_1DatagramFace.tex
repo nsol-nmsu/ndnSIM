@@ -1,0 +1,126 @@
+\hypertarget{classnfd_1_1DatagramFace}{}\section{nfd\+:\+:Datagram\+Face$<$ Protocol, Addressing $>$ Class Template Reference}
+\label{classnfd_1_1DatagramFace}\index{nfd\+::\+Datagram\+Face$<$ Protocol, Addressing $>$@{nfd\+::\+Datagram\+Face$<$ Protocol, Addressing $>$}}
+Inheritance diagram for nfd\+:\+:Datagram\+Face$<$ Protocol, Addressing $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1DatagramFace}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Protocol {\bfseries protocol}\hypertarget{classnfd_1_1DatagramFace_a5f992ba57a944f334a8fea2e891dd7fa}{}\label{classnfd_1_1DatagramFace_a5f992ba57a944f334a8fea2e891dd7fa}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1DatagramFace_aff9457ec87fd4d81bd80e0a294f0bce5}{Datagram\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&remote\+Uri, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&local\+Uri, typename protocol\+::socket socket)
+\begin{DoxyCompactList}\small\item\em Construct datagram face. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1DatagramFace_a87665f3023310f6dff9abd5684a34533}{send\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1DatagramFace_a87665f3023310f6dff9abd5684a34533}{}\label{classnfd_1_1DatagramFace_a87665f3023310f6dff9abd5684a34533}
+
+\begin{DoxyCompactList}\small\item\em send an Interest \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1DatagramFace_a654b94a4545758da6b86d8cd63a9e252}{send\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1DatagramFace_a654b94a4545758da6b86d8cd63a9e252}{}\label{classnfd_1_1DatagramFace_a654b94a4545758da6b86d8cd63a9e252}
+
+\begin{DoxyCompactList}\small\item\em send a Data \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1DatagramFace_a8f0033a2ec639a55501793978e355bdf}{close} () D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Close the face. \end{DoxyCompactList}\item 
+void {\bfseries receive\+Datagram} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t n\+Bytes\+Received, const boost\+::system\+::error\+\_\+code \&error)\hypertarget{classnfd_1_1DatagramFace_a425099976eda52154c69d5df3cafa7b3}{}\label{classnfd_1_1DatagramFace_a425099976eda52154c69d5df3cafa7b3}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries process\+Error\+Code} (const boost\+::system\+::error\+\_\+code \&error)\hypertarget{classnfd_1_1DatagramFace_a99c36c23edbb0252f6ece763397ca0c5}{}\label{classnfd_1_1DatagramFace_a99c36c23edbb0252f6ece763397ca0c5}
+
+\item 
+void {\bfseries handle\+Send} (const boost\+::system\+::error\+\_\+code \&error, size\+\_\+t n\+Bytes\+Sent, const \hyperlink{classndn_1_1Block}{Block} \&payload)\hypertarget{classnfd_1_1DatagramFace_ad8f069c43e39652536c9545dd01c61bc}{}\label{classnfd_1_1DatagramFace_ad8f069c43e39652536c9545dd01c61bc}
+
+\item 
+void {\bfseries handle\+Receive} (const boost\+::system\+::error\+\_\+code \&error, size\+\_\+t n\+Bytes\+Received)\hypertarget{classnfd_1_1DatagramFace_ae3fc3ba9d63fc64888cce2cacd716ae8}{}\label{classnfd_1_1DatagramFace_ae3fc3ba9d63fc64888cce2cacd716ae8}
+
+\item 
+void {\bfseries keep\+Face\+Alive\+Until\+All\+Handlers\+Executed} (const shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \&face)\hypertarget{classnfd_1_1DatagramFace_ac98fdded60255977615b99988d1a67db}{}\label{classnfd_1_1DatagramFace_ac98fdded60255977615b99988d1a67db}
+
+\item 
+void {\bfseries close\+Socket} ()\hypertarget{classnfd_1_1DatagramFace_aa1028783da2257f0ea55780227f3287b}{}\label{classnfd_1_1DatagramFace_aa1028783da2257f0ea55780227f3287b}
+
+\item 
+bool {\bfseries has\+Been\+Used\+Recently} () const\hypertarget{classnfd_1_1DatagramFace_afe5ea1abc623362cf08262b1166016b8}{}\label{classnfd_1_1DatagramFace_afe5ea1abc623362cf08262b1166016b8}
+
+\item 
+void \hyperlink{classnfd_1_1DatagramFace_a1384ea0f0b1ab974473a38585c9c7015}{reset\+Recent\+Usage} ()\hypertarget{classnfd_1_1DatagramFace_a1384ea0f0b1ab974473a38585c9c7015}{}\label{classnfd_1_1DatagramFace_a1384ea0f0b1ab974473a38585c9c7015}
+
+\begin{DoxyCompactList}\small\item\em Set m\+\_\+has\+Been\+Used\+Recently to false. \end{DoxyCompactList}\item 
+{\bfseries N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+I\+N\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE} ()\hypertarget{classnfd_1_1DatagramFace_ad16fa02ed4ff2e0c8bca86374b580ebc}{}\label{classnfd_1_1DatagramFace_ad16fa02ed4ff2e0c8bca86374b580ebc}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+protocol\+::socket {\bfseries m\+\_\+socket}\hypertarget{classnfd_1_1DatagramFace_a82d353a4fd077a4504f572f9d77a888b}{}\label{classnfd_1_1DatagramFace_a82d353a4fd077a4504f572f9d77a888b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Protocol, class Addressing = Unicast$>$\\*
+class nfd\+::\+Datagram\+Face$<$ Protocol, Addressing $>$}
+
+
+
+Definition at line 38 of file datagram-\/face.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::\+Datagram\+Face@{nfd\+::\+Datagram\+Face}!Datagram\+Face@{Datagram\+Face}}
+\index{Datagram\+Face@{Datagram\+Face}!nfd\+::\+Datagram\+Face@{nfd\+::\+Datagram\+Face}}
+\subsubsection[{\texorpdfstring{Datagram\+Face(const Face\+Uri \&remote\+Uri, const Face\+Uri \&local\+Uri, typename protocol\+::socket socket)}{DatagramFace(const FaceUri \&remoteUri, const FaceUri \&localUri, typename protocol::socket socket)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Protocol, class Addressing = Unicast$>$ {\bf nfd\+::\+Datagram\+Face}$<$ T, U $>$\+::{\bf Datagram\+Face} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{remote\+Uri, }
+\item[{const {\bf Face\+Uri} \&}]{local\+Uri, }
+\item[{typename protocol\+::socket}]{socket}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1DatagramFace_aff9457ec87fd4d81bd80e0a294f0bce5}{}\label{classnfd_1_1DatagramFace_aff9457ec87fd4d81bd80e0a294f0bce5}
+
+
+Construct datagram face. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Protocol-\/specific socket for the created face \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file datagram-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Datagram\+Face@{nfd\+::\+Datagram\+Face}!close@{close}}
+\index{close@{close}!nfd\+::\+Datagram\+Face@{nfd\+::\+Datagram\+Face}}
+\subsubsection[{\texorpdfstring{close() D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{close() DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class U $>$ void {\bf nfd\+::\+Datagram\+Face}$<$ T, U $>$\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classnfd_1_1DatagramFace_a8f0033a2ec639a55501793978e355bdf}{}\label{classnfd_1_1DatagramFace_a8f0033a2ec639a55501793978e355bdf}
+
+
+Close the face. 
+
+This terminates all communication on the face and cause \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail()} method event to be invoked 
+
+Implements \hyperlink{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{nfd\+::\+Face}.
+
+
+
+Definition at line 153 of file datagram-\/face.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/datagram-\/face.\+hpp\end{DoxyCompactItemize}

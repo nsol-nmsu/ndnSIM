@@ -1,0 +1,90 @@
+\hypertarget{classnfd_1_1scheduler_1_1ScopedEventId}{}\section{nfd\+:\+:scheduler\+:\+:Scoped\+Event\+Id Class Reference}
+\label{classnfd_1_1scheduler_1_1ScopedEventId}\index{nfd\+::scheduler\+::\+Scoped\+Event\+Id@{nfd\+::scheduler\+::\+Scoped\+Event\+Id}}
+
+
+cancels an event automatically upon destruction  
+
+
+
+
+{\ttfamily \#include $<$scheduler.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:scheduler\+:\+:Scoped\+Event\+Id\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1scheduler_1_1ScopedEventId}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1scheduler_1_1ScopedEventId_ad58a88b389afaf056f38f03f4c9f32ed}{Scoped\+Event\+Id} (const \hyperlink{classEventId}{Event\+Id} \&event)
+\begin{DoxyCompactList}\small\item\em implicit constructor from \hyperlink{classEventId}{Event\+Id} \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1scheduler_1_1ScopedEventId_a40e0a86eb5b5a44bae7473c78a3bb9e2}{Scoped\+Event\+Id} (\hyperlink{classnfd_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} \&\&other)\hypertarget{classnfd_1_1scheduler_1_1ScopedEventId_a40e0a86eb5b5a44bae7473c78a3bb9e2}{}\label{classnfd_1_1scheduler_1_1ScopedEventId_a40e0a86eb5b5a44bae7473c78a3bb9e2}
+
+\begin{DoxyCompactList}\small\item\em move constructor \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} \& \hyperlink{classnfd_1_1scheduler_1_1ScopedEventId_a2c2902f716b06a6de49a15ae8874c37a}{operator=} (const \hyperlink{classEventId}{Event\+Id} \&event)
+\begin{DoxyCompactList}\small\item\em assigns an event \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1scheduler_1_1ScopedEventId_a49f0a342b376a03a93e083bd4437c763}{$\sim$\+Scoped\+Event\+Id} ()\hypertarget{classnfd_1_1scheduler_1_1ScopedEventId_a49f0a342b376a03a93e083bd4437c763}{}\label{classnfd_1_1scheduler_1_1ScopedEventId_a49f0a342b376a03a93e083bd4437c763}
+
+\begin{DoxyCompactList}\small\item\em cancels the event \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1scheduler_1_1ScopedEventId_a2c11997d2dc25570912754fcc66483eb}{cancel} ()\hypertarget{classnfd_1_1scheduler_1_1ScopedEventId_a2c11997d2dc25570912754fcc66483eb}{}\label{classnfd_1_1scheduler_1_1ScopedEventId_a2c11997d2dc25570912754fcc66483eb}
+
+\begin{DoxyCompactList}\small\item\em cancels the event manually \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1scheduler_1_1ScopedEventId_ad2758fa0e157273edabfe6361b72012b}{release} ()\hypertarget{classnfd_1_1scheduler_1_1ScopedEventId_ad2758fa0e157273edabfe6361b72012b}{}\label{classnfd_1_1scheduler_1_1ScopedEventId_ad2758fa0e157273edabfe6361b72012b}
+
+\begin{DoxyCompactList}\small\item\em releases the event so that it won\textquotesingle{}t be disconnected when this \hyperlink{classnfd_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} is destructed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+cancels an event automatically upon destruction 
+
+Definition at line 53 of file scheduler.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::scheduler\+::\+Scoped\+Event\+Id@{nfd\+::scheduler\+::\+Scoped\+Event\+Id}!Scoped\+Event\+Id@{Scoped\+Event\+Id}}
+\index{Scoped\+Event\+Id@{Scoped\+Event\+Id}!nfd\+::scheduler\+::\+Scoped\+Event\+Id@{nfd\+::scheduler\+::\+Scoped\+Event\+Id}}
+\subsubsection[{\texorpdfstring{Scoped\+Event\+Id(const Event\+Id \&event)}{ScopedEventId(const EventId \&event)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::scheduler\+::\+Scoped\+Event\+Id\+::\+Scoped\+Event\+Id (
+\begin{DoxyParamCaption}
+\item[{const {\bf Event\+Id} \&}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1scheduler_1_1ScopedEventId_ad58a88b389afaf056f38f03f4c9f32ed}{}\label{classnfd_1_1scheduler_1_1ScopedEventId_ad58a88b389afaf056f38f03f4c9f32ed}
+
+
+implicit constructor from \hyperlink{classEventId}{Event\+Id} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & the event to be cancelled upon destruction \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file scheduler.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::scheduler\+::\+Scoped\+Event\+Id@{nfd\+::scheduler\+::\+Scoped\+Event\+Id}!operator=@{operator=}}
+\index{operator=@{operator=}!nfd\+::scheduler\+::\+Scoped\+Event\+Id@{nfd\+::scheduler\+::\+Scoped\+Event\+Id}}
+\subsubsection[{\texorpdfstring{operator=(const Event\+Id \&event)}{operator=(const EventId \&event)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scoped\+Event\+Id} \& nfd\+::scheduler\+::\+Scoped\+Event\+Id\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Event\+Id} \&}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1scheduler_1_1ScopedEventId_a2c2902f716b06a6de49a15ae8874c37a}{}\label{classnfd_1_1scheduler_1_1ScopedEventId_a2c2902f716b06a6de49a15ae8874c37a}
+
+
+assigns an event 
+
+If a different event has been assigned to this instance previously, that event will be cancelled immediately. 
+
+Definition at line 82 of file scheduler.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/core/scheduler.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/core/scheduler.\+cpp\end{DoxyCompactItemize}

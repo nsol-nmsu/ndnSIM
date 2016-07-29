@@ -1,0 +1,402 @@
+\hypertarget{classndn_1_1Validator}{}\section{ndn\+:\+:Validator Class Reference}
+\label{classndn_1_1Validator}\index{ndn\+::\+Validator@{ndn\+::\+Validator}}
+
+
+\hyperlink{classndn_1_1Validator}{Validator} is one of the main classes of the security library.  
+
+
+
+
+{\ttfamily \#include $<$validator.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Validator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.443299cm]{classndn_1_1Validator}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Validator_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Validator_ab7db43406b6daa789545bcd2ce7c5e5a}{Validator} (\hyperlink{classndn_1_1Face}{Face} $\ast$face=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1Validator}{Validator} constructor. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Validator_abc284a4d3b8dd6ae7143a26e1a7d5231}{Validator} (\hyperlink{classndn_1_1Face}{Face} \&face)
+\item 
+void \hyperlink{classndn_1_1Validator_aee0e9b435fa39c3c4f6ac484122be4fd}{validate} (const \hyperlink{classndn_1_1Data}{Data} \&data, const \hyperlink{namespacendn_aeaa15e849fd25636f59ca61acb64e532}{On\+Data\+Validated} \&on\+Validated, const \hyperlink{namespacendn_ae3c60219d74ba747e368708d93782760}{On\+Data\+Validation\+Failed} \&on\+Validation\+Failed)
+\begin{DoxyCompactList}\small\item\em Validate \hyperlink{classndn_1_1Data}{Data} and call either on\+Validated or on\+Validation\+Failed. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Validator_a74a0f001ecdf851276618608cd035990}{validate} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{namespacendn_a90fe4b4d97a7870d87f2fce8fdc88f95}{On\+Interest\+Validated} \&on\+Validated, const \hyperlink{namespacendn_a6cb4f04de7c1e8da06d8f5865b3d2877}{On\+Interest\+Validation\+Failed} \&on\+Validation\+Failed)
+\begin{DoxyCompactList}\small\item\em Validate \hyperlink{classndn_1_1Interest}{Interest} and call either on\+Validated or on\+Validation\+Failed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classndn_1_1Validator_a0415f0aa2894fceb58dbddd9c1677b5f}{verify\+Signature} (const \hyperlink{classndn_1_1Data}{Data} \&data, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key)\hypertarget{classndn_1_1Validator_a0415f0aa2894fceb58dbddd9c1677b5f}{}\label{classndn_1_1Validator_a0415f0aa2894fceb58dbddd9c1677b5f}
+
+\begin{DoxyCompactList}\small\item\em Verify the data using the public\+Key. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_a193e3f5844c7bfb786837ebf7d5ac6f7}{verify\+Signature} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key)
+\begin{DoxyCompactList}\small\item\em Verify the signed \hyperlink{classndn_1_1Interest}{Interest} using the public\+Key. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_aa7c9ffb0d265883b469533eef8ebf4ee}{verify\+Signature} (const \hyperlink{classndn_1_1Buffer}{Buffer} \&blob, const \hyperlink{classndn_1_1Signature}{Signature} \&sig, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key)\hypertarget{classndn_1_1Validator_aa7c9ffb0d265883b469533eef8ebf4ee}{}\label{classndn_1_1Validator_aa7c9ffb0d265883b469533eef8ebf4ee}
+
+\begin{DoxyCompactList}\small\item\em Verify the blob using the public\+Key against the signature. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_a7d4df84ebd841d12617c6b7756068354}{verify\+Signature} (const \hyperlink{classndn_1_1Data}{Data} \&data, const \hyperlink{classndn_1_1Signature}{Signature} \&sig, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key)\hypertarget{classndn_1_1Validator_a7d4df84ebd841d12617c6b7756068354}{}\label{classndn_1_1Validator_a7d4df84ebd841d12617c6b7756068354}
+
+\begin{DoxyCompactList}\small\item\em Verify the data using the public\+Key against the S\+H\+A256-\/\+R\+SA signature. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_a5faa99e68ab831c746ce0c2a2e239d80}{verify\+Signature} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{classndn_1_1Signature}{Signature} \&sig, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key)
+\begin{DoxyCompactList}\small\item\em Verify the interest using the public\+Key against the S\+H\+A256-\/\+R\+SA signature. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_a302755201b396a2454dd51099dd795a2}{verify\+Signature} (const uint8\+\_\+t $\ast$buf, const size\+\_\+t size, const \hyperlink{classndn_1_1Signature}{Signature} \&sig, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key)\hypertarget{classndn_1_1Validator_a302755201b396a2454dd51099dd795a2}{}\label{classndn_1_1Validator_a302755201b396a2454dd51099dd795a2}
+
+\begin{DoxyCompactList}\small\item\em Verify the blob using the public\+Key against the S\+H\+A256-\/\+R\+SA signature. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_a8fcd7839e9f422f891a813c7e2592f23}{verify\+Signature} (const \hyperlink{classndn_1_1Data}{Data} \&data, const \hyperlink{classndn_1_1DigestSha256}{Digest\+Sha256} \&sig)\hypertarget{classndn_1_1Validator_a8fcd7839e9f422f891a813c7e2592f23}{}\label{classndn_1_1Validator_a8fcd7839e9f422f891a813c7e2592f23}
+
+\begin{DoxyCompactList}\small\item\em Verify the data against the S\+H\+A256 signature. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_a54986839b53eb9bde1640fecd4d35e9a}{verify\+Signature} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{classndn_1_1DigestSha256}{Digest\+Sha256} \&sig)
+\begin{DoxyCompactList}\small\item\em Verify the interest against the S\+H\+A256 signature. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_a8956f877d89d1e1aa6baad7448937bcb}{verify\+Signature} (const \hyperlink{classndn_1_1Buffer}{Buffer} \&blob, const \hyperlink{classndn_1_1DigestSha256}{Digest\+Sha256} \&sig)\hypertarget{classndn_1_1Validator_a8956f877d89d1e1aa6baad7448937bcb}{}\label{classndn_1_1Validator_a8956f877d89d1e1aa6baad7448937bcb}
+
+\begin{DoxyCompactList}\small\item\em Verify the blob against the S\+H\+A256 signature. \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1Validator_a7efdfd70bf86f47a7ad974d24dfffe22}{verify\+Signature} (const uint8\+\_\+t $\ast$buf, const size\+\_\+t size, const \hyperlink{classndn_1_1DigestSha256}{Digest\+Sha256} \&sig)\hypertarget{classndn_1_1Validator_a7efdfd70bf86f47a7ad974d24dfffe22}{}\label{classndn_1_1Validator_a7efdfd70bf86f47a7ad974d24dfffe22}
+
+\begin{DoxyCompactList}\small\item\em Verify the blob against the S\+H\+A256 signature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void(const std\+::string \&)$>$ {\bfseries On\+Failure}\hypertarget{classndn_1_1Validator_a2d5707c1d8a7ba71a2d6e41e52bf8a23}{}\label{classndn_1_1Validator_a2d5707c1d8a7ba71a2d6e41e52bf8a23}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1Validator_a341b1faa8a15ae17c5157d5387a75ef5}{check\+Policy} (const \hyperlink{classndn_1_1Data}{Data} \&data, int n\+Steps, const \hyperlink{namespacendn_aeaa15e849fd25636f59ca61acb64e532}{On\+Data\+Validated} \&on\+Validated, const \hyperlink{namespacendn_ae3c60219d74ba747e368708d93782760}{On\+Data\+Validation\+Failed} \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps)=0
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{classndn_1_1Data}{Data} against policy and return the next validation step if necessary. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1Validator_a8ad5a76c67c489afcb493f722f142e34}{check\+Policy} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, int n\+Steps, const \hyperlink{namespacendn_a90fe4b4d97a7870d87f2fce8fdc88f95}{On\+Interest\+Validated} \&on\+Validated, const \hyperlink{namespacendn_a6cb4f04de7c1e8da06d8f5865b3d2877}{On\+Interest\+Validation\+Failed} \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps)=0
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{classndn_1_1Interest}{Interest} against validation policy and return the next validation step if necessary. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Validator_ab3e41481cbf23614dd0862dfd3abbd36}{on\+Data} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{classndn_1_1Data}{Data} \&data, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ \&next\+Step)\hypertarget{classndn_1_1Validator_ab3e41481cbf23614dd0862dfd3abbd36}{}\label{classndn_1_1Validator_ab3e41481cbf23614dd0862dfd3abbd36}
+
+\begin{DoxyCompactList}\small\item\em Process the received certificate. \end{DoxyCompactList}\item 
+void {\bfseries validate} (const \hyperlink{classndn_1_1Data}{Data} \&data, const \hyperlink{namespacendn_aeaa15e849fd25636f59ca61acb64e532}{On\+Data\+Validated} \&on\+Validated, const \hyperlink{namespacendn_ae3c60219d74ba747e368708d93782760}{On\+Data\+Validation\+Failed} \&on\+Validation\+Failed, int n\+Steps)\hypertarget{classndn_1_1Validator_aa5d39cf35ec7906b8485f5ffdd60b560}{}\label{classndn_1_1Validator_aa5d39cf35ec7906b8485f5ffdd60b560}
+
+\item 
+void {\bfseries validate} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{namespacendn_a90fe4b4d97a7870d87f2fce8fdc88f95}{On\+Interest\+Validated} \&on\+Validated, const \hyperlink{namespacendn_a6cb4f04de7c1e8da06d8f5865b3d2877}{On\+Interest\+Validation\+Failed} \&on\+Validation\+Failed, int n\+Steps)\hypertarget{classndn_1_1Validator_a1fee554680b4b5262cbb1f6c7447255c}{}\label{classndn_1_1Validator_a1fee554680b4b5262cbb1f6c7447255c}
+
+\item 
+virtual shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classndn_1_1Validator_aff0a8652c0281368fc52301029a02c69}{pre\+Certificate\+Validation} (const \hyperlink{classndn_1_1Data}{Data} \&data)
+\begin{DoxyCompactList}\small\item\em Hooks. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1Validator_a14a1affbfa5988bded108e550538db2f}{on\+Timeout} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, int n\+Remaining\+Retries, const On\+Failure \&on\+Failure, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ \&validation\+Request)
+\begin{DoxyCompactList}\small\item\em trigger when interest for certificate times out. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1Validator_a0ed9209ac3c18838e7d979894e92f046}{after\+Check\+Policy} (const std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps, const On\+Failure \&on\+Failure)
+\begin{DoxyCompactList}\small\item\em trigger after check\+Policy is done. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Face}{Face} $\ast$ {\bfseries m\+\_\+face}\hypertarget{classndn_1_1Validator_ad7cedfaeb64892ea6426bccd78b26253}{}\label{classndn_1_1Validator_ad7cedfaeb64892ea6426bccd78b26253}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1Validator}{Validator} is one of the main classes of the security library. 
+
+The \hyperlink{classndn_1_1Validator}{Validator} class provides the interfaces for packet validation. 
+
+Definition at line 46 of file validator.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!Validator@{Validator}}
+\index{Validator@{Validator}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{Validator(\+Face $\ast$face=nullptr)}{Validator(Face *face=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Validator\+::\+Validator (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} $\ast$}]{face = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Validator_ab7db43406b6daa789545bcd2ce7c5e5a}{}\label{classndn_1_1Validator_ab7db43406b6daa789545bcd2ce7c5e5a}
+
+
+\hyperlink{classndn_1_1Validator}{Validator} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & Pointer to face through which validator may retrieve certificates. Passing a null pointer implies the validator is in offline mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Make sure the lifetime of the passed \hyperlink{classndn_1_1Face}{Face} is longer than validator. 
+\end{DoxyNote}
+
+
+Definition at line 37 of file validator.\+cpp.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!Validator@{Validator}}
+\index{Validator@{Validator}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{Validator(\+Face \&face)}{Validator(Face \&face)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Validator\+::\+Validator (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Validator_abc284a4d3b8dd6ae7143a26e1a7d5231}{}\label{classndn_1_1Validator_abc284a4d3b8dd6ae7143a26e1a7d5231}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000040}{Deprecated}]Use the constructor taking Face$\ast$ as parameter. \end{DoxyRefDesc}
+
+
+Definition at line 42 of file validator.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!after\+Check\+Policy@{after\+Check\+Policy}}
+\index{after\+Check\+Policy@{after\+Check\+Policy}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{after\+Check\+Policy(const std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps, const On\+Failure \&on\+Failure)}{afterCheckPolicy(const std::vector< shared\_ptr< ValidationRequest > > \&nextSteps, const OnFailure \&onFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Validator\+::after\+Check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps, }
+\item[{const On\+Failure \&}]{on\+Failure}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1Validator_a0ed9209ac3c18838e7d979894e92f046}{}\label{classndn_1_1Validator_a0ed9209ac3c18838e7d979894e92f046}
+
+
+trigger after check\+Policy is done. 
+
+\hyperlink{classndn_1_1Validator}{Validator} can decide how to handle the set of validation requests according to the trust model.
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Steps} & A set of validation request made by check\+Policy. \\
+\hline
+{\em on\+Failure} & Failure callback when errors happen in processing next\+Steps. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 286 of file validator.\+cpp.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!check\+Policy@{check\+Policy}}
+\index{check\+Policy@{check\+Policy}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{check\+Policy(const Data \&data, int n\+Steps, const On\+Data\+Validated \&on\+Validated, const On\+Data\+Validation\+Failed \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps)=0}{checkPolicy(const Data \&data, int nSteps, const OnDataValidated \&onValidated, const OnDataValidationFailed \&onValidationFailed, std::vector< shared\_ptr< ValidationRequest > > \&nextSteps)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Validator\+::check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data, }
+\item[{int}]{n\+Steps, }
+\item[{const {\bf On\+Data\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Data\+Validation\+Failed} \&}]{on\+Validation\+Failed, }
+\item[{std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classndn_1_1Validator_a341b1faa8a15ae17c5157d5387a75ef5}{}\label{classndn_1_1Validator_a341b1faa8a15ae17c5157d5387a75ef5}
+
+
+Check the \hyperlink{classndn_1_1Data}{Data} against policy and return the next validation step if necessary. 
+
+If there is no next validation step, that validation M\+U\+ST have been done. i.\+e., either on\+Validated or on\+Validation\+Failed callback is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The \hyperlink{classndn_1_1Data}{Data} to check. \\
+\hline
+{\em n\+Steps} & The number of validation steps that have been done. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Data}{Data} is validated, this calls on\+Validated(data) \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data) \\
+\hline
+{\em next\+Steps} & On return, contains the next validation step \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1CommandInterestValidator_aa28092900d40935471f16ae978bc74c2}{ndn\+::\+Command\+Interest\+Validator}, \hyperlink{classndn_1_1ValidatorConfig_affe77aeb11b327410559c550f4d5f7d5}{ndn\+::\+Validator\+Config}, \hyperlink{classndn_1_1ValidatorRegex_ac413d78b67fc3f5175613054486ed942}{ndn\+::\+Validator\+Regex}, and \hyperlink{classndn_1_1ValidatorNull_a6e29ebc70c7655b3f2c14c20c41e0659}{ndn\+::\+Validator\+Null}.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!check\+Policy@{check\+Policy}}
+\index{check\+Policy@{check\+Policy}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{check\+Policy(const Interest \&interest, int n\+Steps, const On\+Interest\+Validated \&on\+Validated, const On\+Interest\+Validation\+Failed \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps)=0}{checkPolicy(const Interest \&interest, int nSteps, const OnInterestValidated \&onValidated, const OnInterestValidationFailed \&onValidationFailed, std::vector< shared\_ptr< ValidationRequest > > \&nextSteps)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Validator\+::check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{int}]{n\+Steps, }
+\item[{const {\bf On\+Interest\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Interest\+Validation\+Failed} \&}]{on\+Validation\+Failed, }
+\item[{std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classndn_1_1Validator_a8ad5a76c67c489afcb493f722f142e34}{}\label{classndn_1_1Validator_a8ad5a76c67c489afcb493f722f142e34}
+
+
+Check the \hyperlink{classndn_1_1Interest}{Interest} against validation policy and return the next validation step if necessary. 
+
+If there is no next validation step, that validation M\+U\+ST have been done. i.\+e., either on\+Validated or on\+Validation\+Failed callback is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & The \hyperlink{classndn_1_1Interest}{Interest} to check. \\
+\hline
+{\em n\+Steps} & The number of validation steps that have been done. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Interest}{Interest} is validated, this calls on\+Validated(data) \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data) \\
+\hline
+{\em next\+Steps} & On return, contains the next validation step \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1CommandInterestValidator_a85bf8d1c56ad281b5d704cac73a8866e}{ndn\+::\+Command\+Interest\+Validator}, \hyperlink{classndn_1_1ValidatorConfig_a8278481be23217bf06ff436c1e3f8e63}{ndn\+::\+Validator\+Config}, \hyperlink{classndn_1_1ValidatorRegex_a94094b94443fafd40a4add55b8ce6821}{ndn\+::\+Validator\+Regex}, and \hyperlink{classndn_1_1ValidatorNull_a90aa622f4ee7115ac2cf6ed6fa3e7af7}{ndn\+::\+Validator\+Null}.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!on\+Timeout@{on\+Timeout}}
+\index{on\+Timeout@{on\+Timeout}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{on\+Timeout(const Interest \&interest, int n\+Remaining\+Retries, const On\+Failure \&on\+Failure, const shared\+\_\+ptr$<$ Validation\+Request $>$ \&validation\+Request)}{onTimeout(const Interest \&interest, int nRemainingRetries, const OnFailure \&onFailure, const shared\_ptr< ValidationRequest > \&validationRequest)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Validator\+::on\+Timeout (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{int}]{n\+Remaining\+Retries, }
+\item[{const On\+Failure \&}]{on\+Failure, }
+\item[{const shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ \&}]{validation\+Request}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1Validator_a14a1affbfa5988bded108e550538db2f}{}\label{classndn_1_1Validator_a14a1affbfa5988bded108e550538db2f}
+
+
+trigger when interest for certificate times out. 
+
+\hyperlink{classndn_1_1Validator}{Validator} can decide how to handle the timeout, either call on\+Failure, or retry.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & The interest that times out. \\
+\hline
+{\em n\+Remaining\+Retries} & The number of retries left. \\
+\hline
+{\em on\+Failure} & Failure callback when there is no more retries remaining. \\
+\hline
+{\em validation\+Request} & The validation\+Request containing the context of the interest. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 269 of file validator.\+cpp.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!pre\+Certificate\+Validation@{pre\+Certificate\+Validation}}
+\index{pre\+Certificate\+Validation@{pre\+Certificate\+Validation}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{pre\+Certificate\+Validation(const Data \&data)}{preCertificateValidation(const Data \&data)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual shared\+\_\+ptr$<$const {\bf Data}$>$ ndn\+::\+Validator\+::pre\+Certificate\+Validation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1Validator_aff0a8652c0281368fc52301029a02c69}{}\label{classndn_1_1Validator_aff0a8652c0281368fc52301029a02c69}
+
+
+Hooks. 
+
+trigger before validating requested certificate.
+
+The \hyperlink{classndn_1_1Data}{Data}\+:
+\begin{DoxyItemize}
+\item matches the interest in the validation-\/request.
+\item may be certificate or a data encapsulating certificate.
+\end{DoxyItemize}
+
+This method returns a data (actually certificate) that is will be passed as \hyperlink{classndn_1_1Data}{Data} into\+: \hyperlink{classndn_1_1Validator_aee0e9b435fa39c3c4f6ac484122be4fd}{Validator\+::validate}(const \hyperlink{classndn_1_1Data}{Data}\& data, const On\+Data\+Validated\& on\+Validated, const On\+Data\+Validation\+Failed\& on\+Validation\+Failed, int n\+Steps); 
+
+Definition at line 279 of file validator.\+hpp.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!validate@{validate}}
+\index{validate@{validate}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{validate(const Data \&data, const On\+Data\+Validated \&on\+Validated, const On\+Data\+Validation\+Failed \&on\+Validation\+Failed)}{validate(const Data \&data, const OnDataValidated \&onValidated, const OnDataValidationFailed \&onValidationFailed)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Validator\+::validate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data, }
+\item[{const {\bf On\+Data\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Data\+Validation\+Failed} \&}]{on\+Validation\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Validator_aee0e9b435fa39c3c4f6ac484122be4fd}{}\label{classndn_1_1Validator_aee0e9b435fa39c3c4f6ac484122be4fd}
+
+
+Validate \hyperlink{classndn_1_1Data}{Data} and call either on\+Validated or on\+Validation\+Failed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The \hyperlink{classndn_1_1Data}{Data} with the signature to check. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Data}{Data} is validated, this calls on\+Validated(data). \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 82 of file validator.\+hpp.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!validate@{validate}}
+\index{validate@{validate}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{validate(const Interest \&interest, const On\+Interest\+Validated \&on\+Validated, const On\+Interest\+Validation\+Failed \&on\+Validation\+Failed)}{validate(const Interest \&interest, const OnInterestValidated \&onValidated, const OnInterestValidationFailed \&onValidationFailed)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Validator\+::validate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{const {\bf On\+Interest\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Interest\+Validation\+Failed} \&}]{on\+Validation\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Validator_a74a0f001ecdf851276618608cd035990}{}\label{classndn_1_1Validator_a74a0f001ecdf851276618608cd035990}
+
+
+Validate \hyperlink{classndn_1_1Interest}{Interest} and call either on\+Validated or on\+Validation\+Failed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & The \hyperlink{classndn_1_1Interest}{Interest} with the signature to check. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Interest}{Interest} is validated, this calls on\+Validated(interest). \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(interest). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file validator.\+hpp.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!verify\+Signature@{verify\+Signature}}
+\index{verify\+Signature@{verify\+Signature}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{verify\+Signature(const Interest \&interest, const Public\+Key \&public\+Key)}{verifySignature(const Interest \&interest, const PublicKey \&publicKey)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Validator\+::verify\+Signature (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{const {\bf Public\+Key} \&}]{public\+Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1Validator_a193e3f5844c7bfb786837ebf7d5ac6f7}{}\label{classndn_1_1Validator_a193e3f5844c7bfb786837ebf7d5ac6f7}
+
+
+Verify the signed \hyperlink{classndn_1_1Interest}{Interest} using the public\+Key. 
+
+(Note the signature covers the first n-\/2 name components). 
+
+Definition at line 118 of file validator.\+cpp.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!verify\+Signature@{verify\+Signature}}
+\index{verify\+Signature@{verify\+Signature}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{verify\+Signature(const Interest \&interest, const Signature \&sig, const Public\+Key \&public\+Key)}{verifySignature(const Interest \&interest, const Signature \&sig, const PublicKey \&publicKey)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool ndn\+::\+Validator\+::verify\+Signature (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{const {\bf Signature} \&}]{sig, }
+\item[{const {\bf Public\+Key} \&}]{public\+Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classndn_1_1Validator_a5faa99e68ab831c746ce0c2a2e239d80}{}\label{classndn_1_1Validator_a5faa99e68ab831c746ce0c2a2e239d80}
+
+
+Verify the interest using the public\+Key against the S\+H\+A256-\/\+R\+SA signature. 
+
+(Note the signature covers the first n-\/2 name components). 
+
+Definition at line 143 of file validator.\+hpp.
+
+\index{ndn\+::\+Validator@{ndn\+::\+Validator}!verify\+Signature@{verify\+Signature}}
+\index{verify\+Signature@{verify\+Signature}!ndn\+::\+Validator@{ndn\+::\+Validator}}
+\subsubsection[{\texorpdfstring{verify\+Signature(const Interest \&interest, const Digest\+Sha256 \&sig)}{verifySignature(const Interest \&interest, const DigestSha256 \&sig)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool ndn\+::\+Validator\+::verify\+Signature (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{const {\bf Digest\+Sha256} \&}]{sig}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classndn_1_1Validator_a54986839b53eb9bde1640fecd4d35e9a}{}\label{classndn_1_1Validator_a54986839b53eb9bde1640fecd4d35e9a}
+
+
+Verify the interest against the S\+H\+A256 signature. 
+
+(Note the signature covers the first n-\/2 name components). 
+
+Definition at line 180 of file validator.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/validator.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/validator.\+cpp\end{DoxyCompactItemize}

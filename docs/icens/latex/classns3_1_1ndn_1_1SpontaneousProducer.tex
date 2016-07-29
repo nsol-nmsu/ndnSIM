@@ -1,0 +1,106 @@
+\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer}{}\section{ns3\+:\+:ndn\+:\+:Spontaneous\+Producer Class Reference}
+\label{classns3_1_1ndn_1_1SpontaneousProducer}\index{ns3\+::ndn\+::\+Spontaneous\+Producer@{ns3\+::ndn\+::\+Spontaneous\+Producer}}
+
+
+A producer which publishes updates of its data at a fixed frequency. These updates are sent regardless of whether an interest was received or not and nodes which subscribe to the data will receive it. Installed on nodes at the compute layer of Smart Grid architecture (i\+CenS)  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/producer-\/spontaneous.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Spontaneous\+Producer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1SpontaneousProducer}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Received\+Interest\+Trace\+Callback}) (uint32\+\_\+t, shared\+\_\+ptr$<$ const Interest $>$)\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_ae3605c9f1c972660c3eb69fc8fc03faf}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_ae3605c9f1c972660c3eb69fc8fc03faf}
+
+\item 
+typedef void($\ast$ {\bfseries Sent\+Data\+Trace\+Callback}) (uint32\+\_\+t, shared\+\_\+ptr$<$ const Data $>$)\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_a9a5c053228a56a06e9cf5a90086b19a6}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_a9a5c053228a56a06e9cf5a90086b19a6}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1SpontaneousProducer_aa2dc345680754e9732858c71538b3abc}{Spontaneous\+Producer} ()\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_aa2dc345680754e9732858c71538b3abc}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_aa2dc345680754e9732858c71538b3abc}
+
+\begin{DoxyCompactList}\small\item\em Default constructor for the class. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1SpontaneousProducer_a602d1c44a34c565b9f428bb5c25add4f}{On\+Interest} (shared\+\_\+ptr$<$ const Interest $>$ interest)
+\begin{DoxyCompactList}\small\item\em Method that will be called every time new Interest arrives. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1SpontaneousProducer_a668ac607529bc65ac75aaf7fb17932ea}{Send\+Data} (const Name \&data\+Name)\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_a668ac607529bc65ac75aaf7fb17932ea}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_a668ac607529bc65ac75aaf7fb17932ea}
+
+\begin{DoxyCompactList}\small\item\em Send data to subscribed nodes (typically prosumers at the physical layer) \end{DoxyCompactList}\item 
+void {\bfseries Send\+Timeout} ()\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_a4d80deeb9820e921b45a93f11184e991}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_a4d80deeb9820e921b45a93f11184e991}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_a0bebd2ac3108706a2dbd71da64d43f10}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_a0bebd2ac3108706a2dbd71da64d43f10}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1SpontaneousProducer_a6788586e0dd8a1183a5d174c69e2f687}{Start\+Application} ()\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_a6788586e0dd8a1183a5d174c69e2f687}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_a6788586e0dd8a1183a5d174c69e2f687}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Start. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1SpontaneousProducer_acb375ea412bb978754393fca0416a3fa}{Stop\+Application} ()\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_acb375ea412bb978754393fca0416a3fa}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_acb375ea412bb978754393fca0416a3fa}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Stop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Traced\+Callback$<$ uint32\+\_\+t, shared\+\_\+ptr$<$ const Interest $>$ $>$ {\bfseries m\+\_\+received\+Interest}\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_ab3a77685fc1f4eb78f4e29031207fae2}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_ab3a77685fc1f4eb78f4e29031207fae2}
+
+\item 
+Traced\+Callback$<$ uint32\+\_\+t, shared\+\_\+ptr$<$ const Data $>$ $>$ {\bfseries m\+\_\+sent\+Data}\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_ad43f146c7effa5de8c4b2fdd3832060c}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_ad43f146c7effa5de8c4b2fdd3832060c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A producer which publishes updates of its data at a fixed frequency. These updates are sent regardless of whether an interest was received or not and nodes which subscribe to the data will receive it. Installed on nodes at the compute layer of Smart Grid architecture (i\+CenS) 
+
+Definition at line 41 of file ndn-\/producer-\/spontaneous.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Spontaneous\+Producer@{ns3\+::ndn\+::\+Spontaneous\+Producer}!On\+Interest@{On\+Interest}}
+\index{On\+Interest@{On\+Interest}!ns3\+::ndn\+::\+Spontaneous\+Producer@{ns3\+::ndn\+::\+Spontaneous\+Producer}}
+\subsubsection[{\texorpdfstring{On\+Interest(shared\+\_\+ptr$<$ const Interest $>$ interest)}{OnInterest(shared\_ptr< const Interest > interest)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Spontaneous\+Producer\+::\+On\+Interest (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Interest $>$}]{interest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1SpontaneousProducer_a602d1c44a34c565b9f428bb5c25add4f}{}\label{classns3_1_1ndn_1_1SpontaneousProducer_a602d1c44a34c565b9f428bb5c25add4f}
+
+
+Method that will be called every time new Interest arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & Interest header \\
+\hline
+{\em packet} & \char`\"{}\+Payload\char`\"{} of the interests packet. The actual payload should be zero, but packet itself may be useful to get packet tags \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1App_a7aab3dd5e62169430795a2d6e1060f95}{ns3\+::ndn\+::\+App}.
+
+
+
+Definition at line 116 of file ndn-\/producer-\/spontaneous.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/producer-\/spontaneous.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/producer-\/spontaneous.\+cpp\end{DoxyCompactItemize}

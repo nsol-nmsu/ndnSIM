@@ -1,0 +1,113 @@
+\hypertarget{classndn_1_1security_1_1AdditionalDescription}{}\section{ndn\+:\+:security\+:\+:Additional\+Description Class Reference}
+\label{classndn_1_1security_1_1AdditionalDescription}\index{ndn\+::security\+::\+Additional\+Description@{ndn\+::security\+::\+Additional\+Description}}
+
+
+Abstraction of \hyperlink{classndn_1_1security_1_1AdditionalDescription}{Additional\+Description}.  
+
+
+
+
+{\ttfamily \#include $<$additional-\/description.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1security_1_1AdditionalDescription_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$\+::iterator {\bfseries iterator}\hypertarget{classndn_1_1security_1_1AdditionalDescription_ac48d5d1257c0534f5f2ede3fe9aeb6cf}{}\label{classndn_1_1security_1_1AdditionalDescription_ac48d5d1257c0534f5f2ede3fe9aeb6cf}
+
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}\hypertarget{classndn_1_1security_1_1AdditionalDescription_a815da03211fa15c2f92c500c0fade25e}{}\label{classndn_1_1security_1_1AdditionalDescription_a815da03211fa15c2f92c500c0fade25e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1security_1_1AdditionalDescription_aeb1bfb457096bcdc633adbb41751055d}{Additional\+Description} ()=default\hypertarget{classndn_1_1security_1_1AdditionalDescription_aeb1bfb457096bcdc633adbb41751055d}{}\label{classndn_1_1security_1_1AdditionalDescription_aeb1bfb457096bcdc633adbb41751055d}
+
+\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{classndn_1_1security_1_1AdditionalDescription}{Additional\+Description}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1AdditionalDescription_a4bc6a514b9c2b61b2bf78aecc44a5f22}{Additional\+Description} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1security_1_1AdditionalDescription_a4bc6a514b9c2b61b2bf78aecc44a5f22}{}\label{classndn_1_1security_1_1AdditionalDescription_a4bc6a514b9c2b61b2bf78aecc44a5f22}
+
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classndn_1_1security_1_1AdditionalDescription}{Additional\+Description} from {\ttfamily block}. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get} (const std\+::string \&key) const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a9d87c1a9604f66e66ef925ff7793ce6b}{}\label{classndn_1_1security_1_1AdditionalDescription_a9d87c1a9604f66e66ef925ff7793ce6b}
+
+\item 
+void {\bfseries set} (const std\+::string \&key, const std\+::string \&value)\hypertarget{classndn_1_1security_1_1AdditionalDescription_afa514ff7bae9b81ef502898edcdc813b}{}\label{classndn_1_1security_1_1AdditionalDescription_afa514ff7bae9b81ef502898edcdc813b}
+
+\item 
+bool {\bfseries has} (const std\+::string \&key) const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a1d19b9fe689e6d3b78704cbb5f7f6d9e}{}\label{classndn_1_1security_1_1AdditionalDescription_a1d19b9fe689e6d3b78704cbb5f7f6d9e}
+
+\item 
+size\+\_\+t {\bfseries size} () const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a20c962b45886de71f764720106617c9d}{}\label{classndn_1_1security_1_1AdditionalDescription_a20c962b45886de71f764720106617c9d}
+
+\item 
+iterator {\bfseries begin} ()\hypertarget{classndn_1_1security_1_1AdditionalDescription_a35a23ca4593f1dead774cab6e93af662}{}\label{classndn_1_1security_1_1AdditionalDescription_a35a23ca4593f1dead774cab6e93af662}
+
+\item 
+iterator {\bfseries end} ()\hypertarget{classndn_1_1security_1_1AdditionalDescription_a494e35d1f699a6a4d23d4883ec869b67}{}\label{classndn_1_1security_1_1AdditionalDescription_a494e35d1f699a6a4d23d4883ec869b67}
+
+\item 
+const\+\_\+iterator {\bfseries begin} () const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a5083b3809abd559ba7a939dd10e4d16c}{}\label{classndn_1_1security_1_1AdditionalDescription_a5083b3809abd559ba7a939dd10e4d16c}
+
+\item 
+const\+\_\+iterator {\bfseries end} () const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a847ad6656a9e7001b7aa25e34182f23f}{}\label{classndn_1_1security_1_1AdditionalDescription_a847ad6656a9e7001b7aa25e34182f23f}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1security_1_1AdditionalDescription_a319b32388434896e5b7ca7c161ca410f}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a319b32388434896e5b7ca7c161ca410f}{}\label{classndn_1_1security_1_1AdditionalDescription_a319b32388434896e5b7ca7c161ca410f}
+
+\begin{DoxyCompactList}\small\item\em Fast encoding or block size estimation. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1security_1_1AdditionalDescription_a8cb6220b45009d76c982a3c76a359e21}{wire\+Encode} () const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a8cb6220b45009d76c982a3c76a359e21}{}\label{classndn_1_1security_1_1AdditionalDescription_a8cb6220b45009d76c982a3c76a359e21}
+
+\begin{DoxyCompactList}\small\item\em Encode \hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} into T\+LV block. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1AdditionalDescription_adc5e5c26c674d3c85d3bc5b66d26c42a}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Decode \hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} from T\+LV block. \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1security_1_1AdditionalDescription}{Additional\+Description} \&other) const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a567f13cf876b0536688631859be2b86e}{}\label{classndn_1_1security_1_1AdditionalDescription_a567f13cf876b0536688631859be2b86e}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1security_1_1AdditionalDescription}{Additional\+Description} \&other) const\hypertarget{classndn_1_1security_1_1AdditionalDescription_a73b0aa1b38c060e97abe03b22909577e}{}\label{classndn_1_1security_1_1AdditionalDescription_a73b0aa1b38c060e97abe03b22909577e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstraction of \hyperlink{classndn_1_1security_1_1AdditionalDescription}{Additional\+Description}. 
+
+\begin{DoxySeeAlso}{See also}
+docs/tutorials/certificate-\/format.\+rst 
+\end{DoxySeeAlso}
+
+
+Definition at line 37 of file additional-\/description.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::\+Additional\+Description@{ndn\+::security\+::\+Additional\+Description}!wire\+Decode@{wire\+Decode}}
+\index{wire\+Decode@{wire\+Decode}!ndn\+::security\+::\+Additional\+Description@{ndn\+::security\+::\+Additional\+Description}}
+\subsubsection[{\texorpdfstring{wire\+Decode(const Block \&wire)}{wireDecode(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Additional\+Description\+::wire\+Decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1AdditionalDescription_adc5e5c26c674d3c85d3bc5b66d26c42a}{}\label{classndn_1_1security_1_1AdditionalDescription_adc5e5c26c674d3c85d3bc5b66d26c42a}
+
+
+Decode \hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} from T\+LV block. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1AdditionalDescription_1_1Error}{Error}} & when an invalid T\+LV block supplied \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 136 of file additional-\/description.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/additional-\/description.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/additional-\/description.\+cpp\end{DoxyCompactItemize}

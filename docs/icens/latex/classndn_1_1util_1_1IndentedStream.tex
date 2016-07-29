@@ -1,0 +1,55 @@
+\hypertarget{classndn_1_1util_1_1IndentedStream}{}\section{ndn\+:\+:util\+:\+:Indented\+Stream Class Reference}
+\label{classndn_1_1util_1_1IndentedStream}\index{ndn\+::util\+::\+Indented\+Stream@{ndn\+::util\+::\+Indented\+Stream}}
+
+
+Output to stream with specified indent or prefix.  
+
+
+
+
+{\ttfamily \#include $<$indented-\/stream.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:Indented\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1IndentedStream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Indented\+Stream} (std\+::ostream \&os, const std\+::string \&indent)\hypertarget{classndn_1_1util_1_1IndentedStream_a5c3587ba93c5b783462e4c3f95d634da}{}\label{classndn_1_1util_1_1IndentedStream_a5c3587ba93c5b783462e4c3f95d634da}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Output to stream with specified indent or prefix. 
+
+For example, the following code\+: \begin{DoxyVerb}std::cout << "Hello" << std::endl;
+IndentedStream os1(std::cout, " [prefix] ");
+os1 << "," << "\n";
+{
+  IndentedStream os2(os1, " [another prefix] ");
+  os2 << "World!" << "\n";
+}
+// either os1 needs to go out of scope or call os1.flush()
+\end{DoxyVerb}
+
+
+Will produce the following output\+: \begin{DoxyVerb}Hello
+ [prefix] ,
+ [prefix] [another prefix] World!
+\end{DoxyVerb}
+
+
+Based on \href{http://stackoverflow.com/a/2212940/2150331}{\tt http\+://stackoverflow.\+com/a/2212940/2150331} 
+
+Definition at line 54 of file indented-\/stream.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/indented-\/stream.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/indented-\/stream.\+cpp\end{DoxyCompactItemize}

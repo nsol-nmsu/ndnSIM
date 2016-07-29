@@ -1,0 +1,58 @@
+\hypertarget{classnfd_1_1RttEstimator}{}\section{nfd\+:\+:Rtt\+Estimator Class Reference}
+\label{classnfd_1_1RttEstimator}\index{nfd\+::\+Rtt\+Estimator@{nfd\+::\+Rtt\+Estimator}}
+
+
+implements the Mean-\/\+Deviation R\+TT estimator  
+
+
+
+
+{\ttfamily \#include $<$rtt-\/estimator.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef time\+::microseconds {\bfseries Duration}\hypertarget{classnfd_1_1RttEstimator_a1895480f45c43aa8ed4e7a5a880cc861}{}\label{classnfd_1_1RttEstimator_a1895480f45c43aa8ed4e7a5a880cc861}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rtt\+Estimator} (uint16\+\_\+t max\+Multiplier=16, Duration min\+Rto=time\+::milliseconds(1), double gain=0.\+1)\hypertarget{classnfd_1_1RttEstimator_a54a1fb2fc75da5a7dc8d13d84141b5b7}{}\label{classnfd_1_1RttEstimator_a54a1fb2fc75da5a7dc8d13d84141b5b7}
+
+\item 
+void {\bfseries add\+Measurement} (Duration measure)\hypertarget{classnfd_1_1RttEstimator_a1f00fe932f64241b8b71523a19e763c5}{}\label{classnfd_1_1RttEstimator_a1f00fe932f64241b8b71523a19e763c5}
+
+\item 
+void {\bfseries increment\+Multiplier} ()\hypertarget{classnfd_1_1RttEstimator_aa663be5b6508d76bb26e4d04b37ee46e}{}\label{classnfd_1_1RttEstimator_aa663be5b6508d76bb26e4d04b37ee46e}
+
+\item 
+void {\bfseries double\+Multiplier} ()\hypertarget{classnfd_1_1RttEstimator_a4542436059e9430ea84cd8f6e9b93b8b}{}\label{classnfd_1_1RttEstimator_a4542436059e9430ea84cd8f6e9b93b8b}
+
+\item 
+Duration {\bfseries compute\+Rto} () const\hypertarget{classnfd_1_1RttEstimator_a030357af665e019afdea5ecbe35f03c5}{}\label{classnfd_1_1RttEstimator_a030357af665e019afdea5ecbe35f03c5}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Duration {\bfseries get\+Initial\+Rtt} (void)\hypertarget{classnfd_1_1RttEstimator_a6853028de7ccdda04cd21ea9c11d55b4}{}\label{classnfd_1_1RttEstimator_a6853028de7ccdda04cd21ea9c11d55b4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+implements the Mean-\/\+Deviation R\+TT estimator 
+
+reference\+: ns3\+::\+Rtt\+Mean\+Deviation
+
+This \hyperlink{classnfd_1_1RttEstimator}{Rtt\+Estimator} algorithm is designed for T\+CP, which is a continuous stream. N\+DN Interest-\/\+Data traffic is not always a continuous stream, so N\+DN may need a different \hyperlink{classnfd_1_1RttEstimator}{Rtt\+Estimator}. The design of a more suitable \hyperlink{classnfd_1_1RttEstimator}{Rtt\+Estimator} is a research question. 
+
+Definition at line 43 of file rtt-\/estimator.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/rtt-\/estimator.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/rtt-\/estimator.\+cpp\end{DoxyCompactItemize}

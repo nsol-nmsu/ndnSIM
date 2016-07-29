@@ -1,0 +1,98 @@
+\hypertarget{classndn_1_1util_1_1signal_1_1Signal}{}\section{ndn\+:\+:util\+:\+:signal\+:\+:Signal$<$ Owner, T\+Args $>$ Class Template Reference}
+\label{classndn_1_1util_1_1signal_1_1Signal}\index{ndn\+::util\+::signal\+::\+Signal$<$ Owner, T\+Args $>$@{ndn\+::util\+::signal\+::\+Signal$<$ Owner, T\+Args $>$}}
+
+
+provides a lightweight signal / event system  
+
+
+
+
+{\ttfamily \#include $<$signal-\/signal.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:signal\+:\+:Signal$<$ Owner, T\+Args $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1signal_1_1Signal}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void(const T\+Args \&...)$>$ \hyperlink{classndn_1_1util_1_1signal_1_1Signal_a34d7bb02178bfbf9e624658d1920981c}{Handler}\hypertarget{classndn_1_1util_1_1signal_1_1Signal_a34d7bb02178bfbf9e624658d1920981c}{}\label{classndn_1_1util_1_1signal_1_1Signal_a34d7bb02178bfbf9e624658d1920981c}
+
+\begin{DoxyCompactList}\small\item\em represents a function that can connect to the signal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} \hyperlink{classndn_1_1util_1_1signal_1_1Signal_a2797d4e1897c323a42bbecee4ded87ee}{connect} (const \hyperlink{classndn_1_1util_1_1signal_1_1Signal_a34d7bb02178bfbf9e624658d1920981c}{Handler} \&handler)
+\begin{DoxyCompactList}\small\item\em connects a handler to the signal \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} \hyperlink{classndn_1_1util_1_1signal_1_1Signal_aee89219a5d1c0bef794a512492d80769}{connect\+Single\+Shot} (const \hyperlink{classndn_1_1util_1_1signal_1_1Signal_a34d7bb02178bfbf9e624658d1920981c}{Handler} \&handler)
+\begin{DoxyCompactList}\small\item\em connects a single-\/shot handler to the signal \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Owner, typename ... T\+Args$>$\\*
+class ndn\+::util\+::signal\+::\+Signal$<$ Owner, T\+Args $>$}
+
+provides a lightweight signal / event system 
+
+To declare a signal\+: public\+: Signal$<$\+Owner, T1, T2$>$ signal\+Name; To connect to a signal\+: owner-\/$>$signal\+Name.\+connect(f); Multiple functions can connect to the same signal. To emit a signal from owner\+: this-\/$>$signal\+Name(arg1, arg2);
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Owner} & the signal owner class; only this class can emit the signal \\
+\hline
+{\em T\+Args} & types of signal arguments \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{signal-emit_8hpp}{signal-\/emit.\+hpp} allows owner\textquotesingle{}s derived classes to emit signals 
+\end{DoxySeeAlso}
+
+
+Definition at line 50 of file signal-\/signal.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::signal\+::\+Signal@{ndn\+::util\+::signal\+::\+Signal}!connect@{connect}}
+\index{connect@{connect}!ndn\+::util\+::signal\+::\+Signal@{ndn\+::util\+::signal\+::\+Signal}}
+\subsubsection[{\texorpdfstring{connect(const Handler \&handler)}{connect(const Handler \&handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Owner , typename ... T\+Args$>$ {\bf Connection} {\bf ndn\+::util\+::signal\+::\+Signal}$<$ Owner, T\+Args $>$\+::connect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Handler} \&}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1signal_1_1Signal_a2797d4e1897c323a42bbecee4ded87ee}{}\label{classndn_1_1util_1_1signal_1_1Signal_a2797d4e1897c323a42bbecee4ded87ee}
+
+
+connects a handler to the signal 
+
+\begin{DoxyNote}{Note}
+If invoked from a handler, the new handler won\textquotesingle{}t receive the current emitted signal. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+The handler is permitted to disconnect itself, but it must ensure its validity. 
+\end{DoxyWarning}
+
+
+Definition at line 174 of file signal-\/signal.\+hpp.
+
+\index{ndn\+::util\+::signal\+::\+Signal@{ndn\+::util\+::signal\+::\+Signal}!connect\+Single\+Shot@{connect\+Single\+Shot}}
+\index{connect\+Single\+Shot@{connect\+Single\+Shot}!ndn\+::util\+::signal\+::\+Signal@{ndn\+::util\+::signal\+::\+Signal}}
+\subsubsection[{\texorpdfstring{connect\+Single\+Shot(const Handler \&handler)}{connectSingleShot(const Handler \&handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Owner , typename ... T\+Args$>$ {\bf Connection} {\bf ndn\+::util\+::signal\+::\+Signal}$<$ Owner, T\+Args $>$\+::connect\+Single\+Shot (
+\begin{DoxyParamCaption}
+\item[{const {\bf Handler} \&}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1signal_1_1Signal_aee89219a5d1c0bef794a512492d80769}{}\label{classndn_1_1util_1_1signal_1_1Signal_aee89219a5d1c0bef794a512492d80769}
+
+
+connects a single-\/shot handler to the signal 
+
+After the handler is executed once, it is automatically disconnected. 
+
+Definition at line 184 of file signal-\/signal.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/signal-\/signal.\+hpp\end{DoxyCompactItemize}

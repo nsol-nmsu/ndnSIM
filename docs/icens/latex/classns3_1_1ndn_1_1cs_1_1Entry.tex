@@ -1,0 +1,107 @@
+\hypertarget{classns3_1_1ndn_1_1cs_1_1Entry}{}\section{ns3\+:\+:ndn\+:\+:cs\+:\+:Entry Class Reference}
+\label{classns3_1_1ndn_1_1cs_1_1Entry}\index{ns3\+::ndn\+::cs\+::\+Entry@{ns3\+::ndn\+::cs\+::\+Entry}}
+
+
+N\+DN content store entry.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/content-\/store.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:cs\+:\+:Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1cs_1_1Entry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1cs_1_1Entry_a207df44f73ec896a12369d5e13205fc6}{Entry} (Ptr$<$ \hyperlink{classns3_1_1ndn_1_1ContentStore}{Content\+Store} $>$ cs, shared\+\_\+ptr$<$ const Data $>$ data)
+\begin{DoxyCompactList}\small\item\em Construct content store entry. \end{DoxyCompactList}\item 
+const Name \& \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry_ac47c1172978749fdb134b8323beb9658}{Get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Get prefix of the stored entry. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ const Data $>$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry_ae8b647891eec3227ac00a4674f4aad50}{Get\+Data} () const
+\begin{DoxyCompactList}\small\item\em Get Data of the stored entry. \end{DoxyCompactList}\item 
+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1ContentStore}{Content\+Store} $>$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry_a8f55a4beeb1e8903b021c040616cfba7}{Get\+Content\+Store} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1Entry_a8f55a4beeb1e8903b021c040616cfba7}{}\label{classns3_1_1ndn_1_1cs_1_1Entry_a8f55a4beeb1e8903b021c040616cfba7}
+
+\begin{DoxyCompactList}\small\item\em Get pointer to access store, to which this entry is added. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+DN content store entry. 
+
+Definition at line 54 of file ndn-\/content-\/store.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::ndn\+::cs\+::\+Entry@{ns3\+::ndn\+::cs\+::\+Entry}!Entry@{Entry}}
+\index{Entry@{Entry}!ns3\+::ndn\+::cs\+::\+Entry@{ns3\+::ndn\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{Entry(\+Ptr$<$ Content\+Store $>$ cs, shared\+\_\+ptr$<$ const Data $>$ data)}{Entry(Ptr< ContentStore > cs, shared\_ptr< const Data > data)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::cs\+::\+Entry\+::\+Entry (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ {\bf Content\+Store} $>$}]{cs, }
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1cs_1_1Entry_a207df44f73ec896a12369d5e13205fc6}{}\label{classns3_1_1ndn_1_1cs_1_1Entry_a207df44f73ec896a12369d5e13205fc6}
+
+
+Construct content store entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em header} & Parsed Data header \\
+\hline
+{\em packet} & Original Ndn packet\\
+\hline
+\end{DoxyParams}
+The constructor will make a copy of the supplied packet and calls Remove\+Header and Remove\+Tail on the copy. 
+
+Definition at line 59 of file ndn-\/content-\/store.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::cs\+::\+Entry@{ns3\+::ndn\+::cs\+::\+Entry}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!ns3\+::ndn\+::cs\+::\+Entry@{ns3\+::ndn\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{Get\+Data() const}{GetData() const}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ const Data $>$ ns3\+::ndn\+::cs\+::\+Entry\+::\+Get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1cs_1_1Entry_ae8b647891eec3227ac00a4674f4aad50}{}\label{classns3_1_1ndn_1_1cs_1_1Entry_ae8b647891eec3227ac00a4674f4aad50}
+
+
+Get Data of the stored entry. 
+
+\begin{DoxyReturn}{Returns}
+Data of the stored entry 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file ndn-\/content-\/store.\+cpp.
+
+\index{ns3\+::ndn\+::cs\+::\+Entry@{ns3\+::ndn\+::cs\+::\+Entry}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!ns3\+::ndn\+::cs\+::\+Entry@{ns3\+::ndn\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{Get\+Name() const}{GetName() const}}]{\setlength{\rightskip}{0pt plus 5cm}const Name \& ns3\+::ndn\+::cs\+::\+Entry\+::\+Get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1cs_1_1Entry_ac47c1172978749fdb134b8323beb9658}{}\label{classns3_1_1ndn_1_1cs_1_1Entry_ac47c1172978749fdb134b8323beb9658}
+
+
+Get prefix of the stored entry. 
+
+\begin{DoxyReturn}{Returns}
+prefix of the stored entry 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file ndn-\/content-\/store.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/cs/ndn-\/content-\/store.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/cs/ndn-\/content-\/store.\+cpp\end{DoxyCompactItemize}

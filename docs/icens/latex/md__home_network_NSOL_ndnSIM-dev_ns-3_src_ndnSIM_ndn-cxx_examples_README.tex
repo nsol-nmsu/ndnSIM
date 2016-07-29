@@ -1,0 +1,40 @@
+By default, examples in {\ttfamily examples/} folder are not built. To enable them, use {\ttfamily -\/-\/with-\/examples} configure option. For example\+: \begin{DoxyVerb}./waf configure --with-examples
+./waf
+\end{DoxyVerb}
+
+
+There are two ways to add new examples, depending on their complexity\+:
+
+
+\begin{DoxyEnumerate}
+\item Examples with a single translation unit
+
+For simple examples that have a single translation unit, the {\ttfamily .cpp} file can be directly put in {\ttfamily examples/} folder and it will be automatically compiled on the next run of {\ttfamily ./waf}. Name of the compiled binary will be determined by the base name of the {\ttfamily .cpp} file. For example, {\ttfamily examples/foo.\+cpp} will be compiled into binary {\ttfamily foo} in {\ttfamily $<$build$>$/examples} folder\+: \begin{DoxyVerb}  echo "int main() { return 0; }" > examples/foo.cpp
+  ./waf
+  # ... Compiling examples/foo.cpp
+  # ... Linking build/examples/foo
+
+  # To run the example
+  ./build/examples/foo
+\end{DoxyVerb}
+
+\item Examples with multiple translation units
+
+For more complex examples that contain multiple translation units, one can use the following directory structure\+:
+\begin{DoxyItemize}
+\item Create a directory under {\ttfamily examples/} folder (e.\+g., {\ttfamily examples/bar}). The name of this directory will determine the name of the compiled binary ({\ttfamily $<$build$>$/examples/bar/bar})
+\item Place any number of translation units (e.\+g., {\ttfamily examples/bar/a.\+cpp}, {\ttfamily examples/bar/b.\+cpp}, ...) in this directory. All {\ttfamily .cpp} files in this directory will be compiled and linked together to produce the binary of the example. One of the .cpp files should contain the {\ttfamily main()} function.
+\end{DoxyItemize}
+
+For example\+: \begin{DoxyVerb}  mkdir examples/bar
+  echo "int bar(); int main() { return bar(); }" > examples/bar/a.cpp
+  echo "int bar() { return 10; } " > examples/bar/b.cpp
+  ./waf
+  # ... Compiling examples/bar/a.cpp
+  # ... Compiling examples/bar/b.cpp
+  # ... Linking build/examples/bar/bar
+
+  # To run the example
+  ./build/examples/bar/bar\end{DoxyVerb}
+ 
+\end{DoxyEnumerate}

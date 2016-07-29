@@ -1,0 +1,250 @@
+\hypertarget{classndn_1_1Exclude}{}\section{ndn\+:\+:Exclude Class Reference}
+\label{classndn_1_1Exclude}\index{ndn\+::\+Exclude@{ndn\+::\+Exclude}}
+
+
+Class to represent \hyperlink{classndn_1_1Exclude}{Exclude} component in N\+DN interests.  
+
+
+
+
+{\ttfamily \#include $<$exclude.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Exclude_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component}, bool, std\+::greater$<$ \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} $>$ $>$ {\bfseries exclude\+\_\+type}\hypertarget{classndn_1_1Exclude_a1ffe364df07e7fc14273394edd1f9fa4}{}\label{classndn_1_1Exclude_a1ffe364df07e7fc14273394edd1f9fa4}
+
+\item 
+typedef exclude\+\_\+type\+::iterator {\bfseries iterator}\hypertarget{classndn_1_1Exclude_a96f38ae98b7c40164b3cd3d6bb03b98b}{}\label{classndn_1_1Exclude_a96f38ae98b7c40164b3cd3d6bb03b98b}
+
+\item 
+typedef exclude\+\_\+type\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}\hypertarget{classndn_1_1Exclude_a8b744db6f29688c5330a3fd8764f2532}{}\label{classndn_1_1Exclude_a8b744db6f29688c5330a3fd8764f2532}
+
+\item 
+typedef exclude\+\_\+type\+::reverse\+\_\+iterator {\bfseries reverse\+\_\+iterator}\hypertarget{classndn_1_1Exclude_a95ede27544d748e99c30a120c89aea4f}{}\label{classndn_1_1Exclude_a95ede27544d748e99c30a120c89aea4f}
+
+\item 
+typedef exclude\+\_\+type\+::const\+\_\+reverse\+\_\+iterator {\bfseries const\+\_\+reverse\+\_\+iterator}\hypertarget{classndn_1_1Exclude_ac9f7c1522a1fc8148e5c74476e7ceb1c}{}\label{classndn_1_1Exclude_ac9f7c1522a1fc8148e5c74476e7ceb1c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Exclude_a543e9a04b6b036b0a03c21b942ec92fb}{Exclude} ()\hypertarget{classndn_1_1Exclude_a543e9a04b6b036b0a03c21b942ec92fb}{}\label{classndn_1_1Exclude_a543e9a04b6b036b0a03c21b942ec92fb}
+
+\begin{DoxyCompactList}\small\item\em Default constructor an empty exclude. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Exclude_a149fe696f34072c11f2545de630c83aa}{Exclude} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1Exclude_a149fe696f34072c11f2545de630c83aa}{}\label{classndn_1_1Exclude_a149fe696f34072c11f2545de630c83aa}
+
+\begin{DoxyCompactList}\small\item\em Create from wire encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1Exclude_a52cbc70f5cc307f859382d05afced386}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1Exclude_a52cbc70f5cc307f859382d05afced386}{}\label{classndn_1_1Exclude_a52cbc70f5cc307f859382d05afced386}
+
+\begin{DoxyCompactList}\small\item\em Fast encoding or block size estimation. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Exclude_a1f5f986e1cb38f4b8b12341fb443dd56}{wire\+Encode} () const\hypertarget{classndn_1_1Exclude_a1f5f986e1cb38f4b8b12341fb443dd56}{}\label{classndn_1_1Exclude_a1f5f986e1cb38f4b8b12341fb443dd56}
+
+\begin{DoxyCompactList}\small\item\em Encode to a wire format. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Exclude_a3a6d4959001595f1ec4678e881fdfedb}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1Exclude_a3a6d4959001595f1ec4678e881fdfedb}{}\label{classndn_1_1Exclude_a3a6d4959001595f1ec4678e881fdfedb}
+
+\begin{DoxyCompactList}\small\item\em Decode from the wire format. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1Exclude_a60ca4ea12b033f6c8086be514f4c0bab}{to\+Uri} () const\hypertarget{classndn_1_1Exclude_a60ca4ea12b033f6c8086be514f4c0bab}{}\label{classndn_1_1Exclude_a60ca4ea12b033f6c8086be514f4c0bab}
+
+\begin{DoxyCompactList}\small\item\em Get escaped string representation (e.\+g., for use in U\+RI) of the exclude filter. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Exclude_afe7e89b3119b70b7a9f66b45d574e350}{is\+Excluded} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&comp) const
+\begin{DoxyCompactList}\small\item\em Check if name component is excluded. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Exclude}{Exclude} \& \hyperlink{classndn_1_1Exclude_aa90385be6fd18937924a8c8df71557c4}{exclude\+One} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&comp)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1Exclude}{Exclude} specific name component. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Exclude}{Exclude} \& \hyperlink{classndn_1_1Exclude_add899794f98c51df19f6ae911f6c764a}{exclude\+Range} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&from, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&to)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1Exclude}{Exclude} components from range \mbox{[}from, to\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Exclude}{Exclude} \& \hyperlink{classndn_1_1Exclude_a6df09c1a0c6aaa08fe1a465b82c6c642}{exclude\+Before} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&to)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1Exclude}{Exclude} all components from range \mbox{[}/, to\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Exclude}{Exclude} \& \hyperlink{classndn_1_1Exclude_ac846c5330169257f3eee049299bce5f8}{exclude\+After} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&from)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1Exclude}{Exclude} all components from range \mbox{[}from, +\+Inf\mbox{]}. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Exclude_a783fc168f290ef705dd683356daa624d}{empty} () const\hypertarget{classndn_1_1Exclude_a783fc168f290ef705dd683356daa624d}{}\label{classndn_1_1Exclude_a783fc168f290ef705dd683356daa624d}
+
+\begin{DoxyCompactList}\small\item\em Check if exclude filter is empty. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Exclude_af16410c50be862e58d3b92e198bb7098}{clear} ()\hypertarget{classndn_1_1Exclude_af16410c50be862e58d3b92e198bb7098}{}\label{classndn_1_1Exclude_af16410c50be862e58d3b92e198bb7098}
+
+\begin{DoxyCompactList}\small\item\em Clear the exclude filter. \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1Exclude}{Exclude} \&other) const\hypertarget{classndn_1_1Exclude_aaeb1e7e3e44986da1f178637e78dd227}{}\label{classndn_1_1Exclude_aaeb1e7e3e44986da1f178637e78dd227}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1Exclude}{Exclude} \&other) const\hypertarget{classndn_1_1Exclude_add401a1b0fa7e1a35a54a05594886843}{}\label{classndn_1_1Exclude_add401a1b0fa7e1a35a54a05594886843}
+
+\item 
+void \hyperlink{classndn_1_1Exclude_a0876f33d0f2cccc1fbb5e214e6849665}{append\+Exclude} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&name, bool any)
+\begin{DoxyCompactList}\small\item\em Method to directly append exclude element. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1Exclude_a10f7cadad1b577b723f23a5d6e57a91e}{size} () const\hypertarget{classndn_1_1Exclude_a10f7cadad1b577b723f23a5d6e57a91e}{}\label{classndn_1_1Exclude_a10f7cadad1b577b723f23a5d6e57a91e}
+
+\begin{DoxyCompactList}\small\item\em Get number of exclude terms. \end{DoxyCompactList}\item 
+const\+\_\+iterator \hyperlink{classndn_1_1Exclude_a8e594601f5c4b6e1ffef2bccdad19efd}{begin} () const\hypertarget{classndn_1_1Exclude_a8e594601f5c4b6e1ffef2bccdad19efd}{}\label{classndn_1_1Exclude_a8e594601f5c4b6e1ffef2bccdad19efd}
+
+\begin{DoxyCompactList}\small\item\em Get begin iterator of the exclude terms. \end{DoxyCompactList}\item 
+const\+\_\+iterator \hyperlink{classndn_1_1Exclude_a5206a6bd0b6eb5a4684f1686e4e7f94b}{end} () const\hypertarget{classndn_1_1Exclude_a5206a6bd0b6eb5a4684f1686e4e7f94b}{}\label{classndn_1_1Exclude_a5206a6bd0b6eb5a4684f1686e4e7f94b}
+
+\begin{DoxyCompactList}\small\item\em Get end iterator of the exclude terms. \end{DoxyCompactList}\item 
+const\+\_\+reverse\+\_\+iterator \hyperlink{classndn_1_1Exclude_a5b960519b742bdd53ec696229bcf6063}{rbegin} () const\hypertarget{classndn_1_1Exclude_a5b960519b742bdd53ec696229bcf6063}{}\label{classndn_1_1Exclude_a5b960519b742bdd53ec696229bcf6063}
+
+\begin{DoxyCompactList}\small\item\em Get begin iterator of the exclude terms. \end{DoxyCompactList}\item 
+const\+\_\+reverse\+\_\+iterator \hyperlink{classndn_1_1Exclude_a9a46016ec47520e9d73e6c052873031b}{rend} () const\hypertarget{classndn_1_1Exclude_a9a46016ec47520e9d73e6c052873031b}{}\label{classndn_1_1Exclude_a9a46016ec47520e9d73e6c052873031b}
+
+\begin{DoxyCompactList}\small\item\em Get end iterator of the exclude terms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent \hyperlink{classndn_1_1Exclude}{Exclude} component in N\+DN interests. 
+
+Definition at line 38 of file exclude.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Exclude@{ndn\+::\+Exclude}!append\+Exclude@{append\+Exclude}}
+\index{append\+Exclude@{append\+Exclude}!ndn\+::\+Exclude@{ndn\+::\+Exclude}}
+\subsubsection[{\texorpdfstring{append\+Exclude(const name\+::\+Component \&name, bool any)}{appendExclude(const name::Component \&name, bool any)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Exclude\+::append\+Exclude (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{name, }
+\item[{bool}]{any}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Exclude_a0876f33d0f2cccc1fbb5e214e6849665}{}\label{classndn_1_1Exclude_a0876f33d0f2cccc1fbb5e214e6849665}
+
+
+Method to directly append exclude element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & excluded name component \\
+\hline
+{\em any} & flag indicating if there is a postfix A\+NY component after the name\\
+\hline
+\end{DoxyParams}
+This method is used during conversion from wire format of exclude filter
+
+If there is an error with ranges (e.\+g., order of components is wrong) an exception is thrown 
+
+Definition at line 217 of file exclude.\+hpp.
+
+\index{ndn\+::\+Exclude@{ndn\+::\+Exclude}!exclude\+After@{exclude\+After}}
+\index{exclude\+After@{exclude\+After}!ndn\+::\+Exclude@{ndn\+::\+Exclude}}
+\subsubsection[{\texorpdfstring{exclude\+After(const name\+::\+Component \&from)}{excludeAfter(const name::Component \&from)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exclude} \& ndn\+::\+Exclude\+::exclude\+After (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{from}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Exclude_ac846c5330169257f3eee049299bce5f8}{}\label{classndn_1_1Exclude_ac846c5330169257f3eee049299bce5f8}
+
+
+\hyperlink{classndn_1_1Exclude}{Exclude} all components from range \mbox{[}from, +\+Inf\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & the first element of the range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this to allow chaining 
+\end{DoxyReturn}
+
+
+Definition at line 244 of file exclude.\+cpp.
+
+\index{ndn\+::\+Exclude@{ndn\+::\+Exclude}!exclude\+Before@{exclude\+Before}}
+\index{exclude\+Before@{exclude\+Before}!ndn\+::\+Exclude@{ndn\+::\+Exclude}}
+\subsubsection[{\texorpdfstring{exclude\+Before(const name\+::\+Component \&to)}{excludeBefore(const name::Component \&to)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exclude} \& ndn\+::\+Exclude\+::exclude\+Before (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Exclude_a6df09c1a0c6aaa08fe1a465b82c6c642}{}\label{classndn_1_1Exclude_a6df09c1a0c6aaa08fe1a465b82c6c642}
+
+
+\hyperlink{classndn_1_1Exclude}{Exclude} all components from range \mbox{[}/, to\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to} & last element of the range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this to allow chaining 
+\end{DoxyReturn}
+
+
+Definition at line 211 of file exclude.\+hpp.
+
+\index{ndn\+::\+Exclude@{ndn\+::\+Exclude}!exclude\+One@{exclude\+One}}
+\index{exclude\+One@{exclude\+One}!ndn\+::\+Exclude@{ndn\+::\+Exclude}}
+\subsubsection[{\texorpdfstring{exclude\+One(const name\+::\+Component \&comp)}{excludeOne(const name::Component \&comp)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exclude} \& ndn\+::\+Exclude\+::exclude\+One (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{comp}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Exclude_aa90385be6fd18937924a8c8df71557c4}{}\label{classndn_1_1Exclude_aa90385be6fd18937924a8c8df71557c4}
+
+
+\hyperlink{classndn_1_1Exclude}{Exclude} specific name component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp} & component to exclude \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this to allow chaining 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file exclude.\+cpp.
+
+\index{ndn\+::\+Exclude@{ndn\+::\+Exclude}!exclude\+Range@{exclude\+Range}}
+\index{exclude\+Range@{exclude\+Range}!ndn\+::\+Exclude@{ndn\+::\+Exclude}}
+\subsubsection[{\texorpdfstring{exclude\+Range(const name\+::\+Component \&from, const name\+::\+Component \&to)}{excludeRange(const name::Component \&from, const name::Component \&to)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exclude} \& ndn\+::\+Exclude\+::exclude\+Range (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{from, }
+\item[{const {\bf name\+::\+Component} \&}]{to}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Exclude_add899794f98c51df19f6ae911f6c764a}{}\label{classndn_1_1Exclude_add899794f98c51df19f6ae911f6c764a}
+
+
+\hyperlink{classndn_1_1Exclude}{Exclude} components from range \mbox{[}from, to\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & first element of the range \\
+\hline
+{\em to} & last element of the range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this to allow chaining 
+\end{DoxyReturn}
+
+
+Definition at line 209 of file exclude.\+cpp.
+
+\index{ndn\+::\+Exclude@{ndn\+::\+Exclude}!is\+Excluded@{is\+Excluded}}
+\index{is\+Excluded@{is\+Excluded}!ndn\+::\+Exclude@{ndn\+::\+Exclude}}
+\subsubsection[{\texorpdfstring{is\+Excluded(const name\+::\+Component \&comp) const}{isExcluded(const name::Component \&comp) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Exclude\+::is\+Excluded (
+\begin{DoxyParamCaption}
+\item[{const {\bf name\+::\+Component} \&}]{comp}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Exclude_afe7e89b3119b70b7a9f66b45d574e350}{}\label{classndn_1_1Exclude_afe7e89b3119b70b7a9f66b45d574e350}
+
+
+Check if name component is excluded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp} & \hyperlink{classndn_1_1Name}{Name} component to check against exclude filter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 159 of file exclude.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/exclude.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/exclude.\+cpp\end{DoxyCompactItemize}

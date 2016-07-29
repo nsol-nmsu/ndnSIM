@@ -1,0 +1,71 @@
+\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture}{}\section{nfd\+:\+:tests\+:\+:Strategy\+Choice\+Manager\+Fixture Class Reference}
+\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture}\index{nfd\+::tests\+::\+Strategy\+Choice\+Manager\+Fixture@{nfd\+::tests\+::\+Strategy\+Choice\+Manager\+Fixture}}
+Inheritance diagram for nfd\+:\+:tests\+:\+:Strategy\+Choice\+Manager\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1tests_1_1StrategyChoiceManagerFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries validate\+Control\+Response\+Common} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text, \hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \&control)\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_aec2989ee363608921775aa98694b1289}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_aec2989ee363608921775aa98694b1289}
+
+\item 
+void {\bfseries validate\+Control\+Response} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text)\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_aa23bdca45e6bd1396684cff201e0b710}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_aa23bdca45e6bd1396684cff201e0b710}
+
+\item 
+void {\bfseries validate\+Control\+Response} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text, const \hyperlink{classndn_1_1Block}{Block} \&expected\+Body)\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a7510b46230b6ba16aadaf7f6b2487d00}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a7510b46230b6ba16aadaf7f6b2487d00}
+
+\item 
+void {\bfseries validate\+List} (const \hyperlink{classndn_1_1Data}{Data} \&data, const \hyperlink{classndn_1_1nfd_1_1StrategyChoice}{ndn\+::nfd\+::\+Strategy\+Choice} \&expected\+Choice)\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a8e13b5272f5c1adf323be475fa5a65bc}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a8e13b5272f5c1adf323be475fa5a65bc}
+
+\item 
+bool {\bfseries did\+Callback\+Fire} ()\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a0a138f720b41f115524b581d8d386a5e}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a0a138f720b41f115524b581d8d386a5e}
+
+\item 
+void {\bfseries reset\+Callback\+Fired} ()\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_aa3b6dcfe6e7636cfa1e2679b43dd4398}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_aa3b6dcfe6e7636cfa1e2679b43dd4398}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ \& {\bfseries get\+Face} ()\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_acaa85035ea6f2585de4ece04b132ee87}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_acaa85035ea6f2585de4ece04b132ee87}
+
+\item 
+\hyperlink{classnfd_1_1StrategyChoiceManager}{Strategy\+Choice\+Manager} \& {\bfseries get\+Manager} ()\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a784ffd5cbd647245e6d7ea05b27128a6}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a784ffd5cbd647245e6d7ea05b27128a6}
+
+\item 
+\hyperlink{classnfd_1_1StrategyChoice}{Strategy\+Choice} \& {\bfseries get\+Strategy\+Choice} ()\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a821fb5032936eb4904e3add634702f13}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a821fb5032936eb4904e3add634702f13}
+
+\item 
+void {\bfseries add\+Interest\+Rule} (const std\+::string \&regex, \hyperlink{classndn_1_1IdentityCertificate}{ndn\+::\+Identity\+Certificate} \&certificate)\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a837d6d027ab9130e876704d718ea879f}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a837d6d027ab9130e876704d718ea879f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1Forwarder}{Forwarder} {\bfseries m\+\_\+forwarder}\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a01d739d929a2531919d71d71fba6b1b6}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a01d739d929a2531919d71d71fba6b1b6}
+
+\item 
+\hyperlink{classnfd_1_1StrategyChoice}{Strategy\+Choice} \& {\bfseries m\+\_\+strategy\+Choice}\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a7a45da465e68a80829bd855d12403e3a}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a7a45da465e68a80829bd855d12403e3a}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ {\bfseries m\+\_\+face}\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a827be50cd2114b222237217ca304bf3b}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a827be50cd2114b222237217ca304bf3b}
+
+\item 
+\hyperlink{classnfd_1_1StrategyChoiceManager}{Strategy\+Choice\+Manager} {\bfseries m\+\_\+manager}\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a79297e710ded18cf952bc32a1c2f1b78}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_a79297e710ded18cf952bc32a1c2f1b78}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries m\+\_\+key\+Chain}\hypertarget{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_aa0c7d6e142b67b513c76ac68a79f7650}{}\label{classnfd_1_1tests_1_1StrategyChoiceManagerFixture_aa0c7d6e142b67b513c76ac68a79f7650}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 46 of file strategy-\/choice-\/manager.\+t.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/mgmt/strategy-\/choice-\/manager.\+t.\+cpp\end{DoxyCompactItemize}

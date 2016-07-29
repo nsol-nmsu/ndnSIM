@@ -1,0 +1,224 @@
+\hypertarget{classnfd_1_1cs_1_1Entry}{}\section{nfd\+:\+:cs\+:\+:Entry Class Reference}
+\label{classnfd_1_1cs_1_1Entry}\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+
+
+represents a base class for CS entry  
+
+
+
+
+{\ttfamily \#include $<$cs-\/entry.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:cs\+:\+:Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1cs_1_1Entry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classndn_1_1Data}{Data} \& \hyperlink{classnfd_1_1cs_1_1Entry_ad07761f254df27a65f12903837f25f48}{get\+Data} () const
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classnfd_1_1cs_1_1Entry_a3c002cb1d9ab3e804fb242d1baf98b25}{get\+Name} () const
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classnfd_1_1cs_1_1Entry_a0b5dda37c72afa623f62071d4a2fce25}{get\+Full\+Name} () const
+\item 
+bool \hyperlink{classnfd_1_1cs_1_1Entry_ae2decf9b1c986c0d894968fe633ee95f}{is\+Unsolicited} () const
+\item 
+const time\+::steady\+\_\+clock\+::\+Time\+Point \& \hyperlink{classnfd_1_1cs_1_1Entry_a18be8959593dbcf20eaa3ed0e4e7c48a}{get\+Stale\+Time} () const
+\item 
+bool \hyperlink{classnfd_1_1cs_1_1Entry_a956594f585dd8bdc464270fea6084c4b}{is\+Stale} () const
+\begin{DoxyCompactList}\small\item\em checks if the stored Data is stale now \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1cs_1_1Entry_a536d64b48509ce5d5ce12294d8646bda}{can\+Satisfy} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest) const
+\begin{DoxyCompactList}\small\item\em determines whether Interest can be satisified by the stored Data \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{has\+Data} () const
+\item 
+void \hyperlink{classnfd_1_1cs_1_1Entry_a7e5c537136097a6dfd7797452149efd2}{set\+Data} (shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{Data} $>$ data, bool \hyperlink{classnfd_1_1cs_1_1Entry_ae2decf9b1c986c0d894968fe633ee95f}{is\+Unsolicited})\hypertarget{classnfd_1_1cs_1_1Entry_a7e5c537136097a6dfd7797452149efd2}{}\label{classnfd_1_1cs_1_1Entry_a7e5c537136097a6dfd7797452149efd2}
+
+\begin{DoxyCompactList}\small\item\em replaces the stored Data \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Entry_ab88eac53ccb658a6593255d35d24c7f4}{set\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data, bool \hyperlink{classnfd_1_1cs_1_1Entry_ae2decf9b1c986c0d894968fe633ee95f}{is\+Unsolicited})\hypertarget{classnfd_1_1cs_1_1Entry_ab88eac53ccb658a6593255d35d24c7f4}{}\label{classnfd_1_1cs_1_1Entry_ab88eac53ccb658a6593255d35d24c7f4}
+
+\begin{DoxyCompactList}\small\item\em replaces the stored Data \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Entry_a1564ecc5db0e664a9afa2072b726743e}{update\+Stale\+Time} ()\hypertarget{classnfd_1_1cs_1_1Entry_a1564ecc5db0e664a9afa2072b726743e}{}\label{classnfd_1_1cs_1_1Entry_a1564ecc5db0e664a9afa2072b726743e}
+
+\begin{DoxyCompactList}\small\item\em refreshes stale time relative to current time \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Entry_a0369cd5299ccdc959ba32666177d0a74}{reset} ()
+\begin{DoxyCompactList}\small\item\em clears the entry \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a base class for CS entry 
+
+Definition at line 36 of file cs-\/entry.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!can\+Satisfy@{can\+Satisfy}}
+\index{can\+Satisfy@{can\+Satisfy}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{can\+Satisfy(const Interest \&interest) const}{canSatisfy(const Interest \&interest) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::cs\+::\+Entry\+::can\+Satisfy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1cs_1_1Entry_a536d64b48509ce5d5ce12294d8646bda}{}\label{classnfd_1_1cs_1_1Entry_a536d64b48509ce5d5ce12294d8646bda}
+
+
+determines whether Interest can be satisified by the stored Data 
+
+\begin{DoxyNote}{Note}
+Child\+Selector is not considered 
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{has\+Data()} 
+\end{DoxyPrecond}
+
+
+Definition at line 60 of file cs-\/entry.\+cpp.
+
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Data() const}{getData() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Data}\& nfd\+::cs\+::\+Entry\+::get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1cs_1_1Entry_ad07761f254df27a65f12903837f25f48}{}\label{classnfd_1_1cs_1_1Entry_ad07761f254df27a65f12903837f25f48}
+\begin{DoxyReturn}{Returns}
+the stored Data 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{has\+Data()} 
+\end{DoxyPrecond}
+
+
+Definition at line 43 of file cs-\/entry.\+hpp.
+
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!get\+Full\+Name@{get\+Full\+Name}}
+\index{get\+Full\+Name@{get\+Full\+Name}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Full\+Name() const}{getFullName() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name}\& nfd\+::cs\+::\+Entry\+::get\+Full\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1cs_1_1Entry_a0b5dda37c72afa623f62071d4a2fce25}{}\label{classnfd_1_1cs_1_1Entry_a0b5dda37c72afa623f62071d4a2fce25}
+\begin{DoxyReturn}{Returns}
+full name (including implicit digest) of the stored Data 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{has\+Data()} 
+\end{DoxyPrecond}
+
+
+Definition at line 63 of file cs-\/entry.\+hpp.
+
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Name() const}{getName() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name}\& nfd\+::cs\+::\+Entry\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1cs_1_1Entry_a3c002cb1d9ab3e804fb242d1baf98b25}{}\label{classnfd_1_1cs_1_1Entry_a3c002cb1d9ab3e804fb242d1baf98b25}
+\begin{DoxyReturn}{Returns}
+Name of the stored Data 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{has\+Data()} 
+\end{DoxyPrecond}
+
+
+Definition at line 53 of file cs-\/entry.\+hpp.
+
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!get\+Stale\+Time@{get\+Stale\+Time}}
+\index{get\+Stale\+Time@{get\+Stale\+Time}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Stale\+Time() const}{getStaleTime() const}}]{\setlength{\rightskip}{0pt plus 5cm}const time\+::steady\+\_\+clock\+::\+Time\+Point\& nfd\+::cs\+::\+Entry\+::get\+Stale\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1cs_1_1Entry_a18be8959593dbcf20eaa3ed0e4e7c48a}{}\label{classnfd_1_1cs_1_1Entry_a18be8959593dbcf20eaa3ed0e4e7c48a}
+\begin{DoxyReturn}{Returns}
+the absolute time when the stored Data becomes expired 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em time\+::steady\+\_\+clock\+::\+Time\+Point\+::max()} & if the stored Data never expires \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{has\+Data()} 
+\end{DoxyPrecond}
+
+
+Definition at line 84 of file cs-\/entry.\+hpp.
+
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!has\+Data@{has\+Data}}
+\index{has\+Data@{has\+Data}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{has\+Data() const}{hasData() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::cs\+::\+Entry\+::has\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{}\label{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}
+\begin{DoxyReturn}{Returns}
+true if a Data packet is stored 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file cs-\/entry.\+hpp.
+
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!is\+Stale@{is\+Stale}}
+\index{is\+Stale@{is\+Stale}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{is\+Stale() const}{isStale() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::cs\+::\+Entry\+::is\+Stale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1cs_1_1Entry_a956594f585dd8bdc464270fea6084c4b}{}\label{classnfd_1_1cs_1_1Entry_a956594f585dd8bdc464270fea6084c4b}
+
+
+checks if the stored Data is stale now 
+
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{has\+Data()} 
+\end{DoxyPrecond}
+
+
+Definition at line 41 of file cs-\/entry.\+cpp.
+
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!is\+Unsolicited@{is\+Unsolicited}}
+\index{is\+Unsolicited@{is\+Unsolicited}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{is\+Unsolicited() const}{isUnsolicited() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::cs\+::\+Entry\+::is\+Unsolicited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1cs_1_1Entry_ae2decf9b1c986c0d894968fe633ee95f}{}\label{classnfd_1_1cs_1_1Entry_ae2decf9b1c986c0d894968fe633ee95f}
+\begin{DoxyReturn}{Returns}
+whether the stored Data is unsolicited 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classnfd_1_1cs_1_1Entry_af65826aa276c0fe8290f2ea1294069f6}{has\+Data()} 
+\end{DoxyPrecond}
+
+
+Definition at line 73 of file cs-\/entry.\+hpp.
+
+\index{nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}!reset@{reset}}
+\index{reset@{reset}!nfd\+::cs\+::\+Entry@{nfd\+::cs\+::\+Entry}}
+\subsubsection[{\texorpdfstring{reset()}{reset()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::cs\+::\+Entry\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1Entry_a0369cd5299ccdc959ba32666177d0a74}{}\label{classnfd_1_1cs_1_1Entry_a0369cd5299ccdc959ba32666177d0a74}
+
+
+clears the entry 
+
+\begin{DoxyPostcond}{Postcondition}
+!has\+Data() 
+\end{DoxyPostcond}
+
+
+Definition at line 75 of file cs-\/entry.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs-\/entry.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs-\/entry.\+cpp\end{DoxyCompactItemize}

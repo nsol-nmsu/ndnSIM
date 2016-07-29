@@ -1,0 +1,84 @@
+\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture}{}\section{nfd\+:\+:rib\+:\+:tests\+:\+:Remote\+Registrator\+Fixture Class Reference}
+\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture}\index{nfd\+::rib\+::tests\+::\+Remote\+Registrator\+Fixture@{nfd\+::rib\+::tests\+::\+Remote\+Registrator\+Fixture}}
+Inheritance diagram for nfd\+:\+:rib\+:\+:tests\+:\+:Remote\+Registrator\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries read\+Config} (bool is\+Set\+Retry=false)\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a3c5047037715e02dbd2cc28c2c5c393b}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a3c5047037715e02dbd2cc28c2c5c393b}
+
+\item 
+void {\bfseries wait\+For\+Timeout} ()\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a3ec3ab325618945a68ca8e5df70f9bcb}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a3ec3ab325618945a68ca8e5df70f9bcb}
+
+\item 
+void {\bfseries insert\+Entry\+With\+Identity} (\hyperlink{classndn_1_1Name}{Name} identity, \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} app\+Name=D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+P\+P\+\_\+\+N\+A\+ME, uint64\+\_\+t face\+Id=0)\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a9dce7303242a50713fae053f58c21ba8}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a9dce7303242a50713fae053f58c21ba8}
+
+\item 
+void {\bfseries insert\+Entry\+Without\+Identity} (\hyperlink{classndn_1_1Name}{Name} identity, \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} app\+Name=D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+P\+P\+\_\+\+N\+A\+ME, uint64\+\_\+t face\+Id=0)\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_ae6c84a9a38b4cf49082ab1c8a2082801}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_ae6c84a9a38b4cf49082ab1c8a2082801}
+
+\item 
+void {\bfseries erase\+Entry\+With\+Identity} (\hyperlink{classndn_1_1Name}{Name} identity, \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} app\+Name=D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+P\+P\+\_\+\+N\+A\+ME, uint64\+\_\+t face\+Id=0)\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a01a639be5f9554f43e40e150abfab389}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a01a639be5f9554f43e40e150abfab389}
+
+\item 
+void {\bfseries erase\+Entry\+Without\+Identity} (\hyperlink{classndn_1_1Name}{Name} identity, \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} app\+Name=D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+P\+P\+\_\+\+N\+A\+ME, uint64\+\_\+t face\+Id=0)\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a602391a5739592a18eae00093afaaf14}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a602391a5739592a18eae00093afaaf14}
+
+\item 
+void {\bfseries erase\+Face} (uint64\+\_\+t face\+Id)\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a83f0e5f2a7f3b43919dffb6505f511d9}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a83f0e5f2a7f3b43919dffb6505f511d9}
+
+\item 
+void {\bfseries connect\+To\+Hub} ()\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a6d98d49908f210dcfc3709e73bed6c45}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a6d98d49908f210dcfc3709e73bed6c45}
+
+\item 
+void {\bfseries disconnect\+To\+Hub} ()\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a26de714a56942389f832cfbf85e4d464}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a26de714a56942389f832cfbf85e4d464}
+
+\item 
+void {\bfseries extract\+Parameters} (\hyperlink{classndn_1_1Interest}{Interest} \&interest, \hyperlink{classndn_1_1name_1_1Component}{Name\+::\+Component} \&verb, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{ndn\+::nfd\+::\+Control\+Parameters} \&extracted\+Parameters)\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_aaedb72f04c2336b1c2091c8db366b7fc}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_aaedb72f04c2336b1c2091c8db366b7fc}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1rib_1_1Rib}{Rib} {\bfseries rib}\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a4faf7a5049c245508fd0d2cebce1956c}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a4faf7a5049c245508fd0d2cebce1956c}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace}{ndn\+::util\+::\+Dummy\+Client\+Face} $>$ {\bfseries face}\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_acbb591309666ac64b3784c8ff682ea13}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_acbb591309666ac64b3784c8ff682ea13}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1nfd_1_1Controller}{ndn\+::nfd\+::\+Controller} $>$ {\bfseries controller}\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_ac68f076174e0c4f91434ead36cfdef6d}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_ac68f076174e0c4f91434ead36cfdef6d}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator}{Remote\+Registrator} $>$ {\bfseries remote\+Registrator}\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_adfceebbfef8bf87057f3da9a75df5876}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_adfceebbfef8bf87057f3da9a75df5876}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} {\bfseries C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+R\+E\+F\+IX}\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a4bf7f3946b3096aefe1e5e5c999b9315}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a4bf7f3946b3096aefe1e5e5c999b9315}
+
+\item 
+const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} {\bfseries R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+E\+RB}\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_aace7ad3a62b065f1ed881210274d61e0}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_aace7ad3a62b065f1ed881210274d61e0}
+
+\item 
+const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} {\bfseries U\+N\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+V\+E\+RB}\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a5ef28248e10ea1f400eb83784a6ba876}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_a5ef28248e10ea1f400eb83784a6ba876}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+P\+P\+\_\+\+N\+A\+ME}\hypertarget{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_aaf038501ad53c0d11209b9dae13014d6}{}\label{classnfd_1_1rib_1_1tests_1_1RemoteRegistratorFixture_aaf038501ad53c0d11209b9dae13014d6}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file remote-\/registrator.\+t.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/rib/remote-\/registrator.\+t.\+cpp\end{DoxyCompactItemize}

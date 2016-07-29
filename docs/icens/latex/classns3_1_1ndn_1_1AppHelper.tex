@@ -1,0 +1,152 @@
+\hypertarget{classns3_1_1ndn_1_1AppHelper}{}\section{ns3\+:\+:ndn\+:\+:App\+Helper Class Reference}
+\label{classns3_1_1ndn_1_1AppHelper}\index{ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}}
+
+
+A helper to make it easier to instantiate an \hyperlink{classns3_1_1ndn_1_1App}{ns3\+::ndn\+::\+App} applications on a set of nodes.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/app-\/helper.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1AppHelper_a59eeaad1a642c4f6d4f65a5471591776}{App\+Helper} (const std\+::string \&prefix)
+\begin{DoxyCompactList}\small\item\em Create an Ndn\+App\+Helper to make it easier to work with Ndn apps. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1AppHelper_a67d941c1628aceef4b8add5c564ed3df}{Set\+Prefix} (const std\+::string \&prefix)\hypertarget{classns3_1_1ndn_1_1AppHelper_a67d941c1628aceef4b8add5c564ed3df}{}\label{classns3_1_1ndn_1_1AppHelper_a67d941c1628aceef4b8add5c564ed3df}
+
+\begin{DoxyCompactList}\small\item\em Set the prefix consumer will be requesting. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1AppHelper_a459f3dbfc8a64c315af610df1b652689}{Set\+Attribute} (std\+::string name, const Attribute\+Value \&value)
+\begin{DoxyCompactList}\small\item\em Helper function used to set the underlying application attributes. \end{DoxyCompactList}\item 
+Application\+Container \hyperlink{classns3_1_1ndn_1_1AppHelper_a91d418e35a292f4d734fc9a4b7637732}{Install} (Node\+Container c)
+\item 
+Application\+Container \hyperlink{classns3_1_1ndn_1_1AppHelper_ab0f03bf5c89a84845edbce05b47813d3}{Install} (Ptr$<$ Node $>$ node)
+\item 
+Application\+Container \hyperlink{classns3_1_1ndn_1_1AppHelper_a06b7fb848260f38b3ec6645ba37c8774}{Install} (std\+::string node\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A helper to make it easier to instantiate an \hyperlink{classns3_1_1ndn_1_1App}{ns3\+::ndn\+::\+App} applications on a set of nodes. 
+
+Definition at line 39 of file ndn-\/app-\/helper.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}!App\+Helper@{App\+Helper}}
+\index{App\+Helper@{App\+Helper}!ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}}
+\subsubsection[{\texorpdfstring{App\+Helper(const std\+::string \&prefix)}{AppHelper(const std::string \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+App\+Helper\+::\+App\+Helper (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1AppHelper_a59eeaad1a642c4f6d4f65a5471591776}{}\label{classns3_1_1ndn_1_1AppHelper_a59eeaad1a642c4f6d4f65a5471591776}
+
+
+Create an Ndn\+App\+Helper to make it easier to work with Ndn apps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & Class of the application \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file ndn-\/app-\/helper.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}}
+\subsubsection[{\texorpdfstring{Install(\+Node\+Container c)}{Install(NodeContainer c)}}]{\setlength{\rightskip}{0pt plus 5cm}Application\+Container ns3\+::ndn\+::\+App\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Node\+Container}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1AppHelper_a91d418e35a292f4d734fc9a4b7637732}{}\label{classns3_1_1ndn_1_1AppHelper_a91d418e35a292f4d734fc9a4b7637732}
+Install an ns3\+::\+Ndn\+Consumer on each node of the input container configured with all the attributes set with Set\+Attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Node\+Container of the set of nodes on which an Ndn\+Consumer will be installed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container of Ptr to the applications installed. 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file ndn-\/app-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node)}{Install(Ptr< Node > node)}}]{\setlength{\rightskip}{0pt plus 5cm}Application\+Container ns3\+::ndn\+::\+App\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1AppHelper_ab0f03bf5c89a84845edbce05b47813d3}{}\label{classns3_1_1ndn_1_1AppHelper_ab0f03bf5c89a84845edbce05b47813d3}
+Install an ns3\+::\+Ndn\+Consumer on the node configured with all the attributes set with Set\+Attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node on which an Ndn\+Consumer will be installed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container of Ptr to the applications installed. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file ndn-\/app-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}}
+\subsubsection[{\texorpdfstring{Install(std\+::string node\+Name)}{Install(std::string nodeName)}}]{\setlength{\rightskip}{0pt plus 5cm}Application\+Container ns3\+::ndn\+::\+App\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{node\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1AppHelper_a06b7fb848260f38b3ec6645ba37c8774}{}\label{classns3_1_1ndn_1_1AppHelper_a06b7fb848260f38b3ec6645ba37c8774}
+Install an ns3\+::\+Ndn\+Consumer on the node configured with all the attributes set with Set\+Attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & The node on which an Ndn\+Consumer will be installed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Container of Ptr to the applications installed. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file ndn-\/app-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}!Set\+Attribute@{Set\+Attribute}}
+\index{Set\+Attribute@{Set\+Attribute}!ns3\+::ndn\+::\+App\+Helper@{ns3\+::ndn\+::\+App\+Helper}}
+\subsubsection[{\texorpdfstring{Set\+Attribute(std\+::string name, const Attribute\+Value \&value)}{SetAttribute(std::string name, const AttributeValue \&value)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+Helper\+::\+Set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{const Attribute\+Value \&}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1AppHelper_a459f3dbfc8a64c315af610df1b652689}{}\label{classns3_1_1ndn_1_1AppHelper_a459f3dbfc8a64c315af610df1b652689}
+
+
+Helper function used to set the underlying application attributes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the application attribute to set \\
+\hline
+{\em value} & the value of the application attribute to set \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file ndn-\/app-\/helper.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/app-\/helper.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/app-\/helper.\+cpp\end{DoxyCompactItemize}

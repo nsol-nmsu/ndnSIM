@@ -1,0 +1,107 @@
+\hypertarget{classndn_1_1ValidatorNull}{}\section{ndn\+:\+:Validator\+Null Class Reference}
+\label{classndn_1_1ValidatorNull}\index{ndn\+::\+Validator\+Null@{ndn\+::\+Validator\+Null}}
+Inheritance diagram for ndn\+:\+:Validator\+Null\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1ValidatorNull}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1ValidatorNull_a6e29ebc70c7655b3f2c14c20c41e0659}{check\+Policy} (const \hyperlink{classndn_1_1Data}{Data} \&data, int n\+Steps, const \hyperlink{namespacendn_aeaa15e849fd25636f59ca61acb64e532}{On\+Data\+Validated} \&on\+Validated, const \hyperlink{namespacendn_ae3c60219d74ba747e368708d93782760}{On\+Data\+Validation\+Failed} \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps)
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{classndn_1_1Data}{Data} against policy and return the next validation step if necessary. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1ValidatorNull_a90aa622f4ee7115ac2cf6ed6fa3e7af7}{check\+Policy} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, int n\+Steps, const \hyperlink{namespacendn_a90fe4b4d97a7870d87f2fce8fdc88f95}{On\+Interest\+Validated} \&on\+Validated, const \hyperlink{namespacendn_a6cb4f04de7c1e8da06d8f5865b3d2877}{On\+Interest\+Validation\+Failed} \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps)
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{classndn_1_1Interest}{Interest} against validation policy and return the next validation step if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file validator-\/null.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Validator\+Null@{ndn\+::\+Validator\+Null}!check\+Policy@{check\+Policy}}
+\index{check\+Policy@{check\+Policy}!ndn\+::\+Validator\+Null@{ndn\+::\+Validator\+Null}}
+\subsubsection[{\texorpdfstring{check\+Policy(const Data \&data, int n\+Steps, const On\+Data\+Validated \&on\+Validated, const On\+Data\+Validation\+Failed \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps)}{checkPolicy(const Data \&data, int nSteps, const OnDataValidated \&onValidated, const OnDataValidationFailed \&onValidationFailed, std::vector< shared\_ptr< ValidationRequest > > \&nextSteps)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Validator\+Null\+::check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data, }
+\item[{int}]{n\+Steps, }
+\item[{const {\bf On\+Data\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Data\+Validation\+Failed} \&}]{on\+Validation\+Failed, }
+\item[{std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1ValidatorNull_a6e29ebc70c7655b3f2c14c20c41e0659}{}\label{classndn_1_1ValidatorNull_a6e29ebc70c7655b3f2c14c20c41e0659}
+
+
+Check the \hyperlink{classndn_1_1Data}{Data} against policy and return the next validation step if necessary. 
+
+If there is no next validation step, that validation M\+U\+ST have been done. i.\+e., either on\+Validated or on\+Validation\+Failed callback is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The \hyperlink{classndn_1_1Data}{Data} to check. \\
+\hline
+{\em n\+Steps} & The number of validation steps that have been done. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Data}{Data} is validated, this calls on\+Validated(data) \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data) \\
+\hline
+{\em next\+Steps} & On return, contains the next validation step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Validator_a341b1faa8a15ae17c5157d5387a75ef5}{ndn\+::\+Validator}.
+
+
+
+Definition at line 42 of file validator-\/null.\+hpp.
+
+\index{ndn\+::\+Validator\+Null@{ndn\+::\+Validator\+Null}!check\+Policy@{check\+Policy}}
+\index{check\+Policy@{check\+Policy}!ndn\+::\+Validator\+Null@{ndn\+::\+Validator\+Null}}
+\subsubsection[{\texorpdfstring{check\+Policy(const Interest \&interest, int n\+Steps, const On\+Interest\+Validated \&on\+Validated, const On\+Interest\+Validation\+Failed \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps)}{checkPolicy(const Interest \&interest, int nSteps, const OnInterestValidated \&onValidated, const OnInterestValidationFailed \&onValidationFailed, std::vector< shared\_ptr< ValidationRequest > > \&nextSteps)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Validator\+Null\+::check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{int}]{n\+Steps, }
+\item[{const {\bf On\+Interest\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Interest\+Validation\+Failed} \&}]{on\+Validation\+Failed, }
+\item[{std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1ValidatorNull_a90aa622f4ee7115ac2cf6ed6fa3e7af7}{}\label{classndn_1_1ValidatorNull_a90aa622f4ee7115ac2cf6ed6fa3e7af7}
+
+
+Check the \hyperlink{classndn_1_1Interest}{Interest} against validation policy and return the next validation step if necessary. 
+
+If there is no next validation step, that validation M\+U\+ST have been done. i.\+e., either on\+Validated or on\+Validation\+Failed callback is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & The \hyperlink{classndn_1_1Interest}{Interest} to check. \\
+\hline
+{\em n\+Steps} & The number of validation steps that have been done. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Interest}{Interest} is validated, this calls on\+Validated(data) \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data) \\
+\hline
+{\em next\+Steps} & On return, contains the next validation step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Validator_a8ad5a76c67c489afcb493f722f142e34}{ndn\+::\+Validator}.
+
+
+
+Definition at line 52 of file validator-\/null.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/validator-\/null.\+hpp\end{DoxyCompactItemize}

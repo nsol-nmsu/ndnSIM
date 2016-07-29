@@ -1,0 +1,125 @@
+\hypertarget{classnfd_1_1WebSocketFactory}{}\section{nfd\+:\+:Web\+Socket\+Factory Class Reference}
+\label{classnfd_1_1WebSocketFactory}\index{nfd\+::\+Web\+Socket\+Factory@{nfd\+::\+Web\+Socket\+Factory}}
+Inheritance diagram for nfd\+:\+:Web\+Socket\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1WebSocketFactory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1WebSocketFactory_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Exception of \hyperlink{classnfd_1_1WebSocketFactory}{Web\+Socket\+Factory}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Web\+Socket\+Factory} (const std\+::string \&default\+Port)\hypertarget{classnfd_1_1WebSocketFactory_a9b65cbe4037fe6cedf2d8642bebfe277}{}\label{classnfd_1_1WebSocketFactory_a9b65cbe4037fe6cedf2d8642bebfe277}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1WebSocketChannel}{Web\+Socket\+Channel} $>$ \hyperlink{classnfd_1_1WebSocketFactory_a2fef75e37bab4022e8820e3e7c2517c2}{create\+Channel} (const websocket\+::\+Endpoint \&local\+Endpoint)
+\begin{DoxyCompactList}\small\item\em Create Web\+Socket-\/based channel using websocket\+::\+Endpoint. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1WebSocketChannel}{Web\+Socket\+Channel} $>$ \hyperlink{classnfd_1_1WebSocketFactory_ae972a2a3b405aac2d56d1f3cb3df80ec}{create\+Channel} (const std\+::string \&local\+Ip, const std\+::string \&port)
+\begin{DoxyCompactList}\small\item\em Create Web\+Socket-\/based channel using specified IP address and port number. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1WebSocketFactory_a897429d95c0b5cde2744bc8e9ae5749b}{create\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const \hyperlink{namespacenfd_a6d4b91580c829552a452c53458381b0f}{Face\+Created\+Callback} \&on\+Created, const \hyperlink{namespacenfd_ae87d4f07de26f4939691439b51f2dd83}{Face\+Connect\+Failed\+Callback} \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. \end{DoxyCompactList}\item 
+virtual std\+::list$<$ shared\+\_\+ptr$<$ const \hyperlink{classnfd_1_1Channel}{Channel} $>$ $>$ {\bfseries get\+Channels} () const\hypertarget{classnfd_1_1WebSocketFactory_a36b69c79e8dd947619c1834a8501d605}{}\label{classnfd_1_1WebSocketFactory_a36b69c79e8dd947619c1834a8501d605}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file websocket-\/factory.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Web\+Socket\+Factory@{nfd\+::\+Web\+Socket\+Factory}!create\+Channel@{create\+Channel}}
+\index{create\+Channel@{create\+Channel}!nfd\+::\+Web\+Socket\+Factory@{nfd\+::\+Web\+Socket\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Channel(const websocket\+::\+Endpoint \&local\+Endpoint)}{createChannel(const websocket::Endpoint \&localEndpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Web\+Socket\+Channel} $>$ nfd\+::\+Web\+Socket\+Factory\+::create\+Channel (
+\begin{DoxyParamCaption}
+\item[{const websocket\+::\+Endpoint \&}]{local\+Endpoint}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1WebSocketFactory_a2fef75e37bab4022e8820e3e7c2517c2}{}\label{classnfd_1_1WebSocketFactory_a2fef75e37bab4022e8820e3e7c2517c2}
+
+
+Create Web\+Socket-\/based channel using websocket\+::\+Endpoint. 
+
+websocket\+::\+Endpoint is really an alias for boost\+::asio\+::ip\+::tcp\+::endpoint.
+
+If this method called twice with the same endpoint, only one channel will be created. The second call will just retrieve the existing channel.
+
+\begin{DoxyReturn}{Returns}
+always a valid pointer to a \hyperlink{classnfd_1_1WebSocketChannel}{Web\+Socket\+Channel} object, an exception is thrown if it cannot be created.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1WebSocketFactory_1_1Error}{Web\+Socket\+Factory\+::\+Error}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 38 of file websocket-\/factory.\+cpp.
+
+\index{nfd\+::\+Web\+Socket\+Factory@{nfd\+::\+Web\+Socket\+Factory}!create\+Channel@{create\+Channel}}
+\index{create\+Channel@{create\+Channel}!nfd\+::\+Web\+Socket\+Factory@{nfd\+::\+Web\+Socket\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Channel(const std\+::string \&local\+Ip, const std\+::string \&port)}{createChannel(const std::string \&localIp, const std::string \&port)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Web\+Socket\+Channel} $>$ nfd\+::\+Web\+Socket\+Factory\+::create\+Channel (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{local\+Ip, }
+\item[{const std\+::string \&}]{port}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1WebSocketFactory_ae972a2a3b405aac2d56d1f3cb3df80ec}{}\label{classnfd_1_1WebSocketFactory_ae972a2a3b405aac2d56d1f3cb3df80ec}
+
+
+Create Web\+Socket-\/based channel using specified IP address and port number. 
+
+This method is just a helper that converts a string representation of local\+Ip and port to websocket\+::\+Endpoint and calls the other create\+Channel overload.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1WebSocketFactory_1_1Error}{Web\+Socket\+Factory\+::\+Error}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 51 of file websocket-\/factory.\+cpp.
+
+\index{nfd\+::\+Web\+Socket\+Factory@{nfd\+::\+Web\+Socket\+Factory}!create\+Face@{create\+Face}}
+\index{create\+Face@{create\+Face}!nfd\+::\+Web\+Socket\+Factory@{nfd\+::\+Web\+Socket\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Face(const Face\+Uri \&uri, ndn\+::nfd\+::\+Face\+Persistency persistency, const Face\+Created\+Callback \&on\+Created, const Face\+Connect\+Failed\+Callback \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{createFace(const FaceUri \&uri, ndn::nfd::FacePersistency persistency, const FaceCreatedCallback \&onCreated, const FaceConnectFailedCallback \&onConnectFailed) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Web\+Socket\+Factory\+::create\+Face (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{uri, }
+\item[{{\bf ndn\+::nfd\+::\+Face\+Persistency}}]{persistency, }
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Created, }
+\item[{const {\bf Face\+Connect\+Failed\+Callback} \&}]{on\+Connect\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1WebSocketFactory_a897429d95c0b5cde2744bc8e9ae5749b}{}\label{classnfd_1_1WebSocketFactory_a897429d95c0b5cde2744bc8e9ae5749b}
+
+
+Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. 
+
+This method should automatically choose channel, based on supplied Face\+Uri and create face.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1WebSocketFactory_1_1Error}{Error}} & Factory does not support connect operation \\
+\hline
+{\em \hyperlink{classnfd_1_1WebSocketFactory_1_1Error}{Error}} & specified {\ttfamily persistency} is not supported \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}{nfd\+::\+Protocol\+Factory}.
+
+
+
+Definition at line 69 of file websocket-\/factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/websocket-\/factory.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/websocket-\/factory.\+cpp\end{DoxyCompactItemize}

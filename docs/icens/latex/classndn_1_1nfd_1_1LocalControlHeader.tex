@@ -1,0 +1,170 @@
+\hypertarget{classndn_1_1nfd_1_1LocalControlHeader}{}\section{ndn\+:\+:nfd\+:\+:Local\+Control\+Header Class Reference}
+\label{classndn_1_1nfd_1_1LocalControlHeader}\index{ndn\+::nfd\+::\+Local\+Control\+Header@{ndn\+::nfd\+::\+Local\+Control\+Header}}
+
+
+Class to handle work with \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header}.  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/local-\/control-\/header.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1LocalControlHeader_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Encode\+Flags} \+: uint8\+\_\+t \{ \\*
+{\bfseries E\+N\+C\+O\+D\+E\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries E\+N\+C\+O\+D\+E\+\_\+\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+F\+A\+C\+E\+\_\+\+ID} = (1 $<$$<$ 0), 
+{\bfseries E\+N\+C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+H\+OP} = (1 $<$$<$ 1), 
+{\bfseries E\+N\+C\+O\+D\+E\+\_\+\+C\+A\+C\+H\+I\+N\+G\+\_\+\+P\+O\+L\+I\+CY} = (1 $<$$<$ 2), 
+\\*
+{\bfseries E\+N\+C\+O\+D\+E\+\_\+\+A\+LL} = 0xff
+ \}\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_a681702da1dfdc3451ff08d11f089c25d}{}\label{classndn_1_1nfd_1_1LocalControlHeader_a681702da1dfdc3451ff08d11f089c25d}
+
+\item 
+enum {\bfseries Caching\+Policy} \+: uint8\+\_\+t \{ {\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+O\+L\+I\+CY} = 0, 
+{\bfseries N\+O\+\_\+\+C\+A\+C\+HE} = 1
+ \}\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_a6f9fff8664887587bd4d219fd482bfd2}{}\label{classndn_1_1nfd_1_1LocalControlHeader_a6f9fff8664887587bd4d219fd482bfd2}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1nfd_1_1LocalControlHeader_a6f3598290063fb83e55475dd2f8924c1}{Local\+Control\+Header} (const \hyperlink{classndn_1_1Block}{Block} \&wire, uint8\+\_\+t encode\+Mask=E\+N\+C\+O\+D\+E\+\_\+\+A\+LL)
+\begin{DoxyCompactList}\small\item\em Create from wire encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\hyperlink{classndn_1_1Block}{Block} \hyperlink{classndn_1_1nfd_1_1LocalControlHeader_a04deac705d2498eaee39908230b994a8}{wire\+Encode} (const U \&payload, uint8\+\_\+t encode\+Mask=E\+N\+C\+O\+D\+E\+\_\+\+A\+LL) const
+\begin{DoxyCompactList}\small\item\em Create wire encoding with options \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header} and the supplied item. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1nfd_1_1LocalControlHeader_ab6fce3742d692d0f2b1c2a56234e95ac}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire, uint8\+\_\+t encode\+Mask=E\+N\+C\+O\+D\+E\+\_\+\+A\+LL)
+\begin{DoxyCompactList}\small\item\em Decode from the wire format and set \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header} on the supplied item. \end{DoxyCompactList}\item 
+bool {\bfseries empty} (uint8\+\_\+t encode\+Mask) const\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_ae7271a522dcc884f6f8d51e674cabdcd}{}\label{classndn_1_1nfd_1_1LocalControlHeader_ae7271a522dcc884f6f8d51e674cabdcd}
+
+\item 
+bool {\bfseries has\+Incoming\+Face\+Id} () const\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_aadd4a26c5f9a6c64d57b5d8a756eb66f}{}\label{classndn_1_1nfd_1_1LocalControlHeader_aadd4a26c5f9a6c64d57b5d8a756eb66f}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Incoming\+Face\+Id} () const\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_af79deefd9cac64ce920fc0e621081a9b}{}\label{classndn_1_1nfd_1_1LocalControlHeader_af79deefd9cac64ce920fc0e621081a9b}
+
+\item 
+void {\bfseries set\+Incoming\+Face\+Id} (uint64\+\_\+t incoming\+Face\+Id)\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_a49c65a792ef88761fc22cf3af1306db4}{}\label{classndn_1_1nfd_1_1LocalControlHeader_a49c65a792ef88761fc22cf3af1306db4}
+
+\item 
+bool {\bfseries has\+Next\+Hop\+Face\+Id} () const\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_a242172355286a10aae5691a086587dcc}{}\label{classndn_1_1nfd_1_1LocalControlHeader_a242172355286a10aae5691a086587dcc}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Next\+Hop\+Face\+Id} () const\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_aed7378aedee7ff96b51ac878d7dc6dbd}{}\label{classndn_1_1nfd_1_1LocalControlHeader_aed7378aedee7ff96b51ac878d7dc6dbd}
+
+\item 
+void {\bfseries set\+Next\+Hop\+Face\+Id} (uint64\+\_\+t next\+Hop\+Face\+Id)\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_a9b7afdf41ab796a4463ed1fef6244113}{}\label{classndn_1_1nfd_1_1LocalControlHeader_a9b7afdf41ab796a4463ed1fef6244113}
+
+\item 
+bool {\bfseries has\+Caching\+Policy} () const\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_aed0f60af0a8930a0f3ee4cb7bfbf9a0b}{}\label{classndn_1_1nfd_1_1LocalControlHeader_aed0f60af0a8930a0f3ee4cb7bfbf9a0b}
+
+\item 
+Caching\+Policy {\bfseries get\+Caching\+Policy} () const\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_af8383734ad7e12cc2af8b4fb5d08233f}{}\label{classndn_1_1nfd_1_1LocalControlHeader_af8383734ad7e12cc2af8b4fb5d08233f}
+
+\item 
+void {\bfseries set\+Caching\+Policy} (Caching\+Policy caching\+Policy)\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_aff1ebe3dd3b528f246179c256424721d}{}\label{classndn_1_1nfd_1_1LocalControlHeader_aff1ebe3dd3b528f246179c256424721d}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classndn_1_1Block}{Block} \& {\bfseries get\+Payload} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_ad7a0287c5d106894c42cdbe508bebec1}{}\label{classndn_1_1nfd_1_1LocalControlHeader_ad7a0287c5d106894c42cdbe508bebec1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to handle work with \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header}. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/LocalControlHeader}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Local\+Control\+Header} 
+\end{DoxySeeAlso}
+
+
+Definition at line 37 of file nfd-\/local-\/control-\/header.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::nfd\+::\+Local\+Control\+Header@{ndn\+::nfd\+::\+Local\+Control\+Header}!Local\+Control\+Header@{Local\+Control\+Header}}
+\index{Local\+Control\+Header@{Local\+Control\+Header}!ndn\+::nfd\+::\+Local\+Control\+Header@{ndn\+::nfd\+::\+Local\+Control\+Header}}
+\subsubsection[{\texorpdfstring{Local\+Control\+Header(const Block \&wire, uint8\+\_\+t encode\+Mask=\+E\+N\+C\+O\+D\+E\+\_\+\+A\+L\+L)}{LocalControlHeader(const Block \&wire, uint8\_t encodeMask=ENCODE\_ALL)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Local\+Control\+Header\+::\+Local\+Control\+Header (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire, }
+\item[{uint8\+\_\+t}]{encode\+Mask = {\ttfamily ENCODE\+\_\+ALL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_a6f3598290063fb83e55475dd2f8924c1}{}\label{classndn_1_1nfd_1_1LocalControlHeader_a6f3598290063fb83e55475dd2f8924c1}
+
+
+Create from wire encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1nfd_1_1LocalControlHeader_ab6fce3742d692d0f2b1c2a56234e95ac}{wire\+Decode} 
+\end{DoxySeeAlso}
+
+
+Definition at line 76 of file nfd-\/local-\/control-\/header.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::nfd\+::\+Local\+Control\+Header@{ndn\+::nfd\+::\+Local\+Control\+Header}!wire\+Decode@{wire\+Decode}}
+\index{wire\+Decode@{wire\+Decode}!ndn\+::nfd\+::\+Local\+Control\+Header@{ndn\+::nfd\+::\+Local\+Control\+Header}}
+\subsubsection[{\texorpdfstring{wire\+Decode(const Block \&wire, uint8\+\_\+t encode\+Mask=\+E\+N\+C\+O\+D\+E\+\_\+\+A\+L\+L)}{wireDecode(const Block \&wire, uint8\_t encodeMask=ENCODE\_ALL)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::nfd\+::\+Local\+Control\+Header\+::wire\+Decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire, }
+\item[{uint8\+\_\+t}]{encode\+Mask = {\ttfamily ENCODE\+\_\+ALL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_ab6fce3742d692d0f2b1c2a56234e95ac}{}\label{classndn_1_1nfd_1_1LocalControlHeader_ab6fce3742d692d0f2b1c2a56234e95ac}
+
+
+Decode from the wire format and set \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header} on the supplied item. 
+
+The supplied wire M\+U\+ST contain \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header}. Determination whether the optional \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header} should be done before calling this method. 
+
+Definition at line 266 of file nfd-\/local-\/control-\/header.\+hpp.
+
+\index{ndn\+::nfd\+::\+Local\+Control\+Header@{ndn\+::nfd\+::\+Local\+Control\+Header}!wire\+Encode@{wire\+Encode}}
+\index{wire\+Encode@{wire\+Encode}!ndn\+::nfd\+::\+Local\+Control\+Header@{ndn\+::nfd\+::\+Local\+Control\+Header}}
+\subsubsection[{\texorpdfstring{wire\+Encode(const U \&payload, uint8\+\_\+t encode\+Mask=\+E\+N\+C\+O\+D\+E\+\_\+\+A\+L\+L) const}{wireEncode(const U \&payload, uint8\_t encodeMask=ENCODE\_ALL) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class U $>$ {\bf Block} ndn\+::nfd\+::\+Local\+Control\+Header\+::wire\+Encode (
+\begin{DoxyParamCaption}
+\item[{const U \&}]{payload, }
+\item[{uint8\+\_\+t}]{encode\+Mask = {\ttfamily ENCODE\+\_\+ALL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd_1_1LocalControlHeader_a04deac705d2498eaee39908230b994a8}{}\label{classndn_1_1nfd_1_1LocalControlHeader_a04deac705d2498eaee39908230b994a8}
+
+
+Create wire encoding with options \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header} and the supplied item. 
+
+The caller is responsible of checking whether \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header} contains any information.
+
+!\+It is an error to call this method if none of Incoming\+Face\+Id, Next\+Hop\+Face\+Id and Caching\+Policy are set, or neither of them are enabled.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1nfd_1_1LocalControlHeader_1_1Error}{Local\+Control\+Header\+::\+Error}} & when empty \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header} be produced\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classndn_1_1Block}{Block}, containing \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header}. Top-\/level length field of the returned \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header} includes payload length, but the memory block is independent of the payload\textquotesingle{}s wire buffer. It is expected that both \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header}\textquotesingle{}s and payload\textquotesingle{}s wire will be send out together within a single send call.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/LocalControlHeader}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Local\+Control\+Header} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]should this be B\+O\+O\+S\+T\+\_\+\+A\+S\+S\+E\+RT instead? This is kind of unnecessary overhead \end{DoxyRefDesc}
+
+
+Definition at line 249 of file nfd-\/local-\/control-\/header.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/local-\/control-\/header.\+hpp\end{DoxyCompactItemize}

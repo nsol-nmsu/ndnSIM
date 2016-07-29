@@ -1,0 +1,218 @@
+\hypertarget{classndn_1_1security_1_1Pib}{}\section{ndn\+:\+:security\+:\+:Pib Class Reference}
+\label{classndn_1_1security_1_1Pib}\index{ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}}
+
+
+represents the P\+IB  
+
+
+
+
+{\ttfamily \#include $<$pib.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:security\+:\+:Pib\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1security_1_1Pib}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em represents a semantic error \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classndn_1_1security_1_1Pib_a4895a06cbc5688c7aeafc4ed82027b50}{get\+Scheme} () const\hypertarget{classndn_1_1security_1_1Pib_a4895a06cbc5688c7aeafc4ed82027b50}{}\label{classndn_1_1security_1_1Pib_a4895a06cbc5688c7aeafc4ed82027b50}
+
+\begin{DoxyCompactList}\small\item\em return the scheme of the Pib\+Locator \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1security_1_1Pib_abe11c7b1d702a95840df0f73e4a6d4fc}{get\+Pib\+Locator} () const\hypertarget{classndn_1_1security_1_1Pib_abe11c7b1d702a95840df0f73e4a6d4fc}{}\label{classndn_1_1security_1_1Pib_abe11c7b1d702a95840df0f73e4a6d4fc}
+
+\begin{DoxyCompactList}\small\item\em Get P\+IB Locator. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1Pib_ae4b5f4a9470d99d262e221723f8cae08}{set\+Tpm\+Locator} (const std\+::string \&tpm\+Locator)
+\begin{DoxyCompactList}\small\item\em Set the corresponding T\+PM information to {\ttfamily tpm\+Locator}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1security_1_1Pib_aa5d224e4849e839d98b5dee73f42931e}{get\+Tpm\+Locator} () const\hypertarget{classndn_1_1security_1_1Pib_aa5d224e4849e839d98b5dee73f42931e}{}\label{classndn_1_1security_1_1Pib_aa5d224e4849e839d98b5dee73f42931e}
+
+\begin{DoxyCompactList}\small\item\em Get T\+PM Locator. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Identity}{Identity} \hyperlink{classndn_1_1security_1_1Pib_a4b202f6abfb3eb138ccd0d04e39b5d00}{get\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name) const
+\begin{DoxyCompactList}\small\item\em Get an identity with name {\ttfamily identity\+Name}. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1security_1_1IdentityContainer}{Identity\+Container} \& \hyperlink{classndn_1_1security_1_1Pib_ae7a92a75db937caebf0132ddfb26d769}{get\+Identities} () const\hypertarget{classndn_1_1security_1_1Pib_ae7a92a75db937caebf0132ddfb26d769}{}\label{classndn_1_1security_1_1Pib_ae7a92a75db937caebf0132ddfb26d769}
+
+\begin{DoxyCompactList}\small\item\em Get all the identities. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Identity}{Identity} \& \hyperlink{classndn_1_1security_1_1Pib_a0325f3cd4c292fc3267a3dae4bc3134d}{get\+Default\+Identity} () const
+\begin{DoxyCompactList}\small\item\em Get the default identity. \end{DoxyCompactList}\item 
+void {\bfseries remove\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)\hypertarget{classndn_1_1security_1_1Pib_a111de1c03f633a037b404b20c0d2e307}{}\label{classndn_1_1security_1_1Pib_a111de1c03f633a037b404b20c0d2e307}
+
+\item 
+\hyperlink{classndn_1_1security_1_1Identity}{Identity} \& \hyperlink{classndn_1_1security_1_1Pib_aa6c85b0bf73c86ace00c45f1fb22ad06}{set\+Default\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)
+\begin{DoxyCompactList}\small\item\em Set an identity with name {\ttfamily identity\+Name} as the default identity. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1PibImpl}{Pib\+Impl} $>$ {\bfseries get\+Impl} ()\hypertarget{classndn_1_1security_1_1Pib_aeff1b4dcbcafc8cb21a8628ec2a5f9b9}{}\label{classndn_1_1security_1_1Pib_aeff1b4dcbcafc8cb21a8628ec2a5f9b9}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: \hyperlink{classndn_1_1security_1_1Identity}{Identity} add\+Identity(const \hyperlink{classndn_1_1Name}{Name}\& identity\+Name)\hypertarget{classndn_1_1security_1_1Pib_abc713ee536b7ed408b71ce4c9d3455ce}{}\label{classndn_1_1security_1_1Pib_abc713ee536b7ed408b71ce4c9d3455ce}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: \hyperlink{classndn_1_1security_1_1Pib}{Pib}(const std\+::string scheme\hypertarget{classndn_1_1security_1_1Pib_a286ab77cf3acc46aac8a373b96281e12}{}\label{classndn_1_1security_1_1Pib_a286ab77cf3acc46aac8a373b96281e12}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const std\+::string \& {\bfseries location}\hypertarget{classndn_1_1security_1_1Pib_a5d5d884588f0e3e62734efcd64b2eeaf}{}\label{classndn_1_1security_1_1Pib_a5d5d884588f0e3e62734efcd64b2eeaf}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const std\+::string shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1PibImpl}{Pib\+Impl} $>$ {\bfseries impl}\hypertarget{classndn_1_1security_1_1Pib_ac423c299c750a0e4ada9030b07766fa8}{}\label{classndn_1_1security_1_1Pib_ac423c299c750a0e4ada9030b07766fa8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+scheme}\hypertarget{classndn_1_1security_1_1Pib_ac0302763c3711ada0394a6b1809656f8}{}\label{classndn_1_1security_1_1Pib_ac0302763c3711ada0394a6b1809656f8}
+
+\item 
+std\+::string {\bfseries m\+\_\+location}\hypertarget{classndn_1_1security_1_1Pib_a802df12ef8b2bb7a14b46990ba20e070}{}\label{classndn_1_1security_1_1Pib_a802df12ef8b2bb7a14b46990ba20e070}
+
+\item 
+bool {\bfseries m\+\_\+has\+Default\+Identity}\hypertarget{classndn_1_1security_1_1Pib_a7b7f1f10d2cd1ac768489edfc0b734bd}{}\label{classndn_1_1security_1_1Pib_a7b7f1f10d2cd1ac768489edfc0b734bd}
+
+\item 
+\hyperlink{classndn_1_1security_1_1Identity}{Identity} {\bfseries m\+\_\+default\+Identity}\hypertarget{classndn_1_1security_1_1Pib_a2527041edaddfa125912efd93cd42cb2}{}\label{classndn_1_1security_1_1Pib_a2527041edaddfa125912efd93cd42cb2}
+
+\item 
+bool {\bfseries m\+\_\+need\+Refresh\+Identities}\hypertarget{classndn_1_1security_1_1Pib_abfee65740ffae6974fab477089f97235}{}\label{classndn_1_1security_1_1Pib_abfee65740ffae6974fab477089f97235}
+
+\item 
+\hyperlink{classndn_1_1security_1_1IdentityContainer}{Identity\+Container} {\bfseries m\+\_\+identities}\hypertarget{classndn_1_1security_1_1Pib_a6a286dc9f0b82f66df00ad1dd5558c12}{}\label{classndn_1_1security_1_1Pib_a6a286dc9f0b82f66df00ad1dd5558c12}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1PibImpl}{Pib\+Impl} $>$ {\bfseries m\+\_\+impl}\hypertarget{classndn_1_1security_1_1Pib_a4f2c18385faa33d10e71888743a7e791}{}\label{classndn_1_1security_1_1Pib_a4f2c18385faa33d10e71888743a7e791}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Key\+Chain}\hypertarget{classndn_1_1security_1_1Pib_a4575cb0348247df0457c276b54b06764}{}\label{classndn_1_1security_1_1Pib_a4575cb0348247df0457c276b54b06764}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the P\+IB 
+
+The P\+IB (Public Information Base) stores the public portion of a user\textquotesingle{}s cryptography keys. The format and location of stored information is indicated by the Pib\+Locator. The P\+IB is designed to work with a T\+PM (Trusted Platform Module) which stores private keys. There is a one-\/to-\/one association between P\+IB and T\+PM, and therefore the Tpm\+Locator is recorded by the P\+IB to enforce this association and prevent one from operating on mismatched P\+IB and T\+PM.
+
+Information in the P\+IB is organized in a hierarchy of Identity-\/\+Key-\/\+Certificate. At the top level, the \hyperlink{classndn_1_1security_1_1Pib}{Pib} class provides access to identities, and allows setting a default identity. Properties of an identity can be accessed after obtaining an \hyperlink{classndn_1_1security_1_1Identity}{Identity} object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1PibImpl_1_1Error}{Pib\+Impl\+::\+Error}} & when underlying implementation has non-\/semantic error. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 48 of file pib.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}!get\+Default\+Identity@{get\+Default\+Identity}}
+\index{get\+Default\+Identity@{get\+Default\+Identity}!ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}}
+\subsubsection[{\texorpdfstring{get\+Default\+Identity() const}{getDefaultIdentity() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Identity} \& ndn\+::security\+::\+Pib\+::get\+Default\+Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1Pib_a0325f3cd4c292fc3267a3dae4bc3134d}{}\label{classndn_1_1security_1_1Pib_a0325f3cd4c292fc3267a3dae4bc3134d}
+
+
+Get the default identity. 
+
+\begin{DoxyReturn}{Returns}
+the default identity. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if no default identity. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 108 of file pib.\+cpp.
+
+\index{ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}!get\+Identity@{get\+Identity}}
+\index{get\+Identity@{get\+Identity}!ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}}
+\subsubsection[{\texorpdfstring{get\+Identity(const Name \&identity\+Name) const}{getIdentity(const Name \&identityName) const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Identity} ndn\+::security\+::\+Pib\+::get\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1Pib_a4b202f6abfb3eb138ccd0d04e39b5d00}{}\label{classndn_1_1security_1_1Pib_a4b202f6abfb3eb138ccd0d04e39b5d00}
+
+
+Get an identity with name {\ttfamily identity\+Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name for the identity to get. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the identity does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 81 of file pib.\+cpp.
+
+\index{ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}!set\+Default\+Identity@{set\+Default\+Identity}}
+\index{set\+Default\+Identity@{set\+Default\+Identity}!ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}}
+\subsubsection[{\texorpdfstring{set\+Default\+Identity(const Name \&identity\+Name)}{setDefaultIdentity(const Name \&identityName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Identity} \& ndn\+::security\+::\+Pib\+::set\+Default\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Pib_aa6c85b0bf73c86ace00c45f1fb22ad06}{}\label{classndn_1_1security_1_1Pib_aa6c85b0bf73c86ace00c45f1fb22ad06}
+
+
+Set an identity with name {\ttfamily identity\+Name} as the default identity. 
+
+Also create the identity if it does not exist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name for the default identity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the default identity 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file pib.\+cpp.
+
+\index{ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}!set\+Tpm\+Locator@{set\+Tpm\+Locator}}
+\index{set\+Tpm\+Locator@{set\+Tpm\+Locator}!ndn\+::security\+::\+Pib@{ndn\+::security\+::\+Pib}}
+\subsubsection[{\texorpdfstring{set\+Tpm\+Locator(const std\+::string \&tpm\+Locator)}{setTpmLocator(const std::string \&tpmLocator)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Pib\+::set\+Tpm\+Locator (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tpm\+Locator}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Pib_ae4b5f4a9470d99d262e221723f8cae08}{}\label{classndn_1_1security_1_1Pib_ae4b5f4a9470d99d262e221723f8cae08}
+
+
+Set the corresponding T\+PM information to {\ttfamily tpm\+Locator}. 
+
+If the provided {\ttfamily tpm\+Locator} is different from the existing one, the P\+IB will be reset, otherwise nothing will be changed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmp\+Locator} & The name for the new tmp\+Locator \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file pib.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/pib.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/pib.\+cpp\end{DoxyCompactItemize}

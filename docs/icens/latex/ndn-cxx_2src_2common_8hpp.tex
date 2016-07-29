@@ -1,0 +1,101 @@
+\hypertarget{ndn-cxx_2src_2common_8hpp}{}\section{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/common.hpp File Reference}
+\label{ndn-cxx_2src_2common_8hpp}\index{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/common.\+hpp@{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/common.\+hpp}}
+
+
+import common constructs for ndn-\/cxx library internal use  
+
+
+{\ttfamily \#include \char`\"{}ndn-\/cxx-\/config.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$cstddef$>$}\\*
+{\ttfamily \#include $<$cstdint$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$boost/is\+\_\+placeholder.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/assert.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/concept\+\_\+check.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/noncopyable.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/throw\+\_\+exception.\+hpp$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacendn}{ndn}
+\item 
+ \hyperlink{namespaceboost}{boost}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS}\hypertarget{ndn-cxx_2src_2common_8hpp_a22bd51d2b34b4bfa2e3cd09c9da445bf}{}\label{ndn-cxx_2src_2common_8hpp_a22bd51d2b34b4bfa2e3cd09c9da445bf}
+
+\item 
+\#define {\bfseries N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED}~protected\hypertarget{ndn-cxx_2src_2common_8hpp_a799c52f43fd2454414d7b8ccdcc1a417}{}\label{ndn-cxx_2src_2common_8hpp_a799c52f43fd2454414d7b8ccdcc1a417}
+
+\item 
+\#define {\bfseries N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE}~private\hypertarget{ndn-cxx_2src_2common_8hpp_ab38eb3c1e2a46adafeb61bc4e80f7dfe}{}\label{ndn-cxx_2src_2common_8hpp_ab38eb3c1e2a46adafeb61bc4e80f7dfe}
+
+\item 
+\#define {\bfseries N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE}~private\hypertarget{ndn-cxx_2src_2common_8hpp_a3adc1caa00b6d9da15780e877a00902d}{}\label{ndn-cxx_2src_2common_8hpp_a3adc1caa00b6d9da15780e877a00902d}
+
+\item 
+\#define \hyperlink{ndn-cxx_2src_2common_8hpp_a901daa44edd42d3f44df61d77277d57f}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}\hypertarget{ndn-cxx_2src_2common_8hpp_a901daa44edd42d3f44df61d77277d57f}{}\label{ndn-cxx_2src_2common_8hpp_a901daa44edd42d3f44df61d77277d57f}
+
+\begin{DoxyCompactList}\small\item\em expands to \textquotesingle{}override\textquotesingle{} if compiler supports this feature, otherwise expands to nothing \end{DoxyCompactList}\item 
+\#define \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{}\label{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}
+
+\begin{DoxyCompactList}\small\item\em expands to \textquotesingle{}final\textquotesingle{} if compiler supports this feature, otherwise expands to nothing \end{DoxyCompactList}\item 
+\#define {\bfseries D\+E\+P\+R\+E\+C\+A\+T\+ED}(func)~func\hypertarget{ndn-cxx_2src_2common_8hpp_aaf225a2b96038de3a42d61a1fa63654b}{}\label{ndn-cxx_2src_2common_8hpp_aaf225a2b96038de3a42d61a1fa63654b}
+
+\item 
+\#define {\bfseries B\+O\+O\+S\+T\+\_\+\+B\+I\+N\+D\+\_\+\+N\+O\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+RS}\hypertarget{ndn-cxx_2src_2common_8hpp_a588de13296d14a22e2bf719e1b0012ab}{}\label{ndn-cxx_2src_2common_8hpp_a588de13296d14a22e2bf719e1b0012ab}
+
+\item 
+\#define {\bfseries N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+E\+\_\+\+B\+O\+O\+S\+T\+\_\+\+I\+S\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+R\+\_\+\+F\+O\+R\+\_\+\+S\+T\+D\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+ER}(N)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+import common constructs for ndn-\/cxx library internal use 
+
+Copyright (c) 2013-\/2014 Regents of the University of California.
+
+This file is part of ndn-\/cxx library (N\+DN C++ library with e\+Xperimental e\+Xtensions).
+
+ndn-\/cxx library is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+ndn-\/cxx library is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU Lesser General Public License for more details.
+
+You should have received copies of the G\+NU General Public License and G\+NU Lesser General Public License along with ndn-\/cxx, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}.
+
+See A\+U\+T\+H\+O\+R\+S.\+md for complete list of ndn-\/cxx authors and contributors. \begin{DoxyWarning}{Warning}
+This file is implementation detail of ndn-\/cxx library. Aliases imported in this file S\+H\+O\+U\+LD N\+OT be used outside of ndn-\/cxx. 
+\end{DoxyWarning}
+
+
+\subsection{Macro Definition Documentation}
+\index{ndn-\/cxx/src/common.\+hpp@{ndn-\/cxx/src/common.\+hpp}!N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+E\+\_\+\+B\+O\+O\+S\+T\+\_\+\+I\+S\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+R\+\_\+\+F\+O\+R\+\_\+\+S\+T\+D\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+ER@{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+E\+\_\+\+B\+O\+O\+S\+T\+\_\+\+I\+S\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+R\+\_\+\+F\+O\+R\+\_\+\+S\+T\+D\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+ER}}
+\index{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+E\+\_\+\+B\+O\+O\+S\+T\+\_\+\+I\+S\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+R\+\_\+\+F\+O\+R\+\_\+\+S\+T\+D\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+ER@{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+E\+\_\+\+B\+O\+O\+S\+T\+\_\+\+I\+S\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+R\+\_\+\+F\+O\+R\+\_\+\+S\+T\+D\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+ER}!ndn-\/cxx/src/common.\+hpp@{ndn-\/cxx/src/common.\+hpp}}
+\subsubsection[{\texorpdfstring{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+E\+\_\+\+B\+O\+O\+S\+T\+\_\+\+I\+S\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+R\+\_\+\+F\+O\+R\+\_\+\+S\+T\+D\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+ER}{NDN\_CXX\_SPECIALIZE\_BOOST\_IS\_PLACEHOLDER\_FOR\_STD\_PLACEHOLDER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+P\+E\+C\+I\+A\+L\+I\+Z\+E\+\_\+\+B\+O\+O\+S\+T\+\_\+\+I\+S\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+R\+\_\+\+F\+O\+R\+\_\+\+S\+T\+D\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+ER(
+\begin{DoxyParamCaption}
+\item[{}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{ndn-cxx_2src_2common_8hpp_ae58ba5aee13fdc6bf3390b20cd0a1d60}{}\label{ndn-cxx_2src_2common_8hpp_ae58ba5aee13fdc6bf3390b20cd0a1d60}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template}<> \(\backslash\)
+  struct is\_placeholder<typename std::remove\_const<decltype(\_##N)>::type> \(\backslash\)
+  \{ \(\backslash\)
+    enum \_vt \{ \(\backslash\)
+      value = N \(\backslash\)
+    \}; \(\backslash\)
+  \};
+\end{DoxyCode}
+
+
+Definition at line 111 of file common.\+hpp.
+

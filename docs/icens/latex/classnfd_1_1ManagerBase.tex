@@ -1,0 +1,86 @@
+\hypertarget{classnfd_1_1ManagerBase}{}\section{nfd\+:\+:Manager\+Base Class Reference}
+\label{classnfd_1_1ManagerBase}\index{nfd\+::\+Manager\+Base@{nfd\+::\+Manager\+Base}}
+Inheritance diagram for nfd\+:\+:Manager\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.400000cm]{classnfd_1_1ManagerBase}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfd_1_1ManagerBase_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Manager\+Base} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ face, const std\+::string \&privilege, \hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \&key\+Chain)\hypertarget{classnfd_1_1ManagerBase_aa46a60f0360c016dabd5c994f52b689c}{}\label{classnfd_1_1ManagerBase_aa46a60f0360c016dabd5c994f52b689c}
+
+\item 
+void {\bfseries on\+Command\+Validation\+Failed} (const shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{Interest} $>$ \&command, const std\+::string \&error)\hypertarget{classnfd_1_1ManagerBase_a481f0199c480907669bb5de76b5bf902}{}\label{classnfd_1_1ManagerBase_a481f0199c480907669bb5de76b5bf902}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Response} (\hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \&response, uint32\+\_\+t code, const std\+::string \&text)\hypertarget{classnfd_1_1ManagerBase_aebe6c7fcd4bbf88515b1e7cdf73c8392}{}\label{classnfd_1_1ManagerBase_aebe6c7fcd4bbf88515b1e7cdf73c8392}
+
+\item 
+void {\bfseries set\+Response} (\hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \&response, uint32\+\_\+t code, const std\+::string \&text, const \hyperlink{classndn_1_1Block}{Block} \&body)\hypertarget{classnfd_1_1ManagerBase_ae94e8b089068f1097a47df1fa000678d}{}\label{classnfd_1_1ManagerBase_ae94e8b089068f1097a47df1fa000678d}
+
+\item 
+void {\bfseries send\+Response} (const \hyperlink{classndn_1_1Name}{Name} \&name, const \hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \&response)\hypertarget{classnfd_1_1ManagerBase_a6dc3cdc46872ec1ee97353d92e96bd3d}{}\label{classnfd_1_1ManagerBase_a6dc3cdc46872ec1ee97353d92e96bd3d}
+
+\item 
+void {\bfseries send\+Response} (const \hyperlink{classndn_1_1Name}{Name} \&name, uint32\+\_\+t code, const std\+::string \&text)\hypertarget{classnfd_1_1ManagerBase_a868ef363033c6f9d686d70ee072cae23}{}\label{classnfd_1_1ManagerBase_a868ef363033c6f9d686d70ee072cae23}
+
+\item 
+void {\bfseries send\+Response} (const \hyperlink{classndn_1_1Name}{Name} \&name, uint32\+\_\+t code, const std\+::string \&text, const \hyperlink{classndn_1_1Block}{Block} \&body)\hypertarget{classnfd_1_1ManagerBase_a09ac5c15327f3711359cffa6dfaa1dae}{}\label{classnfd_1_1ManagerBase_a09ac5c15327f3711359cffa6dfaa1dae}
+
+\item 
+void {\bfseries send\+Nack} (const \hyperlink{classndn_1_1Name}{Name} \&name)\hypertarget{classnfd_1_1ManagerBase_a788985cf45de88635ffbb1ff9053199e}{}\label{classnfd_1_1ManagerBase_a788985cf45de88635ffbb1ff9053199e}
+
+\item 
+virtual bool {\bfseries validate\+Parameters} (const \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} \&command, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters)\hypertarget{classnfd_1_1ManagerBase_a66ac7b40cdb0d41012e65b5e38edbfc0}{}\label{classnfd_1_1ManagerBase_a66ac7b40cdb0d41012e65b5e38edbfc0}
+
+\item 
+void {\bfseries add\+Interest\+Rule} (const std\+::string \&regex, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1PublicKey}{ndn\+::\+Public\+Key} \&public\+Key)\hypertarget{classnfd_1_1ManagerBase_ad3174663ebae30e38180bae0eb7150af}{}\label{classnfd_1_1ManagerBase_ad3174663ebae30e38180bae0eb7150af}
+
+\item 
+void {\bfseries validate} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{namespacendn_a90fe4b4d97a7870d87f2fce8fdc88f95}{ndn\+::\+On\+Interest\+Validated} \&on\+Validated, const \hyperlink{namespacendn_a6cb4f04de7c1e8da06d8f5865b3d2877}{ndn\+::\+On\+Interest\+Validation\+Failed} \&on\+Validation\+Failed)\hypertarget{classnfd_1_1ManagerBase_af70c3c6f907c20ee72b78e5681569921}{}\label{classnfd_1_1ManagerBase_af70c3c6f907c20ee72b78e5681569921}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bfseries extract\+Parameters} (const \hyperlink{classndn_1_1name_1_1Component}{Name\+::\+Component} \&parameter\+Component, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&extracted\+Parameters)\hypertarget{classnfd_1_1ManagerBase_ab32ed35597421b247f93df521bb9661d}{}\label{classnfd_1_1ManagerBase_ab32ed35597421b247f93df521bb9661d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void add\+Interest\+Rule(const std\+::string\& regex\hypertarget{classnfd_1_1ManagerBase_a912fbd04ca89a14aabb943d5c5e8bc7c}{}\label{classnfd_1_1ManagerBase_a912fbd04ca89a14aabb943d5c5e8bc7c}
+
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED const \hyperlink{classndn_1_1IdentityCertificate}{ndn\+::\+Identity\+Certificate} \& {\bfseries certificate}\hypertarget{classnfd_1_1ManagerBase_a7f639e45b65d47c221d84cc4c89963a2}{}\label{classnfd_1_1ManagerBase_a7f639e45b65d47c221d84cc4c89963a2}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ {\bfseries m\+\_\+face}\hypertarget{classnfd_1_1ManagerBase_ac18ebd03eae4a10358930e8773236fb7}{}\label{classnfd_1_1ManagerBase_ac18ebd03eae4a10358930e8773236fb7}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \& {\bfseries m\+\_\+key\+Chain}\hypertarget{classnfd_1_1ManagerBase_a7ab7623dd7ae9dea078ddf746ba6438c}{}\label{classnfd_1_1ManagerBase_a7ab7623dd7ae9dea078ddf746ba6438c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 46 of file manager-\/base.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/mgmt/manager-\/base.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/mgmt/manager-\/base.\+cpp\end{DoxyCompactItemize}

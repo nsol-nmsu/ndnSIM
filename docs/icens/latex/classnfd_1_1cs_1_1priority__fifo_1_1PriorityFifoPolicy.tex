@@ -1,0 +1,39 @@
+\hypertarget{classnfd_1_1cs_1_1priority__fifo_1_1PriorityFifoPolicy}{}\section{nfd\+:\+:cs\+:\+:priority\+\_\+fifo\+:\+:Priority\+Fifo\+Policy Class Reference}
+\label{classnfd_1_1cs_1_1priority__fifo_1_1PriorityFifoPolicy}\index{nfd\+::cs\+::priority\+\_\+fifo\+::\+Priority\+Fifo\+Policy@{nfd\+::cs\+::priority\+\_\+fifo\+::\+Priority\+Fifo\+Policy}}
+
+
+Priority Fifo cs replacement policy.  
+
+
+
+
+{\ttfamily \#include $<$cs-\/policy-\/priority-\/fifo.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:cs\+:\+:priority\+\_\+fifo\+:\+:Priority\+Fifo\+Policy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1cs_1_1priority__fifo_1_1PriorityFifoPolicy}
+\end{center}
+\end{figure}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string {\bfseries P\+O\+L\+I\+C\+Y\+\_\+\+N\+A\+ME} = \char`\"{}fifo\char`\"{}\hypertarget{classnfd_1_1cs_1_1priority__fifo_1_1PriorityFifoPolicy_a280437c1e9cc7db1a328bde81ec0fb0e}{}\label{classnfd_1_1cs_1_1priority__fifo_1_1PriorityFifoPolicy_a280437c1e9cc7db1a328bde81ec0fb0e}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Priority Fifo cs replacement policy. 
+
+The entries that get removed first are unsolicited Data packets, which are the Data packets that got cached opportunistically without preceding forwarding of the corresponding Interest packet. Next, the Data packets with expired freshness are removed. Last, the Data packets are removed from the Content Store on a pure F\+I\+FO basis. 
+
+Definition at line 73 of file cs-\/policy-\/priority-\/fifo.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs-\/policy-\/priority-\/fifo.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs-\/policy-\/priority-\/fifo.\+cpp\end{DoxyCompactItemize}

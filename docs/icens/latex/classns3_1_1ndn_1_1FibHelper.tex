@@ -1,0 +1,327 @@
+\hypertarget{classns3_1_1ndn_1_1FibHelper}{}\section{ns3\+:\+:ndn\+:\+:Fib\+Helper Class Reference}
+\label{classns3_1_1ndn_1_1FibHelper}\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+
+
+Forwarding Information Base (F\+IB) helper.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/fib-\/helper.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_a778df0d68eafc7dd3898aff9adae5a00}{Add\+Route} (Ptr$<$ Node $>$ node, const Name \&prefix, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face, int32\+\_\+t metric)
+\begin{DoxyCompactList}\small\item\em Add forwarding entry to F\+IB. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_a66aa7e4ada91b433f13bbe75d05a2b9e}{Add\+Route} (const std\+::string \&node\+Name, const Name \&prefix, uint32\+\_\+t face\+Id, int32\+\_\+t metric)
+\begin{DoxyCompactList}\small\item\em Add forwarding entry to F\+IB. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_a09cfa453277b8d3e8dc35aa065da2a2b}{Add\+Route} (Ptr$<$ Node $>$ node, const Name \&prefix, uint32\+\_\+t face\+Id, int32\+\_\+t metric)
+\begin{DoxyCompactList}\small\item\em Add forwarding entry to F\+IB. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_ac85c33de983ec1e787e627ef7bf8e0e8}{Add\+Route} (Ptr$<$ Node $>$ node, const Name \&prefix, Ptr$<$ Node $>$ other\+Node, int32\+\_\+t metric)
+\begin{DoxyCompactList}\small\item\em Add forwarding entry to F\+IB (work only with point-\/to-\/point links) \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_afe5ddd65288c835cb5b4018f37132b3d}{Add\+Route} (const std\+::string \&node\+Name, const Name \&prefix, const std\+::string \&other\+Node\+Name, int32\+\_\+t metric)
+\begin{DoxyCompactList}\small\item\em Add forwarding entry to F\+IB (work only with point-\/to-\/point links) \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_ad6d4c9ad806d5b422f57b462c4f42381}{Remove\+Route} (Ptr$<$ Node $>$ node, const Name \&prefix, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)
+\begin{DoxyCompactList}\small\item\em remove forwarding entry in F\+IB \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_af8cb88c84215e665d2f934d8251184bb}{Remove\+Route} (Ptr$<$ Node $>$ node, const Name \&prefix, uint32\+\_\+t face\+Id)
+\begin{DoxyCompactList}\small\item\em remove forwarding entry in F\+IB \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_a6953d832c56c432a11b8434c070bbbcd}{Remove\+Route} (const std\+::string \&node\+Name, const Name \&prefix, uint32\+\_\+t face\+Id)
+\begin{DoxyCompactList}\small\item\em remove forwarding entry in F\+IB \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_a824a5ea72eff5c969e6bbae3c1ac828f}{Remove\+Route} (Ptr$<$ Node $>$ node, const Name \&prefix, Ptr$<$ Node $>$ other\+Node)
+\begin{DoxyCompactList}\small\item\em remove forwarding entry in F\+IB (work only with point-\/to-\/point links) \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1FibHelper_a6880d8af70290120840ddc758cc3a323}{Remove\+Route} (const std\+::string \&node\+Name, const Name \&prefix, const std\+::string \&other\+Node\+Name)
+\begin{DoxyCompactList}\small\item\em remove forwarding entry in F\+IB (work only with point-\/to-\/point links) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Forwarding Information Base (F\+IB) helper. 
+
+The F\+IB helper interacts with the F\+IB manager of N\+FD by sending special Interest commands to the manager in order to add/remove a next hop from F\+IB entries or add routes to the F\+IB manually (manual configuration of F\+IB). 
+
+Definition at line 45 of file ndn-\/fib-\/helper.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Add\+Route@{Add\+Route}}
+\index{Add\+Route@{Add\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Route(\+Ptr$<$ Node $>$ node, const Name \&prefix, shared\+\_\+ptr$<$ Face $>$ face, int32\+\_\+t metric)}{AddRoute(Ptr< Node > node, const Name \&prefix, shared\_ptr< Face > face, int32\_t metric)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Add\+Route (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const Name \&}]{prefix, }
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face, }
+\item[{int32\+\_\+t}]{metric}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_a778df0d68eafc7dd3898aff9adae5a00}{}\label{classns3_1_1ndn_1_1FibHelper_a778df0d68eafc7dd3898aff9adae5a00}
+
+
+Add forwarding entry to F\+IB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em face} & Face \\
+\hline
+{\em metric} & Routing metric \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Add\+Route@{Add\+Route}}
+\index{Add\+Route@{Add\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Route(const std\+::string \&node\+Name, const Name \&prefix, uint32\+\_\+t face\+Id, int32\+\_\+t metric)}{AddRoute(const std::string \&nodeName, const Name \&prefix, uint32\_t faceId, int32\_t metric)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Add\+Route (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node\+Name, }
+\item[{const Name \&}]{prefix, }
+\item[{uint32\+\_\+t}]{face\+Id, }
+\item[{int32\+\_\+t}]{metric}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_a66aa7e4ada91b433f13bbe75d05a2b9e}{}\label{classns3_1_1ndn_1_1FibHelper_a66aa7e4ada91b433f13bbe75d05a2b9e}
+
+
+Add forwarding entry to F\+IB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & Node name \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em face\+Id} & Face index \\
+\hline
+{\em metric} & Routing metric \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Add\+Route@{Add\+Route}}
+\index{Add\+Route@{Add\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Route(\+Ptr$<$ Node $>$ node, const Name \&prefix, uint32\+\_\+t face\+Id, int32\+\_\+t metric)}{AddRoute(Ptr< Node > node, const Name \&prefix, uint32\_t faceId, int32\_t metric)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Add\+Route (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const Name \&}]{prefix, }
+\item[{uint32\+\_\+t}]{face\+Id, }
+\item[{int32\+\_\+t}]{metric}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_a09cfa453277b8d3e8dc35aa065da2a2b}{}\label{classns3_1_1ndn_1_1FibHelper_a09cfa453277b8d3e8dc35aa065da2a2b}
+
+
+Add forwarding entry to F\+IB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & Node \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em face\+Id} & Face index \\
+\hline
+{\em metric} & Routing metric \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 107 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Add\+Route@{Add\+Route}}
+\index{Add\+Route@{Add\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Route(\+Ptr$<$ Node $>$ node, const Name \&prefix, Ptr$<$ Node $>$ other\+Node, int32\+\_\+t metric)}{AddRoute(Ptr< Node > node, const Name \&prefix, Ptr< Node > otherNode, int32\_t metric)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Add\+Route (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const Name \&}]{prefix, }
+\item[{Ptr$<$ Node $>$}]{other\+Node, }
+\item[{int32\+\_\+t}]{metric}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_ac85c33de983ec1e787e627ef7bf8e0e8}{}\label{classns3_1_1ndn_1_1FibHelper_ac85c33de983ec1e787e627ef7bf8e0e8}
+
+
+Add forwarding entry to F\+IB (work only with point-\/to-\/point links) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em other\+Node} & The other node, to which interests (will be used to infer face id \\
+\hline
+{\em metric} & Routing metric \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 137 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Add\+Route@{Add\+Route}}
+\index{Add\+Route@{Add\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Route(const std\+::string \&node\+Name, const Name \&prefix, const std\+::string \&other\+Node\+Name, int32\+\_\+t metric)}{AddRoute(const std::string \&nodeName, const Name \&prefix, const std::string \&otherNodeName, int32\_t metric)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Add\+Route (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node\+Name, }
+\item[{const Name \&}]{prefix, }
+\item[{const std\+::string \&}]{other\+Node\+Name, }
+\item[{int32\+\_\+t}]{metric}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_afe5ddd65288c835cb5b4018f37132b3d}{}\label{classns3_1_1ndn_1_1FibHelper_afe5ddd65288c835cb5b4018f37132b3d}
+
+
+Add forwarding entry to F\+IB (work only with point-\/to-\/point links) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & Node name (refer to ns3\+::\+Names) \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em other\+Node} & The other node name, to which interests (will be used to infer face id (refer to ns3\+::\+Names) \\
+\hline
+{\em metric} & Routing metric \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 168 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Remove\+Route@{Remove\+Route}}
+\index{Remove\+Route@{Remove\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Remove\+Route(\+Ptr$<$ Node $>$ node, const Name \&prefix, shared\+\_\+ptr$<$ Face $>$ face)}{RemoveRoute(Ptr< Node > node, const Name \&prefix, shared\_ptr< Face > face)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Remove\+Route (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const Name \&}]{prefix, }
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_ad6d4c9ad806d5b422f57b462c4f42381}{}\label{classns3_1_1ndn_1_1FibHelper_ad6d4c9ad806d5b422f57b462c4f42381}
+
+
+remove forwarding entry in F\+IB 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em face} & Face \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 181 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Remove\+Route@{Remove\+Route}}
+\index{Remove\+Route@{Remove\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Remove\+Route(\+Ptr$<$ Node $>$ node, const Name \&prefix, uint32\+\_\+t face\+Id)}{RemoveRoute(Ptr< Node > node, const Name \&prefix, uint32\_t faceId)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Remove\+Route (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const Name \&}]{prefix, }
+\item[{uint32\+\_\+t}]{face\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_af8cb88c84215e665d2f934d8251184bb}{}\label{classns3_1_1ndn_1_1FibHelper_af8cb88c84215e665d2f934d8251184bb}
+
+
+remove forwarding entry in F\+IB 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em face\+Id} & Face index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 196 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Remove\+Route@{Remove\+Route}}
+\index{Remove\+Route@{Remove\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Remove\+Route(const std\+::string \&node\+Name, const Name \&prefix, uint32\+\_\+t face\+Id)}{RemoveRoute(const std::string \&nodeName, const Name \&prefix, uint32\_t faceId)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Remove\+Route (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node\+Name, }
+\item[{const Name \&}]{prefix, }
+\item[{uint32\+\_\+t}]{face\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_a6953d832c56c432a11b8434c070bbbcd}{}\label{classns3_1_1ndn_1_1FibHelper_a6953d832c56c432a11b8434c070bbbcd}
+
+
+remove forwarding entry in F\+IB 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & Node name \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em face\+Id} & Face index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Remove\+Route@{Remove\+Route}}
+\index{Remove\+Route@{Remove\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Remove\+Route(\+Ptr$<$ Node $>$ node, const Name \&prefix, Ptr$<$ Node $>$ other\+Node)}{RemoveRoute(Ptr< Node > node, const Name \&prefix, Ptr< Node > otherNode)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Remove\+Route (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const Name \&}]{prefix, }
+\item[{Ptr$<$ Node $>$}]{other\+Node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_a824a5ea72eff5c969e6bbae3c1ac828f}{}\label{classns3_1_1ndn_1_1FibHelper_a824a5ea72eff5c969e6bbae3c1ac828f}
+
+
+remove forwarding entry in F\+IB (work only with point-\/to-\/point links) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em other\+Node} & The other node, to which interests (will be used to infer face id \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 223 of file ndn-\/fib-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}!Remove\+Route@{Remove\+Route}}
+\index{Remove\+Route@{Remove\+Route}!ns3\+::ndn\+::\+Fib\+Helper@{ns3\+::ndn\+::\+Fib\+Helper}}
+\subsubsection[{\texorpdfstring{Remove\+Route(const std\+::string \&node\+Name, const Name \&prefix, const std\+::string \&other\+Node\+Name)}{RemoveRoute(const std::string \&nodeName, const Name \&prefix, const std::string \&otherNodeName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Fib\+Helper\+::\+Remove\+Route (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node\+Name, }
+\item[{const Name \&}]{prefix, }
+\item[{const std\+::string \&}]{other\+Node\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1FibHelper_a6880d8af70290120840ddc758cc3a323}{}\label{classns3_1_1ndn_1_1FibHelper_a6880d8af70290120840ddc758cc3a323}
+
+
+remove forwarding entry in F\+IB (work only with point-\/to-\/point links) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & Node name \\
+\hline
+{\em prefix} & Routing prefix \\
+\hline
+{\em other\+Node} & The other node name, to which interests (will be used to infer face id \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 254 of file ndn-\/fib-\/helper.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/fib-\/helper.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/fib-\/helper.\+cpp\end{DoxyCompactItemize}

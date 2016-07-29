@@ -1,0 +1,82 @@
+\hypertarget{classnfd_1_1WebSocketFace}{}\section{nfd\+:\+:Web\+Socket\+Face Class Reference}
+\label{classnfd_1_1WebSocketFace}\index{nfd\+::\+Web\+Socket\+Face@{nfd\+::\+Web\+Socket\+Face}}
+
+
+Implementation of \hyperlink{classnfd_1_1Face}{Face} abstraction that uses Web\+Socket as underlying transport mechanism.  
+
+
+
+
+{\ttfamily \#include $<$websocket-\/face.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Web\+Socket\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1WebSocketFace}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Web\+Socket\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&remote\+Uri, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&local\+Uri, \hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{websocketpp\+::connection\+\_\+hdl} hdl, \hyperlink{classwebsocketpp_1_1server}{websocket\+::\+Server} \&\hyperlink{classwebsocketpp_1_1server}{server})\hypertarget{classnfd_1_1WebSocketFace_ae1aea2354683f7e2a3355fbd6ae148d9}{}\label{classnfd_1_1WebSocketFace_ae1aea2354683f7e2a3355fbd6ae148d9}
+
+\item 
+void \hyperlink{classnfd_1_1WebSocketFace_af9be80862667f16eb6fd87b558c77807}{send\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1WebSocketFace_af9be80862667f16eb6fd87b558c77807}{}\label{classnfd_1_1WebSocketFace_af9be80862667f16eb6fd87b558c77807}
+
+\begin{DoxyCompactList}\small\item\em send an Interest \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1WebSocketFace_ae7cefbcb9c111d0b7db6e2e0430a4cd9}{send\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1WebSocketFace_ae7cefbcb9c111d0b7db6e2e0430a4cd9}{}\label{classnfd_1_1WebSocketFace_ae7cefbcb9c111d0b7db6e2e0430a4cd9}
+
+\begin{DoxyCompactList}\small\item\em send a Data \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1WebSocketFace_a0ac025e3ee1bb270f442697dd4b97bd1}{close} () D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Close the face. \end{DoxyCompactList}\item 
+void {\bfseries set\+Ping\+Event\+Id} (scheduler\+::\+Event\+Id \&id)\hypertarget{classnfd_1_1WebSocketFace_ae1fdf2e3b41e83e82427edd127321e9a}{}\label{classnfd_1_1WebSocketFace_ae1fdf2e3b41e83e82427edd127321e9a}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries handle\+Receive} (const std\+::string \&msg)\hypertarget{classnfd_1_1WebSocketFace_a9da874dd6154c158a7845a4db38493b5}{}\label{classnfd_1_1WebSocketFace_a9da874dd6154c158a7845a4db38493b5}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Web\+Socket\+Channel}\hypertarget{classnfd_1_1WebSocketFace_a04dd4b0cee92d715d31e318279a3a41c}{}\label{classnfd_1_1WebSocketFace_a04dd4b0cee92d715d31e318279a3a41c}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of \hyperlink{classnfd_1_1Face}{Face} abstraction that uses Web\+Socket as underlying transport mechanism. 
+
+Definition at line 50 of file websocket-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Web\+Socket\+Face@{nfd\+::\+Web\+Socket\+Face}!close@{close}}
+\index{close@{close}!nfd\+::\+Web\+Socket\+Face@{nfd\+::\+Web\+Socket\+Face}}
+\subsubsection[{\texorpdfstring{close() D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{close() DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Web\+Socket\+Face\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1WebSocketFace_a0ac025e3ee1bb270f442697dd4b97bd1}{}\label{classnfd_1_1WebSocketFace_a0ac025e3ee1bb270f442697dd4b97bd1}
+
+
+Close the face. 
+
+This terminates all communication on the face and cause \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail()} method event to be invoked 
+
+Implements \hyperlink{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{nfd\+::\+Face}.
+
+
+
+Definition at line 85 of file websocket-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/websocket-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/websocket-\/face.\+cpp\end{DoxyCompactItemize}

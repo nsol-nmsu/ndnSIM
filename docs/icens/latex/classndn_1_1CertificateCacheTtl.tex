@@ -1,0 +1,68 @@
+\hypertarget{classndn_1_1CertificateCacheTtl}{}\section{ndn\+:\+:Certificate\+Cache\+Ttl Class Reference}
+\label{classndn_1_1CertificateCacheTtl}\index{ndn\+::\+Certificate\+Cache\+Ttl@{ndn\+::\+Certificate\+Cache\+Ttl}}
+
+
+Cache of validated certificates with freshness-\/based eviction policy.  
+
+
+
+
+{\ttfamily \#include $<$certificate-\/cache-\/ttl.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Certificate\+Cache\+Ttl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1CertificateCacheTtl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Certificate\+Cache\+Ttl} (boost\+::asio\+::io\+\_\+service \&io, const time\+::seconds \&default\+Ttl=time\+::seconds(3600))\hypertarget{classndn_1_1CertificateCacheTtl_a25c6324e536c70d62da94799d398346e}{}\label{classndn_1_1CertificateCacheTtl_a25c6324e536c70d62da94799d398346e}
+
+\item 
+virtual void {\bfseries insert\+Certificate} (shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ certificate)\hypertarget{classndn_1_1CertificateCacheTtl_acc2c946611ece657d702dcd01135e5f1}{}\label{classndn_1_1CertificateCacheTtl_acc2c946611ece657d702dcd01135e5f1}
+
+\item 
+virtual shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ {\bfseries get\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name\+Without\+Version)\hypertarget{classndn_1_1CertificateCacheTtl_aa5c6f80d9282f8578b4802fb819aa080}{}\label{classndn_1_1CertificateCacheTtl_aa5c6f80d9282f8578b4802fb819aa080}
+
+\item 
+virtual void {\bfseries reset} ()\hypertarget{classndn_1_1CertificateCacheTtl_aa4c12060eb3a83f6f41c11d69db83258}{}\label{classndn_1_1CertificateCacheTtl_aa4c12060eb3a83f6f41c11d69db83258}
+
+\item 
+virtual size\+\_\+t {\bfseries get\+Size} ()\hypertarget{classndn_1_1CertificateCacheTtl_a436571484990512c679472a31915c64b}{}\label{classndn_1_1CertificateCacheTtl_a436571484990512c679472a31915c64b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \hyperlink{classndn_1_1Name}{Name}, std\+::pair$<$ shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$, \hyperlink{classEventId}{Event\+Id} $>$ $>$ {\bfseries Cache}\hypertarget{classndn_1_1CertificateCacheTtl_a4737918345b93dc5fe600d53eff0c444}{}\label{classndn_1_1CertificateCacheTtl_a4737918345b93dc5fe600d53eff0c444}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+time\+::seconds {\bfseries m\+\_\+default\+Ttl}\hypertarget{classndn_1_1CertificateCacheTtl_a0ae7b1896108dc27abe1c365f0b42bee}{}\label{classndn_1_1CertificateCacheTtl_a0ae7b1896108dc27abe1c365f0b42bee}
+
+\item 
+Cache {\bfseries m\+\_\+cache}\hypertarget{classndn_1_1CertificateCacheTtl_a1c672b339275b6536de46349d62794dc}{}\label{classndn_1_1CertificateCacheTtl_a1c672b339275b6536de46349d62794dc}
+
+\item 
+\hyperlink{classndn_1_1util_1_1scheduler_1_1Scheduler}{Scheduler} {\bfseries m\+\_\+scheduler}\hypertarget{classndn_1_1CertificateCacheTtl_af9b575f0fd28a31085fcbc9a5df0c86f}{}\label{classndn_1_1CertificateCacheTtl_af9b575f0fd28a31085fcbc9a5df0c86f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cache of validated certificates with freshness-\/based eviction policy. 
+
+Validated certificates will stay in cache for the duration of their freshness period. The lifetime of the certificate in cache can be extended by \char`\"{}re-\/inserting\char`\"{} it in the cache. 
+
+Definition at line 39 of file certificate-\/cache-\/ttl.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate-\/cache-\/ttl.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate-\/cache-\/ttl.\+cpp\end{DoxyCompactItemize}

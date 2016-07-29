@@ -1,0 +1,124 @@
+\hypertarget{classndn_1_1InterestFilter}{}\section{ndn\+:\+:Interest\+Filter Class Reference}
+\label{classndn_1_1InterestFilter}\index{ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1InterestFilter_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1InterestFilter_a990d4f218e4d31b0e71b9cbbfc4e3607}{Interest\+Filter} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em Create an \hyperlink{classndn_1_1Interest}{Interest} filter to match Interests by prefix. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1InterestFilter_acff9e3d47239fa47e7f3c08d3ebef10d}{Interest\+Filter} (const char $\ast$prefix\+Uri)
+\begin{DoxyCompactList}\small\item\em Create an \hyperlink{classndn_1_1Interest}{Interest} filter to match Interests by prefix U\+RI. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1InterestFilter_af7c2910a549c8114f4f8209ea461207d}{Interest\+Filter} (const std\+::string \&prefix\+Uri)
+\begin{DoxyCompactList}\small\item\em Create an \hyperlink{classndn_1_1Interest}{Interest} filter to match Interests by prefix U\+RI. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1InterestFilter_a224ef757b4504f532c8a9cdddfc9dd17}{Interest\+Filter} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const std\+::string \&regex\+Filter)
+\begin{DoxyCompactList}\small\item\em Create an \hyperlink{classndn_1_1Interest}{Interest} filter to match \hyperlink{classndn_1_1Interest}{Interest} by prefix and regular expression. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1InterestFilter_ac344d3ba1d6e23ba538674e3caf7f7f6}{operator const Name \&} () const\hypertarget{classndn_1_1InterestFilter_ac344d3ba1d6e23ba538674e3caf7f7f6}{}\label{classndn_1_1InterestFilter_ac344d3ba1d6e23ba538674e3caf7f7f6}
+
+\begin{DoxyCompactList}\small\item\em Implicit conversion to \hyperlink{classndn_1_1Name}{Name} (to provide backwards compatibility for on\+Interest callback) \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1InterestFilter_aa601b905ce225b012bff1e7dc2c1f321}{does\+Match} (const \hyperlink{classndn_1_1Name}{Name} \&name) const\hypertarget{classndn_1_1InterestFilter_aa601b905ce225b012bff1e7dc2c1f321}{}\label{classndn_1_1InterestFilter_aa601b905ce225b012bff1e7dc2c1f321}
+
+\begin{DoxyCompactList}\small\item\em Check if specified name matches the filter. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Prefix} () const\hypertarget{classndn_1_1InterestFilter_a1b847bbc14293a33dc8d6def6dcc12f0}{}\label{classndn_1_1InterestFilter_a1b847bbc14293a33dc8d6def6dcc12f0}
+
+\item 
+bool {\bfseries has\+Regex\+Filter} () const\hypertarget{classndn_1_1InterestFilter_a2bdc6a7cccc1b3115a089a3cdae1275c}{}\label{classndn_1_1InterestFilter_a2bdc6a7cccc1b3115a089a3cdae1275c}
+
+\item 
+const \hyperlink{classndn_1_1RegexPatternListMatcher}{Regex\+Pattern\+List\+Matcher} \& {\bfseries get\+Regex\+Filter} () const\hypertarget{classndn_1_1InterestFilter_ae087a1f5182d1e60ee7d42957939c307}{}\label{classndn_1_1InterestFilter_ae087a1f5182d1e60ee7d42957939c307}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file interest-\/filter.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}!Interest\+Filter@{Interest\+Filter}}
+\index{Interest\+Filter@{Interest\+Filter}!ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}}
+\subsubsection[{\texorpdfstring{Interest\+Filter(const Name \&prefix)}{InterestFilter(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Interest\+Filter\+::\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1InterestFilter_a990d4f218e4d31b0e71b9cbbfc4e3607}{}\label{classndn_1_1InterestFilter_a990d4f218e4d31b0e71b9cbbfc4e3607}
+
+
+Create an \hyperlink{classndn_1_1Interest}{Interest} filter to match Interests by prefix. 
+
+This filter will match all Interests, whose name start with the given prefix
+
+Any \hyperlink{classndn_1_1Name}{Name} can be implicitly converted to the \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter}. 
+
+Definition at line 137 of file interest-\/filter.\+hpp.
+
+\index{ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}!Interest\+Filter@{Interest\+Filter}}
+\index{Interest\+Filter@{Interest\+Filter}!ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}}
+\subsubsection[{\texorpdfstring{Interest\+Filter(const char $\ast$prefix\+Uri)}{InterestFilter(const char *prefixUri)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Interest\+Filter\+::\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{prefix\+Uri}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1InterestFilter_acff9e3d47239fa47e7f3c08d3ebef10d}{}\label{classndn_1_1InterestFilter_acff9e3d47239fa47e7f3c08d3ebef10d}
+
+
+Create an \hyperlink{classndn_1_1Interest}{Interest} filter to match Interests by prefix U\+RI. 
+
+This filter will match all Interests, whose name start with the given prefix
+
+Any const char$\ast$ can be implicitly converted to the \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter}. 
+
+Definition at line 143 of file interest-\/filter.\+hpp.
+
+\index{ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}!Interest\+Filter@{Interest\+Filter}}
+\index{Interest\+Filter@{Interest\+Filter}!ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}}
+\subsubsection[{\texorpdfstring{Interest\+Filter(const std\+::string \&prefix\+Uri)}{InterestFilter(const std::string \&prefixUri)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Interest\+Filter\+::\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{prefix\+Uri}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1InterestFilter_af7c2910a549c8114f4f8209ea461207d}{}\label{classndn_1_1InterestFilter_af7c2910a549c8114f4f8209ea461207d}
+
+
+Create an \hyperlink{classndn_1_1Interest}{Interest} filter to match Interests by prefix U\+RI. 
+
+This filter will match all Interests, whose name start with the given prefix
+
+Any std\+::string can be implicitly converted to the \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter}. 
+
+Definition at line 149 of file interest-\/filter.\+hpp.
+
+\index{ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}!Interest\+Filter@{Interest\+Filter}}
+\index{Interest\+Filter@{Interest\+Filter}!ndn\+::\+Interest\+Filter@{ndn\+::\+Interest\+Filter}}
+\subsubsection[{\texorpdfstring{Interest\+Filter(const Name \&prefix, const std\+::string \&regex\+Filter)}{InterestFilter(const Name \&prefix, const std::string \&regexFilter)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Interest\+Filter\+::\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const std\+::string \&}]{regex\+Filter}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1InterestFilter_a224ef757b4504f532c8a9cdddfc9dd17}{}\label{classndn_1_1InterestFilter_a224ef757b4504f532c8a9cdddfc9dd17}
+
+
+Create an \hyperlink{classndn_1_1Interest}{Interest} filter to match \hyperlink{classndn_1_1Interest}{Interest} by prefix and regular expression. 
+
+This filter will match all Interests, whose name start with the given prefix and other components of the \hyperlink{classndn_1_1Interest}{Interest} name match the given regular expression. For example, the following \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter}\+:
+
+\hyperlink{classndn_1_1InterestFilter}{Interest\+Filter}(\char`\"{}/hello\char`\"{}, \char`\"{}$<$world$>$$<$$>$+\char`\"{})
+
+will match all Interests, whose name has prefix {\ttfamily /hello}, which is followed by component {\ttfamily world} and has at least one more component after it. Examples\+:
+
+/hello/world/! /hello/world/x/y/z
+
+Note that regular expression will need to match all components (e.\+g., there is an implicit heading {\ttfamily $^\wedge$} and trailing {\ttfamily \$} symbols in the regular expression). 
+
+Definition at line 28 of file interest-\/filter.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/interest-\/filter.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/interest-\/filter.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,46 @@
+\hypertarget{classndn_1_1time_1_1CustomClock}{}\section{ndn\+:\+:time\+:\+:Custom\+Clock$<$ Base\+Clock $>$ Class Template Reference}
+\label{classndn_1_1time_1_1CustomClock}\index{ndn\+::time\+::\+Custom\+Clock$<$ Base\+Clock $>$@{ndn\+::time\+::\+Custom\+Clock$<$ Base\+Clock $>$}}
+
+
+Class implementing custom system or steady clock behavior.  
+
+
+
+
+{\ttfamily \#include $<$time-\/custom-\/clock.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:time\+:\+:Custom\+Clock$<$ Base\+Clock $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1time_1_1CustomClock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Base\+Clock\+::time\+\_\+point {\bfseries get\+Now} () const =0\hypertarget{classndn_1_1time_1_1CustomClock_ad19dfe892b5d6705fb13625bc91a83e0}{}\label{classndn_1_1time_1_1CustomClock_ad19dfe892b5d6705fb13625bc91a83e0}
+
+\item 
+virtual std\+::string {\bfseries get\+Since} () const =0\hypertarget{classndn_1_1time_1_1CustomClock_ab98d3289435a235568a06a6133c457ff}{}\label{classndn_1_1time_1_1CustomClock_ab98d3289435a235568a06a6133c457ff}
+
+\item 
+virtual boost\+::posix\+\_\+time\+::time\+\_\+duration {\bfseries to\+Posix\+Duration} (const typename Base\+Clock\+::duration \&duration) const =0\hypertarget{classndn_1_1time_1_1CustomClock_aa9bc19a1db5ee353d21c3b94b552eb6a}{}\label{classndn_1_1time_1_1CustomClock_aa9bc19a1db5ee353d21c3b94b552eb6a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Base\+Clock$>$\\*
+class ndn\+::time\+::\+Custom\+Clock$<$ Base\+Clock $>$}
+
+Class implementing custom system or steady clock behavior. 
+
+Instance of specialization of this class may be passed to set\+Custom\+Clocks() free function in order to change global behavior of system or steady clock. 
+
+Definition at line 37 of file time-\/custom-\/clock.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/time-\/custom-\/clock.\+hpp\end{DoxyCompactItemize}

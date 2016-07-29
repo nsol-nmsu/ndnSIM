@@ -1,0 +1,116 @@
+Newer versions of Ubuntu (starting with 15.\+04) and some other Linux distributions, including Debian use systemd to start system daemons, monitor their health, and restart them when they die.
+
+\subsection*{Initial setup }
+
+
+\begin{DoxyItemize}
+\item Edit {\ttfamily nfd.\+service}, correcting the paths to the {\ttfamily nfd} executable, configuration, and {\ttfamily H\+O\+ME} directories.
+\item Copy the systemd config file for N\+FD to the proper directory \begin{DoxyVerb}  sudo cp nfd.service /etc/systemd/system
+\end{DoxyVerb}
+
+\item Reload the systemd manager configuration \begin{DoxyVerb}  sudo systemctl daemon-reload
+\end{DoxyVerb}
+
+\end{DoxyItemize}
+
+\subsubsection*{Assumptions in the default scripts}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily nfd} is installed into {\ttfamily /usr/local/bin}
+\item Configuraton file is {\ttfamily /usr/local/etc/ndn/nfd.conf}
+\item {\ttfamily nfd} will be run as root
+\item Log files will be written to {\ttfamily /usr/local/var/log/ndn} folder, which is owned by user {\ttfamily ndn}
+\end{DoxyItemize}
+
+\subsubsection*{Creating users}
+
+If the {\ttfamily ndn} user and group do not exist, they need to be manually created. \begin{DoxyVerb}# Create group `ndn`
+sudo addgroup --system ndn
+
+# Create user `ndn`
+sudo adduser --system \
+             --disabled-login \
+             --ingroup ndn \
+             --home /nonexistent \
+             --gecos "NDN User" \
+             --shell /bin/false \
+             ndn
+\end{DoxyVerb}
+
+
+\subsubsection*{Creating folders}
+
+Folder {\ttfamily /usr/local/var/log/ndn} should be created and assigned proper user and group\+: \begin{DoxyVerb}sudo mkdir -p /usr/local/var/log/ndn
+sudo chown -R ndn:ndn /usr/local/var/log/ndn
+\end{DoxyVerb}
+
+
+{\ttfamily H\+O\+ME} directory for {\ttfamily nfd} should be created prior to starting. This is necessary to manage unique security credentials for the daemon. \begin{DoxyVerb}# Create HOME and generate self-signed NDN certificate for nfd
+sudo sh -c ' \
+  mkdir -p /usr/local/var/lib/ndn/nfd/.ndn; \
+  export HOME=/usr/local/var/lib/ndn/nfd; \
+  ndnsec-keygen /localhost/daemons/nfd | ndnsec-install-cert -; \
+'
+\end{DoxyVerb}
+
+
+\subsubsection*{Configuring N\+FD\textquotesingle{}s security}
+
+N\+FD sample configuration allows anybody to create faces, add nexthops to F\+IB, and set strategy choice for namespaces. While such settings could be a good start, it is generally not a good idea to run N\+FD in this mode.
+
+While thorough discussion about the security configuration of N\+FD is outside the scope of this document, at least the following change should be done in {\ttfamily nfd.\+conf} in the authorize section\+: \begin{DoxyVerb}authorizations
+{
+  authorize
+  {
+    certfile certs/localhost_daemons_nfd.ndncert
+    privileges
+    {
+        faces
+        fib
+        strategy-choice
+    }
+  }
+
+  authorize
+  {
+    certfile any
+    privileges
+    {
+        faces
+        strategy-choice
+    }
+  }
+}
+\end{DoxyVerb}
+
+
+While this configuration still allows the management of faces and updating strategy choice by anyone, only N\+FD\textquotesingle{}s R\+IB Manager (i.\+e., N\+FD itself) is allowed to manage F\+IB.
+
+As the final step to make this configuration work, nfd\textquotesingle{}s self-\/signed certificate needs to be exported into the {\ttfamily localhost\+\_\+daemons\+\_\+nfd.\+ndncert} file\+: \begin{DoxyVerb}sudo sh -c '\
+  mkdir -p /usr/local/etc/ndn/certs || true; \
+  export HOME=/usr/local/var/lib/ndn/nfd; \
+  ndnsec-dump-certificate -i /localhost/daemons/nfd > \
+    /usr/local/etc/ndn/certs/localhost_daemons_nfd.ndncert; \
+'
+\end{DoxyVerb}
+
+
+\subsection*{Enable auto-\/start }
+
+After copying the provided upstart script, auto-\/start of the {\ttfamily nfd} daemon can be enabled with\+: \begin{DoxyVerb}sudo systemctl enable nfd
+\end{DoxyVerb}
+
+
+To manually start it, use the following command\+: \begin{DoxyVerb}sudo systemctl start nfd
+\end{DoxyVerb}
+
+
+\subsection*{Disable auto-\/start }
+
+To stop the {\ttfamily nfd} daemon, use the following command\+: \begin{DoxyVerb}sudo systemctl stop nfd
+\end{DoxyVerb}
+
+
+To permanently stop the {\ttfamily nfd} daemon and disable it from being automatically started on reboot, disable the service\+: \begin{DoxyVerb}sudo systemctl disable nfd \end{DoxyVerb}
+ 

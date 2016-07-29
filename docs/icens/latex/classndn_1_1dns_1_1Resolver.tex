@@ -1,0 +1,44 @@
+\hypertarget{classndn_1_1dns_1_1Resolver}{}\section{ndn\+:\+:dns\+:\+:Resolver Class Reference}
+\label{classndn_1_1dns_1_1Resolver}\index{ndn\+::dns\+::\+Resolver@{ndn\+::dns\+::\+Resolver}}
+Inheritance diagram for ndn\+:\+:dns\+:\+:Resolver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1dns_1_1Resolver}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Resolver} (const Success\+Callback \&on\+Success, const Error\+Callback \&on\+Error, const ndn\+::dns\+::\+Address\+Selector \&address\+Selector, boost\+::asio\+::io\+\_\+service \&io\+Service)\hypertarget{classndn_1_1dns_1_1Resolver_a368c155b9cf9a71ea58edd03b378535a}{}\label{classndn_1_1dns_1_1Resolver_a368c155b9cf9a71ea58edd03b378535a}
+
+\item 
+void {\bfseries async\+Resolve} (const std\+::string \&host, const time\+::nanoseconds \&timeout, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1dns_1_1Resolver}{Resolver} $>$ \&self)\hypertarget{classndn_1_1dns_1_1Resolver_a8560af5f752ffb8e9ce938be8d47a835}{}\label{classndn_1_1dns_1_1Resolver_a8560af5f752ffb8e9ce938be8d47a835}
+
+\item 
+Boost\+Resolver\+::iterator {\bfseries sync\+Resolve} (Boost\+Resolver\+::query query)\hypertarget{classndn_1_1dns_1_1Resolver_aaebea82997a5879c0aba6cbcbc8b3219}{}\label{classndn_1_1dns_1_1Resolver_aaebea82997a5879c0aba6cbcbc8b3219}
+
+\item 
+void {\bfseries on\+Resolve\+Success} (const boost\+::system\+::error\+\_\+code \&error, Boost\+Resolver\+::iterator remote\+Endpoint, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1dns_1_1Resolver}{Resolver} $>$ \&self)\hypertarget{classndn_1_1dns_1_1Resolver_a54179988bac5f37bab5b34dc6f038f29}{}\label{classndn_1_1dns_1_1Resolver_a54179988bac5f37bab5b34dc6f038f29}
+
+\item 
+void {\bfseries on\+Resolve\+Error} (const std\+::string \&error\+Info, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1dns_1_1Resolver}{Resolver} $>$ \&self)\hypertarget{classndn_1_1dns_1_1Resolver_a12172c3cc091c5e793443a1f917c7103}{}\label{classndn_1_1dns_1_1Resolver_a12172c3cc091c5e793443a1f917c7103}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string {\bfseries N\+U\+L\+L\+\_\+\+P\+O\+RT} = \char`\"{}\char`\"{}\hypertarget{classndn_1_1dns_1_1Resolver_a11cbc8a1c19edd7c4cfca4489025912c}{}\label{classndn_1_1dns_1_1Resolver_a11cbc8a1c19edd7c4cfca4489025912c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file dns.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/dns.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classns3_1_1ndn_1_1Producer}{}\section{ns3\+:\+:ndn\+:\+:Producer Class Reference}
+\label{classns3_1_1ndn_1_1Producer}\index{ns3\+::ndn\+::\+Producer@{ns3\+::ndn\+::\+Producer}}
+
+
+A simple Interest-\/sink applia simple Interest-\/sink application.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/producer.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Producer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1Producer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Producer_aec531ffef54f9970c6d8cba664ef5107}{On\+Interest} (shared\+\_\+ptr$<$ const Interest $>$ interest)
+\begin{DoxyCompactList}\small\item\em Method that will be called every time new Interest arrives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)\hypertarget{classns3_1_1ndn_1_1Producer_a61f10425ddad0fe750183ece60385cc9}{}\label{classns3_1_1ndn_1_1Producer_a61f10425ddad0fe750183ece60385cc9}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Producer_a2b2bbfe6920ef8f3e67296398287d5f9}{Start\+Application} ()\hypertarget{classns3_1_1ndn_1_1Producer_a2b2bbfe6920ef8f3e67296398287d5f9}{}\label{classns3_1_1ndn_1_1Producer_a2b2bbfe6920ef8f3e67296398287d5f9}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Start. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Producer_afff9238cb079fde2dea5c39231fe0e15}{Stop\+Application} ()\hypertarget{classns3_1_1ndn_1_1Producer_afff9238cb079fde2dea5c39231fe0e15}{}\label{classns3_1_1ndn_1_1Producer_afff9238cb079fde2dea5c39231fe0e15}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Stop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A simple Interest-\/sink applia simple Interest-\/sink application. 
+
+A simple Interest-\/sink applia simple Interest-\/sink application, which replying every incoming Interest with Data packet with a specified size and name same as in Interest.\+cation, which replying every incoming Interest with Data packet with a specified size and name same as in Interest. 
+
+Definition at line 43 of file ndn-\/producer.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Producer@{ns3\+::ndn\+::\+Producer}!On\+Interest@{On\+Interest}}
+\index{On\+Interest@{On\+Interest}!ns3\+::ndn\+::\+Producer@{ns3\+::ndn\+::\+Producer}}
+\subsubsection[{\texorpdfstring{On\+Interest(shared\+\_\+ptr$<$ const Interest $>$ interest)}{OnInterest(shared\_ptr< const Interest > interest)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Producer\+::\+On\+Interest (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Interest $>$}]{interest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1Producer_aec531ffef54f9970c6d8cba664ef5107}{}\label{classns3_1_1ndn_1_1Producer_aec531ffef54f9970c6d8cba664ef5107}
+
+
+Method that will be called every time new Interest arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & Interest header \\
+\hline
+{\em packet} & \char`\"{}\+Payload\char`\"{} of the interests packet. The actual payload should be zero, but packet itself may be useful to get packet tags \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1App_a7aab3dd5e62169430795a2d6e1060f95}{ns3\+::ndn\+::\+App}.
+
+
+
+Definition at line 96 of file ndn-\/producer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/producer.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/producer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,247 @@
+\hypertarget{classndn_1_1Certificate}{}\section{ndn\+:\+:Certificate Class Reference}
+\label{classndn_1_1Certificate}\index{ndn\+::\+Certificate@{ndn\+::\+Certificate}}
+Inheritance diagram for ndn\+:\+:Certificate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classndn_1_1Certificate}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Certificate_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \hyperlink{classndn_1_1CertificateSubjectDescription}{Certificate\+Subject\+Description} $>$ {\bfseries Subject\+Description\+List}\hypertarget{classndn_1_1Certificate_abf38beef3035512447928054d93c4ec9}{}\label{classndn_1_1Certificate_abf38beef3035512447928054d93c4ec9}
+
+\item 
+typedef std\+::vector$<$ \hyperlink{classndn_1_1CertificateExtension}{Certificate\+Extension} $>$ {\bfseries Extension\+List}\hypertarget{classndn_1_1Certificate_af455507be2e9d337aba877169635ae94}{}\label{classndn_1_1Certificate_af455507be2e9d337aba877169635ae94}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Certificate_a3c672fa2865740057602b19c5f635565}{Certificate} ()\hypertarget{classndn_1_1Certificate_a3c672fa2865740057602b19c5f635565}{}\label{classndn_1_1Certificate_a3c672fa2865740057602b19c5f635565}
+
+\begin{DoxyCompactList}\small\item\em The default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Certificate_ad31234d1f78b64676b9917f97aac06fa}{Certificate} (const \hyperlink{classndn_1_1Data}{Data} \&data)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Certificate}{Certificate} from the content in the data packet. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Certificate_a9e275c377078fdabb3a778e6ab62e125}{Certificate} (const \hyperlink{classndn_1_1Block}{Block} \&block)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Certificate}{Certificate} from the a block. \end{DoxyCompactList}\item 
+void {\bfseries wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1Certificate_a1fd39de9d66970c252d29c5ffbd5f80a}{}\label{classndn_1_1Certificate_a1fd39de9d66970c252d29c5ffbd5f80a}
+
+\item 
+void \hyperlink{classndn_1_1Certificate_a2dee08a8e60c27c1c1304c0162d6c62b}{encode} ()\hypertarget{classndn_1_1Certificate_a2dee08a8e60c27c1c1304c0162d6c62b}{}\label{classndn_1_1Certificate_a2dee08a8e60c27c1c1304c0162d6c62b}
+
+\begin{DoxyCompactList}\small\item\em encode certificate info into content \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Certificate_af9e70c1de146fd73f1520bd50cd2c2b3}{add\+Subject\+Description} (const \hyperlink{classndn_1_1CertificateSubjectDescription}{Certificate\+Subject\+Description} \&description)
+\begin{DoxyCompactList}\small\item\em Add a subject description. \end{DoxyCompactList}\item 
+const Subject\+Description\+List \& {\bfseries get\+Subject\+Description\+List} () const\hypertarget{classndn_1_1Certificate_ab5f8b6aec037b54c82d87cae307c2335}{}\label{classndn_1_1Certificate_ab5f8b6aec037b54c82d87cae307c2335}
+
+\item 
+Subject\+Description\+List \& {\bfseries get\+Subject\+Description\+List} ()\hypertarget{classndn_1_1Certificate_ae0d492603af28090cf6fe2904840ca5c}{}\label{classndn_1_1Certificate_ae0d492603af28090cf6fe2904840ca5c}
+
+\item 
+void \hyperlink{classndn_1_1Certificate_acad3bff7836bdbaf6be4f6e472b4f796}{add\+Extension} (const \hyperlink{classndn_1_1CertificateExtension}{Certificate\+Extension} \&extension)
+\begin{DoxyCompactList}\small\item\em Add a certificate extension. \end{DoxyCompactList}\item 
+const Extension\+List \& {\bfseries get\+Extension\+List} () const\hypertarget{classndn_1_1Certificate_ac9ff65f2655cedd275785d1fe3748754}{}\label{classndn_1_1Certificate_ac9ff65f2655cedd275785d1fe3748754}
+
+\item 
+Extension\+List \& {\bfseries get\+Extension\+List} ()\hypertarget{classndn_1_1Certificate_a8e123c4f106c7fa19f983abf28e01c23}{}\label{classndn_1_1Certificate_a8e123c4f106c7fa19f983abf28e01c23}
+
+\item 
+void {\bfseries set\+Not\+Before} (const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before)\hypertarget{classndn_1_1Certificate_af31beee0c8f6b06b1d6d70ca8065df68}{}\label{classndn_1_1Certificate_af31beee0c8f6b06b1d6d70ca8065df68}
+
+\item 
+time\+::system\+\_\+clock\+::\+Time\+Point \& {\bfseries get\+Not\+Before} ()\hypertarget{classndn_1_1Certificate_abd294a902a2f1c77f968929a480e62e2}{}\label{classndn_1_1Certificate_abd294a902a2f1c77f968929a480e62e2}
+
+\item 
+const time\+::system\+\_\+clock\+::\+Time\+Point \& {\bfseries get\+Not\+Before} () const\hypertarget{classndn_1_1Certificate_a9cda75ff9b9bac5e236018938bee57a2}{}\label{classndn_1_1Certificate_a9cda75ff9b9bac5e236018938bee57a2}
+
+\item 
+void {\bfseries set\+Not\+After} (const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After)\hypertarget{classndn_1_1Certificate_a8eebd2514d5b5c8c1cf91cf25b64b6a5}{}\label{classndn_1_1Certificate_a8eebd2514d5b5c8c1cf91cf25b64b6a5}
+
+\item 
+time\+::system\+\_\+clock\+::\+Time\+Point \& {\bfseries get\+Not\+After} ()\hypertarget{classndn_1_1Certificate_a08d15e501978146e66bbbe0f357d4c27}{}\label{classndn_1_1Certificate_a08d15e501978146e66bbbe0f357d4c27}
+
+\item 
+const time\+::system\+\_\+clock\+::\+Time\+Point \& {\bfseries get\+Not\+After} () const\hypertarget{classndn_1_1Certificate_acea0b7b53d1c0775011b823c53c05602}{}\label{classndn_1_1Certificate_acea0b7b53d1c0775011b823c53c05602}
+
+\item 
+void {\bfseries set\+Public\+Key\+Info} (const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&key)\hypertarget{classndn_1_1Certificate_ad092f699c8135ad64b8d63322c913820}{}\label{classndn_1_1Certificate_ad092f699c8135ad64b8d63322c913820}
+
+\item 
+\hyperlink{classndn_1_1PublicKey}{Public\+Key} \& {\bfseries get\+Public\+Key\+Info} ()\hypertarget{classndn_1_1Certificate_a5ad7ccfb4ab20728d5edc9c8cf06201e}{}\label{classndn_1_1Certificate_a5ad7ccfb4ab20728d5edc9c8cf06201e}
+
+\item 
+const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \& {\bfseries get\+Public\+Key\+Info} () const\hypertarget{classndn_1_1Certificate_a0a961fc14b16b619c7428415c47b0943}{}\label{classndn_1_1Certificate_a0a961fc14b16b619c7428415c47b0943}
+
+\item 
+bool \hyperlink{classndn_1_1Certificate_a8070ef3a754cf0f02ff75672ef2bb369}{is\+Too\+Early} ()
+\begin{DoxyCompactList}\small\item\em Check if the certificate is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Certificate_a18b74dd2a9eb83eed5e49ddebbdd2f0a}{is\+Too\+Late} ()
+\begin{DoxyCompactList}\small\item\em Check if the certificate is valid. \end{DoxyCompactList}\item 
+void {\bfseries print\+Certificate} (std\+::ostream \&os, const std\+::string \&indent=\char`\"{}\char`\"{}) const\hypertarget{classndn_1_1Certificate_a9d7fcc0befc4500007bf0c6fa8eefdc7}{}\label{classndn_1_1Certificate_a9d7fcc0befc4500007bf0c6fa8eefdc7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries decode} ()\hypertarget{classndn_1_1Certificate_a19fbd6f881b39c1956942f97ced2f443}{}\label{classndn_1_1Certificate_a19fbd6f881b39c1956942f97ced2f443}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Subject\+Description\+List {\bfseries m\+\_\+subject\+Description\+List}\hypertarget{classndn_1_1Certificate_a01c7c0f9cb43e3c16fbfdbfd82b0eb9a}{}\label{classndn_1_1Certificate_a01c7c0f9cb43e3c16fbfdbfd82b0eb9a}
+
+\item 
+time\+::system\+\_\+clock\+::\+Time\+Point {\bfseries m\+\_\+not\+Before}\hypertarget{classndn_1_1Certificate_a2107d1221621bb4ca2d98a39135142f0}{}\label{classndn_1_1Certificate_a2107d1221621bb4ca2d98a39135142f0}
+
+\item 
+time\+::system\+\_\+clock\+::\+Time\+Point {\bfseries m\+\_\+not\+After}\hypertarget{classndn_1_1Certificate_aa696ef3835578a2adfb80d903a0d1087}{}\label{classndn_1_1Certificate_aa696ef3835578a2adfb80d903a0d1087}
+
+\item 
+\hyperlink{classndn_1_1PublicKey}{Public\+Key} {\bfseries m\+\_\+key}\hypertarget{classndn_1_1Certificate_a423fd2ecf3e477bd16c9a1f1b6727594}{}\label{classndn_1_1Certificate_a423fd2ecf3e477bd16c9a1f1b6727594}
+
+\item 
+Extension\+List {\bfseries m\+\_\+extension\+List}\hypertarget{classndn_1_1Certificate_ac44b577d931b5c3c5ee3df48e8f03fac}{}\label{classndn_1_1Certificate_ac44b577d931b5c3c5ee3df48e8f03fac}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 37 of file certificate.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Certificate@{ndn\+::\+Certificate}!Certificate@{Certificate}}
+\index{Certificate@{Certificate}!ndn\+::\+Certificate@{ndn\+::\+Certificate}}
+\subsubsection[{\texorpdfstring{Certificate(const Data \&data)}{Certificate(const Data \&data)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Certificate\+::\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Certificate_ad31234d1f78b64676b9917f97aac06fa}{}\label{classndn_1_1Certificate_ad31234d1f78b64676b9917f97aac06fa}
+
+
+Create a \hyperlink{classndn_1_1Certificate}{Certificate} from the content in the data packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data packet with the content to decode. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file certificate.\+cpp.
+
+\index{ndn\+::\+Certificate@{ndn\+::\+Certificate}!Certificate@{Certificate}}
+\index{Certificate@{Certificate}!ndn\+::\+Certificate@{ndn\+::\+Certificate}}
+\subsubsection[{\texorpdfstring{Certificate(const Block \&block)}{Certificate(const Block \&block)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Certificate\+::\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Certificate_a9e275c377078fdabb3a778e6ab62e125}{}\label{classndn_1_1Certificate_a9e275c377078fdabb3a778e6ab62e125}
+
+
+Create a \hyperlink{classndn_1_1Certificate}{Certificate} from the a block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & The raw block of the certificate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file certificate.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Certificate@{ndn\+::\+Certificate}!add\+Extension@{add\+Extension}}
+\index{add\+Extension@{add\+Extension}!ndn\+::\+Certificate@{ndn\+::\+Certificate}}
+\subsubsection[{\texorpdfstring{add\+Extension(const Certificate\+Extension \&extension)}{addExtension(const CertificateExtension \&extension)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Certificate\+::add\+Extension (
+\begin{DoxyParamCaption}
+\item[{const {\bf Certificate\+Extension} \&}]{extension}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Certificate_acad3bff7836bdbaf6be4f6e472b4f796}{}\label{classndn_1_1Certificate_acad3bff7836bdbaf6be4f6e472b4f796}
+
+
+Add a certificate extension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extension} & the extension to be added \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file certificate.\+hpp.
+
+\index{ndn\+::\+Certificate@{ndn\+::\+Certificate}!add\+Subject\+Description@{add\+Subject\+Description}}
+\index{add\+Subject\+Description@{add\+Subject\+Description}!ndn\+::\+Certificate@{ndn\+::\+Certificate}}
+\subsubsection[{\texorpdfstring{add\+Subject\+Description(const Certificate\+Subject\+Description \&description)}{addSubjectDescription(const CertificateSubjectDescription \&description)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Certificate\+::add\+Subject\+Description (
+\begin{DoxyParamCaption}
+\item[{const {\bf Certificate\+Subject\+Description} \&}]{description}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Certificate_af9e70c1de146fd73f1520bd50cd2c2b3}{}\label{classndn_1_1Certificate_af9e70c1de146fd73f1520bd50cd2c2b3}
+
+
+Add a subject description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & The description to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 89 of file certificate.\+hpp.
+
+\index{ndn\+::\+Certificate@{ndn\+::\+Certificate}!is\+Too\+Early@{is\+Too\+Early}}
+\index{is\+Too\+Early@{is\+Too\+Early}!ndn\+::\+Certificate@{ndn\+::\+Certificate}}
+\subsubsection[{\texorpdfstring{is\+Too\+Early()}{isTooEarly()}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Certificate\+::is\+Too\+Early (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Certificate_a8070ef3a754cf0f02ff75672ef2bb369}{}\label{classndn_1_1Certificate_a8070ef3a754cf0f02ff75672ef2bb369}
+
+
+Check if the certificate is valid. 
+
+\begin{DoxyReturn}{Returns}
+True if the current time is earlier than not\+Before. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file certificate.\+cpp.
+
+\index{ndn\+::\+Certificate@{ndn\+::\+Certificate}!is\+Too\+Late@{is\+Too\+Late}}
+\index{is\+Too\+Late@{is\+Too\+Late}!ndn\+::\+Certificate@{ndn\+::\+Certificate}}
+\subsubsection[{\texorpdfstring{is\+Too\+Late()}{isTooLate()}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Certificate\+::is\+Too\+Late (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Certificate_a18b74dd2a9eb83eed5e49ddebbdd2f0a}{}\label{classndn_1_1Certificate_a18b74dd2a9eb83eed5e49ddebbdd2f0a}
+
+
+Check if the certificate is valid. 
+
+\begin{DoxyReturn}{Returns}
+True if the current time is later than not\+After. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file certificate.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate.\+cpp\end{DoxyCompactItemize}

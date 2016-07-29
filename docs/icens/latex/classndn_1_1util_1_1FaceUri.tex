@@ -1,0 +1,204 @@
+\hypertarget{classndn_1_1util_1_1FaceUri}{}\section{ndn\+:\+:util\+:\+:Face\+Uri Class Reference}
+\label{classndn_1_1util_1_1FaceUri}\index{ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}}
+
+
+represents the underlying protocol and address used by a \hyperlink{classndn_1_1Face}{Face}  
+
+
+
+
+{\ttfamily \#include $<$face-\/uri.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1util_1_1FaceUri_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void(const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&)$>$ {\bfseries Canonize\+Success\+Callback}\hypertarget{classndn_1_1util_1_1FaceUri_a6d70b92314383d1ebfbaf2665e3edd64}{}\label{classndn_1_1util_1_1FaceUri_a6d70b92314383d1ebfbaf2665e3edd64}
+
+\item 
+typedef function$<$ void(const std\+::string \&reason)$>$ {\bfseries Canonize\+Failure\+Callback}\hypertarget{classndn_1_1util_1_1FaceUri_ab3ec8b041a2eeb9e0b804cdc176b1fa6}{}\label{classndn_1_1util_1_1FaceUri_ab3ec8b041a2eeb9e0b804cdc176b1fa6}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1FaceUri_aa9cf74ac424271ba9d70bbe965aa3f03}{Face\+Uri} (const std\+::string \&uri)
+\begin{DoxyCompactList}\small\item\em construct by parsing \end{DoxyCompactList}\item 
+{\bfseries Face\+Uri} (const char $\ast$uri)\hypertarget{classndn_1_1util_1_1FaceUri_ab0c7ca607793ef31fadafd36a0073a4b}{}\label{classndn_1_1util_1_1FaceUri_ab0c7ca607793ef31fadafd36a0073a4b}
+
+\item 
+bool \hyperlink{classndn_1_1util_1_1FaceUri_a8de2f092bd413574c654d60f4758dc51}{parse} (const std\+::string \&uri)\hypertarget{classndn_1_1util_1_1FaceUri_a8de2f092bd413574c654d60f4758dc51}{}\label{classndn_1_1util_1_1FaceUri_a8de2f092bd413574c654d60f4758dc51}
+
+\begin{DoxyCompactList}\small\item\em exception-\/safe parsing \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1FaceUri_a2573a430c0093ca64acecc3a098fe109}{Face\+Uri} (const boost\+::asio\+::ip\+::udp\+::endpoint \&endpoint)\hypertarget{classndn_1_1util_1_1FaceUri_a2573a430c0093ca64acecc3a098fe109}{}\label{classndn_1_1util_1_1FaceUri_a2573a430c0093ca64acecc3a098fe109}
+
+\begin{DoxyCompactList}\small\item\em construct udp4 or udp6 canonical \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1FaceUri_af9fcd83ababc9782cf8c1f5380436466}{Face\+Uri} (const boost\+::asio\+::ip\+::tcp\+::endpoint \&endpoint)\hypertarget{classndn_1_1util_1_1FaceUri_af9fcd83ababc9782cf8c1f5380436466}{}\label{classndn_1_1util_1_1FaceUri_af9fcd83ababc9782cf8c1f5380436466}
+
+\begin{DoxyCompactList}\small\item\em construct tcp4 or tcp6 canonical \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1FaceUri_a95a5b41eb8787365a342591568f77ab3}{Face\+Uri} (const boost\+::asio\+::ip\+::tcp\+::endpoint \&endpoint, const std\+::string \&scheme)\hypertarget{classndn_1_1util_1_1FaceUri_a95a5b41eb8787365a342591568f77ab3}{}\label{classndn_1_1util_1_1FaceUri_a95a5b41eb8787365a342591568f77ab3}
+
+\begin{DoxyCompactList}\small\item\em construct tcp canonical \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} with customized scheme \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1FaceUri_aebb05d1a40f8e39168ee0642491c70a7}{Face\+Uri} (const \hyperlink{classndn_1_1util_1_1ethernet_1_1Address}{ethernet\+::\+Address} \&address)\hypertarget{classndn_1_1util_1_1FaceUri_aebb05d1a40f8e39168ee0642491c70a7}{}\label{classndn_1_1util_1_1FaceUri_aebb05d1a40f8e39168ee0642491c70a7}
+
+\begin{DoxyCompactList}\small\item\em construct ether canonical \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classndn_1_1util_1_1FaceUri_ace297dc14f8e8ecc00e4296190faecba}{get\+Scheme} () const\hypertarget{classndn_1_1util_1_1FaceUri_ace297dc14f8e8ecc00e4296190faecba}{}\label{classndn_1_1util_1_1FaceUri_ace297dc14f8e8ecc00e4296190faecba}
+
+\begin{DoxyCompactList}\small\item\em get scheme (protocol) \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classndn_1_1util_1_1FaceUri_adc48368e37c64a9495a901fb901ccf8d}{get\+Host} () const\hypertarget{classndn_1_1util_1_1FaceUri_adc48368e37c64a9495a901fb901ccf8d}{}\label{classndn_1_1util_1_1FaceUri_adc48368e37c64a9495a901fb901ccf8d}
+
+\begin{DoxyCompactList}\small\item\em get host (domain) \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classndn_1_1util_1_1FaceUri_a16a45cece735bdbdb29e7b8e4c4c6d74}{get\+Port} () const\hypertarget{classndn_1_1util_1_1FaceUri_a16a45cece735bdbdb29e7b8e4c4c6d74}{}\label{classndn_1_1util_1_1FaceUri_a16a45cece735bdbdb29e7b8e4c4c6d74}
+
+\begin{DoxyCompactList}\small\item\em get port \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{classndn_1_1util_1_1FaceUri_a6a0448961f81cd8da8fe45aff6f6f6f7}{get\+Path} () const\hypertarget{classndn_1_1util_1_1FaceUri_a6a0448961f81cd8da8fe45aff6f6f6f7}{}\label{classndn_1_1util_1_1FaceUri_a6a0448961f81cd8da8fe45aff6f6f6f7}
+
+\begin{DoxyCompactList}\small\item\em get path \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1util_1_1FaceUri_a2827c1ae6a9179c3fad0716a99b56b63}{to\+String} () const\hypertarget{classndn_1_1util_1_1FaceUri_a2827c1ae6a9179c3fad0716a99b56b63}{}\label{classndn_1_1util_1_1FaceUri_a2827c1ae6a9179c3fad0716a99b56b63}
+
+\begin{DoxyCompactList}\small\item\em write as a string \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&rhs) const\hypertarget{classndn_1_1util_1_1FaceUri_afe96946c6ac5f2dde53a3cfce4ef6461}{}\label{classndn_1_1util_1_1FaceUri_afe96946c6ac5f2dde53a3cfce4ef6461}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&rhs) const\hypertarget{classndn_1_1util_1_1FaceUri_a36e3e15f6d08fdc2198832de7217ced6}{}\label{classndn_1_1util_1_1FaceUri_a36e3e15f6d08fdc2198832de7217ced6}
+
+\item 
+bool \hyperlink{classndn_1_1util_1_1FaceUri_ab5d70f1c0efcf14f350c1b7bc49aa5d3}{is\+Canonical} () const
+\begin{DoxyCompactList}\small\item\em determine whether this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} is in canonical form \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1FaceUri_a39275a665fdbd326d5eb512857435173}{canonize} (const Canonize\+Success\+Callback \&on\+Success, const Canonize\+Failure\+Callback \&on\+Failure, boost\+::asio\+::io\+\_\+service \&io, const time\+::nanoseconds \&timeout) const
+\begin{DoxyCompactList}\small\item\em asynchronously convert this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} to canonical form \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \hyperlink{classndn_1_1util_1_1FaceUri_a750a90ef70152e3b32ea03a7ac9c1bc3}{from\+Fd} (int fd)\hypertarget{classndn_1_1util_1_1FaceUri_a750a90ef70152e3b32ea03a7ac9c1bc3}{}\label{classndn_1_1util_1_1FaceUri_a750a90ef70152e3b32ea03a7ac9c1bc3}
+
+\begin{DoxyCompactList}\small\item\em create fd \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} from file descriptor \end{DoxyCompactList}\item 
+static \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \hyperlink{classndn_1_1util_1_1FaceUri_ae74926798015e6111da8edd44b2fbe04}{from\+Dev} (const std\+::string \&ifname)\hypertarget{classndn_1_1util_1_1FaceUri_ae74926798015e6111da8edd44b2fbe04}{}\label{classndn_1_1util_1_1FaceUri_ae74926798015e6111da8edd44b2fbe04}
+
+\begin{DoxyCompactList}\small\item\em create dev \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} from network device name \end{DoxyCompactList}\item 
+static bool \hyperlink{classndn_1_1util_1_1FaceUri_ad5c612dd772c382faf0a8fde66420431}{can\+Canonize} (const std\+::string \&scheme)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri)\hypertarget{classndn_1_1util_1_1FaceUri_a5efe548cc0ad9f3d7a57abb2811e3eaa}{}\label{classndn_1_1util_1_1FaceUri_a5efe548cc0ad9f3d7a57abb2811e3eaa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the underlying protocol and address used by a \hyperlink{classndn_1_1Face}{Face} 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/FaceMgmt#FaceUri}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Face\+Mgmt\#\+Face\+Uri} 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file face-\/uri.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}!Face\+Uri@{Face\+Uri}}
+\index{Face\+Uri@{Face\+Uri}!ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}}
+\subsubsection[{\texorpdfstring{Face\+Uri(const std\+::string \&uri)}{FaceUri(const std::string \&uri)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::util\+::\+Face\+Uri\+::\+Face\+Uri (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{uri}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1util_1_1FaceUri_aa9cf74ac424271ba9d70bbe965aa3f03}{}\label{classndn_1_1util_1_1FaceUri_aa9cf74ac424271ba9d70bbe965aa3f03}
+
+
+construct by parsing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uri} & scheme\+://host\mbox{[}\+:port\mbox{]}/path \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1util_1_1FaceUri_1_1Error}{Face\+Uri\+::\+Error}} & if U\+RI cannot be parsed \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 48 of file face-\/uri.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}!can\+Canonize@{can\+Canonize}}
+\index{can\+Canonize@{can\+Canonize}!ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}}
+\subsubsection[{\texorpdfstring{can\+Canonize(const std\+::string \&scheme)}{canCanonize(const std::string \&scheme)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::util\+::\+Face\+Uri\+::can\+Canonize (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{scheme}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1util_1_1FaceUri_ad5c612dd772c382faf0a8fde66420431}{}\label{classndn_1_1util_1_1FaceUri_ad5c612dd772c382faf0a8fde66420431}
+\begin{DoxyReturn}{Returns}
+whether a \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} of the scheme can be canonized 
+\end{DoxyReturn}
+
+
+Definition at line 501 of file face-\/uri.\+cpp.
+
+\index{ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}!canonize@{canonize}}
+\index{canonize@{canonize}!ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}}
+\subsubsection[{\texorpdfstring{canonize(const Canonize\+Success\+Callback \&on\+Success, const Canonize\+Failure\+Callback \&on\+Failure, boost\+::asio\+::io\+\_\+service \&io, const time\+::nanoseconds \&timeout) const}{canonize(const CanonizeSuccessCallback \&onSuccess, const CanonizeFailureCallback \&onFailure, boost::asio::io\_service \&io, const time::nanoseconds \&timeout) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::util\+::\+Face\+Uri\+::canonize (
+\begin{DoxyParamCaption}
+\item[{const Canonize\+Success\+Callback \&}]{on\+Success, }
+\item[{const Canonize\+Failure\+Callback \&}]{on\+Failure, }
+\item[{boost\+::asio\+::io\+\_\+service \&}]{io, }
+\item[{const time\+::nanoseconds \&}]{timeout}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1FaceUri_a39275a665fdbd326d5eb512857435173}{}\label{classndn_1_1util_1_1FaceUri_a39275a665fdbd326d5eb512857435173}
+
+
+asynchronously convert this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} to canonical form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Success} & function to call after this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} is converted to canonical form \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+A new \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} in canonical form will be created; this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} is unchanged. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Failure} & function to call if this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} cannot be converted to canonical form \\
+\hline
+{\em timeout} & maximum allowable duration of the operations. It\textquotesingle{}s intentional not to provide a default value\+: the caller should set a reasonable value in balance between network delay and user experience. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 523 of file face-\/uri.\+cpp.
+
+\index{ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}!is\+Canonical@{is\+Canonical}}
+\index{is\+Canonical@{is\+Canonical}!ndn\+::util\+::\+Face\+Uri@{ndn\+::util\+::\+Face\+Uri}}
+\subsubsection[{\texorpdfstring{is\+Canonical() const}{isCanonical() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::util\+::\+Face\+Uri\+::is\+Canonical (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1FaceUri_ab5d70f1c0efcf14f350c1b7bc49aa5d3}{}\label{classndn_1_1util_1_1FaceUri_ab5d70f1c0efcf14f350c1b7bc49aa5d3}
+
+
+determine whether this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} is in canonical form 
+
+\begin{DoxyReturn}{Returns}
+true if this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} is in canonical form, false if this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} is not in canonical form or or it\textquotesingle{}s undetermined whether this \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} is in canonical form 
+\end{DoxyReturn}
+
+
+Definition at line 507 of file face-\/uri.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/face-\/uri.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/face-\/uri.\+cpp\end{DoxyCompactItemize}

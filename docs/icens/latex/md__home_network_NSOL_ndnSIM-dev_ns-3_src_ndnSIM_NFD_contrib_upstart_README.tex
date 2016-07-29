@@ -1,0 +1,109 @@
+Some Linux distributions, such as Ubuntu, use \href{http://upstart.ubuntu.com/}{\tt upstart} as a standard mechanism to start system daemons, monitor their health, and restart when they die.
+
+\subsection*{Initial setup }
+
+
+\begin{DoxyItemize}
+\item Edit {\ttfamily nfd.\+conf} correcting paths for {\ttfamily nfd} binary, configuration and log files.
+\item Copy upstart config file for N\+FD \begin{DoxyVerb}  sudo cp nfd.conf /etc/init/
+\end{DoxyVerb}
+
+\end{DoxyItemize}
+
+\subsubsection*{Assumptions in the default scripts}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily nfd} is installed into {\ttfamily /usr/local/bin}
+\item Configuration file is {\ttfamily /usr/local/etc/ndn/nfd.conf}
+\item {\ttfamily nfd} will be run as root
+\item Log files will be written to {\ttfamily /usr/local/var/log/ndn} folder, which is owned by user {\ttfamily ndn}
+\end{DoxyItemize}
+
+\subsubsection*{Creating users}
+
+If {\ttfamily ndn} user and group does not exists, they need to be manually created. \begin{DoxyVerb}# Create group `ndn`
+addgroup --system ndn
+
+# Create user `ndn`
+sudo adduser --system \
+             --disabled-login \
+             --ingroup ndn \
+             --home /nonexistent \
+             --gecos "NDN User" \
+             --shell /bin/false \
+             ndn
+\end{DoxyVerb}
+
+
+\subsubsection*{Creating folders}
+
+Folder {\ttfamily /usr/local/var/log/ndn} should be created and assigned proper user and group\+: \begin{DoxyVerb}sudo mkdir -p /usr/local/var/log/ndn
+sudo chown -R ndn:ndn /usr/local/var/log/ndn
+\end{DoxyVerb}
+
+
+{\ttfamily H\+O\+ME} directory for {\ttfamily nfd} should be created prior to starting. This is necessary to manage unique security credentials for the deamon. \begin{DoxyVerb}# Create HOME and generate self-signed NDN certificate for nfd
+sudo -s -- ' \
+  mkdir -p /usr/local/var/lib/ndn/nfd/.ndn; \
+  export HOME=/usr/local/var/lib/ndn/nfd; \
+  ndnsec-keygen /localhost/daemons/nfd | ndnsec-install-cert -; \
+'
+\end{DoxyVerb}
+
+
+\subsubsection*{Configuring N\+FD\textquotesingle{}s security}
+
+N\+FD sample configuration allows anybody to create faces, add nexthops to F\+IB, and set strategy choice for namespaces. While such settings could be a good start, it is generally not a good idea to run N\+FD in this mode.
+
+While thorough discussion about security configuration of N\+FD is outside the scope of this document, at least the following change should be done to {\ttfamily nfd.\+conf} in authorize section\+: \begin{DoxyVerb}authorizations
+{
+  authorize
+  {
+    certfile certs/localhost_daemons_nfd.ndncert
+    privileges
+    {
+        faces
+        fib
+        strategy-choice
+    }
+  }
+
+  authorize
+  {
+    certfile any
+    privileges
+    {
+        faces
+        strategy-choice
+    }
+  }
+}
+\end{DoxyVerb}
+
+
+While this configuration still allows management of faces and updating strategy choice by anybody, only N\+FD\textquotesingle{}s R\+IB Manager (i.\+e., N\+FD itself) is allowed to manage F\+IB.
+
+As the final step to make this configuration work, nfd\textquotesingle{}s self-\/signed certificate needs to be exported into {\ttfamily localhost\+\_\+daemons\+\_\+nfd.\+ndncert} file\+: \begin{DoxyVerb}sudo -s -- '\
+  mkdir -p /usr/local/etc/ndn/certs || true; \
+  export HOME=/usr/local/var/lib/ndn/nfd; \
+  ndnsec-dump-certificate -i /localhost/daemons/nfd > \
+    /usr/local/etc/ndn/certs/localhost_daemons_nfd.ndncert; \
+  '
+\end{DoxyVerb}
+
+
+\subsection*{Enable auto-\/start }
+
+After copying the provided upstart script, {\ttfamily nfd} daemon will automatically run after the reboot. To manually start them, use the following commands\+: \begin{DoxyVerb}sudo start nfd
+\end{DoxyVerb}
+
+
+\subsection*{Disable auto-\/start }
+
+To stop {\ttfamily nfd} daemon, use the following commands\+: \begin{DoxyVerb}sudo stop nfd
+\end{DoxyVerb}
+
+
+Note that as long as upstart files are present in {\ttfamily /etc/init/}, the daemon will automatically start after the reboot. To permanently stop {\ttfamily nfd} daemon, delete the upstart files\+: \begin{DoxyVerb}sudo rm /etc/init/nfd.conf\end{DoxyVerb}
+ 

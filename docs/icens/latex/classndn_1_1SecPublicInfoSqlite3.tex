@@ -1,0 +1,713 @@
+\hypertarget{classndn_1_1SecPublicInfoSqlite3}{}\section{ndn\+:\+:Sec\+Public\+Info\+Sqlite3 Class Reference}
+\label{classndn_1_1SecPublicInfoSqlite3}\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+Inheritance diagram for ndn\+:\+:Sec\+Public\+Info\+Sqlite3\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1SecPublicInfoSqlite3}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1SecPublicInfoSqlite3_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1SecPublicInfoSqlite3_a55544ffecf1ee7fc4a95d20f469f151f}{Sec\+Public\+Info\+Sqlite3} (const std\+::string \&dir=\char`\"{}\char`\"{})
+\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_afceb7f9467295a9fa2560040cea51a1c}{set\+Tpm\+Locator} (const std\+::string \&tpm\+Locator)
+\begin{DoxyCompactList}\small\item\em Set the corresponding T\+PM information to {\ttfamily tpm\+Locator}. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classndn_1_1SecPublicInfoSqlite3_adeb2a14608a898450726a56be5aafa77}{get\+Tpm\+Locator} ()
+\begin{DoxyCompactList}\small\item\em Get T\+PM Locator. \end{DoxyCompactList}\item 
+virtual std\+::string {\bfseries get\+Pib\+Locator} ()\hypertarget{classndn_1_1SecPublicInfoSqlite3_a1186392ada2dd31145bdb8ebdb106f1d}{}\label{classndn_1_1SecPublicInfoSqlite3_a1186392ada2dd31145bdb8ebdb106f1d}
+
+\item 
+virtual bool \hyperlink{classndn_1_1SecPublicInfoSqlite3_aa0acd6df14788c00b0668c51755dfcbe}{does\+Identity\+Exist} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)
+\begin{DoxyCompactList}\small\item\em Check if the specified identity already exists. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_adc4cc468772fc4e5c3510b6aeb44e465}{add\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)
+\begin{DoxyCompactList}\small\item\em Add a new identity. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecPublicInfoSqlite3_ab486ef79859b8db9915ae5279376a8bf}{revoke\+Identity} ()
+\begin{DoxyCompactList}\small\item\em Revoke the identity. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecPublicInfoSqlite3_a067587d1cb0f020fd93d8bce0c4cb1eb}{does\+Public\+Key\+Exist} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Check if the specified key already exists. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_a8f3c33baff9fa817c4c9fcef5389e697}{add\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key\+Der)
+\begin{DoxyCompactList}\small\item\em Add a public key to the identity storage. \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{classndn_1_1PublicKey}{Public\+Key} $>$ \hyperlink{classndn_1_1SecPublicInfoSqlite3_a9fa5c3f66c986a40151b3729e33ee636}{get\+Public\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Get shared pointer to \hyperlink{classndn_1_1PublicKey}{Public\+Key} object from the identity storage. \end{DoxyCompactList}\item 
+virtual Key\+Type \hyperlink{classndn_1_1SecPublicInfoSqlite3_a3c394ba57577a6229703c36730453b33}{get\+Public\+Key\+Type} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Get the type of the queried public key. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecPublicInfoSqlite3_ad922d89d93fe325b1be35caa2397473e}{does\+Certificate\+Exist} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)
+\begin{DoxyCompactList}\small\item\em Check if the specified certificate already exists. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_ad594eb3b788ae00452f2c17f1a5a02f4}{add\+Certificate} (const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate)
+\begin{DoxyCompactList}\small\item\em Add a certificate to the identity storage. \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ \hyperlink{classndn_1_1SecPublicInfoSqlite3_a24d261d01754ca0f7ca756a7833ecb31}{get\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)
+\begin{DoxyCompactList}\small\item\em Get a shared pointer to identity certificate object from the identity storage. \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1SecPublicInfoSqlite3_ad89a572966e29dc22723a7b4289be7ba}{get\+Default\+Identity} ()
+\begin{DoxyCompactList}\small\item\em Get name of the default identity. \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1SecPublicInfoSqlite3_a069cd5be69319a54a03c7cf7b2b3350c}{get\+Default\+Key\+Name\+For\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)
+\begin{DoxyCompactList}\small\item\em Get name of the default key name for the specified identity. \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1SecPublicInfoSqlite3_ab13497d92558d0a5f707b069426c304f}{get\+Default\+Certificate\+Name\+For\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Get name of the default certificate name for the specified key. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_ab1b2a1a8ad54a4a21c5ee60f6bd64d8c}{get\+All\+Identities} (std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default)
+\begin{DoxyCompactList}\small\item\em Get all the identities from public info. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_aaba27e940d0f9f35c377b6dd7d4c7247}{get\+All\+Key\+Names} (std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default)
+\begin{DoxyCompactList}\small\item\em Get all the key names from public info. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_ab01f94a4d740a3ef6e3d0e208cfe9fdb}{get\+All\+Key\+Names\+Of\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity, std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default)
+\begin{DoxyCompactList}\small\item\em Get all the key names of a particular identity. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_af57053771680e2010112a992a7341580}{get\+All\+Certificate\+Names} (std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default)
+\begin{DoxyCompactList}\small\item\em Get all the certificate name in public info. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_a72c41faf166f90e280fb8bcd76306086}{get\+All\+Certificate\+Names\+Of\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default)
+\begin{DoxyCompactList}\small\item\em Get all the certificate name of a particular key name. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_aed78346aac8d42ce0ef6bf0e2b8e9d91}{delete\+Certificate\+Info} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)
+\begin{DoxyCompactList}\small\item\em Delete a certificate. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_ae619f25af056880af77597955c637030}{delete\+Public\+Key\+Info} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Delete a public key and related certificates. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecPublicInfoSqlite3_a5eb2c1cef293e5ac2297d235726e55db}{delete\+Identity\+Info} (const \hyperlink{classndn_1_1Name}{Name} \&identity)
+\begin{DoxyCompactList}\small\item\em Delete an identity and related public keys and certificates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string {\bfseries S\+C\+H\+E\+ME}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a9b7dbcdc4931681f90f09a6f4eef9b53}{}\label{classndn_1_1SecPublicInfoSqlite3_a9b7dbcdc4931681f90f09a6f4eef9b53}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file sec-\/public-\/info-\/sqlite3.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!Sec\+Public\+Info\+Sqlite3@{Sec\+Public\+Info\+Sqlite3}}
+\index{Sec\+Public\+Info\+Sqlite3@{Sec\+Public\+Info\+Sqlite3}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{Sec\+Public\+Info\+Sqlite3(const std\+::string \&dir="""")}{SecPublicInfoSqlite3(const std::string \&dir="")}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::\+Sec\+Public\+Info\+Sqlite3 (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{dir = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a55544ffecf1ee7fc4a95d20f469f151f}{}\label{classndn_1_1SecPublicInfoSqlite3_a55544ffecf1ee7fc4a95d20f469f151f}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}]Add define for windows/unix in wscript. The following may completely fail on windows \end{DoxyRefDesc}
+
+
+Definition at line 112 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!add\+Certificate@{add\+Certificate}}
+\index{add\+Certificate@{add\+Certificate}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{add\+Certificate(const Identity\+Certificate \&certificate)}{addCertificate(const IdentityCertificate \&certificate)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::add\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Identity\+Certificate} \&}]{certificate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_ad594eb3b788ae00452f2c17f1a5a02f4}{}\label{classndn_1_1SecPublicInfoSqlite3_ad594eb3b788ae00452f2c17f1a5a02f4}
+
+
+Add a certificate to the identity storage. 
+
+It will add the corresponding public key and identity if they do not exist
+
+
+\begin{DoxyParams}{Parameters}
+{\em certificate} & The certificate to be added \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a5e9f423d502c2563cc6da283e85c069c}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 473 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!add\+Identity@{add\+Identity}}
+\index{add\+Identity@{add\+Identity}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{add\+Identity(const Name \&identity\+Name)}{addIdentity(const Name \&identityName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::add\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_adc4cc468772fc4e5c3510b6aeb44e465}{}\label{classndn_1_1SecPublicInfoSqlite3_adc4cc468772fc4e5c3510b6aeb44e465}
+
+
+Add a new identity. 
+
+if identity already exist, do not add it again
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The identity name to be added \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a7a96cc9f95da95a46c7669b3894a8139}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 295 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!add\+Key@{add\+Key}}
+\index{add\+Key@{add\+Key}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{add\+Key(const Name \&key\+Name, const Public\+Key \&public\+Key\+Der)}{addKey(const Name \&keyName, const PublicKey \&publicKeyDer)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::add\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{const {\bf Public\+Key} \&}]{public\+Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a8f3c33baff9fa817c4c9fcef5389e697}{}\label{classndn_1_1SecPublicInfoSqlite3_a8f3c33baff9fa817c4c9fcef5389e697}
+
+
+Add a public key to the identity storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the public key to be added \\
+\hline
+{\em public\+Key} & Reference to the \hyperlink{classndn_1_1PublicKey}{Public\+Key} object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_af166ccfa2ce2b49392297af843c12746}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 352 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!delete\+Certificate\+Info@{delete\+Certificate\+Info}}
+\index{delete\+Certificate\+Info@{delete\+Certificate\+Info}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{delete\+Certificate\+Info(const Name \&certificate\+Name)}{deleteCertificateInfo(const Name \&certificateName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::delete\+Certificate\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{certificate\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_aed78346aac8d42ce0ef6bf0e2b8e9d91}{}\label{classndn_1_1SecPublicInfoSqlite3_aed78346aac8d42ce0ef6bf0e2b8e9d91}
+
+
+Delete a certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em certificate\+Name} & The certificate name \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_ad141124b6f9731169a96c5c8f9c0d95e}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 874 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!delete\+Identity\+Info@{delete\+Identity\+Info}}
+\index{delete\+Identity\+Info@{delete\+Identity\+Info}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{delete\+Identity\+Info(const Name \&identity)}{deleteIdentityInfo(const Name \&identity)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::delete\+Identity\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a5eb2c1cef293e5ac2297d235726e55db}{}\label{classndn_1_1SecPublicInfoSqlite3_a5eb2c1cef293e5ac2297d235726e55db}
+
+
+Delete an identity and related public keys and certificates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The identity name \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_ab50e8b2a7716e6a74985c9a444a0e9d7}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 914 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!delete\+Public\+Key\+Info@{delete\+Public\+Key\+Info}}
+\index{delete\+Public\+Key\+Info@{delete\+Public\+Key\+Info}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{delete\+Public\+Key\+Info(const Name \&key\+Name)}{deletePublicKeyInfo(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::delete\+Public\+Key\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_ae619f25af056880af77597955c637030}{}\label{classndn_1_1SecPublicInfoSqlite3_ae619f25af056880af77597955c637030}
+
+
+Delete a public key and related certificates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The key name \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_ab1fc90cf485947c8c30c7ac0fa7f740c}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 887 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!does\+Certificate\+Exist@{does\+Certificate\+Exist}}
+\index{does\+Certificate\+Exist@{does\+Certificate\+Exist}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{does\+Certificate\+Exist(const Name \&certificate\+Name)}{doesCertificateExist(const Name \&certificateName)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::does\+Certificate\+Exist (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{certificate\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_ad922d89d93fe325b1be35caa2397473e}{}\label{classndn_1_1SecPublicInfoSqlite3_ad922d89d93fe325b1be35caa2397473e}
+
+
+Check if the specified certificate already exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em certificate\+Name} & The name of the certificate \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a03b08df2d96151041d246a79994a8d56}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 449 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!does\+Identity\+Exist@{does\+Identity\+Exist}}
+\index{does\+Identity\+Exist@{does\+Identity\+Exist}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{does\+Identity\+Exist(const Name \&identity\+Name)}{doesIdentityExist(const Name \&identityName)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::does\+Identity\+Exist (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_aa0acd6df14788c00b0668c51755dfcbe}{}\label{classndn_1_1SecPublicInfoSqlite3_aa0acd6df14788c00b0668c51755dfcbe}
+
+
+Check if the specified identity already exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The identity name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the identity exists, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a2b8fb80dce8c1fe711f3e9372202aa13}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 271 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!does\+Public\+Key\+Exist@{does\+Public\+Key\+Exist}}
+\index{does\+Public\+Key\+Exist@{does\+Public\+Key\+Exist}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{does\+Public\+Key\+Exist(const Name \&key\+Name)}{doesPublicKeyExist(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::does\+Public\+Key\+Exist (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a067587d1cb0f020fd93d8bce0c4cb1eb}{}\label{classndn_1_1SecPublicInfoSqlite3_a067587d1cb0f020fd93d8bce0c4cb1eb}
+
+
+Check if the specified key already exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key exists, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_aaf1ce7a3d3a700ae0eb42000d4a90417}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 321 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+All\+Certificate\+Names@{get\+All\+Certificate\+Names}}
+\index{get\+All\+Certificate\+Names@{get\+All\+Certificate\+Names}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+All\+Certificate\+Names(std\+::vector$<$ Name $>$ \&name\+List, bool is\+Default)}{getAllCertificateNames(std::vector< Name > \&nameList, bool isDefault)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+All\+Certificate\+Names (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Name} $>$ \&}]{name\+List, }
+\item[{bool}]{is\+Default}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_af57053771680e2010112a992a7341580}{}\label{classndn_1_1SecPublicInfoSqlite3_af57053771680e2010112a992a7341580}
+
+
+Get all the certificate name in public info. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em name\+List} & On return, the certificate name list \\
+\hline
+ & {\em is\+Default} & If specified, only the default certificates are returned \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a986226683c039d2ea1293c43cb3b7de2}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 820 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+All\+Certificate\+Names\+Of\+Key@{get\+All\+Certificate\+Names\+Of\+Key}}
+\index{get\+All\+Certificate\+Names\+Of\+Key@{get\+All\+Certificate\+Names\+Of\+Key}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+All\+Certificate\+Names\+Of\+Key(const Name \&key\+Name, std\+::vector$<$ Name $>$ \&name\+List, bool is\+Default)}{getAllCertificateNamesOfKey(const Name \&keyName, std::vector< Name > \&nameList, bool isDefault)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+All\+Certificate\+Names\+Of\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{std\+::vector$<$ {\bf Name} $>$ \&}]{name\+List, }
+\item[{bool}]{is\+Default}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a72c41faf166f90e280fb8bcd76306086}{}\label{classndn_1_1SecPublicInfoSqlite3_a72c41faf166f90e280fb8bcd76306086}
+
+
+Get all the certificate name of a particular key name. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em key\+Name} & The specified key name \\
+\hline
+\mbox{\tt out}  & {\em name\+List} & On return, the certificate name list \\
+\hline
+ & {\em is\+Default} & If specified, only the default certificate is returned \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_ad973ee64663941e934f59f7bce12c2ac}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 841 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+All\+Identities@{get\+All\+Identities}}
+\index{get\+All\+Identities@{get\+All\+Identities}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+All\+Identities(std\+::vector$<$ Name $>$ \&name\+List, bool is\+Default)}{getAllIdentities(std::vector< Name > \&nameList, bool isDefault)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+All\+Identities (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Name} $>$ \&}]{name\+List, }
+\item[{bool}]{is\+Default}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_ab1b2a1a8ad54a4a21c5ee60f6bd64d8c}{}\label{classndn_1_1SecPublicInfoSqlite3_ab1b2a1a8ad54a4a21c5ee60f6bd64d8c}
+
+
+Get all the identities from public info. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em name\+List} & On return, the identity list \\
+\hline
+ & {\em is\+Default} & If specified, only the default identity is returned \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a43fc02decde382bff2d72c00e3a6461e}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 749 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+All\+Key\+Names@{get\+All\+Key\+Names}}
+\index{get\+All\+Key\+Names@{get\+All\+Key\+Names}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+All\+Key\+Names(std\+::vector$<$ Name $>$ \&name\+List, bool is\+Default)}{getAllKeyNames(std::vector< Name > \&nameList, bool isDefault)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+All\+Key\+Names (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Name} $>$ \&}]{name\+List, }
+\item[{bool}]{is\+Default}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_aaba27e940d0f9f35c377b6dd7d4c7247}{}\label{classndn_1_1SecPublicInfoSqlite3_aaba27e940d0f9f35c377b6dd7d4c7247}
+
+
+Get all the key names from public info. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em name\+List} & On return, the key name list. \\
+\hline
+ & {\em is\+Default} & If specified, only the default keys are returned \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a0579019fd7c8944b504e97e48ba42cd2}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 769 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+All\+Key\+Names\+Of\+Identity@{get\+All\+Key\+Names\+Of\+Identity}}
+\index{get\+All\+Key\+Names\+Of\+Identity@{get\+All\+Key\+Names\+Of\+Identity}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+All\+Key\+Names\+Of\+Identity(const Name \&identity, std\+::vector$<$ Name $>$ \&name\+List, bool is\+Default)}{getAllKeyNamesOfIdentity(const Name \&identity, std::vector< Name > \&nameList, bool isDefault)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+All\+Key\+Names\+Of\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{std\+::vector$<$ {\bf Name} $>$ \&}]{name\+List, }
+\item[{bool}]{is\+Default}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_ab01f94a4d740a3ef6e3d0e208cfe9fdb}{}\label{classndn_1_1SecPublicInfoSqlite3_ab01f94a4d740a3ef6e3d0e208cfe9fdb}
+
+
+Get all the key names of a particular identity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em identity} & The specified identity name \\
+\hline
+\mbox{\tt out}  & {\em name\+List} & On return, the key name list \\
+\hline
+ & {\em is\+Default} & If specified, only the default key is returned \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a47fa88cc8e659a5b0d3be19db538b00c}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 793 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+Certificate@{get\+Certificate}}
+\index{get\+Certificate@{get\+Certificate}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+Certificate(const Name \&certificate\+Name)}{getCertificate(const Name \&certificateName)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Identity\+Certificate} $>$ ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{certificate\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a24d261d01754ca0f7ca756a7833ecb31}{}\label{classndn_1_1SecPublicInfoSqlite3_a24d261d01754ca0f7ca756a7833ecb31}
+
+
+Get a shared pointer to identity certificate object from the identity storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em certificate\+Name} & The name of the requested certificate \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if the certificate does not exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a3b7b96d3c45c85f2f07af532687190cc}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 528 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+Default\+Certificate\+Name\+For\+Key@{get\+Default\+Certificate\+Name\+For\+Key}}
+\index{get\+Default\+Certificate\+Name\+For\+Key@{get\+Default\+Certificate\+Name\+For\+Key}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+Default\+Certificate\+Name\+For\+Key(const Name \&key\+Name)}{getDefaultCertificateNameForKey(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+Default\+Certificate\+Name\+For\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_ab13497d92558d0a5f707b069426c304f}{}\label{classndn_1_1SecPublicInfoSqlite3_ab13497d92558d0a5f707b069426c304f}
+
+
+Get name of the default certificate name for the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The key name. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if there is no default. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_ad12cfa2f72271f1c44e02b2969c8fad1}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 676 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+Default\+Identity@{get\+Default\+Identity}}
+\index{get\+Default\+Identity@{get\+Default\+Identity}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+Default\+Identity()}{getDefaultIdentity()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+Default\+Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_ad89a572966e29dc22723a7b4289be7ba}{}\label{classndn_1_1SecPublicInfoSqlite3_ad89a572966e29dc22723a7b4289be7ba}
+
+
+Get name of the default identity. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if there is no default. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a2d8c6fbf21be9d52dc875212528c1ffa}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 564 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+Default\+Key\+Name\+For\+Identity@{get\+Default\+Key\+Name\+For\+Identity}}
+\index{get\+Default\+Key\+Name\+For\+Identity@{get\+Default\+Key\+Name\+For\+Identity}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+Default\+Key\+Name\+For\+Identity(const Name \&identity\+Name)}{getDefaultKeyNameForIdentity(const Name \&identityName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+Default\+Key\+Name\+For\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a069cd5be69319a54a03c7cf7b2b3350c}{}\label{classndn_1_1SecPublicInfoSqlite3_a069cd5be69319a54a03c7cf7b2b3350c}
+
+
+Get name of the default key name for the specified identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The identity name \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if there is no default \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a07799ff9834b7348306fb3a6533a3812}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 614 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+Public\+Key@{get\+Public\+Key}}
+\index{get\+Public\+Key@{get\+Public\+Key}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+Public\+Key(const Name \&key\+Name)}{getPublicKey(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Public\+Key} $>$ ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+Public\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a9fa5c3f66c986a40151b3729e33ee636}{}\label{classndn_1_1SecPublicInfoSqlite3_a9fa5c3f66c986a40151b3729e33ee636}
+
+
+Get shared pointer to \hyperlink{classndn_1_1PublicKey}{Public\+Key} object from the identity storage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the requested public key \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if public key does not exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a5212e6cd18230e8eb46bcefd143f740a}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 387 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+Public\+Key\+Type@{get\+Public\+Key\+Type}}
+\index{get\+Public\+Key\+Type@{get\+Public\+Key\+Type}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+Public\+Key\+Type(const Name \&key\+Name)}{getPublicKeyType(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}Key\+Type ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+Public\+Key\+Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_a3c394ba57577a6229703c36730453b33}{}\label{classndn_1_1SecPublicInfoSqlite3_a3c394ba57577a6229703c36730453b33}
+
+
+Get the type of the queried public key. 
+
+\begin{DoxyNote}{Note}
+Key\+Type is also available from \hyperlink{classndn_1_1PublicKey}{Public\+Key} instance. This method is more efficient if only Key\+Type is needed.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the requested public key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the type of the key. If the queried key does not exist, K\+E\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL will be returned 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a69c177089c7779f899ac87703f9a0e6f}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 419 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!get\+Tpm\+Locator@{get\+Tpm\+Locator}}
+\index{get\+Tpm\+Locator@{get\+Tpm\+Locator}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{get\+Tpm\+Locator()}{getTpmLocator()}}]{\setlength{\rightskip}{0pt plus 5cm}string ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::get\+Tpm\+Locator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_adeb2a14608a898450726a56be5aafa77}{}\label{classndn_1_1SecPublicInfoSqlite3_adeb2a14608a898450726a56be5aafa77}
+
+
+Get T\+PM Locator. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if the T\+PM info does not exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_aa6c1fe0b5db4fcef867f06572f389957}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 217 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!revoke\+Identity@{revoke\+Identity}}
+\index{revoke\+Identity@{revoke\+Identity}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{revoke\+Identity()}{revokeIdentity()}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::revoke\+Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_ab486ef79859b8db9915ae5279376a8bf}{}\label{classndn_1_1SecPublicInfoSqlite3_ab486ef79859b8db9915ae5279376a8bf}
+
+
+Revoke the identity. 
+
+\begin{DoxyReturn}{Returns}
+true if the identity was revoked, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a820927737b0cb3a20dd2363d816b97c7}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 314 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+\index{ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}!set\+Tpm\+Locator@{set\+Tpm\+Locator}}
+\index{set\+Tpm\+Locator@{set\+Tpm\+Locator}!ndn\+::\+Sec\+Public\+Info\+Sqlite3@{ndn\+::\+Sec\+Public\+Info\+Sqlite3}}
+\subsubsection[{\texorpdfstring{set\+Tpm\+Locator(const std\+::string \&tpm\+Locator)}{setTpmLocator(const std::string \&tpmLocator)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Public\+Info\+Sqlite3\+::set\+Tpm\+Locator (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tpm\+Locator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecPublicInfoSqlite3_afceb7f9467295a9fa2560040cea51a1c}{}\label{classndn_1_1SecPublicInfoSqlite3_afceb7f9467295a9fa2560040cea51a1c}
+
+
+Set the corresponding T\+PM information to {\ttfamily tpm\+Locator}. 
+
+If the provided {\ttfamily tpm\+Locator} is different from the existing one, the P\+IB will be reset, otherwise nothing will be changed.
+
+For legacy issue, the T\+PM info may not exist (some old P\+IB content may not have this info), this method will simply set the T\+PM info as provided without changing anything else. Thus an ideal process of handling old P\+IB is to check if T\+PM info exists. If it does not exist, then set it to the default value according to configuration. 
+
+Implements \hyperlink{classndn_1_1SecPublicInfo_a229dca22e8063b81802d9be04edb57a6}{ndn\+::\+Sec\+Public\+Info}.
+
+
+
+Definition at line 199 of file sec-\/public-\/info-\/sqlite3.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/sec-\/public-\/info-\/sqlite3.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/sec-\/public-\/info-\/sqlite3.\+cpp\end{DoxyCompactItemize}

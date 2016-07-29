@@ -1,0 +1,312 @@
+\hypertarget{classns3_1_1ndn_1_1StackHelper}{}\section{ns3\+:\+:ndn\+:\+:Stack\+Helper Class Reference}
+\label{classns3_1_1ndn_1_1StackHelper}\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+
+
+Helper class to install N\+DN stack and configure its parameters.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/stack-\/helper.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Stack\+Helper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1ndn_1_1StackHelper}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Callback$<$ shared\+\_\+ptr$<$ \hyperlink{classns3_1_1ndn_1_1NetDeviceFace}{Net\+Device\+Face} $>$, Ptr$<$ Node $>$, Ptr$<$ \hyperlink{classns3_1_1ndn_1_1L3Protocol}{L3\+Protocol} $>$, Ptr$<$ Net\+Device $>$ $>$ {\bfseries Net\+Device\+Face\+Create\+Callback}\hypertarget{classns3_1_1ndn_1_1StackHelper_ac1c64988ec952225be76fefda0c7b54e}{}\label{classns3_1_1ndn_1_1StackHelper_ac1c64988ec952225be76fefda0c7b54e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1StackHelper_a8c17ed7a1665d4503ed6ee47e3c5308d}{Stack\+Helper} ()\hypertarget{classns3_1_1ndn_1_1StackHelper_a8c17ed7a1665d4503ed6ee47e3c5308d}{}\label{classns3_1_1ndn_1_1StackHelper_a8c17ed7a1665d4503ed6ee47e3c5308d}
+
+\begin{DoxyCompactList}\small\item\em Create a new Ndn\+Stack\+Helper with a default N\+D\+N\+\_\+\+F\+L\+O\+O\+D\+I\+NG forwarding stategy. \end{DoxyCompactList}\item 
+virtual \hyperlink{classns3_1_1ndn_1_1StackHelper_aebb67f0d5c7819b33bb511b4bcb15bb6}{$\sim$\+Stack\+Helper} ()\hypertarget{classns3_1_1ndn_1_1StackHelper_aebb67f0d5c7819b33bb511b4bcb15bb6}{}\label{classns3_1_1ndn_1_1StackHelper_aebb67f0d5c7819b33bb511b4bcb15bb6}
+
+\begin{DoxyCompactList}\small\item\em Destroy the Ndn\+Stack\+Helper. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_afcb65d0ee1b450bdce0be7de475700a8}{Set\+Stack\+Attributes} (const std\+::string \&attr1=\char`\"{}\char`\"{}, const std\+::string \&value1=\char`\"{}\char`\"{}, const std\+::string \&attr2=\char`\"{}\char`\"{}, const std\+::string \&value2=\char`\"{}\char`\"{}, const std\+::string \&attr3=\char`\"{}\char`\"{}, const std\+::string \&value3=\char`\"{}\char`\"{}, const std\+::string \&attr4=\char`\"{}\char`\"{}, const std\+::string \&value4=\char`\"{}\char`\"{})\hypertarget{classns3_1_1ndn_1_1StackHelper_afcb65d0ee1b450bdce0be7de475700a8}{}\label{classns3_1_1ndn_1_1StackHelper_afcb65d0ee1b450bdce0be7de475700a8}
+
+\begin{DoxyCompactList}\small\item\em Set parameters of Ndn\+L3\+Protocol. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_ad536727f50460d9f00fbc08683039171}{set\+Cs\+Size} (size\+\_\+t max\+Size)\hypertarget{classns3_1_1ndn_1_1StackHelper_ad536727f50460d9f00fbc08683039171}{}\label{classns3_1_1ndn_1_1StackHelper_ad536727f50460d9f00fbc08683039171}
+
+\begin{DoxyCompactList}\small\item\em Set maximum size for N\+FD\textquotesingle{}s Content Store (in number of packets) \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_a05ce8355a36d8b70e7a5c8fae86a95c8}{Set\+Old\+Content\+Store} (const std\+::string \&content\+Store\+Class, const std\+::string \&attr1=\char`\"{}\char`\"{}, const std\+::string \&value1=\char`\"{}\char`\"{}, const std\+::string \&attr2=\char`\"{}\char`\"{}, const std\+::string \&value2=\char`\"{}\char`\"{}, const std\+::string \&attr3=\char`\"{}\char`\"{}, const std\+::string \&value3=\char`\"{}\char`\"{}, const std\+::string \&attr4=\char`\"{}\char`\"{}, const std\+::string \&value4=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Set ndn\+S\+IM 1.\+0 content store implementation and its attributes. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_a88e5d40e39bb56bfd3798c63b15e5cdf}{Add\+Net\+Device\+Face\+Create\+Callback} (Type\+Id net\+Device\+Type, Net\+Device\+Face\+Create\+Callback callback)
+\begin{DoxyCompactList}\small\item\em Add callback to create and configure instance of the face, based on supplied Ptr$<$\+Node$>$ and Ptr$<$\+Net\+Device$>$ \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_a55fc628833a71bf783dd0dcae887f1f3}{Update\+Net\+Device\+Face\+Create\+Callback} (Type\+Id net\+Device\+Type, Net\+Device\+Face\+Create\+Callback callback)
+\begin{DoxyCompactList}\small\item\em Update callback to create and configure instance of the face, based on supplied Ptr$<$\+Node$>$ and Ptr$<$\+Net\+Device$>$ \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_a2f99b477ca1bc36495a61528849538ca}{Remove\+Net\+Device\+Face\+Create\+Callback} (Type\+Id net\+Device\+Type, Net\+Device\+Face\+Create\+Callback callback)\hypertarget{classns3_1_1ndn_1_1StackHelper_a2f99b477ca1bc36495a61528849538ca}{}\label{classns3_1_1ndn_1_1StackHelper_a2f99b477ca1bc36495a61528849538ca}
+
+\begin{DoxyCompactList}\small\item\em Remove callback to create and configure instance of the face, based on supplied Ptr$<$\+Node$>$ and Ptr$<$\+Net\+Device$>$ \end{DoxyCompactList}\item 
+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} $>$ \hyperlink{classns3_1_1ndn_1_1StackHelper_ab9530802eb64615cc458efeb75949d2e}{Install} (const std\+::string \&node\+Name) const
+\begin{DoxyCompactList}\small\item\em Install Ndn stack on the node. \end{DoxyCompactList}\item 
+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} $>$ \hyperlink{classns3_1_1ndn_1_1StackHelper_a4fa731f2371c5b19161e7a83d0e73e21}{Install} (Ptr$<$ Node $>$ node) const
+\begin{DoxyCompactList}\small\item\em Install Ndn stack on the node. \end{DoxyCompactList}\item 
+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} $>$ \hyperlink{classns3_1_1ndn_1_1StackHelper_ae560bd6234e284fe64fb53f055293bbb}{Install} (const Node\+Container \&c) const
+\begin{DoxyCompactList}\small\item\em Install Ndn stack on each node in the input container. \end{DoxyCompactList}\item 
+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} $>$ \hyperlink{classns3_1_1ndn_1_1StackHelper_af412d619fdb1785048e716de8787e4b2}{Install\+All} () const
+\begin{DoxyCompactList}\small\item\em Install Ndn stack on all nodes in the simulation. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_a12b1c8f16bad953ac3b9bb4a6ab1fcab}{Set\+Default\+Routes} (bool need\+Set)\hypertarget{classns3_1_1ndn_1_1StackHelper_a12b1c8f16bad953ac3b9bb4a6ab1fcab}{}\label{classns3_1_1ndn_1_1StackHelper_a12b1c8f16bad953ac3b9bb4a6ab1fcab}
+
+\begin{DoxyCompactList}\small\item\em Set flag indicating necessity to install default routes in F\+IB. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_ac17e4f6451b89425ccabc6ed702f8d99}{Update} (Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Update Ndn stack on a given node (Add faces for new devices) \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_a3cc49b539411921d6ebfa668999db481}{Update} (const Node\+Container \&c)
+\begin{DoxyCompactList}\small\item\em Update Ndn stack on given nodes (Add faces for new devices) \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_a969bb39ed1a9e11e95885df3ab4bc73d}{Update} (const std\+::string \&node\+Name)
+\begin{DoxyCompactList}\small\item\em Update Ndn stack on a given node name (Add faces for new devices) \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1StackHelper_a808f6a0ba9784c313b121a9836ae0cd7}{Update\+All} ()\hypertarget{classns3_1_1ndn_1_1StackHelper_a808f6a0ba9784c313b121a9836ae0cd7}{}\label{classns3_1_1ndn_1_1StackHelper_a808f6a0ba9784c313b121a9836ae0cd7}
+
+\begin{DoxyCompactList}\small\item\em Update Ndn stack on all the nodes (Add faces for new devices) \end{DoxyCompactList}\item 
+void {\bfseries set\+Custom\+Ndn\+Cxx\+Clocks} ()\hypertarget{classns3_1_1ndn_1_1StackHelper_a0f5f94e6f7eb2cdaff5621d57a4cd32f}{}\label{classns3_1_1ndn_1_1StackHelper_a0f5f94e6f7eb2cdaff5621d57a4cd32f}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Key\+Chain \& {\bfseries get\+Key\+Chain} ()\hypertarget{classns3_1_1ndn_1_1StackHelper_a435964babf79fb356a9fb1e47cb190fe}{}\label{classns3_1_1ndn_1_1StackHelper_a435964babf79fb356a9fb1e47cb190fe}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class to install N\+DN stack and configure its parameters. 
+
+Definition at line 51 of file ndn-\/stack-\/helper.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Add\+Net\+Device\+Face\+Create\+Callback@{Add\+Net\+Device\+Face\+Create\+Callback}}
+\index{Add\+Net\+Device\+Face\+Create\+Callback@{Add\+Net\+Device\+Face\+Create\+Callback}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Net\+Device\+Face\+Create\+Callback(\+Type\+Id net\+Device\+Type, Net\+Device\+Face\+Create\+Callback callback)}{AddNetDeviceFaceCreateCallback(TypeId netDeviceType, NetDeviceFaceCreateCallback callback)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Stack\+Helper\+::\+Add\+Net\+Device\+Face\+Create\+Callback (
+\begin{DoxyParamCaption}
+\item[{Type\+Id}]{net\+Device\+Type, }
+\item[{Stack\+Helper\+::\+Net\+Device\+Face\+Create\+Callback}]{callback}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1StackHelper_a88e5d40e39bb56bfd3798c63b15e5cdf}{}\label{classns3_1_1ndn_1_1StackHelper_a88e5d40e39bb56bfd3798c63b15e5cdf}
+
+
+Add callback to create and configure instance of the face, based on supplied Ptr$<$\+Node$>$ and Ptr$<$\+Net\+Device$>$ 
+
+It is possible to set up several callbacks for different Net\+Device types.
+
+If none of the callbacks fit the Type\+Id of Net\+Device, a default callback is used (Default\+Net\+Device\+Callback) 
+
+Definition at line 176 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Install(const std\+::string \&node\+Name) const}{Install(const std::string \&nodeName) const}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ {\bf Face\+Container} $>$ ns3\+::ndn\+::\+Stack\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1StackHelper_ab9530802eb64615cc458efeb75949d2e}{}\label{classns3_1_1ndn_1_1StackHelper_ab9530802eb64615cc458efeb75949d2e}
+
+
+Install Ndn stack on the node. 
+
+This method will assert if called on a node that already has Ndn object installed on it
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & The name of the node on which to install the stack.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of installed faces in the form of a smart pointer to Ndn\+Face\+Container object 
+\end{DoxyReturn}
+
+
+Definition at line 234 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node) const}{Install(Ptr< Node > node) const}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ {\bf Face\+Container} $>$ ns3\+::ndn\+::\+Stack\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1StackHelper_a4fa731f2371c5b19161e7a83d0e73e21}{}\label{classns3_1_1ndn_1_1StackHelper_a4fa731f2371c5b19161e7a83d0e73e21}
+
+
+Install Ndn stack on the node. 
+
+This method will assert if called on a node that already has Ndn object installed on it
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node on which to install the stack.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of installed faces in the form of a smart pointer to \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} object 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Install(const Node\+Container \&c) const}{Install(const NodeContainer \&c) const}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ {\bf Face\+Container} $>$ ns3\+::ndn\+::\+Stack\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{const Node\+Container \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1StackHelper_ae560bd6234e284fe64fb53f055293bbb}{}\label{classns3_1_1ndn_1_1StackHelper_ae560bd6234e284fe64fb53f055293bbb}
+
+
+Install Ndn stack on each node in the input container. 
+
+The program will assert if this method is called on a container with a node that already has an ndn object aggregated to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Node\+Container that holds the set of nodes on which to install the new stacks.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list of installed faces in the form of a smart pointer to \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} object 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Install\+All@{Install\+All}}
+\index{Install\+All@{Install\+All}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Install\+All() const}{InstallAll() const}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ {\bf Face\+Container} $>$ ns3\+::ndn\+::\+Stack\+Helper\+::\+Install\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1StackHelper_af412d619fdb1785048e716de8787e4b2}{}\label{classns3_1_1ndn_1_1StackHelper_af412d619fdb1785048e716de8787e4b2}
+
+
+Install Ndn stack on all nodes in the simulation. 
+
+\begin{DoxyReturn}{Returns}
+list of installed faces in the form of a smart pointer to \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} object 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Set\+Old\+Content\+Store@{Set\+Old\+Content\+Store}}
+\index{Set\+Old\+Content\+Store@{Set\+Old\+Content\+Store}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Set\+Old\+Content\+Store(const std\+::string \&content\+Store\+Class, const std\+::string \&attr1="""", const std\+::string \&value1="""", const std\+::string \&attr2="""", const std\+::string \&value2="""", const std\+::string \&attr3="""", const std\+::string \&value3="""", const std\+::string \&attr4="""", const std\+::string \&value4="""")}{SetOldContentStore(const std::string \&contentStoreClass, const std::string \&attr1="", const std::string \&value1="", const std::string \&attr2="", const std::string \&value2="", const std::string \&attr3="", const std::string \&value3="", const std::string \&attr4="", const std::string \&value4="")}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Stack\+Helper\+::\+Set\+Old\+Content\+Store (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{content\+Store\+Class, }
+\item[{const std\+::string \&}]{attr1 = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const std\+::string \&}]{value1 = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const std\+::string \&}]{attr2 = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const std\+::string \&}]{value2 = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const std\+::string \&}]{attr3 = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const std\+::string \&}]{value3 = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const std\+::string \&}]{attr4 = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const std\+::string \&}]{value4 = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1StackHelper_a05ce8355a36d8b70e7a5c8fae86a95c8}{}\label{classns3_1_1ndn_1_1StackHelper_a05ce8355a36d8b70e7a5c8fae86a95c8}
+
+
+Set ndn\+S\+IM 1.\+0 content store implementation and its attributes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+Store\+Class} & string, representing class of the content store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+ndn\+S\+IM 1.\+0 content store implementation have limited support for Interest selectors Do not use these implementations if your scenario relies on proper selector processing. 
+\end{DoxyNote}
+
+
+Definition at line 99 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Update@{Update}}
+\index{Update@{Update}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Update(\+Ptr$<$ Node $>$ node)}{Update(Ptr< Node > node)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Stack\+Helper\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1StackHelper_ac17e4f6451b89425ccabc6ed702f8d99}{}\label{classns3_1_1ndn_1_1StackHelper_ac17e4f6451b89425ccabc6ed702f8d99}
+
+
+Update Ndn stack on a given node (Add faces for new devices) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node on which to update the stack. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 241 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Update@{Update}}
+\index{Update@{Update}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Update(const Node\+Container \&c)}{Update(const NodeContainer \&c)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Stack\+Helper\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{const Node\+Container \&}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1StackHelper_a3cc49b539411921d6ebfa668999db481}{}\label{classns3_1_1ndn_1_1StackHelper_a3cc49b539411921d6ebfa668999db481}
+
+
+Update Ndn stack on given nodes (Add faces for new devices) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The nodes on which to update the stack. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 261 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Update@{Update}}
+\index{Update@{Update}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Update(const std\+::string \&node\+Name)}{Update(const std::string \&nodeName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Stack\+Helper\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1StackHelper_a969bb39ed1a9e11e95885df3ab4bc73d}{}\label{classns3_1_1ndn_1_1StackHelper_a969bb39ed1a9e11e95885df3ab4bc73d}
+
+
+Update Ndn stack on a given node name (Add faces for new devices) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & The name of the node on which to update the stack. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 269 of file ndn-\/stack-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}!Update\+Net\+Device\+Face\+Create\+Callback@{Update\+Net\+Device\+Face\+Create\+Callback}}
+\index{Update\+Net\+Device\+Face\+Create\+Callback@{Update\+Net\+Device\+Face\+Create\+Callback}!ns3\+::ndn\+::\+Stack\+Helper@{ns3\+::ndn\+::\+Stack\+Helper}}
+\subsubsection[{\texorpdfstring{Update\+Net\+Device\+Face\+Create\+Callback(\+Type\+Id net\+Device\+Type, Net\+Device\+Face\+Create\+Callback callback)}{UpdateNetDeviceFaceCreateCallback(TypeId netDeviceType, NetDeviceFaceCreateCallback callback)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Stack\+Helper\+::\+Update\+Net\+Device\+Face\+Create\+Callback (
+\begin{DoxyParamCaption}
+\item[{Type\+Id}]{net\+Device\+Type, }
+\item[{Net\+Device\+Face\+Create\+Callback}]{callback}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1StackHelper_a55fc628833a71bf783dd0dcae887f1f3}{}\label{classns3_1_1ndn_1_1StackHelper_a55fc628833a71bf783dd0dcae887f1f3}
+
+
+Update callback to create and configure instance of the face, based on supplied Ptr$<$\+Node$>$ and Ptr$<$\+Net\+Device$>$ 
+
+It is possible to set up several callbacks for different Net\+Device types.
+
+Using this method, it is possible to override Face creation for Point\+To\+Point\+Net\+Devices 
+
+Definition at line 183 of file ndn-\/stack-\/helper.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/stack-\/helper.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/stack-\/helper.\+cpp\end{DoxyCompactItemize}

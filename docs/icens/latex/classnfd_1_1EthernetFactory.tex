@@ -1,0 +1,112 @@
+\hypertarget{classnfd_1_1EthernetFactory}{}\section{nfd\+:\+:Ethernet\+Factory Class Reference}
+\label{classnfd_1_1EthernetFactory}\index{nfd\+::\+Ethernet\+Factory@{nfd\+::\+Ethernet\+Factory}}
+Inheritance diagram for nfd\+:\+:Ethernet\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1EthernetFactory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1EthernetFactory_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Exception of \hyperlink{classnfd_1_1EthernetFactory}{Ethernet\+Factory}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::pair$<$ std\+::string, \hyperlink{classndn_1_1util_1_1ethernet_1_1Address}{ethernet\+::\+Address} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1EthernetFace}{Ethernet\+Face} $>$ $>$ {\bfseries Multicast\+Face\+Map}\hypertarget{classnfd_1_1EthernetFactory_a0dfac126ee3edffdf6eda8a1a08267a3}{}\label{classnfd_1_1EthernetFactory_a0dfac126ee3edffdf6eda8a1a08267a3}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classnfd_1_1EthernetFactory_a6e89157070fdaad6cccbb43a15e5d730}{create\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const \hyperlink{namespacenfd_a6d4b91580c829552a452c53458381b0f}{Face\+Created\+Callback} \&on\+Created, const \hyperlink{namespacenfd_ae87d4f07de26f4939691439b51f2dd83}{Face\+Connect\+Failed\+Callback} \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1EthernetFace}{Ethernet\+Face} $>$ \hyperlink{classnfd_1_1EthernetFactory_a87afc762540cae4c6f2fc95029fb316e}{create\+Multicast\+Face} (const \hyperlink{classnfd_1_1NetworkInterfaceInfo}{Network\+Interface\+Info} \&interface, const \hyperlink{classndn_1_1util_1_1ethernet_1_1Address}{ethernet\+::\+Address} \&address)
+\begin{DoxyCompactList}\small\item\em Create an \hyperlink{classnfd_1_1EthernetFace}{Ethernet\+Face} to communicate with the given multicast group. \end{DoxyCompactList}\item 
+const Multicast\+Face\+Map \& \hyperlink{classnfd_1_1EthernetFactory_a6ff0a61e8ae82f52f93abb38054f66f3}{get\+Multicast\+Faces} () const\hypertarget{classnfd_1_1EthernetFactory_a6ff0a61e8ae82f52f93abb38054f66f3}{}\label{classnfd_1_1EthernetFactory_a6ff0a61e8ae82f52f93abb38054f66f3}
+
+\begin{DoxyCompactList}\small\item\em Get map of configured multicast faces. \end{DoxyCompactList}\item 
+virtual std\+::list$<$ shared\+\_\+ptr$<$ const \hyperlink{classnfd_1_1Channel}{Channel} $>$ $>$ {\bfseries get\+Channels} () const\hypertarget{classnfd_1_1EthernetFactory_a1222670e2d3e8daa0e5a6334d25c3af3}{}\label{classnfd_1_1EthernetFactory_a1222670e2d3e8daa0e5a6334d25c3af3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file ethernet-\/factory.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Ethernet\+Factory@{nfd\+::\+Ethernet\+Factory}!create\+Face@{create\+Face}}
+\index{create\+Face@{create\+Face}!nfd\+::\+Ethernet\+Factory@{nfd\+::\+Ethernet\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Face(const Face\+Uri \&uri, ndn\+::nfd\+::\+Face\+Persistency persistency, const Face\+Created\+Callback \&on\+Created, const Face\+Connect\+Failed\+Callback \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{createFace(const FaceUri \&uri, ndn::nfd::FacePersistency persistency, const FaceCreatedCallback \&onCreated, const FaceConnectFailedCallback \&onConnectFailed) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Ethernet\+Factory\+::create\+Face (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{uri, }
+\item[{{\bf ndn\+::nfd\+::\+Face\+Persistency}}]{persistency, }
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Created, }
+\item[{const {\bf Face\+Connect\+Failed\+Callback} \&}]{on\+Connect\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1EthernetFactory_a6e89157070fdaad6cccbb43a15e5d730}{}\label{classnfd_1_1EthernetFactory_a6e89157070fdaad6cccbb43a15e5d730}
+
+
+Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. 
+
+This method should automatically choose channel, based on supplied Face\+Uri and create face.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1EthernetFactory_1_1Error}{Error}} & Factory does not support connect operation \\
+\hline
+{\em \hyperlink{classnfd_1_1EthernetFactory_1_1Error}{Error}} & specified {\ttfamily persistency} is not supported \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}{nfd\+::\+Protocol\+Factory}.
+
+
+
+Definition at line 69 of file ethernet-\/factory.\+cpp.
+
+\index{nfd\+::\+Ethernet\+Factory@{nfd\+::\+Ethernet\+Factory}!create\+Multicast\+Face@{create\+Multicast\+Face}}
+\index{create\+Multicast\+Face@{create\+Multicast\+Face}!nfd\+::\+Ethernet\+Factory@{nfd\+::\+Ethernet\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Multicast\+Face(const Network\+Interface\+Info \&interface, const ethernet\+::\+Address \&address)}{createMulticastFace(const NetworkInterfaceInfo \&interface, const ethernet::Address \&address)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Ethernet\+Face} $>$ nfd\+::\+Ethernet\+Factory\+::create\+Multicast\+Face (
+\begin{DoxyParamCaption}
+\item[{const {\bf Network\+Interface\+Info} \&}]{interface, }
+\item[{const {\bf ethernet\+::\+Address} \&}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1EthernetFactory_a87afc762540cae4c6f2fc95029fb316e}{}\label{classnfd_1_1EthernetFactory_a87afc762540cae4c6f2fc95029fb316e}
+
+
+Create an \hyperlink{classnfd_1_1EthernetFace}{Ethernet\+Face} to communicate with the given multicast group. 
+
+If this method is called twice with the same interface and group, only one face will be created. Instead, the second call will just retrieve the existing face.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interface} & Local network interface \\
+\hline
+{\em address} & Ethernet broadcast/multicast destination address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+always a valid shared pointer to an \hyperlink{classnfd_1_1EthernetFace}{Ethernet\+Face} object, an exception will be thrown if the creation fails
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1EthernetFactory_1_1Error}{Ethernet\+Factory\+::\+Error}} & or \hyperlink{structnfd_1_1EthernetFace_1_1Error}{Ethernet\+Face\+::\+Error} \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 35 of file ethernet-\/factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ethernet-\/factory.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ethernet-\/factory.\+cpp\end{DoxyCompactItemize}

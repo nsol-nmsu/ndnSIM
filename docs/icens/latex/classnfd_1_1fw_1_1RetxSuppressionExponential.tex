@@ -1,0 +1,90 @@
+\hypertarget{classnfd_1_1fw_1_1RetxSuppressionExponential}{}\section{nfd\+:\+:fw\+:\+:Retx\+Suppression\+Exponential Class Reference}
+\label{classnfd_1_1fw_1_1RetxSuppressionExponential}\index{nfd\+::fw\+::\+Retx\+Suppression\+Exponential@{nfd\+::fw\+::\+Retx\+Suppression\+Exponential}}
+
+
+a retransmission suppression decision algorithm that suppresses retransmissions using exponential backoff  
+
+
+
+
+{\ttfamily \#include $<$retx-\/suppression-\/exponential.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fw\+:\+:Retx\+Suppression\+Exponential\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1fw_1_1RetxSuppressionExponential}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1fw_1_1RetxSuppressionExponential_1_1PitInfo}{Pit\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef time\+::microseconds \hyperlink{classnfd_1_1fw_1_1RetxSuppressionExponential_a8bf25d84d9b6756133a9c0822e0a4f7b}{Duration}\hypertarget{classnfd_1_1fw_1_1RetxSuppressionExponential_a8bf25d84d9b6756133a9c0822e0a4f7b}{}\label{classnfd_1_1fw_1_1RetxSuppressionExponential_a8bf25d84d9b6756133a9c0822e0a4f7b}
+
+\begin{DoxyCompactList}\small\item\em time granularity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Retx\+Suppression\+Exponential} (const \hyperlink{classnfd_1_1fw_1_1RetxSuppressionExponential_a8bf25d84d9b6756133a9c0822e0a4f7b}{Duration} \&initial\+Interval=D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL, float multiplier=D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER, const \hyperlink{classnfd_1_1fw_1_1RetxSuppressionExponential_a8bf25d84d9b6756133a9c0822e0a4f7b}{Duration} \&max\+Interval=D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL)\hypertarget{classnfd_1_1fw_1_1RetxSuppressionExponential_a7db9fb5c4c5eb8f71c6cc9d71ed119a9}{}\label{classnfd_1_1fw_1_1RetxSuppressionExponential_a7db9fb5c4c5eb8f71c6cc9d71ed119a9}
+
+\item 
+virtual \hyperlink{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82}{Result} \hyperlink{classnfd_1_1fw_1_1RetxSuppressionExponential_a1ea5e8d165e47b74a4526027a054a06e}{decide} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry) const D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1fw_1_1RetxSuppressionExponential_a1ea5e8d165e47b74a4526027a054a06e}{}\label{classnfd_1_1fw_1_1RetxSuppressionExponential_a1ea5e8d165e47b74a4526027a054a06e}
+
+\begin{DoxyCompactList}\small\item\em determines whether Interest is a retransmission, and if so, whether it shall be forwarded or suppressed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classnfd_1_1fw_1_1RetxSuppressionExponential_a8bf25d84d9b6756133a9c0822e0a4f7b}{Duration} {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL}
+\item 
+static const float {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+U\+L\+T\+I\+P\+L\+I\+ER} = 2.\+0\hypertarget{classnfd_1_1fw_1_1RetxSuppressionExponential_a5b7b79198c59a056dfe8a0ed46ae4201}{}\label{classnfd_1_1fw_1_1RetxSuppressionExponential_a5b7b79198c59a056dfe8a0ed46ae4201}
+
+\item 
+static const \hyperlink{classnfd_1_1fw_1_1RetxSuppressionExponential_a8bf25d84d9b6756133a9c0822e0a4f7b}{Duration} {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+a retransmission suppression decision algorithm that suppresses retransmissions using exponential backoff 
+
+The i-\/th retransmission will be suppressed if the last transmission (out-\/record) occurred within M\+IN(initial\+Interval $\ast$ multiplier$^\wedge$(i-\/1), max\+Interval) 
+
+Definition at line 40 of file retx-\/suppression-\/exponential.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{nfd\+::fw\+::\+Retx\+Suppression\+Exponential@{nfd\+::fw\+::\+Retx\+Suppression\+Exponential}!D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!nfd\+::fw\+::\+Retx\+Suppression\+Exponential@{nfd\+::fw\+::\+Retx\+Suppression\+Exponential}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{DEFAULT\_INITIAL\_INTERVAL}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Retx\+Suppression\+Exponential\+::\+Duration} nfd\+::fw\+::\+Retx\+Suppression\+Exponential\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classnfd_1_1fw_1_1RetxSuppressionExponential_a66f15d5d071b7f42358ac75fc4436fc0}{}\label{classnfd_1_1fw_1_1RetxSuppressionExponential_a66f15d5d071b7f42358ac75fc4436fc0}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+    time::milliseconds(1)
+\end{DoxyCode}
+
+
+Definition at line 62 of file retx-\/suppression-\/exponential.\+hpp.
+
+\index{nfd\+::fw\+::\+Retx\+Suppression\+Exponential@{nfd\+::fw\+::\+Retx\+Suppression\+Exponential}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!nfd\+::fw\+::\+Retx\+Suppression\+Exponential@{nfd\+::fw\+::\+Retx\+Suppression\+Exponential}}
+\subsubsection[{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL}{DEFAULT\_MAX\_INTERVAL}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Retx\+Suppression\+Exponential\+::\+Duration} nfd\+::fw\+::\+Retx\+Suppression\+Exponential\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classnfd_1_1fw_1_1RetxSuppressionExponential_aead556e60aa06b22f8d395601d0d3500}{}\label{classnfd_1_1fw_1_1RetxSuppressionExponential_aead556e60aa06b22f8d395601d0d3500}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+    time::milliseconds(250)
+\end{DoxyCode}
+
+
+Definition at line 67 of file retx-\/suppression-\/exponential.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/retx-\/suppression-\/exponential.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/retx-\/suppression-\/exponential.\+cpp\end{DoxyCompactItemize}

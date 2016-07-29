@@ -1,0 +1,149 @@
+\hypertarget{classndn_1_1util_1_1NotificationSubscriber}{}\section{ndn\+:\+:util\+:\+:Notification\+Subscriber$<$ Notification $>$ Class Template Reference}
+\label{classndn_1_1util_1_1NotificationSubscriber}\index{ndn\+::util\+::\+Notification\+Subscriber$<$ Notification $>$@{ndn\+::util\+::\+Notification\+Subscriber$<$ Notification $>$}}
+
+
+provides a subscriber of Notification Stream  
+
+
+
+
+{\ttfamily \#include $<$notification-\/subscriber.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:Notification\+Subscriber$<$ Notification $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1NotificationSubscriber}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+C\+O\+N\+C\+E\+P\+T\+\_\+\+A\+S\+S\+E\+RT} ((boost\+::\+Default\+Constructible$<$ Notification $>$))\hypertarget{classndn_1_1util_1_1NotificationSubscriber_a425199131097eb38cb0b207b78aa03d9}{}\label{classndn_1_1util_1_1NotificationSubscriber_a425199131097eb38cb0b207b78aa03d9}
+
+\item 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+C\+O\+N\+C\+E\+P\+T\+\_\+\+A\+S\+S\+E\+RT} ((\hyperlink{classndn_1_1WireDecodable}{Wire\+Decodable}$<$ Notification $>$))\hypertarget{classndn_1_1util_1_1NotificationSubscriber_a0feb289bd33da4945b9149eaa65b2292}{}\label{classndn_1_1util_1_1NotificationSubscriber_a0feb289bd33da4945b9149eaa65b2292}
+
+\item 
+\hyperlink{classndn_1_1util_1_1NotificationSubscriber_a75215cf39f1142a7f24190c2c87005a0}{Notification\+Subscriber} (\hyperlink{classndn_1_1Face}{Face} \&face, const \hyperlink{classndn_1_1Name}{Name} \&prefix, const time\+::milliseconds \&interest\+Lifetime=time\+::milliseconds(60000))
+\begin{DoxyCompactList}\small\item\em construct a \hyperlink{classndn_1_1util_1_1NotificationSubscriber}{Notification\+Subscriber} \end{DoxyCompactList}\item 
+time\+::milliseconds \hyperlink{classndn_1_1util_1_1NotificationSubscriber_aac77b0d8e064ff8797cdf749872cf63e}{get\+Interest\+Lifetime} () const
+\item 
+bool {\bfseries is\+Running} () const\hypertarget{classndn_1_1util_1_1NotificationSubscriber_a8cc904a89164d11f5f7645ca7953f45c}{}\label{classndn_1_1util_1_1NotificationSubscriber_a8cc904a89164d11f5f7645ca7953f45c}
+
+\item 
+void \hyperlink{classndn_1_1util_1_1NotificationSubscriber_a5ab65643c1131fe472034c320a204cd6}{start} ()
+\begin{DoxyCompactList}\small\item\em start or resume receiving notifications \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1NotificationSubscriber_a666f76ce04a80ce2a187319f6eb900b6}{stop} ()\hypertarget{classndn_1_1util_1_1NotificationSubscriber_a666f76ce04a80ce2a187319f6eb900b6}{}\label{classndn_1_1util_1_1NotificationSubscriber_a666f76ce04a80ce2a187319f6eb900b6}
+
+\begin{DoxyCompactList}\small\item\em stop receiving notifications \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classndn_1_1util_1_1NotificationSubscriber}{Notification\+Subscriber}, Notification $>$ \hyperlink{classndn_1_1util_1_1NotificationSubscriber_aeb09277ce44cf0308578a8de40af37c4}{on\+Notification}
+\begin{DoxyCompactList}\small\item\em fires when a Notification is received \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classndn_1_1util_1_1NotificationSubscriber}{Notification\+Subscriber} $>$ \hyperlink{classndn_1_1util_1_1NotificationSubscriber_a9bbfb204fc59a8038bbd8c67c40c435e}{on\+Timeout}\hypertarget{classndn_1_1util_1_1NotificationSubscriber_a9bbfb204fc59a8038bbd8c67c40c435e}{}\label{classndn_1_1util_1_1NotificationSubscriber_a9bbfb204fc59a8038bbd8c67c40c435e}
+
+\begin{DoxyCompactList}\small\item\em fires when no Notification is received within .get\+Interest\+Lifetime period \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classndn_1_1util_1_1NotificationSubscriber}{Notification\+Subscriber}, \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classndn_1_1util_1_1NotificationSubscriber_a122e88e4f2247f4d230c4a5bdd043625}{on\+Decode\+Error}\hypertarget{classndn_1_1util_1_1NotificationSubscriber_a122e88e4f2247f4d230c4a5bdd043625}{}\label{classndn_1_1util_1_1NotificationSubscriber_a122e88e4f2247f4d230c4a5bdd043625}
+
+\begin{DoxyCompactList}\small\item\em fires when a \hyperlink{classndn_1_1Data}{Data} packet in the Notification Stream cannot be decoded as Notification \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Notification$>$\\*
+class ndn\+::util\+::\+Notification\+Subscriber$<$ Notification $>$}
+
+provides a subscriber of Notification Stream 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/Notification}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Notification} 
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Notification} & type of Notification item, appears in payload of \hyperlink{classndn_1_1Data}{Data} packets \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 64 of file notification-\/subscriber.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::util\+::\+Notification\+Subscriber@{ndn\+::util\+::\+Notification\+Subscriber}!Notification\+Subscriber@{Notification\+Subscriber}}
+\index{Notification\+Subscriber@{Notification\+Subscriber}!ndn\+::util\+::\+Notification\+Subscriber@{ndn\+::util\+::\+Notification\+Subscriber}}
+\subsubsection[{\texorpdfstring{Notification\+Subscriber(\+Face \&face, const Name \&prefix, const time\+::milliseconds \&interest\+Lifetime=time\+::milliseconds(60000))}{NotificationSubscriber(Face \&face, const Name \&prefix, const time::milliseconds \&interestLifetime=time::milliseconds(60000))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Notification$>$ {\bf ndn\+::util\+::\+Notification\+Subscriber}$<$ Notification $>$\+::{\bf Notification\+Subscriber} (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face, }
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const time\+::milliseconds \&}]{interest\+Lifetime = {\ttfamily time\+:\+:milliseconds(60000)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1NotificationSubscriber_a75215cf39f1142a7f24190c2c87005a0}{}\label{classndn_1_1util_1_1NotificationSubscriber_a75215cf39f1142a7f24190c2c87005a0}
+
+
+construct a \hyperlink{classndn_1_1util_1_1NotificationSubscriber}{Notification\+Subscriber} 
+
+\begin{DoxyNote}{Note}
+The subscriber is not started after construction. User should add one or more handlers to on\+Notification, and invoke .\hyperlink{classndn_1_1util_1_1NotificationSubscriber_a5ab65643c1131fe472034c320a204cd6}{start()}. 
+\end{DoxyNote}
+
+
+Definition at line 74 of file notification-\/subscriber.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+Notification\+Subscriber@{ndn\+::util\+::\+Notification\+Subscriber}!get\+Interest\+Lifetime@{get\+Interest\+Lifetime}}
+\index{get\+Interest\+Lifetime@{get\+Interest\+Lifetime}!ndn\+::util\+::\+Notification\+Subscriber@{ndn\+::util\+::\+Notification\+Subscriber}}
+\subsubsection[{\texorpdfstring{get\+Interest\+Lifetime() const}{getInterestLifetime() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Notification$>$ time\+::milliseconds {\bf ndn\+::util\+::\+Notification\+Subscriber}$<$ Notification $>$\+::get\+Interest\+Lifetime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1NotificationSubscriber_aac77b0d8e064ff8797cdf749872cf63e}{}\label{classndn_1_1util_1_1NotificationSubscriber_aac77b0d8e064ff8797cdf749872cf63e}
+\begin{DoxyReturn}{Returns}
+Interest\+Lifetime of Interests to retrieve notifications
+\end{DoxyReturn}
+This must be greater than Freshness\+Period of Notification \hyperlink{classndn_1_1Data}{Data} packets, to ensure correct operation of this subscriber implementation. 
+
+Definition at line 95 of file notification-\/subscriber.\+hpp.
+
+\index{ndn\+::util\+::\+Notification\+Subscriber@{ndn\+::util\+::\+Notification\+Subscriber}!start@{start}}
+\index{start@{start}!ndn\+::util\+::\+Notification\+Subscriber@{ndn\+::util\+::\+Notification\+Subscriber}}
+\subsubsection[{\texorpdfstring{start()}{start()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Notification$>$ void {\bf ndn\+::util\+::\+Notification\+Subscriber}$<$ Notification $>$\+::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1NotificationSubscriber_a5ab65643c1131fe472034c320a204cd6}{}\label{classndn_1_1util_1_1NotificationSubscriber_a5ab65643c1131fe472034c320a204cd6}
+
+
+start or resume receiving notifications 
+
+\begin{DoxyNote}{Note}
+on\+Notification must have at least one listener, otherwise this operation has no effect. 
+\end{DoxyNote}
+
+
+Definition at line 111 of file notification-\/subscriber.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{ndn\+::util\+::\+Notification\+Subscriber@{ndn\+::util\+::\+Notification\+Subscriber}!on\+Notification@{on\+Notification}}
+\index{on\+Notification@{on\+Notification}!ndn\+::util\+::\+Notification\+Subscriber@{ndn\+::util\+::\+Notification\+Subscriber}}
+\subsubsection[{\texorpdfstring{on\+Notification}{onNotification}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Notification$>$ {\bf signal\+::\+Signal}$<${\bf Notification\+Subscriber}, Notification$>$ {\bf ndn\+::util\+::\+Notification\+Subscriber}$<$ Notification $>$\+::on\+Notification}\hypertarget{classndn_1_1util_1_1NotificationSubscriber_aeb09277ce44cf0308578a8de40af37c4}{}\label{classndn_1_1util_1_1NotificationSubscriber_aeb09277ce44cf0308578a8de40af37c4}
+
+
+fires when a Notification is received 
+
+\begin{DoxyNote}{Note}
+Removing all handlers will cause the subscriber to stop. 
+\end{DoxyNote}
+
+
+Definition at line 138 of file notification-\/subscriber.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/notification-\/subscriber.\+hpp\end{DoxyCompactItemize}

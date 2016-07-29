@@ -1,0 +1,75 @@
+\hypertarget{classndn_1_1time_1_1system__clock}{}\section{ndn\+:\+:time\+:\+:system\+\_\+clock Class Reference}
+\label{classndn_1_1time_1_1system__clock}\index{ndn\+::time\+::system\+\_\+clock@{ndn\+::time\+::system\+\_\+clock}}
+
+
+System clock.  
+
+
+
+
+{\ttfamily \#include $<$time.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef B\+O\+O\+S\+T\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+C\+K\+\_\+\+D\+U\+R\+A\+T\+I\+ON {\bfseries duration}\hypertarget{classndn_1_1time_1_1system__clock_afcfad822a88d02cd0f37f17875d3fcbd}{}\label{classndn_1_1time_1_1system__clock_afcfad822a88d02cd0f37f17875d3fcbd}
+
+\item 
+typedef duration\+::rep {\bfseries rep}\hypertarget{classndn_1_1time_1_1system__clock_a6ea654d1b067b4a432f52a183c726711}{}\label{classndn_1_1time_1_1system__clock_a6ea654d1b067b4a432f52a183c726711}
+
+\item 
+typedef duration\+::period {\bfseries period}\hypertarget{classndn_1_1time_1_1system__clock_a051c5e52ca8eedd096b06414453e3960}{}\label{classndn_1_1time_1_1system__clock_a051c5e52ca8eedd096b06414453e3960}
+
+\item 
+typedef boost\+::chrono\+::time\+\_\+point$<$ \hyperlink{classndn_1_1time_1_1system__clock}{system\+\_\+clock} $>$ {\bfseries time\+\_\+point}\hypertarget{classndn_1_1time_1_1system__clock_a1259c8af5df6f864be63b2674a47e44f}{}\label{classndn_1_1time_1_1system__clock_a1259c8af5df6f864be63b2674a47e44f}
+
+\item 
+typedef time\+\_\+point {\bfseries Time\+Point}\hypertarget{classndn_1_1time_1_1system__clock_a4912f5491929e693b0668148c284be79}{}\label{classndn_1_1time_1_1system__clock_a4912f5491929e693b0668148c284be79}
+
+\item 
+typedef duration {\bfseries Duration}\hypertarget{classndn_1_1time_1_1system__clock_ae246cdcbfb31b87c73cc5c4ef2fe1c56}{}\label{classndn_1_1time_1_1system__clock_ae246cdcbfb31b87c73cc5c4ef2fe1c56}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static time\+\_\+point {\bfseries now} () noexcept\hypertarget{classndn_1_1time_1_1system__clock_a26d280f8217a97cd6b0adcf97a3110d9}{}\label{classndn_1_1time_1_1system__clock_a26d280f8217a97cd6b0adcf97a3110d9}
+
+\item 
+static std\+::time\+\_\+t {\bfseries to\+\_\+time\+\_\+t} (const time\+\_\+point \&t) noexcept\hypertarget{classndn_1_1time_1_1system__clock_a6762a357c9c84174010c4a07e5238e2e}{}\label{classndn_1_1time_1_1system__clock_a6762a357c9c84174010c4a07e5238e2e}
+
+\item 
+static time\+\_\+point {\bfseries from\+\_\+time\+\_\+t} (std\+::time\+\_\+t t) noexcept\hypertarget{classndn_1_1time_1_1system__clock_ae015e57a551a51bcd216fc573489d7be}{}\label{classndn_1_1time_1_1system__clock_ae015e57a551a51bcd216fc573489d7be}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool {\bfseries is\+\_\+steady} = false\hypertarget{classndn_1_1time_1_1system__clock_ad4393056f72433a158459e5fb8c7c5f0}{}\label{classndn_1_1time_1_1system__clock_ad4393056f72433a158459e5fb8c7c5f0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+System clock. 
+
+System clock represents the system-\/wide real time wall clock.
+
+It may not be monotonic\+: on most systems, the system time can be adjusted at any moment. It is the only clock that has the ability to be displayed and converted to/from U\+N\+IX timestamp.
+
+To get current Time\+Point\+:
+
+{\ttfamily  system\+\_\+clock\+::\+Time\+Point now = system\+\_\+clock\+::now(); }
+
+To convert Time\+Point to/from U\+N\+IX timestamp\+:
+
+{\ttfamily  system\+\_\+clock\+::\+Time\+Point time = ...; uint64\+\_\+t timestamp\+In\+Milliseconds = to\+Unix\+Timestamp(time).count(); system\+\_\+clock\+::\+Time\+Point time2 = from\+Unix\+Timestamp(milliseconds(timestamp\+In\+Milliseconds)); } 
+
+Definition at line 69 of file time.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/time.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/time.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,168 @@
+\hypertarget{classns3_1_1ndn_1_1L3Tracer}{}\section{ns3\+:\+:ndn\+:\+:L3\+Tracer Class Reference}
+\label{classns3_1_1ndn_1_1L3Tracer}\index{ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}}
+
+
+Base class for network-\/layer (incoming/outgoing Interests and Data) tracing of N\+DN stack.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/l3-\/tracer.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:L3\+Tracer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1L3Tracer}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structns3_1_1ndn_1_1L3Tracer_1_1Stats}{Stats}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1L3Tracer_a15efa2835cfdaf9f5f2111d6e49cf958}{L3\+Tracer} (Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Trace constructor that attaches to the node using node pointer. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1L3Tracer_a88b138d7150da2502e6e8739e7b4230e}{L3\+Tracer} (const std\+::string \&node)
+\begin{DoxyCompactList}\small\item\em Trace constructor that attaches to the node using node name. \end{DoxyCompactList}\item 
+virtual \hyperlink{classns3_1_1ndn_1_1L3Tracer_a9e84682d3049ff8be7049d247c13b2c9}{$\sim$\+L3\+Tracer} ()\hypertarget{classns3_1_1ndn_1_1L3Tracer_a9e84682d3049ff8be7049d247c13b2c9}{}\label{classns3_1_1ndn_1_1L3Tracer_a9e84682d3049ff8be7049d247c13b2c9}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1L3Tracer_a899a814836ce179c610c469a7f3889e4}{Print\+Header} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em Print head of the trace (e.\+g., for post-\/processing) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1L3Tracer_a1302456f491afcb016b8b0c7121bdaf0}{Print} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em Print current trace data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Connect} ()\hypertarget{classns3_1_1ndn_1_1L3Tracer_a1928711226e3c3c291f53b5c2990c428}{}\label{classns3_1_1ndn_1_1L3Tracer_a1928711226e3c3c291f53b5c2990c428}
+
+\item 
+virtual void {\bfseries Out\+Interests} (const Interest \&, const \hyperlink{classnfd_1_1Face}{Face} \&)=0\hypertarget{classns3_1_1ndn_1_1L3Tracer_a4d2328f207aca793454fb16738c33729}{}\label{classns3_1_1ndn_1_1L3Tracer_a4d2328f207aca793454fb16738c33729}
+
+\item 
+virtual void {\bfseries In\+Interests} (const Interest \&, const \hyperlink{classnfd_1_1Face}{Face} \&)=0\hypertarget{classns3_1_1ndn_1_1L3Tracer_a16b08d425d08a491191b21057d0098ec}{}\label{classns3_1_1ndn_1_1L3Tracer_a16b08d425d08a491191b21057d0098ec}
+
+\item 
+virtual void {\bfseries Out\+Data} (const Data \&, const \hyperlink{classnfd_1_1Face}{Face} \&)=0\hypertarget{classns3_1_1ndn_1_1L3Tracer_aa9074ef51a4cff7accfee90b3196f244}{}\label{classns3_1_1ndn_1_1L3Tracer_aa9074ef51a4cff7accfee90b3196f244}
+
+\item 
+virtual void {\bfseries In\+Data} (const Data \&, const \hyperlink{classnfd_1_1Face}{Face} \&)=0\hypertarget{classns3_1_1ndn_1_1L3Tracer_ab241eba244a10c74e39991a6939dae8f}{}\label{classns3_1_1ndn_1_1L3Tracer_ab241eba244a10c74e39991a6939dae8f}
+
+\item 
+virtual void {\bfseries Satisfied\+Interests} (const \hyperlink{classnfd_1_1pit_1_1Entry}{nfd\+::pit\+::\+Entry} \&, const \hyperlink{classnfd_1_1Face}{Face} \&, const Data \&)=0\hypertarget{classns3_1_1ndn_1_1L3Tracer_a5b5c708f9758affdb81c206707de56e2}{}\label{classns3_1_1ndn_1_1L3Tracer_a5b5c708f9758affdb81c206707de56e2}
+
+\item 
+virtual void {\bfseries Timed\+Out\+Interests} (const \hyperlink{classnfd_1_1pit_1_1Entry}{nfd\+::pit\+::\+Entry} \&)=0\hypertarget{classns3_1_1ndn_1_1L3Tracer_a943139a4f75a212fef33b438e17babf9}{}\label{classns3_1_1ndn_1_1L3Tracer_a943139a4f75a212fef33b438e17babf9}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+node}\hypertarget{classns3_1_1ndn_1_1L3Tracer_ac0bc22e1cbf9ac6168df554f7b4d3fbf}{}\label{classns3_1_1ndn_1_1L3Tracer_ac0bc22e1cbf9ac6168df554f7b4d3fbf}
+
+\item 
+Ptr$<$ Node $>$ {\bfseries m\+\_\+node\+Ptr}\hypertarget{classns3_1_1ndn_1_1L3Tracer_a46d3b2e1dc34a7b474354f6457ea38c6}{}\label{classns3_1_1ndn_1_1L3Tracer_a46d3b2e1dc34a7b474354f6457ea38c6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for network-\/layer (incoming/outgoing Interests and Data) tracing of N\+DN stack. 
+
+Definition at line 46 of file ndn-\/l3-\/tracer.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}!L3\+Tracer@{L3\+Tracer}}
+\index{L3\+Tracer@{L3\+Tracer}!ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}}
+\subsubsection[{\texorpdfstring{L3\+Tracer(\+Ptr$<$ Node $>$ node)}{L3Tracer(Ptr< Node > node)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+L3\+Tracer\+::\+L3\+Tracer (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1L3Tracer_a15efa2835cfdaf9f5f2111d6e49cf958}{}\label{classns3_1_1ndn_1_1L3Tracer_a15efa2835cfdaf9f5f2111d6e49cf958}
+
+
+Trace constructor that attaches to the node using node pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & pointer to the node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file ndn-\/l3-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}!L3\+Tracer@{L3\+Tracer}}
+\index{L3\+Tracer@{L3\+Tracer}!ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}}
+\subsubsection[{\texorpdfstring{L3\+Tracer(const std\+::string \&node)}{L3Tracer(const std::string \&node)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+L3\+Tracer\+::\+L3\+Tracer (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1L3Tracer_a88b138d7150da2502e6e8739e7b4230e}{}\label{classns3_1_1ndn_1_1L3Tracer_a88b138d7150da2502e6e8739e7b4230e}
+
+
+Trace constructor that attaches to the node using node name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & name of the node registered using Names\+::\+Add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file ndn-\/l3-\/tracer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}!Print@{Print}}
+\index{Print@{Print}!ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}}
+\subsubsection[{\texorpdfstring{Print(std\+::ostream \&os) const =0}{Print(std::ostream \&os) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ns3\+::ndn\+::\+L3\+Tracer\+::\+Print (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classns3_1_1ndn_1_1L3Tracer_a1302456f491afcb016b8b0c7121bdaf0}{}\label{classns3_1_1ndn_1_1L3Tracer_a1302456f491afcb016b8b0c7121bdaf0}
+
+
+Print current trace data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to output stream \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classns3_1_1ndn_1_1L3RateTracer_afd92b9548281a6bf35231cf36d82d106}{ns3\+::ndn\+::\+L3\+Rate\+Tracer}.
+
+\index{ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}!Print\+Header@{Print\+Header}}
+\index{Print\+Header@{Print\+Header}!ns3\+::ndn\+::\+L3\+Tracer@{ns3\+::ndn\+::\+L3\+Tracer}}
+\subsubsection[{\texorpdfstring{Print\+Header(std\+::ostream \&os) const =0}{PrintHeader(std::ostream \&os) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ns3\+::ndn\+::\+L3\+Tracer\+::\+Print\+Header (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classns3_1_1ndn_1_1L3Tracer_a899a814836ce179c610c469a7f3889e4}{}\label{classns3_1_1ndn_1_1L3Tracer_a899a814836ce179c610c469a7f3889e4}
+
+
+Print head of the trace (e.\+g., for post-\/processing) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to output stream \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classns3_1_1ndn_1_1L3RateTracer_ae22420a70f3a31d917dc8101dbed8434}{ns3\+::ndn\+::\+L3\+Rate\+Tracer}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/ndn-\/l3-\/tracer.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/ndn-\/l3-\/tracer.\+cpp\end{DoxyCompactItemize}

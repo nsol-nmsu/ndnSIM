@@ -1,0 +1,366 @@
+\hypertarget{classndn_1_1nfd_1_1CommandOptions}{}\section{ndn\+:\+:nfd\+:\+:Command\+Options Class Reference}
+\label{classndn_1_1nfd_1_1CommandOptions}\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+
+
+contains options for \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} execution  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/command-\/options.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594}{Signing\+Params\+Kind} \{ \hyperlink{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594a3a2eaec02899dccbe1ba79d586dd49f5}{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+D\+E\+F\+A\+U\+LT}, 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594a4526402da9c586bc63c8cc5b5f86e615}{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+I\+D\+E\+N\+T\+I\+TY}, 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594abab1ec30c4a99657b0791742d01f2bda}{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+TE}
+ \}\begin{DoxyCompactList}\small\item\em indicates the selection of signing parameters \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_aa7753d9c97f36208ef0741458ccb87fa}{Command\+Options} ()
+\begin{DoxyCompactList}\small\item\em constructs \hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \end{DoxyCompactList}\item 
+const time\+::milliseconds \& \hyperlink{classndn_1_1nfd_1_1CommandOptions_a4cf2fdc352eee9d2e8f0defb01341ba7}{get\+Timeout} () const
+\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \& \hyperlink{classndn_1_1nfd_1_1CommandOptions_a31c56101663d79e00bdc612c4381c1af}{set\+Timeout} (const time\+::milliseconds \&timeout)
+\begin{DoxyCompactList}\small\item\em sets command timeout \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1nfd_1_1CommandOptions_a34e3ac8034371ebcc600999c9a8b5be2}{get\+Prefix} () const
+\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \& \hyperlink{classndn_1_1nfd_1_1CommandOptions_a314f9c90f2b25b6276b6a117c047f590}{set\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em sets command prefix \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info} \& \hyperlink{classndn_1_1nfd_1_1CommandOptions_a80ace7f3bed1f1586bdb3bd46d898f13}{get\+Signing\+Info} () const
+\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \& \hyperlink{classndn_1_1nfd_1_1CommandOptions_ac79642243559a5a265d0d6e2feab1f4a}{set\+Signing\+Info} (const \hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info} \&signing\+Info)
+\begin{DoxyCompactList}\small\item\em sets signing parameters \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_ac2e48d640e60d11b696a2587b37b131d}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (\hyperlink{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594}{Signing\+Params\+Kind} get\+Signing\+Params\+Kind() const)
+\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a683025be25c11b8c663e20c807d8eaef}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (const \hyperlink{classndn_1_1Name}{Name} \&get\+Signing\+Identity() const)
+\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_afae3078789835dec1e38104725025d21}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (const \hyperlink{classndn_1_1Name}{Name} \&get\+Signing\+Certificate() const)
+\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_abf86d4348ccf52b2ad3279927cf6af37}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (\hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \&set\+Signing\+Default())
+\begin{DoxyCompactList}\small\item\em chooses to use default identity and certificate \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a7ba5414b329dd366a7788734b16a1cd3}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (\hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \&set\+Signing\+Identity(const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name))
+\begin{DoxyCompactList}\small\item\em chooses to use a specific identity and its default certificate \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a5c639d07a0ca7316479955f7df5fc437}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (\hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \&set\+Signing\+Certificate(const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name))
+\begin{DoxyCompactList}\small\item\em chooses to use a specific identity certificate \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a56e78b886017b88d30bfb09ac3f60aff}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (\hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \&set\+Signing\+Certificate(const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate))
+\begin{DoxyCompactList}\small\item\em chooses to use a specific identity certificate \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const time\+::milliseconds \hyperlink{classndn_1_1nfd_1_1CommandOptions_a1af36dc55ce0311236a8d0c57724e340}{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+O\+UT}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a1af36dc55ce0311236a8d0c57724e340}{}\label{classndn_1_1nfd_1_1CommandOptions_a1af36dc55ce0311236a8d0c57724e340}
+
+\begin{DoxyCompactList}\small\item\em gives the default command timeout\+: 10000ms \end{DoxyCompactList}\item 
+static const \hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1nfd_1_1CommandOptions_a9fd982f233bb82c2a93b2be263eefd15}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+E\+F\+IX}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a9fd982f233bb82c2a93b2be263eefd15}{}\label{classndn_1_1nfd_1_1CommandOptions_a9fd982f233bb82c2a93b2be263eefd15}
+
+\begin{DoxyCompactList}\small\item\em gives the default command prefix\+: ndn\+:/localhost/nfd \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains options for \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} execution 
+
+\begin{DoxyNote}{Note}
+This type is intentionally copyable 
+\end{DoxyNote}
+
+
+Definition at line 39 of file nfd-\/command-\/options.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!Signing\+Params\+Kind@{Signing\+Params\+Kind}}
+\index{Signing\+Params\+Kind@{Signing\+Params\+Kind}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{Signing\+Params\+Kind}{SigningParamsKind}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ndn\+::nfd\+::\+Command\+Options\+::\+Signing\+Params\+Kind}}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594}{}\label{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594}
+
+
+indicates the selection of signing parameters 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000018}{Deprecated}]use get\+Signing\+Info and set\+Signing\+Info \end{DoxyRefDesc}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+D\+E\+F\+A\+U\+LT}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+D\+E\+F\+A\+U\+LT@{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+D\+E\+F\+A\+U\+LT}}\item[{\em 
+S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+D\+E\+F\+A\+U\+LT\hypertarget{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594a3a2eaec02899dccbe1ba79d586dd49f5}{}\label{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594a3a2eaec02899dccbe1ba79d586dd49f5}
+}]picks the default signing identity and certificate \index{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+I\+D\+E\+N\+T\+I\+TY@{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+I\+D\+E\+N\+T\+I\+TY}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+I\+D\+E\+N\+T\+I\+TY@{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+I\+D\+E\+N\+T\+I\+TY}}\item[{\em 
+S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+I\+D\+E\+N\+T\+I\+TY\hypertarget{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594a4526402da9c586bc63c8cc5b5f86e615}{}\label{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594a4526402da9c586bc63c8cc5b5f86e615}
+}]picks the default certificate of a specific identity \hyperlink{classndn_1_1Name}{Name} \index{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+TE@{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+TE}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+TE@{S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+TE}}\item[{\em 
+S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+TE\hypertarget{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594abab1ec30c4a99657b0791742d01f2bda}{}\label{classndn_1_1nfd_1_1CommandOptions_a8ff10b025de45d0451470ccf83af5594abab1ec30c4a99657b0791742d01f2bda}
+}]picks a specific identity certificate \end{description}
+\end{Desc}
+
+
+Definition at line 98 of file nfd-\/command-\/options.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!Command\+Options@{Command\+Options}}
+\index{Command\+Options@{Command\+Options}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{Command\+Options()}{CommandOptions()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Command\+Options\+::\+Command\+Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_aa7753d9c97f36208ef0741458ccb87fa}{}\label{classndn_1_1nfd_1_1CommandOptions_aa7753d9c97f36208ef0741458ccb87fa}
+
+
+constructs \hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} 
+
+\begin{DoxyPostcond}{Postcondition}
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a4cf2fdc352eee9d2e8f0defb01341ba7}{get\+Timeout()} == D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+O\+UT 
+
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a34e3ac8034371ebcc600999c9a8b5be2}{get\+Prefix()} == D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+E\+F\+IX 
+
+\hyperlink{classndn_1_1nfd_1_1CommandOptions_a80ace7f3bed1f1586bdb3bd46d898f13}{get\+Signing\+Info()}.get\+Signer\+Type() == S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL 
+\end{DoxyPostcond}
+
+
+Definition at line 35 of file nfd-\/command-\/options.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(\+Signing\+Params\+Kind get\+Signing\+Params\+Kind() const)}{DEPRECATED(SigningParamsKind getSigningParamsKind() const)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Command\+Options\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{{\bf Signing\+Params\+Kind} get\+Signing\+Params\+Kind()}]{const}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_ac2e48d640e60d11b696a2587b37b131d}{}\label{classndn_1_1nfd_1_1CommandOptions_ac2e48d640e60d11b696a2587b37b131d}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000019}{Deprecated}]use get\+Signing\+Info and set\+Signing\+Info \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+selection of signing parameters 
+\end{DoxyReturn}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(const Name \&get\+Signing\+Identity() const)}{DEPRECATED(const Name \&getSigningIdentity() const)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Command\+Options\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&get\+Signing\+Identity()}]{const}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a683025be25c11b8c663e20c807d8eaef}{}\label{classndn_1_1nfd_1_1CommandOptions_a683025be25c11b8c663e20c807d8eaef}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000020}{Deprecated}]use get\+Signing\+Info and set\+Signing\+Info \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+identity \hyperlink{classndn_1_1Name}{Name} 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+get\+Signing\+Params\+Kind() == S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+I\+D\+E\+N\+T\+I\+TY 
+\end{DoxyPrecond}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(const Name \&get\+Signing\+Certificate() const)}{DEPRECATED(const Name \&getSigningCertificate() const)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Command\+Options\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&get\+Signing\+Certificate()}]{const}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_afae3078789835dec1e38104725025d21}{}\label{classndn_1_1nfd_1_1CommandOptions_afae3078789835dec1e38104725025d21}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000021}{Deprecated}]use get\+Signing\+Info and set\+Signing\+Info \end{DoxyRefDesc}
+\begin{DoxyReturn}{Returns}
+certificate \hyperlink{classndn_1_1Name}{Name} 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+get\+Signing\+Params\+Kind() == S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+TE 
+\end{DoxyPrecond}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(\+Command\+Options \&set\+Signing\+Default())}{DEPRECATED(CommandOptions \&setSigningDefault())}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Command\+Options\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{{\bf Command\+Options} \&}]{set\+Signing\+Default()}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_abf86d4348ccf52b2ad3279927cf6af37}{}\label{classndn_1_1nfd_1_1CommandOptions_abf86d4348ccf52b2ad3279927cf6af37}
+
+
+chooses to use default identity and certificate 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000022}{Deprecated}]use get\+Signing\+Info and set\+Signing\+Info \end{DoxyRefDesc}
+\begin{DoxyPostcond}{Postcondition}
+get\+Signing\+Params\+Kind() == S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+D\+E\+F\+A\+U\+LT 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(\+Command\+Options \&set\+Signing\+Identity(const Name \&identity\+Name))}{DEPRECATED(CommandOptions \&setSigningIdentity(const Name \&identityName))}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Command\+Options\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{{\bf Command\+Options} \&}]{set\+Signing\+Identityconst Name \&identity\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a7ba5414b329dd366a7788734b16a1cd3}{}\label{classndn_1_1nfd_1_1CommandOptions_a7ba5414b329dd366a7788734b16a1cd3}
+
+
+chooses to use a specific identity and its default certificate 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000023}{Deprecated}]use get\+Signing\+Info and set\+Signing\+Info \end{DoxyRefDesc}
+\begin{DoxyPostcond}{Postcondition}
+get\+Signing\+Params\+Kind() == S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+I\+D\+E\+N\+T\+I\+TY 
+
+get\+Identity\+Name() == identity\+Name 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(\+Command\+Options \&set\+Signing\+Certificate(const Name \&certificate\+Name))}{DEPRECATED(CommandOptions \&setSigningCertificate(const Name \&certificateName))}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Command\+Options\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{{\bf Command\+Options} \&}]{set\+Signing\+Certificateconst Name \&certificate\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a5c639d07a0ca7316479955f7df5fc437}{}\label{classndn_1_1nfd_1_1CommandOptions_a5c639d07a0ca7316479955f7df5fc437}
+
+
+chooses to use a specific identity certificate 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000024}{Deprecated}]use get\+Signing\+Info and set\+Signing\+Info \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em certificate\+Name} & identity certificate \hyperlink{classndn_1_1Name}{Name} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if certificate\+Name is invalid \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyPostcond}{Postcondition}
+get\+Signing\+Params\+Kind() == S\+I\+G\+N\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+TE 
+
+get\+Signing\+Certificate() == certificate\+Name 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(\+Command\+Options \&set\+Signing\+Certificate(const Identity\+Certificate \&certificate))}{DEPRECATED(CommandOptions \&setSigningCertificate(const IdentityCertificate \&certificate))}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::nfd\+::\+Command\+Options\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{{\bf Command\+Options} \&}]{set\+Signing\+Certificateconst Identity\+Certificate \&certificate}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a56e78b886017b88d30bfb09ac3f60aff}{}\label{classndn_1_1nfd_1_1CommandOptions_a56e78b886017b88d30bfb09ac3f60aff}
+
+
+chooses to use a specific identity certificate 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000025}{Deprecated}]use get\+Signing\+Info and set\+Signing\+Info \end{DoxyRefDesc}
+
+
+This is equivalent to .set\+Identity\+Certificate(certificate.\+get\+Name()) \index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!get\+Prefix@{get\+Prefix}}
+\index{get\+Prefix@{get\+Prefix}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{get\+Prefix() const}{getPrefix() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name}\& ndn\+::nfd\+::\+Command\+Options\+::get\+Prefix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a34e3ac8034371ebcc600999c9a8b5be2}{}\label{classndn_1_1nfd_1_1CommandOptions_a34e3ac8034371ebcc600999c9a8b5be2}
+\begin{DoxyReturn}{Returns}
+command prefix 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file nfd-\/command-\/options.\+hpp.
+
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!get\+Signing\+Info@{get\+Signing\+Info}}
+\index{get\+Signing\+Info@{get\+Signing\+Info}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{get\+Signing\+Info() const}{getSigningInfo() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf security\+::\+Signing\+Info}\& ndn\+::nfd\+::\+Command\+Options\+::get\+Signing\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a80ace7f3bed1f1586bdb3bd46d898f13}{}\label{classndn_1_1nfd_1_1CommandOptions_a80ace7f3bed1f1586bdb3bd46d898f13}
+\begin{DoxyReturn}{Returns}
+signing parameters 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file nfd-\/command-\/options.\+hpp.
+
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!get\+Timeout@{get\+Timeout}}
+\index{get\+Timeout@{get\+Timeout}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{get\+Timeout() const}{getTimeout() const}}]{\setlength{\rightskip}{0pt plus 5cm}const time\+::milliseconds\& ndn\+::nfd\+::\+Command\+Options\+::get\+Timeout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a4cf2fdc352eee9d2e8f0defb01341ba7}{}\label{classndn_1_1nfd_1_1CommandOptions_a4cf2fdc352eee9d2e8f0defb01341ba7}
+\begin{DoxyReturn}{Returns}
+command timeout 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file nfd-\/command-\/options.\+hpp.
+
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!set\+Prefix@{set\+Prefix}}
+\index{set\+Prefix@{set\+Prefix}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{set\+Prefix(const Name \&prefix)}{setPrefix(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\+Options} \& ndn\+::nfd\+::\+Command\+Options\+::set\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a314f9c90f2b25b6276b6a117c047f590}{}\label{classndn_1_1nfd_1_1CommandOptions_a314f9c90f2b25b6276b6a117c047f590}
+
+
+sets command prefix 
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file nfd-\/command-\/options.\+cpp.
+
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!set\+Signing\+Info@{set\+Signing\+Info}}
+\index{set\+Signing\+Info@{set\+Signing\+Info}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{set\+Signing\+Info(const security\+::\+Signing\+Info \&signing\+Info)}{setSigningInfo(const security::SigningInfo \&signingInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\+Options} \& ndn\+::nfd\+::\+Command\+Options\+::set\+Signing\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf security\+::\+Signing\+Info} \&}]{signing\+Info}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_ac79642243559a5a265d0d6e2feab1f4a}{}\label{classndn_1_1nfd_1_1CommandOptions_ac79642243559a5a265d0d6e2feab1f4a}
+
+
+sets signing parameters 
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file nfd-\/command-\/options.\+cpp.
+
+\index{ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}!set\+Timeout@{set\+Timeout}}
+\index{set\+Timeout@{set\+Timeout}!ndn\+::nfd\+::\+Command\+Options@{ndn\+::nfd\+::\+Command\+Options}}
+\subsubsection[{\texorpdfstring{set\+Timeout(const time\+::milliseconds \&timeout)}{setTimeout(const time::milliseconds \&timeout)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\+Options} \& ndn\+::nfd\+::\+Command\+Options\+::set\+Timeout (
+\begin{DoxyParamCaption}
+\item[{const time\+::milliseconds \&}]{timeout}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1CommandOptions_a31c56101663d79e00bdc612c4381c1af}{}\label{classndn_1_1nfd_1_1CommandOptions_a31c56101663d79e00bdc612c4381c1af}
+
+
+sets command timeout 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & the new command timeout, must be positive \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if timeout is non-\/positive \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file nfd-\/command-\/options.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/command-\/options.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/command-\/options.\+cpp\end{DoxyCompactItemize}

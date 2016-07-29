@@ -1,0 +1,327 @@
+\hypertarget{classndn_1_1Link}{}\section{ndn\+:\+:Link Class Reference}
+\label{classndn_1_1Link}\index{ndn\+::\+Link@{ndn\+::\+Link}}
+
+
+represents a \hyperlink{classndn_1_1Link}{Link} instance  
+
+
+
+
+{\ttfamily \#include $<$link.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Link\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1Link}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Link_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::set$<$ std\+::pair$<$ uint32\+\_\+t, \hyperlink{classndn_1_1Name}{Name} $>$ $>$ {\bfseries Delegation\+Set}\hypertarget{classndn_1_1Link_a7c39b61dc2fd7f7fa95724d0bfdc4dca}{}\label{classndn_1_1Link_a7c39b61dc2fd7f7fa95724d0bfdc4dca}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Link_a9319fdfdbe6708e6da2694a0db5062b2}{Link} ()=default
+\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{classndn_1_1Link}{Link} object. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Link_a0a49619a5844110df36006c2ae773b11}{Link} (const \hyperlink{classndn_1_1Block}{Block} \&block)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Link}{Link} object from a \hyperlink{classndn_1_1Block}{Block}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Link_ab0ed148484feaceef39d6537bd996c5f}{Link} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Link}{Link} object with the given name. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Link_a6e535e2f79600c18634b33b9d1d77634}{Link} (const \hyperlink{classndn_1_1Name}{Name} \&name, std\+::initializer\+\_\+list$<$ std\+::pair$<$ uint32\+\_\+t, \hyperlink{classndn_1_1Name}{Name} $>$$>$ links)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Link}{Link} object with the given name and pairs of $<$Preference, \hyperlink{classndn_1_1Name}{Name}$>$ \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Link_a007eb82b068c027be0791f4ef5f3690e}{add\+Delegation} (uint32\+\_\+t preference, const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em Add a delegation in the format of $<$\hyperlink{classndn_1_1Name}{Name}, Preference$>$ \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Link_aec61fda0353b5cbf339b3bc746b59e13}{remove\+Delegation} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em Remove a delegation whose name is {\ttfamily name}. \end{DoxyCompactList}\item 
+const Delegation\+Set \& \hyperlink{classndn_1_1Link_aedcb0598033e99d2a432c55c7ab57d78}{get\+Delegations} () const
+\begin{DoxyCompactList}\small\item\em Get the pairs of $<$\hyperlink{classndn_1_1Name}{Name}, Preference$>$ \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Link_a330fef6317e65ba2b5869a7222f2958c}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Decode from the wire format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::tuple$<$ uint32\+\_\+t, \hyperlink{classndn_1_1Name}{Name} $>$ \hyperlink{classndn_1_1Link_a11ab5c09b8533a75ce17a6b2d88ba883}{get\+Delegation\+From\+Wire} (const \hyperlink{classndn_1_1Block}{Block} \&block, size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em gets the delegation at {\ttfamily index} from {\ttfamily block} \end{DoxyCompactList}\item 
+static ssize\+\_\+t \hyperlink{classndn_1_1Link_ae4c85a86462a2f1a8f3c8677482f6522}{find\+Delegation\+From\+Wire} (const \hyperlink{classndn_1_1Block}{Block} \&block, const \hyperlink{classndn_1_1Name}{Name} \&delegation\+Name)
+\begin{DoxyCompactList}\small\item\em finds index of a delegation with {\ttfamily delegation\+Name} from {\ttfamily block} \end{DoxyCompactList}\item 
+static ssize\+\_\+t {\bfseries count\+Delegations\+From\+Wire} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1Link_a3b6c15c55cf2a27a3531c46de51da9c8}{}\label{classndn_1_1Link_a3b6c15c55cf2a27a3531c46de51da9c8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1Link_a06a39f9669626e93a0065af635f278d8}{encode\+Content} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const
+\begin{DoxyCompactList}\small\item\em prepend \hyperlink{classndn_1_1Link}{Link} object as a Content block to the encoder \end{DoxyCompactList}\item 
+void {\bfseries encode\+Content} ()\hypertarget{classndn_1_1Link_a2b6d1ae53af2f18018558c0396715465}{}\label{classndn_1_1Link_a2b6d1ae53af2f18018558c0396715465}
+
+\item 
+void {\bfseries decode\+Content} ()\hypertarget{classndn_1_1Link_a16c2bb73dc974e7a9b82888ccd3d364d}{}\label{classndn_1_1Link_a16c2bb73dc974e7a9b82888ccd3d364d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a \hyperlink{classndn_1_1Link}{Link} instance 
+
+Definition at line 34 of file link.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Link@{ndn\+::\+Link}!Link@{Link}}
+\index{Link@{Link}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{Link()=default}{Link()=default}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Link\+::\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\hypertarget{classndn_1_1Link_a9319fdfdbe6708e6da2694a0db5062b2}{}\label{classndn_1_1Link_a9319fdfdbe6708e6da2694a0db5062b2}
+
+
+Create an empty \hyperlink{classndn_1_1Link}{Link} object. 
+
+Note that in certain contexts that use Link\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Link}{Link} must be created using {\ttfamily make\+\_\+shared}\+: \begin{DoxyVerb}shared_ptr<Link> linkObject = make_shared<Link>();
+\end{DoxyVerb}
+
+
+Otherwise, Link\+::shared\+\_\+from\+\_\+this() will throw std\+::bad\+\_\+weak\+\_\+ptr. \index{ndn\+::\+Link@{ndn\+::\+Link}!Link@{Link}}
+\index{Link@{Link}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{Link(const Block \&block)}{Link(const Block \&block)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Link\+::\+Link (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Link_a0a49619a5844110df36006c2ae773b11}{}\label{classndn_1_1Link_a0a49619a5844110df36006c2ae773b11}
+
+
+Create a \hyperlink{classndn_1_1Link}{Link} object from a \hyperlink{classndn_1_1Block}{Block}. 
+
+Note that in certain contexts that use Link\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Link}{Link} must be created using {\ttfamily make\+\_\+shared}\+: \begin{DoxyVerb}shared_ptr<Link> linkObject = make_shared<Link>(block);
+\end{DoxyVerb}
+
+
+Otherwise, Link\+::shared\+\_\+from\+\_\+this() will throw std\+::bad\+\_\+weak\+\_\+ptr. 
+
+Definition at line 41 of file link.\+cpp.
+
+\index{ndn\+::\+Link@{ndn\+::\+Link}!Link@{Link}}
+\index{Link@{Link}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{Link(const Name \&name)}{Link(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Link\+::\+Link (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Link_ab0ed148484feaceef39d6537bd996c5f}{}\label{classndn_1_1Link_ab0ed148484feaceef39d6537bd996c5f}
+
+
+Create a \hyperlink{classndn_1_1Link}{Link} object with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A reference to the name of the redirected namespace\\
+\hline
+\end{DoxyParams}
+Note that in certain contexts that use Link\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Link}{Link} must be created using {\ttfamily make\+\_\+shared}\+: \begin{DoxyVerb}shared_ptr<Link> link = make_shared<Link>(name);
+\end{DoxyVerb}
+
+
+Otherwise, Link\+::shared\+\_\+from\+\_\+this() will throw std\+::bad\+\_\+weak\+\_\+ptr. 
+
+Definition at line 46 of file link.\+cpp.
+
+\index{ndn\+::\+Link@{ndn\+::\+Link}!Link@{Link}}
+\index{Link@{Link}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{Link(const Name \&name, std\+::initializer\+\_\+list$<$ std\+::pair$<$ uint32\+\_\+t, Name $>$$>$ links)}{Link(const Name \&name, std::initializer\_list< std::pair< uint32\_t, Name >> links)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Link\+::\+Link (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name, }
+\item[{std\+::initializer\+\_\+list$<$ std\+::pair$<$ uint32\+\_\+t, {\bf Name} $>$$>$}]{links}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Link_a6e535e2f79600c18634b33b9d1d77634}{}\label{classndn_1_1Link_a6e535e2f79600c18634b33b9d1d77634}
+
+
+Create a \hyperlink{classndn_1_1Link}{Link} object with the given name and pairs of $<$Preference, \hyperlink{classndn_1_1Name}{Name}$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A reference to the name of the redirected namespace \\
+\hline
+{\em links} & A reference to the list of pairs of the redirected namespace along with its priority\\
+\hline
+\end{DoxyParams}
+Note that in certain contexts that use Link\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Link}{Link} must be created using {\ttfamily make\+\_\+shared}\+: \begin{DoxyVerb}shared_ptr<Link> link = make_shared<Link>(name, links);
+\end{DoxyVerb}
+
+
+Otherwise, Link\+::shared\+\_\+from\+\_\+this() will throw std\+::bad\+\_\+weak\+\_\+ptr. 
+
+Definition at line 51 of file link.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Link@{ndn\+::\+Link}!add\+Delegation@{add\+Delegation}}
+\index{add\+Delegation@{add\+Delegation}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{add\+Delegation(uint32\+\_\+t preference, const Name \&name)}{addDelegation(uint32\_t preference, const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Link\+::add\+Delegation (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{preference, }
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Link_a007eb82b068c027be0791f4ef5f3690e}{}\label{classndn_1_1Link_a007eb82b068c027be0791f4ef5f3690e}
+
+
+Add a delegation in the format of $<$\hyperlink{classndn_1_1Name}{Name}, Preference$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em preference} & The preference of the delegation to be added \\
+\hline
+{\em name} & The name of the delegation to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If a delegation with {\ttfamily name} exists, its preference will be updated 
+\end{DoxyNote}
+
+
+Definition at line 59 of file link.\+cpp.
+
+\index{ndn\+::\+Link@{ndn\+::\+Link}!encode\+Content@{encode\+Content}}
+\index{encode\+Content@{encode\+Content}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{encode\+Content(\+Encoding\+Impl$<$ T\+A\+G $>$ \&encoder) const}{encodeContent(EncodingImpl< TAG > \&encoder) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$encoding\+::\+Tag T\+AG$>$ size\+\_\+t ndn\+::\+Link\+::encode\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Encoding\+Impl}$<$ T\+AG $>$ \&}]{encoder}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classndn_1_1Link_a06a39f9669626e93a0065af635f278d8}{}\label{classndn_1_1Link_a06a39f9669626e93a0065af635f278d8}
+
+
+prepend \hyperlink{classndn_1_1Link}{Link} object as a Content block to the encoder 
+
+The outermost Content element is not part of \hyperlink{classndn_1_1Link}{Link} object structure. 
+
+Definition at line 84 of file link.\+cpp.
+
+\index{ndn\+::\+Link@{ndn\+::\+Link}!find\+Delegation\+From\+Wire@{find\+Delegation\+From\+Wire}}
+\index{find\+Delegation\+From\+Wire@{find\+Delegation\+From\+Wire}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{find\+Delegation\+From\+Wire(const Block \&block, const Name \&delegation\+Name)}{findDelegationFromWire(const Block \&block, const Name \&delegationName)}}]{\setlength{\rightskip}{0pt plus 5cm}ssize\+\_\+t ndn\+::\+Link\+::find\+Delegation\+From\+Wire (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block, }
+\item[{const {\bf Name} \&}]{delegation\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1Link_ae4c85a86462a2f1a8f3c8677482f6522}{}\label{classndn_1_1Link_ae4c85a86462a2f1a8f3c8677482f6522}
+
+
+finds index of a delegation with {\ttfamily delegation\+Name} from {\ttfamily block} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & wire format of a \hyperlink{classndn_1_1Link}{Link} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/based index of the first delegation with {\ttfamily delegation\+Name} , or -\/1 if no such delegation exists 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file link.\+cpp.
+
+\index{ndn\+::\+Link@{ndn\+::\+Link}!get\+Delegation\+From\+Wire@{get\+Delegation\+From\+Wire}}
+\index{get\+Delegation\+From\+Wire@{get\+Delegation\+From\+Wire}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{get\+Delegation\+From\+Wire(const Block \&block, size\+\_\+t index)}{getDelegationFromWire(const Block \&block, size\_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::tuple$<$ uint32\+\_\+t, {\bf Name} $>$ ndn\+::\+Link\+::get\+Delegation\+From\+Wire (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block, }
+\item[{size\+\_\+t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1Link_a11ab5c09b8533a75ce17a6b2d88ba883}{}\label{classndn_1_1Link_a11ab5c09b8533a75ce17a6b2d88ba883}
+
+
+gets the delegation at {\ttfamily index} from {\ttfamily block} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & wire format of a \hyperlink{classndn_1_1Link}{Link} object \\
+\hline
+{\em index} & 0-\/based index of a delegation in the \hyperlink{classndn_1_1Link}{Link} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+delegation preference and name 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & index is out of range \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 183 of file link.\+cpp.
+
+\index{ndn\+::\+Link@{ndn\+::\+Link}!get\+Delegations@{get\+Delegations}}
+\index{get\+Delegations@{get\+Delegations}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{get\+Delegations() const}{getDelegations() const}}]{\setlength{\rightskip}{0pt plus 5cm}const Link\+::\+Delegation\+Set \& ndn\+::\+Link\+::get\+Delegations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Link_aedcb0598033e99d2a432c55c7ab57d78}{}\label{classndn_1_1Link_aedcb0598033e99d2a432c55c7ab57d78}
+
+
+Get the pairs of $<$\hyperlink{classndn_1_1Name}{Name}, Preference$>$ 
+
+\begin{DoxyReturn}{Returns}
+a set of delegations 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file link.\+cpp.
+
+\index{ndn\+::\+Link@{ndn\+::\+Link}!remove\+Delegation@{remove\+Delegation}}
+\index{remove\+Delegation@{remove\+Delegation}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{remove\+Delegation(const Name \&name)}{removeDelegation(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Link\+::remove\+Delegation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Link_aec61fda0353b5cbf339b3bc746b59e13}{}\label{classndn_1_1Link_aec61fda0353b5cbf339b3bc746b59e13}
+
+
+Remove a delegation whose name is {\ttfamily name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the delegation to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if delegation is removed, otherwise false 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file link.\+cpp.
+
+\index{ndn\+::\+Link@{ndn\+::\+Link}!wire\+Decode@{wire\+Decode}}
+\index{wire\+Decode@{wire\+Decode}!ndn\+::\+Link@{ndn\+::\+Link}}
+\subsubsection[{\texorpdfstring{wire\+Decode(const Block \&wire)}{wireDecode(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Link\+::wire\+Decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Link_a330fef6317e65ba2b5869a7222f2958c}{}\label{classndn_1_1Link_a330fef6317e65ba2b5869a7222f2958c}
+
+
+Decode from the wire format. 
+
+\begin{DoxyWarning}{Warning}
+This method does not preserve the relative order between delegations. To get a delegation by index, use {\ttfamily get\+Delegation\+From\+Wire} method. 
+\end{DoxyWarning}
+
+
+Definition at line 176 of file link.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/link.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/link.\+cpp\end{DoxyCompactItemize}

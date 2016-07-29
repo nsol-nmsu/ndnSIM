@@ -1,0 +1,257 @@
+\hypertarget{classnfd_1_1Forwarder}{}\section{nfd\+:\+:Forwarder Class Reference}
+\label{classnfd_1_1Forwarder}\index{nfd\+::\+Forwarder@{nfd\+::\+Forwarder}}
+
+
+main class of N\+FD  
+
+
+
+
+{\ttfamily \#include $<$forwarder.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Forwarder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1Forwarder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classnfd_1_1ForwarderCounters}{Forwarder\+Counters} \& {\bfseries get\+Counters} () const\hypertarget{classnfd_1_1Forwarder_a0d28ae1afcef34b9103a22b0fbe37c9f}{}\label{classnfd_1_1Forwarder_a0d28ae1afcef34b9103a22b0fbe37c9f}
+
+\item 
+\hyperlink{classnfd_1_1FaceTable}{Face\+Table} \& {\bfseries get\+Face\+Table} ()\hypertarget{classnfd_1_1Forwarder_ae457ae693bfe5b6ac937d46409b7bd1f}{}\label{classnfd_1_1Forwarder_ae457ae693bfe5b6ac937d46409b7bd1f}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \hyperlink{classnfd_1_1Forwarder_a25d89deb4f9fee7afe743bcbb4546ff8}{get\+Face} (\hyperlink{classFaceId}{Face\+Id} id) const
+\begin{DoxyCompactList}\small\item\em get existing \hyperlink{classnfd_1_1Face}{Face} \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Forwarder_a625af8804bc0fece52a6dcb341998152}{add\+Face} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)
+\begin{DoxyCompactList}\small\item\em add new \hyperlink{classnfd_1_1Face}{Face} \end{DoxyCompactList}\item 
+void {\bfseries on\+Interest} (\hyperlink{classnfd_1_1Face}{Face} \&face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classnfd_1_1Forwarder_aba2f040540885a671a2a240a97724f57}{}\label{classnfd_1_1Forwarder_aba2f040540885a671a2a240a97724f57}
+
+\item 
+void {\bfseries on\+Data} (\hyperlink{classnfd_1_1Face}{Face} \&face, const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1Forwarder_af9b64009ed9b25a0f9dd6e8c82608210}{}\label{classnfd_1_1Forwarder_af9b64009ed9b25a0f9dd6e8c82608210}
+
+\item 
+\hyperlink{classnfd_1_1NameTree}{Name\+Tree} \& {\bfseries get\+Name\+Tree} ()\hypertarget{classnfd_1_1Forwarder_a587bc5a290ba03893a86453200fb0ed9}{}\label{classnfd_1_1Forwarder_a587bc5a290ba03893a86453200fb0ed9}
+
+\item 
+\hyperlink{classnfd_1_1Fib}{Fib} \& {\bfseries get\+Fib} ()\hypertarget{classnfd_1_1Forwarder_a5efd26071e55bc032ed7ee2fa0865bed}{}\label{classnfd_1_1Forwarder_a5efd26071e55bc032ed7ee2fa0865bed}
+
+\item 
+\hyperlink{classnfd_1_1Pit}{Pit} \& {\bfseries get\+Pit} ()\hypertarget{classnfd_1_1Forwarder_a8a0b6e29076d6386b36139f3abcda5b0}{}\label{classnfd_1_1Forwarder_a8a0b6e29076d6386b36139f3abcda5b0}
+
+\item 
+\hyperlink{classnfd_1_1Sit}{Sit} \& {\bfseries get\+Sit} ()\hypertarget{classnfd_1_1Forwarder_a1015b8521ddcbdc19cef917f39d9c776}{}\label{classnfd_1_1Forwarder_a1015b8521ddcbdc19cef917f39d9c776}
+
+\item 
+\hyperlink{classnfd_1_1cs_1_1Cs}{Cs} \& {\bfseries get\+Cs} ()\hypertarget{classnfd_1_1Forwarder_af3efa78a61a610927b6b28f0fd817bd3}{}\label{classnfd_1_1Forwarder_af3efa78a61a610927b6b28f0fd817bd3}
+
+\item 
+\hyperlink{classnfd_1_1Measurements}{Measurements} \& {\bfseries get\+Measurements} ()\hypertarget{classnfd_1_1Forwarder_ab4be51b18d1b702eccdbfdeb188ce4ba}{}\label{classnfd_1_1Forwarder_ab4be51b18d1b702eccdbfdeb188ce4ba}
+
+\item 
+\hyperlink{classnfd_1_1StrategyChoice}{Strategy\+Choice} \& {\bfseries get\+Strategy\+Choice} ()\hypertarget{classnfd_1_1Forwarder_ab36bf2b0c2a31caabdb4e16d8ad69239}{}\label{classnfd_1_1Forwarder_ab36bf2b0c2a31caabdb4e16d8ad69239}
+
+\item 
+\hyperlink{classnfd_1_1DeadNonceList}{Dead\+Nonce\+List} \& {\bfseries get\+Dead\+Nonce\+List} ()\hypertarget{classnfd_1_1Forwarder_ab9ca95ae8a5cb6eba83752a65153415c}{}\label{classnfd_1_1Forwarder_ab9ca95ae8a5cb6eba83752a65153415c}
+
+\item 
+void {\bfseries set\+Cs\+From\+Ndn\+Sim} (ns3\+::\+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1ContentStore}{ns3\+::ndn\+::\+Content\+Store} $>$ cs)\hypertarget{classnfd_1_1Forwarder_af3822ea4b71b42f391d046e3991c087d}{}\label{classnfd_1_1Forwarder_af3822ea4b71b42f391d046e3991c087d}
+
+\item 
+void \hyperlink{classnfd_1_1Forwarder_a7a7feac7008f35109aeb70fbcfaac80c}{on\+Content\+Store\+Miss} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classnfd_1_1Forwarder_a7a7feac7008f35109aeb70fbcfaac80c}{}\label{classnfd_1_1Forwarder_a7a7feac7008f35109aeb70fbcfaac80c}
+
+\begin{DoxyCompactList}\small\item\em Content Store miss pipeline. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Forwarder_a400f6dbb92d0885fa16b833d50838232}{on\+Content\+Store\+Hit} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1Forwarder_a400f6dbb92d0885fa16b833d50838232}{}\label{classnfd_1_1Forwarder_a400f6dbb92d0885fa16b833d50838232}
+
+\begin{DoxyCompactList}\small\item\em Content Store hit pipeline. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Forwarder_a5bd167dc057cd855dd155aefe43bb329}{on\+Sit\+Content\+Store\+Miss} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, bool is\+New\+Entry)\hypertarget{classnfd_1_1Forwarder_a5bd167dc057cd855dd155aefe43bb329}{}\label{classnfd_1_1Forwarder_a5bd167dc057cd855dd155aefe43bb329}
+
+\begin{DoxyCompactList}\small\item\em Content Store miss pipeline for subscription interests. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Forwarder_a3868b1a88857bfecd365f6f1e85d4428}{on\+Sit\+Content\+Store\+Hit} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1Forwarder_a3868b1a88857bfecd365f6f1e85d4428}{}\label{classnfd_1_1Forwarder_a3868b1a88857bfecd365f6f1e85d4428}
+
+\begin{DoxyCompactList}\small\item\em Content Store hit pipeline for subscription interests. \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_a1efe0d456e49f46917e737441221fe26}{on\+Interest\+Loop} (\hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1Forwarder_a1efe0d456e49f46917e737441221fe26}{}\label{classnfd_1_1Forwarder_a1efe0d456e49f46917e737441221fe26}
+
+\begin{DoxyCompactList}\small\item\em Interest loop pipeline. \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_a4a355e3bff22483c081925ae75c44f6b}{on\+Outgoing\+Interest} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, \hyperlink{classnfd_1_1Face}{Face} \&out\+Face, bool want\+New\+Nonce=false)\hypertarget{classnfd_1_1Forwarder_a4a355e3bff22483c081925ae75c44f6b}{}\label{classnfd_1_1Forwarder_a4a355e3bff22483c081925ae75c44f6b}
+
+\begin{DoxyCompactList}\small\item\em outgoing Interest pipeline \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_add3fa38ce3575dc0979962d41b09859d}{on\+Interest\+Reject} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1Forwarder_add3fa38ce3575dc0979962d41b09859d}{}\label{classnfd_1_1Forwarder_add3fa38ce3575dc0979962d41b09859d}
+
+\begin{DoxyCompactList}\small\item\em Interest reject pipeline. \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_ac5dc6c23fe28e323e2de5ceb43860cf5}{on\+Interest\+Unsatisfied} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1Forwarder_ac5dc6c23fe28e323e2de5ceb43860cf5}{}\label{classnfd_1_1Forwarder_ac5dc6c23fe28e323e2de5ceb43860cf5}
+
+\begin{DoxyCompactList}\small\item\em Interest unsatisfied pipeline. \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_a5024e91d399140077e25040ab4f36324}{on\+Interest\+Finalize} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, bool is\+Satisfied, const time\+::milliseconds \&data\+Freshness\+Period=time\+::milliseconds(-\/1))
+\begin{DoxyCompactList}\small\item\em Interest finalize pipeline. \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_a96efae9212a6950adb82d69f8a8a46ec}{on\+Incoming\+Data} (\hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1Forwarder_a96efae9212a6950adb82d69f8a8a46ec}{}\label{classnfd_1_1Forwarder_a96efae9212a6950adb82d69f8a8a46ec}
+
+\begin{DoxyCompactList}\small\item\em incoming Data pipeline \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_ad52460747a8033fe1116716094bad854}{on\+Data\+Unsolicited} (\hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1Forwarder_ad52460747a8033fe1116716094bad854}{}\label{classnfd_1_1Forwarder_ad52460747a8033fe1116716094bad854}
+
+\begin{DoxyCompactList}\small\item\em Data unsolicited pipeline. \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_a9db50b08eb3b1a7e3625c23af1b1d771}{on\+Outgoing\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data, \hyperlink{classnfd_1_1Face}{Face} \&out\+Face)\hypertarget{classnfd_1_1Forwarder_a9db50b08eb3b1a7e3625c23af1b1d771}{}\label{classnfd_1_1Forwarder_a9db50b08eb3b1a7e3625c23af1b1d771}
+
+\begin{DoxyCompactList}\small\item\em outgoing Data pipeline \end{DoxyCompactList}\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void {\bfseries set\+Straggler\+Timer} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, bool is\+Satisfied, const time\+::milliseconds \&data\+Freshness\+Period=time\+::milliseconds(-\/1))\hypertarget{classnfd_1_1Forwarder_aaf9d0c6c4c50d67294191cd22c971174}{}\label{classnfd_1_1Forwarder_aaf9d0c6c4c50d67294191cd22c971174}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void {\bfseries cancel\+Unsatisfy\+And\+Straggler\+Timer} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1Forwarder_a3830ee1cb8eee0c60fff472142b6f305}{}\label{classnfd_1_1Forwarder_a3830ee1cb8eee0c60fff472142b6f305}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void \hyperlink{classnfd_1_1Forwarder_a98b6db5bc252cf45462737df27e41b87}{insert\+Dead\+Nonce\+List} (\hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry, bool is\+Satisfied, const time\+::milliseconds \&data\+Freshness\+Period, \hyperlink{classnfd_1_1Face}{Face} $\ast$upstream)
+\begin{DoxyCompactList}\small\item\em insert Nonce to Dead Nonce List if necessary \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Function $>$ }\\void \hyperlink{classnfd_1_1Forwarder_acc994b71f77a2961184ba675d8d39e43}{dispatch\+To\+Strategy} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, Function trigger)\hypertarget{classnfd_1_1Forwarder_acc994b71f77a2961184ba675d8d39e43}{}\label{classnfd_1_1Forwarder_acc994b71f77a2961184ba675d8d39e43}
+
+\begin{DoxyCompactList}\small\item\em call trigger (method) on the effective strategy of pit\+Entry \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1Forwarder}{Forwarder}, \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry}, \hyperlink{classnfd_1_1Face}{Face}, \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classnfd_1_1Forwarder_a32566fb05aa466ad3882221453ee28db}{before\+Satisfy\+Interest}
+\begin{DoxyCompactList}\small\item\em trigger before P\+IT entry is satisfied \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1Forwarder}{Forwarder}, \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ \hyperlink{classnfd_1_1Forwarder_a7e2f5b00f3146356077d84cd107a1394}{before\+Expire\+Pending\+Interest}
+\begin{DoxyCompactList}\small\item\em trigger before P\+IT entry expires \end{DoxyCompactList}\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void on\+Incoming\+Interest(\hyperlink{classnfd_1_1Face}{Face}\& in\+Face\hypertarget{classnfd_1_1Forwarder_a04f42f27280373151a8ecd74983089bf}{}\label{classnfd_1_1Forwarder_a04f42f27280373151a8ecd74983089bf}
+
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const \hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries interest}\hypertarget{classnfd_1_1Forwarder_a41e18f4d8424fff0fcbf75307047c277}{}\label{classnfd_1_1Forwarder_a41e18f4d8424fff0fcbf75307047c277}
+
+\item 
+P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void set\+Unsatisfy\+Timer(shared\+\_\+ptr$<$\hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry}$>$ pit\+Entry)\hypertarget{classnfd_1_1Forwarder_a177cc622f49c47cf9826e090ea86ecee}{}\label{classnfd_1_1Forwarder_a177cc622f49c47cf9826e090ea86ecee}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries fw\+::\+Strategy}\hypertarget{classnfd_1_1Forwarder_aa8f54ca07b1364702b0f74c8d4d3def3}{}\label{classnfd_1_1Forwarder_aa8f54ca07b1364702b0f74c8d4d3def3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+main class of N\+FD 
+
+\hyperlink{classnfd_1_1Forwarder}{Forwarder} owns all faces and tables, and implements forwarding pipelines. 
+
+Definition at line 55 of file forwarder.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Forwarder@{nfd\+::\+Forwarder}!add\+Face@{add\+Face}}
+\index{add\+Face@{add\+Face}!nfd\+::\+Forwarder@{nfd\+::\+Forwarder}}
+\subsubsection[{\texorpdfstring{add\+Face(shared\+\_\+ptr$<$ Face $>$ face)}{addFace(shared\_ptr< Face > face)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Forwarder\+::add\+Face (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1Forwarder_a625af8804bc0fece52a6dcb341998152}{}\label{classnfd_1_1Forwarder_a625af8804bc0fece52a6dcb341998152}
+
+
+add new \hyperlink{classnfd_1_1Face}{Face} 
+
+shortcut to .get\+Face\+Table().add(face) 
+
+Definition at line 277 of file forwarder.\+hpp.
+
+\index{nfd\+::\+Forwarder@{nfd\+::\+Forwarder}!get\+Face@{get\+Face}}
+\index{get\+Face@{get\+Face}!nfd\+::\+Forwarder@{nfd\+::\+Forwarder}}
+\subsubsection[{\texorpdfstring{get\+Face(\+Face\+Id id) const}{getFace(FaceId id) const}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Face} $>$ nfd\+::\+Forwarder\+::get\+Face (
+\begin{DoxyParamCaption}
+\item[{{\bf Face\+Id}}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1Forwarder_a25d89deb4f9fee7afe743bcbb4546ff8}{}\label{classnfd_1_1Forwarder_a25d89deb4f9fee7afe743bcbb4546ff8}
+
+
+get existing \hyperlink{classnfd_1_1Face}{Face} 
+
+shortcut to .get\+Face\+Table().get(face) 
+
+Definition at line 271 of file forwarder.\+hpp.
+
+\index{nfd\+::\+Forwarder@{nfd\+::\+Forwarder}!insert\+Dead\+Nonce\+List@{insert\+Dead\+Nonce\+List}}
+\index{insert\+Dead\+Nonce\+List@{insert\+Dead\+Nonce\+List}!nfd\+::\+Forwarder@{nfd\+::\+Forwarder}}
+\subsubsection[{\texorpdfstring{insert\+Dead\+Nonce\+List(pit\+::\+Entry \&pit\+Entry, bool is\+Satisfied, const time\+::milliseconds \&data\+Freshness\+Period, Face $\ast$upstream)}{insertDeadNonceList(pit::Entry \&pitEntry, bool isSatisfied, const time::milliseconds \&dataFreshnessPeriod, Face *upstream)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Forwarder\+::insert\+Dead\+Nonce\+List (
+\begin{DoxyParamCaption}
+\item[{{\bf pit\+::\+Entry} \&}]{pit\+Entry, }
+\item[{bool}]{is\+Satisfied, }
+\item[{const time\+::milliseconds \&}]{data\+Freshness\+Period, }
+\item[{{\bf Face} $\ast$}]{upstream}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Forwarder_a98b6db5bc252cf45462737df27e41b87}{}\label{classnfd_1_1Forwarder_a98b6db5bc252cf45462737df27e41b87}
+
+
+insert Nonce to Dead Nonce List if necessary 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upstream} & if null, insert Nonces from all Out\+Records; if not null, insert Nonce only on the Out\+Record of this face \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 630 of file forwarder.\+cpp.
+
+\index{nfd\+::\+Forwarder@{nfd\+::\+Forwarder}!on\+Interest\+Finalize@{on\+Interest\+Finalize}}
+\index{on\+Interest\+Finalize@{on\+Interest\+Finalize}!nfd\+::\+Forwarder@{nfd\+::\+Forwarder}}
+\subsubsection[{\texorpdfstring{on\+Interest\+Finalize(shared\+\_\+ptr$<$ pit\+::\+Entry $>$ pit\+Entry, bool is\+Satisfied, const time\+::milliseconds \&data\+Freshness\+Period=time\+::milliseconds(-\/1))}{onInterestFinalize(shared\_ptr< pit::Entry > pitEntry, bool isSatisfied, const time::milliseconds \&dataFreshnessPeriod=time::milliseconds(-1))}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Forwarder\+::on\+Interest\+Finalize (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf pit\+::\+Entry} $>$}]{pit\+Entry, }
+\item[{bool}]{is\+Satisfied, }
+\item[{const time\+::milliseconds \&}]{data\+Freshness\+Period = {\ttfamily time\+:\+:milliseconds(-\/1)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Forwarder_a5024e91d399140077e25040ab4f36324}{}\label{classnfd_1_1Forwarder_a5024e91d399140077e25040ab4f36324}
+
+
+Interest finalize pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Satisfied} & whether the Interest has been satisfied \\
+\hline
+{\em data\+Freshness\+Period} & Freshness\+Period of satisfying Data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 398 of file forwarder.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{nfd\+::\+Forwarder@{nfd\+::\+Forwarder}!before\+Expire\+Pending\+Interest@{before\+Expire\+Pending\+Interest}}
+\index{before\+Expire\+Pending\+Interest@{before\+Expire\+Pending\+Interest}!nfd\+::\+Forwarder@{nfd\+::\+Forwarder}}
+\subsubsection[{\texorpdfstring{before\+Expire\+Pending\+Interest}{beforeExpirePendingInterest}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf signal\+::\+Signal}$<${\bf Forwarder}, {\bf pit\+::\+Entry}$>$ nfd\+::\+Forwarder\+::before\+Expire\+Pending\+Interest}\hypertarget{classnfd_1_1Forwarder_a7e2f5b00f3146356077d84cd107a1394}{}\label{classnfd_1_1Forwarder_a7e2f5b00f3146356077d84cd107a1394}
+
+
+trigger before P\+IT entry expires 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classnfd_1_1fw_1_1Strategy_a16f330a517d2df19a80c4b74e8685b28}{Strategy\+::before\+Expire\+Pending\+Interest} 
+\end{DoxySeeAlso}
+
+
+Definition at line 128 of file forwarder.\+hpp.
+
+\index{nfd\+::\+Forwarder@{nfd\+::\+Forwarder}!before\+Satisfy\+Interest@{before\+Satisfy\+Interest}}
+\index{before\+Satisfy\+Interest@{before\+Satisfy\+Interest}!nfd\+::\+Forwarder@{nfd\+::\+Forwarder}}
+\subsubsection[{\texorpdfstring{before\+Satisfy\+Interest}{beforeSatisfyInterest}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf signal\+::\+Signal}$<${\bf Forwarder}, {\bf pit\+::\+Entry}, {\bf Face}, {\bf Data}$>$ nfd\+::\+Forwarder\+::before\+Satisfy\+Interest}\hypertarget{classnfd_1_1Forwarder_a32566fb05aa466ad3882221453ee28db}{}\label{classnfd_1_1Forwarder_a32566fb05aa466ad3882221453ee28db}
+
+
+trigger before P\+IT entry is satisfied 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classnfd_1_1fw_1_1Strategy_a31387ec5c8204841e407bced9902c203}{Strategy\+::before\+Satisfy\+Interest} 
+\end{DoxySeeAlso}
+
+
+Definition at line 123 of file forwarder.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/forwarder.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/forwarder.\+cpp\end{DoxyCompactItemize}

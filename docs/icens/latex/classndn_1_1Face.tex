@@ -1,0 +1,755 @@
+\hypertarget{classndn_1_1Face}{}\section{ndn\+:\+:Face Class Reference}
+\label{classndn_1_1Face}\index{ndn\+::\+Face@{ndn\+::\+Face}}
+
+
+Abstraction to communicate with local or remote N\+DN forwarder.  
+
+
+
+
+{\ttfamily \#include $<$face.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1Face}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Face_1_1Error}{Error}
+\item 
+class \hyperlink{classndn_1_1Face_1_1Impl}{Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Face_a840a295d570861870590aaeebb3c8e2b}{Face} ()
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1Face}{Face} using the default transport (\hyperlink{classndn_1_1UnixTransport}{Unix\+Transport}) \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Face_a55edbdaea6abe5e99ca316b86ff4790c}{Face} (boost\+::asio\+::io\+\_\+service \&io\+Service)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1Face}{Face} using the default transport (\hyperlink{classndn_1_1UnixTransport}{Unix\+Transport}) \end{DoxyCompactList}\item 
+const Pending\+Interest\+Id $\ast$ \hyperlink{classndn_1_1Face_aad7474be862c8862d5cdd769b0bfb9bf}{express\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{namespacendn_a3594ce6ee9b530d1fd0eb0d59d3587da}{On\+Data} \&on\+Data, const \hyperlink{namespacendn_aa4752a1808de5e7246dd6b1151e4e87f}{On\+Timeout} \&on\+Timeout=\hyperlink{namespacendn_aa4752a1808de5e7246dd6b1151e4e87f}{On\+Timeout}())
+\begin{DoxyCompactList}\small\item\em Express \hyperlink{classndn_1_1Interest}{Interest}. \end{DoxyCompactList}\item 
+const Pending\+Interest\+Id $\ast$ \hyperlink{classndn_1_1Face_a57ef94e7b1cf5309a1bd602e3dfb88a7}{express\+Interest} (const \hyperlink{classndn_1_1Name}{Name} \&name, const \hyperlink{classndn_1_1Interest}{Interest} \&tmpl, const \hyperlink{namespacendn_a3594ce6ee9b530d1fd0eb0d59d3587da}{On\+Data} \&on\+Data, const \hyperlink{namespacendn_aa4752a1808de5e7246dd6b1151e4e87f}{On\+Timeout} \&on\+Timeout=\hyperlink{namespacendn_aa4752a1808de5e7246dd6b1151e4e87f}{On\+Timeout}())
+\begin{DoxyCompactList}\small\item\em Express \hyperlink{classndn_1_1Interest}{Interest} using name and \hyperlink{classndn_1_1Interest}{Interest} template. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Face_a3d62143eb6c8fc963cf850a5629c3f63}{remove\+Pending\+Interest} (const Pending\+Interest\+Id $\ast$pending\+Interest\+Id)
+\begin{DoxyCompactList}\small\item\em Cancel previously expressed \hyperlink{classndn_1_1Interest}{Interest}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1Face_aa611e634ff49e5d693bbf10412c7a773}{get\+N\+Pending\+Interests} () const\hypertarget{classndn_1_1Face_aa611e634ff49e5d693bbf10412c7a773}{}\label{classndn_1_1Face_aa611e634ff49e5d693bbf10412c7a773}
+
+\begin{DoxyCompactList}\small\item\em Get number of pending Interests. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_a89b613696d4e0c9839b555973b1d690a}{set\+Interest\+Filter} (const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&interest\+Filter, const \hyperlink{namespacendn_a6ddca075866d76508a3dd3b15533cac2}{On\+Interest} \&on\+Interest, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info} \&signing\+Info=\hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info}(), uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_a3dfdbf9764e7e628e4daf29606155d02}{set\+Interest\+Filter} (const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&interest\+Filter, const \hyperlink{namespacendn_a6ddca075866d76508a3dd3b15533cac2}{On\+Interest} \&on\+Interest, const \hyperlink{namespacendn_a80b158f94737f73bec3f9af27161e899}{Register\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info} \&signing\+Info=\hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info}(), uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. \end{DoxyCompactList}\item 
+const Interest\+Filter\+Id $\ast$ \hyperlink{classndn_1_1Face_a934f3080b7dc9e350f5e4536b27fc391}{set\+Interest\+Filter} (const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&interest\+Filter, const \hyperlink{namespacendn_a6ddca075866d76508a3dd3b15533cac2}{On\+Interest} \&on\+Interest)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_a60ff36d057b56334527c3fd67f6dd748}{set\+Interest\+Filter} (const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&interest\+Filter, const \hyperlink{namespacendn_a6ddca075866d76508a3dd3b15533cac2}{On\+Interest} \&on\+Interest, const \hyperlink{namespacendn_a80b158f94737f73bec3f9af27161e899}{Register\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_a4bcd01a63a3fa6a4b73a0cd79950ccb2}{set\+Interest\+Filter} (const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&interest\+Filter, const \hyperlink{namespacendn_a6ddca075866d76508a3dd3b15533cac2}{On\+Interest} \&on\+Interest, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_a95b9bd1df79b918bb8eef4943bc193c4}{set\+Interest\+Filter} (const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&interest\+Filter, const \hyperlink{namespacendn_a6ddca075866d76508a3dd3b15533cac2}{On\+Interest} \&on\+Interest, const \hyperlink{namespacendn_a80b158f94737f73bec3f9af27161e899}{Register\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1Name}{Name} \&identity, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_a7d7615722245eeac4c22be7124e26d7c}{set\+Interest\+Filter} (const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&interest\+Filter, const \hyperlink{namespacendn_a6ddca075866d76508a3dd3b15533cac2}{On\+Interest} \&on\+Interest, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1Name}{Name} \&identity, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_adc0ac1eddbbf53114d7e824595b45f34}{register\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const \hyperlink{namespacendn_a80b158f94737f73bec3f9af27161e899}{Register\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info} \&signing\+Info=\hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info}(), uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Register prefix with the connected N\+DN forwarder. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_a547b68aa393d31c654c7626aab35eddd}{register\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const \hyperlink{namespacendn_a80b158f94737f73bec3f9af27161e899}{Register\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Register prefix with the connected N\+DN forwarder. \end{DoxyCompactList}\item 
+const Registered\+Prefix\+Id $\ast$ \hyperlink{classndn_1_1Face_a0d6505bb8c4d4e93d1b199cd5537122a}{register\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const \hyperlink{namespacendn_a80b158f94737f73bec3f9af27161e899}{Register\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1Name}{Name} \&identity, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT)
+\begin{DoxyCompactList}\small\item\em Register prefix with the connected N\+DN forwarder and call on\+Interest when a matching interest is received. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Face_a63c8cf621a1208f3a9a0eb1a21b476e9}{unset\+Interest\+Filter} (const Registered\+Prefix\+Id $\ast$registered\+Prefix\+Id)
+\begin{DoxyCompactList}\small\item\em Remove the registered prefix entry with the registered\+Prefix\+Id. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Face_ac1d18e9a1ffe8aed034647600549edf7}{unset\+Interest\+Filter} (const Interest\+Filter\+Id $\ast$interest\+Filter\+Id)
+\begin{DoxyCompactList}\small\item\em Remove previously set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} from library\textquotesingle{}s F\+IB. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Face_ae6d4d5060f12a40b10658d6568fb6f94}{unregister\+Prefix} (const Registered\+Prefix\+Id $\ast$registered\+Prefix\+Id, const \hyperlink{namespacendn_a6781fc026448072c22454e6af8b946e0}{Unregister\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a1d6036d735c4c3504dad4f56ed174e5d}{Unregister\+Prefix\+Failure\+Callback} \&on\+Failure)
+\begin{DoxyCompactList}\small\item\em Unregister prefix from R\+IB. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Face_a68d75bfa4d036ae685dd2c44fa309002}{put} (const \hyperlink{classndn_1_1Data}{Data} \&data)
+\begin{DoxyCompactList}\small\item\em Publish data packet. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Face_a34608fc9ddd08808fbb16819f25a0803}{process\+Events} (const time\+::milliseconds \&timeout=time\+::milliseconds\+::zero(), bool keep\+Thread=false)\hypertarget{classndn_1_1Face_a34608fc9ddd08808fbb16819f25a0803}{}\label{classndn_1_1Face_a34608fc9ddd08808fbb16819f25a0803}
+
+\begin{DoxyCompactList}\small\item\em Noop (kept for compatibility) \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Face_a94cece651790f2b3e140ed157667587e}{shutdown} ()
+\begin{DoxyCompactList}\small\item\em Shutdown face operations. \end{DoxyCompactList}\item 
+boost\+::asio\+::io\+\_\+service \& \hyperlink{classndn_1_1Face_a517205cc925595c1a194fed7a98ebfb5}{get\+Io\+Service} ()\hypertarget{classndn_1_1Face_a517205cc925595c1a194fed7a98ebfb5}{}\label{classndn_1_1Face_a517205cc925595c1a194fed7a98ebfb5}
+
+\begin{DoxyCompactList}\small\item\em Return nullptr (kept for compatibility) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstraction to communicate with local or remote N\+DN forwarder. 
+
+Definition at line 100 of file face.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Face@{ndn\+::\+Face}!Face@{Face}}
+\index{Face@{Face}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{Face()}{Face()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Face\+::\+Face (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a840a295d570861870590aaeebb3c8e2b}{}\label{classndn_1_1Face_a840a295d570861870590aaeebb3c8e2b}
+
+
+Create a new \hyperlink{classndn_1_1Face}{Face} using the default transport (\hyperlink{classndn_1_1UnixTransport}{Unix\+Transport}) 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & on configuration file parse failure \\
+\hline
+{\em \hyperlink{classndn_1_1Face_1_1Error}{Face\+::\+Error}} & on unsupported protocol \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 40 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!Face@{Face}}
+\index{Face@{Face}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{Face(boost\+::asio\+::io\+\_\+service \&io\+Service)}{Face(boost::asio::io\_service \&ioService)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Face\+::\+Face (
+\begin{DoxyParamCaption}
+\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+Service}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Face_a55edbdaea6abe5e99ca316b86ff4790c}{}\label{classndn_1_1Face_a55edbdaea6abe5e99ca316b86ff4790c}
+
+
+Create a new \hyperlink{classndn_1_1Face}{Face} using the default transport (\hyperlink{classndn_1_1UnixTransport}{Unix\+Transport}) 
+
+\begin{DoxyParagraph}{Usage examples\+:}
+\begin{DoxyVerb}Face face1;
+Face face2(face1.getIoService());
+
+// Now the following ensures that events on both faces are processed
+face1.processEvents();
+// or face1.getIoService().run();
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{or}
+\begin{DoxyVerb}boost::asio::io_service ioService;
+Face face1(ioService);
+Face face2(ioService);
+...
+
+ioService.run();
+\end{DoxyVerb}
+
+\end{DoxyParagraph}
+
+\begin{DoxyParams}{Parameters}
+{\em io\+Service} & A reference to boost\+::io\+\_\+service object that should control all IO operations. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & on configuration file parse failure \\
+\hline
+{\em \hyperlink{classndn_1_1Face_1_1Error}{Face\+::\+Error}} & on unsupported protocol \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 46 of file face.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Face@{ndn\+::\+Face}!express\+Interest@{express\+Interest}}
+\index{express\+Interest@{express\+Interest}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{express\+Interest(const Interest \&interest, const On\+Data \&on\+Data, const On\+Timeout \&on\+Timeout=\+On\+Timeout())}{expressInterest(const Interest \&interest, const OnData \&onData, const OnTimeout \&onTimeout=OnTimeout())}}]{\setlength{\rightskip}{0pt plus 5cm}const Pending\+Interest\+Id $\ast$ ndn\+::\+Face\+::express\+Interest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{const {\bf On\+Data} \&}]{on\+Data, }
+\item[{const {\bf On\+Timeout} \&}]{on\+Timeout = {\ttfamily {\bf On\+Timeout}()}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_aad7474be862c8862d5cdd769b0bfb9bf}{}\label{classndn_1_1Face_aad7474be862c8862d5cdd769b0bfb9bf}
+
+
+Express \hyperlink{classndn_1_1Interest}{Interest}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & An \hyperlink{classndn_1_1Interest}{Interest} to be expressed \\
+\hline
+{\em on\+Data} & Callback to be called when a matching data packet is received \\
+\hline
+{\em on\+Timeout} & (optional) A function object to call if the interest times out\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pending interest ID which can be used with remove\+Pending\+Interest
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Face_1_1Error}{Error}} & when \hyperlink{classndn_1_1Interest}{Interest} size exceeds maximum limit (M\+A\+X\+\_\+\+N\+D\+N\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 63 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!express\+Interest@{express\+Interest}}
+\index{express\+Interest@{express\+Interest}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{express\+Interest(const Name \&name, const Interest \&tmpl, const On\+Data \&on\+Data, const On\+Timeout \&on\+Timeout=\+On\+Timeout())}{expressInterest(const Name \&name, const Interest \&tmpl, const OnData \&onData, const OnTimeout \&onTimeout=OnTimeout())}}]{\setlength{\rightskip}{0pt plus 5cm}const Pending\+Interest\+Id $\ast$ ndn\+::\+Face\+::express\+Interest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name, }
+\item[{const {\bf Interest} \&}]{tmpl, }
+\item[{const {\bf On\+Data} \&}]{on\+Data, }
+\item[{const {\bf On\+Timeout} \&}]{on\+Timeout = {\ttfamily {\bf On\+Timeout}()}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a57ef94e7b1cf5309a1bd602e3dfb88a7}{}\label{classndn_1_1Face_a57ef94e7b1cf5309a1bd602e3dfb88a7}
+
+
+Express \hyperlink{classndn_1_1Interest}{Interest} using name and \hyperlink{classndn_1_1Interest}{Interest} template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \hyperlink{classndn_1_1Name}{Name} of the \hyperlink{classndn_1_1Interest}{Interest} \\
+\hline
+{\em tmpl} & \hyperlink{classndn_1_1Interest}{Interest} template to fill parameters \\
+\hline
+{\em on\+Data} & Callback to be called when a matching data packet is received \\
+\hline
+{\em on\+Timeout} & (optional) A function object to call if the interest times out\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Opaque pending interest ID which can be used with remove\+Pending\+Interest
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Face_1_1Error}{Error}} & when \hyperlink{classndn_1_1Interest}{Interest} size exceeds maximum limit (M\+A\+X\+\_\+\+N\+D\+N\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 76 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!put@{put}}
+\index{put@{put}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{put(const Data \&data)}{put(const Data \&data)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Face\+::put (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a68d75bfa4d036ae685dd2c44fa309002}{}\label{classndn_1_1Face_a68d75bfa4d036ae685dd2c44fa309002}
+
+
+Publish data packet. 
+
+This method can be called to satisfy the incoming \hyperlink{classndn_1_1Interest}{Interest} or to put \hyperlink{classndn_1_1Data}{Data} packet into the cache of the local N\+DN forwarder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \hyperlink{classndn_1_1Data}{Data} packet to publish. It is highly recommended to use \hyperlink{classndn_1_1Data}{Data} packet that was created using make\+\_\+shared$<$\+Data$>$(...). Otherwise, \hyperlink{classndn_1_1Face_a68d75bfa4d036ae685dd2c44fa309002}{put()} will make an extra copy of the \hyperlink{classndn_1_1Data}{Data} packet to ensure validity of published \hyperlink{classndn_1_1Data}{Data} until asynchronous \hyperlink{classndn_1_1Face_a68d75bfa4d036ae685dd2c44fa309002}{put()} operation finishes.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Face_1_1Error}{Error}} & when \hyperlink{classndn_1_1Data}{Data} size exceeds maximum limit (M\+A\+X\+\_\+\+N\+D\+N\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 87 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!register\+Prefix@{register\+Prefix}}
+\index{register\+Prefix@{register\+Prefix}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{register\+Prefix(const Name \&prefix, const Register\+Prefix\+Success\+Callback \&on\+Success, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const security\+::\+Signing\+Info \&signing\+Info=security\+::\+Signing\+Info(), uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{registerPrefix(const Name \&prefix, const RegisterPrefixSuccessCallback \&onSuccess, const RegisterPrefixFailureCallback \&onFailure, const security::SigningInfo \&signingInfo=security::SigningInfo(), uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::register\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const {\bf Register\+Prefix\+Success\+Callback} \&}]{on\+Success, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf security\+::\+Signing\+Info} \&}]{signing\+Info = {\ttfamily {\bf security\+::\+Signing\+Info}()}, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_adc0ac1eddbbf53114d7e824595b45f34}{}\label{classndn_1_1Face_adc0ac1eddbbf53114d7e824595b45f34}
+
+
+Register prefix with the connected N\+DN forwarder. 
+
+This method only modifies forwarder\textquotesingle{}s R\+IB and does not associate any on\+Interest callbacks. Use set\+Interest\+Filter method to dispatch incoming Interests to the right callbacks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & A prefix to register with the connected N\+DN forwarder \\
+\hline
+{\em on\+Success} & A callback to be called when prefix\+Register command succeeds \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em signing\+Info} & (optional) Signing parameters. When omitted, a default parameters used in the signature will be used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The registered prefix ID which can be used with unregister\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 234 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!register\+Prefix@{register\+Prefix}}
+\index{register\+Prefix@{register\+Prefix}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{register\+Prefix(const Name \&prefix, const Register\+Prefix\+Success\+Callback \&on\+Success, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const Identity\+Certificate \&certificate, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{registerPrefix(const Name \&prefix, const RegisterPrefixSuccessCallback \&onSuccess, const RegisterPrefixFailureCallback \&onFailure, const IdentityCertificate \&certificate, uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::register\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const {\bf Register\+Prefix\+Success\+Callback} \&}]{on\+Success, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf Identity\+Certificate} \&}]{certificate, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a547b68aa393d31c654c7626aab35eddd}{}\label{classndn_1_1Face_a547b68aa393d31c654c7626aab35eddd}
+
+
+Register prefix with the connected N\+DN forwarder. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000016}{Deprecated}]Use override with Signing\+Info instead of this function \end{DoxyRefDesc}
+This method only modifies forwarder\textquotesingle{}s R\+IB and does not associate any on\+Interest callbacks. Use set\+Interest\+Filter method to dispatch incoming Interests to the right callbacks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & A prefix to register with the connected N\+DN forwarder \\
+\hline
+{\em on\+Success} & A callback to be called when prefix\+Register command succeeds \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em certificate} & (optional) A certificate under which the prefix registration command is signed. When omitted, a default certificate of the default identity is used to sign the registration command \\
+\hline
+{\em flags} & (optional) R\+IB flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The registered prefix ID which can be used with unregister\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 252 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!register\+Prefix@{register\+Prefix}}
+\index{register\+Prefix@{register\+Prefix}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{register\+Prefix(const Name \&prefix, const Register\+Prefix\+Success\+Callback \&on\+Success, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const Name \&identity, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{registerPrefix(const Name \&prefix, const RegisterPrefixSuccessCallback \&onSuccess, const RegisterPrefixFailureCallback \&onFailure, const Name \&identity, uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::register\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const {\bf Register\+Prefix\+Success\+Callback} \&}]{on\+Success, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf Name} \&}]{identity, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a0d6505bb8c4d4e93d1b199cd5537122a}{}\label{classndn_1_1Face_a0d6505bb8c4d4e93d1b199cd5537122a}
+
+
+Register prefix with the connected N\+DN forwarder and call on\+Interest when a matching interest is received. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000017}{Deprecated}]Use override with Signing\+Info instead of this function \end{DoxyRefDesc}
+This method only modifies forwarder\textquotesingle{}s R\+IB and does not associate any on\+Interest callbacks. Use set\+Interest\+Filter method to dispatch incoming Interests to the right callbacks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & A prefix to register with the connected N\+DN forwarder \\
+\hline
+{\em on\+Success} & A callback to be called when prefix\+Register command succeeds \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em identity} & A signing identity. A prefix registration command is signed under the default certificate of this identity \\
+\hline
+{\em flags} & (optional) R\+IB flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The registered prefix ID which can be used with unregister\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 267 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!remove\+Pending\+Interest@{remove\+Pending\+Interest}}
+\index{remove\+Pending\+Interest@{remove\+Pending\+Interest}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{remove\+Pending\+Interest(const Pending\+Interest\+Id $\ast$pending\+Interest\+Id)}{removePendingInterest(const PendingInterestId *pendingInterestId)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Face\+::remove\+Pending\+Interest (
+\begin{DoxyParamCaption}
+\item[{const Pending\+Interest\+Id $\ast$}]{pending\+Interest\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a3d62143eb6c8fc963cf850a5629c3f63}{}\label{classndn_1_1Face_a3d62143eb6c8fc963cf850a5629c3f63}
+
+
+Cancel previously expressed \hyperlink{classndn_1_1Interest}{Interest}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pending\+Interest\+Id} & The ID returned from express\+Interest. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!set\+Interest\+Filter@{set\+Interest\+Filter}}
+\index{set\+Interest\+Filter@{set\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{set\+Interest\+Filter(const Interest\+Filter \&interest\+Filter, const On\+Interest \&on\+Interest, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const security\+::\+Signing\+Info \&signing\+Info=security\+::\+Signing\+Info(), uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{setInterestFilter(const InterestFilter \&interestFilter, const OnInterest \&onInterest, const RegisterPrefixFailureCallback \&onFailure, const security::SigningInfo \&signingInfo=security::SigningInfo(), uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::set\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest\+Filter} \&}]{interest\+Filter, }
+\item[{const {\bf On\+Interest} \&}]{on\+Interest, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf security\+::\+Signing\+Info} \&}]{signing\+Info = {\ttfamily {\bf security\+::\+Signing\+Info}()}, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a89b613696d4e0c9839b555973b1d690a}{}\label{classndn_1_1Face_a89b613696d4e0c9839b555973b1d690a}
+
+
+Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. 
+
+This version of set\+Interest\+Filter combines set\+Interest\+Filter and register\+Prefix operations and is intended to be used when only one filter for the same prefix needed to be set. When multiple names sharing the same prefix should be dispatched to different callbacks, use one register\+Prefix call, followed (in on\+Success callback) by a series of set\+Interest\+Filter calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest\+Filter} & \hyperlink{classndn_1_1Interest}{Interest} filter (prefix part will be registered with the forwarder) \\
+\hline
+{\em on\+Interest} & A callback to be called when a matching interest is received \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em flags} & (optional) R\+IB flags \\
+\hline
+{\em signing\+Info} & (optional) Signing parameters. When omitted, a default parameters used in the signature will be used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Opaque registered prefix ID which can be used with unset\+Interest\+Filter or remove\+Registered\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!set\+Interest\+Filter@{set\+Interest\+Filter}}
+\index{set\+Interest\+Filter@{set\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{set\+Interest\+Filter(const Interest\+Filter \&interest\+Filter, const On\+Interest \&on\+Interest, const Register\+Prefix\+Success\+Callback \&on\+Success, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const security\+::\+Signing\+Info \&signing\+Info=security\+::\+Signing\+Info(), uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{setInterestFilter(const InterestFilter \&interestFilter, const OnInterest \&onInterest, const RegisterPrefixSuccessCallback \&onSuccess, const RegisterPrefixFailureCallback \&onFailure, const security::SigningInfo \&signingInfo=security::SigningInfo(), uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::set\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest\+Filter} \&}]{interest\+Filter, }
+\item[{const {\bf On\+Interest} \&}]{on\+Interest, }
+\item[{const {\bf Register\+Prefix\+Success\+Callback} \&}]{on\+Success, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf security\+::\+Signing\+Info} \&}]{signing\+Info = {\ttfamily {\bf security\+::\+Signing\+Info}()}, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a3dfdbf9764e7e628e4daf29606155d02}{}\label{classndn_1_1Face_a3dfdbf9764e7e628e4daf29606155d02}
+
+
+Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. 
+
+This version of set\+Interest\+Filter combines set\+Interest\+Filter and register\+Prefix operations and is intended to be used when only one filter for the same prefix needed to be set. When multiple names sharing the same prefix should be dispatched to different callbacks, use one register\+Prefix call, followed (in on\+Success callback) by a series of set\+Interest\+Filter calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest\+Filter} & \hyperlink{classndn_1_1Interest}{Interest} filter (prefix part will be registered with the forwarder) \\
+\hline
+{\em on\+Interest} & A callback to be called when a matching interest is received \\
+\hline
+{\em on\+Success} & A callback to be called when prefix\+Register command succeeds \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em flags} & (optional) R\+IB flags \\
+\hline
+{\em signing\+Info} & (optional) Signing parameters. When omitted, a default parameters used in the signature will be used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Opaque registered prefix ID which can be used with unset\+Interest\+Filter or remove\+Registered\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!set\+Interest\+Filter@{set\+Interest\+Filter}}
+\index{set\+Interest\+Filter@{set\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{set\+Interest\+Filter(const Interest\+Filter \&interest\+Filter, const On\+Interest \&on\+Interest)}{setInterestFilter(const InterestFilter \&interestFilter, const OnInterest \&onInterest)}}]{\setlength{\rightskip}{0pt plus 5cm}const Interest\+Filter\+Id $\ast$ ndn\+::\+Face\+::set\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest\+Filter} \&}]{interest\+Filter, }
+\item[{const {\bf On\+Interest} \&}]{on\+Interest}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a934f3080b7dc9e350f5e4536b27fc391}{}\label{classndn_1_1Face_a934f3080b7dc9e350f5e4536b27fc391}
+
+
+Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest\+Filter} & \hyperlink{classndn_1_1Interest}{Interest} \\
+\hline
+{\em on\+Interest} & A callback to be called when a matching interest is received\\
+\hline
+\end{DoxyParams}
+This method modifies library\textquotesingle{}s F\+IB only, and does not register the prefix with the forwarder. It will always succeed. To register prefix with the forwarder, use register\+Prefix, or use the set\+Interest\+Filter overload taking two callbacks.
+
+\begin{DoxyReturn}{Returns}
+Opaque interest filter ID which can be used with unset\+Interest\+Filter 
+\end{DoxyReturn}
+
+
+Definition at line 155 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!set\+Interest\+Filter@{set\+Interest\+Filter}}
+\index{set\+Interest\+Filter@{set\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{set\+Interest\+Filter(const Interest\+Filter \&interest\+Filter, const On\+Interest \&on\+Interest, const Register\+Prefix\+Success\+Callback \&on\+Success, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const Identity\+Certificate \&certificate, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{setInterestFilter(const InterestFilter \&interestFilter, const OnInterest \&onInterest, const RegisterPrefixSuccessCallback \&onSuccess, const RegisterPrefixFailureCallback \&onFailure, const IdentityCertificate \&certificate, uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::set\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest\+Filter} \&}]{interest\+Filter, }
+\item[{const {\bf On\+Interest} \&}]{on\+Interest, }
+\item[{const {\bf Register\+Prefix\+Success\+Callback} \&}]{on\+Success, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf Identity\+Certificate} \&}]{certificate, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a60ff36d057b56334527c3fd67f6dd748}{}\label{classndn_1_1Face_a60ff36d057b56334527c3fd67f6dd748}
+
+
+Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000012}{Deprecated}]Use override with Signing\+Info instead of this function \end{DoxyRefDesc}
+This version of set\+Interest\+Filter combines set\+Interest\+Filter and register\+Prefix operations and is intended to be used when only one filter for the same prefix needed to be set. When multiple names sharing the same prefix should be dispatched to different callbacks, use one register\+Prefix call, followed (in on\+Success callback) by a series of set\+Interest\+Filter calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest\+Filter} & \hyperlink{classndn_1_1Interest}{Interest} filter (prefix part will be registered with the forwarder) \\
+\hline
+{\em on\+Interest} & A callback to be called when a matching interest is received \\
+\hline
+{\em on\+Success} & A callback to be called when prefix\+Register command succeeds \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em flags} & (optional) R\+IB flags \\
+\hline
+{\em certificate} & (optional) A certificate under which the prefix registration command is signed. When omitted, a default certificate of the default identity is used to sign the registration command\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Opaque registered prefix ID which can be used with unset\+Interest\+Filter or remove\+Registered\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!set\+Interest\+Filter@{set\+Interest\+Filter}}
+\index{set\+Interest\+Filter@{set\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{set\+Interest\+Filter(const Interest\+Filter \&interest\+Filter, const On\+Interest \&on\+Interest, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const Identity\+Certificate \&certificate, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{setInterestFilter(const InterestFilter \&interestFilter, const OnInterest \&onInterest, const RegisterPrefixFailureCallback \&onFailure, const IdentityCertificate \&certificate, uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::set\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest\+Filter} \&}]{interest\+Filter, }
+\item[{const {\bf On\+Interest} \&}]{on\+Interest, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf Identity\+Certificate} \&}]{certificate, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a4bcd01a63a3fa6a4b73a0cd79950ccb2}{}\label{classndn_1_1Face_a4bcd01a63a3fa6a4b73a0cd79950ccb2}
+
+
+Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000013}{Deprecated}]Use override with Signing\+Info instead of this function \end{DoxyRefDesc}
+This version of set\+Interest\+Filter combines set\+Interest\+Filter and register\+Prefix operations and is intended to be used when only one filter for the same prefix needed to be set. When multiple names sharing the same prefix should be dispatched to different callbacks, use one register\+Prefix call, followed (in on\+Success callback) by a series of set\+Interest\+Filter calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest\+Filter} & \hyperlink{classndn_1_1Interest}{Interest} filter (prefix part will be registered with the forwarder) \\
+\hline
+{\em on\+Interest} & A callback to be called when a matching interest is received \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em flags} & (optional) R\+IB flags \\
+\hline
+{\em certificate} & (optional) A certificate under which the prefix registration command is signed. When omitted, a default certificate of the default identity is used to sign the registration command\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Opaque registered prefix ID which can be used with unset\+Interest\+Filter or remove\+Registered\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 189 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!set\+Interest\+Filter@{set\+Interest\+Filter}}
+\index{set\+Interest\+Filter@{set\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{set\+Interest\+Filter(const Interest\+Filter \&interest\+Filter, const On\+Interest \&on\+Interest, const Register\+Prefix\+Success\+Callback \&on\+Success, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const Name \&identity, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{setInterestFilter(const InterestFilter \&interestFilter, const OnInterest \&onInterest, const RegisterPrefixSuccessCallback \&onSuccess, const RegisterPrefixFailureCallback \&onFailure, const Name \&identity, uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::set\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest\+Filter} \&}]{interest\+Filter, }
+\item[{const {\bf On\+Interest} \&}]{on\+Interest, }
+\item[{const {\bf Register\+Prefix\+Success\+Callback} \&}]{on\+Success, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf Name} \&}]{identity, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a95b9bd1df79b918bb8eef4943bc193c4}{}\label{classndn_1_1Face_a95b9bd1df79b918bb8eef4943bc193c4}
+
+
+Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000014}{Deprecated}]Use override with Signing\+Info instead of this function \end{DoxyRefDesc}
+This version of set\+Interest\+Filter combines set\+Interest\+Filter and register\+Prefix operations and is intended to be used when only one filter for the same prefix needed to be set. When multiple names sharing the same prefix should be dispatched to different callbacks, use one register\+Prefix call, followed (in on\+Success callback) by a series of set\+Interest\+Filter calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest\+Filter} & \hyperlink{classndn_1_1Interest}{Interest} filter (prefix part will be registered with the forwarder) \\
+\hline
+{\em on\+Interest} & A callback to be called when a matching interest is received \\
+\hline
+{\em on\+Success} & A callback to be called when prefix\+Register command succeeds \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em identity} & A signing identity. A prefix registration command is signed under the default certificate of this identity \\
+\hline
+{\em flags} & (optional) R\+IB flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Opaque registered prefix ID which can be used with remove\+Registered\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 204 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!set\+Interest\+Filter@{set\+Interest\+Filter}}
+\index{set\+Interest\+Filter@{set\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{set\+Interest\+Filter(const Interest\+Filter \&interest\+Filter, const On\+Interest \&on\+Interest, const Register\+Prefix\+Failure\+Callback \&on\+Failure, const Name \&identity, uint64\+\_\+t flags=nfd\+::\+R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+I\+T)}{setInterestFilter(const InterestFilter \&interestFilter, const OnInterest \&onInterest, const RegisterPrefixFailureCallback \&onFailure, const Name \&identity, uint64\_t flags=nfd::ROUTE\_FLAG\_CHILD\_INHERIT)}}]{\setlength{\rightskip}{0pt plus 5cm}const Registered\+Prefix\+Id $\ast$ ndn\+::\+Face\+::set\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest\+Filter} \&}]{interest\+Filter, }
+\item[{const {\bf On\+Interest} \&}]{on\+Interest, }
+\item[{const {\bf Register\+Prefix\+Failure\+Callback} \&}]{on\+Failure, }
+\item[{const {\bf Name} \&}]{identity, }
+\item[{uint64\+\_\+t}]{flags = {\ttfamily nfd\+:\+:ROUTE\+\_\+FLAG\+\_\+CHILD\+\_\+INHERIT}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a7d7615722245eeac4c22be7124e26d7c}{}\label{classndn_1_1Face_a7d7615722245eeac4c22be7124e26d7c}
+
+
+Set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} to dispatch incoming matching interest to on\+Interest callback and register the filtered prefix with the connected N\+DN forwarder. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000015}{Deprecated}]Use override with Signing\+Info instead of this function \end{DoxyRefDesc}
+This version of set\+Interest\+Filter combines set\+Interest\+Filter and register\+Prefix operations and is intended to be used when only one filter for the same prefix needed to be set. When multiple names sharing the same prefix should be dispatched to different callbacks, use one register\+Prefix call, followed (in on\+Success callback) by a series of set\+Interest\+Filter calls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest\+Filter} & \hyperlink{classndn_1_1Interest}{Interest} filter (prefix part will be registered with the forwarder) \\
+\hline
+{\em on\+Interest} & A callback to be called when a matching interest is received \\
+\hline
+{\em on\+Failure} & A callback to be called when prefix\+Register command fails \\
+\hline
+{\em identity} & A signing identity. A prefix registration command is signed under the default certificate of this identity \\
+\hline
+{\em flags} & (optional) R\+IB flags\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Opaque registered prefix ID which can be used with remove\+Registered\+Prefix 
+\end{DoxyReturn}
+
+
+Definition at line 219 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{shutdown()}{shutdown()}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Face\+::shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a94cece651790f2b3e140ed157667587e}{}\label{classndn_1_1Face_a94cece651790f2b3e140ed157667587e}
+
+
+Shutdown face operations. 
+
+This method cancels all pending operations and closes connection to N\+DN Forwarder.
+
+Note that this method does not stop IO service and if the same IO service is shared between multiple Faces or with other IO objects (e.\+g., Scheduler). 
+
+Definition at line 313 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!unregister\+Prefix@{unregister\+Prefix}}
+\index{unregister\+Prefix@{unregister\+Prefix}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{unregister\+Prefix(const Registered\+Prefix\+Id $\ast$registered\+Prefix\+Id, const Unregister\+Prefix\+Success\+Callback \&on\+Success, const Unregister\+Prefix\+Failure\+Callback \&on\+Failure)}{unregisterPrefix(const RegisteredPrefixId *registeredPrefixId, const UnregisterPrefixSuccessCallback \&onSuccess, const UnregisterPrefixFailureCallback \&onFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Face\+::unregister\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const Registered\+Prefix\+Id $\ast$}]{registered\+Prefix\+Id, }
+\item[{const {\bf Unregister\+Prefix\+Success\+Callback} \&}]{on\+Success, }
+\item[{const {\bf Unregister\+Prefix\+Failure\+Callback} \&}]{on\+Failure}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_ae6d4d5060f12a40b10658d6568fb6f94}{}\label{classndn_1_1Face_ae6d4d5060f12a40b10658d6568fb6f94}
+
+
+Unregister prefix from R\+IB. 
+
+unregister\+Prefix will use the same credentials as original set\+Interest\+Filter/register\+Prefix command
+
+If registered\+Prefix\+Id was obtained using set\+Interest\+Filter, the corresponding \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} will be unset too.
+
+
+\begin{DoxyParams}{Parameters}
+{\em registered\+Prefix\+Id} & The ID returned from register\+Prefix \\
+\hline
+{\em on\+Success} & Callback to be called when operation succeeds \\
+\hline
+{\em on\+Failure} & Callback to be called when operation fails \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 297 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!unset\+Interest\+Filter@{unset\+Interest\+Filter}}
+\index{unset\+Interest\+Filter@{unset\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{unset\+Interest\+Filter(const Registered\+Prefix\+Id $\ast$registered\+Prefix\+Id)}{unsetInterestFilter(const RegisteredPrefixId *registeredPrefixId)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Face\+::unset\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const Registered\+Prefix\+Id $\ast$}]{registered\+Prefix\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_a63c8cf621a1208f3a9a0eb1a21b476e9}{}\label{classndn_1_1Face_a63c8cf621a1208f3a9a0eb1a21b476e9}
+
+
+Remove the registered prefix entry with the registered\+Prefix\+Id. 
+
+This does not affect another registered prefix with a different registered\+Prefix\+Id, even it if has the same prefix name. If there is no entry with the registered\+Prefix\+Id, do nothing.
+
+unset\+Interest\+Filter will use the same credentials as original set\+Interest\+Filter/register\+Prefix command
+
+
+\begin{DoxyParams}{Parameters}
+{\em registered\+Prefix\+Id} & The ID returned from register\+Prefix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 280 of file face.\+cpp.
+
+\index{ndn\+::\+Face@{ndn\+::\+Face}!unset\+Interest\+Filter@{unset\+Interest\+Filter}}
+\index{unset\+Interest\+Filter@{unset\+Interest\+Filter}!ndn\+::\+Face@{ndn\+::\+Face}}
+\subsubsection[{\texorpdfstring{unset\+Interest\+Filter(const Interest\+Filter\+Id $\ast$interest\+Filter\+Id)}{unsetInterestFilter(const InterestFilterId *interestFilterId)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Face\+::unset\+Interest\+Filter (
+\begin{DoxyParamCaption}
+\item[{const Interest\+Filter\+Id $\ast$}]{interest\+Filter\+Id}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Face_ac1d18e9a1ffe8aed034647600549edf7}{}\label{classndn_1_1Face_ac1d18e9a1ffe8aed034647600549edf7}
+
+
+Remove previously set \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} from library\textquotesingle{}s F\+IB. 
+
+This method always succeeds and will {\bfseries N\+OT} send any request to the connected forwarder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest\+Filter\+Id} & The ID returned from set\+Interest\+Filter. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 289 of file face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/face.\+cpp\end{DoxyCompactItemize}

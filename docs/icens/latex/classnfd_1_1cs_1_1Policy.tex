@@ -1,0 +1,240 @@
+\hypertarget{classnfd_1_1cs_1_1Policy}{}\section{nfd\+:\+:cs\+:\+:Policy Class Reference}
+\label{classnfd_1_1cs_1_1Policy}\index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+
+
+represents a CS replacement policy  
+
+
+
+
+{\ttfamily \#include $<$cs-\/policy.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:cs\+:\+:Policy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1cs_1_1Policy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Policy} (const std\+::string \&policy\+Name)\hypertarget{classnfd_1_1cs_1_1Policy_a2e690af3047ceb479188cd4c83511b30}{}\label{classnfd_1_1cs_1_1Policy_a2e690af3047ceb479188cd4c83511b30}
+
+\item 
+const std\+::string \& {\bfseries get\+Name} () const\hypertarget{classnfd_1_1cs_1_1Policy_a8b4ffc93fcfe37f02babaed9725468c5}{}\label{classnfd_1_1cs_1_1Policy_a8b4ffc93fcfe37f02babaed9725468c5}
+
+\item 
+\hyperlink{classnfd_1_1cs_1_1Cs}{Cs} $\ast$ \hyperlink{classnfd_1_1cs_1_1Policy_a77aeb7bde79925d5880a45d420702613}{get\+Cs} () const\hypertarget{classnfd_1_1cs_1_1Policy_a77aeb7bde79925d5880a45d420702613}{}\label{classnfd_1_1cs_1_1Policy_a77aeb7bde79925d5880a45d420702613}
+
+\begin{DoxyCompactList}\small\item\em gets cs \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Policy_a65e824d1a4d52782a7ca6f521af73c1c}{set\+Cs} (\hyperlink{classnfd_1_1cs_1_1Cs}{Cs} $\ast$cs)\hypertarget{classnfd_1_1cs_1_1Policy_a65e824d1a4d52782a7ca6f521af73c1c}{}\label{classnfd_1_1cs_1_1Policy_a65e824d1a4d52782a7ca6f521af73c1c}
+
+\begin{DoxyCompactList}\small\item\em sets cs \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnfd_1_1cs_1_1Policy_a7297473f0524ef43630d21ba5344cdf8}{get\+Limit} () const\hypertarget{classnfd_1_1cs_1_1Policy_a7297473f0524ef43630d21ba5344cdf8}{}\label{classnfd_1_1cs_1_1Policy_a7297473f0524ef43630d21ba5344cdf8}
+
+\begin{DoxyCompactList}\small\item\em gets hard limit (in number of entries) \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Policy_a3b28312dba54880444eaf988c5e5307c}{set\+Limit} (size\+\_\+t n\+Max\+Entries)
+\begin{DoxyCompactList}\small\item\em sets hard limit (in number of entries) \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Policy_af0967e5954ce5a93337639b410e26b8b}{after\+Insert} (iterator i)
+\begin{DoxyCompactList}\small\item\em invoked by CS after a new entry is inserted \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Policy_a410f764bbb0cfef48fb81a52cda6d5aa}{after\+Refresh} (iterator i)
+\begin{DoxyCompactList}\small\item\em invoked by CS after an existing entry is refreshed by same Data \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Policy_a6128ef4e5f3797b565c9ba05f904fc0d}{before\+Erase} (iterator i)
+\begin{DoxyCompactList}\small\item\em invoked by CS before an entry is erased due to management command \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Policy_a6220902b78b80f07b0d0c862c1ac432e}{before\+Use} (iterator i)
+\begin{DoxyCompactList}\small\item\em invoked by CS before an entry is used to match a lookup \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1cs_1_1Policy}{Policy}, iterator $>$ \hyperlink{classnfd_1_1cs_1_1Policy_a442af19fefa3fbe0267471117149c998}{before\+Evict}
+\begin{DoxyCompactList}\small\item\em emits when an entry is being evicted \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classnfd_1_1cs_1_1Policy_a4dadb2826887309843ebb52747072958}{do\+After\+Insert} (iterator i)=0
+\begin{DoxyCompactList}\small\item\em invoked after a new entry is created in CS \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1cs_1_1Policy_ac7c947c857abb4ad6a565b85e519a194}{do\+After\+Refresh} (iterator i)=0
+\begin{DoxyCompactList}\small\item\em invoked after an existing entry is refreshed by same Data \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1cs_1_1Policy_ab43a284d708ac4bb40220e85f379a053}{do\+Before\+Erase} (iterator i)=0
+\begin{DoxyCompactList}\small\item\em invoked before an entry is erased due to management command \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1cs_1_1Policy_ab8224c56d8f3e3aa0b8fbb7129b2af69}{do\+Before\+Use} (iterator i)=0
+\begin{DoxyCompactList}\small\item\em invoked before an entry is used to match a lookup \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1cs_1_1Policy_a5f6611c1dba23e82cc8828eff10169d0}{evict\+Entries} ()=0
+\begin{DoxyCompactList}\small\item\em evicts zero or more entries \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a CS replacement policy 
+
+Definition at line 39 of file cs-\/policy.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!after\+Insert@{after\+Insert}}
+\index{after\+Insert@{after\+Insert}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{after\+Insert(iterator i)}{afterInsert(iterator i)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::cs\+::\+Policy\+::after\+Insert (
+\begin{DoxyParamCaption}
+\item[{iterator}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1Policy_af0967e5954ce5a93337639b410e26b8b}{}\label{classnfd_1_1cs_1_1Policy_af0967e5954ce5a93337639b410e26b8b}
+
+
+invoked by CS after a new entry is inserted 
+
+\begin{DoxyPostcond}{Postcondition}
+cs.\+size() $<$= \hyperlink{classnfd_1_1cs_1_1Policy_a7297473f0524ef43630d21ba5344cdf8}{get\+Limit()}
+\end{DoxyPostcond}
+The policy may evict entries if necessary. During this process, {\ttfamily i} might be evicted. 
+
+Definition at line 51 of file cs-\/policy.\+cpp.
+
+\index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!after\+Refresh@{after\+Refresh}}
+\index{after\+Refresh@{after\+Refresh}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{after\+Refresh(iterator i)}{afterRefresh(iterator i)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::cs\+::\+Policy\+::after\+Refresh (
+\begin{DoxyParamCaption}
+\item[{iterator}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1Policy_a410f764bbb0cfef48fb81a52cda6d5aa}{}\label{classnfd_1_1cs_1_1Policy_a410f764bbb0cfef48fb81a52cda6d5aa}
+
+
+invoked by CS after an existing entry is refreshed by same Data 
+
+The policy may witness this refresh to make better eviction decisions in the future. 
+
+Definition at line 58 of file cs-\/policy.\+cpp.
+
+\index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!before\+Erase@{before\+Erase}}
+\index{before\+Erase@{before\+Erase}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{before\+Erase(iterator i)}{beforeErase(iterator i)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::cs\+::\+Policy\+::before\+Erase (
+\begin{DoxyParamCaption}
+\item[{iterator}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1Policy_a6128ef4e5f3797b565c9ba05f904fc0d}{}\label{classnfd_1_1cs_1_1Policy_a6128ef4e5f3797b565c9ba05f904fc0d}
+
+
+invoked by CS before an entry is erased due to management command 
+
+\begin{DoxyWarning}{Warning}
+CS must not invoke this method if an entry is erased due to eviction. 
+\end{DoxyWarning}
+
+
+Definition at line 65 of file cs-\/policy.\+cpp.
+
+\index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!before\+Use@{before\+Use}}
+\index{before\+Use@{before\+Use}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{before\+Use(iterator i)}{beforeUse(iterator i)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::cs\+::\+Policy\+::before\+Use (
+\begin{DoxyParamCaption}
+\item[{iterator}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1Policy_a6220902b78b80f07b0d0c862c1ac432e}{}\label{classnfd_1_1cs_1_1Policy_a6220902b78b80f07b0d0c862c1ac432e}
+
+
+invoked by CS before an entry is used to match a lookup 
+
+The policy may witness this usage to make better eviction decisions in the future. 
+
+Definition at line 72 of file cs-\/policy.\+cpp.
+
+\index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!do\+After\+Insert@{do\+After\+Insert}}
+\index{do\+After\+Insert@{do\+After\+Insert}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{do\+After\+Insert(iterator i)=0}{doAfterInsert(iterator i)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nfd\+::cs\+::\+Policy\+::do\+After\+Insert (
+\begin{DoxyParamCaption}
+\item[{iterator}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classnfd_1_1cs_1_1Policy_a4dadb2826887309843ebb52747072958}{}\label{classnfd_1_1cs_1_1Policy_a4dadb2826887309843ebb52747072958}
+
+
+invoked after a new entry is created in CS 
+
+When overridden in a subclass, a policy implementation should decide whether to accept {\ttfamily i}. If {\ttfamily i} is accepted, it should be inserted into a cleanup index. Otherwise, {\ttfamily before\+Evict} signal should be emitted with {\ttfamily i} to inform CS to erase the entry. A policy implementation may decide to evict other entries by emitting {\ttfamily before\+Evict} signal, in order to keep CS size under limit. \index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!do\+After\+Refresh@{do\+After\+Refresh}}
+\index{do\+After\+Refresh@{do\+After\+Refresh}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{do\+After\+Refresh(iterator i)=0}{doAfterRefresh(iterator i)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nfd\+::cs\+::\+Policy\+::do\+After\+Refresh (
+\begin{DoxyParamCaption}
+\item[{iterator}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classnfd_1_1cs_1_1Policy_ac7c947c857abb4ad6a565b85e519a194}{}\label{classnfd_1_1cs_1_1Policy_ac7c947c857abb4ad6a565b85e519a194}
+
+
+invoked after an existing entry is refreshed by same Data 
+
+When overridden in a subclass, a policy implementation may witness this operation and adjust its cleanup index. \index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!do\+Before\+Erase@{do\+Before\+Erase}}
+\index{do\+Before\+Erase@{do\+Before\+Erase}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{do\+Before\+Erase(iterator i)=0}{doBeforeErase(iterator i)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nfd\+::cs\+::\+Policy\+::do\+Before\+Erase (
+\begin{DoxyParamCaption}
+\item[{iterator}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classnfd_1_1cs_1_1Policy_ab43a284d708ac4bb40220e85f379a053}{}\label{classnfd_1_1cs_1_1Policy_ab43a284d708ac4bb40220e85f379a053}
+
+
+invoked before an entry is erased due to management command 
+
+\begin{DoxyNote}{Note}
+This will not be invoked for an entry being evicted by policy.
+\end{DoxyNote}
+When overridden in a subclass, a policy implementation should erase {\ttfamily i} from its cleanup index without emitted {\ttfamily after\+Erase} signal. \index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!do\+Before\+Use@{do\+Before\+Use}}
+\index{do\+Before\+Use@{do\+Before\+Use}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{do\+Before\+Use(iterator i)=0}{doBeforeUse(iterator i)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nfd\+::cs\+::\+Policy\+::do\+Before\+Use (
+\begin{DoxyParamCaption}
+\item[{iterator}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classnfd_1_1cs_1_1Policy_ab8224c56d8f3e3aa0b8fbb7129b2af69}{}\label{classnfd_1_1cs_1_1Policy_ab8224c56d8f3e3aa0b8fbb7129b2af69}
+
+
+invoked before an entry is used to match a lookup 
+
+When overridden in a subclass, a policy implementation may witness this operation and adjust its cleanup index. \index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!evict\+Entries@{evict\+Entries}}
+\index{evict\+Entries@{evict\+Entries}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{evict\+Entries()=0}{evictEntries()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nfd\+::cs\+::\+Policy\+::evict\+Entries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classnfd_1_1cs_1_1Policy_a5f6611c1dba23e82cc8828eff10169d0}{}\label{classnfd_1_1cs_1_1Policy_a5f6611c1dba23e82cc8828eff10169d0}
+
+
+evicts zero or more entries 
+
+\begin{DoxyPostcond}{Postcondition}
+CS size does not exceed hard limit 
+\end{DoxyPostcond}
+\index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!set\+Limit@{set\+Limit}}
+\index{set\+Limit@{set\+Limit}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{set\+Limit(size\+\_\+t n\+Max\+Entries)}{setLimit(size\_t nMaxEntries)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::cs\+::\+Policy\+::set\+Limit (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{n\+Max\+Entries}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1Policy_a3b28312dba54880444eaf988c5e5307c}{}\label{classnfd_1_1cs_1_1Policy_a3b28312dba54880444eaf988c5e5307c}
+
+
+sets hard limit (in number of entries) 
+
+\begin{DoxyPostcond}{Postcondition}
+\hyperlink{classnfd_1_1cs_1_1Policy_a7297473f0524ef43630d21ba5344cdf8}{get\+Limit()} == n\+Max\+Entries 
+
+cs.\+size() $<$= \hyperlink{classnfd_1_1cs_1_1Policy_a7297473f0524ef43630d21ba5344cdf8}{get\+Limit()}
+\end{DoxyPostcond}
+The policy may evict entries if necessary. 
+
+Definition at line 42 of file cs-\/policy.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}!before\+Evict@{before\+Evict}}
+\index{before\+Evict@{before\+Evict}!nfd\+::cs\+::\+Policy@{nfd\+::cs\+::\+Policy}}
+\subsubsection[{\texorpdfstring{before\+Evict}{beforeEvict}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf signal\+::\+Signal}$<${\bf Policy}, iterator$>$ nfd\+::cs\+::\+Policy\+::before\+Evict}\hypertarget{classnfd_1_1cs_1_1Policy_a442af19fefa3fbe0267471117149c998}{}\label{classnfd_1_1cs_1_1Policy_a442af19fefa3fbe0267471117149c998}
+
+
+emits when an entry is being evicted 
+
+A policy implementation should emit this signal to cause CS to erase the entry from its index. CS should connect to this signal and erase the entry upon signal emission. 
+
+Definition at line 81 of file cs-\/policy.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs-\/policy.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs-\/policy.\+cpp\end{DoxyCompactItemize}

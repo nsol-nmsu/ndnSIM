@@ -1,0 +1,65 @@
+\hypertarget{classndn_1_1time_1_1steady__clock}{}\section{ndn\+:\+:time\+:\+:steady\+\_\+clock Class Reference}
+\label{classndn_1_1time_1_1steady__clock}\index{ndn\+::time\+::steady\+\_\+clock@{ndn\+::time\+::steady\+\_\+clock}}
+
+
+Steady clock.  
+
+
+
+
+{\ttfamily \#include $<$time.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef nanoseconds {\bfseries duration}\hypertarget{classndn_1_1time_1_1steady__clock_a80afc6e289def0d2d988f4b6308a1f89}{}\label{classndn_1_1time_1_1steady__clock_a80afc6e289def0d2d988f4b6308a1f89}
+
+\item 
+typedef duration\+::rep {\bfseries rep}\hypertarget{classndn_1_1time_1_1steady__clock_a71b4a094353a04954f9254604defbcaf}{}\label{classndn_1_1time_1_1steady__clock_a71b4a094353a04954f9254604defbcaf}
+
+\item 
+typedef duration\+::period {\bfseries period}\hypertarget{classndn_1_1time_1_1steady__clock_acc7a51c52d1de51a9a5fae4797276c99}{}\label{classndn_1_1time_1_1steady__clock_acc7a51c52d1de51a9a5fae4797276c99}
+
+\item 
+typedef boost\+::chrono\+::time\+\_\+point$<$ \hyperlink{classndn_1_1time_1_1steady__clock}{steady\+\_\+clock} $>$ {\bfseries time\+\_\+point}\hypertarget{classndn_1_1time_1_1steady__clock_a388e568c1422cbd3704c749969d728f6}{}\label{classndn_1_1time_1_1steady__clock_a388e568c1422cbd3704c749969d728f6}
+
+\item 
+typedef time\+\_\+point {\bfseries Time\+Point}\hypertarget{classndn_1_1time_1_1steady__clock_a1c3721454162ba5fbc9d320b94def2bd}{}\label{classndn_1_1time_1_1steady__clock_a1c3721454162ba5fbc9d320b94def2bd}
+
+\item 
+typedef duration {\bfseries Duration}\hypertarget{classndn_1_1time_1_1steady__clock_a986704ae88fa51a777f2b17635d2d5a3}{}\label{classndn_1_1time_1_1steady__clock_a986704ae88fa51a777f2b17635d2d5a3}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static time\+\_\+point {\bfseries now} () noexcept\hypertarget{classndn_1_1time_1_1steady__clock_a19a2423d2bfe11dbc74e3efe7e3da16e}{}\label{classndn_1_1time_1_1steady__clock_a19a2423d2bfe11dbc74e3efe7e3da16e}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool {\bfseries is\+\_\+steady} = true\hypertarget{classndn_1_1time_1_1steady__clock_a6a9752271b82d4d95610d559c79e3039}{}\label{classndn_1_1time_1_1steady__clock_a6a9752271b82d4d95610d559c79e3039}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries boost\+::asio\+::time\+\_\+traits$<$ steady\+\_\+clock $>$}\hypertarget{classndn_1_1time_1_1steady__clock_aa7915600b2d19b90f0f3a13ff11e3566}{}\label{classndn_1_1time_1_1steady__clock_aa7915600b2d19b90f0f3a13ff11e3566}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Steady clock. 
+
+Steady clock represents a monotonic clock. The time points of this clock cannot decrease as physical time moves forward. This clock is not related to wall clock time, and is best suitable for measuring intervals. 
+
+Definition at line 99 of file time.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/time.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/time.\+cpp\end{DoxyCompactItemize}

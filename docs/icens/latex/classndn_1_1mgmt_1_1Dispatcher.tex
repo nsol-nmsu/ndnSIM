@@ -1,0 +1,275 @@
+\hypertarget{classndn_1_1mgmt_1_1Dispatcher}{}\section{ndn\+:\+:mgmt\+:\+:Dispatcher Class Reference}
+\label{classndn_1_1mgmt_1_1Dispatcher}\index{ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}}
+
+
+represents a dispatcher on server side of N\+FD Management protocol  
+
+
+
+
+{\ttfamily \#include $<$dispatcher.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:mgmt\+:\+:Dispatcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1mgmt_1_1Dispatcher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1mgmt_1_1Dispatcher_a0594a5cfdf6d1f6689e84a053c96a446}{Dispatcher} (\hyperlink{classndn_1_1Face}{Face} \&face, \hyperlink{classndn_1_1security_1_1KeyChain}{security\+::\+Key\+Chain} \&key\+Chain, const \hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info} \&signing\+Info=\hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info}())
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1mgmt_1_1Dispatcher_aca143d0c83f9ab57a1600fa2d0d198a4}{add\+Top\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, bool want\+Register=true, const \hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info} \&signing\+Info=\hyperlink{classndn_1_1security_1_1SigningInfo}{security\+::\+Signing\+Info}())
+\begin{DoxyCompactList}\small\item\em add a top-\/level prefix \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1mgmt_1_1Dispatcher_ad16e57b365e2ce41f3d2abcefad96ce7}{remove\+Top\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em remove a top-\/level prefix \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename CP $>$ }\\void \hyperlink{classndn_1_1mgmt_1_1Dispatcher_a3e17c8064814217809e887a782fde39b}{add\+Control\+Command} (const \hyperlink{namespacendn_a687f9be727f562d4d77b9b4752e90140}{Partial\+Name} \&rel\+Prefix, Authorization authorization, Validate\+Parameters validate\+Params, Control\+Command\+Handler handler)
+\begin{DoxyCompactList}\small\item\em register a Control\+Command \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1mgmt_1_1Dispatcher_ab31fdd980b8c362b9bea3445ea4c389e}{add\+Status\+Dataset} (const \hyperlink{namespacendn_a687f9be727f562d4d77b9b4752e90140}{Partial\+Name} \&rel\+Prefix, Authorization authorization, Status\+Dataset\+Handler handler)
+\begin{DoxyCompactList}\small\item\em register a Status\+Dataset or a prefix under which Status\+Datasets can be requested \end{DoxyCompactList}\item 
+Post\+Notification \hyperlink{classndn_1_1mgmt_1_1Dispatcher_a08e1c5ca8b68b2750583d21c9083ac36}{add\+Notification\+Stream} (const \hyperlink{namespacendn_a687f9be727f562d4d77b9b4752e90140}{Partial\+Name} \&rel\+Prefix)
+\begin{DoxyCompactList}\small\item\em register a Notification\+Stream \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a dispatcher on server side of N\+FD Management protocol 
+
+Definition at line 132 of file dispatcher.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}!Dispatcher@{Dispatcher}}
+\index{Dispatcher@{Dispatcher}!ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}}
+\subsubsection[{\texorpdfstring{Dispatcher(\+Face \&face, security\+::\+Key\+Chain \&key\+Chain, const security\+::\+Signing\+Info \&signing\+Info=security\+::\+Signing\+Info())}{Dispatcher(Face \&face, security::KeyChain \&keyChain, const security::SigningInfo \&signingInfo=security::SigningInfo())}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::mgmt\+::\+Dispatcher\+::\+Dispatcher (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face, }
+\item[{{\bf security\+::\+Key\+Chain} \&}]{key\+Chain, }
+\item[{const {\bf security\+::\+Signing\+Info} \&}]{signing\+Info = {\ttfamily {\bf security\+::\+Signing\+Info}()}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1Dispatcher_a0594a5cfdf6d1f6689e84a053c96a446}{}\label{classndn_1_1mgmt_1_1Dispatcher_a0594a5cfdf6d1f6689e84a053c96a446}
+
+
+constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & the \hyperlink{classndn_1_1Face}{Face} on which the dispatcher operates \\
+\hline
+{\em key\+Chain} & a Key\+Chain to sign \hyperlink{classndn_1_1Data}{Data} \\
+\hline
+{\em signing\+Info} & signing parameters to sign \hyperlink{classndn_1_1Data}{Data} with {\ttfamily key\+Chain} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file dispatcher.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}!add\+Control\+Command@{add\+Control\+Command}}
+\index{add\+Control\+Command@{add\+Control\+Command}!ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}}
+\subsubsection[{\texorpdfstring{add\+Control\+Command(const Partial\+Name \&rel\+Prefix, Authorization authorization, Validate\+Parameters validate\+Params, Control\+Command\+Handler handler)}{addControlCommand(const PartialName \&relPrefix, Authorization authorization, ValidateParameters validateParams, ControlCommandHandler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename CP $>$ void ndn\+::mgmt\+::\+Dispatcher\+::add\+Control\+Command (
+\begin{DoxyParamCaption}
+\item[{const {\bf Partial\+Name} \&}]{rel\+Prefix, }
+\item[{Authorization}]{authorization, }
+\item[{Validate\+Parameters}]{validate\+Params, }
+\item[{Control\+Command\+Handler}]{handler}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1Dispatcher_a3e17c8064814217809e887a782fde39b}{}\label{classndn_1_1mgmt_1_1Dispatcher_a3e17c8064814217809e887a782fde39b}
+
+
+register a Control\+Command 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em CP} & subclass of \hyperlink{classndn_1_1mgmt_1_1ControlParameters}{Control\+Parameters} used by this command \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em rel\+Prefix} & a prefix for this command, e.\+g., \char`\"{}faces/create\char`\"{}; rel\+Prefixes in Control\+Commands, Status\+Datasets, Notification\+Streams must be non-\/overlapping (no rel\+Prefix is a prefix of another rel\+Prefix) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+no top-\/level prefix has been added 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & {\ttfamily rel\+Prefix} overlaps with an existing rel\+Prefix \\
+\hline
+{\em std\+::domain\+\_\+error} & one or more top-\/level prefix has been added\\
+\hline
+\end{DoxyExceptions}
+Procedure for processing a Control\+Command\+:
+\begin{DoxyEnumerate}
+\item extract the Name\+Component containing \hyperlink{classndn_1_1mgmt_1_1ControlParameters}{Control\+Parameters} (the component after rel\+Prefix), and parse \hyperlink{classndn_1_1mgmt_1_1ControlParameters}{Control\+Parameters} into type CP; if parsing fails, abort these steps
+\item perform authorization; if authorization is rejected, perform the Reject\+Reply action, and abort these steps
+\item validate \hyperlink{classndn_1_1mgmt_1_1ControlParameters}{Control\+Parameters}; if validation fails, make \hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} with Status\+Code 400, and go to step 5
+\item invoke handler, wait until Command\+Continuation is called
+\item encode the \hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} into one \hyperlink{classndn_1_1Data}{Data} packet
+\item sign the \hyperlink{classndn_1_1Data}{Data} packet
+\item if the \hyperlink{classndn_1_1Data}{Data} packet is too large, abort these steps and log an error
+\item send the signed \hyperlink{classndn_1_1Data}{Data} packet 
+\end{DoxyEnumerate}
+
+Definition at line 420 of file dispatcher.\+hpp.
+
+\index{ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}!add\+Notification\+Stream@{add\+Notification\+Stream}}
+\index{add\+Notification\+Stream@{add\+Notification\+Stream}!ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}}
+\subsubsection[{\texorpdfstring{add\+Notification\+Stream(const Partial\+Name \&rel\+Prefix)}{addNotificationStream(const PartialName \&relPrefix)}}]{\setlength{\rightskip}{0pt plus 5cm}Post\+Notification ndn\+::mgmt\+::\+Dispatcher\+::add\+Notification\+Stream (
+\begin{DoxyParamCaption}
+\item[{const {\bf Partial\+Name} \&}]{rel\+Prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1Dispatcher_a08e1c5ca8b68b2750583d21c9083ac36}{}\label{classndn_1_1mgmt_1_1Dispatcher_a08e1c5ca8b68b2750583d21c9083ac36}
+
+
+register a Notification\+Stream 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rel\+Prefix} & a prefix for this notification stream, e.\+g., \char`\"{}faces/events\char`\"{}; rel\+Prefixes in Control\+Commands, Status\+Datasets, Notification\+Streams must be non-\/overlapping (no rel\+Prefix is a prefix of another rel\+Prefix) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a function into which notifications can be posted 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+no top-\/level prefix has been added 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & {\ttfamily rel\+Prefix} overlaps with an existing rel\+Prefix \\
+\hline
+{\em std\+::domain\+\_\+error} & one or more top-\/level prefix has been added\\
+\hline
+\end{DoxyExceptions}
+Procedure for posting a notification\+:
+\begin{DoxyEnumerate}
+\item if no top-\/level prefix has been added, or more than one top-\/level prefixes have been added, abort these steps and log an error
+\item assign the next sequence number to the notification
+\item place the notification block into one \hyperlink{classndn_1_1Data}{Data} packet under the sole top-\/level prefix
+\item sign the \hyperlink{classndn_1_1Data}{Data} packet
+\item if the \hyperlink{classndn_1_1Data}{Data} packet is too large, abort these steps and log an error
+\item send the signed \hyperlink{classndn_1_1Data}{Data} packet 
+\end{DoxyEnumerate}
+
+Definition at line 279 of file dispatcher.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}!add\+Status\+Dataset@{add\+Status\+Dataset}}
+\index{add\+Status\+Dataset@{add\+Status\+Dataset}!ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}}
+\subsubsection[{\texorpdfstring{add\+Status\+Dataset(const Partial\+Name \&rel\+Prefix, Authorization authorization, Status\+Dataset\+Handler handler)}{addStatusDataset(const PartialName \&relPrefix, Authorization authorization, StatusDatasetHandler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::mgmt\+::\+Dispatcher\+::add\+Status\+Dataset (
+\begin{DoxyParamCaption}
+\item[{const {\bf Partial\+Name} \&}]{rel\+Prefix, }
+\item[{Authorization}]{authorization, }
+\item[{Status\+Dataset\+Handler}]{handler}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1Dispatcher_ab31fdd980b8c362b9bea3445ea4c389e}{}\label{classndn_1_1mgmt_1_1Dispatcher_ab31fdd980b8c362b9bea3445ea4c389e}
+
+
+register a Status\+Dataset or a prefix under which Status\+Datasets can be requested 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rel\+Prefix} & a prefix for this dataset, e.\+g., \char`\"{}faces/list\char`\"{}; rel\+Prefixes in Control\+Commands, Status\+Datasets, Notification\+Streams must be non-\/overlapping (no rel\+Prefix is a prefix of another rel\+Prefix) \\
+\hline
+{\em authorization} & should set identity to Name() if the dataset is public \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+no top-\/level prefix has been added 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & {\ttfamily rel\+Prefix} overlaps with an existing rel\+Prefix \\
+\hline
+{\em std\+::domain\+\_\+error} & one or more top-\/level prefix has been added\\
+\hline
+\end{DoxyExceptions}
+The payload of the returned status dataset data packet is at most half of the maximum data packet size.
+
+Procedure for processing a Status\+Dataset request\+:
+\begin{DoxyEnumerate}
+\item if the request \hyperlink{classndn_1_1Interest}{Interest} contains version or segment components, abort these steps; note\+: the request may contain more components after rel\+Prefix, e.\+g., a query condition
+\item perform authorization; if authorization is rejected, perform the Reject\+Reply action, and abort these steps
+\item invoke handler, store blocks passed to Status\+Dataset\+Append calls in a buffer, wait until Status\+Dataset\+End is called
+\item allocate a version
+\item segment the buffer into one or more segments under the allocated version, such that the \hyperlink{classndn_1_1Data}{Data} packets will not become too large after signing
+\item set Final\+Block\+Id on at least the last segment
+\item sign the \hyperlink{classndn_1_1Data}{Data} packets
+\item send the signed \hyperlink{classndn_1_1Data}{Data} packets
+\end{DoxyEnumerate}
+
+As an optimization, a \hyperlink{classndn_1_1Data}{Data} packet may be sent as soon as enough octets have been collected through Status\+Dataset\+Append calls. 
+
+Definition at line 228 of file dispatcher.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}!add\+Top\+Prefix@{add\+Top\+Prefix}}
+\index{add\+Top\+Prefix@{add\+Top\+Prefix}!ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}}
+\subsubsection[{\texorpdfstring{add\+Top\+Prefix(const Name \&prefix, bool want\+Register=true, const security\+::\+Signing\+Info \&signing\+Info=security\+::\+Signing\+Info())}{addTopPrefix(const Name \&prefix, bool wantRegister=true, const security::SigningInfo \&signingInfo=security::SigningInfo())}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::mgmt\+::\+Dispatcher\+::add\+Top\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{bool}]{want\+Register = {\ttfamily true}, }
+\item[{const {\bf security\+::\+Signing\+Info} \&}]{signing\+Info = {\ttfamily {\bf security\+::\+Signing\+Info}()}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1Dispatcher_aca143d0c83f9ab57a1600fa2d0d198a4}{}\label{classndn_1_1mgmt_1_1Dispatcher_aca143d0c83f9ab57a1600fa2d0d198a4}
+
+
+add a top-\/level prefix 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & a top-\/level prefix, e.\+g., \char`\"{}/localhost/nfd\char`\"{} \\
+\hline
+{\em want\+Register} & whether prefix registration should be performed through the \hyperlink{classndn_1_1Face}{Face} \\
+\hline
+{\em signing\+Info} & signing parameters to sign the prefix registration command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & {\ttfamily prefix} overlaps with an existing top-\/level prefix\\
+\hline
+\end{DoxyExceptions}
+Procedure for adding a top-\/level prefix\+:
+\begin{DoxyEnumerate}
+\item if the new top-\/level prefix overlaps with an existing top-\/level prefix (one top-\/level prefix is a prefix of another top-\/level prefix), throw std\+::domain\+\_\+error
+\item if want\+Register is true, invoke face.\+register\+Prefix for the top-\/level prefix; the returned Registered\+Prefix\+Id shall be recorded internally, indexed by the top-\/level prefix
+\item foreach rel\+Prefix from Control\+Commands and Status\+Datasets, join the top-\/level prefix with the rel\+Prefix to obtain the full prefix, and invoke non-\/registering overload of face.\+set\+Interest\+Filter, with the Interest\+Handler set to an appropriate private method to handle incoming Interests for the Control\+Command or Status\+Dataset; the returned Interest\+Filter\+Id shall be recorded internally, indexed by the top-\/level prefix 
+\end{DoxyEnumerate}
+
+Definition at line 72 of file dispatcher.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}!remove\+Top\+Prefix@{remove\+Top\+Prefix}}
+\index{remove\+Top\+Prefix@{remove\+Top\+Prefix}!ndn\+::mgmt\+::\+Dispatcher@{ndn\+::mgmt\+::\+Dispatcher}}
+\subsubsection[{\texorpdfstring{remove\+Top\+Prefix(const Name \&prefix)}{removeTopPrefix(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::mgmt\+::\+Dispatcher\+::remove\+Top\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1Dispatcher_ad16e57b365e2ce41f3d2abcefad96ce7}{}\label{classndn_1_1mgmt_1_1Dispatcher_ad16e57b365e2ce41f3d2abcefad96ce7}
+
+
+remove a top-\/level prefix 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & a top-\/level prefix, e.\+g., \char`\"{}/localhost/nfd\char`\"{}\\
+\hline
+\end{DoxyParams}
+Procedure for removing a top-\/level prefix\+:
+\begin{DoxyEnumerate}
+\item if the top-\/level prefix has not been added, abort these steps
+\item if the top-\/level prefix has been added with want\+Register, invoke face.\+unregister\+Prefix with the Registered\+Prefix\+Id
+\item foreach Interest\+Filter\+Id recorded during add\+Top\+Prefix, invoke face.\+unset\+Interest\+Filter with the Interest\+Filter\+Id 
+\end{DoxyEnumerate}
+
+Definition at line 109 of file dispatcher.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/mgmt/dispatcher.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/mgmt/dispatcher.\+cpp\end{DoxyCompactItemize}

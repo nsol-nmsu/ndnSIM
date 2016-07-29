@@ -1,0 +1,106 @@
+\hypertarget{classnfd_1_1WebSocketChannel}{}\section{nfd\+:\+:Web\+Socket\+Channel Class Reference}
+\label{classnfd_1_1WebSocketChannel}\index{nfd\+::\+Web\+Socket\+Channel@{nfd\+::\+Web\+Socket\+Channel}}
+
+
+Class implementing Web\+Socket-\/based channel to create faces.  
+
+
+
+
+{\ttfamily \#include $<$websocket-\/channel.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Web\+Socket\+Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1WebSocketChannel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1WebSocketChannel_ae9c170acd8487279032e2a34aa35b0e2}{Web\+Socket\+Channel} (const websocket\+::\+Endpoint \&local\+Endpoint)
+\begin{DoxyCompactList}\small\item\em Create Web\+Socket channel for the local endpoint. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1WebSocketChannel_a7497f5bf01ac4f26a5edef07a48ccccc}{listen} (const \hyperlink{classnfd_1_1Channel_a47f1a8874228ad9dfa38b4e96f6f8d57}{Face\+Created\+Callback} \&on\+Face\+Created)
+\begin{DoxyCompactList}\small\item\em Enable listening on the local endpoint, accept connections, and create faces when remote host makes a connection. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnfd_1_1WebSocketChannel_a05be8778029ee579f977b5269f569ea7}{size} () const\hypertarget{classnfd_1_1WebSocketChannel_a05be8778029ee579f977b5269f569ea7}{}\label{classnfd_1_1WebSocketChannel_a05be8778029ee579f977b5269f569ea7}
+
+\begin{DoxyCompactList}\small\item\em Get number of faces in the channel. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Listening} () const\hypertarget{classnfd_1_1WebSocketChannel_ab8890e00dcdf3c3a41363d69e0ce3414}{}\label{classnfd_1_1WebSocketChannel_ab8890e00dcdf3c3a41363d69e0ce3414}
+
+\item 
+void {\bfseries set\+Pong\+Timeout} (time\+::milliseconds timeout)\hypertarget{classnfd_1_1WebSocketChannel_ad895f4e35bdada43636636f454c5953c}{}\label{classnfd_1_1WebSocketChannel_ad895f4e35bdada43636636f454c5953c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void set\+Ping\+Interval(time\+::milliseconds interval)\hypertarget{classnfd_1_1WebSocketChannel_a6a4bd56070388f2a258e2b101432495a}{}\label{classnfd_1_1WebSocketChannel_a6a4bd56070388f2a258e2b101432495a}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class implementing Web\+Socket-\/based channel to create faces. 
+
+Definition at line 37 of file websocket-\/channel.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::\+Web\+Socket\+Channel@{nfd\+::\+Web\+Socket\+Channel}!Web\+Socket\+Channel@{Web\+Socket\+Channel}}
+\index{Web\+Socket\+Channel@{Web\+Socket\+Channel}!nfd\+::\+Web\+Socket\+Channel@{nfd\+::\+Web\+Socket\+Channel}}
+\subsubsection[{\texorpdfstring{Web\+Socket\+Channel(const websocket\+::\+Endpoint \&local\+Endpoint)}{WebSocketChannel(const websocket::Endpoint \&localEndpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::\+Web\+Socket\+Channel\+::\+Web\+Socket\+Channel (
+\begin{DoxyParamCaption}
+\item[{const websocket\+::\+Endpoint \&}]{local\+Endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classnfd_1_1WebSocketChannel_ae9c170acd8487279032e2a34aa35b0e2}{}\label{classnfd_1_1WebSocketChannel_ae9c170acd8487279032e2a34aa35b0e2}
+
+
+Create Web\+Socket channel for the local endpoint. 
+
+To enable creation of faces upon incoming connections, one needs to explicitly call \hyperlink{classnfd_1_1WebSocketChannel_a7497f5bf01ac4f26a5edef07a48ccccc}{Web\+Socket\+Channel\+::listen} method. The created socket is bound to the local\+Endpoint.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Web\+Socket\+Channel\+::\+Error} & if bind on the socket fails \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 36 of file websocket-\/channel.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Web\+Socket\+Channel@{nfd\+::\+Web\+Socket\+Channel}!listen@{listen}}
+\index{listen@{listen}!nfd\+::\+Web\+Socket\+Channel@{nfd\+::\+Web\+Socket\+Channel}}
+\subsubsection[{\texorpdfstring{listen(const Face\+Created\+Callback \&on\+Face\+Created)}{listen(const FaceCreatedCallback \&onFaceCreated)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Web\+Socket\+Channel\+::listen (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Face\+Created}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1WebSocketChannel_a7497f5bf01ac4f26a5edef07a48ccccc}{}\label{classnfd_1_1WebSocketChannel_a7497f5bf01ac4f26a5edef07a48ccccc}
+
+
+Enable listening on the local endpoint, accept connections, and create faces when remote host makes a connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Face\+Created} & Callback to notify successful creation of the face\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Web\+Socket\+Channel\+::\+Error} & if called multiple times \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 168 of file websocket-\/channel.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/websocket-\/channel.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/websocket-\/channel.\+cpp\end{DoxyCompactItemize}

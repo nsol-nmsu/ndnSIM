@@ -1,0 +1,341 @@
+\hypertarget{classndn_1_1util_1_1InMemoryStorage}{}\section{ndn\+:\+:util\+:\+:In\+Memory\+Storage Class Reference}
+\label{classndn_1_1util_1_1InMemoryStorage}\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+
+
+Represents in-\/memory storage.  
+
+
+
+
+{\ttfamily \#include $<$in-\/memory-\/storage.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:In\+Memory\+Storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.875000cm]{classndn_1_1util_1_1InMemoryStorage}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1util_1_1InMemoryStorage_1_1const__iterator}{const\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em Represents a self-\/defined \hyperlink{classndn_1_1util_1_1InMemoryStorage_1_1const__iterator}{const\+\_\+iterator} for the in-\/memory storage. \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1util_1_1InMemoryStorage_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Represents an error might be thrown during reduce the current capacity of the in-\/memory storage through function set\+Capacity(size\+\_\+t n\+Max\+Packets). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::multi\+\_\+index\+\_\+container$<$ \hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$, boost\+::multi\+\_\+index\+::indexed\+\_\+by$<$ boost\+::multi\+\_\+index\+::ordered\+\_\+unique$<$ boost\+::multi\+\_\+index\+::tag$<$ by\+Full\+Name $>$, boost\+::multi\+\_\+index\+::const\+\_\+mem\+\_\+fun$<$ \hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry}, const \hyperlink{classndn_1_1Name}{Name} \&, \&\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry_a984325afc10d6b83b6dfe08e1bfb311d}{In\+Memory\+Storage\+Entry\+::get\+Full\+Name} $>$, std\+::less$<$ \hyperlink{classndn_1_1Name}{Name} $>$ $>$ $>$ $>$ {\bfseries Cache}\hypertarget{classndn_1_1util_1_1InMemoryStorage_ac381415d7cb11c2895c393450387b5ff}{}\label{classndn_1_1util_1_1InMemoryStorage_ac381415d7cb11c2895c393450387b5ff}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries In\+Memory\+Storage} (size\+\_\+t limit=std\+::numeric\+\_\+limits$<$ size\+\_\+t $>$\+::max())\hypertarget{classndn_1_1util_1_1InMemoryStorage_a292fecc43914aec6dda00563b6729497}{}\label{classndn_1_1util_1_1InMemoryStorage_a292fecc43914aec6dda00563b6729497}
+
+\item 
+virtual \hyperlink{classndn_1_1util_1_1InMemoryStorage_a7cffc8feac46fec7daec31d27eec1f2e}{$\sim$\+In\+Memory\+Storage} ()
+\item 
+void \hyperlink{classndn_1_1util_1_1InMemoryStorage_aaa980f4b6304380b7f435e44fd6d1b2a}{insert} (const \hyperlink{classndn_1_1Data}{Data} \&data)
+\begin{DoxyCompactList}\small\item\em Inserts a \hyperlink{classndn_1_1Data}{Data} packet. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classndn_1_1util_1_1InMemoryStorage_a01ee745af540a1d99b5a18c5722d50c5}{find} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)
+\begin{DoxyCompactList}\small\item\em Finds the best match \hyperlink{classndn_1_1Data}{Data} for an \hyperlink{classndn_1_1Interest}{Interest}. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classndn_1_1util_1_1InMemoryStorage_ac57e4ccfc43c7fdb6c7baf4c32219b94}{find} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em Finds the best match \hyperlink{classndn_1_1Data}{Data} for a \hyperlink{classndn_1_1Name}{Name} with or without the implicit digest. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1InMemoryStorage_a3ada8f942e99805451513369d497c82f}{erase} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const bool is\+Prefix=true)
+\begin{DoxyCompactList}\small\item\em Deletes in-\/memory storage entry by prefix by default. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1util_1_1InMemoryStorage_a8115299a9d7ac7193258678914fe55d6}{get\+Limit} () const
+\item 
+size\+\_\+t \hyperlink{classndn_1_1util_1_1InMemoryStorage_a5e10dd4aad18433b311f171c8ebc6416}{size} () const
+\item 
+\hyperlink{classndn_1_1util_1_1InMemoryStorage_1_1const__iterator}{In\+Memory\+Storage\+::const\+\_\+iterator} \hyperlink{classndn_1_1util_1_1InMemoryStorage_acaf639e8e935d28d7e02cc1186c84ba2}{begin} () const
+\begin{DoxyCompactList}\small\item\em Returns begin iterator of the in-\/memory storage ordering by name with digest. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1InMemoryStorage_1_1const__iterator}{In\+Memory\+Storage\+::const\+\_\+iterator} \hyperlink{classndn_1_1util_1_1InMemoryStorage_a961b629b71ca731b894b04d7fe8853b6}{end} () const
+\begin{DoxyCompactList}\small\item\em Returns end iterator of the in-\/memory storage ordering by name with digest. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1util_1_1InMemoryStorage_a4e2b2e50204f83707bab62edf3bf3ada}{after\+Insert} (\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$entry)\hypertarget{classndn_1_1util_1_1InMemoryStorage_a4e2b2e50204f83707bab62edf3bf3ada}{}\label{classndn_1_1util_1_1InMemoryStorage_a4e2b2e50204f83707bab62edf3bf3ada}
+
+\begin{DoxyCompactList}\small\item\em Update the entry or other data structures after a entry is successfully inserted according to derived class implemented replacement policy. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1util_1_1InMemoryStorage_a33d8eb2f0a6dd71a0957866c7784fb2c}{before\+Erase} (\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$entry)\hypertarget{classndn_1_1util_1_1InMemoryStorage_a33d8eb2f0a6dd71a0957866c7784fb2c}{}\label{classndn_1_1util_1_1InMemoryStorage_a33d8eb2f0a6dd71a0957866c7784fb2c}
+
+\begin{DoxyCompactList}\small\item\em Update the entry or other data structures before a entry is successfully erased according to derived class implemented replacement policy. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1util_1_1InMemoryStorage_a14036928e195645bf47d8c5686277fd8}{evict\+Item} ()=0
+\begin{DoxyCompactList}\small\item\em Removes one \hyperlink{classndn_1_1Data}{Data} packet from in-\/memory storage based on derived class implemented replacement policy. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1util_1_1InMemoryStorage_a7cf7faffa6ede0e4ab8e4cf5701acab2}{get\+Capacity} () const
+\begin{DoxyCompactList}\small\item\em returns current capacity of in-\/memory storage (in packets) \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1InMemoryStorage_a2d3f81980ed4b2e6d412bdbd0b74dbaf}{is\+Full} () const\hypertarget{classndn_1_1util_1_1InMemoryStorage_a2d3f81980ed4b2e6d412bdbd0b74dbaf}{}\label{classndn_1_1util_1_1InMemoryStorage_a2d3f81980ed4b2e6d412bdbd0b74dbaf}
+
+\begin{DoxyCompactList}\small\item\em returns true if the in-\/memory storage uses up the current capacity, false otherwise \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1InMemoryStorage_af8b8154e15a36fe75d99890ef992b09a}{erase\+Impl} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em deletes in-\/memory storage entries by the \hyperlink{classndn_1_1Name}{Name} with implicit digest. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1InMemoryStorage_a4121122daf219c210687f25dd956ab2a}{print\+Cache} (std\+::ostream \&os) const\hypertarget{classndn_1_1util_1_1InMemoryStorage_a4121122daf219c210687f25dd956ab2a}{}\label{classndn_1_1util_1_1InMemoryStorage_a4121122daf219c210687f25dd956ab2a}
+
+\begin{DoxyCompactList}\small\item\em Prints contents of the in-\/memory storage. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$ \hyperlink{classndn_1_1util_1_1InMemoryStorage_aacccfb8d0e83f851c568e2b1d5b1199c}{select\+Child} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, Cache\+::index$<$ by\+Full\+Name $>$\+::type\+::iterator starting\+Point) const
+\begin{DoxyCompactList}\small\item\em Implements child selector (leftmost, rightmost, undeclared). Operates on the first layer of a skip list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: virtual void after\+Access(\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry}$\ast$ entry)\hypertarget{classndn_1_1util_1_1InMemoryStorage_a57be134342392b26f529927330da6107}{}\label{classndn_1_1util_1_1InMemoryStorage_a57be134342392b26f529927330da6107}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: void set\+Capacity(size\+\_\+t n\+Max\+Packets)\hypertarget{classndn_1_1util_1_1InMemoryStorage_a9b85403e56540d47c368fd67e08aeb52}{}\label{classndn_1_1util_1_1InMemoryStorage_a9b85403e56540d47c368fd67e08aeb52}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad2\+\_\+\+\_\+}\+: Cache\+::iterator free\+Entry(Cache\+::iterator it)\hypertarget{classndn_1_1util_1_1InMemoryStorage_ab5476626248fec17d7f16aa24f1fdb32}{}\label{classndn_1_1util_1_1InMemoryStorage_ab5476626248fec17d7f16aa24f1fdb32}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents in-\/memory storage. 
+
+Definition at line 46 of file in-\/memory-\/storage.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!````~In\+Memory\+Storage@{$\sim$\+In\+Memory\+Storage}}
+\index{````~In\+Memory\+Storage@{$\sim$\+In\+Memory\+Storage}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{$\sim$\+In\+Memory\+Storage()}{~InMemoryStorage()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::util\+::\+In\+Memory\+Storage\+::$\sim$\+In\+Memory\+Storage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1util_1_1InMemoryStorage_a7cffc8feac46fec7daec31d27eec1f2e}{}\label{classndn_1_1util_1_1InMemoryStorage_a7cffc8feac46fec7daec31d27eec1f2e}
+\begin{DoxyNote}{Note}
+Please make sure to implement it to free m\+\_\+free\+Entries and evict all items in the derived class for anybody who wishes to inherit this class 
+\end{DoxyNote}
+
+
+Definition at line 102 of file in-\/memory-\/storage.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!begin@{begin}}
+\index{begin@{begin}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{begin() const}{begin() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf In\+Memory\+Storage\+::const\+\_\+iterator} ndn\+::util\+::\+In\+Memory\+Storage\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1InMemoryStorage_acaf639e8e935d28d7e02cc1186c84ba2}{}\label{classndn_1_1util_1_1InMemoryStorage_acaf639e8e935d28d7e02cc1186c84ba2}
+
+
+Returns begin iterator of the in-\/memory storage ordering by name with digest. 
+
+\begin{DoxyReturn}{Returns}
+\{ \hyperlink{classndn_1_1util_1_1InMemoryStorage_1_1const__iterator}{const\+\_\+iterator} pointing to the beginning of the m\+\_\+cache \} 
+\end{DoxyReturn}
+
+
+Definition at line 370 of file in-\/memory-\/storage.\+cpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!end@{end}}
+\index{end@{end}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{end() const}{end() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf In\+Memory\+Storage\+::const\+\_\+iterator} ndn\+::util\+::\+In\+Memory\+Storage\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1InMemoryStorage_a961b629b71ca731b894b04d7fe8853b6}{}\label{classndn_1_1util_1_1InMemoryStorage_a961b629b71ca731b894b04d7fe8853b6}
+
+
+Returns end iterator of the in-\/memory storage ordering by name with digest. 
+
+\begin{DoxyReturn}{Returns}
+\{ \hyperlink{classndn_1_1util_1_1InMemoryStorage_1_1const__iterator}{const\+\_\+iterator} pointing to the end of the m\+\_\+cache \} 
+\end{DoxyReturn}
+
+
+Definition at line 378 of file in-\/memory-\/storage.\+cpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!erase@{erase}}
+\index{erase@{erase}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{erase(const Name \&prefix, const bool is\+Prefix=true)}{erase(const Name \&prefix, const bool isPrefix=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::util\+::\+In\+Memory\+Storage\+::erase (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const bool}]{is\+Prefix = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1InMemoryStorage_a3ada8f942e99805451513369d497c82f}{}\label{classndn_1_1util_1_1InMemoryStorage_a3ada8f942e99805451513369d497c82f}
+
+
+Deletes in-\/memory storage entry by prefix by default. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em is\+Prefix} & If it is clear, the function will only delete the entry completely matched with the prefix according to canonical ordering. For this case, user should substitute the prefix with full name.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Please do not use this function directly in any derived class to erase entry in the cache, use erase\+Helper instead. 
+
+It will invoke before\+Erase(shared\+\_\+ptr$<$\+In\+Memory\+Storage\+Entry$>$). 
+\end{DoxyNote}
+
+
+Definition at line 332 of file in-\/memory-\/storage.\+cpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!erase\+Impl@{erase\+Impl}}
+\index{erase\+Impl@{erase\+Impl}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{erase\+Impl(const Name \&name)}{eraseImpl(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::util\+::\+In\+Memory\+Storage\+::erase\+Impl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1InMemoryStorage_af8b8154e15a36fe75d99890ef992b09a}{}\label{classndn_1_1util_1_1InMemoryStorage_af8b8154e15a36fe75d99890ef992b09a}
+
+
+deletes in-\/memory storage entries by the \hyperlink{classndn_1_1Name}{Name} with implicit digest. 
+
+This is the function one should use to erase entry in the cache in derived class. It won\textquotesingle{}t invoke before\+Erase(shared\+\_\+ptr$<$\+Entry$>$). 
+
+Definition at line 359 of file in-\/memory-\/storage.\+cpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!evict\+Item@{evict\+Item}}
+\index{evict\+Item@{evict\+Item}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{evict\+Item()=0}{evictItem()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ndn\+::util\+::\+In\+Memory\+Storage\+::evict\+Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1util_1_1InMemoryStorage_a14036928e195645bf47d8c5686277fd8}{}\label{classndn_1_1util_1_1InMemoryStorage_a14036928e195645bf47d8c5686277fd8}
+
+
+Removes one \hyperlink{classndn_1_1Data}{Data} packet from in-\/memory storage based on derived class implemented replacement policy. 
+
+Please do not use this function directly in any derived class to erase entry in the cache, use erase\+Helper instead. \begin{DoxyReturn}{Returns}
+\{ whether the \hyperlink{classndn_1_1Data}{Data} was removed \} 
+\end{DoxyReturn}
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!find@{find}}
+\index{find@{find}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{find(const Interest \&interest)}{find(const Interest \&interest)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ const {\bf Data} $>$ ndn\+::util\+::\+In\+Memory\+Storage\+::find (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1InMemoryStorage_a01ee745af540a1d99b5a18c5722d50c5}{}\label{classndn_1_1util_1_1InMemoryStorage_a01ee745af540a1d99b5a18c5722d50c5}
+
+
+Finds the best match \hyperlink{classndn_1_1Data}{Data} for an \hyperlink{classndn_1_1Interest}{Interest}. 
+
+\begin{DoxyNote}{Note}
+It will invoke after\+Access(shared\+\_\+ptr$<$\+In\+Memory\+Storage\+Entry$>$). As currently it is impossible to determine whether a \hyperlink{classndn_1_1Name}{Name} contains implicit digest or not, therefore this find function is not able to locate a packet according to an interest( including implicit digest) whose name is not the full name of the data matching the implicit digest.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+\{ the best match, if any; otherwise a null shared\+\_\+ptr \} 
+\end{DoxyReturn}
+
+
+Definition at line 202 of file in-\/memory-\/storage.\+cpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!find@{find}}
+\index{find@{find}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{find(const Name \&name)}{find(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ const {\bf Data} $>$ ndn\+::util\+::\+In\+Memory\+Storage\+::find (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1InMemoryStorage_ac57e4ccfc43c7fdb6c7baf4c32219b94}{}\label{classndn_1_1util_1_1InMemoryStorage_ac57e4ccfc43c7fdb6c7baf4c32219b94}
+
+
+Finds the best match \hyperlink{classndn_1_1Data}{Data} for a \hyperlink{classndn_1_1Name}{Name} with or without the implicit digest. 
+
+If packets with the same name but different digests exist and the \hyperlink{classndn_1_1Name}{Name} supplied is the one without implicit digest, a packet will be arbitrarily chosen to return.
+
+\begin{DoxyNote}{Note}
+It will invoke after\+Access(shared\+\_\+ptr$<$\+In\+Memory\+Storage\+Entry$>$).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+\{ the one matched the \hyperlink{classndn_1_1Name}{Name}; otherwise a null shared\+\_\+ptr \} 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file in-\/memory-\/storage.\+cpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!get\+Capacity@{get\+Capacity}}
+\index{get\+Capacity@{get\+Capacity}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{get\+Capacity() const}{getCapacity() const}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::util\+::\+In\+Memory\+Storage\+::get\+Capacity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1InMemoryStorage_a7cf7faffa6ede0e4ab8e4cf5701acab2}{}\label{classndn_1_1util_1_1InMemoryStorage_a7cf7faffa6ede0e4ab8e4cf5701acab2}
+
+
+returns current capacity of in-\/memory storage (in packets) 
+
+\begin{DoxyReturn}{Returns}
+\{ number of packets that can be stored in application cache \} 
+\end{DoxyReturn}
+
+
+Definition at line 244 of file in-\/memory-\/storage.\+hpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!get\+Limit@{get\+Limit}}
+\index{get\+Limit@{get\+Limit}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{get\+Limit() const}{getLimit() const}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::util\+::\+In\+Memory\+Storage\+::get\+Limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1InMemoryStorage_a8115299a9d7ac7193258678914fe55d6}{}\label{classndn_1_1util_1_1InMemoryStorage_a8115299a9d7ac7193258678914fe55d6}
+\begin{DoxyReturn}{Returns}
+\{ maximum number of packets that can be allowed to store in in-\/memory storage \} 
+\end{DoxyReturn}
+
+
+Definition at line 174 of file in-\/memory-\/storage.\+hpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!insert@{insert}}
+\index{insert@{insert}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{insert(const Data \&data)}{insert(const Data \&data)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::util\+::\+In\+Memory\+Storage\+::insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1InMemoryStorage_aaa980f4b6304380b7f435e44fd6d1b2a}{}\label{classndn_1_1util_1_1InMemoryStorage_aaa980f4b6304380b7f435e44fd6d1b2a}
+
+
+Inserts a \hyperlink{classndn_1_1Data}{Data} packet. 
+
+\begin{DoxyNote}{Note}
+Packets are considered duplicate if the name with implicit digest matches. The new \hyperlink{classndn_1_1Data}{Data} packet with the identical name, but a different payload will be placed in the in-\/memory storage.
+
+It will invoke after\+Insert(shared\+\_\+ptr$<$\+In\+Memory\+Storage\+Entry$>$). 
+\end{DoxyNote}
+
+
+Definition at line 149 of file in-\/memory-\/storage.\+cpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!select\+Child@{select\+Child}}
+\index{select\+Child@{select\+Child}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{select\+Child(const Interest \&interest, Cache\+::index$<$ by\+Full\+Name $>$\+::type\+::iterator starting\+Point) const}{selectChild(const Interest \&interest, Cache::index< byFullName >::type::iterator startingPoint) const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf In\+Memory\+Storage\+Entry} $\ast$ ndn\+::util\+::\+In\+Memory\+Storage\+::select\+Child (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{Cache\+::index$<$ by\+Full\+Name $>$\+::type\+::iterator}]{starting\+Point}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1InMemoryStorage_aacccfb8d0e83f851c568e2b1d5b1199c}{}\label{classndn_1_1util_1_1InMemoryStorage_aacccfb8d0e83f851c568e2b1d5b1199c}
+
+
+Implements child selector (leftmost, rightmost, undeclared). Operates on the first layer of a skip list. 
+
+starting\+Point must be less than \hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name}. starting\+Point can be equal to \hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name} only when the item is in the \hyperlink{classndn_1_1util_1_1InMemoryStorage_acaf639e8e935d28d7e02cc1186c84ba2}{begin()} position.
+
+Iterates toward greater Names, terminates when application cache entry falls out of \hyperlink{classndn_1_1Interest}{Interest} prefix. When child\+Selector = leftmost, returns first application cache entry that satisfies other selectors. When child\+Selector = rightmost, it goes till the end, and returns application cache entry that satisfies other selectors. Returned application cache entry is the leftmost child of the rightmost child. \begin{DoxyReturn}{Returns}
+\{ the best match, if any; otherwise 0 \} 
+\end{DoxyReturn}
+
+
+Definition at line 238 of file in-\/memory-\/storage.\+cpp.
+
+\index{ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}!size@{size}}
+\index{size@{size}!ndn\+::util\+::\+In\+Memory\+Storage@{ndn\+::util\+::\+In\+Memory\+Storage}}
+\subsubsection[{\texorpdfstring{size() const}{size() const}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::util\+::\+In\+Memory\+Storage\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1InMemoryStorage_a5e10dd4aad18433b311f171c8ebc6416}{}\label{classndn_1_1util_1_1InMemoryStorage_a5e10dd4aad18433b311f171c8ebc6416}
+\begin{DoxyReturn}{Returns}
+\{ number of packets stored in in-\/memory storage \} 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file in-\/memory-\/storage.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/in-\/memory-\/storage.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/in-\/memory-\/storage.\+cpp\end{DoxyCompactItemize}

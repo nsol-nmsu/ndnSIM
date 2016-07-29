@@ -1,0 +1,51 @@
+\hypertarget{classnfd_1_1pit_1_1InRecord}{}\section{nfd\+:\+:pit\+:\+:In\+Record Class Reference}
+\label{classnfd_1_1pit_1_1InRecord}\index{nfd\+::pit\+::\+In\+Record@{nfd\+::pit\+::\+In\+Record}}
+
+
+contains information about an Interest from an incoming face  
+
+
+
+
+{\ttfamily \#include $<$pit-\/in-\/record.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:pit\+:\+:In\+Record\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classnfd_1_1pit_1_1InRecord}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries In\+Record} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1pit_1_1InRecord_a4007f684859d88b6f61187ca142f680b}{}\label{classnfd_1_1pit_1_1InRecord_a4007f684859d88b6f61187ca142f680b}
+
+\item 
+void {\bfseries update} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classnfd_1_1pit_1_1InRecord_a75d2b3faf73860a09434d9f518287a01}{}\label{classnfd_1_1pit_1_1InRecord_a75d2b3faf73860a09434d9f518287a01}
+
+\item 
+const \hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries get\+Interest} () const\hypertarget{classnfd_1_1pit_1_1InRecord_a78926693b546060a7dea6683fdba153c}{}\label{classnfd_1_1pit_1_1InRecord_a78926693b546060a7dea6683fdba153c}
+
+\item 
+time\+::steady\+\_\+clock\+::\+Time\+Point {\bfseries get\+Last\+Forwarded} () const\hypertarget{classnfd_1_1pit_1_1InRecord_abfea605d095497988241e3c29975d856}{}\label{classnfd_1_1pit_1_1InRecord_abfea605d095497988241e3c29975d856}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{Interest} $>$ {\bfseries m\+\_\+interest}\hypertarget{classnfd_1_1pit_1_1InRecord_a55b99f9a041126e6e4989bfc2d26bcdc}{}\label{classnfd_1_1pit_1_1InRecord_a55b99f9a041126e6e4989bfc2d26bcdc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contains information about an Interest from an incoming face 
+
+Definition at line 37 of file pit-\/in-\/record.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/pit-\/in-\/record.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/pit-\/in-\/record.\+cpp\end{DoxyCompactItemize}

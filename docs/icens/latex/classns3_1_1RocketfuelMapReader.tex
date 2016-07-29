@@ -1,0 +1,104 @@
+\hypertarget{classns3_1_1RocketfuelMapReader}{}\section{ns3\+:\+:Rocketfuel\+Map\+Reader Class Reference}
+\label{classns3_1_1RocketfuelMapReader}\index{ns3\+::\+Rocketfuel\+Map\+Reader@{ns3\+::\+Rocketfuel\+Map\+Reader}}
+
+
+Topology file reader and topology estimator (extension of Rocketfuel-\/format type).  
+
+
+
+
+{\ttfamily \#include $<$rocketfuel-\/map-\/reader.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:Rocketfuel\+Map\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1RocketfuelMapReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rocketfuel\+Map\+Reader} (const std\+::string \&path=\char`\"{}\char`\"{}, double scale=1.\+0, const string \&reference\+Ospf\+Rate=\char`\"{}100\+Mbps\char`\"{})\hypertarget{classns3_1_1RocketfuelMapReader_a4d2975fb92258c622d77d7a67ffd8361}{}\label{classns3_1_1RocketfuelMapReader_a4d2975fb92258c622d77d7a67ffd8361}
+
+\item 
+virtual Node\+Container \hyperlink{classns3_1_1RocketfuelMapReader_a6b5274a161c28648d5c0c8899f51d269}{Read} ()\hypertarget{classns3_1_1RocketfuelMapReader_a6b5274a161c28648d5c0c8899f51d269}{}\label{classns3_1_1RocketfuelMapReader_a6b5274a161c28648d5c0c8899f51d269}
+
+\begin{DoxyCompactList}\small\item\em Deprecated call. Read (\hyperlink{structns3_1_1RocketfuelParams}{Rocketfuel\+Params} params, bool keep\+One\+Component=true, bool connect\+Backbones=true) should be used instead. \end{DoxyCompactList}\item 
+virtual Node\+Container \hyperlink{classns3_1_1RocketfuelMapReader_ac5d206292333d41e01f587ec703363fb}{Read} (\hyperlink{structns3_1_1RocketfuelParams}{Rocketfuel\+Params} params, bool keep\+One\+Component=true, bool connect\+Backbones=true)
+\begin{DoxyCompactList}\small\item\em Main topology reading function. \end{DoxyCompactList}\item 
+const Node\+Container \& {\bfseries Get\+Backbone\+Routers} () const\hypertarget{classns3_1_1RocketfuelMapReader_a6aac72ede12edb244888b7bd11375bd3}{}\label{classns3_1_1RocketfuelMapReader_a6aac72ede12edb244888b7bd11375bd3}
+
+\item 
+const Node\+Container \& {\bfseries Get\+Gateway\+Routers} () const\hypertarget{classns3_1_1RocketfuelMapReader_a26ccdba5f5d7c14e12468471627386bf}{}\label{classns3_1_1RocketfuelMapReader_a26ccdba5f5d7c14e12468471627386bf}
+
+\item 
+const Node\+Container \& {\bfseries Get\+Customer\+Routers} () const\hypertarget{classns3_1_1RocketfuelMapReader_a8a7be835d59d81506a8d469f2d9a1ae2}{}\label{classns3_1_1RocketfuelMapReader_a8a7be835d59d81506a8d469f2d9a1ae2}
+
+\item 
+virtual void \hyperlink{classns3_1_1RocketfuelMapReader_aa96e05a95a37d8e209b292b427de32cc}{Save\+Topology} (const std\+::string \&file)\hypertarget{classns3_1_1RocketfuelMapReader_aa96e05a95a37d8e209b292b427de32cc}{}\label{classns3_1_1RocketfuelMapReader_aa96e05a95a37d8e209b292b427de32cc}
+
+\begin{DoxyCompactList}\small\item\em Save positions (e.\+g., after manual modification using visualizer) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1RocketfuelMapReader_a9cd59a307707a53add1717ce2535f996}{Save\+Graphviz} (const std\+::string \&file)\hypertarget{classns3_1_1RocketfuelMapReader_a9cd59a307707a53add1717ce2535f996}{}\label{classns3_1_1RocketfuelMapReader_a9cd59a307707a53add1717ce2535f996}
+
+\begin{DoxyCompactList}\small\item\em Save topology in graphviz format (.dot file) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Topology file reader and topology estimator (extension of Rocketfuel-\/format type). 
+
+\href{http://www.cs.washington.edu/research/networking/rocketfuel/}{\tt http\+://www.\+cs.\+washington.\+edu/research/networking/rocketfuel/}
+
+Only map file (.cch) is supported
+
+In addition to reading specified topology from the .cch file, this class divides nodes into three categories\+:
+\begin{DoxyItemize}
+\item client nodes (nodes with degrees less or equal to Rocketfuel\+Params.\+client\+Node\+Degrees
+\item gateway nodes (nodes that directly connected to client nodes)
+\item backbone nodes (all the rest)
+\end{DoxyItemize}
+
+As some of the .cch files do not give a connected network graph, this reader also allows to keep only the largest connected network graph component. 
+
+Definition at line 80 of file rocketfuel-\/map-\/reader.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::\+Rocketfuel\+Map\+Reader@{ns3\+::\+Rocketfuel\+Map\+Reader}!Read@{Read}}
+\index{Read@{Read}!ns3\+::\+Rocketfuel\+Map\+Reader@{ns3\+::\+Rocketfuel\+Map\+Reader}}
+\subsubsection[{\texorpdfstring{Read(\+Rocketfuel\+Params params, bool keep\+One\+Component=true, bool connect\+Backbones=true)}{Read(RocketfuelParams params, bool keepOneComponent=true, bool connectBackbones=true)}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+Container ns3\+::\+Rocketfuel\+Map\+Reader\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf Rocketfuel\+Params}}]{params, }
+\item[{bool}]{keep\+One\+Component = {\ttfamily true}, }
+\item[{bool}]{connect\+Backbones = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1RocketfuelMapReader_ac5d206292333d41e01f587ec703363fb}{}\label{classns3_1_1RocketfuelMapReader_ac5d206292333d41e01f587ec703363fb}
+
+
+Main topology reading function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & parameters specifying range from which link bandwidths and delays should be assigned \\
+\hline
+{\em keep\+One\+Component} & if true, then only the largest connected component will be kept \\
+\hline
+{\em connect\+Backbones} & if true, then extra links will be added to ensure connectivity of estimated backbone\\
+\hline
+\end{DoxyParams}
+This method opens an input stream and reads the Rocketfuel-\/format file. Every row represents a topology link (the ids of a couple of nodes), so the input file is read line by line to figure out how many links and nodes are in the topology.
+
+\begin{DoxyReturn}{Returns}
+the container of the nodes created (or empty container if there was an error) 
+\end{DoxyReturn}
+
+
+Definition at line 268 of file rocketfuel-\/map-\/reader.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/topology/rocketfuel-\/map-\/reader.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/topology/rocketfuel-\/map-\/reader.\+cpp\end{DoxyCompactItemize}

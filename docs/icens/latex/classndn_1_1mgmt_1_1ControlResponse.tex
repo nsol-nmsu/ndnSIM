@@ -1,0 +1,77 @@
+\hypertarget{classndn_1_1mgmt_1_1ControlResponse}{}\section{ndn\+:\+:mgmt\+:\+:Control\+Response Class Reference}
+\label{classndn_1_1mgmt_1_1ControlResponse}\index{ndn\+::mgmt\+::\+Control\+Response@{ndn\+::mgmt\+::\+Control\+Response}}
+
+
+Control\+Command response.  
+
+
+
+
+{\ttfamily \#include $<$control-\/response.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1mgmt_1_1ControlResponse_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Control\+Response} (uint32\+\_\+t code, const std\+::string \&text)\hypertarget{classndn_1_1mgmt_1_1ControlResponse_acfb9241d406cdd946ddf80e45b02428e}{}\label{classndn_1_1mgmt_1_1ControlResponse_acfb9241d406cdd946ddf80e45b02428e}
+
+\item 
+{\bfseries Control\+Response} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1mgmt_1_1ControlResponse_ad668e8fb5ca22579cb66e22cf3d5e5b1}{}\label{classndn_1_1mgmt_1_1ControlResponse_ad668e8fb5ca22579cb66e22cf3d5e5b1}
+
+\item 
+uint32\+\_\+t {\bfseries get\+Code} () const\hypertarget{classndn_1_1mgmt_1_1ControlResponse_a97727d3a7b8bdbcb5367a06462b0f64f}{}\label{classndn_1_1mgmt_1_1ControlResponse_a97727d3a7b8bdbcb5367a06462b0f64f}
+
+\item 
+\hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \& {\bfseries set\+Code} (uint32\+\_\+t code)\hypertarget{classndn_1_1mgmt_1_1ControlResponse_ac7c0b5a20974b60571df95bf026e308b}{}\label{classndn_1_1mgmt_1_1ControlResponse_ac7c0b5a20974b60571df95bf026e308b}
+
+\item 
+const std\+::string \& {\bfseries get\+Text} () const\hypertarget{classndn_1_1mgmt_1_1ControlResponse_adff01833a16892bccb903da48e08035e}{}\label{classndn_1_1mgmt_1_1ControlResponse_adff01833a16892bccb903da48e08035e}
+
+\item 
+\hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \& {\bfseries set\+Text} (const std\+::string \&text)\hypertarget{classndn_1_1mgmt_1_1ControlResponse_aa77c94f5ce353c195b87b6cafe511894}{}\label{classndn_1_1mgmt_1_1ControlResponse_aa77c94f5ce353c195b87b6cafe511894}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& {\bfseries get\+Body} () const\hypertarget{classndn_1_1mgmt_1_1ControlResponse_a65470499ab65b06c046de8459f664600}{}\label{classndn_1_1mgmt_1_1ControlResponse_a65470499ab65b06c046de8459f664600}
+
+\item 
+\hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \& {\bfseries set\+Body} (const \hyperlink{classndn_1_1Block}{Block} \&body)\hypertarget{classndn_1_1mgmt_1_1ControlResponse_a8df9546cdae70e445776e5c3ddbcfed7}{}\label{classndn_1_1mgmt_1_1ControlResponse_a8df9546cdae70e445776e5c3ddbcfed7}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& {\bfseries wire\+Encode} () const\hypertarget{classndn_1_1mgmt_1_1ControlResponse_a7e2f8a08ed58a70757c386b0f4f50470}{}\label{classndn_1_1mgmt_1_1ControlResponse_a7e2f8a08ed58a70757c386b0f4f50470}
+
+\item 
+void {\bfseries wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1mgmt_1_1ControlResponse_a40edbe03d769972ae73449b43fb95536}{}\label{classndn_1_1mgmt_1_1ControlResponse_a40edbe03d769972ae73449b43fb95536}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+code}\hypertarget{classndn_1_1mgmt_1_1ControlResponse_ad8909ffc83767aa9263b1a3a884d332c}{}\label{classndn_1_1mgmt_1_1ControlResponse_ad8909ffc83767aa9263b1a3a884d332c}
+
+\item 
+std\+::string {\bfseries m\+\_\+text}\hypertarget{classndn_1_1mgmt_1_1ControlResponse_a395a8f8e1fbab919b0a78d532a81f19b}{}\label{classndn_1_1mgmt_1_1ControlResponse_a395a8f8e1fbab919b0a78d532a81f19b}
+
+\item 
+\hyperlink{classndn_1_1Block}{Block} {\bfseries m\+\_\+body}\hypertarget{classndn_1_1mgmt_1_1ControlResponse_af8e2198c6e53fefec41a7c4094067cdd}{}\label{classndn_1_1mgmt_1_1ControlResponse_af8e2198c6e53fefec41a7c4094067cdd}
+
+\item 
+\hyperlink{classndn_1_1Block}{Block} {\bfseries m\+\_\+wire}\hypertarget{classndn_1_1mgmt_1_1ControlResponse_ac8a148105b7e4a28855555794b3c0be4}{}\label{classndn_1_1mgmt_1_1ControlResponse_ac8a148105b7e4a28855555794b3c0be4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Control\+Command response. 
+
+Definition at line 36 of file control-\/response.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/mgmt/control-\/response.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/mgmt/control-\/response.\+cpp\end{DoxyCompactItemize}

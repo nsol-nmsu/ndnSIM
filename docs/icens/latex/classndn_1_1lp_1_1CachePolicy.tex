@@ -1,0 +1,112 @@
+\hypertarget{classndn_1_1lp_1_1CachePolicy}{}\section{ndn\+:\+:lp\+:\+:Cache\+Policy Class Reference}
+\label{classndn_1_1lp_1_1CachePolicy}\index{ndn\+::lp\+::\+Cache\+Policy@{ndn\+::lp\+::\+Cache\+Policy}}
+
+
+represents a \hyperlink{classndn_1_1lp_1_1CachePolicy}{Cache\+Policy} header field  
+
+
+
+
+{\ttfamily \#include $<$cache-\/policy.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1lp_1_1CachePolicy_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Cache\+Policy} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1lp_1_1CachePolicy_a066e01f298089ce7d2cc9f97b1fdf533}{}\label{classndn_1_1lp_1_1CachePolicy_a066e01f298089ce7d2cc9f97b1fdf533}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1lp_1_1CachePolicy_a7b0afe8498c09af9e119ac84868f3100}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const
+\begin{DoxyCompactList}\small\item\em prepend \hyperlink{classndn_1_1lp_1_1CachePolicy}{Cache\+Policy} to encoder \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1lp_1_1CachePolicy_aaebd5892376df75ac09231f5a0452235}{wire\+Encode} () const\hypertarget{classndn_1_1lp_1_1CachePolicy_aaebd5892376df75ac09231f5a0452235}{}\label{classndn_1_1lp_1_1CachePolicy_aaebd5892376df75ac09231f5a0452235}
+
+\begin{DoxyCompactList}\small\item\em encode \hyperlink{classndn_1_1lp_1_1CachePolicy}{Cache\+Policy} into wire format \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1lp_1_1CachePolicy_a621d2e6aa2a3ff0315ce4b8f3ccb3b6d}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1lp_1_1CachePolicy_a621d2e6aa2a3ff0315ce4b8f3ccb3b6d}{}\label{classndn_1_1lp_1_1CachePolicy_a621d2e6aa2a3ff0315ce4b8f3ccb3b6d}
+
+\begin{DoxyCompactList}\small\item\em get Cache\+Policy\+Type from wire format \end{DoxyCompactList}\item 
+Cache\+Policy\+Type \hyperlink{classndn_1_1lp_1_1CachePolicy_a3ce8ad339d0bde42c14694a6eeb192e3}{get\+Policy} () const
+\item 
+\hyperlink{classndn_1_1lp_1_1CachePolicy}{Cache\+Policy} \& \hyperlink{classndn_1_1lp_1_1CachePolicy_af08d8717415125c1bfcc2578c9ca2f15}{set\+Policy} (Cache\+Policy\+Type policy)
+\begin{DoxyCompactList}\small\item\em set policy type code \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a \hyperlink{classndn_1_1lp_1_1CachePolicy}{Cache\+Policy} header field 
+
+Definition at line 50 of file cache-\/policy.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::lp\+::\+Cache\+Policy@{ndn\+::lp\+::\+Cache\+Policy}!get\+Policy@{get\+Policy}}
+\index{get\+Policy@{get\+Policy}!ndn\+::lp\+::\+Cache\+Policy@{ndn\+::lp\+::\+Cache\+Policy}}
+\subsubsection[{\texorpdfstring{get\+Policy() const}{getPolicy() const}}]{\setlength{\rightskip}{0pt plus 5cm}Cache\+Policy\+Type ndn\+::lp\+::\+Cache\+Policy\+::get\+Policy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1lp_1_1CachePolicy_a3ce8ad339d0bde42c14694a6eeb192e3}{}\label{classndn_1_1lp_1_1CachePolicy_a3ce8ad339d0bde42c14694a6eeb192e3}
+\begin{DoxyReturn}{Returns}
+policy type code 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em Cache\+Policy\+Type\+::\+N\+O\+NE} & if policy type is unset or has an unknown code \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 120 of file cache-\/policy.\+cpp.
+
+\index{ndn\+::lp\+::\+Cache\+Policy@{ndn\+::lp\+::\+Cache\+Policy}!set\+Policy@{set\+Policy}}
+\index{set\+Policy@{set\+Policy}!ndn\+::lp\+::\+Cache\+Policy@{ndn\+::lp\+::\+Cache\+Policy}}
+\subsubsection[{\texorpdfstring{set\+Policy(\+Cache\+Policy\+Type policy)}{setPolicy(CachePolicyType policy)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cache\+Policy} \& ndn\+::lp\+::\+Cache\+Policy\+::set\+Policy (
+\begin{DoxyParamCaption}
+\item[{Cache\+Policy\+Type}]{policy}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1lp_1_1CachePolicy_af08d8717415125c1bfcc2578c9ca2f15}{}\label{classndn_1_1lp_1_1CachePolicy_af08d8717415125c1bfcc2578c9ca2f15}
+
+
+set policy type code 
+
+
+\begin{DoxyParams}{Parameters}
+{\em policy} & a policy type code; Cache\+Policy\+Type\+::\+N\+O\+NE clears the policy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 131 of file cache-\/policy.\+cpp.
+
+\index{ndn\+::lp\+::\+Cache\+Policy@{ndn\+::lp\+::\+Cache\+Policy}!wire\+Encode@{wire\+Encode}}
+\index{wire\+Encode@{wire\+Encode}!ndn\+::lp\+::\+Cache\+Policy@{ndn\+::lp\+::\+Cache\+Policy}}
+\subsubsection[{\texorpdfstring{wire\+Encode(\+Encoding\+Impl$<$ T\+A\+G $>$ \&encoder) const}{wireEncode(EncodingImpl< TAG > \&encoder) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$encoding\+::\+Tag T\+AG$>$ size\+\_\+t ndn\+::lp\+::\+Cache\+Policy\+::wire\+Encode (
+\begin{DoxyParamCaption}
+\item[{{\bf Encoding\+Impl}$<$ T\+AG $>$ \&}]{encoder}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1lp_1_1CachePolicy_a7b0afe8498c09af9e119ac84868f3100}{}\label{classndn_1_1lp_1_1CachePolicy_a7b0afe8498c09af9e119ac84868f3100}
+
+
+prepend \hyperlink{classndn_1_1lp_1_1CachePolicy}{Cache\+Policy} to encoder 
+
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classndn_1_1lp_1_1CachePolicy_a3ce8ad339d0bde42c14694a6eeb192e3}{get\+Policy()} != Cache\+Policy\+Type\+::\+N\+O\+NE 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1lp_1_1CachePolicy_1_1Error}{Error}} & policy type is unset \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 56 of file cache-\/policy.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/lp/cache-\/policy.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/lp/cache-\/policy.\+cpp\end{DoxyCompactItemize}

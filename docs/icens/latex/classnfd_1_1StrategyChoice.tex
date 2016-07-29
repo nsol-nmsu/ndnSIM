@@ -1,0 +1,180 @@
+\hypertarget{classnfd_1_1StrategyChoice}{}\section{nfd\+:\+:Strategy\+Choice Class Reference}
+\label{classnfd_1_1StrategyChoice}\index{nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}}
+
+
+represents the Strategy Choice table  
+
+
+
+
+{\ttfamily \#include $<$strategy-\/choice.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Strategy\+Choice\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1StrategyChoice}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1StrategyChoice_1_1const__iterator}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Strategy\+Choice} (\hyperlink{classnfd_1_1NameTree}{Name\+Tree} \&name\+Tree, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fw_1_1Strategy}{fw\+::\+Strategy} $>$ default\+Strategy)\hypertarget{classnfd_1_1StrategyChoice_a64866e85186d1863149877e0869f7c9c}{}\label{classnfd_1_1StrategyChoice_a64866e85186d1863149877e0869f7c9c}
+
+\item 
+bool \hyperlink{classnfd_1_1StrategyChoice_aeee6e98647f36c3de2ecb6f7cfb81fd8}{has\+Strategy} (const \hyperlink{classndn_1_1Name}{Name} \&strategy\+Name, bool is\+Exact=false) const
+\begin{DoxyCompactList}\small\item\em determines if a strategy is installed \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1StrategyChoice_a0f48ae943375d2568b64b09491748295}{install} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fw_1_1Strategy}{fw\+::\+Strategy} $>$ strategy)
+\begin{DoxyCompactList}\small\item\em install a strategy \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1StrategyChoice_acd2dd486a6e66d999228c1193da71b4c}{insert} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const \hyperlink{classndn_1_1Name}{Name} \&strategy\+Name)
+\begin{DoxyCompactList}\small\item\em set strategy of prefix to be strategy\+Name \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1StrategyChoice_a8ddc40baa29ce7600654d6a5fd8913a2}{erase} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em make prefix to inherit strategy from its parent \end{DoxyCompactList}\item 
+std\+::pair$<$ bool, \hyperlink{classndn_1_1Name}{Name} $>$ \hyperlink{classnfd_1_1StrategyChoice_ad0df2c880ae9fe84f3b49875a66bdbc2}{get} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const
+\begin{DoxyCompactList}\small\item\em get strategy Name of prefix \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1fw_1_1Strategy}{fw\+::\+Strategy} \& \hyperlink{classnfd_1_1StrategyChoice_a045d7394111dc778e4d97fbc89082ce5}{find\+Effective\+Strategy} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const\hypertarget{classnfd_1_1StrategyChoice_a045d7394111dc778e4d97fbc89082ce5}{}\label{classnfd_1_1StrategyChoice_a045d7394111dc778e4d97fbc89082ce5}
+
+\begin{DoxyCompactList}\small\item\em get effective strategy for prefix \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1fw_1_1Strategy}{fw\+::\+Strategy} \& \hyperlink{classnfd_1_1StrategyChoice_ac81a817d9b21796f59f5ce857745d3a5}{find\+Effective\+Strategy} (const \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry) const\hypertarget{classnfd_1_1StrategyChoice_ac81a817d9b21796f59f5ce857745d3a5}{}\label{classnfd_1_1StrategyChoice_ac81a817d9b21796f59f5ce857745d3a5}
+
+\begin{DoxyCompactList}\small\item\em get effective strategy for pit\+Entry \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1fw_1_1Strategy}{fw\+::\+Strategy} \& \hyperlink{classnfd_1_1StrategyChoice_ae65be59dd277efd48abb9dfb9a8f4b0c}{find\+Effective\+Strategy} (const \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} \&measurements\+Entry) const\hypertarget{classnfd_1_1StrategyChoice_ae65be59dd277efd48abb9dfb9a8f4b0c}{}\label{classnfd_1_1StrategyChoice_ae65be59dd277efd48abb9dfb9a8f4b0c}
+
+\begin{DoxyCompactList}\small\item\em get effective strategy for measurements\+Entry \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnfd_1_1StrategyChoice_ac065e824d2513fe358ed724e8b520455}{size} () const\hypertarget{classnfd_1_1StrategyChoice_ac065e824d2513fe358ed724e8b520455}{}\label{classnfd_1_1StrategyChoice_ac065e824d2513fe358ed724e8b520455}
+
+\begin{DoxyCompactList}\small\item\em number of entries stored \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1StrategyChoice_1_1const__iterator}{const\+\_\+iterator} {\bfseries begin} () const\hypertarget{classnfd_1_1StrategyChoice_a322043a6af35a272948b468febd168fe}{}\label{classnfd_1_1StrategyChoice_a322043a6af35a272948b468febd168fe}
+
+\item 
+\hyperlink{classnfd_1_1StrategyChoice_1_1const__iterator}{const\+\_\+iterator} {\bfseries end} () const\hypertarget{classnfd_1_1StrategyChoice_ae3b1e66de4cbcb660421ff22d0565f09}{}\label{classnfd_1_1StrategyChoice_ae3b1e66de4cbcb660421ff22d0565f09}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the Strategy Choice table 
+
+The Strategy Choice table maintains available Strategy types, and associates Name prefixes with Strategy types.
+
+Each strategy is identified by a strategy\+Name. It\textquotesingle{}s recommended to include a version number as the last component of strategy\+Name.
+
+A Name prefix is owned by a strategy if a longest prefix match on the Strategy Choice table returns that strategy. 
+
+Definition at line 45 of file strategy-\/choice.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}!erase@{erase}}
+\index{erase@{erase}!nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}}
+\subsubsection[{\texorpdfstring{erase(const Name \&prefix)}{erase(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Strategy\+Choice\+::erase (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1StrategyChoice_a8ddc40baa29ce7600654d6a5fd8913a2}{}\label{classnfd_1_1StrategyChoice_a8ddc40baa29ce7600654d6a5fd8913a2}
+
+
+make prefix to inherit strategy from its parent 
+
+not allowed for root prefix (ndn\+:/) 
+
+Definition at line 125 of file strategy-\/choice.\+cpp.
+
+\index{nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}!get@{get}}
+\index{get@{get}!nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}}
+\subsubsection[{\texorpdfstring{get(const Name \&prefix) const}{get(const Name \&prefix) const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ bool, {\bf Name} $>$ nfd\+::\+Strategy\+Choice\+::get (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1StrategyChoice_ad0df2c880ae9fe84f3b49875a66bdbc2}{}\label{classnfd_1_1StrategyChoice_ad0df2c880ae9fe84f3b49875a66bdbc2}
+
+
+get strategy Name of prefix 
+
+\begin{DoxyReturn}{Returns}
+true and strategy\+Name at exact match, or false 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file strategy-\/choice.\+cpp.
+
+\index{nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}!has\+Strategy@{has\+Strategy}}
+\index{has\+Strategy@{has\+Strategy}!nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}}
+\subsubsection[{\texorpdfstring{has\+Strategy(const Name \&strategy\+Name, bool is\+Exact=false) const}{hasStrategy(const Name \&strategyName, bool isExact=false) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Strategy\+Choice\+::has\+Strategy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{strategy\+Name, }
+\item[{bool}]{is\+Exact = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1StrategyChoice_aeee6e98647f36c3de2ecb6f7cfb81fd8}{}\label{classnfd_1_1StrategyChoice_aeee6e98647f36c3de2ecb6f7cfb81fd8}
+
+
+determines if a strategy is installed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Exact} & true to require exact match, false to permit unversioned strategy\+Name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if strategy is installed 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file strategy-\/choice.\+cpp.
+
+\index{nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}!insert@{insert}}
+\index{insert@{insert}!nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}}
+\subsubsection[{\texorpdfstring{insert(const Name \&prefix, const Name \&strategy\+Name)}{insert(const Name \&prefix, const Name \&strategyName)}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Strategy\+Choice\+::insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const {\bf Name} \&}]{strategy\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1StrategyChoice_acd2dd486a6e66d999228c1193da71b4c}{}\label{classnfd_1_1StrategyChoice_acd2dd486a6e66d999228c1193da71b4c}
+
+
+set strategy of prefix to be strategy\+Name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy\+Name} & the strategy to be used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true on success
+\end{DoxyReturn}
+This method set a strategy onto a Name prefix. The strategy must have been installed. The strategy\+Name can either be exact (contains version component), or omit the version component to pick the latest version. 
+
+Definition at line 90 of file strategy-\/choice.\+cpp.
+
+\index{nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}!install@{install}}
+\index{install@{install}!nfd\+::\+Strategy\+Choice@{nfd\+::\+Strategy\+Choice}}
+\subsubsection[{\texorpdfstring{install(shared\+\_\+ptr$<$ fw\+::\+Strategy $>$ strategy)}{install(shared\_ptr< fw::Strategy > strategy)}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Strategy\+Choice\+::install (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf fw\+::\+Strategy} $>$}]{strategy}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1StrategyChoice_a0f48ae943375d2568b64b09491748295}{}\label{classnfd_1_1StrategyChoice_a0f48ae943375d2568b64b09491748295}
+
+
+install a strategy 
+
+\begin{DoxyReturn}{Returns}
+true if installed; false if not installed due to duplicate strategy\+Name 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+shared\+\_\+ptr is passed by value because \hyperlink{classnfd_1_1StrategyChoice}{Strategy\+Choice} takes ownership of strategy 
+\end{DoxyNote}
+
+
+Definition at line 58 of file strategy-\/choice.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/strategy-\/choice.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/strategy-\/choice.\+cpp\end{DoxyCompactItemize}

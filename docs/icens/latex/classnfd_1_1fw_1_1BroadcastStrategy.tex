@@ -1,0 +1,93 @@
+\hypertarget{classnfd_1_1fw_1_1BroadcastStrategy}{}\section{nfd\+:\+:fw\+:\+:Broadcast\+Strategy Class Reference}
+\label{classnfd_1_1fw_1_1BroadcastStrategy}\index{nfd\+::fw\+::\+Broadcast\+Strategy@{nfd\+::fw\+::\+Broadcast\+Strategy}}
+
+
+identical to \hyperlink{classnfd_1_1fw_1_1MulticastStrategy}{Multicast\+Strategy}, for backwards compatibility  
+
+
+
+
+{\ttfamily \#include $<$broadcast-\/strategy.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fw\+:\+:Broadcast\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classnfd_1_1fw_1_1BroadcastStrategy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Broadcast\+Strategy} (\hyperlink{classnfd_1_1Forwarder}{Forwarder} \&forwarder, const \hyperlink{classndn_1_1Name}{Name} \&name=S\+T\+R\+A\+T\+E\+G\+Y\+\_\+\+N\+A\+ME)\hypertarget{classnfd_1_1fw_1_1BroadcastStrategy_a218a7d55425af24c94199b4bd6ce7a7c}{}\label{classnfd_1_1fw_1_1BroadcastStrategy_a218a7d55425af24c94199b4bd6ce7a7c}
+
+\item 
+virtual void \hyperlink{classnfd_1_1fw_1_1BroadcastStrategy_a08823b7058a224203f7ddc3c32203e50}{after\+Receive\+Interest} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ fib\+Entry, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em trigger after Interest is received \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classndn_1_1Name}{Name} {\bfseries S\+T\+R\+A\+T\+E\+G\+Y\+\_\+\+N\+A\+ME}\hypertarget{classnfd_1_1fw_1_1BroadcastStrategy_af48ced93ae595b2ee307c393fbf0f312}{}\label{classnfd_1_1fw_1_1BroadcastStrategy_af48ced93ae595b2ee307c393fbf0f312}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+identical to \hyperlink{classnfd_1_1fw_1_1MulticastStrategy}{Multicast\+Strategy}, for backwards compatibility 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000046}{Deprecated}]use \hyperlink{classnfd_1_1fw_1_1MulticastStrategy}{Multicast\+Strategy} instead \end{DoxyRefDesc}
+
+
+Definition at line 37 of file broadcast-\/strategy.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::fw\+::\+Broadcast\+Strategy@{nfd\+::fw\+::\+Broadcast\+Strategy}!after\+Receive\+Interest@{after\+Receive\+Interest}}
+\index{after\+Receive\+Interest@{after\+Receive\+Interest}!nfd\+::fw\+::\+Broadcast\+Strategy@{nfd\+::fw\+::\+Broadcast\+Strategy}}
+\subsubsection[{\texorpdfstring{after\+Receive\+Interest(const Face \&in\+Face, const Interest \&interest, shared\+\_\+ptr$<$ fib\+::\+Entry $>$ fib\+Entry, shared\+\_\+ptr$<$ pit\+::\+Entry $>$ pit\+Entry) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{afterReceiveInterest(const Face \&inFace, const Interest \&interest, shared\_ptr< fib::Entry > fibEntry, shared\_ptr< pit::Entry > pitEntry) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::fw\+::\+Broadcast\+Strategy\+::after\+Receive\+Interest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face} \&}]{in\+Face, }
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{shared\+\_\+ptr$<$ {\bf fib\+::\+Entry} $>$}]{fib\+Entry, }
+\item[{shared\+\_\+ptr$<$ {\bf pit\+::\+Entry} $>$}]{pit\+Entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1fw_1_1BroadcastStrategy_a08823b7058a224203f7ddc3c32203e50}{}\label{classnfd_1_1fw_1_1BroadcastStrategy_a08823b7058a224203f7ddc3c32203e50}
+
+
+trigger after Interest is received 
+
+The Interest\+:
+\begin{DoxyItemize}
+\item does not violate Scope
+\item is not looped
+\item cannot be satisfied by Content\+Store
+\item is under a namespace managed by this strategy
+\end{DoxyItemize}
+
+The strategy should decide whether and where to forward this Interest.
+\begin{DoxyItemize}
+\item If the strategy decides to forward this Interest, invoke this-\/$>$send\+Interest one or more times, either now or shortly after
+\item If strategy concludes that this Interest cannot be forwarded, invoke this-\/$>$reject\+Pending\+Interest so that P\+IT entry will be deleted shortly
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The strategy is permitted to store a weak reference to fib\+Entry. Do not store a shared reference, because P\+IT entry may be deleted at any moment. fib\+Entry is passed by value to allow obtaining a weak reference from it. 
+
+The strategy is permitted to store a shared reference to pit\+Entry. pit\+Entry is passed by value to reflect this fact. 
+\end{DoxyNote}
+
+
+Reimplemented from \hyperlink{classnfd_1_1fw_1_1MulticastStrategy_a3dede97a8433b762348568de7d7ae122}{nfd\+::fw\+::\+Multicast\+Strategy}.
+
+
+
+Definition at line 43 of file broadcast-\/strategy.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/broadcast-\/strategy.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/broadcast-\/strategy.\+cpp\end{DoxyCompactItemize}

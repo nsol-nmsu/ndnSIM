@@ -1,0 +1,57 @@
+\hypertarget{namespacewebsocketpp_1_1transport_1_1asio}{}\section{websocketpp\+:\+:transport\+:\+:asio Namespace Reference}
+\label{namespacewebsocketpp_1_1transport_1_1asio}\index{websocketpp\+::transport\+::asio@{websocketpp\+::transport\+::asio}}
+
+
+Transport policy that uses boost\+::asio.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1basic__socket}{basic\+\_\+socket}
+\item 
+ \hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error}{error}
+\begin{DoxyCompactList}\small\item\em Asio transport errors. \end{DoxyCompactList}\item 
+ \hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1tls__socket}{tls\+\_\+socket}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection}{connection}
+\begin{DoxyCompactList}\small\item\em Boost Asio based connection transport component. \end{DoxyCompactList}\item 
+class \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1custom__alloc__handler}{custom\+\_\+alloc\+\_\+handler}
+\item 
+class \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{endpoint}
+\begin{DoxyCompactList}\small\item\em Boost Asio based endpoint transport component. \end{DoxyCompactList}\item 
+class \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1handler__allocator}{handler\+\_\+allocator}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef lib\+::function$<$ void(boost\+::system\+::error\+\_\+code const \&)$>$ {\bfseries socket\+\_\+shutdown\+\_\+handler}\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_aaec0e9b187575d1b0a9613ed5f8d1548}{}\label{namespacewebsocketpp_1_1transport_1_1asio_aaec0e9b187575d1b0a9613ed5f8d1548}
+
+\item 
+typedef lib\+::function$<$ void(boost\+::system\+::error\+\_\+code const \&ec, size\+\_\+t bytes\+\_\+transferred)$>$ {\bfseries async\+\_\+read\+\_\+handler}\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_a688224ed13b248f892851ef2935954a3}{}\label{namespacewebsocketpp_1_1transport_1_1asio_a688224ed13b248f892851ef2935954a3}
+
+\item 
+typedef lib\+::function$<$ void(boost\+::system\+::error\+\_\+code const \&ec, size\+\_\+t bytes\+\_\+transferred)$>$ {\bfseries async\+\_\+write\+\_\+handler}\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_a899edd0e1d988bea9ef7c94683f0e76e}{}\label{namespacewebsocketpp_1_1transport_1_1asio_a899edd0e1d988bea9ef7c94683f0e76e}
+
+\item 
+typedef lib\+::function$<$ void(lib\+::error\+\_\+code const \&ec)$>$ {\bfseries pre\+\_\+init\+\_\+handler}\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_ad084554aff8b16e5c5d9a51ef82939cf}{}\label{namespacewebsocketpp_1_1transport_1_1asio_ad084554aff8b16e5c5d9a51ef82939cf}
+
+\item 
+typedef lib\+::function$<$ void(\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{connection\+\_\+hdl})$>$ {\bfseries tcp\+\_\+init\+\_\+handler}\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_ad12345b8638872037c87db068467233d}{}\label{namespacewebsocketpp_1_1transport_1_1asio_ad12345b8638872037c87db068467233d}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1custom__alloc__handler}{custom\+\_\+alloc\+\_\+handler}$<$ Handler $>$ {\bfseries make\+\_\+custom\+\_\+alloc\+\_\+handler} (\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1handler__allocator}{handler\+\_\+allocator} \&a, Handler h)\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_a2ff04709483387d7b8c542dd7575f885}{}\label{namespacewebsocketpp_1_1transport_1_1asio_a2ff04709483387d7b8c542dd7575f885}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Transport policy that uses boost\+::asio. 
+
+This policy uses a single boost\+::asio io\+\_\+service to provide transport services to a Web\+Socket++ endpoint. 

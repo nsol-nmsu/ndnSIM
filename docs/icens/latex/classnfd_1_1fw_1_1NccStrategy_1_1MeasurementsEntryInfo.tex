@@ -1,0 +1,117 @@
+\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo}{}\section{nfd\+:\+:fw\+:\+:Ncc\+Strategy\+:\+:Measurements\+Entry\+Info Class Reference}
+\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo}\index{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info@{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info}}
+
+
+\hyperlink{classnfd_1_1fw_1_1StrategyInfo}{Strategy\+Info} on \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry}.  
+
+
+
+
+{\ttfamily \#include $<$ncc-\/strategy.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fw\+:\+:Ncc\+Strategy\+:\+:Measurements\+Entry\+Info\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries inherit\+From} (const \hyperlink{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo}{Measurements\+Entry\+Info} \&other)\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a8007b1fd4966c0cc0b5c46a65ccbcd90}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a8007b1fd4966c0cc0b5c46a65ccbcd90}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ {\bfseries get\+Best\+Face} ()\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a3a4276c32f14a5e30bb77548fff37d26}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a3a4276c32f14a5e30bb77548fff37d26}
+
+\item 
+void {\bfseries update\+Best\+Face} (const \hyperlink{classnfd_1_1Face}{Face} \&face)\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a80cde3cd8649c6cbe8fa551a13a9d43d}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a80cde3cd8649c6cbe8fa551a13a9d43d}
+
+\item 
+void {\bfseries adjust\+Predict\+Up} ()\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_ab60d8c9bdb685a2ce67266eda72bcfc8}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_ab60d8c9bdb685a2ce67266eda72bcfc8}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int {\bfseries get\+Type\+Id} ()\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_adbb813197c76675dd37f5fa4532fb7af}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_adbb813197c76675dd37f5fa4532fb7af}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+weak\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ {\bfseries best\+Face}\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a29e4b0256fd3796c5d7c9711f508a07d}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a29e4b0256fd3796c5d7c9711f508a07d}
+
+\item 
+weak\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ {\bfseries previous\+Face}\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a5f652aa51ef58a3307f37ecb071e078d}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a5f652aa51ef58a3307f37ecb071e078d}
+
+\item 
+time\+::microseconds {\bfseries prediction}\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a44d00500482e92ae2c1f4c6076982681}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a44d00500482e92ae2c1f4c6076982681}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const time\+::microseconds {\bfseries I\+N\+I\+T\+I\+A\+L\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}
+\item 
+static const time\+::microseconds {\bfseries M\+I\+N\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}
+\item 
+static const int {\bfseries A\+D\+J\+U\+S\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+\_\+\+D\+O\+W\+N\+\_\+\+S\+H\+I\+FT} = 7\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a5afc0e3a655a6f0591a4de183a95852b}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a5afc0e3a655a6f0591a4de183a95852b}
+
+\item 
+static const time\+::microseconds {\bfseries M\+A\+X\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}
+\item 
+static const int {\bfseries A\+D\+J\+U\+S\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+\_\+\+U\+P\+\_\+\+S\+H\+I\+FT} = 3\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a8099de318d85cd444a12ffd16b5d47cb}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a8099de318d85cd444a12ffd16b5d47cb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classnfd_1_1fw_1_1StrategyInfo}{Strategy\+Info} on \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry}. 
+
+Definition at line 56 of file ncc-\/strategy.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info@{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info}!I\+N\+I\+T\+I\+A\+L\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON@{I\+N\+I\+T\+I\+A\+L\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}}
+\index{I\+N\+I\+T\+I\+A\+L\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON@{I\+N\+I\+T\+I\+A\+L\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}!nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info@{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info}}
+\subsubsection[{\texorpdfstring{I\+N\+I\+T\+I\+A\+L\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}{INITIAL\_PREDICTION}}]{\setlength{\rightskip}{0pt plus 5cm}const time\+::microseconds nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info\+::\+I\+N\+I\+T\+I\+A\+L\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_ae2f52c95a0e7c970c2a6b3abbc175666}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_ae2f52c95a0e7c970c2a6b3abbc175666}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+                                                             time::microseconds(8192)
+\end{DoxyCode}
+
+
+Definition at line 91 of file ncc-\/strategy.\+hpp.
+
+\index{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info@{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info}!M\+A\+X\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON@{M\+A\+X\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}}
+\index{M\+A\+X\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON@{M\+A\+X\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}!nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info@{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}{MAX\_PREDICTION}}]{\setlength{\rightskip}{0pt plus 5cm}const time\+::microseconds nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info\+::\+M\+A\+X\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_acd20ecb727553618567091b7675c667c}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_acd20ecb727553618567091b7675c667c}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+                                                             time::microseconds(160000)
+\end{DoxyCode}
+
+
+Definition at line 94 of file ncc-\/strategy.\+hpp.
+
+\index{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info@{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info}!M\+I\+N\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON@{M\+I\+N\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}}
+\index{M\+I\+N\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON@{M\+I\+N\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}!nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info@{nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON}{MIN\_PREDICTION}}]{\setlength{\rightskip}{0pt plus 5cm}const time\+::microseconds nfd\+::fw\+::\+Ncc\+Strategy\+::\+Measurements\+Entry\+Info\+::\+M\+I\+N\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+ON\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a80580a1aaad3bddd193e22d4f74b9dba}{}\label{classnfd_1_1fw_1_1NccStrategy_1_1MeasurementsEntryInfo_a80580a1aaad3bddd193e22d4f74b9dba}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+                                                             time::microseconds(127)
+\end{DoxyCode}
+
+
+Definition at line 92 of file ncc-\/strategy.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/ncc-\/strategy.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/ncc-\/strategy.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,166 @@
+\hypertarget{classndn_1_1nfd_1_1ControlParameters}{}\section{ndn\+:\+:nfd\+:\+:Control\+Parameters Class Reference}
+\label{classndn_1_1nfd_1_1ControlParameters}\index{ndn\+::nfd\+::\+Control\+Parameters@{ndn\+::nfd\+::\+Control\+Parameters}}
+
+
+represents parameters in a \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} request or response  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/control-\/parameters.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:nfd\+:\+:Control\+Parameters\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1nfd_1_1ControlParameters}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1ControlParameters_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Control\+Parameters} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1nfd_1_1ControlParameters_a80a845ad3454a79ec3d29f4f442e6b27}{}\label{classndn_1_1nfd_1_1ControlParameters_a80a845ad3454a79ec3d29f4f442e6b27}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t {\bfseries wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1nfd_1_1ControlParameters_aa1d5020de2495da64eee3e8597836566}{}\label{classndn_1_1nfd_1_1ControlParameters_aa1d5020de2495da64eee3e8597836566}
+
+\item 
+virtual \hyperlink{classndn_1_1Block}{Block} {\bfseries wire\+Encode} () const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classndn_1_1nfd_1_1ControlParameters_aa354097cf3e8ddb5cc0fac73cdcdb507}{}\label{classndn_1_1nfd_1_1ControlParameters_aa354097cf3e8ddb5cc0fac73cdcdb507}
+
+\item 
+virtual void {\bfseries wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire) \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classndn_1_1nfd_1_1ControlParameters_ab6534eae4f9ac13816675c8ee58f4d21}{}\label{classndn_1_1nfd_1_1ControlParameters_ab6534eae4f9ac13816675c8ee58f4d21}
+
+\item 
+bool {\bfseries has\+Name} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a4597848cb0535d400ca2b116318783d7}{}\label{classndn_1_1nfd_1_1ControlParameters_a4597848cb0535d400ca2b116318783d7}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Name} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_aba35994433e3da57d7b36d0460d6c9d8}{}\label{classndn_1_1nfd_1_1ControlParameters_aba35994433e3da57d7b36d0460d6c9d8}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name)\hypertarget{classndn_1_1nfd_1_1ControlParameters_acb8ed636bac120299531d223d7b9121e}{}\label{classndn_1_1nfd_1_1ControlParameters_acb8ed636bac120299531d223d7b9121e}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Name} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_a55d1cafd33c5ec2a52836cfa65c90fe4}{}\label{classndn_1_1nfd_1_1ControlParameters_a55d1cafd33c5ec2a52836cfa65c90fe4}
+
+\item 
+bool {\bfseries has\+Face\+Id} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_ab4659977530f4b51422a20c535e64a47}{}\label{classndn_1_1nfd_1_1ControlParameters_ab4659977530f4b51422a20c535e64a47}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Face\+Id} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a237aa262d455b15e820a86f21ffdf52e}{}\label{classndn_1_1nfd_1_1ControlParameters_a237aa262d455b15e820a86f21ffdf52e}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Face\+Id} (uint64\+\_\+t face\+Id)\hypertarget{classndn_1_1nfd_1_1ControlParameters_abe4c1d79e1ae33c36705ccdd13eefc33}{}\label{classndn_1_1nfd_1_1ControlParameters_abe4c1d79e1ae33c36705ccdd13eefc33}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Face\+Id} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_a991cf70fedc72466a7c78685b348bcc2}{}\label{classndn_1_1nfd_1_1ControlParameters_a991cf70fedc72466a7c78685b348bcc2}
+
+\item 
+bool {\bfseries has\+Uri} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a892c5453597e42d44675064ac1542d5f}{}\label{classndn_1_1nfd_1_1ControlParameters_a892c5453597e42d44675064ac1542d5f}
+
+\item 
+const std\+::string \& {\bfseries get\+Uri} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a90253ac76e062536a8347505e25ac76e}{}\label{classndn_1_1nfd_1_1ControlParameters_a90253ac76e062536a8347505e25ac76e}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Uri} (const std\+::string \&uri)\hypertarget{classndn_1_1nfd_1_1ControlParameters_acd20827396c5c372e0c42e96ff430424}{}\label{classndn_1_1nfd_1_1ControlParameters_acd20827396c5c372e0c42e96ff430424}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Uri} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_a4815b6e3618445a6f70682726516295a}{}\label{classndn_1_1nfd_1_1ControlParameters_a4815b6e3618445a6f70682726516295a}
+
+\item 
+bool {\bfseries has\+Local\+Control\+Feature} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a30129c02590b0f9b705c70a8b198f1ff}{}\label{classndn_1_1nfd_1_1ControlParameters_a30129c02590b0f9b705c70a8b198f1ff}
+
+\item 
+Local\+Control\+Feature {\bfseries get\+Local\+Control\+Feature} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_aca42851fd780a46a15cb687dda235e04}{}\label{classndn_1_1nfd_1_1ControlParameters_aca42851fd780a46a15cb687dda235e04}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Local\+Control\+Feature} (Local\+Control\+Feature local\+Control\+Feature)\hypertarget{classndn_1_1nfd_1_1ControlParameters_a0194f44e35db23c907d7e88481bca4fb}{}\label{classndn_1_1nfd_1_1ControlParameters_a0194f44e35db23c907d7e88481bca4fb}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Local\+Control\+Feature} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_abc9961fc06f244b0aec331f690f003a7}{}\label{classndn_1_1nfd_1_1ControlParameters_abc9961fc06f244b0aec331f690f003a7}
+
+\item 
+bool {\bfseries has\+Origin} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_ae9ded087b740f384dbf12821bd2a00ff}{}\label{classndn_1_1nfd_1_1ControlParameters_ae9ded087b740f384dbf12821bd2a00ff}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Origin} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_ae08b47f9aba8b330c97438c64438f397}{}\label{classndn_1_1nfd_1_1ControlParameters_ae08b47f9aba8b330c97438c64438f397}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Origin} (uint64\+\_\+t origin)\hypertarget{classndn_1_1nfd_1_1ControlParameters_aef7a9522bbbca7d2954972862c6bfd44}{}\label{classndn_1_1nfd_1_1ControlParameters_aef7a9522bbbca7d2954972862c6bfd44}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Origin} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_a93790ad41bab19e25a5a98d828145634}{}\label{classndn_1_1nfd_1_1ControlParameters_a93790ad41bab19e25a5a98d828145634}
+
+\item 
+bool {\bfseries has\+Cost} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a8c02f46a005a881278814b1442270fa8}{}\label{classndn_1_1nfd_1_1ControlParameters_a8c02f46a005a881278814b1442270fa8}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Cost} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_aa26c888506ab387154ecdaa8c9b1d243}{}\label{classndn_1_1nfd_1_1ControlParameters_aa26c888506ab387154ecdaa8c9b1d243}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Cost} (uint64\+\_\+t cost)\hypertarget{classndn_1_1nfd_1_1ControlParameters_a0c186438507dc7653f4984a9490da350}{}\label{classndn_1_1nfd_1_1ControlParameters_a0c186438507dc7653f4984a9490da350}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Cost} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_a209ad9763634243230de48fdec68d897}{}\label{classndn_1_1nfd_1_1ControlParameters_a209ad9763634243230de48fdec68d897}
+
+\item 
+bool {\bfseries has\+Flags} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_acc7a371ff53c1d20a446049ab9779f5b}{}\label{classndn_1_1nfd_1_1ControlParameters_acc7a371ff53c1d20a446049ab9779f5b}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Flags} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a0a25c0e57f67e39f73a09a9483d8a8ea}{}\label{classndn_1_1nfd_1_1ControlParameters_a0a25c0e57f67e39f73a09a9483d8a8ea}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Flags} (uint64\+\_\+t flags)\hypertarget{classndn_1_1nfd_1_1ControlParameters_a9b163789cdd0060dbe2fae86ba949efd}{}\label{classndn_1_1nfd_1_1ControlParameters_a9b163789cdd0060dbe2fae86ba949efd}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Flags} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_a23bcd9bcd7711e609efcb0ab4e660833}{}\label{classndn_1_1nfd_1_1ControlParameters_a23bcd9bcd7711e609efcb0ab4e660833}
+
+\item 
+bool {\bfseries has\+Strategy} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a8487cf28f43fa898836e5f2d648c50ed}{}\label{classndn_1_1nfd_1_1ControlParameters_a8487cf28f43fa898836e5f2d648c50ed}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Strategy} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_abf5cbdb763528fa5fb63c8d97d5309a3}{}\label{classndn_1_1nfd_1_1ControlParameters_abf5cbdb763528fa5fb63c8d97d5309a3}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Strategy} (const \hyperlink{classndn_1_1Name}{Name} \&strategy)\hypertarget{classndn_1_1nfd_1_1ControlParameters_a8d1059e1f36e9234feb4fd4dcd538495}{}\label{classndn_1_1nfd_1_1ControlParameters_a8d1059e1f36e9234feb4fd4dcd538495}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Strategy} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_a03e55854e4d941d397a7c03e25d10eb0}{}\label{classndn_1_1nfd_1_1ControlParameters_a03e55854e4d941d397a7c03e25d10eb0}
+
+\item 
+bool {\bfseries has\+Expiration\+Period} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a68c340bea66a4517f8c6e2c9d09015e5}{}\label{classndn_1_1nfd_1_1ControlParameters_a68c340bea66a4517f8c6e2c9d09015e5}
+
+\item 
+const time\+::milliseconds \& {\bfseries get\+Expiration\+Period} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_ac902b9f7ffd900472dcd743817f84b07}{}\label{classndn_1_1nfd_1_1ControlParameters_ac902b9f7ffd900472dcd743817f84b07}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries set\+Expiration\+Period} (const time\+::milliseconds \&expiration\+Period)\hypertarget{classndn_1_1nfd_1_1ControlParameters_a8e13d0a8dc8286947be2a5602e6e9ef3}{}\label{classndn_1_1nfd_1_1ControlParameters_a8e13d0a8dc8286947be2a5602e6e9ef3}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \& {\bfseries unset\+Expiration\+Period} ()\hypertarget{classndn_1_1nfd_1_1ControlParameters_a5f664b6d85b69732777e658a4b16e4f8}{}\label{classndn_1_1nfd_1_1ControlParameters_a5f664b6d85b69732777e658a4b16e4f8}
+
+\item 
+const std\+::vector$<$ bool $>$ \& {\bfseries get\+Present\+Fields} () const\hypertarget{classndn_1_1nfd_1_1ControlParameters_a322e613571e5df77a1ee02aa393697c4}{}\label{classndn_1_1nfd_1_1ControlParameters_a322e613571e5df77a1ee02aa393697c4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents parameters in a \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} request or response 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/ControlCommand#ControlParameters}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Control\+Command\#\+Control\+Parameters}  This type is copyable because it\textquotesingle{}s an abstraction of a T\+LV type. 
+\end{DoxySeeAlso}
+
+
+Definition at line 75 of file nfd-\/control-\/parameters.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/control-\/parameters.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/control-\/parameters.\+cpp\end{DoxyCompactItemize}

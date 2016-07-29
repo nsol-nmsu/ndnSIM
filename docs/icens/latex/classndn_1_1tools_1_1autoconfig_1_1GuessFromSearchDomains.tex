@@ -1,0 +1,74 @@
+\hypertarget{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains}{}\section{ndn\+:\+:tools\+:\+:autoconfig\+:\+:Guess\+From\+Search\+Domains Class Reference}
+\label{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains}\index{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Search\+Domains@{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Search\+Domains}}
+
+
+Guessing home router based on D\+NS query with default suffix.  
+
+
+
+
+{\ttfamily \#include $<$guess-\/from-\/search-\/domains.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:tools\+:\+:autoconfig\+:\+:Guess\+From\+Search\+Domains\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains_a4fc013c6c0508e5db3a01f6c58694b8e}{Guess\+From\+Search\+Domains} (\hyperlink{classndn_1_1Face}{Face} \&face, \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} \&key\+Chain, const \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}{Next\+Stage\+Callback} \&next\+Stage\+On\+Failure)
+\begin{DoxyCompactList}\small\item\em Create stage to guess home router based on D\+NS query with default suffix. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains_a006ca01ea98a1feeeca8a7f913dd35ef}{start} () D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains_a006ca01ea98a1feeeca8a7f913dd35ef}{}\label{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains_a006ca01ea98a1feeeca8a7f913dd35ef}
+
+\begin{DoxyCompactList}\small\item\em Start the stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Guessing home router based on D\+NS query with default suffix. 
+
+
+\begin{DoxyItemize}
+\item Request
+
+The end host sends a D\+NS query that is equivalent to this command\+: \begin{DoxyVerb}dig +search +short +cmd +tries=2 +ndots=10 _ndn._udp srv
+\end{DoxyVerb}
+
+\item Response
+
+The D\+NS server should answer with an S\+RV record that contains the hostname and U\+DP port number of the N\+DN router. 
+\end{DoxyItemize}
+
+Definition at line 49 of file guess-\/from-\/search-\/domains.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Search\+Domains@{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Search\+Domains}!Guess\+From\+Search\+Domains@{Guess\+From\+Search\+Domains}}
+\index{Guess\+From\+Search\+Domains@{Guess\+From\+Search\+Domains}!ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Search\+Domains@{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Search\+Domains}}
+\subsubsection[{\texorpdfstring{Guess\+From\+Search\+Domains(\+Face \&face, Key\+Chain \&key\+Chain, const Next\+Stage\+Callback \&next\+Stage\+On\+Failure)}{GuessFromSearchDomains(Face \&face, KeyChain \&keyChain, const NextStageCallback \&nextStageOnFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Search\+Domains\+::\+Guess\+From\+Search\+Domains (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face, }
+\item[{{\bf Key\+Chain} \&}]{key\+Chain, }
+\item[{const {\bf Next\+Stage\+Callback} \&}]{next\+Stage\+On\+Failure}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains_a4fc013c6c0508e5db3a01f6c58694b8e}{}\label{classndn_1_1tools_1_1autoconfig_1_1GuessFromSearchDomains_a4fc013c6c0508e5db3a01f6c58694b8e}
+
+
+Create stage to guess home router based on D\+NS query with default suffix. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a4d378253464c3fde9a499ccafb944153}{Base\+::\+Base} 
+\end{DoxySeeAlso}
+
+
+Definition at line 32 of file guess-\/from-\/search-\/domains.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/guess-\/from-\/search-\/domains.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/guess-\/from-\/search-\/domains.\+cpp\end{DoxyCompactItemize}

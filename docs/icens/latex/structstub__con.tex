@@ -1,0 +1,87 @@
+\hypertarget{structstub__con}{}\section{stub\+\_\+con Struct Reference}
+\label{structstub__con}\index{stub\+\_\+con@{stub\+\_\+con}}
+Inheritance diagram for stub\+\_\+con\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structstub__con}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structstub__con}{stub\+\_\+con} {\bfseries type}\hypertarget{structstub__con_a5ca630044e6795a895c38ea34a757c22}{}\label{structstub__con_a5ca630044e6795a895c38ea34a757c22}
+
+\item 
+typedef websocketpp\+::lib\+::shared\+\_\+ptr$<$ \hyperlink{structstub__con}{type} $>$ {\bfseries ptr}\hypertarget{structstub__con_a98ad8f9925a9530ac1a8e4406e4a2287}{}\label{structstub__con_a98ad8f9925a9530ac1a8e4406e4a2287}
+
+\item 
+typedef iostream\+\_\+con\+::timer\+\_\+ptr {\bfseries timer\+\_\+ptr}\hypertarget{structstub__con_abb094936e96fb9d205f435a36bb3c19a}{}\label{structstub__con_abb094936e96fb9d205f435a36bb3c19a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries stub\+\_\+con} (bool is\+\_\+server, \hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::alog\+\_\+type} \&a, \hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::elog\+\_\+type} \&e)\hypertarget{structstub__con_a7ad39065d251d72c86178e4a1bf4f9f1}{}\label{structstub__con_a7ad39065d251d72c86178e4a1bf4f9f1}
+
+\item 
+ptr \hyperlink{structstub__con_adc3b613da536874da64369433eceaf19}{get\+\_\+shared} ()\hypertarget{structstub__con_adc3b613da536874da64369433eceaf19}{}\label{structstub__con_adc3b613da536874da64369433eceaf19}
+
+\begin{DoxyCompactList}\small\item\em Get a shared pointer to this component. \end{DoxyCompactList}\item 
+void {\bfseries write} (std\+::string msg)\hypertarget{structstub__con_a66c12a3d422977b7a278020b94d7611b}{}\label{structstub__con_a66c12a3d422977b7a278020b94d7611b}
+
+\item 
+void {\bfseries write} (std\+::vector$<$ \hyperlink{structwebsocketpp_1_1transport_1_1buffer}{websocketpp\+::transport\+::buffer} $>$ \&bufs)\hypertarget{structstub__con_a14e97604627969cec94295201745f893}{}\label{structstub__con_a14e97604627969cec94295201745f893}
+
+\item 
+void {\bfseries async\+\_\+read\+\_\+at\+\_\+least} (size\+\_\+t num\+\_\+bytes, char $\ast$buf, size\+\_\+t len)\hypertarget{structstub__con_a3ada58523e3f8e28cf501dc97c16444f}{}\label{structstub__con_a3ada58523e3f8e28cf501dc97c16444f}
+
+\item 
+void {\bfseries handle\+\_\+op} (websocketpp\+::lib\+::error\+\_\+code const \&e)\hypertarget{structstub__con_a95bfb56bec27e86ba2e30af2bca1c213}{}\label{structstub__con_a95bfb56bec27e86ba2e30af2bca1c213}
+
+\item 
+void {\bfseries async\+\_\+read\+\_\+indef} (size\+\_\+t num\+\_\+bytes, char $\ast$buf, size\+\_\+t len)\hypertarget{structstub__con_adce6bc3610b7465c5a3fca87ae02cda1}{}\label{structstub__con_adce6bc3610b7465c5a3fca87ae02cda1}
+
+\item 
+void {\bfseries indef\+\_\+read} ()\hypertarget{structstub__con_a122900a3be17dcbd6cc693ef8c025358}{}\label{structstub__con_a122900a3be17dcbd6cc693ef8c025358}
+
+\item 
+void {\bfseries handle\+\_\+indef} (websocketpp\+::lib\+::error\+\_\+code const \&e, size\+\_\+t amt\+\_\+read)\hypertarget{structstub__con_a054f8943e3032fe19b3d9bf48bdf0039}{}\label{structstub__con_a054f8943e3032fe19b3d9bf48bdf0039}
+
+\item 
+void {\bfseries shutdown} ()\hypertarget{structstub__con_a206b67c35da3da4fed8bfb2e2e783993}{}\label{structstub__con_a206b67c35da3da4fed8bfb2e2e783993}
+
+\item 
+void {\bfseries handle\+\_\+async\+\_\+shutdown} (websocketpp\+::lib\+::error\+\_\+code const \&e)\hypertarget{structstub__con_ab1acd168c2d28834e21ff352759f9c66}{}\label{structstub__con_ab1acd168c2d28834e21ff352759f9c66}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+websocketpp\+::lib\+::error\+\_\+code {\bfseries ec}\hypertarget{structstub__con_a9e791dd7df34a3c59adb1255bf8ad531}{}\label{structstub__con_a9e791dd7df34a3c59adb1255bf8ad531}
+
+\item 
+size\+\_\+t {\bfseries indef\+\_\+read\+\_\+size}\hypertarget{structstub__con_a7874b39f63070e3f8d638ec08833fa32}{}\label{structstub__con_a7874b39f63070e3f8d638ec08833fa32}
+
+\item 
+char $\ast$ {\bfseries indef\+\_\+read\+\_\+buf}\hypertarget{structstub__con_a7c30a1651bfeda92ba5798f37fbab4e0}{}\label{structstub__con_a7c30a1651bfeda92ba5798f37fbab4e0}
+
+\item 
+size\+\_\+t {\bfseries indef\+\_\+read\+\_\+len}\hypertarget{structstub__con_a259aa44e4b056988d48838539a134db9}{}\label{structstub__con_a259aa44e4b056988d48838539a134db9}
+
+\item 
+size\+\_\+t {\bfseries indef\+\_\+read\+\_\+total}\hypertarget{structstub__con_adc048dddd9b964b03e937c69fbce1c8e}{}\label{structstub__con_adc048dddd9b964b03e937c69fbce1c8e}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 56 of file connection.\+cpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/websocketpp/test/transport/iostream/connection.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\hypertarget{classndn_1_1util_1_1scheduler_1_1Scheduler}{}\section{ndn\+:\+:util\+:\+:scheduler\+:\+:Scheduler Class Reference}
+\label{classndn_1_1util_1_1scheduler_1_1Scheduler}\index{ndn\+::util\+::scheduler\+::\+Scheduler@{ndn\+::util\+::scheduler\+::\+Scheduler}}
+
+
+Generic scheduler.  
+
+
+
+
+{\ttfamily \#include $<$scheduler.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void()$>$ {\bfseries Event}\hypertarget{classndn_1_1util_1_1scheduler_1_1Scheduler_a057a6b32ccb992f63c93d75ddb634090}{}\label{classndn_1_1util_1_1scheduler_1_1Scheduler_a057a6b32ccb992f63c93d75ddb634090}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Scheduler} (boost\+::asio\+::io\+\_\+service \&io\+Service)\hypertarget{classndn_1_1util_1_1scheduler_1_1Scheduler_aec11ffae25708d5e9c40bf5eefbf20f9}{}\label{classndn_1_1util_1_1scheduler_1_1Scheduler_aec11ffae25708d5e9c40bf5eefbf20f9}
+
+\item 
+\hyperlink{classEventId}{Event\+Id} \hyperlink{classndn_1_1util_1_1scheduler_1_1Scheduler_a83da2ee481b3450d56de699769d31188}{schedule\+Event} (const time\+::nanoseconds \&after, const Event \&event)
+\begin{DoxyCompactList}\small\item\em Schedule one time event after the specified delay. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1scheduler_1_1Scheduler_a1b1562c2d4e7ce1c1087681600f7a999}{cancel\+Event} (const \hyperlink{classEventId}{Event\+Id} \&event\+Id)\hypertarget{classndn_1_1util_1_1scheduler_1_1Scheduler_a1b1562c2d4e7ce1c1087681600f7a999}{}\label{classndn_1_1util_1_1scheduler_1_1Scheduler_a1b1562c2d4e7ce1c1087681600f7a999}
+
+\begin{DoxyCompactList}\small\item\em Cancel scheduled event. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1scheduler_1_1Scheduler_a58d171ad4904e8d1dfe0d5a02b4376b5}{cancel\+All\+Events} ()\hypertarget{classndn_1_1util_1_1scheduler_1_1Scheduler_a58d171ad4904e8d1dfe0d5a02b4376b5}{}\label{classndn_1_1util_1_1scheduler_1_1Scheduler_a58d171ad4904e8d1dfe0d5a02b4376b5}
+
+\begin{DoxyCompactList}\small\item\em Cancel all scheduled events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Event\+Id\+Impl}\hypertarget{classndn_1_1util_1_1scheduler_1_1Scheduler_ac737f5f1235c74ebf18ef12041d13114}{}\label{classndn_1_1util_1_1scheduler_1_1Scheduler_ac737f5f1235c74ebf18ef12041d13114}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic scheduler. 
+
+Definition at line 46 of file scheduler.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::scheduler\+::\+Scheduler@{ndn\+::util\+::scheduler\+::\+Scheduler}!schedule\+Event@{schedule\+Event}}
+\index{schedule\+Event@{schedule\+Event}!ndn\+::util\+::scheduler\+::\+Scheduler@{ndn\+::util\+::scheduler\+::\+Scheduler}}
+\subsubsection[{\texorpdfstring{schedule\+Event(const time\+::nanoseconds \&after, const Event \&event)}{scheduleEvent(const time::nanoseconds \&after, const Event \&event)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Event\+Id} ndn\+::util\+::scheduler\+::\+Scheduler\+::schedule\+Event (
+\begin{DoxyParamCaption}
+\item[{const time\+::nanoseconds \&}]{after, }
+\item[{const Event \&}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1scheduler_1_1Scheduler_a83da2ee481b3450d56de699769d31188}{}\label{classndn_1_1util_1_1scheduler_1_1Scheduler_a83da2ee481b3450d56de699769d31188}
+
+
+Schedule one time event after the specified delay. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classEventId}{Event\+Id} that can be used to cancel the scheduled event 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file scheduler.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/scheduler.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/scheduler.\+cpp\end{DoxyCompactItemize}

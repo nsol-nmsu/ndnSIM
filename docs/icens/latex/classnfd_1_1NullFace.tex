@@ -1,0 +1,67 @@
+\hypertarget{classnfd_1_1NullFace}{}\section{nfd\+:\+:Null\+Face Class Reference}
+\label{classnfd_1_1NullFace}\index{nfd\+::\+Null\+Face@{nfd\+::\+Null\+Face}}
+
+
+a \hyperlink{classnfd_1_1Face}{Face} that has no underlying transport and drops every packet  
+
+
+
+
+{\ttfamily \#include $<$null-\/face.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Null\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1NullFace}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Null\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri=\hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri}(\char`\"{}null\+://\char`\"{}))\hypertarget{classnfd_1_1NullFace_a40cbf74616c3b69d4d05fc90ee1b2f0d}{}\label{classnfd_1_1NullFace_a40cbf74616c3b69d4d05fc90ee1b2f0d}
+
+\item 
+void \hyperlink{classnfd_1_1NullFace_af71cbafb102f1f8c5072e4b1c14f2514}{send\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1NullFace_af71cbafb102f1f8c5072e4b1c14f2514}{}\label{classnfd_1_1NullFace_af71cbafb102f1f8c5072e4b1c14f2514}
+
+\begin{DoxyCompactList}\small\item\em send an Interest \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1NullFace_ac39dd70898fb9683edb1d5b06114c78e}{send\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1NullFace_ac39dd70898fb9683edb1d5b06114c78e}{}\label{classnfd_1_1NullFace_ac39dd70898fb9683edb1d5b06114c78e}
+
+\begin{DoxyCompactList}\small\item\em send a Data \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1NullFace_a8b6432036a231c31b6d0be68174d1351}{close} () D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Close the face. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+a \hyperlink{classnfd_1_1Face}{Face} that has no underlying transport and drops every packet 
+
+Definition at line 36 of file null-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Null\+Face@{nfd\+::\+Null\+Face}!close@{close}}
+\index{close@{close}!nfd\+::\+Null\+Face@{nfd\+::\+Null\+Face}}
+\subsubsection[{\texorpdfstring{close() D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{close() DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Null\+Face\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1NullFace_a8b6432036a231c31b6d0be68174d1351}{}\label{classnfd_1_1NullFace_a8b6432036a231c31b6d0be68174d1351}
+
+
+Close the face. 
+
+This terminates all communication on the face and cause \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail()} method event to be invoked 
+
+Implements \hyperlink{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{nfd\+::\+Face}.
+
+
+
+Definition at line 49 of file null-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/null-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/null-\/face.\+cpp\end{DoxyCompactItemize}

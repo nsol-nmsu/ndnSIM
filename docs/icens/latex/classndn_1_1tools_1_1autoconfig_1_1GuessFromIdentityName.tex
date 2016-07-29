@@ -1,0 +1,78 @@
+\hypertarget{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName}{}\section{ndn\+:\+:tools\+:\+:autoconfig\+:\+:Guess\+From\+Identity\+Name Class Reference}
+\label{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName}\index{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Identity\+Name@{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Identity\+Name}}
+
+
+Guessing home router based on the default identity name.  
+
+
+
+
+{\ttfamily \#include $<$guess-\/from-\/identity-\/name.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:tools\+:\+:autoconfig\+:\+:Guess\+From\+Identity\+Name\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName_ac40fd53be672b1718b05dd114256f3e2}{Guess\+From\+Identity\+Name} (\hyperlink{classndn_1_1Face}{Face} \&face, \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} \&key\+Chain, const \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}{Next\+Stage\+Callback} \&next\+Stage\+On\+Failure)
+\begin{DoxyCompactList}\small\item\em Create stage to guess home router based on the default identity name. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName_a747b10b68d24d045a773814d12f1f031}{start} () D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName_a747b10b68d24d045a773814d12f1f031}{}\label{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName_a747b10b68d24d045a773814d12f1f031}
+
+\begin{DoxyCompactList}\small\item\em Start the stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Guessing home router based on the default identity name. 
+
+This stage assumes that user has configured default certificate using \href{http://ndncert.named-data.net/}{\tt http\+://ndncert.\+named-\/data.\+net/}
+
+
+\begin{DoxyItemize}
+\item Request
+
+The end host loads the default user identity (eg. /ndn/edu/ucla/cs/afanasev), and converts it to D\+NS format.
+
+The end host sends a D\+NS query for an S\+RV record of name \+\_\+ndn.\+\_\+udp. + user identity in D\+NS format + \+\_\+homehub.\+\_\+auto-\/conf.\+named-\/data.\+net. For example\+: \begin{DoxyVerb}_ndn._udp.afanasev.cs.ucla.edu.ndn._homehub._autoconf.named-data.net
+\end{DoxyVerb}
+
+\item Response
+
+The D\+NS server should answer with an S\+RV record that contains the hostname and U\+DP port number of the home N\+DN router of this user\textquotesingle{}s site. 
+\end{DoxyItemize}
+
+Definition at line 56 of file guess-\/from-\/identity-\/name.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Identity\+Name@{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Identity\+Name}!Guess\+From\+Identity\+Name@{Guess\+From\+Identity\+Name}}
+\index{Guess\+From\+Identity\+Name@{Guess\+From\+Identity\+Name}!ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Identity\+Name@{ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Identity\+Name}}
+\subsubsection[{\texorpdfstring{Guess\+From\+Identity\+Name(\+Face \&face, Key\+Chain \&key\+Chain, const Next\+Stage\+Callback \&next\+Stage\+On\+Failure)}{GuessFromIdentityName(Face \&face, KeyChain \&keyChain, const NextStageCallback \&nextStageOnFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::tools\+::autoconfig\+::\+Guess\+From\+Identity\+Name\+::\+Guess\+From\+Identity\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face, }
+\item[{{\bf Key\+Chain} \&}]{key\+Chain, }
+\item[{const {\bf Next\+Stage\+Callback} \&}]{next\+Stage\+On\+Failure}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName_ac40fd53be672b1718b05dd114256f3e2}{}\label{classndn_1_1tools_1_1autoconfig_1_1GuessFromIdentityName_ac40fd53be672b1718b05dd114256f3e2}
+
+
+Create stage to guess home router based on the default identity name. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a4d378253464c3fde9a499ccafb944153}{Base\+::\+Base} 
+\end{DoxySeeAlso}
+
+
+Definition at line 32 of file guess-\/from-\/identity-\/name.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/guess-\/from-\/identity-\/name.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/guess-\/from-\/identity-\/name.\+cpp\end{DoxyCompactItemize}

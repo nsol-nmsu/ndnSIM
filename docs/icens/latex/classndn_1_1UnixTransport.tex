@@ -1,0 +1,155 @@
+\hypertarget{classndn_1_1UnixTransport}{}\section{ndn\+:\+:Unix\+Transport Class Reference}
+\label{classndn_1_1UnixTransport}\index{ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}}
+Inheritance diagram for ndn\+:\+:Unix\+Transport\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1UnixTransport}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1UnixTransport_aa8eae0b0a4481ff4a81b20bae1dfb851}{Unix\+Transport} (const std\+::string \&unix\+Socket)
+\item 
+virtual void \hyperlink{classndn_1_1UnixTransport_acc1c4c6db549a02de32873e2f6d028ba}{connect} (boost\+::asio\+::io\+\_\+service \&io\+Service, const Receive\+Callback \&receive\+Callback)
+\begin{DoxyCompactList}\small\item\em Connect transport. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1UnixTransport_a2843582a2b904b19d53d17cba0ea5088}{close} ()\hypertarget{classndn_1_1UnixTransport_a2843582a2b904b19d53d17cba0ea5088}{}\label{classndn_1_1UnixTransport_a2843582a2b904b19d53d17cba0ea5088}
+
+\begin{DoxyCompactList}\small\item\em Close the connection. \end{DoxyCompactList}\item 
+virtual void {\bfseries pause} ()\hypertarget{classndn_1_1UnixTransport_a8d9a964975c43b493204a7e5e44ed83c}{}\label{classndn_1_1UnixTransport_a8d9a964975c43b493204a7e5e44ed83c}
+
+\item 
+virtual void {\bfseries resume} ()\hypertarget{classndn_1_1UnixTransport_aa2336fb5302a7194c2e3dc7b4da9024a}{}\label{classndn_1_1UnixTransport_aa2336fb5302a7194c2e3dc7b4da9024a}
+
+\item 
+virtual void \hyperlink{classndn_1_1UnixTransport_adabc1cec2e4869fbf2ae339f3d86300b}{send} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Send block of data from. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1UnixTransport_ad77f8d8adf009f79f1d8a92a217b413b}{send} (const \hyperlink{classndn_1_1Block}{Block} \&header, const \hyperlink{classndn_1_1Block}{Block} \&payload)
+\begin{DoxyCompactList}\small\item\em Alternative version of sending data, applying scatter/gather I/O concept. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \hyperlink{classndn_1_1UnixTransport}{Unix\+Transport} $>$ {\bfseries create} (const \hyperlink{classndn_1_1ConfigFile}{Config\+File} \&\hyperlink{classconfig}{config})\hypertarget{classndn_1_1UnixTransport_a056169c5be5b3b6681f3b548747f0429}{}\label{classndn_1_1UnixTransport_a056169c5be5b3b6681f3b548747f0429}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: static std\+::string get\+Default\+Socket\+Name(const \hyperlink{classndn_1_1ConfigFile}{Config\+File}\& \hyperlink{classconfig}{config})\hypertarget{classndn_1_1UnixTransport_a258ba4f215ae09e313ea55b73abd7c4d}{}\label{classndn_1_1UnixTransport_a258ba4f215ae09e313ea55b73abd7c4d}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Stream\+Transport\+Impl$<$ Unix\+Transport, boost\+::asio\+::local\+::stream\+\_\+protocol $>$}\hypertarget{classndn_1_1UnixTransport_aa564325bbca4b761f4cbe2736bdf1280}{}\label{classndn_1_1UnixTransport_aa564325bbca4b761f4cbe2736bdf1280}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file unix-\/transport.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}!Unix\+Transport@{Unix\+Transport}}
+\index{Unix\+Transport@{Unix\+Transport}!ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}}
+\subsubsection[{\texorpdfstring{Unix\+Transport(const std\+::string \&unix\+Socket)}{UnixTransport(const std::string \&unixSocket)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Unix\+Transport\+::\+Unix\+Transport (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{unix\+Socket}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1UnixTransport_aa8eae0b0a4481ff4a81b20bae1dfb851}{}\label{classndn_1_1UnixTransport_aa8eae0b0a4481ff4a81b20bae1dfb851}
+Create Unix transport based on the socket specified in a well-\/known configuration file or fallback to /var/run/nfd.sock
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Throws} & Unix\+Transport\+::\+Error on failure to parse a discovered configuration file \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 32 of file unix-\/transport.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}!connect@{connect}}
+\index{connect@{connect}!ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}}
+\subsubsection[{\texorpdfstring{connect(boost\+::asio\+::io\+\_\+service \&io\+Service, const Receive\+Callback \&receive\+Callback)}{connect(boost::asio::io\_service \&ioService, const ReceiveCallback \&receiveCallback)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Unix\+Transport\+::connect (
+\begin{DoxyParamCaption}
+\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service, }
+\item[{const Receive\+Callback \&}]{receive\+Callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1UnixTransport_acc1c4c6db549a02de32873e2f6d028ba}{}\label{classndn_1_1UnixTransport_acc1c4c6db549a02de32873e2f6d028ba}
+
+
+Connect transport. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em boost\+::system\+::system\+\_\+error} & if connection cannot be established \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classndn_1_1Transport_ad0b3158586d56cea4d434f099736a949}{ndn\+::\+Transport}.
+
+
+
+Definition at line 85 of file unix-\/transport.\+cpp.
+
+\index{ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}!send@{send}}
+\index{send@{send}!ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}}
+\subsubsection[{\texorpdfstring{send(const Block \&wire)}{send(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Unix\+Transport\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1UnixTransport_adabc1cec2e4869fbf2ae339f3d86300b}{}\label{classndn_1_1UnixTransport_adabc1cec2e4869fbf2ae339f3d86300b}
+
+
+Send block of data from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wire} & through the transport\\
+\hline
+{\em wire} & A block of data to send \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Transport_ac24f9ec11dc2ac4569e5504eebd5cfa7}{ndn\+::\+Transport}.
+
+
+
+Definition at line 98 of file unix-\/transport.\+cpp.
+
+\index{ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}!send@{send}}
+\index{send@{send}!ndn\+::\+Unix\+Transport@{ndn\+::\+Unix\+Transport}}
+\subsubsection[{\texorpdfstring{send(const Block \&header, const Block \&payload)}{send(const Block \&header, const Block \&payload)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Unix\+Transport\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{header, }
+\item[{const {\bf Block} \&}]{payload}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1UnixTransport_ad77f8d8adf009f79f1d8a92a217b413b}{}\label{classndn_1_1UnixTransport_ad77f8d8adf009f79f1d8a92a217b413b}
+
+
+Alternative version of sending data, applying scatter/gather I/O concept. 
+
+Two non-\/consecutive memory blocks will be send out together, e.\+g., as part of the same message in datagram-\/oriented transports. 
+
+Implements \hyperlink{classndn_1_1Transport_aa27593978570e95a5793b2af0dac3568}{ndn\+::\+Transport}.
+
+
+
+Definition at line 105 of file unix-\/transport.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/transport/unix-\/transport.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/transport/unix-\/transport.\+cpp\end{DoxyCompactItemize}

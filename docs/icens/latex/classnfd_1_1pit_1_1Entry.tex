@@ -1,0 +1,297 @@
+\hypertarget{classnfd_1_1pit_1_1Entry}{}\section{nfd\+:\+:pit\+:\+:Entry Class Reference}
+\label{classnfd_1_1pit_1_1Entry}\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+
+
+represents a P\+IT entry  
+
+
+
+
+{\ttfamily \#include $<$pit-\/entry.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:pit\+:\+:Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1pit_1_1Entry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Entry} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classnfd_1_1pit_1_1Entry_a55291aecd23b197efce62336a2427d50}{}\label{classnfd_1_1pit_1_1Entry_a55291aecd23b197efce62336a2427d50}
+
+\item 
+const \hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries get\+Interest} () const\hypertarget{classnfd_1_1pit_1_1Entry_a4bdb20bf267995751f6609773f324596}{}\label{classnfd_1_1pit_1_1Entry_a4bdb20bf267995751f6609773f324596}
+
+\item 
+time\+::steady\+\_\+clock\+::\+Time\+Point {\bfseries get\+Last\+Forwarded} () const\hypertarget{classnfd_1_1pit_1_1Entry_a998cfec0137f0eca0ee1d32423a67b37}{}\label{classnfd_1_1pit_1_1Entry_a998cfec0137f0eca0ee1d32423a67b37}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classnfd_1_1pit_1_1Entry_a2fa4df45aeb30f7fdaff5784faaf3e0b}{get\+Name} () const
+\item 
+bool \hyperlink{classnfd_1_1pit_1_1Entry_a25964254c3d8dde8c455cd3961cb4b8e}{can\+Forward\+To} (const \hyperlink{classnfd_1_1Face}{Face} \&face) const
+\begin{DoxyCompactList}\small\item\em decides whether Interest can be forwarded to face \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1pit_1_1Entry_ac24153cc1619e5b793ded81298b396cd}{violates\+Scope} (const \hyperlink{classnfd_1_1Face}{Face} \&face) const
+\begin{DoxyCompactList}\small\item\em decides whether forwarding Interest to face would violate scope \end{DoxyCompactList}\item 
+int \hyperlink{classnfd_1_1pit_1_1Entry_a92a1e9c7e246a7396a0cae1bf7b624fe}{find\+Nonce} (uint32\+\_\+t nonce, const \hyperlink{classnfd_1_1Face}{Face} \&face) const
+\begin{DoxyCompactList}\small\item\em finds where a duplicate Nonce appears \end{DoxyCompactList}\item 
+const In\+Record\+Collection \& {\bfseries get\+In\+Records} () const\hypertarget{classnfd_1_1pit_1_1Entry_ae79709832ddba3a3aec638c27cd012d4}{}\label{classnfd_1_1pit_1_1Entry_ae79709832ddba3a3aec638c27cd012d4}
+
+\item 
+bool \hyperlink{classnfd_1_1pit_1_1Entry_ab900fb305cf499f87be3b200b5ad8e14}{has\+Local\+In\+Record} () const
+\begin{DoxyCompactList}\small\item\em determines whether any \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} is a local \hyperlink{classnfd_1_1Face}{Face} \end{DoxyCompactList}\item 
+In\+Record\+Collection\+::iterator \hyperlink{classnfd_1_1pit_1_1Entry_aac1be4aca41141f5b601f4510fdd5df4}{insert\+Or\+Update\+In\+Record} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest)
+\begin{DoxyCompactList}\small\item\em inserts a \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face, and updates it with interest \end{DoxyCompactList}\item 
+In\+Record\+Collection\+::const\+\_\+iterator \hyperlink{classnfd_1_1pit_1_1Entry_a04589c934492a1376934f48ab444f11a}{get\+In\+Record} (const \hyperlink{classnfd_1_1Face}{Face} \&face) const
+\begin{DoxyCompactList}\small\item\em get the \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1pit_1_1Entry_a9751df2fef9b681be7cffd63fb4abf6e}{delete\+In\+Records} ()\hypertarget{classnfd_1_1pit_1_1Entry_a9751df2fef9b681be7cffd63fb4abf6e}{}\label{classnfd_1_1pit_1_1Entry_a9751df2fef9b681be7cffd63fb4abf6e}
+
+\begin{DoxyCompactList}\small\item\em deletes all In\+Records \end{DoxyCompactList}\item 
+const Out\+Record\+Collection \& {\bfseries get\+Out\+Records} () const\hypertarget{classnfd_1_1pit_1_1Entry_a26525f6295962b92556cec62645c3a07}{}\label{classnfd_1_1pit_1_1Entry_a26525f6295962b92556cec62645c3a07}
+
+\item 
+Out\+Record\+Collection\+::iterator \hyperlink{classnfd_1_1pit_1_1Entry_a9fd6defe6d91d3d57138a8c9bfdc8ddd}{insert\+Or\+Update\+Out\+Record} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest)
+\begin{DoxyCompactList}\small\item\em inserts a \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} for face, and updates it with interest \end{DoxyCompactList}\item 
+Out\+Record\+Collection\+::const\+\_\+iterator \hyperlink{classnfd_1_1pit_1_1Entry_a3b2bbe9f81ed02b1b522de4ae1b101ab}{get\+Out\+Record} (const \hyperlink{classnfd_1_1Face}{Face} \&face) const
+\begin{DoxyCompactList}\small\item\em get the \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} for face \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1pit_1_1Entry_af7fc8db88c255d484690378774a3a8c8}{delete\+Out\+Record} (const \hyperlink{classnfd_1_1Face}{Face} \&face)\hypertarget{classnfd_1_1pit_1_1Entry_af7fc8db88c255d484690378774a3a8c8}{}\label{classnfd_1_1pit_1_1Entry_af7fc8db88c255d484690378774a3a8c8}
+
+\begin{DoxyCompactList}\small\item\em deletes one \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} for face if exists \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1pit_1_1Entry_a98f2f64a29c982eb9e3ac0173b4c20b9}{has\+Unexpired\+Out\+Records} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+scheduler\+::\+Event\+Id {\bfseries m\+\_\+unsatisfy\+Timer}\hypertarget{classnfd_1_1pit_1_1Entry_ae2c4ba5d14049840562b44f7d36e9d14}{}\label{classnfd_1_1pit_1_1Entry_ae2c4ba5d14049840562b44f7d36e9d14}
+
+\item 
+scheduler\+::\+Event\+Id {\bfseries m\+\_\+straggler\+Timer}\hypertarget{classnfd_1_1pit_1_1Entry_ad16187530400eb31882cb176a46c8fcd}{}\label{classnfd_1_1pit_1_1Entry_ad16187530400eb31882cb176a46c8fcd}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{Interest} $>$ {\bfseries m\+\_\+interest}\hypertarget{classnfd_1_1pit_1_1Entry_a67de4cf603bb3341a1e750e392b0fc9f}{}\label{classnfd_1_1pit_1_1Entry_a67de4cf603bb3341a1e750e392b0fc9f}
+
+\item 
+In\+Record\+Collection {\bfseries m\+\_\+in\+Records}\hypertarget{classnfd_1_1pit_1_1Entry_a989a1e3217cef58cf6b94e7cf7d6a91a}{}\label{classnfd_1_1pit_1_1Entry_a989a1e3217cef58cf6b94e7cf7d6a91a}
+
+\item 
+Out\+Record\+Collection {\bfseries m\+\_\+out\+Records}\hypertarget{classnfd_1_1pit_1_1Entry_a5e24e598ff44f2a7553e05721840f3b0}{}\label{classnfd_1_1pit_1_1Entry_a5e24e598ff44f2a7553e05721840f3b0}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ {\bfseries m\+\_\+name\+Tree\+Entry}\hypertarget{classnfd_1_1pit_1_1Entry_a8755da0fe6b4154a0a7f09bc05fe2bd1}{}\label{classnfd_1_1pit_1_1Entry_a8755da0fe6b4154a0a7f09bc05fe2bd1}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classndn_1_1Name}{Name} {\bfseries L\+O\+C\+A\+L\+H\+O\+S\+T\+\_\+\+N\+A\+ME}\hypertarget{classnfd_1_1pit_1_1Entry_a4f09cc02d8a6d25e4967750a324b68ee}{}\label{classnfd_1_1pit_1_1Entry_a4f09cc02d8a6d25e4967750a324b68ee}
+
+\item 
+static const \hyperlink{classndn_1_1Name}{Name} {\bfseries L\+O\+C\+A\+L\+H\+O\+P\+\_\+\+N\+A\+ME}\hypertarget{classnfd_1_1pit_1_1Entry_abc171c030af5aa5ec84f89feb08b4de8}{}\label{classnfd_1_1pit_1_1Entry_abc171c030af5aa5ec84f89feb08b4de8}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries nfd\+::\+Name\+Tree}\hypertarget{classnfd_1_1pit_1_1Entry_a6c9695e8b2951b18e0243f6b40a26735}{}\label{classnfd_1_1pit_1_1Entry_a6c9695e8b2951b18e0243f6b40a26735}
+
+\item 
+class {\bfseries nfd\+::name\+\_\+tree\+::\+Entry}\hypertarget{classnfd_1_1pit_1_1Entry_a79163783eb509656535bce49e536ba56}{}\label{classnfd_1_1pit_1_1Entry_a79163783eb509656535bce49e536ba56}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a P\+IT entry 
+
+Definition at line 67 of file pit-\/entry.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!can\+Forward\+To@{can\+Forward\+To}}
+\index{can\+Forward\+To@{can\+Forward\+To}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{can\+Forward\+To(const Face \&face) const}{canForwardTo(const Face \&face) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::pit\+::\+Entry\+::can\+Forward\+To (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face} \&}]{face}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1Entry_a25964254c3d8dde8c455cd3961cb4b8e}{}\label{classnfd_1_1pit_1_1Entry_a25964254c3d8dde8c455cd3961cb4b8e}
+
+
+decides whether Interest can be forwarded to face 
+
+\begin{DoxyReturn}{Returns}
+true if \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} of this face does not exist or has expired, and there is an \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} not of this face, and scope is not violated 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!find\+Nonce@{find\+Nonce}}
+\index{find\+Nonce@{find\+Nonce}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{find\+Nonce(uint32\+\_\+t nonce, const Face \&face) const}{findNonce(uint32\_t nonce, const Face \&face) const}}]{\setlength{\rightskip}{0pt plus 5cm}int nfd\+::pit\+::\+Entry\+::find\+Nonce (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{nonce, }
+\item[{const {\bf Face} \&}]{face}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1Entry_a92a1e9c7e246a7396a0cae1bf7b624fe}{}\label{classnfd_1_1pit_1_1Entry_a92a1e9c7e246a7396a0cae1bf7b624fe}
+
+
+finds where a duplicate Nonce appears 
+
+\begin{DoxyReturn}{Returns}
+OR\textquotesingle{}ed Duplicate\+Nonce\+Where 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!get\+In\+Record@{get\+In\+Record}}
+\index{get\+In\+Record@{get\+In\+Record}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{get\+In\+Record(const Face \&face) const}{getInRecord(const Face \&face) const}}]{\setlength{\rightskip}{0pt plus 5cm}In\+Record\+Collection\+::const\+\_\+iterator nfd\+::pit\+::\+Entry\+::get\+In\+Record (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face} \&}]{face}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1Entry_a04589c934492a1376934f48ab444f11a}{}\label{classnfd_1_1pit_1_1Entry_a04589c934492a1376934f48ab444f11a}
+
+
+get the \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face 
+
+\begin{DoxyReturn}{Returns}
+an iterator to the \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record}, or .end if it does not exist 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Name() const}{getName() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name} \& nfd\+::pit\+::\+Entry\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1Entry_a2fa4df45aeb30f7fdaff5784faaf3e0b}{}\label{classnfd_1_1pit_1_1Entry_a2fa4df45aeb30f7fdaff5784faaf3e0b}
+\begin{DoxyReturn}{Returns}
+Interest Name 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!get\+Out\+Record@{get\+Out\+Record}}
+\index{get\+Out\+Record@{get\+Out\+Record}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Out\+Record(const Face \&face) const}{getOutRecord(const Face \&face) const}}]{\setlength{\rightskip}{0pt plus 5cm}Out\+Record\+Collection\+::const\+\_\+iterator nfd\+::pit\+::\+Entry\+::get\+Out\+Record (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face} \&}]{face}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1Entry_a3b2bbe9f81ed02b1b522de4ae1b101ab}{}\label{classnfd_1_1pit_1_1Entry_a3b2bbe9f81ed02b1b522de4ae1b101ab}
+
+
+get the \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} for face 
+
+\begin{DoxyReturn}{Returns}
+an iterator to the \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record}, or .end if it does not exist 
+\end{DoxyReturn}
+
+
+Definition at line 172 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!has\+Local\+In\+Record@{has\+Local\+In\+Record}}
+\index{has\+Local\+In\+Record@{has\+Local\+In\+Record}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{has\+Local\+In\+Record() const}{hasLocalInRecord() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::pit\+::\+Entry\+::has\+Local\+In\+Record (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1Entry_ab900fb305cf499f87be3b200b5ad8e14}{}\label{classnfd_1_1pit_1_1Entry_ab900fb305cf499f87be3b200b5ad8e14}
+
+
+determines whether any \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} is a local \hyperlink{classnfd_1_1Face}{Face} 
+
+\begin{DoxyReturn}{Returns}
+true if any \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} is a local \hyperlink{classnfd_1_1Face}{Face}, false if all In\+Records are non-\/local Faces 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!has\+Unexpired\+Out\+Records@{has\+Unexpired\+Out\+Records}}
+\index{has\+Unexpired\+Out\+Records@{has\+Unexpired\+Out\+Records}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{has\+Unexpired\+Out\+Records() const}{hasUnexpiredOutRecords() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::pit\+::\+Entry\+::has\+Unexpired\+Out\+Records (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1Entry_a98f2f64a29c982eb9e3ac0173b4c20b9}{}\label{classnfd_1_1pit_1_1Entry_a98f2f64a29c982eb9e3ac0173b4c20b9}
+\begin{DoxyReturn}{Returns}
+true if there is one or more unexpired Out\+Records 
+\end{DoxyReturn}
+
+
+Definition at line 189 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!insert\+Or\+Update\+In\+Record@{insert\+Or\+Update\+In\+Record}}
+\index{insert\+Or\+Update\+In\+Record@{insert\+Or\+Update\+In\+Record}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{insert\+Or\+Update\+In\+Record(shared\+\_\+ptr$<$ Face $>$ face, const Interest \&interest)}{insertOrUpdateInRecord(shared\_ptr< Face > face, const Interest \&interest)}}]{\setlength{\rightskip}{0pt plus 5cm}In\+Record\+Collection\+::iterator nfd\+::pit\+::\+Entry\+::insert\+Or\+Update\+In\+Record (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face, }
+\item[{const {\bf Interest} \&}]{interest}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1pit_1_1Entry_aac1be4aca41141f5b601f4510fdd5df4}{}\label{classnfd_1_1pit_1_1Entry_aac1be4aca41141f5b601f4510fdd5df4}
+
+
+inserts a \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face, and updates it with interest 
+
+If \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face exists, the existing one is updated. This method does not add the Nonce as a seen Nonce. \begin{DoxyReturn}{Returns}
+an iterator to the \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!insert\+Or\+Update\+Out\+Record@{insert\+Or\+Update\+Out\+Record}}
+\index{insert\+Or\+Update\+Out\+Record@{insert\+Or\+Update\+Out\+Record}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{insert\+Or\+Update\+Out\+Record(shared\+\_\+ptr$<$ Face $>$ face, const Interest \&interest)}{insertOrUpdateOutRecord(shared\_ptr< Face > face, const Interest \&interest)}}]{\setlength{\rightskip}{0pt plus 5cm}Out\+Record\+Collection\+::iterator nfd\+::pit\+::\+Entry\+::insert\+Or\+Update\+Out\+Record (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face, }
+\item[{const {\bf Interest} \&}]{interest}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1pit_1_1Entry_a9fd6defe6d91d3d57138a8c9bfdc8ddd}{}\label{classnfd_1_1pit_1_1Entry_a9fd6defe6d91d3d57138a8c9bfdc8ddd}
+
+
+inserts a \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} for face, and updates it with interest 
+
+If \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} for face exists, the existing one is updated. \begin{DoxyReturn}{Returns}
+an iterator to the \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} 
+\end{DoxyReturn}
+
+
+Definition at line 158 of file pit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}!violates\+Scope@{violates\+Scope}}
+\index{violates\+Scope@{violates\+Scope}!nfd\+::pit\+::\+Entry@{nfd\+::pit\+::\+Entry}}
+\subsubsection[{\texorpdfstring{violates\+Scope(const Face \&face) const}{violatesScope(const Face \&face) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::pit\+::\+Entry\+::violates\+Scope (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face} \&}]{face}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1Entry_ac24153cc1619e5b793ded81298b396cd}{}\label{classnfd_1_1pit_1_1Entry_ac24153cc1619e5b793ded81298b396cd}
+
+
+decides whether forwarding Interest to face would violate scope 
+
+\begin{DoxyReturn}{Returns}
+true if scope control would be violated 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+can\+Forward\+To has more comprehensive checks (including scope control) and should be used by most strategies. Outgoing Interest pipeline should only check scope because some strategy (eg. vehicular) needs to retransmit sooner than \hyperlink{classnfd_1_1pit_1_1OutRecord}{Out\+Record} expiry, or forward Interest back to incoming face 
+\end{DoxyNote}
+
+
+Definition at line 78 of file pit-\/entry.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/pit-\/entry.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/pit-\/entry.\+cpp\end{DoxyCompactItemize}

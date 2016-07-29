@@ -1,0 +1,246 @@
+\hypertarget{classns3_1_1ndn_1_1FaceContainer}{}\section{ns3\+:\+:ndn\+:\+:Face\+Container Class Reference}
+\label{classns3_1_1ndn_1_1FaceContainer}\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+
+
+A pool for Ndn faces.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/face-\/container.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Face\+Container\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1ndn_1_1FaceContainer}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Container\+::const\+\_\+iterator \hyperlink{classns3_1_1ndn_1_1FaceContainer_a73807fcd505b7b06616d1965ed9dea54}{Iterator}\hypertarget{classns3_1_1ndn_1_1FaceContainer_a73807fcd505b7b06616d1965ed9dea54}{}\label{classns3_1_1ndn_1_1FaceContainer_a73807fcd505b7b06616d1965ed9dea54}
+
+\begin{DoxyCompactList}\small\item\em Iterator over \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1FaceContainer_a13a19c76c09a7493ba22a649ed969c54}{Face\+Container} ()\hypertarget{classns3_1_1ndn_1_1FaceContainer_a13a19c76c09a7493ba22a649ed969c54}{}\label{classns3_1_1ndn_1_1FaceContainer_a13a19c76c09a7493ba22a649ed969c54}
+
+\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container}. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1FaceContainer_aa2125a337517cb04a246655ee922867c}{Face\+Container} (const \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container}. Calls Add\+All method. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} \& \hyperlink{classns3_1_1ndn_1_1FaceContainer_a655f82f01482c8cdcba33d58ce31f687}{operator=} (const \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} \&other)
+\begin{DoxyCompactList}\small\item\em Copy operator for \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container}. Empties vector and calls Add\+All method. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1FaceContainer_a6ac9a35eca3fb8a309fb40fa134750d9}{Add} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)
+\item 
+void \hyperlink{classns3_1_1ndn_1_1FaceContainer_acd767be2abe31d69ca02bd1a732bb439}{Add\+All} (Ptr$<$ \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} $>$ other)
+\begin{DoxyCompactList}\small\item\em Add all entries from other container. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1FaceContainer_aca98a1f4f22b696fa4bb8fb89a770146}{Add\+All} (const \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container} \&other)
+\begin{DoxyCompactList}\small\item\em Add all entries from other container. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1FaceContainer_a73807fcd505b7b06616d1965ed9dea54}{Iterator} \hyperlink{classns3_1_1ndn_1_1FaceContainer_ae234ef6e118b930e1e11867c10b772be}{Begin} () const
+\begin{DoxyCompactList}\small\item\em Get an iterator which refers to the first pair in the container. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1FaceContainer_a73807fcd505b7b06616d1965ed9dea54}{Iterator} \hyperlink{classns3_1_1ndn_1_1FaceContainer_a102b6a33ac3701769c79466cfe9fd743}{End} () const
+\begin{DoxyCompactList}\small\item\em Get an iterator which indicates past-\/the-\/last Node in the container. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classns3_1_1ndn_1_1FaceContainer_aa6342b7a62f643613cbb45c3085716e9}{GetN} () const
+\begin{DoxyCompactList}\small\item\em Get the number of faces stored in this container. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \hyperlink{classns3_1_1ndn_1_1FaceContainer_aadca3b68bafa19891d7552c1eac888a6}{Get} (size\+\_\+t pos) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A pool for Ndn faces. 
+
+Provides tools to perform basic manipulation on faces, such as setting metrics and states on faces
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classns3_1_1ndn_1_1StackHelper}{ndn\+::\+Stack\+Helper} 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file ndn-\/face-\/container.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!Face\+Container@{Face\+Container}}
+\index{Face\+Container@{Face\+Container}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{Face\+Container(const Face\+Container \&other)}{FaceContainer(const FaceContainer \&other)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+Face\+Container\+::\+Face\+Container (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Container} \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1FaceContainer_aa2125a337517cb04a246655ee922867c}{}\label{classns3_1_1ndn_1_1FaceContainer_aa2125a337517cb04a246655ee922867c}
+
+
+Copy constructor for \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container}. Calls Add\+All method. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classns3_1_1ndn_1_1FaceContainer_acd767be2abe31d69ca02bd1a732bb439}{Face\+Container\+::\+Add\+All} 
+\end{DoxySeeAlso}
+
+
+Definition at line 29 of file ndn-\/face-\/container.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!Add@{Add}}
+\index{Add@{Add}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{Add(shared\+\_\+ptr$<$ Face $>$ face)}{Add(shared\_ptr< Face > face)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Face\+Container\+::\+Add (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1FaceContainer_a6ac9a35eca3fb8a309fb40fa134750d9}{}\label{classns3_1_1ndn_1_1FaceContainer_a6ac9a35eca3fb8a309fb40fa134750d9}
+Add an entry to the container
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & a smart pointer to a Face-\/derived object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file ndn-\/face-\/container.\+cpp.
+
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!Add\+All@{Add\+All}}
+\index{Add\+All@{Add\+All}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{Add\+All(\+Ptr$<$ Face\+Container $>$ other)}{AddAll(Ptr< FaceContainer > other)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Face\+Container\+::\+Add\+All (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ {\bf Face\+Container} $>$}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1FaceContainer_acd767be2abe31d69ca02bd1a732bb439}{}\label{classns3_1_1ndn_1_1FaceContainer_acd767be2abe31d69ca02bd1a732bb439}
+
+
+Add all entries from other container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & smart pointer to a container \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file ndn-\/face-\/container.\+cpp.
+
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!Add\+All@{Add\+All}}
+\index{Add\+All@{Add\+All}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{Add\+All(const Face\+Container \&other)}{AddAll(const FaceContainer \&other)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Face\+Container\+::\+Add\+All (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Container} \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1FaceContainer_aca98a1f4f22b696fa4bb8fb89a770146}{}\label{classns3_1_1ndn_1_1FaceContainer_aca98a1f4f22b696fa4bb8fb89a770146}
+
+
+Add all entries from other container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & container \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file ndn-\/face-\/container.\+cpp.
+
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!Begin@{Begin}}
+\index{Begin@{Begin}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{Begin() const}{Begin() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Face\+Container\+::\+Iterator} ns3\+::ndn\+::\+Face\+Container\+::\+Begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1FaceContainer_ae234ef6e118b930e1e11867c10b772be}{}\label{classns3_1_1ndn_1_1FaceContainer_ae234ef6e118b930e1e11867c10b772be}
+
+
+Get an iterator which refers to the first pair in the container. 
+
+\begin{DoxyReturn}{Returns}
+an iterator which refers to the first pair in the container. 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file ndn-\/face-\/container.\+cpp.
+
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!End@{End}}
+\index{End@{End}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{End() const}{End() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Face\+Container\+::\+Iterator} ns3\+::ndn\+::\+Face\+Container\+::\+End (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1FaceContainer_a102b6a33ac3701769c79466cfe9fd743}{}\label{classns3_1_1ndn_1_1FaceContainer_a102b6a33ac3701769c79466cfe9fd743}
+
+
+Get an iterator which indicates past-\/the-\/last Node in the container. 
+
+\begin{DoxyReturn}{Returns}
+an iterator which indicates an ending condition for a loop. 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file ndn-\/face-\/container.\+cpp.
+
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!Get@{Get}}
+\index{Get@{Get}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{Get(size\+\_\+t pos) const}{Get(size\_t pos) const}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Face} $>$ ns3\+::ndn\+::\+Face\+Container\+::\+Get (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{pos}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1FaceContainer_aadca3b68bafa19891d7552c1eac888a6}{}\label{classns3_1_1ndn_1_1FaceContainer_aadca3b68bafa19891d7552c1eac888a6}
+Get a Face stored in the container
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & index of the Face in the container \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if !(pos $<$ \hyperlink{classns3_1_1ndn_1_1FaceContainer_aa6342b7a62f643613cbb45c3085716e9}{Get\+N()}). \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 86 of file ndn-\/face-\/container.\+cpp.
+
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!GetN@{GetN}}
+\index{GetN@{GetN}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{Get\+N() const}{GetN() const}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t ns3\+::ndn\+::\+Face\+Container\+::\+GetN (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1FaceContainer_aa6342b7a62f643613cbb45c3085716e9}{}\label{classns3_1_1ndn_1_1FaceContainer_aa6342b7a62f643613cbb45c3085716e9}
+
+
+Get the number of faces stored in this container. 
+
+\begin{DoxyReturn}{Returns}
+the number of faces stored in this container 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file ndn-\/face-\/container.\+cpp.
+
+\index{ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}!operator=@{operator=}}
+\index{operator=@{operator=}!ns3\+::ndn\+::\+Face\+Container@{ns3\+::ndn\+::\+Face\+Container}}
+\subsubsection[{\texorpdfstring{operator=(const Face\+Container \&other)}{operator=(const FaceContainer \&other)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Face\+Container} \& ns3\+::ndn\+::\+Face\+Container\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Container} \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1FaceContainer_a655f82f01482c8cdcba33d58ce31f687}{}\label{classns3_1_1ndn_1_1FaceContainer_a655f82f01482c8cdcba33d58ce31f687}
+
+
+Copy operator for \hyperlink{classns3_1_1ndn_1_1FaceContainer}{Face\+Container}. Empties vector and calls Add\+All method. 
+
+All previously obtained iterators (\hyperlink{classns3_1_1ndn_1_1FaceContainer_ae234ef6e118b930e1e11867c10b772be}{Begin()} and \hyperlink{classns3_1_1ndn_1_1FaceContainer_a102b6a33ac3701769c79466cfe9fd743}{End()}) will be invalidated
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classns3_1_1ndn_1_1FaceContainer_acd767be2abe31d69ca02bd1a732bb439}{Face\+Container\+::\+Add\+All} 
+\end{DoxySeeAlso}
+
+
+Definition at line 35 of file ndn-\/face-\/container.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/face-\/container.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/face-\/container.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,144 @@
+\hypertarget{classndn_1_1nfd_1_1Route}{}\section{ndn\+:\+:nfd\+:\+:Route Class Reference}
+\label{classndn_1_1nfd_1_1Route}\index{ndn\+::nfd\+::\+Route@{ndn\+::nfd\+::\+Route}}
+
+
+\hyperlink{classndn_1_1Data}{Data} abstraction for \hyperlink{classndn_1_1nfd_1_1Route}{Route}.  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/rib-\/entry.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:nfd\+:\+:Route\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1nfd_1_1Route}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1Route_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Route} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1nfd_1_1Route_a75f3b9b552e96d9191d94edf130d8a3c}{}\label{classndn_1_1nfd_1_1Route_a75f3b9b552e96d9191d94edf130d8a3c}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Face\+Id} () const\hypertarget{classndn_1_1nfd_1_1Route_a6ccbfb15e8b4f31234896ead474fde25}{}\label{classndn_1_1nfd_1_1Route_a6ccbfb15e8b4f31234896ead474fde25}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1Route}{Route} \& {\bfseries set\+Face\+Id} (uint64\+\_\+t face\+Id)\hypertarget{classndn_1_1nfd_1_1Route_aa01770ac4c6e60725d62ef2a183775b2}{}\label{classndn_1_1nfd_1_1Route_aa01770ac4c6e60725d62ef2a183775b2}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Origin} () const\hypertarget{classndn_1_1nfd_1_1Route_adbe2151ec673da79b4485a73c1c47e29}{}\label{classndn_1_1nfd_1_1Route_adbe2151ec673da79b4485a73c1c47e29}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1Route}{Route} \& \hyperlink{classndn_1_1nfd_1_1Route_adf2f3573a2b232833cbcb06099590246}{set\+Origin} (uint64\+\_\+t origin)
+\begin{DoxyCompactList}\small\item\em set Origin \end{DoxyCompactList}\item 
+uint64\+\_\+t {\bfseries get\+Cost} () const\hypertarget{classndn_1_1nfd_1_1Route_aab02dd1ae1635648e9fc5b1bf0c37edc}{}\label{classndn_1_1nfd_1_1Route_aab02dd1ae1635648e9fc5b1bf0c37edc}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1Route}{Route} \& {\bfseries set\+Cost} (uint64\+\_\+t cost)\hypertarget{classndn_1_1nfd_1_1Route_af94e1e91b6216a3eaa7f642f1e04c4aa}{}\label{classndn_1_1nfd_1_1Route_af94e1e91b6216a3eaa7f642f1e04c4aa}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Flags} () const\hypertarget{classndn_1_1nfd_1_1Route_aa55e9fd0b16a27074dddb322424a1f17}{}\label{classndn_1_1nfd_1_1Route_aa55e9fd0b16a27074dddb322424a1f17}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1Route}{Route} \& \hyperlink{classndn_1_1nfd_1_1Route_a01142381dc8d307f9bf9e61dcf643afc}{set\+Flags} (uint64\+\_\+t flags)
+\begin{DoxyCompactList}\small\item\em set route inheritance flags \end{DoxyCompactList}\item 
+const time\+::milliseconds \& {\bfseries get\+Expiration\+Period} () const\hypertarget{classndn_1_1nfd_1_1Route_a688bbda1196c9d7a15ed7eb221c18a52}{}\label{classndn_1_1nfd_1_1Route_a688bbda1196c9d7a15ed7eb221c18a52}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1Route}{Route} \& {\bfseries set\+Expiration\+Period} (const time\+::milliseconds \&expiration\+Period)\hypertarget{classndn_1_1nfd_1_1Route_a3b2862b56e5896e8a3eb6aab7318cf74}{}\label{classndn_1_1nfd_1_1Route_a3b2862b56e5896e8a3eb6aab7318cf74}
+
+\item 
+bool {\bfseries has\+Infinite\+Expiration\+Period} () const\hypertarget{classndn_1_1nfd_1_1Route_afb3a751a88acd5036206874b649a3b5d}{}\label{classndn_1_1nfd_1_1Route_afb3a751a88acd5036206874b649a3b5d}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t {\bfseries wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&block) const\hypertarget{classndn_1_1nfd_1_1Route_a23c1a4162fd4ff4de11f583fbe14137d}{}\label{classndn_1_1nfd_1_1Route_a23c1a4162fd4ff4de11f583fbe14137d}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& {\bfseries wire\+Encode} () const\hypertarget{classndn_1_1nfd_1_1Route_a98f2f09e33842c54b4c5f5b72b19af36}{}\label{classndn_1_1nfd_1_1Route_a98f2f09e33842c54b4c5f5b72b19af36}
+
+\item 
+void {\bfseries wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1nfd_1_1Route_a6a69cdc47967bf0a76bd77d17b07c328}{}\label{classndn_1_1nfd_1_1Route_a6a69cdc47967bf0a76bd77d17b07c328}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const time\+::milliseconds {\bfseries I\+N\+F\+I\+N\+I\+T\+E\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+OD}\hypertarget{classndn_1_1nfd_1_1Route_abeeba9e9d832a1691bf4957a3038c624}{}\label{classndn_1_1nfd_1_1Route_abeeba9e9d832a1691bf4957a3038c624}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1Data}{Data} abstraction for \hyperlink{classndn_1_1nfd_1_1Route}{Route}. 
+
+A route indicates the availability of content via a certain face and provides meta-\/information about the face. \begin{DoxyVerb}Route := ROUTE-TYPE TLV-LENGTH
+           FaceId
+           Origin
+           Cost
+           Flags
+           ExpirationPeriod?
+\end{DoxyVerb}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/RibMgmt}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Rib\+Mgmt} 
+\end{DoxySeeAlso}
+
+
+Definition at line 51 of file nfd-\/rib-\/entry.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::nfd\+::\+Route@{ndn\+::nfd\+::\+Route}!set\+Flags@{set\+Flags}}
+\index{set\+Flags@{set\+Flags}!ndn\+::nfd\+::\+Route@{ndn\+::nfd\+::\+Route}}
+\subsubsection[{\texorpdfstring{set\+Flags(uint64\+\_\+t flags)}{setFlags(uint64\_t flags)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Route}\& ndn\+::nfd\+::\+Route\+::set\+Flags (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{flags}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd_1_1Route_a01142381dc8d307f9bf9e61dcf643afc}{}\label{classndn_1_1nfd_1_1Route_a01142381dc8d307f9bf9e61dcf643afc}
+
+
+set route inheritance flags 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & a bitwise OR\textquotesingle{}ed code from ndn\+::nfd\+::\+Route\+Flags \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file nfd-\/rib-\/entry.\+hpp.
+
+\index{ndn\+::nfd\+::\+Route@{ndn\+::nfd\+::\+Route}!set\+Origin@{set\+Origin}}
+\index{set\+Origin@{set\+Origin}!ndn\+::nfd\+::\+Route@{ndn\+::nfd\+::\+Route}}
+\subsubsection[{\texorpdfstring{set\+Origin(uint64\+\_\+t origin)}{setOrigin(uint64\_t origin)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Route}\& ndn\+::nfd\+::\+Route\+::set\+Origin (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{origin}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd_1_1Route_adf2f3573a2b232833cbcb06099590246}{}\label{classndn_1_1nfd_1_1Route_adf2f3573a2b232833cbcb06099590246}
+
+
+set Origin 
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & a code defined in ndn\+::nfd\+::\+Route\+Origin \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 92 of file nfd-\/rib-\/entry.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/rib-\/entry.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/rib-\/entry.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,190 @@
+\hypertarget{classndn_1_1ValidatorConfig}{}\section{ndn\+:\+:Validator\+Config Class Reference}
+\label{classndn_1_1ValidatorConfig}\index{ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}}
+Inheritance diagram for ndn\+:\+:Validator\+Config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1ValidatorConfig}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1ValidatorConfig_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1ValidatorConfig_a05768a28c6a5516c18795fb63719cf67}{Validator\+Config} (\hyperlink{classndn_1_1Face}{Face} $\ast$face=nullptr, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1CertificateCache}{Certificate\+Cache} $>$ \&certificate\+Cache=D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+T\+E\+\_\+\+C\+A\+C\+HE, const time\+::milliseconds \&grace\+Interval=D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL, const size\+\_\+t step\+Limit=10, const size\+\_\+t max\+Tracked\+Keys=1000, const time\+::system\+\_\+clock\+::\+Duration \&key\+Timestamp\+Ttl=D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+T\+TL)
+\item 
+\hyperlink{classndn_1_1ValidatorConfig_a85e10fe38484c0fe76e618a81dfb2b92}{Validator\+Config} (\hyperlink{classndn_1_1Face}{Face} \&face, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1CertificateCache}{Certificate\+Cache} $>$ \&certificate\+Cache=D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+T\+E\+\_\+\+C\+A\+C\+HE, const time\+::milliseconds \&grace\+Interval=D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL, const size\+\_\+t step\+Limit=10, const size\+\_\+t max\+Tracked\+Keys=1000, const time\+::system\+\_\+clock\+::\+Duration \&key\+Timestamp\+Ttl=D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+T\+TL)
+\item 
+void {\bfseries load} (const std\+::string \&filename)\hypertarget{classndn_1_1ValidatorConfig_a9f104ff718c1cade370709402a479e9b}{}\label{classndn_1_1ValidatorConfig_a9f104ff718c1cade370709402a479e9b}
+
+\item 
+void {\bfseries load} (const std\+::string \&input, const std\+::string \&filename)\hypertarget{classndn_1_1ValidatorConfig_ab05112be21dcb58475ab693d726340f4}{}\label{classndn_1_1ValidatorConfig_ab05112be21dcb58475ab693d726340f4}
+
+\item 
+void {\bfseries load} (std\+::istream \&input, const std\+::string \&filename)\hypertarget{classndn_1_1ValidatorConfig_a3836fe2a0abfd47ee990ab4d5ab040c8}{}\label{classndn_1_1ValidatorConfig_a3836fe2a0abfd47ee990ab4d5ab040c8}
+
+\item 
+void {\bfseries load} (const security\+::conf\+::\+Config\+Section \&config\+Section, const std\+::string \&filename)\hypertarget{classndn_1_1ValidatorConfig_a12c08eb293ba90f99ff905d03bf047cc}{}\label{classndn_1_1ValidatorConfig_a12c08eb293ba90f99ff905d03bf047cc}
+
+\item 
+void {\bfseries reset} ()\hypertarget{classndn_1_1ValidatorConfig_a640483e4fcbbd59465592cb58e3ea4d9}{}\label{classndn_1_1ValidatorConfig_a640483e4fcbbd59465592cb58e3ea4d9}
+
+\item 
+bool {\bfseries is\+Empty} ()\hypertarget{classndn_1_1ValidatorConfig_a43317f599467326f2e9c53a6e1aef372}{}\label{classndn_1_1ValidatorConfig_a43317f599467326f2e9c53a6e1aef372}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1CertificateCache}{Certificate\+Cache} $>$ {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+T\+E\+\_\+\+C\+A\+C\+HE}\hypertarget{classndn_1_1ValidatorConfig_a44382cf255eee2f22ff0a35415425410}{}\label{classndn_1_1ValidatorConfig_a44382cf255eee2f22ff0a35415425410}
+
+\item 
+static const time\+::milliseconds {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL}\hypertarget{classndn_1_1ValidatorConfig_a93fec9e0210c8a8d4bde6544942b4023}{}\label{classndn_1_1ValidatorConfig_a93fec9e0210c8a8d4bde6544942b4023}
+
+\item 
+static const time\+::system\+\_\+clock\+::\+Duration {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+T\+TL} = time\+::hours(1)\hypertarget{classndn_1_1ValidatorConfig_afdf7ff223916c1daeae827db33122e08}{}\label{classndn_1_1ValidatorConfig_afdf7ff223916c1daeae827db33122e08}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1ValidatorConfig_affe77aeb11b327410559c550f4d5f7d5}{check\+Policy} (const \hyperlink{classndn_1_1Data}{Data} \&data, int n\+Steps, const \hyperlink{namespacendn_aeaa15e849fd25636f59ca61acb64e532}{On\+Data\+Validated} \&on\+Validated, const \hyperlink{namespacendn_ae3c60219d74ba747e368708d93782760}{On\+Data\+Validation\+Failed} \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps)
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{classndn_1_1Data}{Data} against policy and return the next validation step if necessary. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1ValidatorConfig_a8278481be23217bf06ff436c1e3f8e63}{check\+Policy} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, int n\+Steps, const \hyperlink{namespacendn_a90fe4b4d97a7870d87f2fce8fdc88f95}{On\+Interest\+Validated} \&on\+Validated, const \hyperlink{namespacendn_a6cb4f04de7c1e8da06d8f5865b3d2877}{On\+Interest\+Validation\+Failed} \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps)
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{classndn_1_1Interest}{Interest} against validation policy and return the next validation step if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file validator-\/config.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}!Validator\+Config@{Validator\+Config}}
+\index{Validator\+Config@{Validator\+Config}!ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}}
+\subsubsection[{\texorpdfstring{Validator\+Config(\+Face $\ast$face=nullptr, const shared\+\_\+ptr$<$ Certificate\+Cache $>$ \&certificate\+Cache=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+T\+E\+\_\+\+C\+A\+C\+H\+E, const time\+::milliseconds \&grace\+Interval=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L, const size\+\_\+t step\+Limit=10, const size\+\_\+t max\+Tracked\+Keys=1000, const time\+::system\+\_\+clock\+::\+Duration \&key\+Timestamp\+Ttl=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+T\+T\+L)}{ValidatorConfig(Face *face=nullptr, const shared\_ptr< CertificateCache > \&certificateCache=DEFAULT\_CERTIFICATE\_CACHE, const time::milliseconds \&graceInterval=DEFAULT\_GRACE\_INTERVAL, const size\_t stepLimit=10, const size\_t maxTrackedKeys=1000, const time::system\_clock::Duration \&keyTimestampTtl=DEFAULT\_KEY\_TIMESTAMP\_TTL)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Validator\+Config\+::\+Validator\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} $\ast$}]{face = {\ttfamily nullptr}, }
+\item[{const shared\+\_\+ptr$<$ {\bf Certificate\+Cache} $>$ \&}]{certificate\+Cache = {\ttfamily DEFAULT\+\_\+CERTIFICATE\+\_\+CACHE}, }
+\item[{const time\+::milliseconds \&}]{grace\+Interval = {\ttfamily DEFAULT\+\_\+GRACE\+\_\+INTERVAL}, }
+\item[{const size\+\_\+t}]{step\+Limit = {\ttfamily 10}, }
+\item[{const size\+\_\+t}]{max\+Tracked\+Keys = {\ttfamily 1000}, }
+\item[{const time\+::system\+\_\+clock\+::\+Duration \&}]{key\+Timestamp\+Ttl = {\ttfamily DEFAULT\+\_\+KEY\+\_\+TIMESTAMP\+\_\+TTL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1ValidatorConfig_a05768a28c6a5516c18795fb63719cf67}{}\label{classndn_1_1ValidatorConfig_a05768a28c6a5516c18795fb63719cf67}
+\begin{DoxyNote}{Note}
+When both certificate cache and face are not supplied, no cache will be used. However, if only face is supplied, a default cache will be created and used. 
+\end{DoxyNote}
+
+
+Definition at line 38 of file validator-\/config.\+cpp.
+
+\index{ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}!Validator\+Config@{Validator\+Config}}
+\index{Validator\+Config@{Validator\+Config}!ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}}
+\subsubsection[{\texorpdfstring{Validator\+Config(\+Face \&face, const shared\+\_\+ptr$<$ Certificate\+Cache $>$ \&certificate\+Cache=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+E\+R\+T\+I\+F\+I\+C\+A\+T\+E\+\_\+\+C\+A\+C\+H\+E, const time\+::milliseconds \&grace\+Interval=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L, const size\+\_\+t step\+Limit=10, const size\+\_\+t max\+Tracked\+Keys=1000, const time\+::system\+\_\+clock\+::\+Duration \&key\+Timestamp\+Ttl=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+T\+T\+L)}{ValidatorConfig(Face \&face, const shared\_ptr< CertificateCache > \&certificateCache=DEFAULT\_CERTIFICATE\_CACHE, const time::milliseconds \&graceInterval=DEFAULT\_GRACE\_INTERVAL, const size\_t stepLimit=10, const size\_t maxTrackedKeys=1000, const time::system\_clock::Duration \&keyTimestampTtl=DEFAULT\_KEY\_TIMESTAMP\_TTL)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Validator\+Config\+::\+Validator\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face, }
+\item[{const shared\+\_\+ptr$<$ {\bf Certificate\+Cache} $>$ \&}]{certificate\+Cache = {\ttfamily DEFAULT\+\_\+CERTIFICATE\+\_\+CACHE}, }
+\item[{const time\+::milliseconds \&}]{grace\+Interval = {\ttfamily DEFAULT\+\_\+GRACE\+\_\+INTERVAL}, }
+\item[{const size\+\_\+t}]{step\+Limit = {\ttfamily 10}, }
+\item[{const size\+\_\+t}]{max\+Tracked\+Keys = {\ttfamily 1000}, }
+\item[{const time\+::system\+\_\+clock\+::\+Duration \&}]{key\+Timestamp\+Ttl = {\ttfamily DEFAULT\+\_\+KEY\+\_\+TIMESTAMP\+\_\+TTL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1ValidatorConfig_a85e10fe38484c0fe76e618a81dfb2b92}{}\label{classndn_1_1ValidatorConfig_a85e10fe38484c0fe76e618a81dfb2b92}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000038}{Deprecated}]Use the constructor taking Face$\ast$ as parameter. \end{DoxyRefDesc}
+
+
+Definition at line 57 of file validator-\/config.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}!check\+Policy@{check\+Policy}}
+\index{check\+Policy@{check\+Policy}!ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}}
+\subsubsection[{\texorpdfstring{check\+Policy(const Data \&data, int n\+Steps, const On\+Data\+Validated \&on\+Validated, const On\+Data\+Validation\+Failed \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps)}{checkPolicy(const Data \&data, int nSteps, const OnDataValidated \&onValidated, const OnDataValidationFailed \&onValidationFailed, std::vector< shared\_ptr< ValidationRequest > > \&nextSteps)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Validator\+Config\+::check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data, }
+\item[{int}]{n\+Steps, }
+\item[{const {\bf On\+Data\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Data\+Validation\+Failed} \&}]{on\+Validation\+Failed, }
+\item[{std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1ValidatorConfig_affe77aeb11b327410559c550f4d5f7d5}{}\label{classndn_1_1ValidatorConfig_affe77aeb11b327410559c550f4d5f7d5}
+
+
+Check the \hyperlink{classndn_1_1Data}{Data} against policy and return the next validation step if necessary. 
+
+If there is no next validation step, that validation M\+U\+ST have been done. i.\+e., either on\+Validated or on\+Validation\+Failed callback is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The \hyperlink{classndn_1_1Data}{Data} to check. \\
+\hline
+{\em n\+Steps} & The number of validation steps that have been done. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Data}{Data} is validated, this calls on\+Validated(data) \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data) \\
+\hline
+{\em next\+Steps} & On return, contains the next validation step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Validator_a341b1faa8a15ae17c5157d5387a75ef5}{ndn\+::\+Validator}.
+
+
+
+Definition at line 488 of file validator-\/config.\+cpp.
+
+\index{ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}!check\+Policy@{check\+Policy}}
+\index{check\+Policy@{check\+Policy}!ndn\+::\+Validator\+Config@{ndn\+::\+Validator\+Config}}
+\subsubsection[{\texorpdfstring{check\+Policy(const Interest \&interest, int n\+Steps, const On\+Interest\+Validated \&on\+Validated, const On\+Interest\+Validation\+Failed \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps)}{checkPolicy(const Interest \&interest, int nSteps, const OnInterestValidated \&onValidated, const OnInterestValidationFailed \&onValidationFailed, std::vector< shared\_ptr< ValidationRequest > > \&nextSteps)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Validator\+Config\+::check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{int}]{n\+Steps, }
+\item[{const {\bf On\+Interest\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Interest\+Validation\+Failed} \&}]{on\+Validation\+Failed, }
+\item[{std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1ValidatorConfig_a8278481be23217bf06ff436c1e3f8e63}{}\label{classndn_1_1ValidatorConfig_a8278481be23217bf06ff436c1e3f8e63}
+
+
+Check the \hyperlink{classndn_1_1Interest}{Interest} against validation policy and return the next validation step if necessary. 
+
+If there is no next validation step, that validation M\+U\+ST have been done. i.\+e., either on\+Validated or on\+Validation\+Failed callback is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & The \hyperlink{classndn_1_1Interest}{Interest} to check. \\
+\hline
+{\em n\+Steps} & The number of validation steps that have been done. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Interest}{Interest} is validated, this calls on\+Validated(data) \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data) \\
+\hline
+{\em next\+Steps} & On return, contains the next validation step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Validator_a8ad5a76c67c489afcb493f722f142e34}{ndn\+::\+Validator}.
+
+
+
+Definition at line 523 of file validator-\/config.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/validator-\/config.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/validator-\/config.\+cpp\end{DoxyCompactItemize}

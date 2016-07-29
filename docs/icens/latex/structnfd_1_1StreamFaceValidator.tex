@@ -1,0 +1,41 @@
+\hypertarget{structnfd_1_1StreamFaceValidator}{}\section{nfd\+:\+:Stream\+Face\+Validator$<$ Protocol, U $>$ Struct Template Reference}
+\label{structnfd_1_1StreamFaceValidator}\index{nfd\+::\+Stream\+Face\+Validator$<$ Protocol, U $>$@{nfd\+::\+Stream\+Face\+Validator$<$ Protocol, U $>$}}
+
+
+Class allowing validation of the \hyperlink{classnfd_1_1StreamFace}{Stream\+Face} use.  
+
+
+
+
+{\ttfamily \#include $<$stream-\/face.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries validate\+Socket} (const typename Protocol\+::socket \&socket)\hypertarget{structnfd_1_1StreamFaceValidator_a551bbad7f1bb2b617a1cf46de0aacdcc}{}\label{structnfd_1_1StreamFaceValidator_a551bbad7f1bb2b617a1cf46de0aacdcc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Protocol, class U$>$\\*
+struct nfd\+::\+Stream\+Face\+Validator$<$ Protocol, U $>$}
+
+Class allowing validation of the \hyperlink{classnfd_1_1StreamFace}{Stream\+Face} use. 
+
+For example, partial specialization based on boost\+::asio\+::ip\+::tcp should check that local endpoint is loopback
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1Face_1_1Error}{Face\+::\+Error}} & if validation failed \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 104 of file stream-\/face.\+hpp.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/stream-\/face.\+hpp\end{DoxyCompactItemize}

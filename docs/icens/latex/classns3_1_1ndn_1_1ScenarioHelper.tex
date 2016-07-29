@@ -1,0 +1,192 @@
+\hypertarget{classns3_1_1ndn_1_1ScenarioHelper}{}\section{ns3\+:\+:ndn\+:\+:Scenario\+Helper Class Reference}
+\label{classns3_1_1ndn_1_1ScenarioHelper}\index{ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}}
+
+
+Helper class to simplify writing basic simulation scenarios.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/scenario-\/helper.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Scenario\+Helper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.544118cm]{classns3_1_1ndn_1_1ScenarioHelper}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structns3_1_1ndn_1_1ScenarioHelper_1_1AppInfo}{App\+Info}
+\item 
+struct \hyperlink{structns3_1_1ndn_1_1ScenarioHelper_1_1RouteInfo}{Route\+Info}
+\begin{DoxyCompactList}\small\item\em Route information for add\+Routes method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classns3_1_1ndn_1_1ScenarioHelper_a8d0cfc543a78db151a0e0cc353a336eb}{create\+Topology} (std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ std\+::string $>$$>$ topology)
+\begin{DoxyCompactList}\small\item\em Create topology. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1ScenarioHelper_af78d40897640b8fa20f9e7482028acfc}{add\+Routes} (std\+::initializer\+\_\+list$<$ \hyperlink{structns3_1_1ndn_1_1ScenarioHelper_1_1RouteInfo}{Route\+Info} $>$ routes)
+\begin{DoxyCompactList}\small\item\em Create routes between topology nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1ScenarioHelper_a14a9eeb69c4f52c5bfdc45e1e89fb624}{add\+Apps} (std\+::initializer\+\_\+list$<$ \hyperlink{structns3_1_1ndn_1_1ScenarioHelper_1_1AppInfo}{App\+Info} $>$ apps)
+\begin{DoxyCompactList}\small\item\em Create and install application on nodes. \end{DoxyCompactList}\item 
+Ptr$<$ Node $>$ \hyperlink{classns3_1_1ndn_1_1ScenarioHelper_a838baa969b98bd3c137d134bb89b5e83}{get\+Node} (const std\+::string \&node\+Name)
+\begin{DoxyCompactList}\small\item\em Get node. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \hyperlink{classns3_1_1ndn_1_1ScenarioHelper_a3c6114d09b7d79cb98efa917bdcb6dc6}{get\+Face} (const std\+::string \&node1, const std\+::string \&node2)
+\begin{DoxyCompactList}\small\item\em Get face on the {\ttfamily node1} pointing towards {\ttfamily node2}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class to simplify writing basic simulation scenarios. 
+
+The following code with scenario helper creates a 3-\/node topology, with manual routes between nodes and 2 applications, installed on first and last node of the topology\+: \begin{DoxyVerb}ScenarioHelper helper;
+helper.createTopology({
+    {"1", "2"},
+    {"2", "3"}
+  });
+
+helper.addRoutes({
+    {"1", "2", "/prefix", 1},
+    {"2", "3", "/prefix", 1}
+  });
+
+helper.addApps({
+    {"1", "ns3::ndn::ConsumerCbr",
+        {{"Prefix", "/prefix"}, {"Frequency", "1"}},
+        "0s", "100s"},
+    {"3", "ns3::ndn::Producer",
+        {{"Prefix", "/prefix"}, {"PayloadSize", "1024"}},
+        "0s", "100s"}
+  });\end{DoxyVerb}
+ 
+
+Definition at line 60 of file ndn-\/scenario-\/helper.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}!add\+Apps@{add\+Apps}}
+\index{add\+Apps@{add\+Apps}!ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}}
+\subsubsection[{\texorpdfstring{add\+Apps(std\+::initializer\+\_\+list$<$ App\+Info $>$ apps)}{addApps(std::initializer\_list< AppInfo > apps)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Scenario\+Helper\+::add\+Apps (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ {\bf App\+Info} $>$}]{apps}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1ScenarioHelper_a14a9eeb69c4f52c5bfdc45e1e89fb624}{}\label{classns3_1_1ndn_1_1ScenarioHelper_a14a9eeb69c4f52c5bfdc45e1e89fb624}
+
+
+Create and install application on nodes. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the nodes or links between nodes do not exist\\
+\hline
+\end{DoxyExceptions}
+Example\+: \begin{DoxyVerb}helper.addApps({
+    {"1", "ns3::ndn::ConsumerCbr",
+        {{"Prefix", "/prefix"}, {"Frequency", "1"}},
+        "0s", "100s"},
+    {"3", "ns3::ndn::Producer",
+        {{"Prefix", "/prefix"}, {"PayloadSize", "1024"}},
+        "0s", "100s"}
+  });\end{DoxyVerb}
+ 
+
+Definition at line 74 of file ndn-\/scenario-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}!add\+Routes@{add\+Routes}}
+\index{add\+Routes@{add\+Routes}!ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}}
+\subsubsection[{\texorpdfstring{add\+Routes(std\+::initializer\+\_\+list$<$ Route\+Info $>$ routes)}{addRoutes(std::initializer\_list< RouteInfo > routes)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Scenario\+Helper\+::add\+Routes (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ {\bf Route\+Info} $>$}]{routes}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1ScenarioHelper_af78d40897640b8fa20f9e7482028acfc}{}\label{classns3_1_1ndn_1_1ScenarioHelper_af78d40897640b8fa20f9e7482028acfc}
+
+
+Create routes between topology nodes. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the nodes or links between nodes do not exist\\
+\hline
+\end{DoxyExceptions}
+Example\+: \begin{DoxyVerb}helper.addRoutes({
+    {"1", "2", "/prefix", 1},
+    {"2", "3", "/prefix", 1}
+  });\end{DoxyVerb}
+ 
+
+Definition at line 65 of file ndn-\/scenario-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}!create\+Topology@{create\+Topology}}
+\index{create\+Topology@{create\+Topology}!ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}}
+\subsubsection[{\texorpdfstring{create\+Topology(std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ std\+::string $>$$>$ topology)}{createTopology(std::initializer\_list< std::initializer\_list< std::string >> topology)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Scenario\+Helper\+::create\+Topology (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ std\+::string $>$$>$}]{topology}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1ScenarioHelper_a8d0cfc543a78db151a0e0cc353a336eb}{}\label{classns3_1_1ndn_1_1ScenarioHelper_a8d0cfc543a78db151a0e0cc353a336eb}
+
+
+Create topology. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::logic\+\_\+error} & if create\+Topology is called more than once\\
+\hline
+\end{DoxyExceptions}
+Example\+: \begin{DoxyVerb}ScenarioHelper helper;
+helper.createTopology({
+    {"1", "2"},
+    {"2", "3"}
+  });\end{DoxyVerb}
+ 
+
+Definition at line 39 of file ndn-\/scenario-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}!get\+Face@{get\+Face}}
+\index{get\+Face@{get\+Face}!ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}}
+\subsubsection[{\texorpdfstring{get\+Face(const std\+::string \&node1, const std\+::string \&node2)}{getFace(const std::string \&node1, const std::string \&node2)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Face} $>$ ns3\+::ndn\+::\+Scenario\+Helper\+::get\+Face (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node1, }
+\item[{const std\+::string \&}]{node2}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1ScenarioHelper_a3c6114d09b7d79cb98efa917bdcb6dc6}{}\label{classns3_1_1ndn_1_1ScenarioHelper_a3c6114d09b7d79cb98efa917bdcb6dc6}
+
+
+Get face on the {\ttfamily node1} pointing towards {\ttfamily node2}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the link does not exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 110 of file ndn-\/scenario-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!ns3\+::ndn\+::\+Scenario\+Helper@{ns3\+::ndn\+::\+Scenario\+Helper}}
+\subsubsection[{\texorpdfstring{get\+Node(const std\+::string \&node\+Name)}{getNode(const std::string \&nodeName)}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Node $>$ ns3\+::ndn\+::\+Scenario\+Helper\+::get\+Node (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{node\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1ScenarioHelper_a838baa969b98bd3c137d134bb89b5e83}{}\label{classns3_1_1ndn_1_1ScenarioHelper_a838baa969b98bd3c137d134bb89b5e83}
+
+
+Get node. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the node does not exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 99 of file ndn-\/scenario-\/helper.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/scenario-\/helper.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/scenario-\/helper.\+cpp\end{DoxyCompactItemize}

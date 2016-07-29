@@ -1,0 +1,256 @@
+\hypertarget{classndn_1_1util_1_1Sqlite3Statement}{}\section{ndn\+:\+:util\+:\+:Sqlite3\+Statement Class Reference}
+\label{classndn_1_1util_1_1Sqlite3Statement}\index{ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}}
+
+
+wrap an S\+Q\+Lite3 prepared statement  
+
+
+
+
+{\ttfamily \#include $<$sqlite3-\/statement.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:Sqlite3\+Statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1Sqlite3Statement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1Sqlite3Statement_a2e72a86092f7229422c942a7b6385c3a}{Sqlite3\+Statement} (sqlite3 $\ast$database, const std\+::string \&statement)
+\begin{DoxyCompactList}\small\item\em initialize and prepare Sqlite3 statement \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1Sqlite3Statement_aaf80b395ae53cdc4079a8e57f2c985d8}{$\sim$\+Sqlite3\+Statement} ()\hypertarget{classndn_1_1util_1_1Sqlite3Statement_aaf80b395ae53cdc4079a8e57f2c985d8}{}\label{classndn_1_1util_1_1Sqlite3Statement_aaf80b395ae53cdc4079a8e57f2c985d8}
+
+\begin{DoxyCompactList}\small\item\em finalize the statement \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1util_1_1Sqlite3Statement_a6fda9dbd9a26421c8a683cb1866448f4}{bind} (int index, const char $\ast$value, size\+\_\+t size, void($\ast$destructor)(void $\ast$))
+\begin{DoxyCompactList}\small\item\em bind a string to the statement \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1util_1_1Sqlite3Statement_a09d2b7c3fa53b0fdbbd1d5ceb6446616}{bind} (int index, const std\+::string \&value, void($\ast$destructor)(void $\ast$))
+\begin{DoxyCompactList}\small\item\em bind a string to the statement \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1util_1_1Sqlite3Statement_ab1e8dad6aecf53a1625fd52ff3b7ac94}{bind} (int index, const void $\ast$value, size\+\_\+t size, void($\ast$destructor)(void $\ast$))
+\begin{DoxyCompactList}\small\item\em bind a byte blob to the statement \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1util_1_1Sqlite3Statement_a4e04c1d6bcb3014eaa1b2812cb41e718}{bind} (int index, const \hyperlink{classndn_1_1Block}{Block} \&block, void($\ast$destructor)(void $\ast$))
+\begin{DoxyCompactList}\small\item\em bind a byte blob to the statement \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1util_1_1Sqlite3Statement_a6e2f1d8009bc037a55cd1a7ed5a27331}{bind} (int index, int number)
+\begin{DoxyCompactList}\small\item\em bind an integer to the statement \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1util_1_1Sqlite3Statement_af648ccddfa7b55bc931562bdd4162799}{get\+String} (int column)\hypertarget{classndn_1_1util_1_1Sqlite3Statement_af648ccddfa7b55bc931562bdd4162799}{}\label{classndn_1_1util_1_1Sqlite3Statement_af648ccddfa7b55bc931562bdd4162799}
+
+\begin{DoxyCompactList}\small\item\em get a string from {\ttfamily column}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block}{Block} \hyperlink{classndn_1_1util_1_1Sqlite3Statement_aa222053f5f4f17ca3278fcd86f38b04f}{get\+Block} (int column)\hypertarget{classndn_1_1util_1_1Sqlite3Statement_aa222053f5f4f17ca3278fcd86f38b04f}{}\label{classndn_1_1util_1_1Sqlite3Statement_aa222053f5f4f17ca3278fcd86f38b04f}
+
+\begin{DoxyCompactList}\small\item\em get a block from {\ttfamily column}. \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1util_1_1Sqlite3Statement_a88a0cf8fcdf9cad09bbbdedf61bc48d4}{get\+Int} (int column)\hypertarget{classndn_1_1util_1_1Sqlite3Statement_a88a0cf8fcdf9cad09bbbdedf61bc48d4}{}\label{classndn_1_1util_1_1Sqlite3Statement_a88a0cf8fcdf9cad09bbbdedf61bc48d4}
+
+\begin{DoxyCompactList}\small\item\em get an integer from {\ttfamily column}. \end{DoxyCompactList}\item 
+const uint8\+\_\+t $\ast$ \hyperlink{classndn_1_1util_1_1Sqlite3Statement_a9537f7d987a93fd5ebb0b338dba8782c}{get\+Blob} (int column)\hypertarget{classndn_1_1util_1_1Sqlite3Statement_a9537f7d987a93fd5ebb0b338dba8782c}{}\label{classndn_1_1util_1_1Sqlite3Statement_a9537f7d987a93fd5ebb0b338dba8782c}
+
+\begin{DoxyCompactList}\small\item\em get a pointer of byte blob from {\ttfamily column}. \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1util_1_1Sqlite3Statement_ac4b7d0f7b8e852e5947e187ca05c1799}{get\+Size} (int column)\hypertarget{classndn_1_1util_1_1Sqlite3Statement_ac4b7d0f7b8e852e5947e187ca05c1799}{}\label{classndn_1_1util_1_1Sqlite3Statement_ac4b7d0f7b8e852e5947e187ca05c1799}
+
+\begin{DoxyCompactList}\small\item\em get the size of {\ttfamily column}. \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1util_1_1Sqlite3Statement_ae3a04ba27d9afac8c623a495b812f864}{step} ()\hypertarget{classndn_1_1util_1_1Sqlite3Statement_ae3a04ba27d9afac8c623a495b812f864}{}\label{classndn_1_1util_1_1Sqlite3Statement_ae3a04ba27d9afac8c623a495b812f864}
+
+\begin{DoxyCompactList}\small\item\em wrapper of sqlite3\+\_\+step \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1Sqlite3Statement_a4a6d954d739b35ef89ed7b8484757ee3}{operator sqlite3\+\_\+stmt $\ast$} ()\hypertarget{classndn_1_1util_1_1Sqlite3Statement_a4a6d954d739b35ef89ed7b8484757ee3}{}\label{classndn_1_1util_1_1Sqlite3Statement_a4a6d954d739b35ef89ed7b8484757ee3}
+
+\begin{DoxyCompactList}\small\item\em implicitly converts to sqlite3\+\_\+stmt$\ast$ to be used in S\+Q\+Lite C A\+PI \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+wrap an S\+Q\+Lite3 prepared statement 
+
+\begin{DoxyWarning}{Warning}
+This class is implementation detail of ndn-\/cxx library. 
+\end{DoxyWarning}
+
+
+Definition at line 38 of file sqlite3-\/statement.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}!Sqlite3\+Statement@{Sqlite3\+Statement}}
+\index{Sqlite3\+Statement@{Sqlite3\+Statement}!ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}}
+\subsubsection[{\texorpdfstring{Sqlite3\+Statement(sqlite3 $\ast$database, const std\+::string \&statement)}{Sqlite3Statement(sqlite3 *database, const std::string \&statement)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::util\+::\+Sqlite3\+Statement\+::\+Sqlite3\+Statement (
+\begin{DoxyParamCaption}
+\item[{sqlite3 $\ast$}]{database, }
+\item[{const std\+::string \&}]{statement}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Sqlite3Statement_a2e72a86092f7229422c942a7b6385c3a}{}\label{classndn_1_1util_1_1Sqlite3Statement_a2e72a86092f7229422c942a7b6385c3a}
+
+
+initialize and prepare Sqlite3 statement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & handler to open sqlite3 database \\
+\hline
+{\em statement} & S\+QL statement \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::domain\+\_\+error} & S\+QL statement is bad \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 34 of file sqlite3-\/statement.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}!bind@{bind}}
+\index{bind@{bind}!ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}}
+\subsubsection[{\texorpdfstring{bind(int index, const char $\ast$value, size\+\_\+t size, void($\ast$destructor)(void $\ast$))}{bind(int index, const char *value, size\_t size, void(*destructor)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}int ndn\+::util\+::\+Sqlite3\+Statement\+::bind (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{const char $\ast$}]{value, }
+\item[{size\+\_\+t}]{size, }
+\item[{void($\ast$)(void $\ast$)}]{destructor}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Sqlite3Statement_a6fda9dbd9a26421c8a683cb1866448f4}{}\label{classndn_1_1util_1_1Sqlite3Statement_a6fda9dbd9a26421c8a683cb1866448f4}
+
+
+bind a string to the statement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The binding position \\
+\hline
+{\em value} & The pointer of the binding string \\
+\hline
+{\em value} & The size of the binding string \\
+\hline
+{\em destructor} & S\+Q\+Lite3 destructor, e.\+g., S\+Q\+L\+I\+T\+E\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+Q\+Lite result value. 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file sqlite3-\/statement.\+cpp.
+
+\index{ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}!bind@{bind}}
+\index{bind@{bind}!ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}}
+\subsubsection[{\texorpdfstring{bind(int index, const std\+::string \&value, void($\ast$destructor)(void $\ast$))}{bind(int index, const std::string \&value, void(*destructor)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}int ndn\+::util\+::\+Sqlite3\+Statement\+::bind (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{const std\+::string \&}]{value, }
+\item[{void($\ast$)(void $\ast$)}]{destructor}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Sqlite3Statement_a09d2b7c3fa53b0fdbbd1d5ceb6446616}{}\label{classndn_1_1util_1_1Sqlite3Statement_a09d2b7c3fa53b0fdbbd1d5ceb6446616}
+
+
+bind a string to the statement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The binding position \\
+\hline
+{\em value} & The binding string \\
+\hline
+{\em destructor} & S\+Q\+Lite3 destructor, e.\+g., S\+Q\+L\+I\+T\+E\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+Q\+Lite result value. 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file sqlite3-\/statement.\+cpp.
+
+\index{ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}!bind@{bind}}
+\index{bind@{bind}!ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}}
+\subsubsection[{\texorpdfstring{bind(int index, const void $\ast$value, size\+\_\+t size, void($\ast$destructor)(void $\ast$))}{bind(int index, const void *value, size\_t size, void(*destructor)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}int ndn\+::util\+::\+Sqlite3\+Statement\+::bind (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{const void $\ast$}]{value, }
+\item[{size\+\_\+t}]{size, }
+\item[{void($\ast$)(void $\ast$)}]{destructor}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Sqlite3Statement_ab1e8dad6aecf53a1625fd52ff3b7ac94}{}\label{classndn_1_1util_1_1Sqlite3Statement_ab1e8dad6aecf53a1625fd52ff3b7ac94}
+
+
+bind a byte blob to the statement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The binding position \\
+\hline
+{\em value} & The pointer of the blob \\
+\hline
+{\em value} & The size of the blob \\
+\hline
+{\em destructor} & S\+Q\+Lite3 destructor, e.\+g., S\+Q\+L\+I\+T\+E\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+Q\+Lite result value. 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file sqlite3-\/statement.\+cpp.
+
+\index{ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}!bind@{bind}}
+\index{bind@{bind}!ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}}
+\subsubsection[{\texorpdfstring{bind(int index, const Block \&block, void($\ast$destructor)(void $\ast$))}{bind(int index, const Block \&block, void(*destructor)(void *))}}]{\setlength{\rightskip}{0pt plus 5cm}int ndn\+::util\+::\+Sqlite3\+Statement\+::bind (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{const {\bf Block} \&}]{block, }
+\item[{void($\ast$)(void $\ast$)}]{destructor}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Sqlite3Statement_a4e04c1d6bcb3014eaa1b2812cb41e718}{}\label{classndn_1_1util_1_1Sqlite3Statement_a4e04c1d6bcb3014eaa1b2812cb41e718}
+
+
+bind a byte blob to the statement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The binding position \\
+\hline
+{\em block} & The binding block \\
+\hline
+{\em destructor} & S\+Q\+Lite3 destructor, e.\+g., S\+Q\+L\+I\+T\+E\+\_\+\+T\+R\+A\+N\+S\+I\+E\+NT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+Q\+Lite result value 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file sqlite3-\/statement.\+cpp.
+
+\index{ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}!bind@{bind}}
+\index{bind@{bind}!ndn\+::util\+::\+Sqlite3\+Statement@{ndn\+::util\+::\+Sqlite3\+Statement}}
+\subsubsection[{\texorpdfstring{bind(int index, int number)}{bind(int index, int number)}}]{\setlength{\rightskip}{0pt plus 5cm}int ndn\+::util\+::\+Sqlite3\+Statement\+::bind (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Sqlite3Statement_a6e2f1d8009bc037a55cd1a7ed5a27331}{}\label{classndn_1_1util_1_1Sqlite3Statement_a6e2f1d8009bc037a55cd1a7ed5a27331}
+
+
+bind an integer to the statement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The binding position \\
+\hline
+{\em number} & The binding integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+Q\+Lite result value 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file sqlite3-\/statement.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/sqlite3-\/statement.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/sqlite3-\/statement.\+cpp\end{DoxyCompactItemize}

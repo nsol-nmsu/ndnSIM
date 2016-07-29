@@ -1,0 +1,75 @@
+\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture}{}\section{nfd\+:\+:rib\+:\+:tests\+:\+:Fib\+Updates\+Fixture Class Reference}
+\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture}\index{nfd\+::rib\+::tests\+::\+Fib\+Updates\+Fixture@{nfd\+::rib\+::tests\+::\+Fib\+Updates\+Fixture}}
+Inheritance diagram for nfd\+:\+:rib\+:\+:tests\+:\+:Fib\+Updates\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries insert\+Route} (const \hyperlink{classndn_1_1Name}{Name} \&name, uint64\+\_\+t face\+Id, uint64\+\_\+t origin, uint64\+\_\+t cost, uint64\+\_\+t flags)\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a803c3a97d370a0644d8d9001dbb6ce5e}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a803c3a97d370a0644d8d9001dbb6ce5e}
+
+\item 
+void {\bfseries erase\+Route} (const \hyperlink{classndn_1_1Name}{Name} \&name, uint64\+\_\+t face\+Id, uint64\+\_\+t origin)\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a19d63d3c8749929d9f45663cb4d33bd3}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a19d63d3c8749929d9f45663cb4d33bd3}
+
+\item 
+void {\bfseries on\+Send\+Batch\+From\+Queue} (const \hyperlink{classnfd_1_1rib_1_1RibUpdateBatch}{Rib\+Update\+Batch} \&batch)\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a478ce1911d1b3118b5afa104c17a1b2f}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a478ce1911d1b3118b5afa104c17a1b2f}
+
+\item 
+void {\bfseries destroy\+Face} (uint64\+\_\+t face\+Id)\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_af8dcb5d612ca1f045ec9b0d4f76571b2}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_af8dcb5d612ca1f045ec9b0d4f76571b2}
+
+\item 
+void {\bfseries simulate\+Successful\+Response} (const \hyperlink{classnfd_1_1rib_1_1RibUpdate}{Rib\+Update} \&update)\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_adb77847425b569dd29829bd1ba8606cd}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_adb77847425b569dd29829bd1ba8606cd}
+
+\item 
+void {\bfseries on\+Success} ()\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a5103e5b7f0ef09155c4615710dcf4633}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a5103e5b7f0ef09155c4615710dcf4633}
+
+\item 
+void {\bfseries on\+Failure} ()\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a2510cdd58e6ea1321584b70677cc3616}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a2510cdd58e6ea1321584b70677cc3616}
+
+\item 
+const Fib\+Updater\+::\+Fib\+Update\+List \& {\bfseries get\+Fib\+Updates} ()\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a1c344988d2dec0378e75a2891fbcac58}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a1c344988d2dec0378e75a2891fbcac58}
+
+\item 
+Fib\+Updater\+::\+Fib\+Update\+List {\bfseries get\+Sorted\+Fib\+Updates} ()\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a326ce80c20c0cb660ba1a44c3bf765ab}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a326ce80c20c0cb660ba1a44c3bf765ab}
+
+\item 
+void {\bfseries clear\+Fib\+Updates} ()\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a7f13fce4e626efaeaba845da8e27c4d5}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a7f13fce4e626efaeaba845da8e27c4d5}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace}{ndn\+::util\+::\+Dummy\+Client\+Face} $>$ {\bfseries face}\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a3ce88e9de31db50bc6a271ea38f6a142}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a3ce88e9de31db50bc6a271ea38f6a142}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries key\+Chain}\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a6510994abf441349d8260fd70a0f4710}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a6510994abf441349d8260fd70a0f4710}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1Controller}{ndn\+::nfd\+::\+Controller} {\bfseries controller}\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a4bd09c9494f9c264f9fe3638b219c6be}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a4bd09c9494f9c264f9fe3638b219c6be}
+
+\item 
+\hyperlink{classnfd_1_1rib_1_1FibUpdater}{rib\+::\+Fib\+Updater} {\bfseries fib\+Updater}\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a9387485891bca80fbeb8d4fcefda3a3f}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_a9387485891bca80fbeb8d4fcefda3a3f}
+
+\item 
+\hyperlink{classnfd_1_1rib_1_1Rib}{rib\+::\+Rib} {\bfseries rib}\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_ac702e7a86296b4c045475f3cfe03be41}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_ac702e7a86296b4c045475f3cfe03be41}
+
+\item 
+Fib\+Updater\+::\+Fib\+Update\+List {\bfseries fib\+Updates}\hypertarget{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_afaa1240afc94eb8ede522e672474bada}{}\label{classnfd_1_1rib_1_1tests_1_1FibUpdatesFixture_afaa1240afc94eb8ede522e672474bada}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 58 of file fib-\/updates-\/common.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/rib/fib-\/updates-\/common.\+hpp\end{DoxyCompactItemize}

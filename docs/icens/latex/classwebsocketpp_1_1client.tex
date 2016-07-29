@@ -1,0 +1,153 @@
+\hypertarget{classwebsocketpp_1_1client}{}\section{websocketpp\+:\+:client$<$ config $>$ Class Template Reference}
+\label{classwebsocketpp_1_1client}\index{websocketpp\+::client$<$ config $>$@{websocketpp\+::client$<$ config $>$}}
+
+
+Client endpoint role based on the given config.  
+
+
+
+
+{\ttfamily \#include $<$client\+\_\+endpoint.\+hpp$>$}
+
+Inheritance diagram for websocketpp\+:\+:client$<$ config $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.218391cm]{classwebsocketpp_1_1client}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classwebsocketpp_1_1client}{client}$<$ \hyperlink{classconfig}{config} $>$ \hyperlink{classwebsocketpp_1_1client_a8da6c7d382f7cae9567a7a1f1f2dd666}{type}\hypertarget{classwebsocketpp_1_1client_a8da6c7d382f7cae9567a7a1f1f2dd666}{}\label{classwebsocketpp_1_1client_a8da6c7d382f7cae9567a7a1f1f2dd666}
+
+\begin{DoxyCompactList}\small\item\em Type of this endpoint. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1concurrency_1_1none}{config\+::concurrency\+\_\+type} \hyperlink{classwebsocketpp_1_1client_a404ec215508a5553d3a2295fdd82977e}{concurrency\+\_\+type}\hypertarget{classwebsocketpp_1_1client_a404ec215508a5553d3a2295fdd82977e}{}\label{classwebsocketpp_1_1client_a404ec215508a5553d3a2295fdd82977e}
+
+\begin{DoxyCompactList}\small\item\em Type of the endpoint concurrency component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{config\+::transport\+\_\+type} \hyperlink{classwebsocketpp_1_1client_a042957cf1c89e7a4c39cf1ec26046e2d}{transport\+\_\+type}\hypertarget{classwebsocketpp_1_1client_a042957cf1c89e7a4c39cf1ec26046e2d}{}\label{classwebsocketpp_1_1client_a042957cf1c89e7a4c39cf1ec26046e2d}
+
+\begin{DoxyCompactList}\small\item\em Type of the endpoint transport component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1connection}{connection}$<$ \hyperlink{classconfig}{config} $>$ \hyperlink{classwebsocketpp_1_1client_a29c9f0410ed33a331faac19f8efea874}{connection\+\_\+type}\hypertarget{classwebsocketpp_1_1client_a29c9f0410ed33a331faac19f8efea874}{}\label{classwebsocketpp_1_1client_a29c9f0410ed33a331faac19f8efea874}
+
+\begin{DoxyCompactList}\small\item\em Type of the connections this server will create. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1connection_ab910d42e3bde91546183cc54642f32ab}{connection\+\_\+type\+::ptr} \hyperlink{classwebsocketpp_1_1client_a2e187bbb2beac676bbfbc2e8065de83e}{connection\+\_\+ptr}\hypertarget{classwebsocketpp_1_1client_a2e187bbb2beac676bbfbc2e8065de83e}{}\label{classwebsocketpp_1_1client_a2e187bbb2beac676bbfbc2e8065de83e}
+
+\begin{DoxyCompactList}\small\item\em Type of a shared pointer to the connections this server will create. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a75f3102766fd3ba8230e99a2b0e00457}{transport\+\_\+type\+::transport\+\_\+con\+\_\+type} \hyperlink{classwebsocketpp_1_1client_af990a5c874d701129894f5cc88b69507}{transport\+\_\+con\+\_\+type}\hypertarget{classwebsocketpp_1_1client_af990a5c874d701129894f5cc88b69507}{}\label{classwebsocketpp_1_1client_af990a5c874d701129894f5cc88b69507}
+
+\begin{DoxyCompactList}\small\item\em Type of the connection transport component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa6f25556860a154c4dacb4dac1dce8e4}{transport\+\_\+con\+\_\+type\+::ptr} \hyperlink{classwebsocketpp_1_1client_a6087b4e73f1864c893e16b33017b2da6}{transport\+\_\+con\+\_\+ptr}\hypertarget{classwebsocketpp_1_1client_a6087b4e73f1864c893e16b33017b2da6}{}\label{classwebsocketpp_1_1client_a6087b4e73f1864c893e16b33017b2da6}
+
+\begin{DoxyCompactList}\small\item\em Type of a shared pointer to the connection transport component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1endpoint}{endpoint}$<$ \hyperlink{classwebsocketpp_1_1client_a29c9f0410ed33a331faac19f8efea874}{connection\+\_\+type}, \hyperlink{classconfig}{config} $>$ \hyperlink{classwebsocketpp_1_1client_a37e4950ce23369e6614c28612b7ef0b4}{endpoint\+\_\+type}\hypertarget{classwebsocketpp_1_1client_a37e4950ce23369e6614c28612b7ef0b4}{}\label{classwebsocketpp_1_1client_a37e4950ce23369e6614c28612b7ef0b4}
+
+\begin{DoxyCompactList}\small\item\em Type of the endpoint component of this server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwebsocketpp_1_1client_a2e187bbb2beac676bbfbc2e8065de83e}{connection\+\_\+ptr} \hyperlink{classwebsocketpp_1_1client_aa95cec974921e32bc37a61c683ae240d}{get\+\_\+connection} (\hyperlink{namespacewebsocketpp_aae370ea5ac83a8ece7712cb39fc23f5b}{uri\+\_\+ptr} location, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Get a new connection. \end{DoxyCompactList}\item 
+\hyperlink{classwebsocketpp_1_1client_a2e187bbb2beac676bbfbc2e8065de83e}{connection\+\_\+ptr} \hyperlink{classwebsocketpp_1_1client_a1197f043c8c6c03398e4f07be4bdf135}{get\+\_\+connection} (std\+::string const \&u, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Get a new connection (string version) \end{DoxyCompactList}\item 
+\hyperlink{classwebsocketpp_1_1client_a2e187bbb2beac676bbfbc2e8065de83e}{connection\+\_\+ptr} \hyperlink{classwebsocketpp_1_1client_a818c30343180123bf1fee6dc21524bae}{connect} (\hyperlink{classwebsocketpp_1_1client_a2e187bbb2beac676bbfbc2e8065de83e}{connection\+\_\+ptr} con)
+\begin{DoxyCompactList}\small\item\em Begin the connection process for the given connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename config$>$\\*
+class websocketpp\+::client$<$ config $>$}
+
+Client endpoint role based on the given config. 
+
+Definition at line 46 of file client\+\_\+endpoint.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{websocketpp\+::client@{websocketpp\+::client}!connect@{connect}}
+\index{connect@{connect}!websocketpp\+::client@{websocketpp\+::client}}
+\subsubsection[{\texorpdfstring{connect(connection\+\_\+ptr con)}{connect(connection\_ptr con)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config$>$ {\bf connection\+\_\+ptr} {\bf websocketpp\+::client}$<$ {\bf config} $>$\+::connect (
+\begin{DoxyParamCaption}
+\item[{{\bf connection\+\_\+ptr}}]{con}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1client_a818c30343180123bf1fee6dc21524bae}{}\label{classwebsocketpp_1_1client_a818c30343180123bf1fee6dc21524bae}
+
+
+Begin the connection process for the given connection. 
+
+Initiates the opening connection handshake for connection con. Exact behavior depends on the underlying transport policy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em con} & The connection to connect\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the connection originally passed in. 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file client\+\_\+endpoint.\+hpp.
+
+\index{websocketpp\+::client@{websocketpp\+::client}!get\+\_\+connection@{get\+\_\+connection}}
+\index{get\+\_\+connection@{get\+\_\+connection}!websocketpp\+::client@{websocketpp\+::client}}
+\subsubsection[{\texorpdfstring{get\+\_\+connection(uri\+\_\+ptr location, lib\+::error\+\_\+code \&ec)}{get\_connection(uri\_ptr location, lib::error\_code \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config$>$ {\bf connection\+\_\+ptr} {\bf websocketpp\+::client}$<$ {\bf config} $>$\+::get\+\_\+connection (
+\begin{DoxyParamCaption}
+\item[{{\bf uri\+\_\+ptr}}]{location, }
+\item[{lib\+::error\+\_\+code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1client_aa95cec974921e32bc37a61c683ae240d}{}\label{classwebsocketpp_1_1client_aa95cec974921e32bc37a61c683ae240d}
+
+
+Get a new connection. 
+
+Creates and returns a pointer to a new connection to the given U\+RI suitable for passing to \hyperlink{classwebsocketpp_1_1client_a818c30343180123bf1fee6dc21524bae}{connect(connection\+\_\+ptr)}. This method allows applying connection specific settings before performing the opening handshake.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em location} & U\+RI to open the connection to as a uri\+\_\+ptr \\
+\hline
+\mbox{\tt out}  & {\em ec} & An status code indicating failure reasons, if any\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A connection\+\_\+ptr to the new connection 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file client\+\_\+endpoint.\+hpp.
+
+\index{websocketpp\+::client@{websocketpp\+::client}!get\+\_\+connection@{get\+\_\+connection}}
+\index{get\+\_\+connection@{get\+\_\+connection}!websocketpp\+::client@{websocketpp\+::client}}
+\subsubsection[{\texorpdfstring{get\+\_\+connection(std\+::string const \&u, lib\+::error\+\_\+code \&ec)}{get\_connection(std::string const \&u, lib::error\_code \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config$>$ {\bf connection\+\_\+ptr} {\bf websocketpp\+::client}$<$ {\bf config} $>$\+::get\+\_\+connection (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{u, }
+\item[{lib\+::error\+\_\+code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1client_a1197f043c8c6c03398e4f07be4bdf135}{}\label{classwebsocketpp_1_1client_a1197f043c8c6c03398e4f07be4bdf135}
+
+
+Get a new connection (string version) 
+
+Creates and returns a pointer to a new connection to the given U\+RI suitable for passing to \hyperlink{classwebsocketpp_1_1client_a818c30343180123bf1fee6dc21524bae}{connect(connection\+\_\+ptr)}. This overload allows default construction of the uri\+\_\+ptr from a standard string.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em u} & U\+RI to open the connection to as a string \\
+\hline
+\mbox{\tt out}  & {\em ec} & An status code indicating failure reasons, if any\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A connection\+\_\+ptr to the new connection 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file client\+\_\+endpoint.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/websocketpp/websocketpp/roles/client\+\_\+endpoint.\+hpp\end{DoxyCompactItemize}

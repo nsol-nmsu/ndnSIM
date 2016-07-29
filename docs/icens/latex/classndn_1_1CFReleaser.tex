@@ -1,0 +1,53 @@
+\hypertarget{classndn_1_1CFReleaser}{}\section{ndn\+:\+:C\+F\+Releaser$<$ T $>$ Class Template Reference}
+\label{classndn_1_1CFReleaser}\index{ndn\+::\+C\+F\+Releaser$<$ T $>$@{ndn\+::\+C\+F\+Releaser$<$ T $>$}}
+
+
+Helper class to wrap Core\+Foundation object pointers.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries C\+F\+Releaser} (const T \&type\+Ref)\hypertarget{classndn_1_1CFReleaser_ad2d6e4fcc08b72db904959e444bf372a}{}\label{classndn_1_1CFReleaser_ad2d6e4fcc08b72db904959e444bf372a}
+
+\item 
+{\bfseries C\+F\+Releaser} (const \hyperlink{classndn_1_1CFReleaser}{C\+F\+Releaser} \&in\+Releaser)\hypertarget{classndn_1_1CFReleaser_ad0ef4be3f447630f740e5de7e2bd978e}{}\label{classndn_1_1CFReleaser_ad0ef4be3f447630f740e5de7e2bd978e}
+
+\item 
+\hyperlink{classndn_1_1CFReleaser}{C\+F\+Releaser} \& {\bfseries operator=} (const T \&type\+Ref)\hypertarget{classndn_1_1CFReleaser_ac967ba7d584316ef4fcae4ef8cc14970}{}\label{classndn_1_1CFReleaser_ac967ba7d584316ef4fcae4ef8cc14970}
+
+\item 
+\hyperlink{classndn_1_1CFReleaser}{C\+F\+Releaser} \& {\bfseries operator=} (const \hyperlink{classndn_1_1CFReleaser}{C\+F\+Releaser} \&in\+Releaser)\hypertarget{classndn_1_1CFReleaser_a7856f82ae4466465bfdaddf2a4f95123}{}\label{classndn_1_1CFReleaser_a7856f82ae4466465bfdaddf2a4f95123}
+
+\item 
+const T \& {\bfseries get} () const\hypertarget{classndn_1_1CFReleaser_a724d5b60390c0d96f1e13d8fb6105eae}{}\label{classndn_1_1CFReleaser_a724d5b60390c0d96f1e13d8fb6105eae}
+
+\item 
+T \& {\bfseries get} ()\hypertarget{classndn_1_1CFReleaser_aeed04020a95f52c0e6965b21bade3627}{}\label{classndn_1_1CFReleaser_aeed04020a95f52c0e6965b21bade3627}
+
+\item 
+void {\bfseries retain} (const T \&type\+Ref)\hypertarget{classndn_1_1CFReleaser_a334104693762c72a9b78dece398be44b}{}\label{classndn_1_1CFReleaser_a334104693762c72a9b78dece398be44b}
+
+\item 
+void {\bfseries release} ()\hypertarget{classndn_1_1CFReleaser_a9e7b972595ac0086c78ef5a84d5dd200}{}\label{classndn_1_1CFReleaser_a9e7b972595ac0086c78ef5a84d5dd200}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\\*
+class ndn\+::\+C\+F\+Releaser$<$ T $>$}
+
+Helper class to wrap Core\+Foundation object pointers. 
+
+The class is similar in spirit to shared\+\_\+ptr, but uses Core\+Foundation mechanisms to retain/release object.
+
+Original implementation by Christopher Hunt and it was borrowed from \href{http://www.cocoabuilder.com/archive/cocoa/130776-auto-cfrelease-and.html}{\tt http\+://www.\+cocoabuilder.\+com/archive/cocoa/130776-\/auto-\/cfrelease-\/and.\+html} 
+
+Definition at line 61 of file sec-\/tpm-\/osx.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/sec-\/tpm-\/osx.\+cpp\end{DoxyCompactItemize}

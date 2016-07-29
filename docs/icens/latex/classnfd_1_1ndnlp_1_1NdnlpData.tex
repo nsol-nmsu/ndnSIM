@@ -1,0 +1,67 @@
+\hypertarget{classnfd_1_1ndnlp_1_1NdnlpData}{}\section{nfd\+:\+:ndnlp\+:\+:Ndnlp\+Data Class Reference}
+\label{classnfd_1_1ndnlp_1_1NdnlpData}\index{nfd\+::ndnlp\+::\+Ndnlp\+Data@{nfd\+::ndnlp\+::\+Ndnlp\+Data}}
+
+
+represents a \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} packet  
+
+
+
+
+{\ttfamily \#include $<$ndnlp-\/data.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::tuple$<$ bool, \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} $>$ \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData_ad7214305264d7b21b82d015a56906ae9}{from\+Block} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em parse a \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} packet \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t {\bfseries seq}\hypertarget{classnfd_1_1ndnlp_1_1NdnlpData_a7d461ecf6390b147637cebd1d002c573}{}\label{classnfd_1_1ndnlp_1_1NdnlpData_a7d461ecf6390b147637cebd1d002c573}
+
+\item 
+uint16\+\_\+t {\bfseries frag\+Index}\hypertarget{classnfd_1_1ndnlp_1_1NdnlpData_a96ae0f2cfb5faded2fc3e69ccb269776}{}\label{classnfd_1_1ndnlp_1_1NdnlpData_a96ae0f2cfb5faded2fc3e69ccb269776}
+
+\item 
+uint16\+\_\+t {\bfseries frag\+Count}\hypertarget{classnfd_1_1ndnlp_1_1NdnlpData_adc18949ce1a3e3cdc5931471e4f3f4ad}{}\label{classnfd_1_1ndnlp_1_1NdnlpData_adc18949ce1a3e3cdc5931471e4f3f4ad}
+
+\item 
+\hyperlink{classndn_1_1Block}{Block} {\bfseries payload}\hypertarget{classnfd_1_1ndnlp_1_1NdnlpData_aa2137968fab8498640868561363c3869}{}\label{classnfd_1_1ndnlp_1_1NdnlpData_aa2137968fab8498640868561363c3869}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} packet 
+
+\hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} \+:\+:= N\+D\+N\+L\+P-\/\+D\+A\+T\+A-\/\+T\+Y\+PE T\+L\+V-\/\+L\+E\+N\+G\+TH Ndnlp\+Sequence Ndnlp\+Frag\+Index? Ndnlp\+Frag\+Count? Ndnlp\+Payload 
+
+Definition at line 43 of file ndnlp-\/data.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::ndnlp\+::\+Ndnlp\+Data@{nfd\+::ndnlp\+::\+Ndnlp\+Data}!from\+Block@{from\+Block}}
+\index{from\+Block@{from\+Block}!nfd\+::ndnlp\+::\+Ndnlp\+Data@{nfd\+::ndnlp\+::\+Ndnlp\+Data}}
+\subsubsection[{\texorpdfstring{from\+Block(const Block \&wire)}{fromBlock(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::tuple$<$ bool, {\bf Ndnlp\+Data} $>$ nfd\+::ndnlp\+::\+Ndnlp\+Data\+::from\+Block (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classnfd_1_1ndnlp_1_1NdnlpData_ad7214305264d7b21b82d015a56906ae9}{}\label{classnfd_1_1ndnlp_1_1NdnlpData_ad7214305264d7b21b82d015a56906ae9}
+
+
+parse a \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} packet 
+
+\begin{DoxyReturn}{Returns}
+whether {\ttfamily wire} has a valid \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} packet, and the parsed packet 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file ndnlp-\/data.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ndnlp-\/data.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ndnlp-\/data.\+cpp\end{DoxyCompactItemize}

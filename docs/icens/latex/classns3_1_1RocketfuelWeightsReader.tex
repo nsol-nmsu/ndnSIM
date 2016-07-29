@@ -1,0 +1,98 @@
+\hypertarget{classns3_1_1RocketfuelWeightsReader}{}\section{ns3\+:\+:Rocketfuel\+Weights\+Reader Class Reference}
+\label{classns3_1_1RocketfuelWeightsReader}\index{ns3\+::\+Rocketfuel\+Weights\+Reader@{ns3\+::\+Rocketfuel\+Weights\+Reader}}
+
+
+Topology file reader (extension of Rocketfuel-\/format type).  
+
+
+
+
+{\ttfamily \#include $<$rocketfuel-\/weights-\/reader.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:Rocketfuel\+Weights\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1RocketfuelWeightsReader}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries L\+I\+N\+KS}, 
+{\bfseries W\+E\+I\+G\+H\+TS}, 
+{\bfseries L\+A\+T\+E\+N\+C\+I\+ES}, 
+{\bfseries P\+O\+S\+I\+T\+I\+O\+NS}
+ \}\hypertarget{classns3_1_1RocketfuelWeightsReader_a7b780036c2288bfdb069e36ae92ad1dd}{}\label{classns3_1_1RocketfuelWeightsReader_a7b780036c2288bfdb069e36ae92ad1dd}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rocketfuel\+Weights\+Reader} (const std\+::string \&path=\char`\"{}\char`\"{}, double scale=1.\+0)\hypertarget{classns3_1_1RocketfuelWeightsReader_ab611a768529df98b547e219ac62545c0}{}\label{classns3_1_1RocketfuelWeightsReader_ab611a768529df98b547e219ac62545c0}
+
+\item 
+void {\bfseries Set\+File\+Type} (uint8\+\_\+t input\+Type)\hypertarget{classns3_1_1RocketfuelWeightsReader_a00dc76ccb95b98ce167042c5d39763c7}{}\label{classns3_1_1RocketfuelWeightsReader_a00dc76ccb95b98ce167042c5d39763c7}
+
+\item 
+virtual Node\+Container \hyperlink{classns3_1_1RocketfuelWeightsReader_a920d8786e3a63cca34b5145d92a10c53}{Read} (void)
+\begin{DoxyCompactList}\small\item\em Main topology reading function. \end{DoxyCompactList}\item 
+void {\bfseries Commit} ()\hypertarget{classns3_1_1RocketfuelWeightsReader_ae37d6f69833dcd8c0e2544834833a531}{}\label{classns3_1_1RocketfuelWeightsReader_ae37d6f69833dcd8c0e2544834833a531}
+
+\item 
+void {\bfseries Set\+Default\+Bandwidth} (const std\+::string \&bw)\hypertarget{classns3_1_1RocketfuelWeightsReader_a558dd795cfbaa5226a7bfd6cdd2e2ea2}{}\label{classns3_1_1RocketfuelWeightsReader_a558dd795cfbaa5226a7bfd6cdd2e2ea2}
+
+\item 
+std\+::string {\bfseries Get\+Default\+Bandwidth} () const\hypertarget{classns3_1_1RocketfuelWeightsReader_a6dcd7115c69c9b5b49ff3c12f6ff9df6}{}\label{classns3_1_1RocketfuelWeightsReader_a6dcd7115c69c9b5b49ff3c12f6ff9df6}
+
+\item 
+void {\bfseries Set\+Default\+Queue} (const std\+::string \&queue)\hypertarget{classns3_1_1RocketfuelWeightsReader_a0d86b60070ed098c3d42d2d075c95591}{}\label{classns3_1_1RocketfuelWeightsReader_a0d86b60070ed098c3d42d2d075c95591}
+
+\item 
+std\+::string {\bfseries Get\+Default\+Queue} () const\hypertarget{classns3_1_1RocketfuelWeightsReader_a7ff106a9fa80f262c06ca96dba9eb2e5}{}\label{classns3_1_1RocketfuelWeightsReader_a7ff106a9fa80f262c06ca96dba9eb2e5}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Topology file reader (extension of Rocketfuel-\/format type). 
+
+\href{http://www.cs.washington.edu/research/networking/rocketfuel/}{\tt http\+://www.\+cs.\+washington.\+edu/research/networking/rocketfuel/}
+
+Only weights and latencies file is supported 
+
+Definition at line 39 of file rocketfuel-\/weights-\/reader.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::\+Rocketfuel\+Weights\+Reader@{ns3\+::\+Rocketfuel\+Weights\+Reader}!Read@{Read}}
+\index{Read@{Read}!ns3\+::\+Rocketfuel\+Weights\+Reader@{ns3\+::\+Rocketfuel\+Weights\+Reader}}
+\subsubsection[{\texorpdfstring{Read(void)}{Read(void)}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+Container ns3\+::\+Rocketfuel\+Weights\+Reader\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1RocketfuelWeightsReader_a920d8786e3a63cca34b5145d92a10c53}{}\label{classns3_1_1RocketfuelWeightsReader_a920d8786e3a63cca34b5145d92a10c53}
+
+
+Main topology reading function. 
+
+This method opens an input stream and reads the Rocketfuel-\/format file. Every row represents a topology link (the ids of a couple of nodes), so the input file is read line by line to figure out how many links and nodes are in the topology.
+
+\begin{DoxyReturn}{Returns}
+the container of the nodes created (or empty container if there was an error) 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classns3_1_1AnnotatedTopologyReader_a6284f11d2dce1e96c66b05082edeb444}{ns3\+::\+Annotated\+Topology\+Reader}.
+
+
+
+Definition at line 85 of file rocketfuel-\/weights-\/reader.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/topology/rocketfuel-\/weights-\/reader.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/topology/rocketfuel-\/weights-\/reader.\+cpp\end{DoxyCompactItemize}

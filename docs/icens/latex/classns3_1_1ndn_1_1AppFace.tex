@@ -1,0 +1,80 @@
+\hypertarget{classns3_1_1ndn_1_1AppFace}{}\section{ns3\+:\+:ndn\+:\+:App\+Face Class Reference}
+\label{classns3_1_1ndn_1_1AppFace}\index{ns3\+::ndn\+::\+App\+Face@{ns3\+::ndn\+::\+App\+Face}}
+
+
+Implementation of application Ndn face.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/app-\/face.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:App\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classns3_1_1ndn_1_1AppFace}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1AppFace_ae0cc5ee1d9f879502aff95261f6fd153}{App\+Face} (Ptr$<$ \hyperlink{classns3_1_1ndn_1_1App}{App} $>$ app)\hypertarget{classns3_1_1ndn_1_1AppFace_ae0cc5ee1d9f879502aff95261f6fd153}{}\label{classns3_1_1ndn_1_1AppFace_ae0cc5ee1d9f879502aff95261f6fd153}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1AppFace_a3801ac0d41bd043cc08583bf34cada62}{send\+Interest} (const Interest \&interest)\hypertarget{classns3_1_1ndn_1_1AppFace_a3801ac0d41bd043cc08583bf34cada62}{}\label{classns3_1_1ndn_1_1AppFace_a3801ac0d41bd043cc08583bf34cada62}
+
+\begin{DoxyCompactList}\small\item\em Send Interest towards application. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1AppFace_a4eedd22fbd70223640ed4ec2fed2864f}{send\+Data} (const Data \&data)\hypertarget{classns3_1_1ndn_1_1AppFace_a4eedd22fbd70223640ed4ec2fed2864f}{}\label{classns3_1_1ndn_1_1AppFace_a4eedd22fbd70223640ed4ec2fed2864f}
+
+\begin{DoxyCompactList}\small\item\em Send Data towards application. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1AppFace_ab4992fae4a94817bb0cff46009a2b37b}{on\+Receive\+Interest} (const Interest \&interest)\hypertarget{classns3_1_1ndn_1_1AppFace_ab4992fae4a94817bb0cff46009a2b37b}{}\label{classns3_1_1ndn_1_1AppFace_ab4992fae4a94817bb0cff46009a2b37b}
+
+\begin{DoxyCompactList}\small\item\em Send Interest towards N\+FD. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1AppFace_ad767c3fdb47be05d3eb9061dac1bcc2f}{on\+Receive\+Data} (const Data \&data)\hypertarget{classns3_1_1ndn_1_1AppFace_ad767c3fdb47be05d3eb9061dac1bcc2f}{}\label{classns3_1_1ndn_1_1AppFace_ad767c3fdb47be05d3eb9061dac1bcc2f}
+
+\begin{DoxyCompactList}\small\item\em Send Data towards N\+FD. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1AppFace_a4f9a6beb12af1e79b2762d19a63454a3}{close} ()
+\begin{DoxyCompactList}\small\item\em Close the face. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of application Ndn face. 
+
+This class defines basic functionality of Ndn face. Face is core component responsible for actual delivery of data packet to and from Ndn stack
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classns3_1_1ndn_1_1AppFace}{App\+Face}, Ndn\+Net\+Device\+Face 
+\end{DoxySeeAlso}
+
+
+Definition at line 46 of file ndn-\/app-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+App\+Face@{ns3\+::ndn\+::\+App\+Face}!close@{close}}
+\index{close@{close}!ns3\+::ndn\+::\+App\+Face@{ns3\+::ndn\+::\+App\+Face}}
+\subsubsection[{\texorpdfstring{close()}{close()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+App\+Face\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1AppFace_a4f9a6beb12af1e79b2762d19a63454a3}{}\label{classns3_1_1ndn_1_1AppFace_a4f9a6beb12af1e79b2762d19a63454a3}
+
+
+Close the face. 
+
+This terminates all communication on the face and cause \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail()} method event to be invoked 
+
+Implements \hyperlink{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{nfd\+::\+Face}.
+
+
+
+Definition at line 51 of file ndn-\/app-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/ndn-\/app-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/ndn-\/app-\/face.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{classnfd_1_1ndnlp_1_1Slicer}{}\section{nfd\+:\+:ndnlp\+:\+:Slicer Class Reference}
+\label{classnfd_1_1ndnlp_1_1Slicer}\index{nfd\+::ndnlp\+::\+Slicer@{nfd\+::ndnlp\+::\+Slicer}}
+
+
+provides fragmentation feature at sender  
+
+
+
+
+{\ttfamily \#include $<$ndnlp-\/slicer.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:ndnlp\+:\+:Slicer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1ndnlp_1_1Slicer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1ndnlp_1_1Slicer_abf4fe06ac66296231229244430236143}{Slicer} (size\+\_\+t mtu)
+\item 
+Packet\+Array {\bfseries slice} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classnfd_1_1ndnlp_1_1Slicer_aebacd9d2d5e13ca29266d6a66567d735}{}\label{classnfd_1_1ndnlp_1_1Slicer_aebacd9d2d5e13ca29266d6a66567d735}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provides fragmentation feature at sender 
+
+Definition at line 39 of file ndnlp-\/slicer.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::ndnlp\+::\+Slicer@{nfd\+::ndnlp\+::\+Slicer}!Slicer@{Slicer}}
+\index{Slicer@{Slicer}!nfd\+::ndnlp\+::\+Slicer@{nfd\+::ndnlp\+::\+Slicer}}
+\subsubsection[{\texorpdfstring{Slicer(size\+\_\+t mtu)}{Slicer(size\_t mtu)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::ndnlp\+::\+Slicer\+::\+Slicer (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{mtu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classnfd_1_1ndnlp_1_1Slicer_abf4fe06ac66296231229244430236143}{}\label{classnfd_1_1ndnlp_1_1Slicer_abf4fe06ac66296231229244430236143}
+
+\begin{DoxyParams}{Parameters}
+{\em mtu} & maximum size of N\+D\+N\+LP header and payload \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If N\+D\+N\+LP packets are to be encapsulated in an additional header (eg. in U\+DP packets), the caller must deduct such overhead. 
+\end{DoxyNote}
+
+
+Definition at line 33 of file ndnlp-\/slicer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ndnlp-\/slicer.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ndnlp-\/slicer.\+cpp\end{DoxyCompactItemize}

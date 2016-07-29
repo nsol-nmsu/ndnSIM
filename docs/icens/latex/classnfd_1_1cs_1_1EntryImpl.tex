@@ -1,0 +1,91 @@
+\hypertarget{classnfd_1_1cs_1_1EntryImpl}{}\section{nfd\+:\+:cs\+:\+:Entry\+Impl Class Reference}
+\label{classnfd_1_1cs_1_1EntryImpl}\index{nfd\+::cs\+::\+Entry\+Impl@{nfd\+::cs\+::\+Entry\+Impl}}
+
+
+an \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} in Content\+Store implementation  
+
+
+
+
+{\ttfamily \#include $<$cs-\/entry-\/impl.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:cs\+:\+:Entry\+Impl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1cs_1_1EntryImpl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1cs_1_1EntryImpl_a0861113c3a3c3ab9eafa41eb45acb292}{Entry\+Impl} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em construct \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} for query \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1cs_1_1EntryImpl_a514cc1004fb06d52fad3163d84c46855}{Entry\+Impl} (shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{Data} $>$ data, bool \hyperlink{classnfd_1_1cs_1_1Entry_ae2decf9b1c986c0d894968fe633ee95f}{is\+Unsolicited})\hypertarget{classnfd_1_1cs_1_1EntryImpl_a514cc1004fb06d52fad3163d84c46855}{}\label{classnfd_1_1cs_1_1EntryImpl_a514cc1004fb06d52fad3163d84c46855}
+
+\begin{DoxyCompactList}\small\item\em construct \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} for storage \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1cs_1_1EntryImpl_a7f3a81713cbe3d7b1f7c2d42fb4c9f3f}{can\+Stale} () const
+\item 
+void {\bfseries unset\+Unsolicited} ()\hypertarget{classnfd_1_1cs_1_1EntryImpl_a687d5947eb025a71deca538b3ab2a292}{}\label{classnfd_1_1cs_1_1EntryImpl_a687d5947eb025a71deca538b3ab2a292}
+
+\item 
+bool {\bfseries operator$<$} (const \hyperlink{classnfd_1_1cs_1_1EntryImpl}{Entry\+Impl} \&other) const\hypertarget{classnfd_1_1cs_1_1EntryImpl_a41128e6bf8a2037c8ea87d05a8e77ca8}{}\label{classnfd_1_1cs_1_1EntryImpl_a41128e6bf8a2037c8ea87d05a8e77ca8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+an \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} in Content\+Store implementation 
+
+An \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} is either a stored \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} which contains a Data packet and related attributes, or a query \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} which contains a Name that is Less\+Comparable to other stored/query \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} and is used to lookup a container of entries.
+
+\begin{DoxyNote}{Note}
+This type is internal to this specific Content\+Store implementation. 
+\end{DoxyNote}
+
+
+Definition at line 42 of file cs-\/entry-\/impl.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::cs\+::\+Entry\+Impl@{nfd\+::cs\+::\+Entry\+Impl}!Entry\+Impl@{Entry\+Impl}}
+\index{Entry\+Impl@{Entry\+Impl}!nfd\+::cs\+::\+Entry\+Impl@{nfd\+::cs\+::\+Entry\+Impl}}
+\subsubsection[{\texorpdfstring{Entry\+Impl(const Name \&name)}{EntryImpl(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::cs\+::\+Entry\+Impl\+::\+Entry\+Impl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1EntryImpl_a0861113c3a3c3ab9eafa41eb45acb292}{}\label{classnfd_1_1cs_1_1EntryImpl_a0861113c3a3c3ab9eafa41eb45acb292}
+
+
+construct \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} for query 
+
+\begin{DoxyNote}{Note}
+Name is implicitly convertible to \hyperlink{classnfd_1_1cs_1_1Entry}{Entry}, so that Name can be passed to lookup functions on a container of \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} 
+\end{DoxyNote}
+
+
+Definition at line 31 of file cs-\/entry-\/impl.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::cs\+::\+Entry\+Impl@{nfd\+::cs\+::\+Entry\+Impl}!can\+Stale@{can\+Stale}}
+\index{can\+Stale@{can\+Stale}!nfd\+::cs\+::\+Entry\+Impl@{nfd\+::cs\+::\+Entry\+Impl}}
+\subsubsection[{\texorpdfstring{can\+Stale() const}{canStale() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::cs\+::\+Entry\+Impl\+::can\+Stale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1cs_1_1EntryImpl_a7f3a81713cbe3d7b1f7c2d42fb4c9f3f}{}\label{classnfd_1_1cs_1_1EntryImpl_a7f3a81713cbe3d7b1f7c2d42fb4c9f3f}
+\begin{DoxyReturn}{Returns}
+true if entry can become stale, false if entry is never stale 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file cs-\/entry-\/impl.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs-\/entry-\/impl.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs-\/entry-\/impl.\+cpp\end{DoxyCompactItemize}

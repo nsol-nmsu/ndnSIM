@@ -1,0 +1,88 @@
+\hypertarget{classndn_1_1RegexComponentMatcher}{}\section{ndn\+:\+:Regex\+Component\+Matcher Class Reference}
+\label{classndn_1_1RegexComponentMatcher}\index{ndn\+::\+Regex\+Component\+Matcher@{ndn\+::\+Regex\+Component\+Matcher}}
+Inheritance diagram for ndn\+:\+:Regex\+Component\+Matcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1RegexComponentMatcher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1RegexComponentMatcher_a6c29029eab0297b5a7423e9e12be180a}{Regex\+Component\+Matcher} (const std\+::string \&expr, shared\+\_\+ptr$<$ \hyperlink{classndn_1_1RegexBackrefManager}{Regex\+Backref\+Manager} $>$ backref\+Manager, bool is\+Exact\+Match=true)
+\begin{DoxyCompactList}\small\item\em Create a Regex\+Component matcher from expr. \end{DoxyCompactList}\item 
+virtual bool {\bfseries match} (const \hyperlink{classndn_1_1Name}{Name} \&name, size\+\_\+t offset, size\+\_\+t len=1)\hypertarget{classndn_1_1RegexComponentMatcher_aeadd9ee4d1b3a265fe64d228339f0a8f}{}\label{classndn_1_1RegexComponentMatcher_aeadd9ee4d1b3a265fe64d228339f0a8f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1RegexComponentMatcher_a9ff5d56ac03e2373ac6227353e4579ef}{compile} ()
+\begin{DoxyCompactList}\small\item\em Compile the regular expression to generate the more matchers when necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file regex-\/component-\/matcher.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Regex\+Component\+Matcher@{ndn\+::\+Regex\+Component\+Matcher}!Regex\+Component\+Matcher@{Regex\+Component\+Matcher}}
+\index{Regex\+Component\+Matcher@{Regex\+Component\+Matcher}!ndn\+::\+Regex\+Component\+Matcher@{ndn\+::\+Regex\+Component\+Matcher}}
+\subsubsection[{\texorpdfstring{Regex\+Component\+Matcher(const std\+::string \&expr, shared\+\_\+ptr$<$ Regex\+Backref\+Manager $>$ backref\+Manager, bool is\+Exact\+Match=true)}{RegexComponentMatcher(const std::string \&expr, shared\_ptr< RegexBackrefManager > backrefManager, bool isExactMatch=true)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Regex\+Component\+Matcher\+::\+Regex\+Component\+Matcher (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{expr, }
+\item[{shared\+\_\+ptr$<$ {\bf Regex\+Backref\+Manager} $>$}]{backref\+Manager, }
+\item[{bool}]{is\+Exact\+Match = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1RegexComponentMatcher_a6c29029eab0297b5a7423e9e12be180a}{}\label{classndn_1_1RegexComponentMatcher_a6c29029eab0297b5a7423e9e12be180a}
+
+
+Create a Regex\+Component matcher from expr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & The standard regular expression to match a component \\
+\hline
+{\em backref\+Manager} & The back reference manager \\
+\hline
+{\em is\+Exact\+Match} & The flag to provide exact match \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file regex-\/component-\/matcher.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Regex\+Component\+Matcher@{ndn\+::\+Regex\+Component\+Matcher}!compile@{compile}}
+\index{compile@{compile}!ndn\+::\+Regex\+Component\+Matcher@{ndn\+::\+Regex\+Component\+Matcher}}
+\subsubsection[{\texorpdfstring{compile()}{compile()}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Regex\+Component\+Matcher\+::compile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1RegexComponentMatcher_a9ff5d56ac03e2373ac6227353e4579ef}{}\label{classndn_1_1RegexComponentMatcher_a9ff5d56ac03e2373ac6227353e4579ef}
+
+
+Compile the regular expression to generate the more matchers when necessary. 
+
+\begin{DoxyReturn}{Returns}
+true if compiling succeeds 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1RegexMatcher_a95189df49e9119adcced9b555a721e9a}{ndn\+::\+Regex\+Matcher}.
+
+
+
+Definition at line 94 of file regex-\/component-\/matcher.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/regex/regex-\/component-\/matcher.\+hpp\end{DoxyCompactItemize}

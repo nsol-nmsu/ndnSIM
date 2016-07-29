@@ -1,0 +1,110 @@
+\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer}{}\section{ndn\+:\+:nfd\+\_\+autoreg\+:\+:Autoreg\+Server Class Reference}
+\label{classndn_1_1nfd__autoreg_1_1AutoregServer}\index{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server@{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server}}
+Inheritance diagram for ndn\+:\+:nfd\+\_\+autoreg\+:\+:Autoreg\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1nfd__autoreg_1_1AutoregServer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries on\+Register\+Command\+Success} (uint64\+\_\+t face\+Id, const \hyperlink{classndn_1_1Name}{Name} \&prefix)\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_ae8aaaa1de975b318129576d499c74dc8}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_ae8aaaa1de975b318129576d499c74dc8}
+
+\item 
+void {\bfseries on\+Register\+Command\+Failure} (uint64\+\_\+t face\+Id, const \hyperlink{classndn_1_1Name}{Name} \&prefix, uint32\+\_\+t code, const std\+::string \&reason)\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a0af091ce03f19bee9681e0590ee5a94d}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a0af091ce03f19bee9681e0590ee5a94d}
+
+\item 
+bool \hyperlink{classndn_1_1nfd__autoreg_1_1AutoregServer_a6d35d1f19260bd0c68479c47663d8c25}{has\+Allowed\+Schema} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri)
+\item 
+bool \hyperlink{classndn_1_1nfd__autoreg_1_1AutoregServer_a7e41fa6320ada1a443f73429e871daca}{is\+Blacklisted} (const boost\+::asio\+::ip\+::address \&address)
+\item 
+bool \hyperlink{classndn_1_1nfd__autoreg_1_1AutoregServer_a20886a49dc0565aa2aacf6793b59187f}{is\+Whitelisted} (const boost\+::asio\+::ip\+::address \&address)
+\item 
+void {\bfseries register\+Prefixes\+For\+Face} (uint64\+\_\+t face\+Id, const std\+::vector$<$ \hyperlink{classndn_1_1Name}{ndn\+::\+Name} $>$ \&prefixes)\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_ac81f1517d477dbc92354bf8d6290be33}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_ac81f1517d477dbc92354bf8d6290be33}
+
+\item 
+void {\bfseries register\+Prefixes\+If\+Needed} (uint64\+\_\+t face\+Id, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{Face\+Persistency} face\+Persistency)\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a56d02b1830bb324bd079e5710e340a4d}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a56d02b1830bb324bd079e5710e340a4d}
+
+\item 
+void {\bfseries on\+Notification} (const \hyperlink{classndn_1_1nfd_1_1FaceEventNotification}{Face\+Event\+Notification} \&notification)\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_abcbd4a55abbd73234dab79239856bb4c}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_abcbd4a55abbd73234dab79239856bb4c}
+
+\item 
+void {\bfseries signal\+Handler} ()\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_aa50514ddce6efe175f37dc28f061b0cb}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_aa50514ddce6efe175f37dc28f061b0cb}
+
+\item 
+void {\bfseries usage} (std\+::ostream \&os, const po\+::options\+\_\+description \&option\+Desciption, const char $\ast$program\+Name)\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a41b84a07bb661cfbc3bdd1d543fdc618}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a41b84a07bb661cfbc3bdd1d543fdc618}
+
+\item 
+void {\bfseries start\+Processing} ()\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a20662ea80dc21f89f069a766d94b53f6}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a20662ea80dc21f89f069a766d94b53f6}
+
+\item 
+void {\bfseries fetch\+Face\+Status\+Segments} (const \hyperlink{classndn_1_1Data}{Data} \&data, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1OBufferStream}{ndn\+::\+O\+Buffer\+Stream} $>$ \&buffer)\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a0534836d80eb896c3f5828596d1502c8}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a0534836d80eb896c3f5828596d1502c8}
+
+\item 
+void {\bfseries start\+Fetching\+Face\+Status\+Dataset} ()\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_ac0204420607e903720816e404d1cc1cc}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_ac0204420607e903720816e404d1cc1cc}
+
+\item 
+void {\bfseries process\+Face\+Status\+Dataset} (const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1OBufferStream}{ndn\+::\+O\+Buffer\+Stream} $>$ \&buffer)\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a3033b0cece4067fb03da570895d04e13}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a3033b0cece4067fb03da570895d04e13}
+
+\item 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a46d66306646cf932ac6e687fca96b111}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a46d66306646cf932ac6e687fca96b111}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 55 of file nfd-\/autoreg.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server@{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server}!has\+Allowed\+Schema@{has\+Allowed\+Schema}}
+\index{has\+Allowed\+Schema@{has\+Allowed\+Schema}!ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server@{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server}}
+\subsubsection[{\texorpdfstring{has\+Allowed\+Schema(const Face\+Uri \&uri)}{hasAllowedSchema(const FaceUri \&uri)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server\+::has\+Allowed\+Schema (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{uri}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a6d35d1f19260bd0c68479c47663d8c25}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a6d35d1f19260bd0c68479c47663d8c25}
+\begin{DoxyReturn}{Returns}
+true if uri has schema allowed to do auto-\/registrations 
+\end{DoxyReturn}
+
+
+Definition at line 83 of file nfd-\/autoreg.\+cpp.
+
+\index{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server@{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server}!is\+Blacklisted@{is\+Blacklisted}}
+\index{is\+Blacklisted@{is\+Blacklisted}!ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server@{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server}}
+\subsubsection[{\texorpdfstring{is\+Blacklisted(const boost\+::asio\+::ip\+::address \&address)}{isBlacklisted(const boost::asio::ip::address \&address)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server\+::is\+Blacklisted (
+\begin{DoxyParamCaption}
+\item[{const boost\+::asio\+::ip\+::address \&}]{address}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a7e41fa6320ada1a443f73429e871daca}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a7e41fa6320ada1a443f73429e871daca}
+\begin{DoxyReturn}{Returns}
+true if address is blacklisted 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file nfd-\/autoreg.\+cpp.
+
+\index{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server@{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server}!is\+Whitelisted@{is\+Whitelisted}}
+\index{is\+Whitelisted@{is\+Whitelisted}!ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server@{ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server}}
+\subsubsection[{\texorpdfstring{is\+Whitelisted(const boost\+::asio\+::ip\+::address \&address)}{isWhitelisted(const boost::asio::ip::address \&address)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::nfd\+\_\+autoreg\+::\+Autoreg\+Server\+::is\+Whitelisted (
+\begin{DoxyParamCaption}
+\item[{const boost\+::asio\+::ip\+::address \&}]{address}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1nfd__autoreg_1_1AutoregServer_a20886a49dc0565aa2aacf6793b59187f}{}\label{classndn_1_1nfd__autoreg_1_1AutoregServer_a20886a49dc0565aa2aacf6793b59187f}
+\begin{DoxyReturn}{Returns}
+true if address is whitelisted 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file nfd-\/autoreg.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/nfd-\/autoreg.\+cpp\end{DoxyCompactItemize}

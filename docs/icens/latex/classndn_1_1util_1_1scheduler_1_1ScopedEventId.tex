@@ -1,0 +1,95 @@
+\hypertarget{classndn_1_1util_1_1scheduler_1_1ScopedEventId}{}\section{ndn\+:\+:util\+:\+:scheduler\+:\+:Scoped\+Event\+Id Class Reference}
+\label{classndn_1_1util_1_1scheduler_1_1ScopedEventId}\index{ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id@{ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id}}
+
+
+Event that is automatically cancelled upon destruction.  
+
+
+
+
+{\ttfamily \#include $<$scheduler-\/scoped-\/event-\/id.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:scheduler\+:\+:Scoped\+Event\+Id\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1scheduler_1_1ScopedEventId}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ada0da48104c5508bc01a71a007ae86d3}{Scoped\+Event\+Id} (\hyperlink{classndn_1_1util_1_1scheduler_1_1Scheduler}{Scheduler} \&scheduler)
+\begin{DoxyCompactList}\small\item\em Construct \hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} tied to the specified scheduler. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a0f1e383625653aedc1681b5a0593f97d}{Scoped\+Event\+Id} (\hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} \&\&other) noexcept\hypertarget{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a0f1e383625653aedc1681b5a0593f97d}{}\label{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a0f1e383625653aedc1681b5a0593f97d}
+
+\begin{DoxyCompactList}\small\item\em move constructor \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} \& \hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ab64287d940cc197a4293082640b16ff6}{operator=} (const \hyperlink{classEventId}{Event\+Id} \&event)
+\begin{DoxyCompactList}\small\item\em assigns an event \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a3fa7ba9ecb6724086a5758c127352d3b}{$\sim$\+Scoped\+Event\+Id} ()\hypertarget{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a3fa7ba9ecb6724086a5758c127352d3b}{}\label{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a3fa7ba9ecb6724086a5758c127352d3b}
+
+\begin{DoxyCompactList}\small\item\em cancels the event \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a4e0c49aa78843fcd8551989652edfe95}{cancel} ()\hypertarget{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a4e0c49aa78843fcd8551989652edfe95}{}\label{classndn_1_1util_1_1scheduler_1_1ScopedEventId_a4e0c49aa78843fcd8551989652edfe95}
+
+\begin{DoxyCompactList}\small\item\em cancels the event manually \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ae1523bb7cf8c9748c15af9d99cae3d36}{release} ()\hypertarget{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ae1523bb7cf8c9748c15af9d99cae3d36}{}\label{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ae1523bb7cf8c9748c15af9d99cae3d36}
+
+\begin{DoxyCompactList}\small\item\em releases the event so that it won\textquotesingle{}t be canceled when this \hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} is destructed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Event that is automatically cancelled upon destruction. 
+
+Definition at line 33 of file scheduler-\/scoped-\/event-\/id.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id@{ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id}!Scoped\+Event\+Id@{Scoped\+Event\+Id}}
+\index{Scoped\+Event\+Id@{Scoped\+Event\+Id}!ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id@{ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id}}
+\subsubsection[{\texorpdfstring{Scoped\+Event\+Id(\+Scheduler \&scheduler)}{ScopedEventId(Scheduler \&scheduler)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id\+::\+Scoped\+Event\+Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Scheduler} \&}]{scheduler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ada0da48104c5508bc01a71a007ae86d3}{}\label{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ada0da48104c5508bc01a71a007ae86d3}
+
+
+Construct \hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} tied to the specified scheduler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scheduler} & \hyperlink{classndn_1_1util_1_1scheduler_1_1Scheduler}{Scheduler} to which the event is tied. Behavior is undefined if scheduler is destructed before an uncanceled \hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file scheduler-\/scoped-\/event-\/id.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id@{ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id}!operator=@{operator=}}
+\index{operator=@{operator=}!ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id@{ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id}}
+\subsubsection[{\texorpdfstring{operator=(const Event\+Id \&event)}{operator=(const EventId \&event)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scoped\+Event\+Id} \& ndn\+::util\+::scheduler\+::\+Scoped\+Event\+Id\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Event\+Id} \&}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ab64287d940cc197a4293082640b16ff6}{}\label{classndn_1_1util_1_1scheduler_1_1ScopedEventId_ab64287d940cc197a4293082640b16ff6}
+
+
+assigns an event 
+
+If a different event has been assigned to this instance previously, that event will be cancelled immediately.
+
+\begin{DoxyNote}{Note}
+The caller should ensure that \hyperlink{classndn_1_1util_1_1scheduler_1_1ScopedEventId}{Scoped\+Event\+Id} is tied to a correct scheduler. Behavior is undefined when assigning event scheduled in another scheduler instance. 
+\end{DoxyNote}
+
+
+Definition at line 46 of file scheduler-\/scoped-\/event-\/id.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/scheduler-\/scoped-\/event-\/id.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/scheduler-\/scoped-\/event-\/id.\+cpp\end{DoxyCompactItemize}

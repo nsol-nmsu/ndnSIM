@@ -1,0 +1,108 @@
+\hypertarget{classnfd_1_1name__tree_1_1Entry}{}\section{nfd\+:\+:name\+\_\+tree\+:\+:Entry Class Reference}
+\label{classnfd_1_1name__tree_1_1Entry}\index{nfd\+::name\+\_\+tree\+::\+Entry@{nfd\+::name\+\_\+tree\+::\+Entry}}
+
+
+Name Tree \hyperlink{classnfd_1_1name__tree_1_1Entry}{Entry} Class.  
+
+
+
+
+{\ttfamily \#include $<$name-\/tree-\/entry.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:name\+\_\+tree\+:\+:Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1name__tree_1_1Entry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Entry} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)\hypertarget{classnfd_1_1name__tree_1_1Entry_a19e17e184ace883bf290c583d1ccbe81}{}\label{classnfd_1_1name__tree_1_1Entry_a19e17e184ace883bf290c583d1ccbe81}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Prefix} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_aec415012f232e832b66e19297f9681d4}{}\label{classnfd_1_1name__tree_1_1Entry_aec415012f232e832b66e19297f9681d4}
+
+\item 
+void {\bfseries set\+Hash} (size\+\_\+t hash)\hypertarget{classnfd_1_1name__tree_1_1Entry_a614d13bac9dc8ec1ccf73986a40904b5}{}\label{classnfd_1_1name__tree_1_1Entry_a614d13bac9dc8ec1ccf73986a40904b5}
+
+\item 
+size\+\_\+t {\bfseries get\+Hash} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_aa5012ab97d6cd5eba6fb9eaded6b7554}{}\label{classnfd_1_1name__tree_1_1Entry_aa5012ab97d6cd5eba6fb9eaded6b7554}
+
+\item 
+void {\bfseries set\+Parent} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{Entry} $>$ parent)\hypertarget{classnfd_1_1name__tree_1_1Entry_ae371cc233d7896e8d30fdcb50a8c205a}{}\label{classnfd_1_1name__tree_1_1Entry_ae371cc233d7896e8d30fdcb50a8c205a}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{Entry} $>$ {\bfseries get\+Parent} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_ab887889178de1a3ddd04fe7418473128}{}\label{classnfd_1_1name__tree_1_1Entry_ab887889178de1a3ddd04fe7418473128}
+
+\item 
+std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{Entry} $>$ $>$ \& {\bfseries get\+Children} ()\hypertarget{classnfd_1_1name__tree_1_1Entry_aa4f8198cb3d8aacbe18f11f6979f6d5f}{}\label{classnfd_1_1name__tree_1_1Entry_aa4f8198cb3d8aacbe18f11f6979f6d5f}
+
+\item 
+bool {\bfseries has\+Children} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_add7d7c34da4743a15d61cba8baa5bd27}{}\label{classnfd_1_1name__tree_1_1Entry_add7d7c34da4743a15d61cba8baa5bd27}
+
+\item 
+bool {\bfseries is\+Empty} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_a98cec6d4d1cea81db92a7469739a223d}{}\label{classnfd_1_1name__tree_1_1Entry_a98cec6d4d1cea81db92a7469739a223d}
+
+\item 
+void {\bfseries set\+Fib\+Entry} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ fib\+Entry)\hypertarget{classnfd_1_1name__tree_1_1Entry_af8cdbd90fe7153d46f5c481a70bfec3a}{}\label{classnfd_1_1name__tree_1_1Entry_af8cdbd90fe7153d46f5c481a70bfec3a}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ {\bfseries get\+Fib\+Entry} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_a2bffe5a77db5482f25b46a10119719c1}{}\label{classnfd_1_1name__tree_1_1Entry_a2bffe5a77db5482f25b46a10119719c1}
+
+\item 
+void {\bfseries insert\+Pit\+Entry} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1name__tree_1_1Entry_a3afeeb876b74b1bd895528e8391e56fc}{}\label{classnfd_1_1name__tree_1_1Entry_a3afeeb876b74b1bd895528e8391e56fc}
+
+\item 
+void {\bfseries erase\+Pit\+Entry} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1name__tree_1_1Entry_a8ee21fd592f677c6e8076f32dcfa0d20}{}\label{classnfd_1_1name__tree_1_1Entry_a8ee21fd592f677c6e8076f32dcfa0d20}
+
+\item 
+bool {\bfseries has\+Pit\+Entries} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_a0776884caa40d420e0986ce628e751e3}{}\label{classnfd_1_1name__tree_1_1Entry_a0776884caa40d420e0986ce628e751e3}
+
+\item 
+const std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ $>$ \& {\bfseries get\+Pit\+Entries} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_ae2906861ed8fc6571c62a6c3f545f1da}{}\label{classnfd_1_1name__tree_1_1Entry_ae2906861ed8fc6571c62a6c3f545f1da}
+
+\item 
+void {\bfseries insert\+Sit\+Entry} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1SitEntry}{pit\+::\+Sit\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1name__tree_1_1Entry_a4a3f082d3b3d1071e603b9c638bd739f}{}\label{classnfd_1_1name__tree_1_1Entry_a4a3f082d3b3d1071e603b9c638bd739f}
+
+\item 
+void {\bfseries erase\+Sit\+Entry} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1SitEntry}{pit\+::\+Sit\+Entry} $>$ pit\+Entry)\hypertarget{classnfd_1_1name__tree_1_1Entry_ab52e0534040e2dcbf64d4b3c2dcd32c8}{}\label{classnfd_1_1name__tree_1_1Entry_ab52e0534040e2dcbf64d4b3c2dcd32c8}
+
+\item 
+bool {\bfseries has\+Sit\+Entries} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_a8d43bd78d7bec0c8f4702dec474cad6a}{}\label{classnfd_1_1name__tree_1_1Entry_a8d43bd78d7bec0c8f4702dec474cad6a}
+
+\item 
+const std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1SitEntry}{pit\+::\+Sit\+Entry} $>$ $>$ \& {\bfseries get\+Sit\+Entries} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_a3c1b038bc01178f67f66bec58dbf6726}{}\label{classnfd_1_1name__tree_1_1Entry_a3c1b038bc01178f67f66bec58dbf6726}
+
+\item 
+void {\bfseries set\+Measurements\+Entry} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ measurements\+Entry)\hypertarget{classnfd_1_1name__tree_1_1Entry_a70d5b38454bd422b00342efe503fb1b2}{}\label{classnfd_1_1name__tree_1_1Entry_a70d5b38454bd422b00342efe503fb1b2}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ {\bfseries get\+Measurements\+Entry} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_ae16106ade20d2f66f7872e78a2aafa9c}{}\label{classnfd_1_1name__tree_1_1Entry_ae16106ade20d2f66f7872e78a2aafa9c}
+
+\item 
+void {\bfseries set\+Strategy\+Choice\+Entry} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1strategy__choice_1_1Entry}{strategy\+\_\+choice\+::\+Entry} $>$ strategy\+Choice\+Entry)\hypertarget{classnfd_1_1name__tree_1_1Entry_ad819003bc6ac6d6851fc99b2789d857e}{}\label{classnfd_1_1name__tree_1_1Entry_ad819003bc6ac6d6851fc99b2789d857e}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1strategy__choice_1_1Entry}{strategy\+\_\+choice\+::\+Entry} $>$ {\bfseries get\+Strategy\+Choice\+Entry} () const\hypertarget{classnfd_1_1name__tree_1_1Entry_a12cb38e8b3b4e1fca081765feec7a0b7}{}\label{classnfd_1_1name__tree_1_1Entry_a12cb38e8b3b4e1fca081765feec7a0b7}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries nfd\+::\+Name\+Tree}\hypertarget{classnfd_1_1name__tree_1_1Entry_a6c9695e8b2951b18e0243f6b40a26735}{}\label{classnfd_1_1name__tree_1_1Entry_a6c9695e8b2951b18e0243f6b40a26735}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Name Tree \hyperlink{classnfd_1_1name__tree_1_1Entry}{Entry} Class. 
+
+Definition at line 66 of file name-\/tree-\/entry.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/name-\/tree-\/entry.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/name-\/tree-\/entry.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,484 @@
+\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection}{}\section{websocketpp\+:\+:transport\+:\+:debug\+:\+:connection$<$ config $>$ Class Template Reference}
+\label{classwebsocketpp_1_1transport_1_1debug_1_1connection}\index{websocketpp\+::transport\+::debug\+::connection$<$ config $>$@{websocketpp\+::transport\+::debug\+::connection$<$ config $>$}}
+Inheritance diagram for websocketpp\+:\+:transport\+:\+:debug\+:\+:connection$<$ config $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classwebsocketpp_1_1transport_1_1debug_1_1connection}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection}{connection}$<$ \hyperlink{classconfig}{config} $>$ \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a7ba7dc8bc337d2734b3c4651f4fa8056}{type}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a7ba7dc8bc337d2734b3c4651f4fa8056}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a7ba7dc8bc337d2734b3c4651f4fa8056}
+
+\begin{DoxyCompactList}\small\item\em Type of this connection transport component. \end{DoxyCompactList}\item 
+typedef lib\+::shared\+\_\+ptr$<$ \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a7ba7dc8bc337d2734b3c4651f4fa8056}{type} $>$ \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a40631f93557c3308c2c8c7897e6a4825}{ptr}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a40631f93557c3308c2c8c7897e6a4825}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a40631f93557c3308c2c8c7897e6a4825}
+
+\begin{DoxyCompactList}\small\item\em Type of a shared pointer to this connection transport component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1concurrency_1_1none}{config\+::concurrency\+\_\+type} \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_ae42b4d8fcad5351005adbaaee072daec}{concurrency\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_ae42b4d8fcad5351005adbaaee072daec}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_ae42b4d8fcad5351005adbaaee072daec}
+
+\begin{DoxyCompactList}\small\item\em transport concurrency policy \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::alog\+\_\+type} \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a4041875e69d6a33ed4f27055fd9d6409}{alog\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a4041875e69d6a33ed4f27055fd9d6409}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a4041875e69d6a33ed4f27055fd9d6409}
+
+\begin{DoxyCompactList}\small\item\em Type of this transport\textquotesingle{}s access logging policy. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::elog\+\_\+type} \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a38501811c59ca185f0dde7fa7fa8486f}{elog\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a38501811c59ca185f0dde7fa7fa8486f}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a38501811c59ca185f0dde7fa7fa8486f}
+
+\begin{DoxyCompactList}\small\item\em Type of this transport\textquotesingle{}s error logging policy. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1concurrency_1_1none_af2d121eeb6202694819578ba4bb00d3e}{concurrency\+\_\+type\+::scoped\+\_\+lock\+\_\+type} {\bfseries scoped\+\_\+lock\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a6745c077e1f67447a8894c50699ad5d1}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a6745c077e1f67447a8894c50699ad5d1}
+
+\item 
+typedef \hyperlink{classwebsocketpp_1_1concurrency_1_1none_a3cf002cfc62e64e920a91a06f5e6fbc3}{concurrency\+\_\+type\+::mutex\+\_\+type} {\bfseries mutex\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a3883614ff681edac3ee6556462636103}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a3883614ff681edac3ee6556462636103}
+
+\item 
+typedef lib\+::shared\+\_\+ptr$<$ \hyperlink{structwebsocketpp_1_1transport_1_1debug_1_1timer}{timer} $>$ {\bfseries timer\+\_\+ptr}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a92ac093c337944c0d17422b090cc1e62}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a92ac093c337944c0d17422b090cc1e62}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries connection} (bool is\+\_\+server, \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a4041875e69d6a33ed4f27055fd9d6409}{alog\+\_\+type} \&alog, \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a38501811c59ca185f0dde7fa7fa8486f}{elog\+\_\+type} \&elog)\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_aebfb59b75e4beecf743f9f6f6cc599ff}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_aebfb59b75e4beecf743f9f6f6cc599ff}
+
+\item 
+\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a40631f93557c3308c2c8c7897e6a4825}{ptr} \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a100e8592dd57f19971d933b2b47ef820}{get\+\_\+shared} ()\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a100e8592dd57f19971d933b2b47ef820}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a100e8592dd57f19971d933b2b47ef820}
+
+\begin{DoxyCompactList}\small\item\em Get a shared pointer to this component. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a70244283cf80113e73f6dda8c1a2c4be}{set\+\_\+secure} (bool)
+\begin{DoxyCompactList}\small\item\em Set whether or not this connection is secure. \end{DoxyCompactList}\item 
+bool \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a49c3bba737ddb4a2ef6bf0c3b40fd130}{is\+\_\+secure} () const
+\begin{DoxyCompactList}\small\item\em Tests whether or not the underlying transport is secure. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a3c0a3a5bc888a570c287190d299cf276}{set\+\_\+remote\+\_\+endpoint} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Set human readable remote endpoint address. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a8e32def2e7de74a13684571cccce494b}{get\+\_\+remote\+\_\+endpoint} () const
+\begin{DoxyCompactList}\small\item\em Get human readable remote endpoint address. \end{DoxyCompactList}\item 
+\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{connection\+\_\+hdl} \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a258046ad6f04c2fe9d3b31da345c282f}{get\+\_\+handle} () const
+\begin{DoxyCompactList}\small\item\em Get the connection handle. \end{DoxyCompactList}\item 
+timer\+\_\+ptr \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a56b96fed344bafbbb0453997dbf54f40}{set\+\_\+timer} (long, \hyperlink{namespacewebsocketpp_1_1transport_a946cc56ff41139f3002149c15fd87bc9}{timer\+\_\+handler} handler)
+\begin{DoxyCompactList}\small\item\em Call back a function after a period of time. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a36a7e0c517495dd8bdbecfa75c5a9d7b}{read\+\_\+all} (char const $\ast$buf, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Manual input supply (read all) \end{DoxyCompactList}\item 
+void {\bfseries expire\+\_\+timer} (lib\+::error\+\_\+code const \&ec)\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a05593a3cbd005194ea0e822631d629ce}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a05593a3cbd005194ea0e822631d629ce}
+
+\item 
+void {\bfseries fullfil\+\_\+write} ()\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a53d8858b47eeccbd9d8bfd8b8e4f4a9a}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a53d8858b47eeccbd9d8bfd8b8e4f4a9a}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a1ed8a6a163997f22ab3977c58514d607}{init} (\hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} handler)
+\begin{DoxyCompactList}\small\item\em Initialize the connection transport. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a9dd1522c7700b42b9d54b32d394e32fe}{async\+\_\+read\+\_\+at\+\_\+least} (size\+\_\+t num\+\_\+bytes, char $\ast$buf, size\+\_\+t len, \hyperlink{namespacewebsocketpp_1_1transport_a3a9b2ed54dfcc6ebe7d7e6b4c02f53fb}{read\+\_\+handler} handler)
+\begin{DoxyCompactList}\small\item\em Initiate an async\+\_\+read for at least num\+\_\+bytes bytes into buf. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_aecc282f30447d46911cd54f676fe0a73}{async\+\_\+write} (char const $\ast$, size\+\_\+t, \hyperlink{namespacewebsocketpp_1_1transport_addf5d728159e7aa2bce2a0df947b1560}{write\+\_\+handler} handler)
+\begin{DoxyCompactList}\small\item\em Asyncronous Transport Write. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_af8a648a7501f13845fe6708fab59ac1f}{async\+\_\+write} (std\+::vector$<$ \hyperlink{structwebsocketpp_1_1transport_1_1buffer}{buffer} $>$ const \&, \hyperlink{namespacewebsocketpp_1_1transport_addf5d728159e7aa2bce2a0df947b1560}{write\+\_\+handler} handler)
+\begin{DoxyCompactList}\small\item\em Asyncronous Transport Write (scatter-\/gather) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_affdbe8c6860526e66b651ddd402f9cf3}{set\+\_\+handle} (\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{connection\+\_\+hdl})
+\begin{DoxyCompactList}\small\item\em Set Connection Handle. \end{DoxyCompactList}\item 
+lib\+::error\+\_\+code \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a4cac08eb7b8646fc042d465b3bb645a6}{dispatch} (\hyperlink{namespacewebsocketpp_1_1transport_a6658447b2e10f4c712dd792aad0e0c78}{dispatch\+\_\+handler} handler)
+\begin{DoxyCompactList}\small\item\em Call given handler back within the transport\textquotesingle{}s event system (if present) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_aa1269aca10cf5de3cf031eac5f499075}{async\+\_\+shutdown} (\hyperlink{namespacewebsocketpp_1_1transport_af39aff6fc4cb76f7df0d5322b734d156}{shutdown\+\_\+handler} handler)
+\begin{DoxyCompactList}\small\item\em Perform cleanup on socket shutdown\+\_\+handler. \end{DoxyCompactList}\item 
+size\+\_\+t {\bfseries read\+\_\+some\+\_\+impl} (char const $\ast$buf, size\+\_\+t len)\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a7e17152ea6389887e1a19da2ca53cf8b}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a7e17152ea6389887e1a19da2ca53cf8b}
+
+\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a1eb6d0259dfd111b99edc1edae4014f5}{complete\+\_\+read} (lib\+::error\+\_\+code const \&ec)
+\begin{DoxyCompactList}\small\item\em Signal that a requested read is complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename config$>$\\*
+class websocketpp\+::transport\+::debug\+::connection$<$ config $>$}
+
+
+
+Definition at line 55 of file connection.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!async\+\_\+read\+\_\+at\+\_\+least@{async\+\_\+read\+\_\+at\+\_\+least}}
+\index{async\+\_\+read\+\_\+at\+\_\+least@{async\+\_\+read\+\_\+at\+\_\+least}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{async\+\_\+read\+\_\+at\+\_\+least(size\+\_\+t num\+\_\+bytes, char $\ast$buf, size\+\_\+t len, read\+\_\+handler handler)}{async\_read\_at\_least(size\_t num\_bytes, char *buf, size\_t len, read\_handler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::async\+\_\+read\+\_\+at\+\_\+least (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{num\+\_\+bytes, }
+\item[{char $\ast$}]{buf, }
+\item[{size\+\_\+t}]{len, }
+\item[{{\bf read\+\_\+handler}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a9dd1522c7700b42b9d54b32d394e32fe}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a9dd1522c7700b42b9d54b32d394e32fe}
+
+
+Initiate an async\+\_\+read for at least num\+\_\+bytes bytes into buf. 
+
+Initiates an async\+\_\+read request for at least num\+\_\+bytes bytes. The input will be read into buf. A maximum of len bytes will be input. When the operation is complete, handler will be called with the status and number of bytes read.
+
+This method may or may not call handler from within the initial call. The application should be prepared to accept either.
+
+The application should never call this method a second time before it has been called back for the first read. If this is done, the second read will be called back immediately with a double\+\_\+read error.
+
+If num\+\_\+bytes or len are zero handler will be called back immediately indicating success.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+bytes} & Don\textquotesingle{}t call handler until at least this many bytes have been read. \\
+\hline
+{\em buf} & The buffer to read bytes into \\
+\hline
+{\em len} & The size of buf. At maximum, this many bytes will be read. \\
+\hline
+{\em handler} & The callback to invoke when the operation is complete or ends in an error \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 231 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!async\+\_\+shutdown@{async\+\_\+shutdown}}
+\index{async\+\_\+shutdown@{async\+\_\+shutdown}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{async\+\_\+shutdown(shutdown\+\_\+handler handler)}{async\_shutdown(shutdown\_handler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::async\+\_\+shutdown (
+\begin{DoxyParamCaption}
+\item[{{\bf shutdown\+\_\+handler}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_aa1269aca10cf5de3cf031eac5f499075}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_aa1269aca10cf5de3cf031eac5f499075}
+
+
+Perform cleanup on socket shutdown\+\_\+handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The {\ttfamily shutdown\+\_\+handler} to call back when complete \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 320 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!async\+\_\+write@{async\+\_\+write}}
+\index{async\+\_\+write@{async\+\_\+write}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{async\+\_\+write(char const $\ast$, size\+\_\+t, write\+\_\+handler handler)}{async\_write(char const *, size\_t, write\_handler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::async\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{, }
+\item[{size\+\_\+t}]{, }
+\item[{{\bf write\+\_\+handler}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_aecc282f30447d46911cd54f676fe0a73}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_aecc282f30447d46911cd54f676fe0a73}
+
+
+Asyncronous Transport Write. 
+
+Write len bytes in buf to the output stream. Call handler to report success or failure. handler may or may not be called during async\+\_\+write, but it must be safe for this to happen.
+
+Will return 0 on success.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & buffer to read bytes from \\
+\hline
+{\em len} & number of bytes to write \\
+\hline
+{\em handler} & Callback to invoke with operation status. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 273 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!async\+\_\+write@{async\+\_\+write}}
+\index{async\+\_\+write@{async\+\_\+write}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{async\+\_\+write(std\+::vector$<$ buffer $>$ const \&, write\+\_\+handler handler)}{async\_write(std::vector< buffer > const \&, write\_handler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::async\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf buffer} $>$ const \&}]{, }
+\item[{{\bf write\+\_\+handler}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_af8a648a7501f13845fe6708fab59ac1f}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_af8a648a7501f13845fe6708fab59ac1f}
+
+
+Asyncronous Transport Write (scatter-\/gather) 
+
+Write a sequence of buffers to the output stream. Call handler to report success or failure. handler may or may not be called during async\+\_\+write, but it must be safe for this to happen.
+
+Will return 0 on success.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bufs} & vector of buffers to write \\
+\hline
+{\em handler} & Callback to invoke with operation status. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 289 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!complete\+\_\+read@{complete\+\_\+read}}
+\index{complete\+\_\+read@{complete\+\_\+read}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{complete\+\_\+read(lib\+::error\+\_\+code const \&ec)}{complete\_read(lib::error\_code const \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::complete\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{lib\+::error\+\_\+code const \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a1eb6d0259dfd111b99edc1edae4014f5}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a1eb6d0259dfd111b99edc1edae4014f5}
+
+
+Signal that a requested read is complete. 
+
+Sets the reading flag to false and returns the handler that should be called back with the result of the read. The cursor position that is sent is whatever the value of m\+\_\+cursor is.
+
+It M\+U\+ST N\+OT be called when m\+\_\+reading is false. it M\+U\+ST be called while holding the read lock
+
+It is important to use this method rather than directly setting/calling m\+\_\+read\+\_\+handler back because this function makes sure to delete the locally stored handler which contains shared pointers that will otherwise cause circular reference based memory leaks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ec} & The error code to forward to the read handler \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 361 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{dispatch(dispatch\+\_\+handler handler)}{dispatch(dispatch\_handler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ lib\+::error\+\_\+code {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::dispatch (
+\begin{DoxyParamCaption}
+\item[{{\bf dispatch\+\_\+handler}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a4cac08eb7b8646fc042d465b3bb645a6}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a4cac08eb7b8646fc042d465b3bb645a6}
+
+
+Call given handler back within the transport\textquotesingle{}s event system (if present) 
+
+Invoke a callback within the transport\textquotesingle{}s event system if it has one. If it doesn\textquotesingle{}t, the handler will be invoked immediately before this function returns.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The callback to invoke\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not the transport was able to register the handler for callback. 
+\end{DoxyReturn}
+
+
+Definition at line 311 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!get\+\_\+handle@{get\+\_\+handle}}
+\index{get\+\_\+handle@{get\+\_\+handle}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{get\+\_\+handle() const}{get\_handle() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ {\bf connection\+\_\+hdl} {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::get\+\_\+handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a258046ad6f04c2fe9d3b31da345c282f}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a258046ad6f04c2fe9d3b31da345c282f}
+
+
+Get the connection handle. 
+
+\begin{DoxyReturn}{Returns}
+The handle for this connection. 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!get\+\_\+remote\+\_\+endpoint@{get\+\_\+remote\+\_\+endpoint}}
+\index{get\+\_\+remote\+\_\+endpoint@{get\+\_\+remote\+\_\+endpoint}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{get\+\_\+remote\+\_\+endpoint() const}{get\_remote\_endpoint() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ std\+::string {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::get\+\_\+remote\+\_\+endpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a8e32def2e7de74a13684571cccce494b}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a8e32def2e7de74a13684571cccce494b}
+
+
+Get human readable remote endpoint address. 
+
+T\+O\+DO\+: docs
+
+This value is used in access and error logs and is available to the end application for including in user facing interfaces and messages.
+
+\begin{DoxyReturn}{Returns}
+A string identifying the address of the remote endpoint 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!init@{init}}
+\index{init@{init}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{init(init\+\_\+handler handler)}{init(init\_handler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::init (
+\begin{DoxyParamCaption}
+\item[{{\bf init\+\_\+handler}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a1ed8a6a163997f22ab3977c58514d607}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a1ed8a6a163997f22ab3977c58514d607}
+
+
+Initialize the connection transport. 
+
+Initialize the connection\textquotesingle{}s transport component.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The {\ttfamily init\+\_\+handler} to call when initialization is done \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 202 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!is\+\_\+secure@{is\+\_\+secure}}
+\index{is\+\_\+secure@{is\+\_\+secure}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{is\+\_\+secure() const}{is\_secure() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ bool {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::is\+\_\+secure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a49c3bba737ddb4a2ef6bf0c3b40fd130}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a49c3bba737ddb4a2ef6bf0c3b40fd130}
+
+
+Tests whether or not the underlying transport is secure. 
+
+T\+O\+DO\+: docs
+
+\begin{DoxyReturn}{Returns}
+Whether or not the underlying transport is secure 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!read\+\_\+all@{read\+\_\+all}}
+\index{read\+\_\+all@{read\+\_\+all}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{read\+\_\+all(char const $\ast$buf, size\+\_\+t len)}{read\_all(char const *buf, size\_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ size\+\_\+t {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::read\+\_\+all (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{buf, }
+\item[{size\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a36a7e0c517495dd8bdbecfa75c5a9d7b}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a36a7e0c517495dd8bdbecfa75c5a9d7b}
+
+
+Manual input supply (read all) 
+
+Similar to read\+\_\+some, but continues to read until all bytes in the supplied buffer have been read or the connection runs out of read requests.
+
+This method still may not read all of the bytes in the input buffer. if it doesn\textquotesingle{}t it indicates that the connection was most likely closed or is in an error state where it is no longer accepting new input.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Char buffer to read into the websocket \\
+\hline
+{\em len} & Length of buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters from buf actually read. 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!set\+\_\+handle@{set\+\_\+handle}}
+\index{set\+\_\+handle@{set\+\_\+handle}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+handle(connection\+\_\+hdl)}{set\_handle(connection\_hdl)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::set\+\_\+handle (
+\begin{DoxyParamCaption}
+\item[{{\bf connection\+\_\+hdl}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_affdbe8c6860526e66b651ddd402f9cf3}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_affdbe8c6860526e66b651ddd402f9cf3}
+
+
+Set Connection Handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hdl} & The new handle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 298 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!set\+\_\+remote\+\_\+endpoint@{set\+\_\+remote\+\_\+endpoint}}
+\index{set\+\_\+remote\+\_\+endpoint@{set\+\_\+remote\+\_\+endpoint}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+remote\+\_\+endpoint(std\+::string)}{set\_remote\_endpoint(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::set\+\_\+remote\+\_\+endpoint (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a3c0a3a5bc888a570c287190d299cf276}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a3c0a3a5bc888a570c287190d299cf276}
+
+
+Set human readable remote endpoint address. 
+
+Sets the remote endpoint address returned by {\ttfamily get\+\_\+remote\+\_\+endpoint}. This value should be a human readable string that describes the remote endpoint. Typically an IP address or hostname, perhaps with a port. But may be something else depending on the nature of the underlying transport.
+
+If none is set a default is returned.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0-\/alpha4
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The remote endpoint address to set. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!set\+\_\+secure@{set\+\_\+secure}}
+\index{set\+\_\+secure@{set\+\_\+secure}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+secure(bool)}{set\_secure(bool)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::set\+\_\+secure (
+\begin{DoxyParamCaption}
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a70244283cf80113e73f6dda8c1a2c4be}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a70244283cf80113e73f6dda8c1a2c4be}
+
+
+Set whether or not this connection is secure. 
+
+Todo\+: docs
+
+\begin{DoxySince}{Since}
+0.\+3.\+0-\/alpha4
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Whether or not this connection is secure. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}!set\+\_\+timer@{set\+\_\+timer}}
+\index{set\+\_\+timer@{set\+\_\+timer}!websocketpp\+::transport\+::debug\+::connection@{websocketpp\+::transport\+::debug\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+timer(long, timer\+\_\+handler handler)}{set\_timer(long, timer\_handler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ timer\+\_\+ptr {\bf websocketpp\+::transport\+::debug\+::connection}$<$ {\bf config} $>$\+::set\+\_\+timer (
+\begin{DoxyParamCaption}
+\item[{long}]{, }
+\item[{{\bf timer\+\_\+handler}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1connection_a56b96fed344bafbbb0453997dbf54f40}{}\label{classwebsocketpp_1_1transport_1_1debug_1_1connection_a56b96fed344bafbbb0453997dbf54f40}
+
+
+Call back a function after a period of time. 
+
+Timers are not implemented in this transport. The timer pointer will always be empty. The handler will never be called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & Length of time to wait in milliseconds \\
+\hline
+{\em callback} & The function to call back when the timer has expired \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle that can be used to cancel the timer if it is no longer needed. 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file connection.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/websocketpp/websocketpp/transport/debug/connection.\+hpp\end{DoxyCompactItemize}

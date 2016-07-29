@@ -1,0 +1,130 @@
+\hypertarget{classnfd_1_1UdpChannel}{}\section{nfd\+:\+:Udp\+Channel Class Reference}
+\label{classnfd_1_1UdpChannel}\index{nfd\+::\+Udp\+Channel@{nfd\+::\+Udp\+Channel}}
+
+
+Class implementing U\+D\+P-\/based channel to create faces.  
+
+
+
+
+{\ttfamily \#include $<$udp-\/channel.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Udp\+Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1UdpChannel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1UdpChannel_a763d929e20afb0c643a9ce21743fd72e}{Udp\+Channel} (const udp\+::\+Endpoint \&local\+Endpoint, const time\+::seconds \&timeout)
+\begin{DoxyCompactList}\small\item\em Create U\+DP channel for the local endpoint. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1UdpChannel_aa6007aac664051294f7739004d09f2ab}{listen} (const \hyperlink{classnfd_1_1Channel_a47f1a8874228ad9dfa38b4e96f6f8d57}{Face\+Created\+Callback} \&on\+Face\+Created, const \hyperlink{classnfd_1_1Channel_a090bac376b438fb150ce740c2839375b}{Connect\+Failed\+Callback} \&on\+Receive\+Failed)
+\begin{DoxyCompactList}\small\item\em Enable listening on the local endpoint, accept connections, and create faces when remote host makes a connection. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1UdpChannel_afa6d133e8de1e4762607a49fa6144116}{connect} (const udp\+::\+Endpoint \&remote\+Endpoint, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const \hyperlink{classnfd_1_1Channel_a47f1a8874228ad9dfa38b4e96f6f8d57}{Face\+Created\+Callback} \&on\+Face\+Created, const \hyperlink{classnfd_1_1Channel_a090bac376b438fb150ce740c2839375b}{Connect\+Failed\+Callback} \&on\+Connect\+Failed)
+\begin{DoxyCompactList}\small\item\em Create a face by establishing connection to remote endpoint. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnfd_1_1UdpChannel_a3cd5b2940d8b6a8981bdb684c28edf01}{size} () const\hypertarget{classnfd_1_1UdpChannel_a3cd5b2940d8b6a8981bdb684c28edf01}{}\label{classnfd_1_1UdpChannel_a3cd5b2940d8b6a8981bdb684c28edf01}
+
+\begin{DoxyCompactList}\small\item\em Get number of faces in the channel. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Listening} () const\hypertarget{classnfd_1_1UdpChannel_a975d88eaa354e3846243e9a219b2ebc9}{}\label{classnfd_1_1UdpChannel_a975d88eaa354e3846243e9a219b2ebc9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class implementing U\+D\+P-\/based channel to create faces. 
+
+Definition at line 42 of file udp-\/channel.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::\+Udp\+Channel@{nfd\+::\+Udp\+Channel}!Udp\+Channel@{Udp\+Channel}}
+\index{Udp\+Channel@{Udp\+Channel}!nfd\+::\+Udp\+Channel@{nfd\+::\+Udp\+Channel}}
+\subsubsection[{\texorpdfstring{Udp\+Channel(const udp\+::\+Endpoint \&local\+Endpoint, const time\+::seconds \&timeout)}{UdpChannel(const udp::Endpoint \&localEndpoint, const time::seconds \&timeout)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::\+Udp\+Channel\+::\+Udp\+Channel (
+\begin{DoxyParamCaption}
+\item[{const udp\+::\+Endpoint \&}]{local\+Endpoint, }
+\item[{const time\+::seconds \&}]{timeout}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UdpChannel_a763d929e20afb0c643a9ce21743fd72e}{}\label{classnfd_1_1UdpChannel_a763d929e20afb0c643a9ce21743fd72e}
+
+
+Create U\+DP channel for the local endpoint. 
+
+To enable creation of faces upon incoming connections, one needs to explicitly call \hyperlink{classnfd_1_1UdpChannel_aa6007aac664051294f7739004d09f2ab}{Udp\+Channel\+::listen} method. The created socket is bound to the local\+Endpoint. reuse\+\_\+address option is set
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Udp\+Channel\+::\+Error} & if bind on the socket fails \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 36 of file udp-\/channel.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Udp\+Channel@{nfd\+::\+Udp\+Channel}!connect@{connect}}
+\index{connect@{connect}!nfd\+::\+Udp\+Channel@{nfd\+::\+Udp\+Channel}}
+\subsubsection[{\texorpdfstring{connect(const udp\+::\+Endpoint \&remote\+Endpoint, ndn\+::nfd\+::\+Face\+Persistency persistency, const Face\+Created\+Callback \&on\+Face\+Created, const Connect\+Failed\+Callback \&on\+Connect\+Failed)}{connect(const udp::Endpoint \&remoteEndpoint, ndn::nfd::FacePersistency persistency, const FaceCreatedCallback \&onFaceCreated, const ConnectFailedCallback \&onConnectFailed)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Udp\+Channel\+::connect (
+\begin{DoxyParamCaption}
+\item[{const udp\+::\+Endpoint \&}]{remote\+Endpoint, }
+\item[{{\bf ndn\+::nfd\+::\+Face\+Persistency}}]{persistency, }
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Face\+Created, }
+\item[{const {\bf Connect\+Failed\+Callback} \&}]{on\+Connect\+Failed}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UdpChannel_afa6d133e8de1e4762607a49fa6144116}{}\label{classnfd_1_1UdpChannel_afa6d133e8de1e4762607a49fa6144116}
+
+
+Create a face by establishing connection to remote endpoint. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Udp\+Channel\+::\+Error} & if bind or connect on the socket fail \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 69 of file udp-\/channel.\+cpp.
+
+\index{nfd\+::\+Udp\+Channel@{nfd\+::\+Udp\+Channel}!listen@{listen}}
+\index{listen@{listen}!nfd\+::\+Udp\+Channel@{nfd\+::\+Udp\+Channel}}
+\subsubsection[{\texorpdfstring{listen(const Face\+Created\+Callback \&on\+Face\+Created, const Connect\+Failed\+Callback \&on\+Receive\+Failed)}{listen(const FaceCreatedCallback \&onFaceCreated, const ConnectFailedCallback \&onReceiveFailed)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Udp\+Channel\+::listen (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Face\+Created, }
+\item[{const {\bf Connect\+Failed\+Callback} \&}]{on\+Receive\+Failed}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UdpChannel_aa6007aac664051294f7739004d09f2ab}{}\label{classnfd_1_1UdpChannel_aa6007aac664051294f7739004d09f2ab}
+
+
+Enable listening on the local endpoint, accept connections, and create faces when remote host makes a connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Face\+Created} & Callback to notify successful creation of the face \\
+\hline
+{\em on\+Accept\+Failed} & Callback to notify when channel fails\\
+\hline
+\end{DoxyParams}
+Once a face is created, if it doesn\textquotesingle{}t send/receive anything for a period of time equal to timeout, it will be destroyed \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000019}{Todo}]this functionality has to be implemented\end{DoxyRefDesc}
+
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Udp\+Channel\+::\+Error} & if called multiple times \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 46 of file udp-\/channel.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/udp-\/channel.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/udp-\/channel.\+cpp\end{DoxyCompactItemize}

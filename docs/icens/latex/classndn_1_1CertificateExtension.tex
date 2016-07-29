@@ -1,0 +1,100 @@
+\hypertarget{classndn_1_1CertificateExtension}{}\section{ndn\+:\+:Certificate\+Extension Class Reference}
+\label{classndn_1_1CertificateExtension}\index{ndn\+::\+Certificate\+Extension@{ndn\+::\+Certificate\+Extension}}
+
+
+{\ttfamily \#include $<$certificate-\/extension.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1CertificateExtension_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Certificate\+Extension} (Crypto\+P\+P\+::\+Buffered\+Transformation \&in)\hypertarget{classndn_1_1CertificateExtension_a9d9f89e871d386248aec95bd6d1a10c5}{}\label{classndn_1_1CertificateExtension_a9d9f89e871d386248aec95bd6d1a10c5}
+
+\item 
+\hyperlink{classndn_1_1CertificateExtension_af06feb26061e8ce1631a761fc5964ca8}{Certificate\+Extension} (const \hyperlink{classndn_1_1OID}{O\+ID} \&oid, const bool is\+Critical, const \hyperlink{classndn_1_1Buffer}{Buffer} \&value)
+\item 
+{\bfseries Certificate\+Extension} (const \hyperlink{classndn_1_1OID}{O\+ID} \&oid, const bool is\+Critical, const uint8\+\_\+t $\ast$value, size\+\_\+t value\+Size)\hypertarget{classndn_1_1CertificateExtension_aa92e02de7a5d5f5cd189c98a7e52a14b}{}\label{classndn_1_1CertificateExtension_aa92e02de7a5d5f5cd189c98a7e52a14b}
+
+\item 
+virtual \hyperlink{classndn_1_1CertificateExtension_a75bfbaf7fb73bcc66eac2a6570da4ff2}{$\sim$\+Certificate\+Extension} ()
+\item 
+void {\bfseries encode} (Crypto\+P\+P\+::\+Buffered\+Transformation \&out) const\hypertarget{classndn_1_1CertificateExtension_ad42563f22a4c63559bac1f30232b16c9}{}\label{classndn_1_1CertificateExtension_ad42563f22a4c63559bac1f30232b16c9}
+
+\item 
+void {\bfseries decode} (Crypto\+P\+P\+::\+Buffered\+Transformation \&in)\hypertarget{classndn_1_1CertificateExtension_aa8cb052d806e7e9825b9fb6536339866}{}\label{classndn_1_1CertificateExtension_aa8cb052d806e7e9825b9fb6536339866}
+
+\item 
+const \hyperlink{classndn_1_1OID}{O\+ID} \& {\bfseries get\+Oid} () const\hypertarget{classndn_1_1CertificateExtension_af62a03daf0a77219396ee995d3110109}{}\label{classndn_1_1CertificateExtension_af62a03daf0a77219396ee995d3110109}
+
+\item 
+bool {\bfseries get\+Is\+Critical} () const\hypertarget{classndn_1_1CertificateExtension_ac774bb6ce160ca49093be4d32611951a}{}\label{classndn_1_1CertificateExtension_ac774bb6ce160ca49093be4d32611951a}
+
+\item 
+const \hyperlink{classndn_1_1Buffer}{Buffer} \& {\bfseries get\+Value} () const\hypertarget{classndn_1_1CertificateExtension_a2726ac915400b8ec6cb9941612edaf71}{}\label{classndn_1_1CertificateExtension_a2726ac915400b8ec6cb9941612edaf71}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1OID}{O\+ID} {\bfseries m\+\_\+extension\+Id}\hypertarget{classndn_1_1CertificateExtension_acddecc2fbed03d541a6e1ac5c24f270f}{}\label{classndn_1_1CertificateExtension_acddecc2fbed03d541a6e1ac5c24f270f}
+
+\item 
+bool {\bfseries m\+\_\+is\+Critical}\hypertarget{classndn_1_1CertificateExtension_ae72f31fa7528bbc6879e4813fbf77fc7}{}\label{classndn_1_1CertificateExtension_ae72f31fa7528bbc6879e4813fbf77fc7}
+
+\item 
+\hyperlink{classndn_1_1Buffer}{Buffer} {\bfseries m\+\_\+extension\+Value}\hypertarget{classndn_1_1CertificateExtension_a018a09e2e7f15d88669e1373d6620e30}{}\label{classndn_1_1CertificateExtension_a018a09e2e7f15d88669e1373d6620e30}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classndn_1_1CertificateExtension}{Certificate\+Extension} represents the Extension entry in a certificate. 
+
+Definition at line 42 of file certificate-\/extension.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Certificate\+Extension@{ndn\+::\+Certificate\+Extension}!Certificate\+Extension@{Certificate\+Extension}}
+\index{Certificate\+Extension@{Certificate\+Extension}!ndn\+::\+Certificate\+Extension@{ndn\+::\+Certificate\+Extension}}
+\subsubsection[{\texorpdfstring{Certificate\+Extension(const O\+I\+D \&oid, const bool is\+Critical, const Buffer \&value)}{CertificateExtension(const OID \&oid, const bool isCritical, const Buffer \&value)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Certificate\+Extension\+::\+Certificate\+Extension (
+\begin{DoxyParamCaption}
+\item[{const {\bf O\+ID} \&}]{oid, }
+\item[{const bool}]{is\+Critical, }
+\item[{const {\bf Buffer} \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1CertificateExtension_af06feb26061e8ce1631a761fc5964ca8}{}\label{classndn_1_1CertificateExtension_af06feb26061e8ce1631a761fc5964ca8}
+Create a new \hyperlink{classndn_1_1CertificateExtension}{Certificate\+Extension}. 
+\begin{DoxyParams}{Parameters}
+{\em oid} & The oid of subject description entry. \\
+\hline
+{\em is\+Critical} & If true, the extension must be handled. \\
+\hline
+{\em value} & The extension value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file certificate-\/extension.\+hpp.
+
+\index{ndn\+::\+Certificate\+Extension@{ndn\+::\+Certificate\+Extension}!````~Certificate\+Extension@{$\sim$\+Certificate\+Extension}}
+\index{````~Certificate\+Extension@{$\sim$\+Certificate\+Extension}!ndn\+::\+Certificate\+Extension@{ndn\+::\+Certificate\+Extension}}
+\subsubsection[{\texorpdfstring{$\sim$\+Certificate\+Extension()}{~CertificateExtension()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual ndn\+::\+Certificate\+Extension\+::$\sim$\+Certificate\+Extension (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1CertificateExtension_a75bfbaf7fb73bcc66eac2a6570da4ff2}{}\label{classndn_1_1CertificateExtension_a75bfbaf7fb73bcc66eac2a6570da4ff2}
+The virtual destructor. 
+
+Definition at line 82 of file certificate-\/extension.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate-\/extension.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/certificate-\/extension.\+cpp\end{DoxyCompactItemize}

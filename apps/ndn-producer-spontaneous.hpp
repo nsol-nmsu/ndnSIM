@@ -33,24 +33,29 @@ namespace ndn {
 
 /**
  * @ingroup ndn-apps
- * @brief A producer which publishes updates to its data at a fixed frequency.
- *        These updates are send regardless of whether an interest was received
- *        or not.
+ * @brief A producer which publishes updates of its data at a fixed frequency.
+ * These updates are sent regardless of whether an interest was received
+ * or not and nodes which subscribe to the data will receive it. Installed
+ * on nodes at the compute layer of Smart Grid architecture (iCenS)
  */
 class SpontaneousProducer : public App {
 public:
   static TypeId
   GetTypeId(void);
 
+  /// Default constructor for the class
   SpontaneousProducer();
-  
+
   // inherited from NdnApp
   virtual void
   OnInterest(shared_ptr<const Interest> interest);
 
+  /**
+   * @brief Send data to subscribed nodes (typically prosumers at the physical layer)
+   */
   void
   SendData(const Name &dataName);
-  
+
   void
   SendTimeout();
 

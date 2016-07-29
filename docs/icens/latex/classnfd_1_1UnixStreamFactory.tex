@@ -1,0 +1,95 @@
+\hypertarget{classnfd_1_1UnixStreamFactory}{}\section{nfd\+:\+:Unix\+Stream\+Factory Class Reference}
+\label{classnfd_1_1UnixStreamFactory}\index{nfd\+::\+Unix\+Stream\+Factory@{nfd\+::\+Unix\+Stream\+Factory}}
+Inheritance diagram for nfd\+:\+:Unix\+Stream\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1UnixStreamFactory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfd_1_1UnixStreamFactory_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Exception of \hyperlink{classnfd_1_1UnixStreamFactory}{Unix\+Stream\+Factory}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1UnixStreamChannel}{Unix\+Stream\+Channel} $>$ \hyperlink{classnfd_1_1UnixStreamFactory_ac54cfd92cffc2664b77e1962c348751a}{create\+Channel} (const std\+::string \&unix\+Socket\+Path)
+\begin{DoxyCompactList}\small\item\em Create stream-\/oriented Unix channel using specified socket path. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1UnixStreamFactory_a2f01d594f9aa3da8307e2f1a4f77094f}{create\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const \hyperlink{namespacenfd_a6d4b91580c829552a452c53458381b0f}{Face\+Created\+Callback} \&on\+Created, const \hyperlink{namespacenfd_ae87d4f07de26f4939691439b51f2dd83}{Face\+Connect\+Failed\+Callback} \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. \end{DoxyCompactList}\item 
+virtual std\+::list$<$ shared\+\_\+ptr$<$ const \hyperlink{classnfd_1_1Channel}{Channel} $>$ $>$ {\bfseries get\+Channels} () const\hypertarget{classnfd_1_1UnixStreamFactory_a7b84935f44e357170805ce46f881e091}{}\label{classnfd_1_1UnixStreamFactory_a7b84935f44e357170805ce46f881e091}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 34 of file unix-\/stream-\/factory.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Unix\+Stream\+Factory@{nfd\+::\+Unix\+Stream\+Factory}!create\+Channel@{create\+Channel}}
+\index{create\+Channel@{create\+Channel}!nfd\+::\+Unix\+Stream\+Factory@{nfd\+::\+Unix\+Stream\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Channel(const std\+::string \&unix\+Socket\+Path)}{createChannel(const std::string \&unixSocketPath)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Unix\+Stream\+Channel} $>$ nfd\+::\+Unix\+Stream\+Factory\+::create\+Channel (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{unix\+Socket\+Path}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UnixStreamFactory_ac54cfd92cffc2664b77e1962c348751a}{}\label{classnfd_1_1UnixStreamFactory_ac54cfd92cffc2664b77e1962c348751a}
+
+
+Create stream-\/oriented Unix channel using specified socket path. 
+
+If this method is called twice with the same path, only one channel will be created. The second call will just retrieve the existing channel.
+
+\begin{DoxyReturn}{Returns}
+always a valid pointer to a \hyperlink{classnfd_1_1UnixStreamChannel}{Unix\+Stream\+Channel} object, an exception will be thrown if the channel cannot be created.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{structnfd_1_1UnixStreamFactory_1_1Error}{Unix\+Stream\+Factory\+::\+Error}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 33 of file unix-\/stream-\/factory.\+cpp.
+
+\index{nfd\+::\+Unix\+Stream\+Factory@{nfd\+::\+Unix\+Stream\+Factory}!create\+Face@{create\+Face}}
+\index{create\+Face@{create\+Face}!nfd\+::\+Unix\+Stream\+Factory@{nfd\+::\+Unix\+Stream\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Face(const Face\+Uri \&uri, ndn\+::nfd\+::\+Face\+Persistency persistency, const Face\+Created\+Callback \&on\+Created, const Face\+Connect\+Failed\+Callback \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{createFace(const FaceUri \&uri, ndn::nfd::FacePersistency persistency, const FaceCreatedCallback \&onCreated, const FaceConnectFailedCallback \&onConnectFailed) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Unix\+Stream\+Factory\+::create\+Face (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{uri, }
+\item[{{\bf ndn\+::nfd\+::\+Face\+Persistency}}]{persistency, }
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Created, }
+\item[{const {\bf Face\+Connect\+Failed\+Callback} \&}]{on\+Connect\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1UnixStreamFactory_a2f01d594f9aa3da8307e2f1a4f77094f}{}\label{classnfd_1_1UnixStreamFactory_a2f01d594f9aa3da8307e2f1a4f77094f}
+
+
+Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. 
+
+This method should automatically choose channel, based on supplied Face\+Uri and create face.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{structnfd_1_1UnixStreamFactory_1_1Error}{Error}} & Factory does not support connect operation \\
+\hline
+{\em \hyperlink{structnfd_1_1UnixStreamFactory_1_1Error}{Error}} & specified {\ttfamily persistency} is not supported \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}{nfd\+::\+Protocol\+Factory}.
+
+
+
+Definition at line 59 of file unix-\/stream-\/factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/unix-\/stream-\/factory.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/unix-\/stream-\/factory.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classndn_1_1util_1_1signal_1_1Connection}{}\section{ndn\+:\+:util\+:\+:signal\+:\+:Connection Class Reference}
+\label{classndn_1_1util_1_1signal_1_1Connection}\index{ndn\+::util\+::signal\+::\+Connection@{ndn\+::util\+::signal\+::\+Connection}}
+
+
+represents a connection to a signal  
+
+
+
+
+{\ttfamily \#include $<$signal-\/connection.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classndn_1_1util_1_1signal_1_1Connection_abcebeaa090880c3b5d3ae485fef6ca04}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em disconnects from the signal \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1signal_1_1Connection_a0c1ab2237b16b80f26d66f1215e0e71f}{is\+Connected} () const
+\begin{DoxyCompactList}\small\item\em check if connected to the signal \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1signal_1_1Connection_a6405a5322e3a92a03baa3070e7ee3895}{operator==} (const \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} \&other) const
+\begin{DoxyCompactList}\small\item\em compare for equality \end{DoxyCompactList}\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1util_1_1signal_1_1Connection}{Connection} \&other) const\hypertarget{classndn_1_1util_1_1signal_1_1Connection_a78fa872043f44910c744d1b993a3e866}{}\label{classndn_1_1util_1_1signal_1_1Connection_a78fa872043f44910c744d1b993a3e866}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Owner , typename ... T\+Args$>$ }\\class {\bfseries Signal}\hypertarget{classndn_1_1util_1_1signal_1_1Connection_a7cea54a98a220ab4ff4f533b911a3e5b}{}\label{classndn_1_1util_1_1signal_1_1Connection_a7cea54a98a220ab4ff4f533b911a3e5b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a connection to a signal 
+
+\begin{DoxyNote}{Note}
+This type is copyable. Any copy can be used to disconnect. 
+\end{DoxyNote}
+
+
+Definition at line 34 of file signal-\/connection.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::signal\+::\+Connection@{ndn\+::util\+::signal\+::\+Connection}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!ndn\+::util\+::signal\+::\+Connection@{ndn\+::util\+::signal\+::\+Connection}}
+\subsubsection[{\texorpdfstring{disconnect()}{disconnect()}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::util\+::signal\+::\+Connection\+::disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1signal_1_1Connection_abcebeaa090880c3b5d3ae485fef6ca04}{}\label{classndn_1_1util_1_1signal_1_1Connection_abcebeaa090880c3b5d3ae485fef6ca04}
+
+
+disconnects from the signal 
+
+\begin{DoxyNote}{Note}
+If the connection is already disconnected, or if the \hyperlink{classndn_1_1util_1_1signal_1_1Signal}{Signal} has been destructed, this operation has no effect. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+During signal emission, attempting to disconnect a connection other than the executing handler\textquotesingle{}s own connection results in undefined behavior. 
+\end{DoxyWarning}
+
+
+Definition at line 40 of file signal-\/connection.\+cpp.
+
+\index{ndn\+::util\+::signal\+::\+Connection@{ndn\+::util\+::signal\+::\+Connection}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!ndn\+::util\+::signal\+::\+Connection@{ndn\+::util\+::signal\+::\+Connection}}
+\subsubsection[{\texorpdfstring{is\+Connected() const}{isConnected() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::util\+::signal\+::\+Connection\+::is\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1signal_1_1Connection_a0c1ab2237b16b80f26d66f1215e0e71f}{}\label{classndn_1_1util_1_1signal_1_1Connection_a0c1ab2237b16b80f26d66f1215e0e71f}
+
+
+check if connected to the signal 
+
+\begin{DoxyReturn}{Returns}
+false if disconnected from the signal 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file signal-\/connection.\+cpp.
+
+\index{ndn\+::util\+::signal\+::\+Connection@{ndn\+::util\+::signal\+::\+Connection}!operator==@{operator==}}
+\index{operator==@{operator==}!ndn\+::util\+::signal\+::\+Connection@{ndn\+::util\+::signal\+::\+Connection}}
+\subsubsection[{\texorpdfstring{operator==(const Connection \&other) const}{operator==(const Connection \&other) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::util\+::signal\+::\+Connection\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Connection} \&}]{other}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1signal_1_1Connection_a6405a5322e3a92a03baa3070e7ee3895}{}\label{classndn_1_1util_1_1signal_1_1Connection_a6405a5322e3a92a03baa3070e7ee3895}
+
+
+compare for equality 
+
+Two connections are equal if they both refer to the same connection that isn\textquotesingle{}t disconnected, or they are both disconnected. 
+
+Definition at line 55 of file signal-\/connection.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/signal-\/connection.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/signal-\/connection.\+cpp\end{DoxyCompactItemize}

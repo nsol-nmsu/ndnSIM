@@ -1,0 +1,175 @@
+\hypertarget{classndn_1_1security_1_1ValidityPeriod}{}\section{ndn\+:\+:security\+:\+:Validity\+Period Class Reference}
+\label{classndn_1_1security_1_1ValidityPeriod}\index{ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}}
+
+
+Abstraction of validity period.  
+
+
+
+
+{\ttfamily \#include $<$validity-\/period.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1security_1_1ValidityPeriod_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1security_1_1ValidityPeriod_ac5f431a587ae64573d98fb43de15a1be}{Validity\+Period} ()=default\hypertarget{classndn_1_1security_1_1ValidityPeriod_ac5f431a587ae64573d98fb43de15a1be}{}\label{classndn_1_1security_1_1ValidityPeriod_ac5f431a587ae64573d98fb43de15a1be}
+
+\begin{DoxyCompactList}\small\item\em Set validity period (U\+N\+IX epoch, U\+N\+IX epoch) that is always invalid. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1ValidityPeriod_a32bfd4f2eb8a9cd46ebe8c3f9db33c4b}{Validity\+Period} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1security_1_1ValidityPeriod_a32bfd4f2eb8a9cd46ebe8c3f9db33c4b}{}\label{classndn_1_1security_1_1ValidityPeriod_a32bfd4f2eb8a9cd46ebe8c3f9db33c4b}
+
+\begin{DoxyCompactList}\small\item\em Create validity period from {\ttfamily block}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1ValidityPeriod_a3d142a6b4db37121218ac0e0e1dd8f7a}{Validity\+Period} (const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After)
+\begin{DoxyCompactList}\small\item\em Create validity period ({\ttfamily not\+Before}, {\ttfamily not\+After}) \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1security_1_1ValidityPeriod_a70802488f9d544e4a1726ae7c4c16ea4}{is\+Valid} (const time\+::system\+\_\+clock\+::\+Time\+Point \&now=time\+::system\+\_\+clock\+::now()) const
+\begin{DoxyCompactList}\small\item\em Check if {\ttfamily now} falls within the validity period. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} \& \hyperlink{classndn_1_1security_1_1ValidityPeriod_aeaf46f808d82379340773ebf9cdd8e4c}{set\+Period} (const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After)
+\begin{DoxyCompactList}\small\item\em Set validity period ({\ttfamily not\+Before}, {\ttfamily not\+After}) \end{DoxyCompactList}\item 
+std\+::pair$<$ time\+::system\+\_\+clock\+::\+Time\+Point, time\+::system\+\_\+clock\+::\+Time\+Point $>$ \hyperlink{classndn_1_1security_1_1ValidityPeriod_aa90fc2056e5ffba124f0f62d59e65ef6}{get\+Period} () const\hypertarget{classndn_1_1security_1_1ValidityPeriod_aa90fc2056e5ffba124f0f62d59e65ef6}{}\label{classndn_1_1security_1_1ValidityPeriod_aa90fc2056e5ffba124f0f62d59e65ef6}
+
+\begin{DoxyCompactList}\small\item\em Get the stored validity period. \end{DoxyCompactList}\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1security_1_1ValidityPeriod_a5f7df62caf6b42a3ddee1398b76c4a35}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1security_1_1ValidityPeriod_a5f7df62caf6b42a3ddee1398b76c4a35}{}\label{classndn_1_1security_1_1ValidityPeriod_a5f7df62caf6b42a3ddee1398b76c4a35}
+
+\begin{DoxyCompactList}\small\item\em Fast encoding or block size estimation. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1security_1_1ValidityPeriod_af2d8196ebabd276b9899ace2e8c26cf9}{wire\+Encode} () const\hypertarget{classndn_1_1security_1_1ValidityPeriod_af2d8196ebabd276b9899ace2e8c26cf9}{}\label{classndn_1_1security_1_1ValidityPeriod_af2d8196ebabd276b9899ace2e8c26cf9}
+
+\begin{DoxyCompactList}\small\item\em Encode \hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} into T\+LV block. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1ValidityPeriod_a78069c3360c5270d9a157e30f54b2c0b}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Decode \hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} from T\+LV block. \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} \&other) const\hypertarget{classndn_1_1security_1_1ValidityPeriod_a7fd380753f79f9b96b6a996b6f386b64}{}\label{classndn_1_1security_1_1ValidityPeriod_a7fd380753f79f9b96b6a996b6f386b64}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} \&other) const\hypertarget{classndn_1_1security_1_1ValidityPeriod_aa6486ae7cddebad629ed96ae5f77860a}{}\label{classndn_1_1security_1_1ValidityPeriod_aa6486ae7cddebad629ed96ae5f77860a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstraction of validity period. 
+
+\begin{DoxySeeAlso}{See also}
+docs/tutorials/certificate-\/format.\+rst 
+\end{DoxySeeAlso}
+
+
+Definition at line 37 of file validity-\/period.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}!Validity\+Period@{Validity\+Period}}
+\index{Validity\+Period@{Validity\+Period}!ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}}
+\subsubsection[{\texorpdfstring{Validity\+Period(const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After)}{ValidityPeriod(const time::system\_clock::TimePoint \&notBefore, const time::system\_clock::TimePoint \&notAfter)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::security\+::\+Validity\+Period\+::\+Validity\+Period (
+\begin{DoxyParamCaption}
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{not\+Before, }
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{not\+After}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1ValidityPeriod_a3d142a6b4db37121218ac0e0e1dd8f7a}{}\label{classndn_1_1security_1_1ValidityPeriod_a3d142a6b4db37121218ac0e0e1dd8f7a}
+
+
+Create validity period ({\ttfamily not\+Before}, {\ttfamily not\+After}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em not\+Before} & exclusive beginning of the validity period range \\
+\hline
+{\em not\+After} & exclusive end of the validity period range\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The supplied time points will be rounded up to the whole seconds\+:
+\begin{DoxyItemize}
+\item {\ttfamily not\+Before} is rounded up the next whole second
+\item {\ttfamily not\+After} is truncated to the previous whole second 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+Definition at line 42 of file validity-\/period.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}}
+\subsubsection[{\texorpdfstring{is\+Valid(const time\+::system\+\_\+clock\+::\+Time\+Point \&now=time\+::system\+\_\+clock\+::now()) const}{isValid(const time::system\_clock::TimePoint \&now=time::system\_clock::now()) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::security\+::\+Validity\+Period\+::is\+Valid (
+\begin{DoxyParamCaption}
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{now = {\ttfamily time\+:\+:system\+\_\+clock\+:\+:now()}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1ValidityPeriod_a70802488f9d544e4a1726ae7c4c16ea4}{}\label{classndn_1_1security_1_1ValidityPeriod_a70802488f9d544e4a1726ae7c4c16ea4}
+
+
+Check if {\ttfamily now} falls within the validity period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em now} & Time point to check if it falls within the period \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+period\+Begin $<$ {\ttfamily now} and {\ttfamily now} $<$ period\+End 
+\end{DoxyReturn}
+
+
+Definition at line 145 of file validity-\/period.\+cpp.
+
+\index{ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}!set\+Period@{set\+Period}}
+\index{set\+Period@{set\+Period}!ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}}
+\subsubsection[{\texorpdfstring{set\+Period(const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After)}{setPeriod(const time::system\_clock::TimePoint \&notBefore, const time::system\_clock::TimePoint \&notAfter)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Validity\+Period} \& ndn\+::security\+::\+Validity\+Period\+::set\+Period (
+\begin{DoxyParamCaption}
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{not\+Before, }
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{not\+After}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1ValidityPeriod_aeaf46f808d82379340773ebf9cdd8e4c}{}\label{classndn_1_1security_1_1ValidityPeriod_aeaf46f808d82379340773ebf9cdd8e4c}
+
+
+Set validity period ({\ttfamily not\+Before}, {\ttfamily not\+After}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em not\+Before} & exclusive beginning of the validity period range \\
+\hline
+{\em not\+After} & exclusive end of the validity period range\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The supplied time points will be rounded up to the whole seconds\+:
+\begin{DoxyItemize}
+\item {\ttfamily not\+Before} is rounded up the next whole second
+\item {\ttfamily not\+After} is truncated to the previous whole second 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+Definition at line 128 of file validity-\/period.\+cpp.
+
+\index{ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}!wire\+Decode@{wire\+Decode}}
+\index{wire\+Decode@{wire\+Decode}!ndn\+::security\+::\+Validity\+Period@{ndn\+::security\+::\+Validity\+Period}}
+\subsubsection[{\texorpdfstring{wire\+Decode(const Block \&wire)}{wireDecode(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Validity\+Period\+::wire\+Decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1ValidityPeriod_a78069c3360c5270d9a157e30f54b2c0b}{}\label{classndn_1_1security_1_1ValidityPeriod_a78069c3360c5270d9a157e30f54b2c0b}
+
+
+Decode \hyperlink{classndn_1_1security_1_1ValidityPeriod}{Validity\+Period} from T\+LV block. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1ValidityPeriod_1_1Error}{Error}} & when an invalid T\+LV block supplied \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 94 of file validity-\/period.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/validity-\/period.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/validity-\/period.\+cpp\end{DoxyCompactItemize}

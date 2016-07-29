@@ -1,0 +1,166 @@
+\hypertarget{classnfd_1_1rib_1_1FibUpdater}{}\section{nfd\+:\+:rib\+:\+:Fib\+Updater Class Reference}
+\label{classnfd_1_1rib_1_1FibUpdater}\index{nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}}
+
+
+computes Fib\+Updates based on updates to the R\+IB and sends them to N\+FD  
+
+
+
+
+{\ttfamily \#include $<$fib-\/updater.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:rib\+:\+:Fib\+Updater\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1rib_1_1FibUpdater}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1rib_1_1FibUpdater_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list$<$ \hyperlink{classnfd_1_1rib_1_1FibUpdate}{Fib\+Update} $>$ {\bfseries Fib\+Update\+List}\hypertarget{classnfd_1_1rib_1_1FibUpdater_a9d4a1b9228f64099a71a79766724fb1a}{}\label{classnfd_1_1rib_1_1FibUpdater_a9d4a1b9228f64099a71a79766724fb1a}
+
+\item 
+typedef function$<$ void(Rib\+Update\+List inherited\+Routes)$>$ {\bfseries Fib\+Update\+Success\+Callback}\hypertarget{classnfd_1_1rib_1_1FibUpdater_a8f17f1f8599e945032a53d4431e4c765}{}\label{classnfd_1_1rib_1_1FibUpdater_a8f17f1f8599e945032a53d4431e4c765}
+
+\item 
+typedef function$<$ void(uint32\+\_\+t code, const std\+::string \&error)$>$ {\bfseries Fib\+Update\+Failure\+Callback}\hypertarget{classnfd_1_1rib_1_1FibUpdater_ac89bd6638f826e2f913535f948c4b761}{}\label{classnfd_1_1rib_1_1FibUpdater_ac89bd6638f826e2f913535f948c4b761}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Fib\+Updater} (\hyperlink{classnfd_1_1rib_1_1Rib}{Rib} \&rib, \hyperlink{classndn_1_1nfd_1_1Controller}{ndn\+::nfd\+::\+Controller} \&controller)\hypertarget{classnfd_1_1rib_1_1FibUpdater_a94872d5edd5e021459c2dde505bba818}{}\label{classnfd_1_1rib_1_1FibUpdater_a94872d5edd5e021459c2dde505bba818}
+
+\item 
+void \hyperlink{classnfd_1_1rib_1_1FibUpdater_afdf597ef66822604f08f440df6b0732b}{compute\+And\+Send\+Fib\+Updates} (const \hyperlink{classnfd_1_1rib_1_1RibUpdateBatch}{Rib\+Update\+Batch} \&batch, const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure)
+\begin{DoxyCompactList}\small\item\em computes Fib\+Updates using the provided \hyperlink{classnfd_1_1rib_1_1RibUpdateBatch}{Rib\+Update\+Batch} and then sends the updates to N\+FD\textquotesingle{}s F\+IB \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1FibUpdater_a361fdb67b91245bdb2a4338f9be27715}{send\+Updates} (const Fib\+Update\+List \&updates, const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure)
+\begin{DoxyCompactList}\small\item\em sends the passed updates to N\+FD \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1FibUpdater_ac14122fdd905bb77fd56f0d8fb5b70f6}{send\+Updates\+For\+Batch\+Face\+Id} (const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure)\hypertarget{classnfd_1_1rib_1_1FibUpdater_ac14122fdd905bb77fd56f0d8fb5b70f6}{}\label{classnfd_1_1rib_1_1FibUpdater_ac14122fdd905bb77fd56f0d8fb5b70f6}
+
+\begin{DoxyCompactList}\small\item\em sends the updates in m\+\_\+updates\+For\+Batch\+Face\+Id to N\+FD if any exist, otherwise calls \hyperlink{classnfd_1_1rib_1_1FibUpdater_a554c3a29611ca54110584a6e1aa37f74}{Fib\+Updater\+::send\+Updates\+For\+Non\+Batch\+Face\+Id}. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1FibUpdater_a554c3a29611ca54110584a6e1aa37f74}{send\+Updates\+For\+Non\+Batch\+Face\+Id} (const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure)\hypertarget{classnfd_1_1rib_1_1FibUpdater_a554c3a29611ca54110584a6e1aa37f74}{}\label{classnfd_1_1rib_1_1FibUpdater_a554c3a29611ca54110584a6e1aa37f74}
+
+\begin{DoxyCompactList}\small\item\em sends the updates in m\+\_\+updates\+For\+Non\+Batch\+Face\+Id to N\+FD if any exist, otherwise calls on\+Success. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1FibUpdater_a0cd91c4e504437bfc2a65f3e2a239555}{send\+Add\+Next\+Hop\+Update} (const \hyperlink{classnfd_1_1rib_1_1FibUpdate}{Fib\+Update} \&update, const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure, uint32\+\_\+t n\+Timeouts=0)
+\begin{DoxyCompactList}\small\item\em sends a Fib\+Add\+Next\+Hop\+Command to N\+FD using the parameters supplied by the passed update \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1FibUpdater_a19273573c98061b5878254d4e685eaa7}{send\+Remove\+Next\+Hop\+Update} (const \hyperlink{classnfd_1_1rib_1_1FibUpdate}{Fib\+Update} \&update, const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure, uint32\+\_\+t n\+Timeouts=0)
+\begin{DoxyCompactList}\small\item\em sends a Fib\+Remove\+Next\+Hop\+Command to N\+FD using the parameters supplied by the passed update \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void compute\+Updates(const \hyperlink{classnfd_1_1rib_1_1RibUpdateBatch}{Rib\+Update\+Batch}\& batch)\hypertarget{classnfd_1_1rib_1_1FibUpdater_a54b703a2f4dfeee40d48a676f764f1cc}{}\label{classnfd_1_1rib_1_1FibUpdater_a54b703a2f4dfeee40d48a676f764f1cc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+computes Fib\+Updates based on updates to the R\+IB and sends them to N\+FD 
+
+Definition at line 41 of file fib-\/updater.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}!compute\+And\+Send\+Fib\+Updates@{compute\+And\+Send\+Fib\+Updates}}
+\index{compute\+And\+Send\+Fib\+Updates@{compute\+And\+Send\+Fib\+Updates}!nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}}
+\subsubsection[{\texorpdfstring{compute\+And\+Send\+Fib\+Updates(const Rib\+Update\+Batch \&batch, const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure)}{computeAndSendFibUpdates(const RibUpdateBatch \&batch, const FibUpdateSuccessCallback \&onSuccess, const FibUpdateFailureCallback \&onFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::rib\+::\+Fib\+Updater\+::compute\+And\+Send\+Fib\+Updates (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rib\+Update\+Batch} \&}]{batch, }
+\item[{const Fib\+Update\+Success\+Callback \&}]{on\+Success, }
+\item[{const Fib\+Update\+Failure\+Callback \&}]{on\+Failure}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1FibUpdater_afdf597ef66822604f08f440df6b0732b}{}\label{classnfd_1_1rib_1_1FibUpdater_afdf597ef66822604f08f440df6b0732b}
+
+
+computes Fib\+Updates using the provided \hyperlink{classnfd_1_1rib_1_1RibUpdateBatch}{Rib\+Update\+Batch} and then sends the updates to N\+FD\textquotesingle{}s F\+IB 
+
+\begin{DoxyNote}{Note}
+Caller must guarantee that the previous batch has either succeeded or failed before calling this method 
+\end{DoxyNote}
+
+
+Definition at line 50 of file fib-\/updater.\+cpp.
+
+\index{nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}!send\+Add\+Next\+Hop\+Update@{send\+Add\+Next\+Hop\+Update}}
+\index{send\+Add\+Next\+Hop\+Update@{send\+Add\+Next\+Hop\+Update}!nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Add\+Next\+Hop\+Update(const Fib\+Update \&update, const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure, uint32\+\_\+t n\+Timeouts=0)}{sendAddNextHopUpdate(const FibUpdate \&update, const FibUpdateSuccessCallback \&onSuccess, const FibUpdateFailureCallback \&onFailure, uint32\_t nTimeouts=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::rib\+::\+Fib\+Updater\+::send\+Add\+Next\+Hop\+Update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fib\+Update} \&}]{update, }
+\item[{const Fib\+Update\+Success\+Callback \&}]{on\+Success, }
+\item[{const Fib\+Update\+Failure\+Callback \&}]{on\+Failure, }
+\item[{uint32\+\_\+t}]{n\+Timeouts = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1FibUpdater_a0cd91c4e504437bfc2a65f3e2a239555}{}\label{classnfd_1_1rib_1_1FibUpdater_a0cd91c4e504437bfc2a65f3e2a239555}
+
+
+sends a Fib\+Add\+Next\+Hop\+Command to N\+FD using the parameters supplied by the passed update 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Timeouts} & the number of times this \hyperlink{classnfd_1_1rib_1_1FibUpdate}{Fib\+Update} has failed due to timeout \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 235 of file fib-\/updater.\+cpp.
+
+\index{nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}!send\+Remove\+Next\+Hop\+Update@{send\+Remove\+Next\+Hop\+Update}}
+\index{send\+Remove\+Next\+Hop\+Update@{send\+Remove\+Next\+Hop\+Update}!nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Remove\+Next\+Hop\+Update(const Fib\+Update \&update, const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure, uint32\+\_\+t n\+Timeouts=0)}{sendRemoveNextHopUpdate(const FibUpdate \&update, const FibUpdateSuccessCallback \&onSuccess, const FibUpdateFailureCallback \&onFailure, uint32\_t nTimeouts=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::rib\+::\+Fib\+Updater\+::send\+Remove\+Next\+Hop\+Update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Fib\+Update} \&}]{update, }
+\item[{const Fib\+Update\+Success\+Callback \&}]{on\+Success, }
+\item[{const Fib\+Update\+Failure\+Callback \&}]{on\+Failure, }
+\item[{uint32\+\_\+t}]{n\+Timeouts = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1FibUpdater_a19273573c98061b5878254d4e685eaa7}{}\label{classnfd_1_1rib_1_1FibUpdater_a19273573c98061b5878254d4e685eaa7}
+
+
+sends a Fib\+Remove\+Next\+Hop\+Command to N\+FD using the parameters supplied by the passed update 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Timeouts} & the number of times this \hyperlink{classnfd_1_1rib_1_1FibUpdate}{Fib\+Update} has failed due to timeout \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 250 of file fib-\/updater.\+cpp.
+
+\index{nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}!send\+Updates@{send\+Updates}}
+\index{send\+Updates@{send\+Updates}!nfd\+::rib\+::\+Fib\+Updater@{nfd\+::rib\+::\+Fib\+Updater}}
+\subsubsection[{\texorpdfstring{send\+Updates(const Fib\+Update\+List \&updates, const Fib\+Update\+Success\+Callback \&on\+Success, const Fib\+Update\+Failure\+Callback \&on\+Failure)}{sendUpdates(const FibUpdateList \&updates, const FibUpdateSuccessCallback \&onSuccess, const FibUpdateFailureCallback \&onFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::rib\+::\+Fib\+Updater\+::send\+Updates (
+\begin{DoxyParamCaption}
+\item[{const Fib\+Update\+List \&}]{updates, }
+\item[{const Fib\+Update\+Success\+Callback \&}]{on\+Success, }
+\item[{const Fib\+Update\+Failure\+Callback \&}]{on\+Failure}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1FibUpdater_a361fdb67b91245bdb2a4338f9be27715}{}\label{classnfd_1_1rib_1_1FibUpdater_a361fdb67b91245bdb2a4338f9be27715}
+
+
+sends the passed updates to N\+FD 
+
+on\+Success or on\+Failure will be called based on the results in on\+Update\+Success or on\+Update\+Failure
+
+\begin{DoxySeeAlso}{See also}
+Fib\+Updater\+::on\+Update\+Success 
+
+Fib\+Updater\+::on\+Update\+Failure 
+\end{DoxySeeAlso}
+
+
+Definition at line 191 of file fib-\/updater.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/fib-\/updater.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/fib-\/updater.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{classnfd_1_1ProtocolFactory}{}\section{nfd\+:\+:Protocol\+Factory Class Reference}
+\label{classnfd_1_1ProtocolFactory}\index{nfd\+::\+Protocol\+Factory@{nfd\+::\+Protocol\+Factory}}
+Inheritance diagram for nfd\+:\+:Protocol\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.901771cm]{classnfd_1_1ProtocolFactory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfd_1_1ProtocolFactory_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Base class for all exceptions thrown by channel factories. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}{create\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const \hyperlink{namespacenfd_a6d4b91580c829552a452c53458381b0f}{Face\+Created\+Callback} \&on\+Created, const \hyperlink{namespacenfd_ae87d4f07de26f4939691439b51f2dd83}{Face\+Connect\+Failed\+Callback} \&on\+Connect\+Failed)=0
+\begin{DoxyCompactList}\small\item\em Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. \end{DoxyCompactList}\item 
+virtual std\+::list$<$ shared\+\_\+ptr$<$ const \hyperlink{classnfd_1_1Channel}{Channel} $>$ $>$ {\bfseries get\+Channels} () const =0\hypertarget{classnfd_1_1ProtocolFactory_aa3b8a669d5a47ea12e4ba249de73fc62}{}\label{classnfd_1_1ProtocolFactory_aa3b8a669d5a47ea12e4ba249de73fc62}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 50 of file protocol-\/factory.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Protocol\+Factory@{nfd\+::\+Protocol\+Factory}!create\+Face@{create\+Face}}
+\index{create\+Face@{create\+Face}!nfd\+::\+Protocol\+Factory@{nfd\+::\+Protocol\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Face(const Face\+Uri \&uri, ndn\+::nfd\+::\+Face\+Persistency persistency, const Face\+Created\+Callback \&on\+Created, const Face\+Connect\+Failed\+Callback \&on\+Connect\+Failed)=0}{createFace(const FaceUri \&uri, ndn::nfd::FacePersistency persistency, const FaceCreatedCallback \&onCreated, const FaceConnectFailedCallback \&onConnectFailed)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nfd\+::\+Protocol\+Factory\+::create\+Face (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{uri, }
+\item[{{\bf ndn\+::nfd\+::\+Face\+Persistency}}]{persistency, }
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Created, }
+\item[{const {\bf Face\+Connect\+Failed\+Callback} \&}]{on\+Connect\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}{}\label{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}
+
+
+Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. 
+
+This method should automatically choose channel, based on supplied Face\+Uri and create face.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{structnfd_1_1ProtocolFactory_1_1Error}{Error}} & Factory does not support connect operation \\
+\hline
+{\em \hyperlink{structnfd_1_1ProtocolFactory_1_1Error}{Error}} & specified {\ttfamily persistency} is not supported \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classnfd_1_1UdpFactory_af218bef7aaec0a3e2d84b5ce013e71dd}{nfd\+::\+Udp\+Factory}, \hyperlink{classnfd_1_1TcpFactory_adae42421216ea295e35ef9177d0fe95f}{nfd\+::\+Tcp\+Factory}, \hyperlink{classnfd_1_1WebSocketFactory_a897429d95c0b5cde2744bc8e9ae5749b}{nfd\+::\+Web\+Socket\+Factory}, \hyperlink{classnfd_1_1tests_1_1DummyProtocolFactory_af5e5941643b9910c8e07f14112367dc2}{nfd\+::tests\+::\+Dummy\+Protocol\+Factory}, \hyperlink{classnfd_1_1UnixStreamFactory_a2f01d594f9aa3da8307e2f1a4f77094f}{nfd\+::\+Unix\+Stream\+Factory}, and \hyperlink{classnfd_1_1EthernetFactory_a6e89157070fdaad6cccbb43a15e5d730}{nfd\+::\+Ethernet\+Factory}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/protocol-\/factory.\+hpp\end{DoxyCompactItemize}

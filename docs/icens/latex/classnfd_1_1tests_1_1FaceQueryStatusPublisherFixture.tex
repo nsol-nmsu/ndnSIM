@@ -1,0 +1,71 @@
+\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture}{}\section{nfd\+:\+:tests\+:\+:Face\+Query\+Status\+Publisher\+Fixture Class Reference}
+\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture}\index{nfd\+::tests\+::\+Face\+Query\+Status\+Publisher\+Fixture@{nfd\+::tests\+::\+Face\+Query\+Status\+Publisher\+Fixture}}
+Inheritance diagram for nfd\+:\+:tests\+:\+:Face\+Query\+Status\+Publisher\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries add} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a236e742fd94efb7da4e3bb9152818fc1}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a236e742fd94efb7da4e3bb9152818fc1}
+
+\item 
+void {\bfseries validate\+Face\+Status} (const \hyperlink{classndn_1_1Block}{Block} \&status\+Block, const shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \&reference)\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_aa194c9e6611ab0fcfb0161cae22bd123}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_aa194c9e6611ab0fcfb0161cae22bd123}
+
+\item 
+void {\bfseries decode\+Face\+Status\+Block} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_ab9da9716588a119ae1e293ee1d4596c1}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_ab9da9716588a119ae1e293ee1d4596c1}
+
+\item 
+void {\bfseries decode\+Nack\+Block} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a55166f7bb9b9ab2e6d5a137adccb47fd}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a55166f7bb9b9ab2e6d5a137adccb47fd}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1Forwarder}{Forwarder} {\bfseries m\+\_\+forwarder}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_ac99781f8ed639601ac7e0b72de1cfd4b}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_ac99781f8ed639601ac7e0b72de1cfd4b}
+
+\item 
+\hyperlink{classnfd_1_1FaceTable}{Face\+Table} {\bfseries m\+\_\+table}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a678c8e6aef9636be3de1110cbd32bc52}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a678c8e6aef9636be3de1110cbd32bc52}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ {\bfseries m\+\_\+face}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a181047dd15b7083dc5b251fb91a08dac}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a181047dd15b7083dc5b251fb91a08dac}
+
+\item 
+ndn\+::\+Encoding\+Buffer {\bfseries m\+\_\+buffer}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_abfb8c751ab3753edbe8c6e60302fa8d8}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_abfb8c751ab3753edbe8c6e60302fa8d8}
+
+\item 
+std\+::list$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ {\bfseries m\+\_\+reference\+Faces}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_aa2232dafee9f1a5bcd02dab72709e387}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_aa2232dafee9f1a5bcd02dab72709e387}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries m\+\_\+key\+Chain}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_aafd742ee058d3b61a1f55326e8bc4121}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_aafd742ee058d3b61a1f55326e8bc4121}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1tests_1_1DummyFaceImpl}{Dummy\+Face} $>$ {\bfseries m\+\_\+dummy\+Face}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a793fd07adadf52de1c826a759eb3068e}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a793fd07adadf52de1c826a759eb3068e}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1tests_1_1DummyFaceImpl}{Dummy\+Local\+Face} $>$ {\bfseries m\+\_\+dummy\+Local\+Face}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a43de6b3cc2e2f727c8dd5482ad0b6fae}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a43de6b3cc2e2f727c8dd5482ad0b6fae}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1tests_1_1DummyFaceImpl}{Dummy\+Face} $>$ {\bfseries m\+\_\+dummy\+Uri}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a4759ce0cdcdde6e9d9c77484ec2e7b81}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a4759ce0cdcdde6e9d9c77484ec2e7b81}
+
+\item 
+\hyperlink{classnfd_1_1UdpFactory}{Udp\+Factory} {\bfseries m\+\_\+factory}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a4c6055d432823ad00a04c36821031513}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_a4c6055d432823ad00a04c36821031513}
+
+\item 
+bool {\bfseries m\+\_\+finished}\hypertarget{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_add204024424351101558b625509d71ea}{}\label{classnfd_1_1tests_1_1FaceQueryStatusPublisherFixture_add204024424351101558b625509d71ea}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 43 of file face-\/query-\/status-\/publisher-\/common.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/mgmt/face-\/query-\/status-\/publisher-\/common.\+hpp\end{DoxyCompactItemize}

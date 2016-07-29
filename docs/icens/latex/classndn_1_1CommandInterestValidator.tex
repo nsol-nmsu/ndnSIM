@@ -1,0 +1,226 @@
+\hypertarget{classndn_1_1CommandInterestValidator}{}\section{ndn\+:\+:Command\+Interest\+Validator Class Reference}
+\label{classndn_1_1CommandInterestValidator}\index{ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}}
+
+
+Helper class to validate Command\+Interests.  
+
+
+
+
+{\ttfamily \#include $<$command-\/interest-\/validator.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Command\+Interest\+Validator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1CommandInterestValidator}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bfseries P\+O\+S\+\_\+\+S\+I\+G\+\_\+\+V\+A\+L\+UE} = -\/1, 
+{\bfseries P\+O\+S\+\_\+\+S\+I\+G\+\_\+\+I\+N\+FO} = -\/2, 
+{\bfseries P\+O\+S\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+AL} = -\/3, 
+{\bfseries P\+O\+S\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP} = -\/4, 
+\\*
+{\bfseries M\+I\+N\+\_\+\+L\+E\+N\+G\+TH} = 4, 
+{\bfseries G\+R\+A\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL} = 3000
+ \}\hypertarget{classndn_1_1CommandInterestValidator_a27e42de9c54afd20665a3b065bc0ac7b}{}\label{classndn_1_1CommandInterestValidator_a27e42de9c54afd20665a3b065bc0ac7b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Command\+Interest\+Validator} (const time\+::milliseconds \&grace\+Interval=time\+::milliseconds(static\+\_\+cast$<$ int $>$(G\+R\+A\+C\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL)))\hypertarget{classndn_1_1CommandInterestValidator_aaa5661cd36d94ab6b404c3c49f6d988a}{}\label{classndn_1_1CommandInterestValidator_aaa5661cd36d94ab6b404c3c49f6d988a}
+
+\item 
+void \hyperlink{classndn_1_1CommandInterestValidator_a41dbbc501ae6031dee48069b209249c6}{add\+Interest\+Rule} (const std\+::string \&regex, const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate)
+\begin{DoxyCompactList}\small\item\em add an \hyperlink{classndn_1_1Interest}{Interest} rule that allows a specific certificate \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1CommandInterestValidator_ab6380cb5f6cd72fd85fb3fe9eddbad15}{add\+Interest\+Rule} (const std\+::string \&regex, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key)
+\begin{DoxyCompactList}\small\item\em add an \hyperlink{classndn_1_1Interest}{Interest} rule that allows a specific public key \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1CommandInterestValidator_a5bed7ff3e017303ad2f28728fb819394}{add\+Interest\+Bypass\+Rule} (const std\+::string \&regex)
+\begin{DoxyCompactList}\small\item\em add an \hyperlink{classndn_1_1Interest}{Interest} rule that allows any signer \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1CommandInterestValidator_a6d2f7fd2d95c2f1f5fd8b1a5da719736}{reset} ()\hypertarget{classndn_1_1CommandInterestValidator_a6d2f7fd2d95c2f1f5fd8b1a5da719736}{}\label{classndn_1_1CommandInterestValidator_a6d2f7fd2d95c2f1f5fd8b1a5da719736}
+
+\begin{DoxyCompactList}\small\item\em Remove all installed \hyperlink{classndn_1_1Interest}{Interest} rules (e.\+g., when reinitialization needed) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1CommandInterestValidator_aa28092900d40935471f16ae978bc74c2}{check\+Policy} (const \hyperlink{classndn_1_1Data}{Data} \&data, int step\+Count, const \hyperlink{namespacendn_aeaa15e849fd25636f59ca61acb64e532}{On\+Data\+Validated} \&on\+Validated, const \hyperlink{namespacendn_ae3c60219d74ba747e368708d93782760}{On\+Data\+Validation\+Failed} \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps)
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{classndn_1_1Data}{Data} against policy and return the next validation step if necessary. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1CommandInterestValidator_a85bf8d1c56ad281b5d704cac73a8866e}{check\+Policy} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, int step\+Count, const \hyperlink{namespacendn_a90fe4b4d97a7870d87f2fce8fdc88f95}{On\+Interest\+Validated} \&on\+Validated, const \hyperlink{namespacendn_a6cb4f04de7c1e8da06d8f5865b3d2877}{On\+Interest\+Validation\+Failed} \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} $>$ $>$ \&next\+Steps)
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{classndn_1_1Interest}{Interest} against validation policy and return the next validation step if necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Helper class to validate Command\+Interests. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000043}{Deprecated}]Use \hyperlink{classndn_1_1ValidatorConfig}{Validator\+Config} instead. See \href{http://redmine.named-data.net/projects/ndn-cxx/wiki/CommandValidatorConf}{\tt http\+://redmine.\+named-\/data.\+net/projects/ndn-\/cxx/wiki/\+Command\+Validator\+Conf} for more details about the configuration format of \hyperlink{classndn_1_1ValidatorConfig}{Validator\+Config}.\end{DoxyRefDesc}
+
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/Command_Interests}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Command\+\_\+\+Interests} 
+\end{DoxySeeAlso}
+
+
+Definition at line 42 of file command-\/interest-\/validator.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}!add\+Interest\+Bypass\+Rule@{add\+Interest\+Bypass\+Rule}}
+\index{add\+Interest\+Bypass\+Rule@{add\+Interest\+Bypass\+Rule}!ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}}
+\subsubsection[{\texorpdfstring{add\+Interest\+Bypass\+Rule(const std\+::string \&regex)}{addInterestBypassRule(const std::string \&regex)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Command\+Interest\+Validator\+::add\+Interest\+Bypass\+Rule (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{regex}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1CommandInterestValidator_a5bed7ff3e017303ad2f28728fb819394}{}\label{classndn_1_1CommandInterestValidator_a5bed7ff3e017303ad2f28728fb819394}
+
+
+add an \hyperlink{classndn_1_1Interest}{Interest} rule that allows any signer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em regex} & N\+DN Regex to match \hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Command \hyperlink{classndn_1_1Interest}{Interest} matched by regex that is signed by any key will be accepted. 
+\end{DoxyNote}
+
+
+Definition at line 148 of file command-\/interest-\/validator.\+hpp.
+
+\index{ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}!add\+Interest\+Rule@{add\+Interest\+Rule}}
+\index{add\+Interest\+Rule@{add\+Interest\+Rule}!ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}}
+\subsubsection[{\texorpdfstring{add\+Interest\+Rule(const std\+::string \&regex, const Identity\+Certificate \&certificate)}{addInterestRule(const std::string \&regex, const IdentityCertificate \&certificate)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Command\+Interest\+Validator\+::add\+Interest\+Rule (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{regex, }
+\item[{const {\bf Identity\+Certificate} \&}]{certificate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1CommandInterestValidator_a41dbbc501ae6031dee48069b209249c6}{}\label{classndn_1_1CommandInterestValidator_a41dbbc501ae6031dee48069b209249c6}
+
+
+add an \hyperlink{classndn_1_1Interest}{Interest} rule that allows a specific certificate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em regex} & N\+DN Regex to match \hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name} \\
+\hline
+{\em certificate} & trusted certificate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 129 of file command-\/interest-\/validator.\+hpp.
+
+\index{ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}!add\+Interest\+Rule@{add\+Interest\+Rule}}
+\index{add\+Interest\+Rule@{add\+Interest\+Rule}!ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}}
+\subsubsection[{\texorpdfstring{add\+Interest\+Rule(const std\+::string \&regex, const Name \&key\+Name, const Public\+Key \&public\+Key)}{addInterestRule(const std::string \&regex, const Name \&keyName, const PublicKey \&publicKey)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Command\+Interest\+Validator\+::add\+Interest\+Rule (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{regex, }
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{const {\bf Public\+Key} \&}]{public\+Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1CommandInterestValidator_ab6380cb5f6cd72fd85fb3fe9eddbad15}{}\label{classndn_1_1CommandInterestValidator_ab6380cb5f6cd72fd85fb3fe9eddbad15}
+
+
+add an \hyperlink{classndn_1_1Interest}{Interest} rule that allows a specific public key 
+
+
+\begin{DoxyParams}{Parameters}
+{\em regex} & N\+DN Regex to match \hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name} \\
+\hline
+{\em key\+Name} & Key\+Locator.\+Name \\
+\hline
+{\em public\+Key} & public key \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 137 of file command-\/interest-\/validator.\+hpp.
+
+\index{ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}!check\+Policy@{check\+Policy}}
+\index{check\+Policy@{check\+Policy}!ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}}
+\subsubsection[{\texorpdfstring{check\+Policy(const Data \&data, int step\+Count, const On\+Data\+Validated \&on\+Validated, const On\+Data\+Validation\+Failed \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps)}{checkPolicy(const Data \&data, int stepCount, const OnDataValidated \&onValidated, const OnDataValidationFailed \&onValidationFailed, std::vector< shared\_ptr< ValidationRequest > > \&nextSteps)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Command\+Interest\+Validator\+::check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data, }
+\item[{int}]{n\+Steps, }
+\item[{const {\bf On\+Data\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Data\+Validation\+Failed} \&}]{on\+Validation\+Failed, }
+\item[{std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1CommandInterestValidator_aa28092900d40935471f16ae978bc74c2}{}\label{classndn_1_1CommandInterestValidator_aa28092900d40935471f16ae978bc74c2}
+
+
+Check the \hyperlink{classndn_1_1Data}{Data} against policy and return the next validation step if necessary. 
+
+If there is no next validation step, that validation M\+U\+ST have been done. i.\+e., either on\+Validated or on\+Validation\+Failed callback is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The \hyperlink{classndn_1_1Data}{Data} to check. \\
+\hline
+{\em n\+Steps} & The number of validation steps that have been done. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Data}{Data} is validated, this calls on\+Validated(data) \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data) \\
+\hline
+{\em next\+Steps} & On return, contains the next validation step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Validator_a341b1faa8a15ae17c5157d5387a75ef5}{ndn\+::\+Validator}.
+
+
+
+Definition at line 104 of file command-\/interest-\/validator.\+hpp.
+
+\index{ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}!check\+Policy@{check\+Policy}}
+\index{check\+Policy@{check\+Policy}!ndn\+::\+Command\+Interest\+Validator@{ndn\+::\+Command\+Interest\+Validator}}
+\subsubsection[{\texorpdfstring{check\+Policy(const Interest \&interest, int step\+Count, const On\+Interest\+Validated \&on\+Validated, const On\+Interest\+Validation\+Failed \&on\+Validation\+Failed, std\+::vector$<$ shared\+\_\+ptr$<$ Validation\+Request $>$ $>$ \&next\+Steps)}{checkPolicy(const Interest \&interest, int stepCount, const OnInterestValidated \&onValidated, const OnInterestValidationFailed \&onValidationFailed, std::vector< shared\_ptr< ValidationRequest > > \&nextSteps)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Command\+Interest\+Validator\+::check\+Policy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{int}]{n\+Steps, }
+\item[{const {\bf On\+Interest\+Validated} \&}]{on\+Validated, }
+\item[{const {\bf On\+Interest\+Validation\+Failed} \&}]{on\+Validation\+Failed, }
+\item[{std\+::vector$<$ shared\+\_\+ptr$<$ {\bf Validation\+Request} $>$ $>$ \&}]{next\+Steps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1CommandInterestValidator_a85bf8d1c56ad281b5d704cac73a8866e}{}\label{classndn_1_1CommandInterestValidator_a85bf8d1c56ad281b5d704cac73a8866e}
+
+
+Check the \hyperlink{classndn_1_1Interest}{Interest} against validation policy and return the next validation step if necessary. 
+
+If there is no next validation step, that validation M\+U\+ST have been done. i.\+e., either on\+Validated or on\+Validation\+Failed callback is invoked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & The \hyperlink{classndn_1_1Interest}{Interest} to check. \\
+\hline
+{\em n\+Steps} & The number of validation steps that have been done. \\
+\hline
+{\em on\+Validated} & If the \hyperlink{classndn_1_1Interest}{Interest} is validated, this calls on\+Validated(data) \\
+\hline
+{\em on\+Validation\+Failed} & If validation fails, this calls on\+Validation\+Failed(data) \\
+\hline
+{\em next\+Steps} & On return, contains the next validation step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Validator_a8ad5a76c67c489afcb493f722f142e34}{ndn\+::\+Validator}.
+
+
+
+Definition at line 162 of file command-\/interest-\/validator.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/command-\/interest-\/validator.\+hpp\end{DoxyCompactItemize}

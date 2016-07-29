@@ -1,0 +1,120 @@
+\hypertarget{classnfd_1_1rib_1_1RemoteRegistrator}{}\section{nfd\+:\+:rib\+:\+:Remote\+Registrator Class Reference}
+\label{classnfd_1_1rib_1_1RemoteRegistrator}\index{nfd\+::rib\+::\+Remote\+Registrator@{nfd\+::rib\+::\+Remote\+Registrator}}
+
+
+define the \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator}{Remote\+Registrator} class, which handles the registration/unregistration to remote hub(s).  
+
+
+
+
+{\ttfamily \#include $<$remote-\/registrator.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:rib\+:\+:Remote\+Registrator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1rib_1_1RemoteRegistrator}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Remote\+Registrator} (\hyperlink{classndn_1_1nfd_1_1Controller}{ndn\+::nfd\+::\+Controller} \&controller, \hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \&key\+Chain, \hyperlink{classnfd_1_1rib_1_1Rib}{Rib} \&rib)\hypertarget{classnfd_1_1rib_1_1RemoteRegistrator_a3e7c3dc0a1fe541e546b00e46fba1f07}{}\label{classnfd_1_1rib_1_1RemoteRegistrator_a3e7c3dc0a1fe541e546b00e46fba1f07}
+
+\item 
+void \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator_a37abdf462a205cc4b96bef1176792b24}{load\+Config} (const Config\+Section \&config\+Section)
+\begin{DoxyCompactList}\small\item\em load the \char`\"{}remote\+\_\+register\char`\"{} section from config file \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator_a165a6b29d840deffe0e2b893488a65ec}{enable} ()\hypertarget{classnfd_1_1rib_1_1RemoteRegistrator_a165a6b29d840deffe0e2b893488a65ec}{}\label{classnfd_1_1rib_1_1RemoteRegistrator_a165a6b29d840deffe0e2b893488a65ec}
+
+\begin{DoxyCompactList}\small\item\em enable remote registration/unregistration. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator_a63d4562fc276c40b71a879e35a9c773a}{disable} ()\hypertarget{classnfd_1_1rib_1_1RemoteRegistrator_a63d4562fc276c40b71a879e35a9c773a}{}\label{classnfd_1_1rib_1_1RemoteRegistrator_a63d4562fc276c40b71a879e35a9c773a}
+
+\begin{DoxyCompactList}\small\item\em disable remote registration/unregistration. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator_a3c96aa573f8e88b65ad7e4ebd47294c1}{register\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em register a prefix to remote hub(s). \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator_a45ecb98ad8ceb7a38b5c946f504adc0b}{unregister\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em unregister a prefix from remote hub(s). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+define the \hyperlink{classnfd_1_1rib_1_1RemoteRegistrator}{Remote\+Registrator} class, which handles the registration/unregistration to remote hub(s). 
+
+Definition at line 48 of file remote-\/registrator.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::rib\+::\+Remote\+Registrator@{nfd\+::rib\+::\+Remote\+Registrator}!load\+Config@{load\+Config}}
+\index{load\+Config@{load\+Config}!nfd\+::rib\+::\+Remote\+Registrator@{nfd\+::rib\+::\+Remote\+Registrator}}
+\subsubsection[{\texorpdfstring{load\+Config(const Config\+Section \&config\+Section)}{loadConfig(const ConfigSection \&configSection)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::rib\+::\+Remote\+Registrator\+::load\+Config (
+\begin{DoxyParamCaption}
+\item[{const Config\+Section \&}]{config\+Section}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1RemoteRegistrator_a37abdf462a205cc4b96bef1176792b24}{}\label{classnfd_1_1rib_1_1RemoteRegistrator_a37abdf462a205cc4b96bef1176792b24}
+
+
+load the \char`\"{}remote\+\_\+register\char`\"{} section from config file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+Section} & the sub section in \char`\"{}rib\char`\"{} section. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file remote-\/registrator.\+cpp.
+
+\index{nfd\+::rib\+::\+Remote\+Registrator@{nfd\+::rib\+::\+Remote\+Registrator}!register\+Prefix@{register\+Prefix}}
+\index{register\+Prefix@{register\+Prefix}!nfd\+::rib\+::\+Remote\+Registrator@{nfd\+::rib\+::\+Remote\+Registrator}}
+\subsubsection[{\texorpdfstring{register\+Prefix(const Name \&prefix)}{registerPrefix(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::rib\+::\+Remote\+Registrator\+::register\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1RemoteRegistrator_a3c96aa573f8e88b65ad7e4ebd47294c1}{}\label{classnfd_1_1rib_1_1RemoteRegistrator_a3c96aa573f8e88b65ad7e4ebd47294c1}
+
+
+register a prefix to remote hub(s). 
+
+For the input prefix, we find the longest identity in the key-\/chain that can sign it, and then register this identity to remote hub(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & the prefix being registered in local R\+IB. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 143 of file remote-\/registrator.\+cpp.
+
+\index{nfd\+::rib\+::\+Remote\+Registrator@{nfd\+::rib\+::\+Remote\+Registrator}!unregister\+Prefix@{unregister\+Prefix}}
+\index{unregister\+Prefix@{unregister\+Prefix}!nfd\+::rib\+::\+Remote\+Registrator@{nfd\+::rib\+::\+Remote\+Registrator}}
+\subsubsection[{\texorpdfstring{unregister\+Prefix(const Name \&prefix)}{unregisterPrefix(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::rib\+::\+Remote\+Registrator\+::unregister\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1RemoteRegistrator_a45ecb98ad8ceb7a38b5c946f504adc0b}{}\label{classnfd_1_1rib_1_1RemoteRegistrator_a45ecb98ad8ceb7a38b5c946f504adc0b}
+
+
+unregister a prefix from remote hub(s). 
+
+For the input prefix, if the longest identity can sign it is already registered remotely, that identity should be unregistered from remote hub(s).
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & the prefix being unregistered in local R\+IB. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 205 of file remote-\/registrator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/remote-\/registrator.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/remote-\/registrator.\+cpp\end{DoxyCompactItemize}

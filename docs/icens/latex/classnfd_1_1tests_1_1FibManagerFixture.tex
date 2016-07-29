@@ -1,0 +1,71 @@
+\hypertarget{classnfd_1_1tests_1_1FibManagerFixture}{}\section{nfd\+:\+:tests\+:\+:Fib\+Manager\+Fixture Class Reference}
+\label{classnfd_1_1tests_1_1FibManagerFixture}\index{nfd\+::tests\+::\+Fib\+Manager\+Fixture@{nfd\+::tests\+::\+Fib\+Manager\+Fixture}}
+Inheritance diagram for nfd\+:\+:tests\+:\+:Fib\+Manager\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1tests_1_1FibManagerFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ {\bfseries get\+Face} (\hyperlink{classFaceId}{Face\+Id} id)\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a9e77ca04bc8422bc6668640cd7fcb96a}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a9e77ca04bc8422bc6668640cd7fcb96a}
+
+\item 
+void {\bfseries add\+Face} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a360e9c125d058860ab8168ffd028d81e}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a360e9c125d058860ab8168ffd028d81e}
+
+\item 
+void {\bfseries validate\+Control\+Response\+Common} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text, \hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \&control)\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a55f8c5d2d9f073d4eac05113f2fb104e}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a55f8c5d2d9f073d4eac05113f2fb104e}
+
+\item 
+void {\bfseries validate\+Control\+Response} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text)\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a4f21b2971b79625e35af1b039903a9c5}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a4f21b2971b79625e35af1b039903a9c5}
+
+\item 
+void {\bfseries validate\+Control\+Response} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text, const \hyperlink{classndn_1_1Block}{Block} \&expected\+Body)\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a378bd45dcee4e6c5921049b58391efac}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a378bd45dcee4e6c5921049b58391efac}
+
+\item 
+bool {\bfseries did\+Callback\+Fire} ()\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_aa0eced77f4e8ee9a714ce0f5ffe4f3f9}{}\label{classnfd_1_1tests_1_1FibManagerFixture_aa0eced77f4e8ee9a714ce0f5ffe4f3f9}
+
+\item 
+void {\bfseries reset\+Callback\+Fired} ()\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a7230b47dc3a82f1b803689d43d3441eb}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a7230b47dc3a82f1b803689d43d3441eb}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ {\bfseries get\+Internal\+Face} ()\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a6ec332e899bf5ed7714153310a4a08b5}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a6ec332e899bf5ed7714153310a4a08b5}
+
+\item 
+\hyperlink{classnfd_1_1FibManager}{Fib\+Manager} \& {\bfseries get\+Fib\+Manager} ()\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_aa17b6dff196340ddd4a2a589174189db}{}\label{classnfd_1_1tests_1_1FibManagerFixture_aa17b6dff196340ddd4a2a589174189db}
+
+\item 
+\hyperlink{classnfd_1_1Fib}{Fib} \& {\bfseries get\+Fib} ()\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a1fe68037847c0f05e63bc602285e6a75}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a1fe68037847c0f05e63bc602285e6a75}
+
+\item 
+void {\bfseries add\+Interest\+Rule} (const std\+::string \&regex, \hyperlink{classndn_1_1IdentityCertificate}{ndn\+::\+Identity\+Certificate} \&certificate)\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_aa9dc132fd4bf283856ad83abe9856f84}{}\label{classnfd_1_1tests_1_1FibManagerFixture_aa9dc132fd4bf283856ad83abe9856f84}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1FibManager}{Fib\+Manager} {\bfseries m\+\_\+manager}\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a1cb8bcee49cea7c918a2f59ef22e177d}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a1cb8bcee49cea7c918a2f59ef22e177d}
+
+\item 
+std\+::vector$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ {\bfseries m\+\_\+faces}\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a961dfe3852d7a5c26c1c3aba1a2ec691}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a961dfe3852d7a5c26c1c3aba1a2ec691}
+
+\item 
+bool {\bfseries m\+\_\+callback\+Fired}\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_a797de20ff7fcde38c270d948dc2c204a}{}\label{classnfd_1_1tests_1_1FibManagerFixture_a797de20ff7fcde38c270d948dc2c204a}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries m\+\_\+key\+Chain}\hypertarget{classnfd_1_1tests_1_1FibManagerFixture_ac8b690091348b92465457e79d0361e38}{}\label{classnfd_1_1tests_1_1FibManagerFixture_ac8b690091348b92465457e79d0361e38}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 43 of file fib-\/manager.\+t.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/mgmt/fib-\/manager.\+t.\+cpp\end{DoxyCompactItemize}

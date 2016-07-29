@@ -1,0 +1,157 @@
+\hypertarget{classndn_1_1lp_1_1Packet}{}\section{ndn\+:\+:lp\+:\+:Packet Class Reference}
+\label{classndn_1_1lp_1_1Packet}\index{ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1lp_1_1Packet_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Packet} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1lp_1_1Packet_a78fc3a0f78ba888f4ddf400457428a22}{}\label{classndn_1_1lp_1_1Packet_a78fc3a0f78ba888f4ddf400457428a22}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1lp_1_1Packet_a7813b7be4a4cac4bbf9ecb2aec01c7f1}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1lp_1_1Packet_a7813b7be4a4cac4bbf9ecb2aec01c7f1}{}\label{classndn_1_1lp_1_1Packet_a7813b7be4a4cac4bbf9ecb2aec01c7f1}
+
+\begin{DoxyCompactList}\small\item\em append packet to encoder \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1lp_1_1Packet_ad55d1ba34619e686efc2fb1f5fd2855b}{wire\+Encode} () const\hypertarget{classndn_1_1lp_1_1Packet_ad55d1ba34619e686efc2fb1f5fd2855b}{}\label{classndn_1_1lp_1_1Packet_ad55d1ba34619e686efc2fb1f5fd2855b}
+
+\begin{DoxyCompactList}\small\item\em encode packet into wire format \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1lp_1_1Packet_af24398dc7941f4a2864215ef360a8a5c}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1lp_1_1Packet_af24398dc7941f4a2864215ef360a8a5c}{}\label{classndn_1_1lp_1_1Packet_af24398dc7941f4a2864215ef360a8a5c}
+
+\begin{DoxyCompactList}\small\item\em decode packet from wire format \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F\+I\+E\+LD $>$ }\\bool \hyperlink{classndn_1_1lp_1_1Packet_abdba1075d299c2161ed1f4df65ac0ac7}{has} () const
+\item 
+{\footnotesize template$<$typename F\+I\+E\+LD $>$ }\\size\+\_\+t \hyperlink{classndn_1_1lp_1_1Packet_a717bf66d78a04ee7f34049687454575c}{count} () const
+\item 
+{\footnotesize template$<$typename F\+I\+E\+LD $>$ }\\F\+I\+E\+L\+D\+::\+Value\+Type \hyperlink{classndn_1_1lp_1_1Packet_a6ecf116bacbac3e18e846ccb76922b18}{get} (size\+\_\+t index=0) const
+\item 
+{\footnotesize template$<$typename F\+I\+E\+LD $>$ }\\std\+::vector$<$ typename F\+I\+E\+L\+D\+::\+Value\+Type $>$ \hyperlink{classndn_1_1lp_1_1Packet_aa1842307ffd503f240fa805d01887910}{list} () const
+\item 
+{\footnotesize template$<$typename F\+I\+E\+LD $>$ }\\\hyperlink{classndn_1_1lp_1_1Packet}{Packet} \& \hyperlink{classndn_1_1lp_1_1Packet_a895c5bfdcc1098fbcd0c17dadfff4bca}{set} (const typename F\+I\+E\+L\+D\+::\+Value\+Type \&value)\hypertarget{classndn_1_1lp_1_1Packet_a895c5bfdcc1098fbcd0c17dadfff4bca}{}\label{classndn_1_1lp_1_1Packet_a895c5bfdcc1098fbcd0c17dadfff4bca}
+
+\begin{DoxyCompactList}\small\item\em remove all occurrences of F\+I\+E\+LD, and add a F\+I\+E\+LD with value  This equivalent to \hyperlink{classndn_1_1lp_1_1Packet_a63200389c94495760b2bcd9b7c1f3eb1}{clear()} followed by add(value) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F\+I\+E\+LD $>$ }\\\hyperlink{classndn_1_1lp_1_1Packet}{Packet} \& \hyperlink{classndn_1_1lp_1_1Packet_aa85b34535b767450640181e82f1cbb92}{add} (const typename F\+I\+E\+L\+D\+::\+Value\+Type \&value)
+\begin{DoxyCompactList}\small\item\em add a F\+I\+E\+LD with value \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F\+I\+E\+LD $>$ }\\\hyperlink{classndn_1_1lp_1_1Packet}{Packet} \& \hyperlink{classndn_1_1lp_1_1Packet_a5113587cee9ec70077086ef61abede4b}{remove} (size\+\_\+t index=0)
+\begin{DoxyCompactList}\small\item\em remove the index-\/th occurrence of F\+I\+E\+LD \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F\+I\+E\+LD $>$ }\\\hyperlink{classndn_1_1lp_1_1Packet}{Packet} \& \hyperlink{classndn_1_1lp_1_1Packet_a63200389c94495760b2bcd9b7c1f3eb1}{clear} ()\hypertarget{classndn_1_1lp_1_1Packet_a63200389c94495760b2bcd9b7c1f3eb1}{}\label{classndn_1_1lp_1_1Packet_a63200389c94495760b2bcd9b7c1f3eb1}
+
+\begin{DoxyCompactList}\small\item\em remove all occurrences of F\+I\+E\+LD \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 30 of file packet.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}!add@{add}}
+\index{add@{add}!ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}}
+\subsubsection[{\texorpdfstring{add(const typename F\+I\+E\+L\+D\+::\+Value\+Type \&value)}{add(const typename FIELD::ValueType \&value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F\+I\+E\+LD $>$ {\bf Packet}\& ndn\+::lp\+::\+Packet\+::add (
+\begin{DoxyParamCaption}
+\item[{const typename F\+I\+E\+L\+D\+::\+Value\+Type \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1lp_1_1Packet_aa85b34535b767450640181e82f1cbb92}{}\label{classndn_1_1lp_1_1Packet_aa85b34535b767450640181e82f1cbb92}
+
+
+add a F\+I\+E\+LD with value 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::length\+\_\+error} & if field already exists and is not repeatable \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 155 of file packet.\+hpp.
+
+\index{ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}!count@{count}}
+\index{count@{count}!ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}}
+\subsubsection[{\texorpdfstring{count() const}{count() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F\+I\+E\+LD $>$ size\+\_\+t ndn\+::lp\+::\+Packet\+::count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1lp_1_1Packet_a717bf66d78a04ee7f34049687454575c}{}\label{classndn_1_1lp_1_1Packet_a717bf66d78a04ee7f34049687454575c}
+\begin{DoxyReturn}{Returns}
+number of occurrences of F\+I\+E\+LD 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file packet.\+hpp.
+
+\index{ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}!get@{get}}
+\index{get@{get}!ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}}
+\subsubsection[{\texorpdfstring{get(size\+\_\+t index=0) const}{get(size\_t index=0) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F\+I\+E\+LD $>$ F\+I\+E\+L\+D\+::\+Value\+Type ndn\+::lp\+::\+Packet\+::get (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1lp_1_1Packet_a6ecf116bacbac3e18e846ccb76922b18}{}\label{classndn_1_1lp_1_1Packet_a6ecf116bacbac3e18e846ccb76922b18}
+\begin{DoxyReturn}{Returns}
+value of index-\/th occurrence of F\+I\+E\+LD 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if index$>$=\hyperlink{classndn_1_1lp_1_1Packet_a717bf66d78a04ee7f34049687454575c}{count()} \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 99 of file packet.\+hpp.
+
+\index{ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}!has@{has}}
+\index{has@{has}!ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}}
+\subsubsection[{\texorpdfstring{has() const}{has() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F\+I\+E\+LD $>$ bool ndn\+::lp\+::\+Packet\+::has (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1lp_1_1Packet_abdba1075d299c2161ed1f4df65ac0ac7}{}\label{classndn_1_1lp_1_1Packet_abdba1075d299c2161ed1f4df65ac0ac7}
+\begin{DoxyReturn}{Returns}
+true if F\+I\+E\+LD occurs one or more times  This is equivalent to \hyperlink{classndn_1_1lp_1_1Packet_a717bf66d78a04ee7f34049687454575c}{count()}$>$0 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file packet.\+hpp.
+
+\index{ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}!list@{list}}
+\index{list@{list}!ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}}
+\subsubsection[{\texorpdfstring{list() const}{list() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F\+I\+E\+LD $>$ std\+::vector$<$typename F\+I\+E\+L\+D\+::\+Value\+Type$>$ ndn\+::lp\+::\+Packet\+::list (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1lp_1_1Packet_aa1842307ffd503f240fa805d01887910}{}\label{classndn_1_1lp_1_1Packet_aa1842307ffd503f240fa805d01887910}
+\begin{DoxyReturn}{Returns}
+values of all occurrences of F\+I\+E\+LD 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file packet.\+hpp.
+
+\index{ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}!remove@{remove}}
+\index{remove@{remove}!ndn\+::lp\+::\+Packet@{ndn\+::lp\+::\+Packet}}
+\subsubsection[{\texorpdfstring{remove(size\+\_\+t index=0)}{remove(size\_t index=0)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F\+I\+E\+LD $>$ {\bf Packet}\& ndn\+::lp\+::\+Packet\+::remove (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1lp_1_1Packet_a5113587cee9ec70077086ef61abede4b}{}\label{classndn_1_1lp_1_1Packet_a5113587cee9ec70077086ef61abede4b}
+
+
+remove the index-\/th occurrence of F\+I\+E\+LD 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if index$>$=\hyperlink{classndn_1_1lp_1_1Packet_a717bf66d78a04ee7f34049687454575c}{count()} \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 182 of file packet.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/lp/packet.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/lp/packet.\+cpp\end{DoxyCompactItemize}

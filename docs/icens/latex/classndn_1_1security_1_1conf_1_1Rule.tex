@@ -1,0 +1,69 @@
+\hypertarget{classndn_1_1security_1_1conf_1_1Rule}{}\section{ndn\+:\+:security\+:\+:conf\+:\+:Rule$<$ Packet $>$ Class Template Reference}
+\label{classndn_1_1security_1_1conf_1_1Rule}\index{ndn\+::security\+::conf\+::\+Rule$<$ Packet $>$@{ndn\+::security\+::conf\+::\+Rule$<$ Packet $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rule} (const std\+::string \&id)\hypertarget{classndn_1_1security_1_1conf_1_1Rule_ad1162c456616073490ad87da8dbed105}{}\label{classndn_1_1security_1_1conf_1_1Rule_ad1162c456616073490ad87da8dbed105}
+
+\item 
+const std\+::string \& {\bfseries get\+Id} ()\hypertarget{classndn_1_1security_1_1conf_1_1Rule_a1d802299a5cfcc85d604739d03db3b38}{}\label{classndn_1_1security_1_1conf_1_1Rule_a1d802299a5cfcc85d604739d03db3b38}
+
+\item 
+void {\bfseries add\+Filter} (const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1conf_1_1Filter}{Filter} $>$ \&filter)\hypertarget{classndn_1_1security_1_1conf_1_1Rule_aa030ea72111d433c8333928b8bf5a804}{}\label{classndn_1_1security_1_1conf_1_1Rule_aa030ea72111d433c8333928b8bf5a804}
+
+\item 
+void {\bfseries add\+Checker} (const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1conf_1_1Checker}{Checker} $>$ \&checker)\hypertarget{classndn_1_1security_1_1conf_1_1Rule_a16ed2ec45055d87572266e09ed5d42e8}{}\label{classndn_1_1security_1_1conf_1_1Rule_a16ed2ec45055d87572266e09ed5d42e8}
+
+\item 
+bool {\bfseries match} (const Packet \&packet)\hypertarget{classndn_1_1security_1_1conf_1_1Rule_aaa51c933de17d54085a974b0af939b32}{}\label{classndn_1_1security_1_1conf_1_1Rule_aaa51c933de17d54085a974b0af939b32}
+
+\item 
+{\footnotesize template$<$class Validated\+Callback , class Validation\+Failure\+Callback $>$ }\\int8\+\_\+t \hyperlink{classndn_1_1security_1_1conf_1_1Rule_a24c3c8d6426b0942b961188f68782433}{check} (const Packet \&packet, const Validated\+Callback \&on\+Validated, const Validation\+Failure\+Callback \&on\+Validation\+Failed)
+\begin{DoxyCompactList}\small\item\em check if packet satisfies certain condition \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Packet$>$\\*
+class ndn\+::security\+::conf\+::\+Rule$<$ Packet $>$}
+
+
+
+Definition at line 36 of file rule.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::conf\+::\+Rule@{ndn\+::security\+::conf\+::\+Rule}!check@{check}}
+\index{check@{check}!ndn\+::security\+::conf\+::\+Rule@{ndn\+::security\+::conf\+::\+Rule}}
+\subsubsection[{\texorpdfstring{check(const Packet \&packet, const Validated\+Callback \&on\+Validated, const Validation\+Failure\+Callback \&on\+Validation\+Failed)}{check(const Packet \&packet, const ValidatedCallback \&onValidated, const ValidationFailureCallback \&onValidationFailed)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Packet $>$ template$<$class Validated\+Callback , class Validation\+Failure\+Callback $>$ int8\+\_\+t {\bf ndn\+::security\+::conf\+::\+Rule}$<$ Packet $>$\+::check (
+\begin{DoxyParamCaption}
+\item[{const Packet \&}]{packet, }
+\item[{const Validated\+Callback \&}]{on\+Validated, }
+\item[{const Validation\+Failure\+Callback \&}]{on\+Validation\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1security_1_1conf_1_1Rule_a24c3c8d6426b0942b961188f68782433}{}\label{classndn_1_1security_1_1conf_1_1Rule_a24c3c8d6426b0942b961188f68782433}
+
+
+check if packet satisfies certain condition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The packet \\
+\hline
+{\em on\+Validated} & Callback function which is called when packet is immediately valid \\
+\hline
+{\em on\+Validation\+Failed} & Call function which is called when packet is immediately invalid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if packet is immediately invalid (on\+Validation\+Failed has been called) 1 if packet is immediately valid (on\+Validated has been called) 0 if further signature verification is needed. 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file rule.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/conf/rule.\+hpp\end{DoxyCompactItemize}

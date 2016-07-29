@@ -1,0 +1,47 @@
+\hypertarget{classnfd_1_1tests_1_1IdentityManagementFixture}{}\section{nfd\+:\+:tests\+:\+:Identity\+Management\+Fixture Class Reference}
+\label{classnfd_1_1tests_1_1IdentityManagementFixture}\index{nfd\+::tests\+::\+Identity\+Management\+Fixture@{nfd\+::tests\+::\+Identity\+Management\+Fixture}}
+
+
+\hyperlink{classnfd_1_1tests_1_1IdentityManagementFixture}{Identity\+Management\+Fixture} is a test suite level fixture.  
+
+
+
+
+{\ttfamily \#include $<$identity-\/management-\/fixture.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:tests\+:\+:Identity\+Management\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1tests_1_1IdentityManagementFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries add\+Identity} (const \hyperlink{classndn_1_1Name}{ndn\+::\+Name} \&identity, const \hyperlink{classndn_1_1KeyParams}{ndn\+::\+Key\+Params} \&params=ndn\+::\+Key\+Chain\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+R\+A\+MS)\hypertarget{classnfd_1_1tests_1_1IdentityManagementFixture_a17ba40bbf9601ceea563bfa5861835cf}{}\label{classnfd_1_1tests_1_1IdentityManagementFixture_a17ba40bbf9601ceea563bfa5861835cf}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries m\+\_\+key\+Chain}\hypertarget{classnfd_1_1tests_1_1IdentityManagementFixture_a8ad16f44006bc94a124d6c5d1dda46db}{}\label{classnfd_1_1tests_1_1IdentityManagementFixture_a8ad16f44006bc94a124d6c5d1dda46db}
+
+\item 
+std\+::vector$<$ \hyperlink{classndn_1_1Name}{ndn\+::\+Name} $>$ {\bfseries m\+\_\+identities}\hypertarget{classnfd_1_1tests_1_1IdentityManagementFixture_a1350beb5bb6d22bb8b19ffc294bfa92b}{}\label{classnfd_1_1tests_1_1IdentityManagementFixture_a1350beb5bb6d22bb8b19ffc294bfa92b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classnfd_1_1tests_1_1IdentityManagementFixture}{Identity\+Management\+Fixture} is a test suite level fixture. 
+
+Test cases in the suite can use this fixture to create identities. Identities added via add\+Identity method are automatically deleted during test teardown. 
+
+Definition at line 38 of file identity-\/management-\/fixture.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/identity-\/management-\/fixture.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/identity-\/management-\/fixture.\+cpp\end{DoxyCompactItemize}

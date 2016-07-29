@@ -1,0 +1,70 @@
+\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester}{}\section{nfd\+:\+:fw\+:\+:tests\+:\+:Strategy\+Tester$<$ S $>$ Class Template Reference}
+\label{classnfd_1_1fw_1_1tests_1_1StrategyTester}\index{nfd\+::fw\+::tests\+::\+Strategy\+Tester$<$ S $>$@{nfd\+::fw\+::tests\+::\+Strategy\+Tester$<$ S $>$}}
+
+
+extends strategy S for unit testing  
+
+
+
+
+{\ttfamily \#include $<$strategy-\/tester.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fw\+:\+:tests\+:\+:Strategy\+Tester$<$ S $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1fw_1_1tests_1_1StrategyTester}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::tuple$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ {\bfseries Send\+Interest\+Args}\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester_afce84a1c32f4645032158d94f3c659b3}{}\label{classnfd_1_1fw_1_1tests_1_1StrategyTester_afce84a1c32f4645032158d94f3c659b3}
+
+\item 
+typedef boost\+::tuple$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ $>$ {\bfseries Reject\+Pending\+Interest\+Args}\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester_afb8db1e578f2e18c6217a5e00e0332a7}{}\label{classnfd_1_1fw_1_1tests_1_1StrategyTester_afb8db1e578f2e18c6217a5e00e0332a7}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Strategy\+Tester} (\hyperlink{classnfd_1_1Forwarder}{Forwarder} \&forwarder)\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester_aa973e5f40f759e372b4c6e6a505698c3}{}\label{classnfd_1_1fw_1_1tests_1_1StrategyTester_aa973e5f40f759e372b4c6e6a505698c3}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1fw_1_1tests_1_1StrategyTester}{Strategy\+Tester}$<$ S $>$ $>$ \hyperlink{classnfd_1_1fw_1_1tests_1_1StrategyTester_a9bb3bfc070a8aeb01abc76752b1aaf19}{on\+Action}\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester_a9bb3bfc070a8aeb01abc76752b1aaf19}{}\label{classnfd_1_1fw_1_1tests_1_1StrategyTester_a9bb3bfc070a8aeb01abc76752b1aaf19}
+
+\begin{DoxyCompactList}\small\item\em fires after each Action \end{DoxyCompactList}\item 
+std\+::vector$<$ Send\+Interest\+Args $>$ {\bfseries m\+\_\+send\+Interest\+History}\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester_a1cedf7a8fe25cf30b0037a30c0cce7f5}{}\label{classnfd_1_1fw_1_1tests_1_1StrategyTester_a1cedf7a8fe25cf30b0037a30c0cce7f5}
+
+\item 
+std\+::vector$<$ Reject\+Pending\+Interest\+Args $>$ {\bfseries m\+\_\+reject\+Pending\+Interest\+History}\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester_a696cbde7cc3cdc455f89ce0d12b4fcfa}{}\label{classnfd_1_1fw_1_1tests_1_1StrategyTester_a696cbde7cc3cdc455f89ce0d12b4fcfa}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries send\+Interest} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ out\+Face, bool want\+New\+Nonce=false) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester_a30c2957e2c47de74e4057d3cd16d701e}{}\label{classnfd_1_1fw_1_1tests_1_1StrategyTester_a30c2957e2c47de74e4057d3cd16d701e}
+
+\item 
+virtual void {\bfseries reject\+Pending\+Interest} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} $>$ pit\+Entry) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1fw_1_1tests_1_1StrategyTester_a0294a99d92cb141b882b642f88cb4d86}{}\label{classnfd_1_1fw_1_1tests_1_1StrategyTester_a0294a99d92cb141b882b642f88cb4d86}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename S$>$\\*
+class nfd\+::fw\+::tests\+::\+Strategy\+Tester$<$ S $>$}
+
+extends strategy S for unit testing 
+
+Actions invoked by S are recorded but not passed to forwarder 
+
+Definition at line 42 of file strategy-\/tester.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/fw/strategy-\/tester.\+hpp\end{DoxyCompactItemize}

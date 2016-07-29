@@ -1,0 +1,284 @@
+\hypertarget{classnfd_1_1UdpFactory}{}\section{nfd\+:\+:Udp\+Factory Class Reference}
+\label{classnfd_1_1UdpFactory}\index{nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}}
+
+
+{\ttfamily \#include $<$udp-\/factory.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Udp\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1UdpFactory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1UdpFactory_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Exception of \hyperlink{classnfd_1_1UdpFactory}{Udp\+Factory}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ udp\+::\+Endpoint, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} $>$ $>$ {\bfseries Multicast\+Face\+Map}\hypertarget{classnfd_1_1UdpFactory_a136ee547c94b84a9ca5f3cd0afc2f89b}{}\label{classnfd_1_1UdpFactory_a136ee547c94b84a9ca5f3cd0afc2f89b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Udp\+Factory} (const std\+::string \&default\+Port=\char`\"{}6363\char`\"{})\hypertarget{classnfd_1_1UdpFactory_a4c29a5a55c75bd5ffa35bcf9fd8933a1}{}\label{classnfd_1_1UdpFactory_a4c29a5a55c75bd5ffa35bcf9fd8933a1}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1UdpChannel}{Udp\+Channel} $>$ \hyperlink{classnfd_1_1UdpFactory_a9bad75ed0f68f1802599fbd98c4edebc}{create\+Channel} (const udp\+::\+Endpoint \&local\+Endpoint, const time\+::seconds \&timeout=time\+::seconds(600))
+\begin{DoxyCompactList}\small\item\em Create U\+D\+P-\/based channel using udp\+::\+Endpoint. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1UdpChannel}{Udp\+Channel} $>$ \hyperlink{classnfd_1_1UdpFactory_a8c81739854cc34f1e85a9372480ab1ad}{create\+Channel} (const std\+::string \&local\+Ip, const std\+::string \&local\+Port, const time\+::seconds \&timeout=time\+::seconds(600))
+\begin{DoxyCompactList}\small\item\em Create U\+D\+P-\/based channel using specified IP address and port number. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} $>$ \hyperlink{classnfd_1_1UdpFactory_aa5b9a59b3022401456147539628ca90a}{create\+Multicast\+Face} (const udp\+::\+Endpoint \&local\+Endpoint, const udp\+::\+Endpoint \&multicast\+Endpoint, const std\+::string \&network\+Interface\+Name=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} using udp\+::\+Endpoint. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} $>$ {\bfseries create\+Multicast\+Face} (const std\+::string \&local\+Ip, const std\+::string \&multicast\+Ip, const std\+::string \&multicast\+Port, const std\+::string \&network\+Interface\+Name=\char`\"{}\char`\"{})\hypertarget{classnfd_1_1UdpFactory_a6727df853b6f50d5b0cedf75e13f3bbe}{}\label{classnfd_1_1UdpFactory_a6727df853b6f50d5b0cedf75e13f3bbe}
+
+\item 
+virtual void \hyperlink{classnfd_1_1UdpFactory_af218bef7aaec0a3e2d84b5ce013e71dd}{create\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const \hyperlink{namespacenfd_a6d4b91580c829552a452c53458381b0f}{Face\+Created\+Callback} \&on\+Created, const \hyperlink{namespacenfd_ae87d4f07de26f4939691439b51f2dd83}{Face\+Connect\+Failed\+Callback} \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. \end{DoxyCompactList}\item 
+virtual std\+::list$<$ shared\+\_\+ptr$<$ const \hyperlink{classnfd_1_1Channel}{Channel} $>$ $>$ {\bfseries get\+Channels} () const\hypertarget{classnfd_1_1UdpFactory_a66487b4809d42ebea137d32f79914174}{}\label{classnfd_1_1UdpFactory_a66487b4809d42ebea137d32f79914174}
+
+\item 
+const Multicast\+Face\+Map \& \hyperlink{classnfd_1_1UdpFactory_ab80e616911b9b2da5145762d703f09a1}{get\+Multicast\+Faces} () const\hypertarget{classnfd_1_1UdpFactory_ab80e616911b9b2da5145762d703f09a1}{}\label{classnfd_1_1UdpFactory_ab80e616911b9b2da5145762d703f09a1}
+
+\begin{DoxyCompactList}\small\item\em Get map of configured multicast faces. \end{DoxyCompactList}\item 
+void {\bfseries prohibit\+All\+Ipv4\+Endpoints} (const uint16\+\_\+t port)\hypertarget{classnfd_1_1UdpFactory_af91053d8672aa99df43a951a80b75a88}{}\label{classnfd_1_1UdpFactory_af91053d8672aa99df43a951a80b75a88}
+
+\item 
+void {\bfseries prohibit\+All\+Ipv6\+Endpoints} (const uint16\+\_\+t port)\hypertarget{classnfd_1_1UdpFactory_af695907724adeb4a1ccaa80f9d581640}{}\label{classnfd_1_1UdpFactory_af695907724adeb4a1ccaa80f9d581640}
+
+\item 
+void {\bfseries after\+Face\+Failed} (udp\+::\+Endpoint \&endpoint)\hypertarget{classnfd_1_1UdpFactory_ae4eaa95482900ee5fb7b11b31b00ceb8}{}\label{classnfd_1_1UdpFactory_ae4eaa95482900ee5fb7b11b31b00ceb8}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1UdpChannel}{Udp\+Channel} $>$ \hyperlink{classnfd_1_1UdpFactory_a29bd47efc6abce7ad40730bbcb0af715}{find\+Channel} (const udp\+::\+Endpoint \&local\+Endpoint)
+\begin{DoxyCompactList}\small\item\em Look up \hyperlink{classnfd_1_1UdpChannel}{Udp\+Channel} using specified local endpoint. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} $>$ \hyperlink{classnfd_1_1UdpFactory_ab9efc0d4b0ada20dea9b2792d535938a}{find\+Multicast\+Face} (const udp\+::\+Endpoint \&local\+Endpoint)
+\begin{DoxyCompactList}\small\item\em Look up multicast \hyperlink{classnfd_1_1UdpFace}{Udp\+Face} using specified local endpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void prohibit\+Endpoint(const udp\+::\+Endpoint\& endpoint)\hypertarget{classnfd_1_1UdpFactory_ab5a5c239c8d82073ccce8bd390f3b184}{}\label{classnfd_1_1UdpFactory_ab5a5c239c8d82073ccce8bd390f3b184}
+
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: typedef std\+::map$<$udp\+::\+Endpoint\hypertarget{classnfd_1_1UdpFactory_af36a56f61e46546b13bb1864a9392d1c}{}\label{classnfd_1_1UdpFactory_af36a56f61e46546b13bb1864a9392d1c}
+
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1UdpChannel}{Udp\+Channel} $>$ {\bfseries Channel\+Map}\hypertarget{classnfd_1_1UdpFactory_a1fc807b230780e23bc9c3eb6d7809460}{}\label{classnfd_1_1UdpFactory_a1fc807b230780e23bc9c3eb6d7809460}
+
+\item 
+Channel\+Map {\bfseries m\+\_\+channels}\hypertarget{classnfd_1_1UdpFactory_a7785237f5654e5e98f9b7f66ca85922a}{}\label{classnfd_1_1UdpFactory_a7785237f5654e5e98f9b7f66ca85922a}
+
+\item 
+Multicast\+Face\+Map {\bfseries m\+\_\+multicast\+Faces}\hypertarget{classnfd_1_1UdpFactory_aeb5028bde1e9bae8bd792a316477edd1}{}\label{classnfd_1_1UdpFactory_aeb5028bde1e9bae8bd792a316477edd1}
+
+\item 
+std\+::string {\bfseries m\+\_\+default\+Port}\hypertarget{classnfd_1_1UdpFactory_a62c918916b42cff4914489c382d372de}{}\label{classnfd_1_1UdpFactory_a62c918916b42cff4914489c382d372de}
+
+\item 
+std\+::set$<$ udp\+::\+Endpoint $>$ {\bfseries m\+\_\+prohibited\+Endpoints}\hypertarget{classnfd_1_1UdpFactory_afc002c9f0b919480c0f6dcd57e61c948}{}\label{classnfd_1_1UdpFactory_afc002c9f0b919480c0f6dcd57e61c948}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000020}{Todo}]I\+Pv6 multicast support not implemented \end{DoxyRefDesc}
+
+
+Definition at line 37 of file udp-\/factory.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}!create\+Channel@{create\+Channel}}
+\index{create\+Channel@{create\+Channel}!nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Channel(const udp\+::\+Endpoint \&local\+Endpoint, const time\+::seconds \&timeout=time\+::seconds(600))}{createChannel(const udp::Endpoint \&localEndpoint, const time::seconds \&timeout=time::seconds(600))}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Udp\+Channel} $>$ nfd\+::\+Udp\+Factory\+::create\+Channel (
+\begin{DoxyParamCaption}
+\item[{const udp\+::\+Endpoint \&}]{local\+Endpoint, }
+\item[{const time\+::seconds \&}]{timeout = {\ttfamily time\+:\+:seconds(600)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UdpFactory_a9bad75ed0f68f1802599fbd98c4edebc}{}\label{classnfd_1_1UdpFactory_a9bad75ed0f68f1802599fbd98c4edebc}
+
+
+Create U\+D\+P-\/based channel using udp\+::\+Endpoint. 
+
+udp\+::\+Endpoint is really an alias for boost\+::asio\+::ip\+::udp\+::endpoint.
+
+If this method called twice with the same endpoint, only one channel will be created. The second call will just retrieve the existing channel.
+
+If a multicast face is already active on the same local endpoint, the creation fails and an exception is thrown
+
+Once a face is created, if it doesn\textquotesingle{}t send/receive anything for a period of time equal to timeout, it will be destroyed \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000021}{Todo}]this funcionality has to be implemented\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{Returns}
+always a valid pointer to a \hyperlink{classnfd_1_1UdpChannel}{Udp\+Channel} object, an exception is thrown if it cannot be created.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1UdpFactory_1_1Error}{Udp\+Factory\+::\+Error}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.boost.org/doc/libs/1_42_0/doc/html/boost_asio/reference/ip__udp/endpoint.html}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+42\+\_\+0/doc/html/boost\+\_\+asio/reference/ip\+\_\+\+\_\+udp/endpoint.\+html} for details on ways to create udp\+::\+Endpoint 
+\end{DoxySeeAlso}
+
+
+Definition at line 111 of file udp-\/factory.\+cpp.
+
+\index{nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}!create\+Channel@{create\+Channel}}
+\index{create\+Channel@{create\+Channel}!nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Channel(const std\+::string \&local\+Ip, const std\+::string \&local\+Port, const time\+::seconds \&timeout=time\+::seconds(600))}{createChannel(const std::string \&localIp, const std::string \&localPort, const time::seconds \&timeout=time::seconds(600))}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Udp\+Channel} $>$ nfd\+::\+Udp\+Factory\+::create\+Channel (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{local\+Ip, }
+\item[{const std\+::string \&}]{local\+Port, }
+\item[{const time\+::seconds \&}]{timeout = {\ttfamily time\+:\+:seconds(600)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UdpFactory_a8c81739854cc34f1e85a9372480ab1ad}{}\label{classnfd_1_1UdpFactory_a8c81739854cc34f1e85a9372480ab1ad}
+
+
+Create U\+D\+P-\/based channel using specified IP address and port number. 
+
+This method is just a helper that converts a string representation of local\+Ip and port to udp\+::\+Endpoint and calls the other create\+Channel overload.
+
+If local\+Host is a I\+Pv6 address of a specific device, it must be in the form\+: ip addressinterface name Example\+: fe80\+:\+:5e96\+:9dff\+:fe7d\+:9c8den1 Otherwise, you can use \+:\+:
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Udp\+Channel\+::\+Error} & if the bind on the socket fails \\
+\hline
+{\em \hyperlink{classnfd_1_1UdpFactory_1_1Error}{Udp\+Factory\+::\+Error}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 140 of file udp-\/factory.\+cpp.
+
+\index{nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}!create\+Face@{create\+Face}}
+\index{create\+Face@{create\+Face}!nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Face(const Face\+Uri \&uri, ndn\+::nfd\+::\+Face\+Persistency persistency, const Face\+Created\+Callback \&on\+Created, const Face\+Connect\+Failed\+Callback \&on\+Connect\+Failed) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{createFace(const FaceUri \&uri, ndn::nfd::FacePersistency persistency, const FaceCreatedCallback \&onCreated, const FaceConnectFailedCallback \&onConnectFailed) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Udp\+Factory\+::create\+Face (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{uri, }
+\item[{{\bf ndn\+::nfd\+::\+Face\+Persistency}}]{persistency, }
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Created, }
+\item[{const {\bf Face\+Connect\+Failed\+Callback} \&}]{on\+Connect\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1UdpFactory_af218bef7aaec0a3e2d84b5ce013e71dd}{}\label{classnfd_1_1UdpFactory_af218bef7aaec0a3e2d84b5ce013e71dd}
+
+
+Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. 
+
+This method should automatically choose channel, based on supplied Face\+Uri and create face.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1UdpFactory_1_1Error}{Error}} & Factory does not support connect operation \\
+\hline
+{\em \hyperlink{classnfd_1_1UdpFactory_1_1Error}{Error}} & specified {\ttfamily persistency} is not supported \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}{nfd\+::\+Protocol\+Factory}.
+
+
+
+Definition at line 253 of file udp-\/factory.\+cpp.
+
+\index{nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}!create\+Multicast\+Face@{create\+Multicast\+Face}}
+\index{create\+Multicast\+Face@{create\+Multicast\+Face}!nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Multicast\+Face(const udp\+::\+Endpoint \&local\+Endpoint, const udp\+::\+Endpoint \&multicast\+Endpoint, const std\+::string \&network\+Interface\+Name="""")}{createMulticastFace(const udp::Endpoint \&localEndpoint, const udp::Endpoint \&multicastEndpoint, const std::string \&networkInterfaceName="")}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Multicast\+Udp\+Face} $>$ nfd\+::\+Udp\+Factory\+::create\+Multicast\+Face (
+\begin{DoxyParamCaption}
+\item[{const udp\+::\+Endpoint \&}]{local\+Endpoint, }
+\item[{const udp\+::\+Endpoint \&}]{multicast\+Endpoint, }
+\item[{const std\+::string \&}]{network\+Interface\+Name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UdpFactory_aa5b9a59b3022401456147539628ca90a}{}\label{classnfd_1_1UdpFactory_aa5b9a59b3022401456147539628ca90a}
+
+
+Create \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} using udp\+::\+Endpoint. 
+
+udp\+::\+Endpoint is really an alias for boost\+::asio\+::ip\+::udp\+::endpoint.
+
+The face will join the multicast group
+
+If this method called twice with the same endpoint and group, only one face will be created. The second call will just retrieve the existing channel.
+
+If an unicast face is already active on the same local N\+IC and port, the creation fails and an exception is thrown
+
+
+\begin{DoxyParams}{Parameters}
+{\em network\+Interface\+Name} & name of the network interface on which the face will be bound (Used only on multihomed linux machine with more than one \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} for the same multicast group. If specified, will requires C\+A\+P\+\_\+\+N\+E\+T\+\_\+\+R\+AW capability) An empty string can be provided in other system or in linux machine with only one \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} per multicast group\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+always a valid pointer to a \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} object, an exception is thrown if it cannot be created.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1UdpFactory_1_1Error}{Udp\+Factory\+::\+Error}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\href{http://www.boost.org/doc/libs/1_42_0/doc/html/boost_asio/reference/ip__udp/endpoint.html}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+42\+\_\+0/doc/html/boost\+\_\+asio/reference/ip\+\_\+\+\_\+udp/endpoint.\+html} for details on ways to create udp\+::\+Endpoint 
+\end{DoxySeeAlso}
+
+
+Definition at line 150 of file udp-\/factory.\+cpp.
+
+\index{nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}!find\+Channel@{find\+Channel}}
+\index{find\+Channel@{find\+Channel}!nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}}
+\subsubsection[{\texorpdfstring{find\+Channel(const udp\+::\+Endpoint \&local\+Endpoint)}{findChannel(const udp::Endpoint \&localEndpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Udp\+Channel} $>$ nfd\+::\+Udp\+Factory\+::find\+Channel (
+\begin{DoxyParamCaption}
+\item[{const udp\+::\+Endpoint \&}]{local\+Endpoint}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UdpFactory_a29bd47efc6abce7ad40730bbcb0af715}{}\label{classnfd_1_1UdpFactory_a29bd47efc6abce7ad40730bbcb0af715}
+
+
+Look up \hyperlink{classnfd_1_1UdpChannel}{Udp\+Channel} using specified local endpoint. 
+
+\begin{DoxyReturn}{Returns}
+shared pointer to the existing \hyperlink{classnfd_1_1UdpChannel}{Udp\+Channel} object or empty shared pointer when such channel does not exist
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em never} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 296 of file udp-\/factory.\+cpp.
+
+\index{nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}!find\+Multicast\+Face@{find\+Multicast\+Face}}
+\index{find\+Multicast\+Face@{find\+Multicast\+Face}!nfd\+::\+Udp\+Factory@{nfd\+::\+Udp\+Factory}}
+\subsubsection[{\texorpdfstring{find\+Multicast\+Face(const udp\+::\+Endpoint \&local\+Endpoint)}{findMulticastFace(const udp::Endpoint \&localEndpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Multicast\+Udp\+Face} $>$ nfd\+::\+Udp\+Factory\+::find\+Multicast\+Face (
+\begin{DoxyParamCaption}
+\item[{const udp\+::\+Endpoint \&}]{local\+Endpoint}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UdpFactory_ab9efc0d4b0ada20dea9b2792d535938a}{}\label{classnfd_1_1UdpFactory_ab9efc0d4b0ada20dea9b2792d535938a}
+
+
+Look up multicast \hyperlink{classnfd_1_1UdpFace}{Udp\+Face} using specified local endpoint. 
+
+\begin{DoxyReturn}{Returns}
+shared pointer to the existing multicast \hyperlink{classnfd_1_1MulticastUdpFace}{Multicast\+Udp\+Face} object or empty shared pointer when such face does not exist
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em never} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 306 of file udp-\/factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/udp-\/factory.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/udp-\/factory.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,217 @@
+\hypertarget{classndn_1_1Buffer}{}\section{ndn\+:\+:Buffer Class Reference}
+\label{classndn_1_1Buffer}\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+
+
+Class representing a general-\/use automatically managed/resized buffer.  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1Buffer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Buffer_a2e05abfbf750c97be0c2344141b5e78a}{Buffer} ()\hypertarget{classndn_1_1Buffer_a2e05abfbf750c97be0c2344141b5e78a}{}\label{classndn_1_1Buffer_a2e05abfbf750c97be0c2344141b5e78a}
+
+\begin{DoxyCompactList}\small\item\em Creates an empty buffer. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Buffer_a99cbbba739a3c10a8fddc6f2d88fb4cb}{Buffer} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Creates a buffer with pre-\/allocated size. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Buffer_a897defbbc0912696b01ce0b548c76640}{Buffer} (const void $\ast$\hyperlink{classndn_1_1Buffer_a1ab623bc5bc99475676e42ff7b41a0f4}{buf}, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Create a buffer by copying contents from a buffer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\\hyperlink{classndn_1_1Buffer_a53a3d3ca890b30a3473b329021f9e781}{Buffer} (Input\+Iterator first, Input\+Iterator last)
+\begin{DoxyCompactList}\small\item\em Create a buffer by copying contents of the range \mbox{[}first, last) \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \hyperlink{classndn_1_1Buffer_a15dcf9049676ec26a3570ce0cb21e5b6}{get} ()
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{classndn_1_1Buffer_a1ab623bc5bc99475676e42ff7b41a0f4}{buf} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{classndn_1_1Buffer_a0b721a8f9e86dc47deee4b18e3986dd5}{get} ()
+\item 
+const uint8\+\_\+t $\ast$ \hyperlink{classndn_1_1Buffer_abd2a90e0561de52dfabed4e4f2c77974}{buf} () const
+\item 
+const uint8\+\_\+t $\ast$ \hyperlink{classndn_1_1Buffer_a79a3a566f4d134beb9254442e4aa54e6}{get} () const
+\item 
+{\footnotesize template$<$class T $>$ }\\const T $\ast$ \hyperlink{classndn_1_1Buffer_add466a0b04c34299e2b4b003f7d71a0f}{get} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a general-\/use automatically managed/resized buffer. 
+
+In most respect, \hyperlink{classndn_1_1Buffer}{Buffer} class is equivalent to std\+::vector$<$uint8\+\_\+t$>$ and is in fact uses it as a base class. In addition to that, it provides \hyperlink{classndn_1_1Buffer_a1ab623bc5bc99475676e42ff7b41a0f4}{buf()} and \hyperlink{classndn_1_1Buffer_a1ab623bc5bc99475676e42ff7b41a0f4}{buf$<$\+T$>$()} helper method for easier access to the underlying data (\hyperlink{classndn_1_1Buffer_a1ab623bc5bc99475676e42ff7b41a0f4}{buf$<$\+T$>$()} casts pointer to the requested class) 
+
+Definition at line 44 of file buffer.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{Buffer(size\+\_\+t size)}{Buffer(size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Buffer\+::\+Buffer (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Buffer_a99cbbba739a3c10a8fddc6f2d88fb4cb}{}\label{classndn_1_1Buffer_a99cbbba739a3c10a8fddc6f2d88fb4cb}
+
+
+Creates a buffer with pre-\/allocated size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & size of the buffer to be allocated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file buffer.\+cpp.
+
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{Buffer(const void $\ast$buf, size\+\_\+t length)}{Buffer(const void *buf, size\_t length)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Buffer\+::\+Buffer (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{buf, }
+\item[{size\+\_\+t}]{length}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Buffer_a897defbbc0912696b01ce0b548c76640}{}\label{classndn_1_1Buffer_a897defbbc0912696b01ce0b548c76640}
+
+
+Create a buffer by copying contents from a buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & const pointer to buffer \\
+\hline
+{\em length} & length of the buffer to copy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file buffer.\+cpp.
+
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{Buffer(\+Input\+Iterator first, Input\+Iterator last)}{Buffer(InputIterator first, InputIterator last)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ ndn\+::\+Buffer\+::\+Buffer (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{first, }
+\item[{Input\+Iterator}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Buffer_a53a3d3ca890b30a3473b329021f9e781}{}\label{classndn_1_1Buffer_a53a3d3ca890b30a3473b329021f9e781}
+
+
+Create a buffer by copying contents of the range \mbox{[}first, last) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Input\+Iterator} & an Input\+Iterator compatible with std\+::vector$<$uint8\+\_\+t$>$ constructor \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & iterator to the first element to copy \\
+\hline
+{\em last} & iterator to the element immediately following the last element to copy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file buffer.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!buf@{buf}}
+\index{buf@{buf}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{buf()}{buf()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ ndn\+::\+Buffer\+::buf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Buffer_a1ab623bc5bc99475676e42ff7b41a0f4}{}\label{classndn_1_1Buffer_a1ab623bc5bc99475676e42ff7b41a0f4}
+\begin{DoxyReturn}{Returns}
+pointer to the first byte of the buffer
+\end{DoxyReturn}
+This is same as {\ttfamily }.\hyperlink{classndn_1_1Buffer_a15dcf9049676ec26a3570ce0cb21e5b6}{get()} 
+
+Definition at line 87 of file buffer.\+hpp.
+
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!buf@{buf}}
+\index{buf@{buf}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{buf() const}{buf() const}}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t$\ast$ ndn\+::\+Buffer\+::buf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Buffer_abd2a90e0561de52dfabed4e4f2c77974}{}\label{classndn_1_1Buffer_abd2a90e0561de52dfabed4e4f2c77974}
+\begin{DoxyReturn}{Returns}
+pointer to the first byte of the buffer
+\end{DoxyReturn}
+This is same as {\ttfamily }.\hyperlink{classndn_1_1Buffer_a15dcf9049676ec26a3570ce0cb21e5b6}{get()} 
+
+Definition at line 107 of file buffer.\+hpp.
+
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!get@{get}}
+\index{get@{get}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{get()}{get()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ ndn\+::\+Buffer\+::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Buffer_a15dcf9049676ec26a3570ce0cb21e5b6}{}\label{classndn_1_1Buffer_a15dcf9049676ec26a3570ce0cb21e5b6}
+\begin{DoxyReturn}{Returns}
+pointer to the first byte of the buffer 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file buffer.\+hpp.
+
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!get@{get}}
+\index{get@{get}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{get()}{get()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T$\ast$ ndn\+::\+Buffer\+::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Buffer_a0b721a8f9e86dc47deee4b18e3986dd5}{}\label{classndn_1_1Buffer_a0b721a8f9e86dc47deee4b18e3986dd5}
+\begin{DoxyReturn}{Returns}
+pointer to the first byte of the buffer and reinterpret\+\_\+cast it to the requested type T 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file buffer.\+hpp.
+
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!get@{get}}
+\index{get@{get}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{get() const}{get() const}}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t$\ast$ ndn\+::\+Buffer\+::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Buffer_a79a3a566f4d134beb9254442e4aa54e6}{}\label{classndn_1_1Buffer_a79a3a566f4d134beb9254442e4aa54e6}
+\begin{DoxyReturn}{Returns}
+pointer to the first byte of the buffer 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file buffer.\+hpp.
+
+\index{ndn\+::\+Buffer@{ndn\+::\+Buffer}!get@{get}}
+\index{get@{get}!ndn\+::\+Buffer@{ndn\+::\+Buffer}}
+\subsubsection[{\texorpdfstring{get() const}{get() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ const T$\ast$ ndn\+::\+Buffer\+::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Buffer_add466a0b04c34299e2b4b003f7d71a0f}{}\label{classndn_1_1Buffer_add466a0b04c34299e2b4b003f7d71a0f}
+\begin{DoxyReturn}{Returns}
+const pointer to the first byte of the buffer and reinterpret\+\_\+cast it to the requested type T 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file buffer.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/buffer.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/buffer.\+cpp\end{DoxyCompactItemize}

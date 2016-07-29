@@ -1,0 +1,50 @@
+\hypertarget{cs_8hpp}{}\section{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs.hpp File Reference}
+\label{cs_8hpp}\index{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs.\+hpp@{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs.\+hpp}}
+
+
+implements the Content\+Store  
+
+
+{\ttfamily \#include \char`\"{}cs-\/policy.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cs-\/internal.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}cs-\/entry-\/impl.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$ndn-\/cxx/util/signal.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/iterator/transform\+\_\+iterator.\+hpp$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1cs_1_1Cs}{nfd\+::cs\+::\+Cs}
+\begin{DoxyCompactList}\small\item\em represents the Content\+Store \end{DoxyCompactList}\item 
+struct \hyperlink{structnfd_1_1cs_1_1Cs_1_1EntryFromEntryImpl}{nfd\+::cs\+::\+Cs\+::\+Entry\+From\+Entry\+Impl}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacenfd}{nfd}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unique\+\_\+ptr$<$ Policy $>$ {\bfseries nfd\+::cs\+::make\+Default\+Policy} ()\hypertarget{cs_8cpp_adc75e587008488c063ff1c44c49eebad}{}\label{cs_8cpp_adc75e587008488c063ff1c44c49eebad}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+implements the Content\+Store 
+
+Copyright (c) 2014-\/2015, Regents of the University of California, Arizona Board of Regents, Colorado State University, University Pierre \& Marie Curie, Sorbonne University, Washington University in St. Louis, Beijing Institute of Technology, The University of Memphis.
+
+This file is part of N\+FD (Named Data Networking Forwarding Daemon). See A\+U\+T\+H\+O\+R\+S.\+md for complete list of N\+FD authors and contributors.
+
+N\+FD is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+N\+FD is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with N\+FD, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}.
+
+This Content\+Store implementation consists of two data structures, a Table, and a set of cleanup queues.
+
+The Table is a container (std\+::set) sorted by full Names of stored Data packets. Data packets are wrapped in Entry objects. Each Entry contain the Data packet itself, and a few addition attributes such as the staleness of the Data packet.
+
+The cleanup queues are three doubly linked lists which stores Table iterators. The three queues keep track of unsolicited, stale, and fresh Data packet, respectively. Table iterator is placed into, removed from, and moved between suitable queues whenever an Entry is added, removed, or has other attribute changes. The Table iterator of an Entry should be in exactly one queue at any moment. Within each queue, the iterators are kept in first-\/in-\/first-\/out order. Eviction procedure exhausts the first queue before moving onto the next queue, in the order of unsolicited, stale, and fresh queue. 

@@ -1,0 +1,111 @@
+\hypertarget{classndn_1_1PublicKey}{}\section{ndn\+:\+:Public\+Key Class Reference}
+\label{classndn_1_1PublicKey}\index{ndn\+::\+Public\+Key@{ndn\+::\+Public\+Key}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1PublicKey_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1PublicKey_ac8bbd62df0414af227d971d83427cfa6}{Public\+Key} ()
+\item 
+\hyperlink{classndn_1_1PublicKey_afc9a126ea670ffc3c1e03e9c17d23a49}{Public\+Key} (const uint8\+\_\+t $\ast$key\+Der\+Buf, size\+\_\+t key\+Der\+Size)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1PublicKey}{Public\+Key} from. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Buffer}{Buffer} \& {\bfseries get} () const\hypertarget{classndn_1_1PublicKey_a9f8995e17960674a65dcb06327f5d5b0}{}\label{classndn_1_1PublicKey_a9f8995e17960674a65dcb06327f5d5b0}
+
+\item 
+void {\bfseries set} (const uint8\+\_\+t $\ast$key\+Der\+Buf, size\+\_\+t key\+Der\+Size)\hypertarget{classndn_1_1PublicKey_a019603bec6bdf7ddcf1eedb9a2730887}{}\label{classndn_1_1PublicKey_a019603bec6bdf7ddcf1eedb9a2730887}
+
+\item 
+Key\+Type {\bfseries get\+Key\+Type} () const\hypertarget{classndn_1_1PublicKey_a0e66949369314df89c41152d4ae92538}{}\label{classndn_1_1PublicKey_a0e66949369314df89c41152d4ae92538}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1PublicKey_a06dc6fe0e52739960089da9122fc68c5}{compute\+Digest} () const
+\item 
+void {\bfseries encode} (Crypto\+P\+P\+::\+Buffered\+Transformation \&out) const\hypertarget{classndn_1_1PublicKey_a60fd4a3edf03af356df0e090583ac30b}{}\label{classndn_1_1PublicKey_a60fd4a3edf03af356df0e090583ac30b}
+
+\item 
+void {\bfseries decode} (Crypto\+P\+P\+::\+Buffered\+Transformation \&in)\hypertarget{classndn_1_1PublicKey_aa3d8cb2b11b1b50200f33b25d9590287}{}\label{classndn_1_1PublicKey_aa3d8cb2b11b1b50200f33b25d9590287}
+
+\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&key) const\hypertarget{classndn_1_1PublicKey_aeada5a13d1b29c00c46023b088c3b493}{}\label{classndn_1_1PublicKey_aeada5a13d1b29c00c46023b088c3b493}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&key) const\hypertarget{classndn_1_1PublicKey_a023bd2252db188b26ed7ff1e30c74e46}{}\label{classndn_1_1PublicKey_a023bd2252db188b26ed7ff1e30c74e46}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file public-\/key.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Public\+Key@{ndn\+::\+Public\+Key}!Public\+Key@{Public\+Key}}
+\index{Public\+Key@{Public\+Key}!ndn\+::\+Public\+Key@{ndn\+::\+Public\+Key}}
+\subsubsection[{\texorpdfstring{Public\+Key()}{PublicKey()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Public\+Key\+::\+Public\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1PublicKey_ac8bbd62df0414af227d971d83427cfa6}{}\label{classndn_1_1PublicKey_ac8bbd62df0414af227d971d83427cfa6}
+The default constructor. 
+
+Definition at line 33 of file public-\/key.\+cpp.
+
+\index{ndn\+::\+Public\+Key@{ndn\+::\+Public\+Key}!Public\+Key@{Public\+Key}}
+\index{Public\+Key@{Public\+Key}!ndn\+::\+Public\+Key@{ndn\+::\+Public\+Key}}
+\subsubsection[{\texorpdfstring{Public\+Key(const uint8\+\_\+t $\ast$key\+Der\+Buf, size\+\_\+t key\+Der\+Size)}{PublicKey(const uint8\_t *keyDerBuf, size\_t keyDerSize)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Public\+Key\+::\+Public\+Key (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{key\+Der\+Buf, }
+\item[{size\+\_\+t}]{key\+Der\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1PublicKey_afc9a126ea670ffc3c1e03e9c17d23a49}{}\label{classndn_1_1PublicKey_afc9a126ea670ffc3c1e03e9c17d23a49}
+
+
+Create a new \hyperlink{classndn_1_1PublicKey}{Public\+Key} from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Der\+Buf} & in D\+ER buffer\\
+\hline
+{\em key\+Der\+Buf} & The pointer to the first byte of buffer containing D\+ER of public key \\
+\hline
+{\em key\+Der\+Size} & Size of the buffer\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1PublicKey_1_1Error}{Public\+Key\+::\+Error}} & If D\+ER in buffer cannot be decoded \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 38 of file public-\/key.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Public\+Key@{ndn\+::\+Public\+Key}!compute\+Digest@{compute\+Digest}}
+\index{compute\+Digest@{compute\+Digest}!ndn\+::\+Public\+Key@{ndn\+::\+Public\+Key}}
+\subsubsection[{\texorpdfstring{compute\+Digest() const}{computeDigest() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block} \& ndn\+::\+Public\+Key\+::compute\+Digest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1PublicKey_a06dc6fe0e52739960089da9122fc68c5}{}\label{classndn_1_1PublicKey_a06dc6fe0e52739960089da9122fc68c5}
+\begin{DoxyReturn}{Returns}
+a Key\+Digest block that matches this public key 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file public-\/key.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/public-\/key.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/public-\/key.\+cpp\end{DoxyCompactItemize}

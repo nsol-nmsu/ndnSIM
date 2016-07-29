@@ -1,0 +1,43 @@
+Unless disabled with {\ttfamily -\/-\/without-\/tools} configuration option, files in {\ttfamily tools/} directory are automatically build and installed to {\ttfamily \$\{P\+R\+E\+F\+IX\}/bin} folder.
+
+There are two ways to add new tools, depending on their complexity\+:
+
+
+\begin{DoxyEnumerate}
+\item Tools with a single translation unit
+
+For simple tools that have a single translation unit, the {\ttfamily .cpp} file can be directly put in {\ttfamily tools/} folder and it will be automatically compiled on the next run of {\ttfamily ./waf}. Name of the compiled binary will be determined by the base name of the {\ttfamily .cpp} file. For example, {\ttfamily tools/foo.\+cpp} will be compiled into binary {\ttfamily foo} in {\ttfamily $<$build$>$/bin/} folder\+: \begin{DoxyVerb}  echo "int main() { return 0; }" > tools/foo.cpp
+  ./waf
+  # ... Compiling tools/foo.cpp
+  # ... Linking build/bin/foo
+
+  sudo ./waf install
+  # ... install /usr/local/bin/foo (from build/bin/foo)
+
+  # To run the tool
+  /usr/local/bin/foo
+\end{DoxyVerb}
+
+\item Tools with multiple translation units
+
+For more complex tools that contain multiple translation units, one can use the following directory structure\+:
+\begin{DoxyItemize}
+\item Create a directory under {\ttfamily tools/} folder (e.\+g., {\ttfamily tools/bar}). The name of this directory will determine the name of the compiled binary ({\ttfamily $<$build$>$/bin/bar})
+\item Place any number of translation units (e.\+g., {\ttfamily tools/bar/a.\+cpp}, {\ttfamily tools/bar/b.\+cpp}, ...) in this directory. All {\ttfamily .cpp} files in this directory will be compiled and linked together to produce the binary of the tool. One of the .cpp files should contain the {\ttfamily main()} function.
+\end{DoxyItemize}
+
+For example\+: \begin{DoxyVerb}  mkdir tools/bar
+  echo "int bar(); int main() { return bar(); }" > tools/bar/a.cpp
+  echo "int bar() { return 10; } " > tools/bar/b.cpp
+  ./waf
+  # ... Compiling tools/bar/a.cpp
+  # ... Compiling tools/bar/b.cpp
+  # ... Linking build/bin/bar
+
+  sudo ./waf install
+  # ... install /usr/local/bin/bar (from build/bin/bar)
+
+  # To run the tool
+  /usr/local/bin/bar\end{DoxyVerb}
+ 
+\end{DoxyEnumerate}

@@ -1,0 +1,208 @@
+\hypertarget{classns3_1_1AnnotatedTopologyReader}{}\section{ns3\+:\+:Annotated\+Topology\+Reader Class Reference}
+\label{classns3_1_1AnnotatedTopologyReader}\index{ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}}
+
+
+This class reads annotated topology and apply settings to the corresponding nodes and links.  
+
+
+
+
+{\ttfamily \#include $<$annotated-\/topology-\/reader.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:Annotated\+Topology\+Reader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1AnnotatedTopologyReader}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1AnnotatedTopologyReader_a5799ffbffba82cb65d091482539b86d4}{Annotated\+Topology\+Reader} (const std\+::string \&path=\char`\"{}\char`\"{}, double scale=1.\+0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual Node\+Container \hyperlink{classns3_1_1AnnotatedTopologyReader_a6284f11d2dce1e96c66b05082edeb444}{Read} ()
+\begin{DoxyCompactList}\small\item\em Main annotated topology reading function. \end{DoxyCompactList}\item 
+virtual Node\+Container \hyperlink{classns3_1_1AnnotatedTopologyReader_a9e01e253a256cdc53aecf58365c2f6f3}{Get\+Nodes} () const\hypertarget{classns3_1_1AnnotatedTopologyReader_a9e01e253a256cdc53aecf58365c2f6f3}{}\label{classns3_1_1AnnotatedTopologyReader_a9e01e253a256cdc53aecf58365c2f6f3}
+
+\begin{DoxyCompactList}\small\item\em Get nodes read by the reader. \end{DoxyCompactList}\item 
+virtual const std\+::list$<$ Link $>$ \& \hyperlink{classns3_1_1AnnotatedTopologyReader_a691dffec8620808df8b3c36a0b43a160}{Get\+Links} () const\hypertarget{classns3_1_1AnnotatedTopologyReader_a691dffec8620808df8b3c36a0b43a160}{}\label{classns3_1_1AnnotatedTopologyReader_a691dffec8620808df8b3c36a0b43a160}
+
+\begin{DoxyCompactList}\small\item\em Get links read by the reader. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1AnnotatedTopologyReader_a3bdadbc6076b8412a82359d97cb07e84}{Assign\+Ipv4\+Addresses} (Ipv4\+Address base)
+\begin{DoxyCompactList}\small\item\em Assign I\+Pv4 addresses to all links. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1AnnotatedTopologyReader_abdbf087f331d303447ea5d554c677275}{Set\+Bounding\+Box} (double ulx, double uly, double lrx, double lry)
+\begin{DoxyCompactList}\small\item\em Set bounding box where nodes will be randomly places (if positions are unspecified) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1AnnotatedTopologyReader_a8ec3fef68f60f440fc795bb232532db6}{Set\+Mobility\+Model} (const std\+::string \&model)
+\begin{DoxyCompactList}\small\item\em Set mobility model to be used on nodes. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1AnnotatedTopologyReader_a3e0cf2299c8948c03a10999038b96be5}{Apply\+Ospf\+Metric} ()\hypertarget{classns3_1_1AnnotatedTopologyReader_a3e0cf2299c8948c03a10999038b96be5}{}\label{classns3_1_1AnnotatedTopologyReader_a3e0cf2299c8948c03a10999038b96be5}
+
+\begin{DoxyCompactList}\small\item\em Apply O\+S\+PF metric on Ipv4 (if exists) and Ccnx (if exists) stacks. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1AnnotatedTopologyReader_a547e910c04eb2a525b3a869d1c521ec3}{Save\+Topology} (const std\+::string \&file)\hypertarget{classns3_1_1AnnotatedTopologyReader_a547e910c04eb2a525b3a869d1c521ec3}{}\label{classns3_1_1AnnotatedTopologyReader_a547e910c04eb2a525b3a869d1c521ec3}
+
+\begin{DoxyCompactList}\small\item\em Save positions (e.\+g., after manual modification using visualizer) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1AnnotatedTopologyReader_a2078a690442885c1c3e2ae5fd9c83895}{Save\+Graphviz} (const std\+::string \&file)\hypertarget{classns3_1_1AnnotatedTopologyReader_a2078a690442885c1c3e2ae5fd9c83895}{}\label{classns3_1_1AnnotatedTopologyReader_a2078a690442885c1c3e2ae5fd9c83895}
+
+\begin{DoxyCompactList}\small\item\em Save topology in graphviz format (.dot file) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Ptr$<$ Node $>$ {\bfseries Create\+Node} (const std\+::string name, uint32\+\_\+t system\+Id)\hypertarget{classns3_1_1AnnotatedTopologyReader_a29f2f97114535c8a8081c286e175d800}{}\label{classns3_1_1AnnotatedTopologyReader_a29f2f97114535c8a8081c286e175d800}
+
+\item 
+Ptr$<$ Node $>$ {\bfseries Create\+Node} (const std\+::string name, double posX, double posY, uint32\+\_\+t system\+Id)\hypertarget{classns3_1_1AnnotatedTopologyReader_a002817a868dd72b8ab4d1cba2f416d85}{}\label{classns3_1_1AnnotatedTopologyReader_a002817a868dd72b8ab4d1cba2f416d85}
+
+\item 
+void \hyperlink{classns3_1_1AnnotatedTopologyReader_a88a48c89a3cbd7623a69adc22bf1d6ce}{Apply\+Settings} ()\hypertarget{classns3_1_1AnnotatedTopologyReader_a88a48c89a3cbd7623a69adc22bf1d6ce}{}\label{classns3_1_1AnnotatedTopologyReader_a88a48c89a3cbd7623a69adc22bf1d6ce}
+
+\begin{DoxyCompactList}\small\item\em This method applies setting to corresponding nodes and links Net\+Device\+Container must be allocated Node\+Container from Read method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries m\+\_\+path}\hypertarget{classns3_1_1AnnotatedTopologyReader_a1bfd3701f1e0805633809d76bd6cf12c}{}\label{classns3_1_1AnnotatedTopologyReader_a1bfd3701f1e0805633809d76bd6cf12c}
+
+\item 
+Node\+Container {\bfseries m\+\_\+nodes}\hypertarget{classns3_1_1AnnotatedTopologyReader_abfc59a7b29b98c3c2ee446012bd38113}{}\label{classns3_1_1AnnotatedTopologyReader_abfc59a7b29b98c3c2ee446012bd38113}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class reads annotated topology and apply settings to the corresponding nodes and links. 
+
+Definition at line 36 of file annotated-\/topology-\/reader.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}!Annotated\+Topology\+Reader@{Annotated\+Topology\+Reader}}
+\index{Annotated\+Topology\+Reader@{Annotated\+Topology\+Reader}!ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}}
+\subsubsection[{\texorpdfstring{Annotated\+Topology\+Reader(const std\+::string \&path="""", double scale=1.\+0)}{AnnotatedTopologyReader(const std::string \&path="", double scale=1.0)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::\+Annotated\+Topology\+Reader\+::\+Annotated\+Topology\+Reader (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{double}]{scale = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1AnnotatedTopologyReader_a5799ffbffba82cb65d091482539b86d4}{}\label{classns3_1_1AnnotatedTopologyReader_a5799ffbffba82cb65d091482539b86d4}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & ns3\+::\+Names path \\
+\hline
+{\em scale} & Scaling factor for coordinates in input file\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+ns3\+::\+Names class 
+\end{DoxySeeAlso}
+
+
+Definition at line 67 of file annotated-\/topology-\/reader.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}!Assign\+Ipv4\+Addresses@{Assign\+Ipv4\+Addresses}}
+\index{Assign\+Ipv4\+Addresses@{Assign\+Ipv4\+Addresses}!ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}}
+\subsubsection[{\texorpdfstring{Assign\+Ipv4\+Addresses(\+Ipv4\+Address base)}{AssignIpv4Addresses(Ipv4Address base)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::\+Annotated\+Topology\+Reader\+::\+Assign\+Ipv4\+Addresses (
+\begin{DoxyParamCaption}
+\item[{Ipv4\+Address}]{base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1AnnotatedTopologyReader_a3bdadbc6076b8412a82359d97cb07e84}{}\label{classns3_1_1AnnotatedTopologyReader_a3bdadbc6076b8412a82359d97cb07e84}
+
+
+Assign I\+Pv4 addresses to all links. 
+
+Note, I\+Pv4 stack should be installed on all nodes prior this call
+
+Every link will receive /24 netmask
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Starting I\+Pv4 address (second link will have base+256) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 270 of file annotated-\/topology-\/reader.\+cpp.
+
+\index{ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}!Read@{Read}}
+\index{Read@{Read}!ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}}
+\subsubsection[{\texorpdfstring{Read()}{Read()}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+Container ns3\+::\+Annotated\+Topology\+Reader\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1AnnotatedTopologyReader_a6284f11d2dce1e96c66b05082edeb444}{}\label{classns3_1_1AnnotatedTopologyReader_a6284f11d2dce1e96c66b05082edeb444}
+
+
+Main annotated topology reading function. 
+
+This method opens an input stream and reads topology file with annotations.
+
+\begin{DoxyReturn}{Returns}
+the container of the nodes created (or empty container if there was an error) 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classns3_1_1RocketfuelMapReader_a6b5274a161c28648d5c0c8899f51d269}{ns3\+::\+Rocketfuel\+Map\+Reader}, and \hyperlink{classns3_1_1RocketfuelWeightsReader_a920d8786e3a63cca34b5145d92a10c53}{ns3\+::\+Rocketfuel\+Weights\+Reader}.
+
+
+
+Definition at line 155 of file annotated-\/topology-\/reader.\+cpp.
+
+\index{ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}!Set\+Bounding\+Box@{Set\+Bounding\+Box}}
+\index{Set\+Bounding\+Box@{Set\+Bounding\+Box}!ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}}
+\subsubsection[{\texorpdfstring{Set\+Bounding\+Box(double ulx, double uly, double lrx, double lry)}{SetBoundingBox(double ulx, double uly, double lrx, double lry)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::\+Annotated\+Topology\+Reader\+::\+Set\+Bounding\+Box (
+\begin{DoxyParamCaption}
+\item[{double}]{ulx, }
+\item[{double}]{uly, }
+\item[{double}]{lrx, }
+\item[{double}]{lry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1AnnotatedTopologyReader_abdbf087f331d303447ea5d554c677275}{}\label{classns3_1_1AnnotatedTopologyReader_abdbf087f331d303447ea5d554c677275}
+
+
+Set bounding box where nodes will be randomly places (if positions are unspecified) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ulx} & Upper left x coordinate \\
+\hline
+{\em uly} & Upper left y coordinate \\
+\hline
+{\em lrx} & Lower right x coordinate \\
+\hline
+{\em lry} & Lower right y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file annotated-\/topology-\/reader.\+cpp.
+
+\index{ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}!Set\+Mobility\+Model@{Set\+Mobility\+Model}}
+\index{Set\+Mobility\+Model@{Set\+Mobility\+Model}!ns3\+::\+Annotated\+Topology\+Reader@{ns3\+::\+Annotated\+Topology\+Reader}}
+\subsubsection[{\texorpdfstring{Set\+Mobility\+Model(const std\+::string \&model)}{SetMobilityModel(const std::string \&model)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::\+Annotated\+Topology\+Reader\+::\+Set\+Mobility\+Model (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1AnnotatedTopologyReader_a8ec3fef68f60f440fc795bb232532db6}{}\label{classns3_1_1AnnotatedTopologyReader_a8ec3fef68f60f440fc795bb232532db6}
+
+
+Set mobility model to be used on nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & class name of the model \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file annotated-\/topology-\/reader.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/topology/annotated-\/topology-\/reader.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/topology/annotated-\/topology-\/reader.\+cpp\end{DoxyCompactItemize}

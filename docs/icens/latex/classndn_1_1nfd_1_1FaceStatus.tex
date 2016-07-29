@@ -1,0 +1,102 @@
+\hypertarget{classndn_1_1nfd_1_1FaceStatus}{}\section{ndn\+:\+:nfd\+:\+:Face\+Status Class Reference}
+\label{classndn_1_1nfd_1_1FaceStatus}\index{ndn\+::nfd\+::\+Face\+Status@{ndn\+::nfd\+::\+Face\+Status}}
+
+
+represents \hyperlink{classndn_1_1Face}{Face} status  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/face-\/status.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:nfd\+:\+:Face\+Status\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1nfd_1_1FaceStatus}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Face\+Status} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1nfd_1_1FaceStatus_a7b0179f29a62011b6cc5bf0da2700e75}{}\label{classndn_1_1nfd_1_1FaceStatus_a7b0179f29a62011b6cc5bf0da2700e75}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1nfd_1_1FaceStatus_ae41d7afd1f7b8e4c20f06adc14e2dd45}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1nfd_1_1FaceStatus_ae41d7afd1f7b8e4c20f06adc14e2dd45}{}\label{classndn_1_1nfd_1_1FaceStatus_ae41d7afd1f7b8e4c20f06adc14e2dd45}
+
+\begin{DoxyCompactList}\small\item\em prepend \hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} to the encoder \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1nfd_1_1FaceStatus_a09bfc1dfcfa261aa376666486642a2a8}{wire\+Encode} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_a09bfc1dfcfa261aa376666486642a2a8}{}\label{classndn_1_1nfd_1_1FaceStatus_a09bfc1dfcfa261aa376666486642a2a8}
+
+\begin{DoxyCompactList}\small\item\em encode \hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1nfd_1_1FaceStatus_a705522d2cd07d838e91c96bbc893604d}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1nfd_1_1FaceStatus_a705522d2cd07d838e91c96bbc893604d}{}\label{classndn_1_1nfd_1_1FaceStatus_a705522d2cd07d838e91c96bbc893604d}
+
+\begin{DoxyCompactList}\small\item\em decode \hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \end{DoxyCompactList}\item 
+bool {\bfseries has\+Expiration\+Period} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_ac6b54950e9798b05257b0a457a8b3b5c}{}\label{classndn_1_1nfd_1_1FaceStatus_ac6b54950e9798b05257b0a457a8b3b5c}
+
+\item 
+const time\+::milliseconds \& {\bfseries get\+Expiration\+Period} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_a4b55220965e4ba6892f5adf81501a450}{}\label{classndn_1_1nfd_1_1FaceStatus_a4b55220965e4ba6892f5adf81501a450}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \& {\bfseries set\+Expiration\+Period} (const time\+::milliseconds \&expiration\+Period)\hypertarget{classndn_1_1nfd_1_1FaceStatus_ae5661eda5fa61ed993fed1ce5b99b2f1}{}\label{classndn_1_1nfd_1_1FaceStatus_ae5661eda5fa61ed993fed1ce5b99b2f1}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+In\+Interests} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_aa4978b247415314cd2cc285e73d4d132}{}\label{classndn_1_1nfd_1_1FaceStatus_aa4978b247415314cd2cc285e73d4d132}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \& {\bfseries set\+N\+In\+Interests} (uint64\+\_\+t n\+In\+Interests)\hypertarget{classndn_1_1nfd_1_1FaceStatus_a58bc1cde281ffdfcc6fc1246e8d7589e}{}\label{classndn_1_1nfd_1_1FaceStatus_a58bc1cde281ffdfcc6fc1246e8d7589e}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+In\+Datas} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_a31b44cec715b209e3778a99979a03c6a}{}\label{classndn_1_1nfd_1_1FaceStatus_a31b44cec715b209e3778a99979a03c6a}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \& {\bfseries set\+N\+In\+Datas} (uint64\+\_\+t n\+In\+Datas)\hypertarget{classndn_1_1nfd_1_1FaceStatus_af0e6d3b7a69a5c8e2d94832d88d92996}{}\label{classndn_1_1nfd_1_1FaceStatus_af0e6d3b7a69a5c8e2d94832d88d92996}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+Out\+Interests} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_a57042f2948e6433d3e94d1d3a68f411a}{}\label{classndn_1_1nfd_1_1FaceStatus_a57042f2948e6433d3e94d1d3a68f411a}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \& {\bfseries set\+N\+Out\+Interests} (uint64\+\_\+t n\+Out\+Interests)\hypertarget{classndn_1_1nfd_1_1FaceStatus_a015171d9f126f481d2247c4ff504b788}{}\label{classndn_1_1nfd_1_1FaceStatus_a015171d9f126f481d2247c4ff504b788}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+Out\+Datas} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_a150afbe8f8327aedd8e54695caf17abc}{}\label{classndn_1_1nfd_1_1FaceStatus_a150afbe8f8327aedd8e54695caf17abc}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \& {\bfseries set\+N\+Out\+Datas} (uint64\+\_\+t n\+Out\+Datas)\hypertarget{classndn_1_1nfd_1_1FaceStatus_a219293b713c6dfe4760a95acc4f8e1ee}{}\label{classndn_1_1nfd_1_1FaceStatus_a219293b713c6dfe4760a95acc4f8e1ee}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+In\+Bytes} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_a6b98bc95253952e0f1699e31bff8756c}{}\label{classndn_1_1nfd_1_1FaceStatus_a6b98bc95253952e0f1699e31bff8756c}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \& {\bfseries set\+N\+In\+Bytes} (uint64\+\_\+t n\+In\+Bytes)\hypertarget{classndn_1_1nfd_1_1FaceStatus_ac0430bfff47e59715e25d8bf687872fd}{}\label{classndn_1_1nfd_1_1FaceStatus_ac0430bfff47e59715e25d8bf687872fd}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+Out\+Bytes} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_ae33de2674a449b2ff80560324935fe6e}{}\label{classndn_1_1nfd_1_1FaceStatus_ae33de2674a449b2ff80560324935fe6e}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1FaceStatus}{Face\+Status} \& {\bfseries set\+N\+Out\+Bytes} (uint64\+\_\+t n\+Out\+Bytes)\hypertarget{classndn_1_1nfd_1_1FaceStatus_a569cd353bc5e9a0be30f0c06eb6ac1a6}{}\label{classndn_1_1nfd_1_1FaceStatus_a569cd353bc5e9a0be30f0c06eb6ac1a6}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries wire\+Reset} () const\hypertarget{classndn_1_1nfd_1_1FaceStatus_ac30276d3bf1681790ae0a2f5698e4265}{}\label{classndn_1_1nfd_1_1FaceStatus_ac30276d3bf1681790ae0a2f5698e4265}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+represents \hyperlink{classndn_1_1Face}{Face} status 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/FaceMgmt#Face-Dataset}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Face\+Mgmt\#\+Face-\/\+Dataset} 
+\end{DoxySeeAlso}
+
+
+Definition at line 37 of file nfd-\/face-\/status.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/face-\/status.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/face-\/status.\+cpp\end{DoxyCompactItemize}

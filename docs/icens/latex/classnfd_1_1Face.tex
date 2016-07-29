@@ -1,0 +1,242 @@
+\hypertarget{classnfd_1_1Face}{}\section{nfd\+:\+:Face Class Reference}
+\label{classnfd_1_1Face}\index{nfd\+::\+Face@{nfd\+::\+Face}}
+
+
+represents a face  
+
+
+
+
+{\ttfamily \#include $<$face.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.179487cm]{classnfd_1_1Face}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1Face_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Face-\/related error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&remote\+Uri, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&local\+Uri, bool \hyperlink{classnfd_1_1Face_a4c5a1c7822f13ad8650d804cf063b42a}{is\+Local}=false, bool \hyperlink{classnfd_1_1Face_a4c9f07c49193f0d97e6151d6bdef7d79}{is\+Multi\+Access}=false)\hypertarget{classnfd_1_1Face_a749c8f9fd3cfe37c0530cb3f841cc073}{}\label{classnfd_1_1Face_a749c8f9fd3cfe37c0530cb3f841cc073}
+
+\item 
+virtual void \hyperlink{classnfd_1_1Face_a99af95eec571f6942208758266d97aa2}{send\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)=0\hypertarget{classnfd_1_1Face_a99af95eec571f6942208758266d97aa2}{}\label{classnfd_1_1Face_a99af95eec571f6942208758266d97aa2}
+
+\begin{DoxyCompactList}\small\item\em send an Interest \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1Face_aad3b0b13c6e181548445e1401a535b75}{send\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data)=0\hypertarget{classnfd_1_1Face_aad3b0b13c6e181548445e1401a535b75}{}\label{classnfd_1_1Face_aad3b0b13c6e181548445e1401a535b75}
+
+\begin{DoxyCompactList}\small\item\em send a Data \end{DoxyCompactList}\item 
+virtual void \hyperlink{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{close} ()=0
+\begin{DoxyCompactList}\small\item\em Close the face. \end{DoxyCompactList}\item 
+\hyperlink{classFaceId}{Face\+Id} {\bfseries get\+Id} () const\hypertarget{classnfd_1_1Face_a9b6a13fe4d0bdd8bf878ce6f2490106e}{}\label{classnfd_1_1Face_a9b6a13fe4d0bdd8bf878ce6f2490106e}
+
+\item 
+const std\+::string \& \hyperlink{classnfd_1_1Face_ab17c0ff1c0d620d789a88ff6c3389010}{get\+Description} () const\hypertarget{classnfd_1_1Face_ab17c0ff1c0d620d789a88ff6c3389010}{}\label{classnfd_1_1Face_ab17c0ff1c0d620d789a88ff6c3389010}
+
+\begin{DoxyCompactList}\small\item\em Get the description. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Face_ab8fb68318523c8a1499cd7b83e7b8c7e}{set\+Description} (const std\+::string \&description)
+\begin{DoxyCompactList}\small\item\em Set the face description. \end{DoxyCompactList}\item 
+void {\bfseries set\+Metric} (uint64\+\_\+t metric)
+\item 
+uint64\+\_\+t {\bfseries get\+Metric} () const
+\item 
+bool \hyperlink{classnfd_1_1Face_a4c5a1c7822f13ad8650d804cf063b42a}{is\+Local} () const\hypertarget{classnfd_1_1Face_a4c5a1c7822f13ad8650d804cf063b42a}{}\label{classnfd_1_1Face_a4c5a1c7822f13ad8650d804cf063b42a}
+
+\begin{DoxyCompactList}\small\item\em Get whether face is connected to a local app. \end{DoxyCompactList}\item 
+\hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} \hyperlink{classnfd_1_1Face_ae6f9240dbcce29c856448a6da2fb78dc}{get\+Persistency} () const\hypertarget{classnfd_1_1Face_ae6f9240dbcce29c856448a6da2fb78dc}{}\label{classnfd_1_1Face_ae6f9240dbcce29c856448a6da2fb78dc}
+
+\begin{DoxyCompactList}\small\item\em Get the persistency setting. \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1Face_a4c9f07c49193f0d97e6151d6bdef7d79}{is\+Multi\+Access} () const\hypertarget{classnfd_1_1Face_a4c9f07c49193f0d97e6151d6bdef7d79}{}\label{classnfd_1_1Face_a4c9f07c49193f0d97e6151d6bdef7d79}
+
+\begin{DoxyCompactList}\small\item\em Get whether packets sent by this face may reach multiple peers. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classnfd_1_1Face_a1b411a3984dc1c523bc092e00b373509}{is\+Up} () const
+\begin{DoxyCompactList}\small\item\em Get whether underlying communication is up. \end{DoxyCompactList}\item 
+const \hyperlink{classnfd_1_1FaceCounters}{Face\+Counters} \& {\bfseries get\+Counters} () const\hypertarget{classnfd_1_1Face_a1d87c7bf7e624419500424b6652df4fb}{}\label{classnfd_1_1Face_a1d87c7bf7e624419500424b6652df4fb}
+
+\item 
+const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \& \hyperlink{classnfd_1_1Face_a75cd2637271a0ca41f8d113ef62bb951}{get\+Remote\+Uri} () const
+\item 
+const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \& \hyperlink{classnfd_1_1Face_a52d85e0029c5ce4e6bfdf599877f413e}{get\+Local\+Uri} () const
+\item 
+{\footnotesize template$<$typename Face\+Traits $>$ }\\void \hyperlink{classnfd_1_1Face_a9c9d719ecce89d324a00ef99bb76682a}{copy\+Status\+To} (Face\+Traits \&traits) const
+\item 
+virtual \hyperlink{classndn_1_1nfd_1_1FaceStatus}{ndn\+::nfd\+::\+Face\+Status} \hyperlink{classnfd_1_1Face_a7ee5b5181e2e0c11b77d9b051b17755d}{get\+Face\+Status} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1Face}{Face}, \hyperlink{classndn_1_1Interest}{Interest} $>$ \hyperlink{classnfd_1_1Face_a7f95900b9196ccf7066c08f95b7ed08f}{on\+Receive\+Interest}\hypertarget{classnfd_1_1Face_a7f95900b9196ccf7066c08f95b7ed08f}{}\label{classnfd_1_1Face_a7f95900b9196ccf7066c08f95b7ed08f}
+
+\begin{DoxyCompactList}\small\item\em fires when an Interest is received \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1Face}{Face}, \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classnfd_1_1Face_a6989b109e5022c7a46234296a3e91ef8}{on\+Receive\+Data}\hypertarget{classnfd_1_1Face_a6989b109e5022c7a46234296a3e91ef8}{}\label{classnfd_1_1Face_a6989b109e5022c7a46234296a3e91ef8}
+
+\begin{DoxyCompactList}\small\item\em fires when a Data is received \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1Face}{Face}, \hyperlink{classndn_1_1Interest}{Interest} $>$ \hyperlink{classnfd_1_1Face_a3882239e8eccb1e81d6e3c0ca9ba4736}{on\+Send\+Interest}\hypertarget{classnfd_1_1Face_a3882239e8eccb1e81d6e3c0ca9ba4736}{}\label{classnfd_1_1Face_a3882239e8eccb1e81d6e3c0ca9ba4736}
+
+\begin{DoxyCompactList}\small\item\em fires when an Interest is sent out \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1Face}{Face}, \hyperlink{classndn_1_1Data}{Data} $>$ \hyperlink{classnfd_1_1Face_a42d3322f34fc022734dd42c9ac51701c}{on\+Send\+Data}\hypertarget{classnfd_1_1Face_a42d3322f34fc022734dd42c9ac51701c}{}\label{classnfd_1_1Face_a42d3322f34fc022734dd42c9ac51701c}
+
+\begin{DoxyCompactList}\small\item\em fires when a Data is sent out \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1Face}{Face}, std\+::string $>$ \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail}\hypertarget{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{}\label{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}
+
+\begin{DoxyCompactList}\small\item\em fires when face disconnects or fails to perform properly \end{DoxyCompactList}\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void set\+Persistency(\hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency)\hypertarget{classnfd_1_1Face_a7c031b6c8597321196fc8429ea558442}{}\label{classnfd_1_1Face_a7c031b6c8597321196fc8429ea558442}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classnfd_1_1Face_af538b4501eeb74099183bfdc13a10c80}{decode\+And\+Dispatch\+Input} (const \hyperlink{classndn_1_1Block}{Block} \&element)
+\item 
+void \hyperlink{classnfd_1_1Face_a924bec6d0e2a541bdec020ce048a433d}{fail} (const std\+::string \&reason)\hypertarget{classnfd_1_1Face_a924bec6d0e2a541bdec020ce048a433d}{}\label{classnfd_1_1Face_a924bec6d0e2a541bdec020ce048a433d}
+
+\begin{DoxyCompactList}\small\item\em fail the face and raise on\+Fail event if it\textquotesingle{}s UP; otherwise do nothing \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1FaceCounters}{Face\+Counters} \& {\bfseries get\+Mutable\+Counters} ()\hypertarget{classnfd_1_1Face_aa0a0f2114d0dddcb8df7d2ef4f33e940}{}\label{classnfd_1_1Face_aa0a0f2114d0dddcb8df7d2ef4f33e940}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Face\+Table}\hypertarget{classnfd_1_1Face_aa453f78d28042b9b0fb4329e95fe2802}{}\label{classnfd_1_1Face_aa453f78d28042b9b0fb4329e95fe2802}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a face 
+
+Definition at line 57 of file face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Face@{nfd\+::\+Face}!close@{close}}
+\index{close@{close}!nfd\+::\+Face@{nfd\+::\+Face}}
+\subsubsection[{\texorpdfstring{close()=0}{close()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nfd\+::\+Face\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{}\label{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}
+
+
+Close the face. 
+
+This terminates all communication on the face and cause \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail()} method event to be invoked 
+
+Implemented in \hyperlink{classndn_1_1Face_1_1Impl_1_1NfdFace_a96acc02cef44e8d79e1e0d661b948675}{ndn\+::\+Face\+::\+Impl\+::\+Nfd\+Face}, \hyperlink{classns3_1_1ndn_1_1AppFace_a4f9a6beb12af1e79b2762d19a63454a3}{ns3\+::ndn\+::\+App\+Face}, \hyperlink{classnfd_1_1EthernetFace_a03dc750b6519a5de012cf6e42f78b204}{nfd\+::\+Ethernet\+Face}, \hyperlink{classnfd_1_1InternalFace_aa99a85d1632f5991836e327092ad252a}{nfd\+::\+Internal\+Face}, \hyperlink{classns3_1_1ndn_1_1NetDeviceFace_a837ac0a60dcb5b15db9fa08e9756edd9}{ns3\+::ndn\+::\+Net\+Device\+Face}, \hyperlink{classnfd_1_1WebSocketFace_a0ac025e3ee1bb270f442697dd4b97bd1}{nfd\+::\+Web\+Socket\+Face}, \hyperlink{classnfd_1_1DatagramFace_a8f0033a2ec639a55501793978e355bdf}{nfd\+::\+Datagram\+Face$<$ Protocol, Addressing $>$}, \hyperlink{classnfd_1_1DatagramFace_a8f0033a2ec639a55501793978e355bdf}{nfd\+::\+Datagram\+Face$<$ boost\+::asio\+::ip\+::udp $>$}, \hyperlink{classnfd_1_1DatagramFace_a8f0033a2ec639a55501793978e355bdf}{nfd\+::\+Datagram\+Face$<$ boost\+::asio\+::ip\+::udp, Multicast $>$}, and \hyperlink{classnfd_1_1NullFace_a8b6432036a231c31b6d0be68174d1351}{nfd\+::\+Null\+Face}.
+
+\index{nfd\+::\+Face@{nfd\+::\+Face}!copy\+Status\+To@{copy\+Status\+To}}
+\index{copy\+Status\+To@{copy\+Status\+To}!nfd\+::\+Face@{nfd\+::\+Face}}
+\subsubsection[{\texorpdfstring{copy\+Status\+To(\+Face\+Traits \&traits) const}{copyStatusTo(FaceTraits \&traits) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Face\+Traits $>$ void nfd\+::\+Face\+::copy\+Status\+To (
+\begin{DoxyParamCaption}
+\item[{Face\+Traits \&}]{traits}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1Face_a9c9d719ecce89d324a00ef99bb76682a}{}\label{classnfd_1_1Face_a9c9d719ecce89d324a00ef99bb76682a}
+\begin{DoxyReturn}{Returns}
+Face\+Traits data structure filled with the current Face\+Traits status 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file face.\+cpp.
+
+\index{nfd\+::\+Face@{nfd\+::\+Face}!decode\+And\+Dispatch\+Input@{decode\+And\+Dispatch\+Input}}
+\index{decode\+And\+Dispatch\+Input@{decode\+And\+Dispatch\+Input}!nfd\+::\+Face@{nfd\+::\+Face}}
+\subsubsection[{\texorpdfstring{decode\+And\+Dispatch\+Input(const Block \&element)}{decodeAndDispatchInput(const Block \&element)}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Face\+::decode\+And\+Dispatch\+Input (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classnfd_1_1Face_af538b4501eeb74099183bfdc13a10c80}{}\label{classnfd_1_1Face_af538b4501eeb74099183bfdc13a10c80}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000016}{Todo}]Ensure lazy field decoding process \end{DoxyRefDesc}
+
+
+Definition at line 59 of file face.\+cpp.
+
+\index{nfd\+::\+Face@{nfd\+::\+Face}!get\+Face\+Status@{get\+Face\+Status}}
+\index{get\+Face\+Status@{get\+Face\+Status}!nfd\+::\+Face@{nfd\+::\+Face}}
+\subsubsection[{\texorpdfstring{get\+Face\+Status() const}{getFaceStatus() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ndn\+::nfd\+::\+Face\+Status} nfd\+::\+Face\+::get\+Face\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1Face_a7ee5b5181e2e0c11b77d9b051b17755d}{}\label{classnfd_1_1Face_a7ee5b5181e2e0c11b77d9b051b17755d}
+\begin{DoxyReturn}{Returns}
+Face\+Status data structure filled with the current \hyperlink{classnfd_1_1Face}{Face} status 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classnfd_1_1UdpFace_ad914a7f6b37b7da25a5246e23461b402}{nfd\+::\+Udp\+Face}.
+
+
+
+Definition at line 118 of file face.\+cpp.
+
+\index{nfd\+::\+Face@{nfd\+::\+Face}!get\+Local\+Uri@{get\+Local\+Uri}}
+\index{get\+Local\+Uri@{get\+Local\+Uri}!nfd\+::\+Face@{nfd\+::\+Face}}
+\subsubsection[{\texorpdfstring{get\+Local\+Uri() const}{getLocalUri() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Face\+Uri} \& nfd\+::\+Face\+::get\+Local\+Uri (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1Face_a52d85e0029c5ce4e6bfdf599877f413e}{}\label{classnfd_1_1Face_a52d85e0029c5ce4e6bfdf599877f413e}
+\begin{DoxyReturn}{Returns}
+a Face\+Uri that represents the local endpoint (N\+FD side) 
+\end{DoxyReturn}
+
+
+Definition at line 287 of file face.\+hpp.
+
+\index{nfd\+::\+Face@{nfd\+::\+Face}!get\+Remote\+Uri@{get\+Remote\+Uri}}
+\index{get\+Remote\+Uri@{get\+Remote\+Uri}!nfd\+::\+Face@{nfd\+::\+Face}}
+\subsubsection[{\texorpdfstring{get\+Remote\+Uri() const}{getRemoteUri() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Face\+Uri} \& nfd\+::\+Face\+::get\+Remote\+Uri (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1Face_a75cd2637271a0ca41f8d113ef62bb951}{}\label{classnfd_1_1Face_a75cd2637271a0ca41f8d113ef62bb951}
+\begin{DoxyReturn}{Returns}
+a Face\+Uri that represents the remote endpoint 
+\end{DoxyReturn}
+
+
+Definition at line 281 of file face.\+hpp.
+
+\index{nfd\+::\+Face@{nfd\+::\+Face}!is\+Up@{is\+Up}}
+\index{is\+Up@{is\+Up}!nfd\+::\+Face@{nfd\+::\+Face}}
+\subsubsection[{\texorpdfstring{is\+Up() const}{isUp() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Face\+::is\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1Face_a1b411a3984dc1c523bc092e00b373509}{}\label{classnfd_1_1Face_a1b411a3984dc1c523bc092e00b373509}
+
+
+Get whether underlying communication is up. 
+
+In this base class this property is always true. 
+
+Definition at line 53 of file face.\+cpp.
+
+\index{nfd\+::\+Face@{nfd\+::\+Face}!set\+Description@{set\+Description}}
+\index{set\+Description@{set\+Description}!nfd\+::\+Face@{nfd\+::\+Face}}
+\subsubsection[{\texorpdfstring{set\+Description(const std\+::string \&description)}{setDescription(const std::string \&description)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Face\+::set\+Description (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{description}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1Face_ab8fb68318523c8a1499cd7b83e7b8c7e}{}\label{classnfd_1_1Face_ab8fb68318523c8a1499cd7b83e7b8c7e}
+
+
+Set the face description. 
+
+This is typically invoked by management on set description command 
+
+Definition at line 239 of file face.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/face.\+cpp\end{DoxyCompactItemize}

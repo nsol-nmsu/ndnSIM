@@ -1,0 +1,82 @@
+\hypertarget{classndn_1_1Face_1_1Impl}{}\section{ndn\+:\+:Face\+:\+:Impl Class Reference}
+\label{classndn_1_1Face_1_1Impl}\index{ndn\+::\+Face\+::\+Impl@{ndn\+::\+Face\+::\+Impl}}
+Inheritance diagram for ndn\+:\+:Face\+:\+:Impl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1Face_1_1Impl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Face_1_1Impl_1_1NfdFace}{Nfd\+Face}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classndn_1_1ContainerWithOnEmptySignal}{Container\+With\+On\+Empty\+Signal}$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1PendingInterest}{Pending\+Interest} $>$ $>$ {\bfseries Pending\+Interest\+Table}\hypertarget{classndn_1_1Face_1_1Impl_afca4744562c5c08cd1e922f930380c7d}{}\label{classndn_1_1Face_1_1Impl_afca4744562c5c08cd1e922f930380c7d}
+
+\item 
+typedef std\+::list$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1InterestFilterRecord}{Interest\+Filter\+Record} $>$ $>$ {\bfseries Interest\+Filter\+Table}\hypertarget{classndn_1_1Face_1_1Impl_ae422106b408ec7d585d0c8385f604178}{}\label{classndn_1_1Face_1_1Impl_ae422106b408ec7d585d0c8385f604178}
+
+\item 
+typedef \hyperlink{classndn_1_1ContainerWithOnEmptySignal}{Container\+With\+On\+Empty\+Signal}$<$ shared\+\_\+ptr$<$ \hyperlink{classndn_1_1RegisteredPrefix}{Registered\+Prefix} $>$ $>$ {\bfseries Registered\+Prefix\+Table}\hypertarget{classndn_1_1Face_1_1Impl_a144af8dadc51ab3b75aac06ddd495352}{}\label{classndn_1_1Face_1_1Impl_a144af8dadc51ab3b75aac06ddd495352}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Impl} (\hyperlink{classndn_1_1Face}{Face} \&face)\hypertarget{classndn_1_1Face_1_1Impl_a22c6bbd0f2d805678a4a44c860bf75d6}{}\label{classndn_1_1Face_1_1Impl_a22c6bbd0f2d805678a4a44c860bf75d6}
+
+\item 
+void {\bfseries satisfy\+Pending\+Interests} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classndn_1_1Face_1_1Impl_ac216917074307edce464121dec975ad9}{}\label{classndn_1_1Face_1_1Impl_ac216917074307edce464121dec975ad9}
+
+\item 
+void {\bfseries process\+Interest\+Filters} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classndn_1_1Face_1_1Impl_a4fed7e04fbe1d11a8dbb59ebfd5caf38}{}\label{classndn_1_1Face_1_1Impl_a4fed7e04fbe1d11a8dbb59ebfd5caf38}
+
+\item 
+void {\bfseries async\+Express\+Interest} (const shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Interest}{Interest} $>$ \&interest, const \hyperlink{namespacendn_a3594ce6ee9b530d1fd0eb0d59d3587da}{On\+Data} \&on\+Data, const \hyperlink{namespacendn_aa4752a1808de5e7246dd6b1151e4e87f}{On\+Timeout} \&on\+Timeout)\hypertarget{classndn_1_1Face_1_1Impl_a3272c79953819e95fe9ecdc0568af278}{}\label{classndn_1_1Face_1_1Impl_a3272c79953819e95fe9ecdc0568af278}
+
+\item 
+void {\bfseries async\+Remove\+Pending\+Interest} (const Pending\+Interest\+Id $\ast$pending\+Interest\+Id)\hypertarget{classndn_1_1Face_1_1Impl_a564da675f1a0558318b20de862cbf4d2}{}\label{classndn_1_1Face_1_1Impl_a564da675f1a0558318b20de862cbf4d2}
+
+\item 
+void {\bfseries async\+Put\+Data} (const shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Data}{Data} $>$ \&data)\hypertarget{classndn_1_1Face_1_1Impl_a867f954f2ac4747d1cabc193d2c93637}{}\label{classndn_1_1Face_1_1Impl_a867f954f2ac4747d1cabc193d2c93637}
+
+\item 
+void {\bfseries async\+Set\+Interest\+Filter} (const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1InterestFilterRecord}{Interest\+Filter\+Record} $>$ \&interest\+Filter\+Record)\hypertarget{classndn_1_1Face_1_1Impl_adecba627018279f6bfa47459cec1069b}{}\label{classndn_1_1Face_1_1Impl_adecba627018279f6bfa47459cec1069b}
+
+\item 
+void {\bfseries async\+Unset\+Interest\+Filter} (const Interest\+Filter\+Id $\ast$interest\+Filter\+Id)\hypertarget{classndn_1_1Face_1_1Impl_a2256531aa2439ac416ae2c4d01c25bdf}{}\label{classndn_1_1Face_1_1Impl_a2256531aa2439ac416ae2c4d01c25bdf}
+
+\item 
+const Registered\+Prefix\+Id $\ast$ {\bfseries register\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1InterestFilterRecord}{Interest\+Filter\+Record} $>$ \&filter, const \hyperlink{namespacendn_a80b158f94737f73bec3f9af27161e899}{Register\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a691d213d0f708593217feeae517f3e45}{Register\+Prefix\+Failure\+Callback} \&on\+Failure, uint64\+\_\+t flags, const \hyperlink{classndn_1_1nfd_1_1CommandOptions}{nfd\+::\+Command\+Options} \&options)\hypertarget{classndn_1_1Face_1_1Impl_a7cdda63bb773046c1d854a08f5555cac}{}\label{classndn_1_1Face_1_1Impl_a7cdda63bb773046c1d854a08f5555cac}
+
+\item 
+void {\bfseries after\+Prefix\+Registered} (const shared\+\_\+ptr$<$ \hyperlink{classndn_1_1RegisteredPrefix}{Registered\+Prefix} $>$ \&registered\+Prefix, const \hyperlink{namespacendn_a80b158f94737f73bec3f9af27161e899}{Register\+Prefix\+Success\+Callback} \&on\+Success)\hypertarget{classndn_1_1Face_1_1Impl_aa6850671256538e4cb8c411a2e73aa82}{}\label{classndn_1_1Face_1_1Impl_aa6850671256538e4cb8c411a2e73aa82}
+
+\item 
+void {\bfseries async\+Unregister\+Prefix} (const Registered\+Prefix\+Id $\ast$registered\+Prefix\+Id, const \hyperlink{namespacendn_a6781fc026448072c22454e6af8b946e0}{Unregister\+Prefix\+Success\+Callback} \&on\+Success, const \hyperlink{namespacendn_a1d6036d735c4c3504dad4f56ed174e5d}{Unregister\+Prefix\+Failure\+Callback} \&on\+Failure)\hypertarget{classndn_1_1Face_1_1Impl_ae997a15dc9be4cc3317f9abce41ed6a8}{}\label{classndn_1_1Face_1_1Impl_ae997a15dc9be4cc3317f9abce41ed6a8}
+
+\item 
+void {\bfseries finalize\+Unregister\+Prefix} (Registered\+Prefix\+Table\+::iterator item, const \hyperlink{namespacendn_a6781fc026448072c22454e6af8b946e0}{Unregister\+Prefix\+Success\+Callback} \&on\+Success)\hypertarget{classndn_1_1Face_1_1Impl_a1e01d059d7e2d42cf187784c34fd8e4e}{}\label{classndn_1_1Face_1_1Impl_a1e01d059d7e2d42cf187784c34fd8e4e}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Face}\hypertarget{classndn_1_1Face_1_1Impl_a6dc10c9c159a568077424ab8c1c82dea}{}\label{classndn_1_1Face_1_1Impl_a6dc10c9c159a568077424ab8c1c82dea}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 52 of file face-\/impl.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/detail/face-\/impl.\+hpp\end{DoxyCompactItemize}

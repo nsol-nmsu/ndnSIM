@@ -1,0 +1,69 @@
+\hypertarget{classnfd_1_1NfdRunner}{}\section{nfd\+:\+:Nfd\+Runner Class Reference}
+\label{classnfd_1_1NfdRunner}\index{nfd\+::\+Nfd\+Runner@{nfd\+::\+Nfd\+Runner}}
+
+
+Executes N\+FD with R\+IB manager.  
+
+
+Inheritance diagram for nfd\+:\+:Nfd\+Runner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1NfdRunner}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Nfd\+Runner} (const std\+::string \&config\+File)\hypertarget{classnfd_1_1NfdRunner_a861815c3a0f525bf7c2109182e7fd355}{}\label{classnfd_1_1NfdRunner_a861815c3a0f525bf7c2109182e7fd355}
+
+\item 
+void {\bfseries initialize} ()\hypertarget{classnfd_1_1NfdRunner_a4993cd67ab3bd8da122f33a75af092f7}{}\label{classnfd_1_1NfdRunner_a4993cd67ab3bd8da122f33a75af092f7}
+
+\item 
+int \hyperlink{classnfd_1_1NfdRunner_abcfea6dbe65a6845406989977465fb67}{run} ()
+\item 
+void {\bfseries terminate} (const boost\+::system\+::error\+\_\+code \&error, int signal\+No)\hypertarget{classnfd_1_1NfdRunner_aa790abc2b09a108859ee339093ba2d85}{}\label{classnfd_1_1NfdRunner_aa790abc2b09a108859ee339093ba2d85}
+
+\item 
+void {\bfseries reload} (const boost\+::system\+::error\+\_\+code \&error, int signal\+No)\hypertarget{classnfd_1_1NfdRunner_a24f43496f215c2a9ce630172d7e9858d}{}\label{classnfd_1_1NfdRunner_a24f43496f215c2a9ce630172d7e9858d}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries print\+Usage} (std\+::ostream \&os, const std\+::string \&program\+Name)\hypertarget{classnfd_1_1NfdRunner_a74485c1cb3cb5546ec517094bea755fd}{}\label{classnfd_1_1NfdRunner_a74485c1cb3cb5546ec517094bea755fd}
+
+\item 
+static void {\bfseries print\+Modules} (std\+::ostream \&os)\hypertarget{classnfd_1_1NfdRunner_a359d2332f5cc165279b50186a2b4cb7b}{}\label{classnfd_1_1NfdRunner_a359d2332f5cc165279b50186a2b4cb7b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Executes N\+FD with R\+IB manager. 
+
+N\+FD (main forwarding procedure) and R\+IB manager execute in two different threads. Each thread has its own instances global io\+\_\+service and global scheduler.
+
+When either of the daemons fails, execution of non-\/failed daemon will be terminated as well. In other words, when N\+FD fails, R\+IB manager will be terminated; when R\+IB manager fails, N\+FD will be terminated. 
+
+Definition at line 61 of file main.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Nfd\+Runner@{nfd\+::\+Nfd\+Runner}!run@{run}}
+\index{run@{run}!nfd\+::\+Nfd\+Runner@{nfd\+::\+Nfd\+Runner}}
+\subsubsection[{\texorpdfstring{run()}{run()}}]{\setlength{\rightskip}{0pt plus 5cm}int nfd\+::\+Nfd\+Runner\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1NfdRunner_abcfea6dbe65a6845406989977465fb67}{}\label{classnfd_1_1NfdRunner_abcfea6dbe65a6845406989977465fb67}
+return value A non-\/zero value is assigned when either N\+FD or R\+IB manager (running in a separate thread) fails.
+
+Definition at line 113 of file main.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/main.\+cpp\end{DoxyCompactItemize}

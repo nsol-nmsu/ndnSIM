@@ -1,0 +1,146 @@
+\hypertarget{classnfd_1_1LocalFace}{}\section{nfd\+:\+:Local\+Face Class Reference}
+\label{classnfd_1_1LocalFace}\index{nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}}
+
+
+represents a face  
+
+
+
+
+{\ttfamily \#include $<$local-\/face.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Local\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.781170cm]{classnfd_1_1LocalFace}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Local\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&remote\+Uri, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&local\+Uri)\hypertarget{classnfd_1_1LocalFace_a21392666568e16af5bed95ac8e7fb468}{}\label{classnfd_1_1LocalFace_a21392666568e16af5bed95ac8e7fb468}
+
+\item 
+bool \hyperlink{classnfd_1_1LocalFace_afb12007ecb1d5f706a8cd40243a53321}{is\+Local\+Control\+Header\+Enabled} () const
+\begin{DoxyCompactList}\small\item\em get whether any Local\+Control\+Header feature is enabled \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1LocalFace_aa361b85cb9aaf3d4756bd92476b6939c}{is\+Local\+Control\+Header\+Enabled} (Local\+Control\+Feature feature) const
+\begin{DoxyCompactList}\small\item\em get whether a specific Local\+Control\+Header feature is enabled \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1LocalFace_a56354219a3e4ab919a884f5d9b65d009}{set\+Local\+Control\+Header\+Feature} (Local\+Control\+Feature feature, bool enabled=true)
+\begin{DoxyCompactList}\small\item\em enable or disable a Local\+Control\+Header feature \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t {\bfseries L\+O\+C\+A\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+M\+AX} = 3\hypertarget{classnfd_1_1LocalFace_a630b5d0b72b57ea34477998e8efb6f88}{}\label{classnfd_1_1LocalFace_a630b5d0b72b57ea34477998e8efb6f88}
+
+\item 
+static const size\+\_\+t \hyperlink{classnfd_1_1LocalFace_a78fab86393e810e5f93337881b710515}{L\+O\+C\+A\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+A\+NY} = 0\hypertarget{classnfd_1_1LocalFace_a78fab86393e810e5f93337881b710515}{}\label{classnfd_1_1LocalFace_a78fab86393e810e5f93337881b710515}
+
+\begin{DoxyCompactList}\small\item\em upper bound of Local\+Control\+Feature enum \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classnfd_1_1LocalFace_acc0605a77317fd364ac2e1d05a1535b0}{decode\+And\+Dispatch\+Input} (const \hyperlink{classndn_1_1Block}{Block} \&element)
+\begin{DoxyCompactList}\small\item\em any feature \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1LocalFace_a3dc805b08532da25ff4fab0ad8086717}{is\+Empty\+Filtered\+Local\+Control\+Header} (const \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{ndn\+::nfd\+::\+Local\+Control\+Header} \&header) const\hypertarget{classnfd_1_1LocalFace_a3dc805b08532da25ff4fab0ad8086717}{}\label{classnfd_1_1LocalFace_a3dc805b08532da25ff4fab0ad8086717}
+
+\begin{DoxyCompactList}\small\item\em Check if Local\+Control\+Header needs to be included, taking into account both set parameters in supplied Local\+Control\+Header and features enabled on the local face. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Packet $>$ }\\\hyperlink{classndn_1_1Block}{Block} \hyperlink{classnfd_1_1LocalFace_a1fe034794feda41c98dace31f4bf883f}{filter\+And\+Encode\+Local\+Control\+Header} (const Packet \&packet)\hypertarget{classnfd_1_1LocalFace_a1fe034794feda41c98dace31f4bf883f}{}\label{classnfd_1_1LocalFace_a1fe034794feda41c98dace31f4bf883f}
+
+\begin{DoxyCompactList}\small\item\em Create Local\+Control\+Header, considering enabled features. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+represents a face 
+
+Definition at line 40 of file local-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}!decode\+And\+Dispatch\+Input@{decode\+And\+Dispatch\+Input}}
+\index{decode\+And\+Dispatch\+Input@{decode\+And\+Dispatch\+Input}!nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}}
+\subsubsection[{\texorpdfstring{decode\+And\+Dispatch\+Input(const Block \&element)}{decodeAndDispatchInput(const Block \&element)}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Local\+Face\+::decode\+And\+Dispatch\+Input (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classnfd_1_1LocalFace_acc0605a77317fd364ac2e1d05a1535b0}{}\label{classnfd_1_1LocalFace_acc0605a77317fd364ac2e1d05a1535b0}
+
+
+any feature 
+
+Decode block into Interest/\+Data, considering potential Local\+Control\+Header
+
+If Local\+Control\+Header is present, the encoded data is filtered out, based on enabled features on the face. \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000017}{Todo}]Uncomment and correct the following when we have more options in Local\+Control\+Header that apply for incoming Data packets (if ever) \end{DoxyRefDesc}
+
+
+Definition at line 140 of file local-\/face.\+hpp.
+
+\index{nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}!is\+Local\+Control\+Header\+Enabled@{is\+Local\+Control\+Header\+Enabled}}
+\index{is\+Local\+Control\+Header\+Enabled@{is\+Local\+Control\+Header\+Enabled}!nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}}
+\subsubsection[{\texorpdfstring{is\+Local\+Control\+Header\+Enabled() const}{isLocalControlHeaderEnabled() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Local\+Face\+::is\+Local\+Control\+Header\+Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1LocalFace_afb12007ecb1d5f706a8cd40243a53321}{}\label{classnfd_1_1LocalFace_afb12007ecb1d5f706a8cd40243a53321}
+
+
+get whether any Local\+Control\+Header feature is enabled 
+
+\begin{DoxyReturn}{Returns}
+true if any feature is enabled. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file local-\/face.\+hpp.
+
+\index{nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}!is\+Local\+Control\+Header\+Enabled@{is\+Local\+Control\+Header\+Enabled}}
+\index{is\+Local\+Control\+Header\+Enabled@{is\+Local\+Control\+Header\+Enabled}!nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}}
+\subsubsection[{\texorpdfstring{is\+Local\+Control\+Header\+Enabled(\+Local\+Control\+Feature feature) const}{isLocalControlHeaderEnabled(LocalControlFeature feature) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Local\+Face\+::is\+Local\+Control\+Header\+Enabled (
+\begin{DoxyParamCaption}
+\item[{Local\+Control\+Feature}]{feature}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1LocalFace_aa361b85cb9aaf3d4756bd92476b6939c}{}\label{classnfd_1_1LocalFace_aa361b85cb9aaf3d4756bd92476b6939c}
+
+
+get whether a specific Local\+Control\+Header feature is enabled 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feature} & The feature. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the specified feature is enabled. 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file local-\/face.\+hpp.
+
+\index{nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}!set\+Local\+Control\+Header\+Feature@{set\+Local\+Control\+Header\+Feature}}
+\index{set\+Local\+Control\+Header\+Feature@{set\+Local\+Control\+Header\+Feature}!nfd\+::\+Local\+Face@{nfd\+::\+Local\+Face}}
+\subsubsection[{\texorpdfstring{set\+Local\+Control\+Header\+Feature(\+Local\+Control\+Feature feature, bool enabled=true)}{setLocalControlHeaderFeature(LocalControlFeature feature, bool enabled=true)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Local\+Face\+::set\+Local\+Control\+Header\+Feature (
+\begin{DoxyParamCaption}
+\item[{Local\+Control\+Feature}]{feature, }
+\item[{bool}]{enabled = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1LocalFace_a56354219a3e4ab919a884f5d9b65d009}{}\label{classnfd_1_1LocalFace_a56354219a3e4ab919a884f5d9b65d009}
+
+
+enable or disable a Local\+Control\+Header feature 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feature} & The feature. Cannot be L\+O\+C\+A\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+A\+NY or L\+O\+C\+A\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+M\+AX \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 125 of file local-\/face.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/local-\/face.\+hpp\end{DoxyCompactItemize}

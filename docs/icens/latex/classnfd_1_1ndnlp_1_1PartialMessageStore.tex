@@ -1,0 +1,62 @@
+\hypertarget{classnfd_1_1ndnlp_1_1PartialMessageStore}{}\section{nfd\+:\+:ndnlp\+:\+:Partial\+Message\+Store Class Reference}
+\label{classnfd_1_1ndnlp_1_1PartialMessageStore}\index{nfd\+::ndnlp\+::\+Partial\+Message\+Store@{nfd\+::ndnlp\+::\+Partial\+Message\+Store}}
+
+
+provides reassembly feature at receiver  
+
+
+
+
+{\ttfamily \#include $<$ndnlp-\/partial-\/message-\/store.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:ndnlp\+:\+:Partial\+Message\+Store\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1ndnlp_1_1PartialMessageStore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Partial\+Message\+Store} (const time\+::nanoseconds \&idle\+Duration=time\+::milliseconds(100))\hypertarget{classnfd_1_1ndnlp_1_1PartialMessageStore_a99a9e33454433305550e6a5d6789882d}{}\label{classnfd_1_1ndnlp_1_1PartialMessageStore_a99a9e33454433305550e6a5d6789882d}
+
+\item 
+void \hyperlink{classnfd_1_1ndnlp_1_1PartialMessageStore_a1c70b08d4038c71669947e762459b154}{receive} (const \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} \&pkt)
+\begin{DoxyCompactList}\small\item\em receive a \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} packet \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1ndnlp_1_1PartialMessageStore}{Partial\+Message\+Store}, \hyperlink{classndn_1_1Block}{Block} $>$ \hyperlink{classnfd_1_1ndnlp_1_1PartialMessageStore_ae2ab499751e17c88a493e3b5be1a5d85}{on\+Receive}\hypertarget{classnfd_1_1ndnlp_1_1PartialMessageStore_ae2ab499751e17c88a493e3b5be1a5d85}{}\label{classnfd_1_1ndnlp_1_1PartialMessageStore_ae2ab499751e17c88a493e3b5be1a5d85}
+
+\begin{DoxyCompactList}\small\item\em fires when network layer packet is received \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provides reassembly feature at receiver 
+
+Definition at line 84 of file ndnlp-\/partial-\/message-\/store.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::ndnlp\+::\+Partial\+Message\+Store@{nfd\+::ndnlp\+::\+Partial\+Message\+Store}!receive@{receive}}
+\index{receive@{receive}!nfd\+::ndnlp\+::\+Partial\+Message\+Store@{nfd\+::ndnlp\+::\+Partial\+Message\+Store}}
+\subsubsection[{\texorpdfstring{receive(const Ndnlp\+Data \&pkt)}{receive(const NdnlpData \&pkt)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::ndnlp\+::\+Partial\+Message\+Store\+::receive (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ndnlp\+Data} \&}]{pkt}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1ndnlp_1_1PartialMessageStore_a1c70b08d4038c71669947e762459b154}{}\label{classnfd_1_1ndnlp_1_1PartialMessageStore_a1c70b08d4038c71669947e762459b154}
+
+
+receive a \hyperlink{classnfd_1_1ndnlp_1_1NdnlpData}{Ndnlp\+Data} packet 
+
+Reassembly errors will be ignored. 
+
+Definition at line 103 of file ndnlp-\/partial-\/message-\/store.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ndnlp-\/partial-\/message-\/store.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/ndnlp-\/partial-\/message-\/store.\+cpp\end{DoxyCompactItemize}

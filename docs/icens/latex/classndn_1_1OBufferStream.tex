@@ -1,0 +1,70 @@
+\hypertarget{classndn_1_1OBufferStream}{}\section{ndn\+:\+:O\+Buffer\+Stream Class Reference}
+\label{classndn_1_1OBufferStream}\index{ndn\+::\+O\+Buffer\+Stream@{ndn\+::\+O\+Buffer\+Stream}}
+
+
+{\ttfamily \#include $<$buffer-\/stream.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:O\+Buffer\+Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1OBufferStream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1OBufferStream_aabb59d023a5836dfa32576f7b205311c}{O\+Buffer\+Stream} ()
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1Buffer}{Buffer} $>$ \hyperlink{classndn_1_1OBufferStream_a58e3f5a6678e2a58d5f1e7a300f210a5}{buf} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class implementing interface similar to ostringstream, but to construct \hyperlink{classndn_1_1Buffer}{ndn\+::\+Buffer}
+
+The benefit of using stream interface is that it provides automatic buffering of written data and eliminates (or reduces) overhead of resizing the underlying buffer when writing small pieces of data.
+
+Usage example\+: 
+\begin{DoxyCode}
+\hyperlink{classndn_1_1OBufferStream_aabb59d023a5836dfa32576f7b205311c}{OBufferStream} obuf;
+obuf.put(0);
+obuf.write(another\_buffer, another\_buffer\_size);
+shared\_ptr<Buffer> buf = obuf.get();
+\end{DoxyCode}
+ 
+
+Definition at line 79 of file buffer-\/stream.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+O\+Buffer\+Stream@{ndn\+::\+O\+Buffer\+Stream}!O\+Buffer\+Stream@{O\+Buffer\+Stream}}
+\index{O\+Buffer\+Stream@{O\+Buffer\+Stream}!ndn\+::\+O\+Buffer\+Stream@{ndn\+::\+O\+Buffer\+Stream}}
+\subsubsection[{\texorpdfstring{O\+Buffer\+Stream()}{OBufferStream()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+O\+Buffer\+Stream\+::\+O\+Buffer\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1OBufferStream_aabb59d023a5836dfa32576f7b205311c}{}\label{classndn_1_1OBufferStream_aabb59d023a5836dfa32576f7b205311c}
+Default constructor 
+
+Definition at line 85 of file buffer-\/stream.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+O\+Buffer\+Stream@{ndn\+::\+O\+Buffer\+Stream}!buf@{buf}}
+\index{buf@{buf}!ndn\+::\+O\+Buffer\+Stream@{ndn\+::\+O\+Buffer\+Stream}}
+\subsubsection[{\texorpdfstring{buf()}{buf()}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<${\bf Buffer}$>$ ndn\+::\+O\+Buffer\+Stream\+::buf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1OBufferStream_a58e3f5a6678e2a58d5f1e7a300f210a5}{}\label{classndn_1_1OBufferStream_a58e3f5a6678e2a58d5f1e7a300f210a5}
+Flush written data to the stream and return shared pointer to the underlying buffer 
+
+Definition at line 96 of file buffer-\/stream.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/buffer-\/stream.\+hpp\end{DoxyCompactItemize}

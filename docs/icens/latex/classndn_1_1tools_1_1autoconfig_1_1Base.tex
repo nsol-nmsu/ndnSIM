@@ -1,0 +1,121 @@
+\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base}{}\section{ndn\+:\+:tools\+:\+:autoconfig\+:\+:Base Class Reference}
+\label{classndn_1_1tools_1_1autoconfig_1_1Base}\index{ndn\+::tools\+::autoconfig\+::\+Base@{ndn\+::tools\+::autoconfig\+::\+Base}}
+
+
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base}{Base} class for discovery stages.  
+
+
+
+
+{\ttfamily \#include $<$base.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:tools\+:\+:autoconfig\+:\+:Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.514029cm]{classndn_1_1tools_1_1autoconfig_1_1Base}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ void(const std\+::string \&)$>$ \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}{Next\+Stage\+Callback}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}{}\label{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}
+
+\begin{DoxyCompactList}\small\item\em Callback to be called when the stage fails. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a0315cfdccf7c81140791e0a5a17cb9a7}{start} ()=0\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base_a0315cfdccf7c81140791e0a5a17cb9a7}{}\label{classndn_1_1tools_1_1autoconfig_1_1Base_a0315cfdccf7c81140791e0a5a17cb9a7}
+
+\begin{DoxyCompactList}\small\item\em Start the stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a4d378253464c3fde9a499ccafb944153}{Base} (\hyperlink{classndn_1_1Face}{Face} \&face, \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} \&key\+Chain, const \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}{Next\+Stage\+Callback} \&next\+Stage\+On\+Failure)
+\begin{DoxyCompactList}\small\item\em Initialize variables and create \hyperlink{classndn_1_1nfd_1_1Controller}{nfd\+::\+Controller} instance. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a5c575db604e50a8d9ee358a5224de9ab}{connect\+To\+Hub} (const std\+::string \&uri)
+\begin{DoxyCompactList}\small\item\em Attempt to connect to local hub using the {\ttfamily uri} Face\+Uri. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Face}{Face} \& {\bfseries m\+\_\+face}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base_ada59c27966f9ecfee19937582ed7736d}{}\label{classndn_1_1tools_1_1autoconfig_1_1Base_ada59c27966f9ecfee19937582ed7736d}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} \& {\bfseries m\+\_\+key\+Chain}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base_a496d463001d8ced70f84ff298916bcb5}{}\label{classndn_1_1tools_1_1autoconfig_1_1Base_a496d463001d8ced70f84ff298916bcb5}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1Controller}{nfd\+::\+Controller} {\bfseries m\+\_\+controller}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base_ab3d54b07f3c79715f6ca047288246794}{}\label{classndn_1_1tools_1_1autoconfig_1_1Base_ab3d54b07f3c79715f6ca047288246794}
+
+\item 
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}{Next\+Stage\+Callback} {\bfseries m\+\_\+next\+Stage\+On\+Failure}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base_a187778562c657462c09004357c46f9da}{}\label{classndn_1_1tools_1_1autoconfig_1_1Base_a187778562c657462c09004357c46f9da}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base}{Base} class for discovery stages. 
+
+Definition at line 47 of file base.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::tools\+::autoconfig\+::\+Base@{ndn\+::tools\+::autoconfig\+::\+Base}!Base@{Base}}
+\index{Base@{Base}!ndn\+::tools\+::autoconfig\+::\+Base@{ndn\+::tools\+::autoconfig\+::\+Base}}
+\subsubsection[{\texorpdfstring{Base(\+Face \&face, Key\+Chain \&key\+Chain, const Next\+Stage\+Callback \&next\+Stage\+On\+Failure)}{Base(Face \&face, KeyChain \&keyChain, const NextStageCallback \&nextStageOnFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::tools\+::autoconfig\+::\+Base\+::\+Base (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face, }
+\item[{{\bf Key\+Chain} \&}]{key\+Chain, }
+\item[{const {\bf Next\+Stage\+Callback} \&}]{next\+Stage\+On\+Failure}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base_a4d378253464c3fde9a499ccafb944153}{}\label{classndn_1_1tools_1_1autoconfig_1_1Base_a4d378253464c3fde9a499ccafb944153}
+
+
+Initialize variables and create \hyperlink{classndn_1_1nfd_1_1Controller}{nfd\+::\+Controller} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & \hyperlink{classndn_1_1Face}{Face} to be used for all operations (e.\+g., will send registration commands) \\
+\hline
+{\em key\+Chain} & Key\+Chain object \\
+\hline
+{\em next\+Stage\+On\+Failure} & Callback to be called after the stage failed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file base.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::tools\+::autoconfig\+::\+Base@{ndn\+::tools\+::autoconfig\+::\+Base}!connect\+To\+Hub@{connect\+To\+Hub}}
+\index{connect\+To\+Hub@{connect\+To\+Hub}!ndn\+::tools\+::autoconfig\+::\+Base@{ndn\+::tools\+::autoconfig\+::\+Base}}
+\subsubsection[{\texorpdfstring{connect\+To\+Hub(const std\+::string \&uri)}{connectToHub(const std::string \&uri)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::tools\+::autoconfig\+::\+Base\+::connect\+To\+Hub (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{uri}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1Base_a5c575db604e50a8d9ee358a5224de9ab}{}\label{classndn_1_1tools_1_1autoconfig_1_1Base_a5c575db604e50a8d9ee358a5224de9ab}
+
+
+Attempt to connect to local hub using the {\ttfamily uri} Face\+Uri. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_1_1Error}{Base\+::\+Error}} & when failed to establish the tunnel \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 41 of file base.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/base.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/base.\+cpp\end{DoxyCompactItemize}

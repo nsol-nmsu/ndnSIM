@@ -1,0 +1,106 @@
+\hypertarget{classAccumulatorType}{}\section{Accumulator\+Type$<$ T $>$ Class Template Reference}
+\label{classAccumulatorType}\index{Accumulator\+Type$<$ T $>$@{Accumulator\+Type$<$ T $>$}}
+
+
+An accumulating option value to handle multiple incrementing options.  
+
+
+
+
+{\ttfamily \#include $<$util.\+hpp$>$}
+
+Inheritance diagram for Accumulator\+Type$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAccumulatorType}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Accumulator\+Type} (T $\ast$store)\hypertarget{classAccumulatorType_ab00dcd74b84d521edc08c0568f0c39f6}{}\label{classAccumulatorType_ab00dcd74b84d521edc08c0568f0c39f6}
+
+\item 
+\hyperlink{classAccumulatorType}{Accumulator\+Type} $\ast$ \hyperlink{classAccumulatorType_af9b32491928d6027309823ec3f8705d2}{set\+Default\+Value} (const T \&t)\hypertarget{classAccumulatorType_af9b32491928d6027309823ec3f8705d2}{}\label{classAccumulatorType_af9b32491928d6027309823ec3f8705d2}
+
+\begin{DoxyCompactList}\small\item\em Set the default value for this option. \end{DoxyCompactList}\item 
+\hyperlink{classAccumulatorType}{Accumulator\+Type} $\ast$ \hyperlink{classAccumulatorType_a6ab31bd597bab53b1900169c8fb21f40}{set\+Interval} (const T \&t)
+\begin{DoxyCompactList}\small\item\em Set the interval for this option. \end{DoxyCompactList}\item 
+virtual std\+::string {\bfseries name} () const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classAccumulatorType_ace6c6e770c071776469432622ecee9d0}{}\label{classAccumulatorType_ace6c6e770c071776469432622ecee9d0}
+
+\item 
+virtual unsigned {\bfseries min\+\_\+tokens} () const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classAccumulatorType_ad6b066fbf931a02c9771e1d6a654e5ee}{}\label{classAccumulatorType_ad6b066fbf931a02c9771e1d6a654e5ee}
+
+\item 
+virtual unsigned {\bfseries max\+\_\+tokens} () const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classAccumulatorType_a73549cbb550f8be6b20f552018b265fc}{}\label{classAccumulatorType_a73549cbb550f8be6b20f552018b265fc}
+
+\item 
+virtual bool {\bfseries is\+\_\+composing} () const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classAccumulatorType_a4964e0b818e98ff6e8fadb96d38f77f8}{}\label{classAccumulatorType_a4964e0b818e98ff6e8fadb96d38f77f8}
+
+\item 
+virtual bool {\bfseries is\+\_\+required} () const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classAccumulatorType_a90bdfe69328a00e388442a2a42ce8e19}{}\label{classAccumulatorType_a90bdfe69328a00e388442a2a42ce8e19}
+
+\item 
+virtual void \hyperlink{classAccumulatorType_a3818e22be57ad168394c02419439a4c2}{parse} (boost\+::any \&value\+\_\+store, const std\+::vector$<$ std\+::string $>$ \&new\+\_\+tokens, bool utf8) const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}
+\begin{DoxyCompactList}\small\item\em Parse options. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classAccumulatorType_a0c73748ec3aec52a2c7f6f4010431cc9}{apply\+\_\+default} (boost\+::any \&value\+\_\+store) const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classAccumulatorType_a0c73748ec3aec52a2c7f6f4010431cc9}{}\label{classAccumulatorType_a0c73748ec3aec52a2c7f6f4010431cc9}
+
+\begin{DoxyCompactList}\small\item\em If the option doesn\textquotesingle{}t appear, this is the default value. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classAccumulatorType_a7fd912aa8495013791d97e3694d032ea}{notify} (const boost\+::any \&value\+\_\+store) const \hyperlink{ndn-cxx_2src_2common_8hpp_ab53a383abb72682805543301b5f2c244}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}\hypertarget{classAccumulatorType_a7fd912aa8495013791d97e3694d032ea}{}\label{classAccumulatorType_a7fd912aa8495013791d97e3694d032ea}
+
+\begin{DoxyCompactList}\small\item\em Notify the user function with the value of the value store. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class Accumulator\+Type$<$ T $>$}
+
+An accumulating option value to handle multiple incrementing options. 
+
+Based on \href{https://gitorious.org/bwy/bwy/source/8753148c324ddfacb1f3cdc315650586bd7b75a4:use/accumulator.hpp}{\tt https\+://gitorious.\+org/bwy/bwy/source/8753148c324ddfacb1f3cdc315650586bd7b75a4\+:use/accumulator.\+hpp} \begin{DoxySeeAlso}{See also}
+\href{http://benjaminwolsey.de/node/103}{\tt http\+://benjaminwolsey.\+de/node/103} 
+\end{DoxySeeAlso}
+
+
+Definition at line 105 of file util.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Accumulator\+Type@{Accumulator\+Type}!parse@{parse}}
+\index{parse@{parse}!Accumulator\+Type@{Accumulator\+Type}}
+\subsubsection[{\texorpdfstring{parse(boost\+::any \&value\+\_\+store, const std\+::vector$<$ std\+::string $>$ \&new\+\_\+tokens, bool utf8) const N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+D\+E\+C\+L\+\_\+\+F\+I\+N\+AL}{parse(boost::any \&value\_store, const std::vector< std::string > \&new\_tokens, bool utf8) const NDN\_CXX\_DECL\_FINAL}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ virtual void {\bf Accumulator\+Type}$<$ T $>$\+::parse (
+\begin{DoxyParamCaption}
+\item[{boost\+::any \&}]{value\+\_\+store, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{new\+\_\+tokens, }
+\item[{bool}]{utf8}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classAccumulatorType_a3818e22be57ad168394c02419439a4c2}{}\label{classAccumulatorType_a3818e22be57ad168394c02419439a4c2}
+
+
+Parse options. 
+
+Every appearance of the option simply increments the value There should never be any tokens. 
+
+Definition at line 181 of file util.\+hpp.
+
+\index{Accumulator\+Type@{Accumulator\+Type}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Accumulator\+Type@{Accumulator\+Type}}
+\subsubsection[{\texorpdfstring{set\+Interval(const T \&t)}{setInterval(const T \&t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Accumulator\+Type}$\ast$ {\bf Accumulator\+Type}$<$ T $>$\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classAccumulatorType_a6ab31bd597bab53b1900169c8fb21f40}{}\label{classAccumulatorType_a6ab31bd597bab53b1900169c8fb21f40}
+
+
+Set the interval for this option. 
+
+Unlike for program\+\_\+options\+::value, this specifies a value to be applied on each occurrence of the option. 
+
+Definition at line 136 of file util.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/tools/ndnsec/util.\+hpp\end{DoxyCompactItemize}

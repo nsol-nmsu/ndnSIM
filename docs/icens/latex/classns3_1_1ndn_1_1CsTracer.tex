@@ -1,0 +1,277 @@
+\hypertarget{classns3_1_1ndn_1_1CsTracer}{}\section{ns3\+:\+:ndn\+:\+:Cs\+Tracer Class Reference}
+\label{classns3_1_1ndn_1_1CsTracer}\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+
+
+N\+DN tracer for cache performance (hits and misses)  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/cs-\/tracer.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Cs\+Tracer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1ndn_1_1CsTracer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1CsTracer_a82b1a01698336e0e86a3bc2c8e3b25f8}{Cs\+Tracer} (shared\+\_\+ptr$<$ std\+::ostream $>$ os, Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Trace constructor that attaches to the node using node pointer. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1CsTracer_a11ef87b51e18ecf1c19ab62e50d51e78}{Cs\+Tracer} (shared\+\_\+ptr$<$ std\+::ostream $>$ os, const std\+::string \&node)
+\begin{DoxyCompactList}\small\item\em Trace constructor that attaches to the node using node name. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1CsTracer_a8fded13daa5df4b25b4cd283a02ee0c8}{$\sim$\+Cs\+Tracer} ()\hypertarget{classns3_1_1ndn_1_1CsTracer_a8fded13daa5df4b25b4cd283a02ee0c8}{}\label{classns3_1_1ndn_1_1CsTracer_a8fded13daa5df4b25b4cd283a02ee0c8}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1CsTracer_ab7237564ed00c56ed9ed883c2850da8d}{Print\+Header} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Print head of the trace (e.\+g., for post-\/processing) \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1CsTracer_a9aa2737002c31648600733aed4841f2a}{Print} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Print current trace data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classns3_1_1ndn_1_1CsTracer_a3e745ff5a244c0df5f144d044bc1e1ac}{Install\+All} (const std\+::string \&file, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on all simulation nodes. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1CsTracer_a6f105baba9a85e74fe6124e473f57e26}{Install} (const Node\+Container \&nodes, const std\+::string \&file, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on the selected simulation nodes. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1CsTracer_a81cf8a80b07326660c2fd8324a71d038}{Install} (Ptr$<$ Node $>$ node, const std\+::string \&file, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on a specific simulation node. \end{DoxyCompactList}\item 
+static Ptr$<$ \hyperlink{classns3_1_1ndn_1_1CsTracer}{Cs\+Tracer} $>$ \hyperlink{classns3_1_1ndn_1_1CsTracer_a4577058f172fa1eac038e35572eae8de}{Install} (Ptr$<$ Node $>$ node, shared\+\_\+ptr$<$ std\+::ostream $>$ output\+Stream, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on a specific simulation node. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1CsTracer_a28af59527634a6d2b8b1ee70591dd925}{Destroy} ()
+\begin{DoxyCompactList}\small\item\em Explicit request to remove all statically created tracers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+DN tracer for cache performance (hits and misses) 
+
+Definition at line 62 of file ndn-\/cs-\/tracer.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Cs\+Tracer@{Cs\+Tracer}}
+\index{Cs\+Tracer@{Cs\+Tracer}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Cs\+Tracer(shared\+\_\+ptr$<$ std\+::ostream $>$ os, Ptr$<$ Node $>$ node)}{CsTracer(shared\_ptr< std::ostream > os, Ptr< Node > node)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+Cs\+Tracer\+::\+Cs\+Tracer (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{os, }
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1CsTracer_a82b1a01698336e0e86a3bc2c8e3b25f8}{}\label{classns3_1_1ndn_1_1CsTracer_a82b1a01698336e0e86a3bc2c8e3b25f8}
+
+
+Trace constructor that attaches to the node using node pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to the output stream \\
+\hline
+{\em node} & pointer to the node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 177 of file ndn-\/cs-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Cs\+Tracer@{Cs\+Tracer}}
+\index{Cs\+Tracer@{Cs\+Tracer}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Cs\+Tracer(shared\+\_\+ptr$<$ std\+::ostream $>$ os, const std\+::string \&node)}{CsTracer(shared\_ptr< std::ostream > os, const std::string \&node)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+Cs\+Tracer\+::\+Cs\+Tracer (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{os, }
+\item[{const std\+::string \&}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1CsTracer_a11ef87b51e18ecf1c19ab62e50d51e78}{}\label{classns3_1_1ndn_1_1CsTracer_a11ef87b51e18ecf1c19ab62e50d51e78}
+
+
+Trace constructor that attaches to the node using node name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to the output stream \\
+\hline
+{\em node\+Name} & name of the node registered using Names\+::\+Add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 191 of file ndn-\/cs-\/tracer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Destroy()}{Destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Cs\+Tracer\+::\+Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1CsTracer_a28af59527634a6d2b8b1ee70591dd925}{}\label{classns3_1_1ndn_1_1CsTracer_a28af59527634a6d2b8b1ee70591dd925}
+
+
+Explicit request to remove all statically created tracers. 
+
+This method can be helpful if simulation scenario contains several independent run, or if it is desired to do a postprocessing of the resulting data 
+
+Definition at line 45 of file ndn-\/cs-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(const Node\+Container \&nodes, const std\+::string \&file, Time averaging\+Period=\+Seconds(0.\+5))}{Install(const NodeContainer \&nodes, const std::string \&file, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Cs\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{const Node\+Container \&}]{nodes, }
+\item[{const std\+::string \&}]{file, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1CsTracer_a6f105baba9a85e74fe6124e473f57e26}{}\label{classns3_1_1ndn_1_1CsTracer_a6f105baba9a85e74fe6124e473f57e26}
+
+
+Helper method to install tracers on the selected simulation nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a tuple of reference to output stream and list of tracers. !!! Attention !!! This tuple needs to be preserved for the lifetime of simulation, otherwise S\+E\+G\+F\+A\+U\+L\+Ts are inevitable 
+\end{DoxyReturn}
+
+
+Definition at line 88 of file ndn-\/cs-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node, const std\+::string \&file, Time averaging\+Period=\+Seconds(0.\+5))}{Install(Ptr< Node > node, const std::string \&file, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Cs\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const std\+::string \&}]{file, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1CsTracer_a81cf8a80b07326660c2fd8324a71d038}{}\label{classns3_1_1ndn_1_1CsTracer_a81cf8a80b07326660c2fd8324a71d038}
+
+
+Helper method to install tracers on a specific simulation node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a tuple of reference to output stream and list of tracers. !!! Attention !!! This tuple needs to be preserved for the lifetime of simulation, otherwise S\+E\+G\+F\+A\+U\+L\+Ts are inevitable 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file ndn-\/cs-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node, shared\+\_\+ptr$<$ std\+::ostream $>$ output\+Stream, Time averaging\+Period=\+Seconds(0.\+5))}{Install(Ptr< Node > node, shared\_ptr< std::ostream > outputStream, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ {\bf Cs\+Tracer} $>$ ns3\+::ndn\+::\+Cs\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{output\+Stream, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1CsTracer_a4577058f172fa1eac038e35572eae8de}{}\label{classns3_1_1ndn_1_1CsTracer_a4577058f172fa1eac038e35572eae8de}
+
+
+Helper method to install tracers on a specific simulation node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em output\+Stream} & Smart pointer to a stream \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a tuple of reference to output stream and list of tracers. !!! Attention !!! This tuple needs to be preserved for the lifetime of simulation, otherwise S\+E\+G\+F\+A\+U\+L\+Ts are inevitable 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file ndn-\/cs-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Install\+All@{Install\+All}}
+\index{Install\+All@{Install\+All}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Install\+All(const std\+::string \&file, Time averaging\+Period=\+Seconds(0.\+5))}{InstallAll(const std::string \&file, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Cs\+Tracer\+::\+Install\+All (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1CsTracer_a3e745ff5a244c0df5f144d044bc1e1ac}{}\label{classns3_1_1ndn_1_1CsTracer_a3e745ff5a244c0df5f144d044bc1e1ac}
+
+
+Helper method to install tracers on all simulation nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a tuple of reference to output stream and list of tracers. !!! Attention !!! This tuple needs to be preserved for the lifetime of simulation, otherwise S\+E\+G\+F\+A\+U\+L\+Ts are inevitable 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file ndn-\/cs-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Print@{Print}}
+\index{Print@{Print}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Print(std\+::ostream \&os) const}{Print(std::ostream \&os) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Cs\+Tracer\+::\+Print (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1CsTracer_a9aa2737002c31648600733aed4841f2a}{}\label{classns3_1_1ndn_1_1CsTracer_a9aa2737002c31648600733aed4841f2a}
+
+
+Print current trace data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to output stream \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 253 of file ndn-\/cs-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}!Print\+Header@{Print\+Header}}
+\index{Print\+Header@{Print\+Header}!ns3\+::ndn\+::\+Cs\+Tracer@{ns3\+::ndn\+::\+Cs\+Tracer}}
+\subsubsection[{\texorpdfstring{Print\+Header(std\+::ostream \&os) const}{PrintHeader(std::ostream \&os) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Cs\+Tracer\+::\+Print\+Header (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1CsTracer_ab7237564ed00c56ed9ed883c2850da8d}{}\label{classns3_1_1ndn_1_1CsTracer_ab7237564ed00c56ed9ed883c2850da8d}
+
+
+Print head of the trace (e.\+g., for post-\/processing) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to output stream \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 228 of file ndn-\/cs-\/tracer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/ndn-\/cs-\/tracer.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/ndn-\/cs-\/tracer.\+cpp\end{DoxyCompactItemize}

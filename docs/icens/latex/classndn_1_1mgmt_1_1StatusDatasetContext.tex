@@ -1,0 +1,193 @@
+\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext}{}\section{ndn\+:\+:mgmt\+:\+:Status\+Dataset\+Context Class Reference}
+\label{classndn_1_1mgmt_1_1StatusDatasetContext}\index{ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext_aac0fae9a1143700aeacfd274c109c2c5}{get\+Prefix} () const
+\item 
+\hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext}{Status\+Dataset\+Context} \& \hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext_a154cd0e7ac0b24f36a5b9f9e43952216}{set\+Prefix} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em change prefix of \hyperlink{classndn_1_1Data}{Data} packets \end{DoxyCompactList}\item 
+const time\+::milliseconds \& \hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext_a53458cb0a29da60ff289616629c59e83}{get\+Expiry} () const
+\item 
+\hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext}{Status\+Dataset\+Context} \& \hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext_a361ac45e2c56f83666bcdbc0fb33d91a}{set\+Expiry} (const time\+::milliseconds \&expiry)
+\begin{DoxyCompactList}\small\item\em set expiration duration \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext_a13909ee98cd5e4844a5c7abd3ceb1cfb}{append} (const \hyperlink{classndn_1_1Block}{Block} \&block)
+\begin{DoxyCompactList}\small\item\em append a \hyperlink{classndn_1_1Block}{Block} to the response \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext_a89a039b8984b5afc43849f19b170a61f}{end} ()
+\begin{DoxyCompactList}\small\item\em end the response successfully after appending zero or more blocks \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1mgmt_1_1StatusDatasetContext_ae232aab334b4601b12dc947b84556e7d}{reject} (const \hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \&resp=\hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response}().set\+Code(400))
+\begin{DoxyCompactList}\small\item\em declare the non-\/existence of a response \end{DoxyCompactList}\item 
+{\bfseries Status\+Dataset\+Context} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const Data\+Sender \&data\+Sender)\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_a5fc6614afc8fff24f7073b91d402fa40}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_a5fc6614afc8fff24f7073b91d402fa40}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: typedef std\+::function$<$void(const \hyperlink{classndn_1_1Name}{Name}\& data\+Name\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_a9929579db22364753bcfbfe027e62b8e}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_a9929579db22364753bcfbfe027e62b8e}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const \hyperlink{classndn_1_1Block}{Block} \& {\bfseries content}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_ad587f2ad45fc3bd4e46a906a485e7588}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_ad587f2ad45fc3bd4e46a906a485e7588}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const \hyperlink{classndn_1_1Block}{Block} const \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \&meta\+Info {\bfseries Data\+Sender}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_abe730f60b33a43974a35deb495ae264d}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_abe730f60b33a43974a35deb495ae264d}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Dispatcher}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_ad90424f003fc2afb836709cbffa47e2c}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_ad90424f003fc2afb836709cbffa47e2c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 38 of file status-\/dataset-\/context.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}!append@{append}}
+\index{append@{append}!ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}}
+\subsubsection[{\texorpdfstring{append(const Block \&block)}{append(const Block \&block)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::mgmt\+::\+Status\+Dataset\+Context\+::append (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_a13909ee98cd5e4844a5c7abd3ceb1cfb}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_a13909ee98cd5e4844a5c7abd3ceb1cfb}
+
+
+append a \hyperlink{classndn_1_1Block}{Block} to the response 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::domain\+\_\+error} & end or reject has been invoked \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 73 of file status-\/dataset-\/context.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}!end@{end}}
+\index{end@{end}!ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}}
+\subsubsection[{\texorpdfstring{end()}{end()}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::mgmt\+::\+Status\+Dataset\+Context\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_a89a039b8984b5afc43849f19b170a61f}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_a89a039b8984b5afc43849f19b170a61f}
+
+
+end the response successfully after appending zero or more blocks 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::domain\+\_\+error} & reject has been invoked \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 100 of file status-\/dataset-\/context.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}!get\+Expiry@{get\+Expiry}}
+\index{get\+Expiry@{get\+Expiry}!ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}}
+\subsubsection[{\texorpdfstring{get\+Expiry() const}{getExpiry() const}}]{\setlength{\rightskip}{0pt plus 5cm}const time\+::milliseconds \& ndn\+::mgmt\+::\+Status\+Dataset\+Context\+::get\+Expiry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_a53458cb0a29da60ff289616629c59e83}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_a53458cb0a29da60ff289616629c59e83}
+\begin{DoxyReturn}{Returns}
+expiration duration for this dataset response 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file status-\/dataset-\/context.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}!get\+Prefix@{get\+Prefix}}
+\index{get\+Prefix@{get\+Prefix}!ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}}
+\subsubsection[{\texorpdfstring{get\+Prefix() const}{getPrefix() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name} \& ndn\+::mgmt\+::\+Status\+Dataset\+Context\+::get\+Prefix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_aac0fae9a1143700aeacfd274c109c2c5}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_aac0fae9a1143700aeacfd274c109c2c5}
+\begin{DoxyReturn}{Returns}
+prefix of \hyperlink{classndn_1_1Data}{Data} packets, with version component but without segment component 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file status-\/dataset-\/context.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}!reject@{reject}}
+\index{reject@{reject}!ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}}
+\subsubsection[{\texorpdfstring{reject(const Control\+Response \&resp=\+Control\+Response().\+set\+Code(400))}{reject(const ControlResponse \&resp=ControlResponse().setCode(400))}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::mgmt\+::\+Status\+Dataset\+Context\+::reject (
+\begin{DoxyParamCaption}
+\item[{const {\bf Control\+Response} \&}]{resp = {\ttfamily {\bf Control\+Response}().setCode(400)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_ae232aab334b4601b12dc947b84556e7d}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_ae232aab334b4601b12dc947b84556e7d}
+
+
+declare the non-\/existence of a response 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::domain\+\_\+error} & append or end has been invoked\\
+\hline
+\end{DoxyExceptions}
+This should be invoked when the incoming \hyperlink{classndn_1_1Interest}{Interest} is malformed. A producer-\/generated N\+A\+CK will be returned to requester.
+
+
+\begin{DoxyParams}{Parameters}
+{\em content} & Content of producer-\/generated N\+A\+CK \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 114 of file status-\/dataset-\/context.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}!set\+Expiry@{set\+Expiry}}
+\index{set\+Expiry@{set\+Expiry}!ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}}
+\subsubsection[{\texorpdfstring{set\+Expiry(const time\+::milliseconds \&expiry)}{setExpiry(const time::milliseconds \&expiry)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status\+Dataset\+Context} \& ndn\+::mgmt\+::\+Status\+Dataset\+Context\+::set\+Expiry (
+\begin{DoxyParamCaption}
+\item[{const time\+::milliseconds \&}]{expiry}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_a361ac45e2c56f83666bcdbc0fb33d91a}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_a361ac45e2c56f83666bcdbc0fb33d91a}
+
+
+set expiration duration 
+
+The response will be cached for the specified duration. Incoming \hyperlink{classndn_1_1Interest}{Interest} that matches a cached response will be satisfied with that response, without invoking Status\+Dataset\+Handler again. 
+
+Definition at line 66 of file status-\/dataset-\/context.\+cpp.
+
+\index{ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}!set\+Prefix@{set\+Prefix}}
+\index{set\+Prefix@{set\+Prefix}!ndn\+::mgmt\+::\+Status\+Dataset\+Context@{ndn\+::mgmt\+::\+Status\+Dataset\+Context}}
+\subsubsection[{\texorpdfstring{set\+Prefix(const Name \&prefix)}{setPrefix(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Status\+Dataset\+Context} \& ndn\+::mgmt\+::\+Status\+Dataset\+Context\+::set\+Prefix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1mgmt_1_1StatusDatasetContext_a154cd0e7ac0b24f36a5b9f9e43952216}{}\label{classndn_1_1mgmt_1_1StatusDatasetContext_a154cd0e7ac0b24f36a5b9f9e43952216}
+
+
+change prefix of \hyperlink{classndn_1_1Data}{Data} packets 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & the prefix; it must start with \hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name}, may contain version component, but must not contain segment component \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & prefix does not start with \hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name} \\
+\hline
+{\em std\+::domain\+\_\+error} & append, end, or reject has been invoked\\
+\hline
+\end{DoxyExceptions}
+Status\+Dataset\+Handler may change the prefix of \hyperlink{classndn_1_1Data}{Data} packets with this method, before sending any response. The version component is optional, and will be generated from current timestamp when omitted. 
+
+Definition at line 40 of file status-\/dataset-\/context.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/mgmt/status-\/dataset-\/context.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/mgmt/status-\/dataset-\/context.\+cpp\end{DoxyCompactItemize}

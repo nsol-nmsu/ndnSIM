@@ -1,0 +1,53 @@
+\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon}{}\section{nfd\+:\+:tests\+:\+:Test\+Face\+Manager\+Common Class Reference}
+\label{classnfd_1_1tests_1_1TestFaceManagerCommon}\index{nfd\+::tests\+::\+Test\+Face\+Manager\+Common@{nfd\+::tests\+::\+Test\+Face\+Manager\+Common}}
+Inheritance diagram for nfd\+:\+:tests\+:\+:Test\+Face\+Manager\+Common\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.750000cm]{classnfd_1_1tests_1_1TestFaceManagerCommon}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ \& {\bfseries get\+Face} ()\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_a4ec51b6387333b85336667b9bfde1c03}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_a4ec51b6387333b85336667b9bfde1c03}
+
+\item 
+void {\bfseries validate\+Control\+Response\+Common} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text, \hyperlink{classndn_1_1mgmt_1_1ControlResponse}{Control\+Response} \&control)\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_a193df26d6617aca33495c9cb3b07f3c7}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_a193df26d6617aca33495c9cb3b07f3c7}
+
+\item 
+void {\bfseries validate\+Control\+Response} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text)\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_af1c34bc4477e54951acb44c0e83518c1}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_af1c34bc4477e54951acb44c0e83518c1}
+
+\item 
+void {\bfseries validate\+Control\+Response} (const \hyperlink{classndn_1_1Data}{Data} \&response, const \hyperlink{classndn_1_1Name}{Name} \&expected\+Name, uint32\+\_\+t expected\+Code, const std\+::string \&expected\+Text, const \hyperlink{classndn_1_1Block}{Block} \&expected\+Body)\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_a6bd88ce83307fb6324d2ca119535d785}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_a6bd88ce83307fb6324d2ca119535d785}
+
+\item 
+bool {\bfseries did\+Callback\+Fire} () const\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_afa99dda3e68e8282e2d4e72a8bd01328}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_afa99dda3e68e8282e2d4e72a8bd01328}
+
+\item 
+void {\bfseries reset\+Callback\+Fired} ()\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_a1cf9b79063b3b929469b5c9298fdd85f}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_a1cf9b79063b3b929469b5c9298fdd85f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ {\bfseries m\+\_\+face}\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_a3a31f94e25c3e877b0e58e624f6c6e8a}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_a3a31f94e25c3e877b0e58e624f6c6e8a}
+
+\item 
+bool {\bfseries m\+\_\+callback\+Fired}\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_a27a903bde44c08ba9613042cfc952110}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_a27a903bde44c08ba9613042cfc952110}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries m\+\_\+test\+Key\+Chain}\hypertarget{classnfd_1_1tests_1_1TestFaceManagerCommon_a64885d7b871c41a8965a53acc4918ff7}{}\label{classnfd_1_1tests_1_1TestFaceManagerCommon_a64885d7b871c41a8965a53acc4918ff7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 170 of file face-\/manager.\+t.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/mgmt/face-\/manager.\+t.\+cpp\end{DoxyCompactItemize}

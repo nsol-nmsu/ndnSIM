@@ -1,0 +1,110 @@
+\hypertarget{classnfd_1_1FaceManager}{}\section{nfd\+:\+:Face\+Manager Class Reference}
+\label{classnfd_1_1FaceManager}\index{nfd\+::\+Face\+Manager@{nfd\+::\+Face\+Manager}}
+Inheritance diagram for nfd\+:\+:Face\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.333333cm]{classnfd_1_1FaceManager}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1FaceManager_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1FaceManager_a1904b38efcb8254550e015d854efc79b}{Face\+Manager} (\hyperlink{classnfd_1_1FaceTable}{Face\+Table} \&face\+Table, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ face, \hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \&key\+Chain)
+\item 
+void \hyperlink{classnfd_1_1FaceManager_aaee8f3f47b19a43b1f54c42e797b0389}{set\+Config\+File} (\hyperlink{classnfd_1_1ConfigFile}{Config\+File} \&config\+File)\hypertarget{classnfd_1_1FaceManager_aaee8f3f47b19a43b1f54c42e797b0389}{}\label{classnfd_1_1FaceManager_aaee8f3f47b19a43b1f54c42e797b0389}
+
+\begin{DoxyCompactList}\small\item\em Subscribe to a face management section(s) for the config file. \end{DoxyCompactList}\item 
+void {\bfseries on\+Face\+Request} (const \hyperlink{classndn_1_1Interest}{Interest} \&request)\hypertarget{classnfd_1_1FaceManager_a4d527c24b6e698c9eafa7950d5892497}{}\label{classnfd_1_1FaceManager_a4d527c24b6e698c9eafa7950d5892497}
+
+\item 
+void {\bfseries list\+Channels} (const \hyperlink{classndn_1_1Interest}{Interest} \&request)\hypertarget{classnfd_1_1FaceManager_a7cf079f19bfba7c1885c7bfee4fc9a5c}{}\label{classnfd_1_1FaceManager_a7cf079f19bfba7c1885c7bfee4fc9a5c}
+
+\item 
+void {\bfseries list\+Queried\+Faces} (const \hyperlink{classndn_1_1Interest}{Interest} \&request)\hypertarget{classnfd_1_1FaceManager_aa1b47753caca5a42e10c5f72c98928a6}{}\label{classnfd_1_1FaceManager_aa1b47753caca5a42e10c5f72c98928a6}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1ProtocolFactory}{Protocol\+Factory} $>$ {\bfseries find\+Factory} (const std\+::string \&protocol)\hypertarget{classnfd_1_1FaceManager_ad938dd47024442e8b7aa5768e4e071a5}{}\label{classnfd_1_1FaceManager_ad938dd47024442e8b7aa5768e4e071a5}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void {\bfseries create\+Face} (const \hyperlink{classndn_1_1Interest}{Interest} \&request, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters)\hypertarget{classnfd_1_1FaceManager_a9ec44e15ad75edde20c6bc3ec0c26b8b}{}\label{classnfd_1_1FaceManager_a9ec44e15ad75edde20c6bc3ec0c26b8b}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void {\bfseries destroy\+Face} (const \hyperlink{classndn_1_1Interest}{Interest} \&request, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters)\hypertarget{classnfd_1_1FaceManager_a27c33f456d72388631d645c750ab4a81}{}\label{classnfd_1_1FaceManager_a27c33f456d72388631d645c750ab4a81}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS bool {\bfseries extract\+Local\+Control\+Parameters} (const \hyperlink{classndn_1_1Interest}{Interest} \&request, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters, \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} \&command, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1LocalFace}{Local\+Face} $>$ \&out\+Face, Local\+Control\+Feature \&out\+Feature)\hypertarget{classnfd_1_1FaceManager_ac581d61d9f2f6bd52eaa1dd07ae09cc0}{}\label{classnfd_1_1FaceManager_ac581d61d9f2f6bd52eaa1dd07ae09cc0}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void {\bfseries enable\+Local\+Control} (const \hyperlink{classndn_1_1Interest}{Interest} \&request, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parambeters)\hypertarget{classnfd_1_1FaceManager_ab9cd16b32b1d3eaeda9f71003adb0e4f}{}\label{classnfd_1_1FaceManager_ab9cd16b32b1d3eaeda9f71003adb0e4f}
+
+\item 
+V\+I\+R\+T\+U\+A\+L\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+TS void {\bfseries disable\+Local\+Control} (const \hyperlink{classndn_1_1Interest}{Interest} \&request, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters)\hypertarget{classnfd_1_1FaceManager_a888a4927901317e1369e8b335283cb53}{}\label{classnfd_1_1FaceManager_a888a4927901317e1369e8b335283cb53}
+
+\item 
+void {\bfseries ignore\+Unsigned\+Verb} (const \hyperlink{classndn_1_1Interest}{Interest} \&request)\hypertarget{classnfd_1_1FaceManager_aae30384a3f03669166b90760141bbf8f}{}\label{classnfd_1_1FaceManager_aae30384a3f03669166b90760141bbf8f}
+
+\item 
+void {\bfseries add\+Created\+Face\+To\+Forwarder} (const shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \&new\+Face)\hypertarget{classnfd_1_1FaceManager_ade231df42d0a84abe383f8cf21402124}{}\label{classnfd_1_1FaceManager_ade231df42d0a84abe383f8cf21402124}
+
+\item 
+void {\bfseries on\+Created} (const \hyperlink{classndn_1_1Name}{Name} \&request\+Name, \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters, const shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \&new\+Face)\hypertarget{classnfd_1_1FaceManager_a67086e2f2f1ec707f189927361acfc29}{}\label{classnfd_1_1FaceManager_a67086e2f2f1ec707f189927361acfc29}
+
+\item 
+void {\bfseries on\+Connect\+Failed} (const \hyperlink{classndn_1_1Name}{Name} \&request\+Name, const std\+::string \&reason)\hypertarget{classnfd_1_1FaceManager_a7ca9beef5c86f02aec7eceddf421022a}{}\label{classnfd_1_1FaceManager_a7ca9beef5c86f02aec7eceddf421022a}
+
+\item 
+void {\bfseries on\+Add\+Face} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1FaceManager_a9c5df28b0af4f9fdb77fc7e081d1a107}{}\label{classnfd_1_1FaceManager_a9c5df28b0af4f9fdb77fc7e081d1a107}
+
+\item 
+void {\bfseries on\+Remove\+Face} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1FaceManager_a24db6f19e199e1ccb748af6794c3147b}{}\label{classnfd_1_1FaceManager_a24db6f19e199e1ccb748af6794c3147b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void list\+Faces(const \hyperlink{classndn_1_1Interest}{Interest}\& request)\hypertarget{classnfd_1_1FaceManager_a46593c68645d98ba0f952f02d0a397da}{}\label{classnfd_1_1FaceManager_a46593c68645d98ba0f952f02d0a397da}
+
+\item 
+P\+R\+O\+T\+E\+C\+T\+E\+D\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: void on\+Validated\+Face\+Request(const shared\+\_\+ptr$<$const \hyperlink{classndn_1_1Interest}{Interest}$>$\& request)\hypertarget{classnfd_1_1FaceManager_a7d2e9427c32141594720eea0b1e0256b}{}\label{classnfd_1_1FaceManager_a7d2e9427c32141594720eea0b1e0256b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 51 of file face-\/manager.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::\+Face\+Manager@{nfd\+::\+Face\+Manager}!Face\+Manager@{Face\+Manager}}
+\index{Face\+Manager@{Face\+Manager}!nfd\+::\+Face\+Manager@{nfd\+::\+Face\+Manager}}
+\subsubsection[{\texorpdfstring{Face\+Manager(\+Face\+Table \&face\+Table, shared\+\_\+ptr$<$ Internal\+Face $>$ face, ndn\+::\+Key\+Chain \&key\+Chain)}{FaceManager(FaceTable \&faceTable, shared\_ptr< InternalFace > face, ndn::KeyChain \&keyChain)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::\+Face\+Manager\+::\+Face\+Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf Face\+Table} \&}]{face\+Table, }
+\item[{shared\+\_\+ptr$<$ {\bf Internal\+Face} $>$}]{face, }
+\item[{{\bf ndn\+::\+Key\+Chain} \&}]{key\+Chain}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1FaceManager_a1904b38efcb8254550e015d854efc79b}{}\label{classnfd_1_1FaceManager_a1904b38efcb8254550e015d854efc79b}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1FaceManager_1_1Error}{Face\+Manager\+::\+Error}} & if local\+Port is an invalid port number \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 108 of file face-\/manager.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/mgmt/face-\/manager.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/mgmt/face-\/manager.\+cpp\end{DoxyCompactItemize}

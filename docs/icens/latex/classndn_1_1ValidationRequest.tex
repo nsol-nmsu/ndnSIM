@@ -1,0 +1,49 @@
+\hypertarget{classndn_1_1ValidationRequest}{}\section{ndn\+:\+:Validation\+Request Class Reference}
+\label{classndn_1_1ValidationRequest}\index{ndn\+::\+Validation\+Request@{ndn\+::\+Validation\+Request}}
+
+
+\hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} contains information related to further validation.  
+
+
+
+
+{\ttfamily \#include $<$validation-\/request.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Validation\+Request} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{namespacendn_aeaa15e849fd25636f59ca61acb64e532}{On\+Data\+Validated} \&on\+Data\+Validated, const \hyperlink{namespacendn_ae3c60219d74ba747e368708d93782760}{On\+Data\+Validation\+Failed} \&on\+Data\+Validation\+Failed, int n\+Retries, int n\+Steps)\hypertarget{classndn_1_1ValidationRequest_a403c341aba06c4c61823a3e5036ab731}{}\label{classndn_1_1ValidationRequest_a403c341aba06c4c61823a3e5036ab731}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1ValidationRequest_a0fcba2434f52141feed6001a1b07cbf0}{m\+\_\+interest}\hypertarget{classndn_1_1ValidationRequest_a0fcba2434f52141feed6001a1b07cbf0}{}\label{classndn_1_1ValidationRequest_a0fcba2434f52141feed6001a1b07cbf0}
+
+\begin{DoxyCompactList}\small\item\em the \hyperlink{classndn_1_1Interest}{Interest} for the requested data/certificate. \end{DoxyCompactList}\item 
+\hyperlink{namespacendn_aeaa15e849fd25636f59ca61acb64e532}{On\+Data\+Validated} \hyperlink{classndn_1_1ValidationRequest_acf340041516fb44922a33ef40e5da8c2}{m\+\_\+on\+Data\+Validated}\hypertarget{classndn_1_1ValidationRequest_acf340041516fb44922a33ef40e5da8c2}{}\label{classndn_1_1ValidationRequest_acf340041516fb44922a33ef40e5da8c2}
+
+\begin{DoxyCompactList}\small\item\em callback when the retrieved certificate is authenticated. \end{DoxyCompactList}\item 
+\hyperlink{namespacendn_ae3c60219d74ba747e368708d93782760}{On\+Data\+Validation\+Failed} \hyperlink{classndn_1_1ValidationRequest_a2e1d6005915d93e95b49360bad981e08}{m\+\_\+on\+Data\+Validation\+Failed}\hypertarget{classndn_1_1ValidationRequest_a2e1d6005915d93e95b49360bad981e08}{}\label{classndn_1_1ValidationRequest_a2e1d6005915d93e95b49360bad981e08}
+
+\begin{DoxyCompactList}\small\item\em callback when the retrieved certificate cannot be authenticated. \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1ValidationRequest_a8de876768322a34ae1fc94578980b939}{m\+\_\+n\+Retries}\hypertarget{classndn_1_1ValidationRequest_a8de876768322a34ae1fc94578980b939}{}\label{classndn_1_1ValidationRequest_a8de876768322a34ae1fc94578980b939}
+
+\begin{DoxyCompactList}\small\item\em the number of retries when the interest times out. \end{DoxyCompactList}\item 
+int \hyperlink{classndn_1_1ValidationRequest_aca578157c77c579b18e4ac3c86e584a4}{m\+\_\+n\+Steps}\hypertarget{classndn_1_1ValidationRequest_aca578157c77c579b18e4ac3c86e584a4}{}\label{classndn_1_1ValidationRequest_aca578157c77c579b18e4ac3c86e584a4}
+
+\begin{DoxyCompactList}\small\item\em the number of validation steps that have been performed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} contains information related to further validation. 
+
+During a validation process, validator may not have retrieved the corresponding public key of the signature in a packet. \hyperlink{classndn_1_1ValidationRequest}{Validation\+Request} contains the interest for the certificate that carries the public key and also contains the context for the certificate including how to proceed when the public key is authenticated or not, the number of validation steps that have been performed, and how to handle interest timeout. 
+
+Definition at line 53 of file validation-\/request.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/validation-\/request.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\hypertarget{classnfdc_1_1Nfdc_1_1FaceIdFetcher}{}\section{nfdc\+:\+:Nfdc\+:\+:Face\+Id\+Fetcher Class Reference}
+\label{classnfdc_1_1Nfdc_1_1FaceIdFetcher}\index{nfdc\+::\+Nfdc\+::\+Face\+Id\+Fetcher@{nfdc\+::\+Nfdc\+::\+Face\+Id\+Fetcher}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ void(uint32\+\_\+t)$>$ {\bfseries Success\+Callback}\hypertarget{classnfdc_1_1Nfdc_1_1FaceIdFetcher_a1a20453af0519e2fea1de7ef0225bf4b}{}\label{classnfdc_1_1Nfdc_1_1FaceIdFetcher_a1a20453af0519e2fea1de7ef0225bf4b}
+
+\item 
+typedef std\+::function$<$ void(const std\+::string \&)$>$ {\bfseries Failure\+Callback}\hypertarget{classnfdc_1_1Nfdc_1_1FaceIdFetcher_ae48416d75c9bbcc258f5f9e1feb0980c}{}\label{classnfdc_1_1Nfdc_1_1FaceIdFetcher_ae48416d75c9bbcc258f5f9e1feb0980c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classnfdc_1_1Nfdc_1_1FaceIdFetcher_a1e46ec20437b5f746cd7b0afa97a2724}{start} (\hyperlink{classndn_1_1Face}{ndn\+::\+Face} \&face, \hyperlink{classndn_1_1nfd_1_1Controller}{Controller} \&controller, const std\+::string \&input, bool allow\+Create, const Success\+Callback \&on\+Succeed, const Failure\+Callback \&on\+Fail)
+\begin{DoxyCompactList}\small\item\em obtain \hyperlink{classFaceId}{Face\+Id} from input \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 57 of file nfdc.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfdc\+::\+Nfdc\+::\+Face\+Id\+Fetcher@{nfdc\+::\+Nfdc\+::\+Face\+Id\+Fetcher}!start@{start}}
+\index{start@{start}!nfdc\+::\+Nfdc\+::\+Face\+Id\+Fetcher@{nfdc\+::\+Nfdc\+::\+Face\+Id\+Fetcher}}
+\subsubsection[{\texorpdfstring{start(ndn\+::\+Face \&face, Controller \&controller, const std\+::string \&input, bool allow\+Create, const Success\+Callback \&on\+Succeed, const Failure\+Callback \&on\+Fail)}{start(ndn::Face \&face, Controller \&controller, const std::string \&input, bool allowCreate, const SuccessCallback \&onSucceed, const FailureCallback \&onFail)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::\+Face\+Id\+Fetcher\+::start (
+\begin{DoxyParamCaption}
+\item[{{\bf ndn\+::\+Face} \&}]{face, }
+\item[{{\bf Controller} \&}]{controller, }
+\item[{const std\+::string \&}]{input, }
+\item[{bool}]{allow\+Create, }
+\item[{const Success\+Callback \&}]{on\+Succeed, }
+\item[{const Failure\+Callback \&}]{on\+Fail}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classnfdc_1_1Nfdc_1_1FaceIdFetcher_a1e46ec20437b5f746cd7b0afa97a2724}{}\label{classnfdc_1_1Nfdc_1_1FaceIdFetcher_a1e46ec20437b5f746cd7b0afa97a2724}
+
+
+obtain \hyperlink{classFaceId}{Face\+Id} from input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & Reference to the Face that should be used to fetch data \\
+\hline
+{\em controller} & Reference to the controller that should be used to sign the Interest \\
+\hline
+{\em input} & User input, either \hyperlink{classFaceId}{Face\+Id} or Face\+Uri \\
+\hline
+{\em allow\+Create} & Whether creating face is allowed \\
+\hline
+{\em on\+Succeed} & Callback to be fired when face\+Id is obtained \\
+\hline
+{\em on\+Fail} & Callback to be fired when an error occurs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file nfdc.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/nfdc.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/nfdc.\+cpp\end{DoxyCompactItemize}

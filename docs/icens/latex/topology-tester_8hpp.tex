@@ -1,0 +1,48 @@
+\hypertarget{topology-tester_8hpp}{}\section{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/fw/topology-\/tester.hpp File Reference}
+\label{topology-tester_8hpp}\index{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/fw/topology-\/tester.\+hpp@{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/fw/topology-\/tester.\+hpp}}
+
+
+allows testing forwarding in a network topology  
+
+
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\\*
+{\ttfamily \#include $<$ndn-\/cxx/util/dummy-\/client-\/face.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}fw/strategy.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tests/test-\/common.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../face/dummy-\/face.\+hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyLinkBase}{nfd\+::fw\+::tests\+::\+Topology\+Link\+Base}
+\begin{DoxyCompactList}\small\item\em represents a network or local-\/app link \end{DoxyCompactList}\item 
+class \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyLink}{nfd\+::fw\+::tests\+::\+Topology\+Link}
+\begin{DoxyCompactList}\small\item\em represents a network link in the topology which connects two or more nodes \end{DoxyCompactList}\item 
+class \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyAppLink}{nfd\+::fw\+::tests\+::\+Topology\+App\+Link}
+\begin{DoxyCompactList}\small\item\em represents a link to a local application \end{DoxyCompactList}\item 
+class \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester}{nfd\+::fw\+::tests\+::\+Topology\+Tester}
+\begin{DoxyCompactList}\small\item\em builds a topology for forwarding tests \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacenfd}{nfd}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef size\+\_\+t \hyperlink{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{nfd\+::fw\+::tests\+::\+Topology\+Node}\hypertarget{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{}\label{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}
+
+\begin{DoxyCompactList}\small\item\em identifies a node (forwarder) in the topology \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+allows testing forwarding in a network topology 
+
+Copyright (c) 2014-\/2015, Regents of the University of California, Arizona Board of Regents, Colorado State University, University Pierre \& Marie Curie, Sorbonne University, Washington University in St. Louis, Beijing Institute of Technology, The University of Memphis.
+
+This file is part of N\+FD (Named Data Networking Forwarding Daemon). See A\+U\+T\+H\+O\+R\+S.\+md for complete list of N\+FD authors and contributors.
+
+N\+FD is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+N\+FD is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
+
+You should have received a copy of the G\+NU General Public License along with N\+FD, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 

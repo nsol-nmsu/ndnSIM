@@ -1,0 +1,134 @@
+\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache}{}\section{ns3\+:\+:ndn\+:\+:cs\+:\+:Nocache Class Reference}
+\label{classns3_1_1ndn_1_1cs_1_1Nocache}\index{ns3\+::ndn\+::cs\+::\+Nocache@{ns3\+::ndn\+::cs\+::\+Nocache}}
+
+
+Implementation of \hyperlink{classns3_1_1ndn_1_1ContentStore}{Content\+Store} that completely disables caching.  
+
+
+
+
+{\ttfamily \#include $<$content-\/store-\/nocache.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:cs\+:\+:Nocache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1cs_1_1Nocache}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_aa29885be8dcb7e8b30e9585d0f98d3ef}{Nocache} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_aa29885be8dcb7e8b30e9585d0f98d3ef}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_aa29885be8dcb7e8b30e9585d0f98d3ef}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_a2d19d82499b4d0c845da38e5277d9ec3}{$\sim$\+Nocache} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_a2d19d82499b4d0c845da38e5277d9ec3}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_a2d19d82499b4d0c845da38e5277d9ec3}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ Data $>$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_ac2e00baf27c718bd2b766c0e320c5b75}{Lookup} (shared\+\_\+ptr$<$ const Interest $>$ interest)
+\begin{DoxyCompactList}\small\item\em Find corresponding CS entry for the given interest. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_a45ae8dc7e30b96df3b565e69e318e0ab}{Add} (shared\+\_\+ptr$<$ const Data $>$ data)
+\begin{DoxyCompactList}\small\item\em Add a new content to the content store. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_ab300654a62360bc05c3c65228bd76d1c}{Print} (std\+::ostream \&os) const\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_ab300654a62360bc05c3c65228bd76d1c}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_ab300654a62360bc05c3c65228bd76d1c}
+
+\begin{DoxyCompactList}\small\item\em Print out content store entries. \end{DoxyCompactList}\item 
+virtual uint32\+\_\+t \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_a60e7d12b76a43236a737887b9180c8c5}{Get\+Size} () const\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_a60e7d12b76a43236a737887b9180c8c5}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_a60e7d12b76a43236a737887b9180c8c5}
+
+\begin{DoxyCompactList}\small\item\em Get number of entries in content store. \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{cs\+::\+Entry} $>$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_a6a03e310cd7ededaac72ab7a9a8d41ec}{Begin} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_a6a03e310cd7ededaac72ab7a9a8d41ec}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_a6a03e310cd7ededaac72ab7a9a8d41ec}
+
+\begin{DoxyCompactList}\small\item\em Return first element of content store (no order guaranteed) \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{cs\+::\+Entry} $>$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_acb78839d2fafd7ababe04e153718cf94}{End} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_acb78839d2fafd7ababe04e153718cf94}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_acb78839d2fafd7ababe04e153718cf94}
+
+\begin{DoxyCompactList}\small\item\em Return item next after last (no order guaranteed) \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{cs\+::\+Entry} $>$ {\bfseries Next} (Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{cs\+::\+Entry} $>$)\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_ab1a30fb4ff2df5653380a81f9434618c}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_ab1a30fb4ff2df5653380a81f9434618c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_a0d3dc77f62db3610f57152a594288c9e}{Get\+Type\+Id} ()
+\begin{DoxyCompactList}\small\item\em Interface ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of \hyperlink{classns3_1_1ndn_1_1ContentStore}{Content\+Store} that completely disables caching. 
+
+Definition at line 35 of file content-\/store-\/nocache.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::cs\+::\+Nocache@{ns3\+::ndn\+::cs\+::\+Nocache}!Add@{Add}}
+\index{Add@{Add}!ns3\+::ndn\+::cs\+::\+Nocache@{ns3\+::ndn\+::cs\+::\+Nocache}}
+\subsubsection[{\texorpdfstring{Add(shared\+\_\+ptr$<$ const Data $>$ data)}{Add(shared\_ptr< const Data > data)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ns3\+::ndn\+::cs\+::\+Nocache\+::\+Add (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_a45ae8dc7e30b96df3b565e69e318e0ab}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_a45ae8dc7e30b96df3b565e69e318e0ab}
+
+
+Add a new content to the content store. 
+
+\begin{DoxyReturn}{Returns}
+true if an existing entry was updated, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1ndn_1_1ContentStore_a5b89794bb1a8dca3d22e7d02182150d3}{ns3\+::ndn\+::\+Content\+Store}.
+
+
+
+Definition at line 60 of file content-\/store-\/nocache.\+cpp.
+
+\index{ns3\+::ndn\+::cs\+::\+Nocache@{ns3\+::ndn\+::cs\+::\+Nocache}!Get\+Type\+Id@{Get\+Type\+Id}}
+\index{Get\+Type\+Id@{Get\+Type\+Id}!ns3\+::ndn\+::cs\+::\+Nocache@{ns3\+::ndn\+::cs\+::\+Nocache}}
+\subsubsection[{\texorpdfstring{Get\+Type\+Id()}{GetTypeId()}}]{\setlength{\rightskip}{0pt plus 5cm}Type\+Id ns3\+::ndn\+::cs\+::\+Nocache\+::\+Get\+Type\+Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_a0d3dc77f62db3610f57152a594288c9e}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_a0d3dc77f62db3610f57152a594288c9e}
+
+
+Interface ID. 
+
+\begin{DoxyReturn}{Returns}
+interface ID 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file content-\/store-\/nocache.\+cpp.
+
+\index{ns3\+::ndn\+::cs\+::\+Nocache@{ns3\+::ndn\+::cs\+::\+Nocache}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!ns3\+::ndn\+::cs\+::\+Nocache@{ns3\+::ndn\+::cs\+::\+Nocache}}
+\subsubsection[{\texorpdfstring{Lookup(shared\+\_\+ptr$<$ const Interest $>$ interest)}{Lookup(shared\_ptr< const Interest > interest)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ Data $>$ ns3\+::ndn\+::cs\+::\+Nocache\+::\+Lookup (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Interest $>$}]{interest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1cs_1_1Nocache_ac2e00baf27c718bd2b766c0e320c5b75}{}\label{classns3_1_1ndn_1_1cs_1_1Nocache_ac2e00baf27c718bd2b766c0e320c5b75}
+
+
+Find corresponding CS entry for the given interest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & Interest for which matching content store entry will be searched\\
+\hline
+\end{DoxyParams}
+If an entry is found, it is promoted to the top of most recent used entries index, \begin{DoxySeeAlso}{See also}
+m\+\_\+content\+Store 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classns3_1_1ndn_1_1ContentStore_a1779f7f6214adcbe0213d85a48d8e94a}{ns3\+::ndn\+::\+Content\+Store}.
+
+
+
+Definition at line 53 of file content-\/store-\/nocache.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/cs/content-\/store-\/nocache.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/cs/content-\/store-\/nocache.\+cpp\end{DoxyCompactItemize}

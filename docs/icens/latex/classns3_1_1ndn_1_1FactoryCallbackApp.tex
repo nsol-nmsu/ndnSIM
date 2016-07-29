@@ -1,0 +1,70 @@
+\hypertarget{classns3_1_1ndn_1_1FactoryCallbackApp}{}\section{ns3\+:\+:ndn\+:\+:Factory\+Callback\+App Class Reference}
+\label{classns3_1_1ndn_1_1FactoryCallbackApp}\index{ns3\+::ndn\+::\+Factory\+Callback\+App@{ns3\+::ndn\+::\+Factory\+Callback\+App}}
+
+
+An application that can be created using the supplied callback.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/app-\/helper.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Factory\+Callback\+App\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classns3_1_1ndn_1_1FactoryCallbackApp}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ shared\+\_\+ptr$<$ void $>$)$>$ {\bfseries Factory\+Callback}\hypertarget{classns3_1_1ndn_1_1FactoryCallbackApp_a320aa07f7095f58ffa413ab0d74aeeb2}{}\label{classns3_1_1ndn_1_1FactoryCallbackApp_a320aa07f7095f58ffa413ab0d74aeeb2}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Factory\+Callback\+App} (const Factory\+Callback \&factory)\hypertarget{classns3_1_1ndn_1_1FactoryCallbackApp_aff0950e210327850c69a4b5f378e3aa4}{}\label{classns3_1_1ndn_1_1FactoryCallbackApp_aff0950e210327850c69a4b5f378e3aa4}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Application\+Container {\bfseries Install} (Ptr$<$ Node $>$ node, const Factory\+Callback \&factory)\hypertarget{classns3_1_1ndn_1_1FactoryCallbackApp_ab5bd03ceabf48911720bf783a8183fe8}{}\label{classns3_1_1ndn_1_1FactoryCallbackApp_ab5bd03ceabf48911720bf783a8183fe8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Start\+Application} ()\hypertarget{classns3_1_1ndn_1_1FactoryCallbackApp_a091d8fef2471c1d02325e8f9f202e4e5}{}\label{classns3_1_1ndn_1_1FactoryCallbackApp_a091d8fef2471c1d02325e8f9f202e4e5}
+
+\item 
+virtual void {\bfseries Stop\+Application} ()\hypertarget{classns3_1_1ndn_1_1FactoryCallbackApp_a6809c7e6b9b74d7909dd663369b0e6f9}{}\label{classns3_1_1ndn_1_1FactoryCallbackApp_a6809c7e6b9b74d7909dd663369b0e6f9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An application that can be created using the supplied callback. 
+
+Example\+: \begin{DoxyVerb}class SomeApp
+{
+public:
+  SomeApp(size_t initParameter);
+  ...
+};
+
+FactoryCallbackApp::Install(node, [] () -> shared_ptr<void> {
+    return make_shared<SomeApp>(42);
+  })
+  .Start(Seconds(1.01));\end{DoxyVerb}
+ 
+
+Definition at line 125 of file ndn-\/app-\/helper.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/app-\/helper.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/app-\/helper.\+cpp\end{DoxyCompactItemize}

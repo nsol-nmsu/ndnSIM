@@ -1,0 +1,298 @@
+\hypertarget{classns3_1_1ndn_1_1L3RateTracer}{}\section{ns3\+:\+:ndn\+:\+:L3\+Rate\+Tracer Class Reference}
+\label{classns3_1_1ndn_1_1L3RateTracer}\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+
+
+N\+DN network-\/layer rate tracer.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/l3-\/rate-\/tracer.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:L3\+Rate\+Tracer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1L3RateTracer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1L3RateTracer_a15512a675574e65f91e339e158b226fa}{L3\+Rate\+Tracer} (shared\+\_\+ptr$<$ std\+::ostream $>$ os, Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Trace constructor that attaches to the node using node pointer. \end{DoxyCompactList}\item 
+\hyperlink{classns3_1_1ndn_1_1L3RateTracer_aafa9b98bf7a999496276d0628340640b}{L3\+Rate\+Tracer} (shared\+\_\+ptr$<$ std\+::ostream $>$ os, const std\+::string \&node)
+\begin{DoxyCompactList}\small\item\em Trace constructor that attaches to the node using node name. \end{DoxyCompactList}\item 
+virtual \hyperlink{classns3_1_1ndn_1_1L3RateTracer_afa96c8d2b0d282dc3b6b4b43bae23b8f}{$\sim$\+L3\+Rate\+Tracer} ()\hypertarget{classns3_1_1ndn_1_1L3RateTracer_afa96c8d2b0d282dc3b6b4b43bae23b8f}{}\label{classns3_1_1ndn_1_1L3RateTracer_afa96c8d2b0d282dc3b6b4b43bae23b8f}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1L3RateTracer_ae22420a70f3a31d917dc8101dbed8434}{Print\+Header} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Print head of the trace (e.\+g., for post-\/processing) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1L3RateTracer_afd92b9548281a6bf35231cf36d82d106}{Print} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Print current trace data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classns3_1_1ndn_1_1L3RateTracer_a68d3e442b9589a86b8fdfbb48dd533a2}{Install\+All} (const std\+::string \&file, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on all simulation nodes. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1L3RateTracer_a0d067ab25028a465238b8d9508ce8b8d}{Install} (const Node\+Container \&nodes, const std\+::string \&file, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on the selected simulation nodes. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1L3RateTracer_a56d4c314dc9495416c4cb3aed54d97a7}{Install} (Ptr$<$ Node $>$ node, const std\+::string \&file, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on a specific simulation node. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1L3RateTracer_a099a6429d34d063ba8114b00b15f12ec}{Destroy} ()
+\begin{DoxyCompactList}\small\item\em Explicit request to remove all statically created tracers. \end{DoxyCompactList}\item 
+static Ptr$<$ \hyperlink{classns3_1_1ndn_1_1L3RateTracer}{L3\+Rate\+Tracer} $>$ \hyperlink{classns3_1_1ndn_1_1L3RateTracer_a1c3e66e358fa003f0bf8fea72eb68a36}{Install} (Ptr$<$ Node $>$ node, shared\+\_\+ptr$<$ std\+::ostream $>$ output\+Stream, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on a specific simulation node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Out\+Interests} (const Interest \&interest, const \hyperlink{classnfd_1_1Face}{Face} \&face)\hypertarget{classns3_1_1ndn_1_1L3RateTracer_ae0bfac08fada2b893add57f81503f62f}{}\label{classns3_1_1ndn_1_1L3RateTracer_ae0bfac08fada2b893add57f81503f62f}
+
+\item 
+virtual void {\bfseries In\+Interests} (const Interest \&interest, const \hyperlink{classnfd_1_1Face}{Face} \&face)\hypertarget{classns3_1_1ndn_1_1L3RateTracer_ac06ee7ed68f8cfecd87cd7ebd784ab52}{}\label{classns3_1_1ndn_1_1L3RateTracer_ac06ee7ed68f8cfecd87cd7ebd784ab52}
+
+\item 
+virtual void {\bfseries Out\+Data} (const Data \&data, const \hyperlink{classnfd_1_1Face}{Face} \&face)\hypertarget{classns3_1_1ndn_1_1L3RateTracer_a6a09a07bdd40135cbc5316259d9feec1}{}\label{classns3_1_1ndn_1_1L3RateTracer_a6a09a07bdd40135cbc5316259d9feec1}
+
+\item 
+virtual void {\bfseries In\+Data} (const Data \&data, const \hyperlink{classnfd_1_1Face}{Face} \&face)\hypertarget{classns3_1_1ndn_1_1L3RateTracer_a696765c600c36390e3046bc4a8fa2c28}{}\label{classns3_1_1ndn_1_1L3RateTracer_a696765c600c36390e3046bc4a8fa2c28}
+
+\item 
+virtual void {\bfseries Satisfied\+Interests} (const \hyperlink{classnfd_1_1pit_1_1Entry}{nfd\+::pit\+::\+Entry} \&, const \hyperlink{classnfd_1_1Face}{Face} \&, const Data \&)\hypertarget{classns3_1_1ndn_1_1L3RateTracer_ae3dc0bb824bf6ffaee0ad8826bb4c578}{}\label{classns3_1_1ndn_1_1L3RateTracer_ae3dc0bb824bf6ffaee0ad8826bb4c578}
+
+\item 
+virtual void {\bfseries Timed\+Out\+Interests} (const \hyperlink{classnfd_1_1pit_1_1Entry}{nfd\+::pit\+::\+Entry} \&)\hypertarget{classns3_1_1ndn_1_1L3RateTracer_adf9d7e5bb63d799ed3e867b1153045b5}{}\label{classns3_1_1ndn_1_1L3RateTracer_adf9d7e5bb63d799ed3e867b1153045b5}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+N\+DN network-\/layer rate tracer. 
+
+Definition at line 42 of file ndn-\/l3-\/rate-\/tracer.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!L3\+Rate\+Tracer@{L3\+Rate\+Tracer}}
+\index{L3\+Rate\+Tracer@{L3\+Rate\+Tracer}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{L3\+Rate\+Tracer(shared\+\_\+ptr$<$ std\+::ostream $>$ os, Ptr$<$ Node $>$ node)}{L3RateTracer(shared\_ptr< std::ostream > os, Ptr< Node > node)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+L3\+Rate\+Tracer (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{os, }
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_a15512a675574e65f91e339e158b226fa}{}\label{classns3_1_1ndn_1_1L3RateTracer_a15512a675574e65f91e339e158b226fa}
+
+
+Trace constructor that attaches to the node using node pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to the output stream \\
+\hline
+{\em node} & pointer to the node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 168 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!L3\+Rate\+Tracer@{L3\+Rate\+Tracer}}
+\index{L3\+Rate\+Tracer@{L3\+Rate\+Tracer}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{L3\+Rate\+Tracer(shared\+\_\+ptr$<$ std\+::ostream $>$ os, const std\+::string \&node)}{L3RateTracer(shared\_ptr< std::ostream > os, const std::string \&node)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+L3\+Rate\+Tracer (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{os, }
+\item[{const std\+::string \&}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_aafa9b98bf7a999496276d0628340640b}{}\label{classns3_1_1ndn_1_1L3RateTracer_aafa9b98bf7a999496276d0628340640b}
+
+
+Trace constructor that attaches to the node using node name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to the output stream \\
+\hline
+{\em node\+Name} & name of the node registered using Names\+::\+Add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 175 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Destroy()}{Destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_a099a6429d34d063ba8114b00b15f12ec}{}\label{classns3_1_1ndn_1_1L3RateTracer_a099a6429d34d063ba8114b00b15f12ec}
+
+
+Explicit request to remove all statically created tracers. 
+
+This method can be helpful if simulation scenario contains several independent run, or if it is desired to do a postprocessing of the resulting data 
+
+Definition at line 43 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(const Node\+Container \&nodes, const std\+::string \&file, Time averaging\+Period=\+Seconds(0.\+5))}{Install(const NodeContainer \&nodes, const std::string \&file, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{const Node\+Container \&}]{nodes, }
+\item[{const std\+::string \&}]{file, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_a0d067ab25028a465238b8d9508ce8b8d}{}\label{classns3_1_1ndn_1_1L3RateTracer_a0d067ab25028a465238b8d9508ce8b8d}
+
+
+Helper method to install tracers on the selected simulation nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 83 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node, const std\+::string \&file, Time averaging\+Period=\+Seconds(0.\+5))}{Install(Ptr< Node > node, const std::string \&file, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const std\+::string \&}]{file, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_a56d4c314dc9495416c4cb3aed54d97a7}{}\label{classns3_1_1ndn_1_1L3RateTracer_a56d4c314dc9495416c4cb3aed54d97a7}
+
+
+Helper method to install tracers on a specific simulation node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 121 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node, shared\+\_\+ptr$<$ std\+::ostream $>$ output\+Stream, Time averaging\+Period=\+Seconds(0.\+5))}{Install(Ptr< Node > node, shared\_ptr< std::ostream > outputStream, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ {\bf L3\+Rate\+Tracer} $>$ ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{shared\+\_\+ptr$<$ std\+::ostream $>$}]{output\+Stream, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_a1c3e66e358fa003f0bf8fea72eb68a36}{}\label{classns3_1_1ndn_1_1L3RateTracer_a1c3e66e358fa003f0bf8fea72eb68a36}
+
+
+Helper method to install tracers on a specific simulation node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Nodes on which to install tracer \\
+\hline
+{\em output\+Stream} & Smart pointer to a stream \\
+\hline
+{\em averaging\+Period} & How often data will be written into the trace file (default, every half second)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a tuple of reference to output stream and list of tracers. !!! Attention !!! This tuple needs to be preserved for the lifetime of simulation, otherwise S\+E\+G\+F\+A\+U\+L\+Ts are inevitable 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!Install\+All@{Install\+All}}
+\index{Install\+All@{Install\+All}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Install\+All(const std\+::string \&file, Time averaging\+Period=\+Seconds(0.\+5))}{InstallAll(const std::string \&file, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+Install\+All (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_a68d3e442b9589a86b8fdfbb48dd533a2}{}\label{classns3_1_1ndn_1_1L3RateTracer_a68d3e442b9589a86b8fdfbb48dd533a2}
+
+
+Helper method to install tracers on all simulation nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File to which traces will be written. If filename is -\/, then std\+::out is used \\
+\hline
+{\em averaging\+Period} & Defines averaging period for the rate calculation, as well as how often data will be written into the trace file (default, every half second) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!Print@{Print}}
+\index{Print@{Print}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Print(std\+::ostream \&os) const}{Print(std::ostream \&os) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+Print (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_afd92b9548281a6bf35231cf36d82d106}{}\label{classns3_1_1ndn_1_1L3RateTracer_afd92b9548281a6bf35231cf36d82d106}
+
+
+Print current trace data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to output stream \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1ndn_1_1L3Tracer_a1302456f491afcb016b8b0c7121bdaf0}{ns3\+::ndn\+::\+L3\+Tracer}.
+
+
+
+Definition at line 259 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+\index{ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}!Print\+Header@{Print\+Header}}
+\index{Print\+Header@{Print\+Header}!ns3\+::ndn\+::\+L3\+Rate\+Tracer@{ns3\+::ndn\+::\+L3\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Print\+Header(std\+::ostream \&os) const}{PrintHeader(std::ostream \&os) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+L3\+Rate\+Tracer\+::\+Print\+Header (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1L3RateTracer_ae22420a70f3a31d917dc8101dbed8434}{}\label{classns3_1_1ndn_1_1L3RateTracer_ae22420a70f3a31d917dc8101dbed8434}
+
+
+Print head of the trace (e.\+g., for post-\/processing) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & reference to output stream \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1ndn_1_1L3Tracer_a899a814836ce179c610c469a7f3889e4}{ns3\+::ndn\+::\+L3\+Tracer}.
+
+
+
+Definition at line 205 of file ndn-\/l3-\/rate-\/tracer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/ndn-\/l3-\/rate-\/tracer.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/ndn-\/l3-\/rate-\/tracer.\+cpp\end{DoxyCompactItemize}

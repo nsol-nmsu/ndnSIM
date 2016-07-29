@@ -1,0 +1,565 @@
+\hypertarget{classndn_1_1Interest}{}\section{ndn\+:\+:Interest Class Reference}
+\label{classndn_1_1Interest}\index{ndn\+::\+Interest@{ndn\+::\+Interest}}
+
+
+represents an \hyperlink{classndn_1_1Interest}{Interest} packet  
+
+
+
+
+{\ttfamily \#include $<$interest.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Interest\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1Interest}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Interest_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Interest_a39e43c111280351431a24c70453b206e}{Interest} ()
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1Interest}{Interest} with an empty name ({\ttfamily ndn\+:/}) \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Interest_acefeb96bcb88d27a13b95336346174a2}{Interest} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1Interest}{Interest} with the given name. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Interest_adf4757755b9d52f4f7ec06998cb9d23b}{Interest} (const \hyperlink{classndn_1_1Name}{Name} \&name, const time\+::milliseconds \&interest\+Lifetime)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1Interest}{Interest} with the given name and interest lifetime. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Interest_a264f6a6b64e7bd0d1c4f95c40b36cd00}{Interest} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Create from wire encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1Interest_afafc63fc299434ebf1261b306d439f8d}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1Interest_afafc63fc299434ebf1261b306d439f8d}{}\label{classndn_1_1Interest_afafc63fc299434ebf1261b306d439f8d}
+
+\begin{DoxyCompactList}\small\item\em Fast encoding or block size estimation. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Interest_ae68f6c84a5465564397940998f6f00fa}{wire\+Encode} () const\hypertarget{classndn_1_1Interest_ae68f6c84a5465564397940998f6f00fa}{}\label{classndn_1_1Interest_ae68f6c84a5465564397940998f6f00fa}
+
+\begin{DoxyCompactList}\small\item\em Encode to a wire format. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Interest_a112d1d1be76710e0a597a867546be6eb}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1Interest_a112d1d1be76710e0a597a867546be6eb}{}\label{classndn_1_1Interest_a112d1d1be76710e0a597a867546be6eb}
+
+\begin{DoxyCompactList}\small\item\em Decode from the wire format. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Interest_a5566023708f1b89117b6f5496893cd41}{has\+Wire} () const\hypertarget{classndn_1_1Interest_a5566023708f1b89117b6f5496893cd41}{}\label{classndn_1_1Interest_a5566023708f1b89117b6f5496893cd41}
+
+\begin{DoxyCompactList}\small\item\em Check if already has wire. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1Interest_adabcd4c47526eb0b78325d2d5c2e459a}{to\+Uri} () const
+\begin{DoxyCompactList}\small\item\em Encode the name according to the N\+DN U\+RI Scheme. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Interest_a689d27b71b34df22bf0f5ac24daaa619}{has\+Link} () const
+\begin{DoxyCompactList}\small\item\em Check whether the \hyperlink{classndn_1_1Interest}{Interest} contains a \hyperlink{classndn_1_1Link}{Link} object. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Link}{Link} \hyperlink{classndn_1_1Interest_a1b2aad6339c0f8e2eb091ce573b1687b}{get\+Link} () const
+\begin{DoxyCompactList}\small\item\em Get the link object for this interest. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Interest_a586136692ded13f78968cea938f9e550}{set\+Link} (const \hyperlink{classndn_1_1Block}{Block} \&link)
+\begin{DoxyCompactList}\small\item\em Set the link object for this interest. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Interest_a7b14dbfd6eec8ed52160346b0f73e404}{unset\+Link} ()\hypertarget{classndn_1_1Interest_a7b14dbfd6eec8ed52160346b0f73e404}{}\label{classndn_1_1Interest_a7b14dbfd6eec8ed52160346b0f73e404}
+
+\begin{DoxyCompactList}\small\item\em Reset the wire format of the given interest and the contained link. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Interest_afc729a7b59047847332db20522fc2db4}{has\+Selected\+Delegation} () const
+\begin{DoxyCompactList}\small\item\em Check whether the \hyperlink{classndn_1_1Interest}{Interest} includes a selected delegation. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1Interest_a0dc3605881e3f5076b91e4c8dd7cffe3}{get\+Selected\+Delegation} () const
+\begin{DoxyCompactList}\small\item\em Get the name of the selected delegation. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Interest_af9771adace770d69b488bbfb0cb36fc1}{set\+Selected\+Delegation} (const \hyperlink{classndn_1_1Name}{Name} \&delegation\+Name)
+\begin{DoxyCompactList}\small\item\em Set the selected delegation. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Interest_a729214bca49b39d6422848fe35591d8d}{set\+Selected\+Delegation} (size\+\_\+t delegation\+Index)
+\begin{DoxyCompactList}\small\item\em Set the selected delegation. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Interest_a4633dfece111f38ad8cd4cf257e88acf}{unset\+Selected\+Delegation} ()\hypertarget{classndn_1_1Interest_a4633dfece111f38ad8cd4cf257e88acf}{}\label{classndn_1_1Interest_a4633dfece111f38ad8cd4cf257e88acf}
+
+\begin{DoxyCompactList}\small\item\em Unset the selected delegation. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Interest_a38a856669037da1bf22d17469ed818d4}{matches\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name) const
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classndn_1_1Interest}{Interest}, including selectors, matches the given {\ttfamily name}. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Interest_a625e8ed587c87bdb236b15395fdd3067}{matches\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data) const
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classndn_1_1Interest}{Interest} can be satisfied by {\ttfamily data}. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Name} () const\hypertarget{classndn_1_1Interest_a8cb4cbd5a1b32cdfc7c88c43e6cabc27}{}\label{classndn_1_1Interest_a8cb4cbd5a1b32cdfc7c88c43e6cabc27}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name)\hypertarget{classndn_1_1Interest_a2468c89ab122b6e3a069dbecf6a49b28}{}\label{classndn_1_1Interest_a2468c89ab122b6e3a069dbecf6a49b28}
+
+\item 
+const time\+::milliseconds \& {\bfseries get\+Interest\+Lifetime} () const\hypertarget{classndn_1_1Interest_a3fca4a33fa4b01db27a630f9bfe7123e}{}\label{classndn_1_1Interest_a3fca4a33fa4b01db27a630f9bfe7123e}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Interest\+Lifetime} (const time\+::milliseconds \&interest\+Lifetime)\hypertarget{classndn_1_1Interest_a8051dba7b3eccf191a5f06bf878346d5}{}\label{classndn_1_1Interest_a8051dba7b3eccf191a5f06bf878346d5}
+
+\item 
+bool \hyperlink{classndn_1_1Interest_a7f18fe59175c1bcceaea17cd3719fa0d}{has\+Nonce} () const\hypertarget{classndn_1_1Interest_a7f18fe59175c1bcceaea17cd3719fa0d}{}\label{classndn_1_1Interest_a7f18fe59175c1bcceaea17cd3719fa0d}
+
+\begin{DoxyCompactList}\small\item\em Check if Nonce set. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Interest_a13157c8db3043c4c664fc2fe64dd0bcf}{has\+Payload} () const\hypertarget{classndn_1_1Interest_a13157c8db3043c4c664fc2fe64dd0bcf}{}\label{classndn_1_1Interest_a13157c8db3043c4c664fc2fe64dd0bcf}
+
+\begin{DoxyCompactList}\small\item\em Check if Payload set. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{classndn_1_1Interest_a22d118791490792b542bf2c19923aca6}{get\+Nonce} () const
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classndn_1_1Interest}{Interest}\textquotesingle{}s nonce. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& \hyperlink{classndn_1_1Interest_aac96fe2d1fe38a936d8b49e6cc722ee2}{set\+Nonce} (uint32\+\_\+t nonce)
+\begin{DoxyCompactList}\small\item\em Set \hyperlink{classndn_1_1Interest}{Interest}\textquotesingle{}s nonce. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Interest_a9ed4c9006bec5d9c89a7154dca362f9b}{refresh\+Nonce} ()
+\begin{DoxyCompactList}\small\item\em Refresh nonce. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& \hyperlink{classndn_1_1Interest_a796b182a768e28162fbe3dec8dfe51b0}{set\+Subscription} (const uint32\+\_\+t subsc)\hypertarget{classndn_1_1Interest_a796b182a768e28162fbe3dec8dfe51b0}{}\label{classndn_1_1Interest_a796b182a768e28162fbe3dec8dfe51b0}
+
+\begin{DoxyCompactList}\small\item\em Set value of the subscription field. \end{DoxyCompactList}\item 
+const uint32\+\_\+t \hyperlink{classndn_1_1Interest_a9ac77914075ea847df64431fe87e1017}{get\+Subscription} () const\hypertarget{classndn_1_1Interest_a9ac77914075ea847df64431fe87e1017}{}\label{classndn_1_1Interest_a9ac77914075ea847df64431fe87e1017}
+
+\begin{DoxyCompactList}\small\item\em Get value of the subscription field. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& \hyperlink{classndn_1_1Interest_aaf69ead631601d49c5afbd8abe85e209}{set\+Payload} (const uint8\+\_\+t $\ast$payload, size\+\_\+t length)\hypertarget{classndn_1_1Interest_aaf69ead631601d49c5afbd8abe85e209}{}\label{classndn_1_1Interest_aaf69ead631601d49c5afbd8abe85e209}
+
+\begin{DoxyCompactList}\small\item\em Set value of the payload field. \end{DoxyCompactList}\item 
+const uint8\+\_\+t $\ast$ \hyperlink{classndn_1_1Interest_ad32b53fe333a3670ef9a6f81f88b6207}{get\+Payload} () const\hypertarget{classndn_1_1Interest_ad32b53fe333a3670ef9a6f81f88b6207}{}\label{classndn_1_1Interest_ad32b53fe333a3670ef9a6f81f88b6207}
+
+\begin{DoxyCompactList}\small\item\em Get value of the payload field. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1Interest_a51bc693e4e5253703c449076fe57e046}{get\+Payload\+Length} () const\hypertarget{classndn_1_1Interest_a51bc693e4e5253703c449076fe57e046}{}\label{classndn_1_1Interest_a51bc693e4e5253703c449076fe57e046}
+
+\begin{DoxyCompactList}\small\item\em Get the length of the payload field. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{nfd\+::\+Local\+Control\+Header} \& {\bfseries get\+Local\+Control\+Header} ()\hypertarget{classndn_1_1Interest_a4ad0f6e1945c77d1937b8d65b01c47a8}{}\label{classndn_1_1Interest_a4ad0f6e1945c77d1937b8d65b01c47a8}
+
+\item 
+const \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{nfd\+::\+Local\+Control\+Header} \& {\bfseries get\+Local\+Control\+Header} () const\hypertarget{classndn_1_1Interest_a000fc43cef632aea523e85eed595006f}{}\label{classndn_1_1Interest_a000fc43cef632aea523e85eed595006f}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Incoming\+Face\+Id} () const\hypertarget{classndn_1_1Interest_a52cc5152e68693b41e06794483937ff8}{}\label{classndn_1_1Interest_a52cc5152e68693b41e06794483937ff8}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Incoming\+Face\+Id} (uint64\+\_\+t incoming\+Face\+Id)\hypertarget{classndn_1_1Interest_ac2ce42eaca6dd45cbf129d6bfd84daa0}{}\label{classndn_1_1Interest_ac2ce42eaca6dd45cbf129d6bfd84daa0}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Next\+Hop\+Face\+Id} () const\hypertarget{classndn_1_1Interest_a1ca06a42ab6d0b8d467b827dfe5dd3c1}{}\label{classndn_1_1Interest_a1ca06a42ab6d0b8d467b827dfe5dd3c1}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Next\+Hop\+Face\+Id} (uint64\+\_\+t next\+Hop\+Face\+Id)\hypertarget{classndn_1_1Interest_a97a1e1d6eee5c379395ff1c22e1b0928}{}\label{classndn_1_1Interest_a97a1e1d6eee5c379395ff1c22e1b0928}
+
+\item 
+bool \hyperlink{classndn_1_1Interest_a8c25a1cb78f1f74779a17b40ac71283c}{has\+Selectors} () const
+\item 
+const \hyperlink{classndn_1_1Selectors}{Selectors} \& {\bfseries get\+Selectors} () const\hypertarget{classndn_1_1Interest_a43dba7ad9f1e32f97f3d5de187ed9d37}{}\label{classndn_1_1Interest_a43dba7ad9f1e32f97f3d5de187ed9d37}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Selectors} (const \hyperlink{classndn_1_1Selectors}{Selectors} \&selectors)\hypertarget{classndn_1_1Interest_a90680dad52e4213abc1b5eeaa5630fbf}{}\label{classndn_1_1Interest_a90680dad52e4213abc1b5eeaa5630fbf}
+
+\item 
+int {\bfseries get\+Min\+Suffix\+Components} () const\hypertarget{classndn_1_1Interest_a4aef1153948d2cb2da06a3b6991d3d9f}{}\label{classndn_1_1Interest_a4aef1153948d2cb2da06a3b6991d3d9f}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Min\+Suffix\+Components} (int min\+Suffix\+Components)\hypertarget{classndn_1_1Interest_af9328f160622bea8eb5f742d69d1818a}{}\label{classndn_1_1Interest_af9328f160622bea8eb5f742d69d1818a}
+
+\item 
+int {\bfseries get\+Max\+Suffix\+Components} () const\hypertarget{classndn_1_1Interest_ac5e59f5667d7920221ad0c5a43e4a261}{}\label{classndn_1_1Interest_ac5e59f5667d7920221ad0c5a43e4a261}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Max\+Suffix\+Components} (int max\+Suffix\+Components)\hypertarget{classndn_1_1Interest_a8e3ba2699c0625ab9fca83a3e34d67fe}{}\label{classndn_1_1Interest_a8e3ba2699c0625ab9fca83a3e34d67fe}
+
+\item 
+const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \& {\bfseries get\+Publisher\+Public\+Key\+Locator} () const\hypertarget{classndn_1_1Interest_a8eb662331ef3144fa3333fbc8c8c89ff}{}\label{classndn_1_1Interest_a8eb662331ef3144fa3333fbc8c8c89ff}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Publisher\+Public\+Key\+Locator} (const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \&key\+Locator)\hypertarget{classndn_1_1Interest_abfd7de6cc5ee4618e25fee0ddb2bd823}{}\label{classndn_1_1Interest_abfd7de6cc5ee4618e25fee0ddb2bd823}
+
+\item 
+const \hyperlink{classndn_1_1Exclude}{Exclude} \& {\bfseries get\+Exclude} () const\hypertarget{classndn_1_1Interest_aa5c6c9bf1b170a005d30831545cb5984}{}\label{classndn_1_1Interest_aa5c6c9bf1b170a005d30831545cb5984}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Exclude} (const \hyperlink{classndn_1_1Exclude}{Exclude} \&exclude)\hypertarget{classndn_1_1Interest_a6311b9b8eb29a387ce26c095f1526de9}{}\label{classndn_1_1Interest_a6311b9b8eb29a387ce26c095f1526de9}
+
+\item 
+int {\bfseries get\+Child\+Selector} () const\hypertarget{classndn_1_1Interest_aa7552f9f6eb167291c5a64fa8eb9357a}{}\label{classndn_1_1Interest_aa7552f9f6eb167291c5a64fa8eb9357a}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Child\+Selector} (int child\+Selector)\hypertarget{classndn_1_1Interest_ae1c0c807ff5949a6e516b60bc6a45f6c}{}\label{classndn_1_1Interest_ae1c0c807ff5949a6e516b60bc6a45f6c}
+
+\item 
+int {\bfseries get\+Must\+Be\+Fresh} () const\hypertarget{classndn_1_1Interest_ae48c84506997f02a96933c22a32a8bdd}{}\label{classndn_1_1Interest_ae48c84506997f02a96933c22a32a8bdd}
+
+\item 
+\hyperlink{classndn_1_1Interest}{Interest} \& {\bfseries set\+Must\+Be\+Fresh} (bool must\+Be\+Fresh)\hypertarget{classndn_1_1Interest_a0b1c3f11db9c7ca534f775fd846b0f6d}{}\label{classndn_1_1Interest_a0b1c3f11db9c7ca534f775fd846b0f6d}
+
+\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1Interest}{Interest} \&other) const\hypertarget{classndn_1_1Interest_a78d1aeff7c543ee9edd8806cc48f9c2b}{}\label{classndn_1_1Interest_a78d1aeff7c543ee9edd8806cc48f9c2b}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1Interest}{Interest} \&other) const\hypertarget{classndn_1_1Interest_a5312df644606983a5a959e76ee1414a7}{}\label{classndn_1_1Interest_a5312df644606983a5a959e76ee1414a7}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries nfd\+::\+Local\+Control\+Header}\hypertarget{classndn_1_1Interest_af81828ff2bd95549cd703819e64228b2}{}\label{classndn_1_1Interest_af81828ff2bd95549cd703819e64228b2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents an \hyperlink{classndn_1_1Interest}{Interest} packet 
+
+Definition at line 46 of file interest.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!Interest@{Interest}}
+\index{Interest@{Interest}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{Interest()}{Interest()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Interest\+::\+Interest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Interest_a39e43c111280351431a24c70453b206e}{}\label{classndn_1_1Interest_a39e43c111280351431a24c70453b206e}
+
+
+Create a new \hyperlink{classndn_1_1Interest}{Interest} with an empty name ({\ttfamily ndn\+:/}) 
+
+\begin{DoxyWarning}{Warning}
+In certain contexts that use Interest\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Interest}{Interest} must be created using {\ttfamily make\+\_\+shared}. Otherwise, .shared\+\_\+from\+\_\+this() will throw an exception. 
+\end{DoxyWarning}
+
+
+Definition at line 37 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!Interest@{Interest}}
+\index{Interest@{Interest}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{Interest(const Name \&name)}{Interest(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Interest\+::\+Interest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Interest_acefeb96bcb88d27a13b95336346174a2}{}\label{classndn_1_1Interest_acefeb96bcb88d27a13b95336346174a2}
+
+
+Create a new \hyperlink{classndn_1_1Interest}{Interest} with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name for the interest. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This constructor allows implicit conversion from \hyperlink{classndn_1_1Name}{Name}. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+In certain contexts that use Interest\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Interest}{Interest} must be created using {\ttfamily make\+\_\+shared}. Otherwise, .shared\+\_\+from\+\_\+this() will throw an exception. 
+\end{DoxyWarning}
+
+
+Definition at line 45 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!Interest@{Interest}}
+\index{Interest@{Interest}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{Interest(const Name \&name, const time\+::milliseconds \&interest\+Lifetime)}{Interest(const Name \&name, const time::milliseconds \&interestLifetime)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Interest\+::\+Interest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name, }
+\item[{const time\+::milliseconds \&}]{interest\+Lifetime}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Interest_adf4757755b9d52f4f7ec06998cb9d23b}{}\label{classndn_1_1Interest_adf4757755b9d52f4f7ec06998cb9d23b}
+
+
+Create a new \hyperlink{classndn_1_1Interest}{Interest} with the given name and interest lifetime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name for the interest. \\
+\hline
+{\em interest\+Lifetime} & The interest lifetime in time\+::milliseconds, or -\/1 for none. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+In certain contexts that use Interest\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Interest}{Interest} must be created using {\ttfamily make\+\_\+shared}. Otherwise, .shared\+\_\+from\+\_\+this() will throw an exception. 
+\end{DoxyWarning}
+
+
+Definition at line 53 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!Interest@{Interest}}
+\index{Interest@{Interest}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{Interest(const Block \&wire)}{Interest(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Interest\+::\+Interest (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Interest_a264f6a6b64e7bd0d1c4f95c40b36cd00}{}\label{classndn_1_1Interest_a264f6a6b64e7bd0d1c4f95c40b36cd00}
+
+
+Create from wire encoding. 
+
+\begin{DoxyWarning}{Warning}
+In certain contexts that use Interest\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Interest}{Interest} must be created using {\ttfamily make\+\_\+shared}. Otherwise, .shared\+\_\+from\+\_\+this() will throw an exception. 
+\end{DoxyWarning}
+
+
+Definition at line 61 of file interest.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!get\+Link@{get\+Link}}
+\index{get\+Link@{get\+Link}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{get\+Link() const}{getLink() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link} ndn\+::\+Interest\+::get\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Interest_a1b2aad6339c0f8e2eb091ce573b1687b}{}\label{classndn_1_1Interest_a1b2aad6339c0f8e2eb091ce573b1687b}
+
+
+Get the link object for this interest. 
+
+\begin{DoxyReturn}{Returns}
+The link object if there is one contained in this interest 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Interest_1_1Error}{Interest\+::\+Error}} & if there is no link object contained in the interest \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 446 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!get\+Nonce@{get\+Nonce}}
+\index{get\+Nonce@{get\+Nonce}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{get\+Nonce() const}{getNonce() const}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t ndn\+::\+Interest\+::get\+Nonce (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Interest_a22d118791490792b542bf2c19923aca6}{}\label{classndn_1_1Interest_a22d118791490792b542bf2c19923aca6}
+
+
+Get \hyperlink{classndn_1_1Interest}{Interest}\textquotesingle{}s nonce. 
+
+If nonce was not set before this call, it will be automatically assigned to a random value 
+
+Definition at line 67 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!get\+Selected\+Delegation@{get\+Selected\+Delegation}}
+\index{get\+Selected\+Delegation@{get\+Selected\+Delegation}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{get\+Selected\+Delegation() const}{getSelectedDelegation() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::\+Interest\+::get\+Selected\+Delegation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Interest_a0dc3605881e3f5076b91e4c8dd7cffe3}{}\label{classndn_1_1Interest_a0dc3605881e3f5076b91e4c8dd7cffe3}
+
+
+Get the name of the selected delegation. 
+
+\begin{DoxyReturn}{Returns}
+The name of the selected delegation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Interest_1_1Error}{Error}} & Selected\+Delegation is not set. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 485 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!has\+Link@{has\+Link}}
+\index{has\+Link@{has\+Link}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{has\+Link() const}{hasLink() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Interest\+::has\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Interest_a689d27b71b34df22bf0f5ac24daaa619}{}\label{classndn_1_1Interest_a689d27b71b34df22bf0f5ac24daaa619}
+
+
+Check whether the \hyperlink{classndn_1_1Interest}{Interest} contains a \hyperlink{classndn_1_1Link}{Link} object. 
+
+\begin{DoxyReturn}{Returns}
+True if there is a link object, otherwise false 
+\end{DoxyReturn}
+
+
+Definition at line 438 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!has\+Selected\+Delegation@{has\+Selected\+Delegation}}
+\index{has\+Selected\+Delegation@{has\+Selected\+Delegation}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{has\+Selected\+Delegation() const}{hasSelectedDelegation() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Interest\+::has\+Selected\+Delegation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Interest_afc729a7b59047847332db20522fc2db4}{}\label{classndn_1_1Interest_afc729a7b59047847332db20522fc2db4}
+
+
+Check whether the \hyperlink{classndn_1_1Interest}{Interest} includes a selected delegation. 
+
+\begin{DoxyReturn}{Returns}
+True if there is a selected delegation, otherwise false 
+\end{DoxyReturn}
+
+
+Definition at line 475 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!has\+Selectors@{has\+Selectors}}
+\index{has\+Selectors@{has\+Selectors}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{has\+Selectors() const}{hasSelectors() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Interest\+::has\+Selectors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Interest_a8c25a1cb78f1f74779a17b40ac71283c}{}\label{classndn_1_1Interest_a8c25a1cb78f1f74779a17b40ac71283c}
+\begin{DoxyReturn}{Returns}
+true if \hyperlink{classndn_1_1Interest}{Interest} has any selector present 
+\end{DoxyReturn}
+
+
+Definition at line 356 of file interest.\+hpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!matches\+Data@{matches\+Data}}
+\index{matches\+Data@{matches\+Data}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{matches\+Data(const Data \&data) const}{matchesData(const Data \&data) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Interest\+::matches\+Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Interest_a625e8ed587c87bdb236b15395fdd3067}{}\label{classndn_1_1Interest_a625e8ed587c87bdb236b15395fdd3067}
+
+
+Check if \hyperlink{classndn_1_1Interest}{Interest} can be satisfied by {\ttfamily data}. 
+
+This method considers \hyperlink{classndn_1_1Name}{Name}, Min\+Suffix\+Components, Max\+Suffix\+Components, Publisher\+Public\+Key\+Locator, and \hyperlink{classndn_1_1Exclude}{Exclude}. This method does not consider Child\+Selector and Must\+Be\+Fresh.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]recognize implicit digest component \end{DoxyRefDesc}
+
+
+Definition at line 178 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!matches\+Name@{matches\+Name}}
+\index{matches\+Name@{matches\+Name}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{matches\+Name(const Name \&name) const}{matchesName(const Name \&name) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Interest\+::matches\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Interest_a38a856669037da1bf22d17469ed818d4}{}\label{classndn_1_1Interest_a38a856669037da1bf22d17469ed818d4}
+
+
+Check if \hyperlink{classndn_1_1Interest}{Interest}, including selectors, matches the given {\ttfamily name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to be matched. If this is a \hyperlink{classndn_1_1Data}{Data} name, it shall contain the implicit digest component \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 151 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!refresh\+Nonce@{refresh\+Nonce}}
+\index{refresh\+Nonce@{refresh\+Nonce}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{refresh\+Nonce()}{refreshNonce()}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Interest\+::refresh\+Nonce (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Interest_a9ed4c9006bec5d9c89a7154dca362f9b}{}\label{classndn_1_1Interest_a9ed4c9006bec5d9c89a7154dca362f9b}
+
+
+Refresh nonce. 
+
+It\textquotesingle{}s guaranteed that new nonce value differs from the existing one.
+
+If nonce is already set, it will be updated to a different random value. If nonce is not set, this method does nothing. 
+
+Definition at line 137 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!set\+Link@{set\+Link}}
+\index{set\+Link@{set\+Link}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{set\+Link(const Block \&link)}{setLink(const Block \&link)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Interest\+::set\+Link (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{link}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Interest_a586136692ded13f78968cea938f9e550}{}\label{classndn_1_1Interest_a586136692ded13f78968cea938f9e550}
+
+
+Set the link object for this interest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & The link object that will be included in this interest (in wire format) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+!has\+Selected\+Delegation() 
+\end{DoxyPostcond}
+
+
+Definition at line 456 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!set\+Nonce@{set\+Nonce}}
+\index{set\+Nonce@{set\+Nonce}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{set\+Nonce(uint32\+\_\+t nonce)}{setNonce(uint32\_t nonce)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interest} \& ndn\+::\+Interest\+::set\+Nonce (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{nonce}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Interest_aac96fe2d1fe38a936d8b49e6cc722ee2}{}\label{classndn_1_1Interest_aac96fe2d1fe38a936d8b49e6cc722ee2}
+
+
+Set \hyperlink{classndn_1_1Interest}{Interest}\textquotesingle{}s nonce. 
+
+If wire format already exists, this call simply replaces nonce in the existing wire format, without resetting and recreating it. 
+
+Definition at line 81 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!set\+Selected\+Delegation@{set\+Selected\+Delegation}}
+\index{set\+Selected\+Delegation@{set\+Selected\+Delegation}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{set\+Selected\+Delegation(const Name \&delegation\+Name)}{setSelectedDelegation(const Name \&delegationName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Interest\+::set\+Selected\+Delegation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{delegation\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Interest_af9771adace770d69b488bbfb0cb36fc1}{}\label{classndn_1_1Interest_af9771adace770d69b488bbfb0cb36fc1}
+
+
+Set the selected delegation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delegation\+Name} & The name of the selected delegation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Interest_1_1Error}{Error}} & \hyperlink{classndn_1_1Link}{Link} is not set. \\
+\hline
+{\em std\+::invalid\+\_\+argument} & {\ttfamily delegation\+Name} does not exist in \hyperlink{classndn_1_1Link}{Link}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 494 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!set\+Selected\+Delegation@{set\+Selected\+Delegation}}
+\index{set\+Selected\+Delegation@{set\+Selected\+Delegation}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{set\+Selected\+Delegation(size\+\_\+t delegation\+Index)}{setSelectedDelegation(size\_t delegationIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Interest\+::set\+Selected\+Delegation (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{delegation\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Interest_a729214bca49b39d6422848fe35591d8d}{}\label{classndn_1_1Interest_a729214bca49b39d6422848fe35591d8d}
+
+
+Set the selected delegation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delegation} & The index of the selected delegation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Interest_1_1Error}{Error}} & \hyperlink{classndn_1_1Link}{Link} is not set. \\
+\hline
+{\em std\+::out\+\_\+of\+\_\+range} & {\ttfamily delegation\+Index} is out of bound in \hyperlink{classndn_1_1Link}{Link}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 507 of file interest.\+cpp.
+
+\index{ndn\+::\+Interest@{ndn\+::\+Interest}!to\+Uri@{to\+Uri}}
+\index{to\+Uri@{to\+Uri}!ndn\+::\+Interest@{ndn\+::\+Interest}}
+\subsubsection[{\texorpdfstring{to\+Uri() const}{toUri() const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ndn\+::\+Interest\+::to\+Uri (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Interest_adabcd4c47526eb0b78325d2d5c2e459a}{}\label{classndn_1_1Interest_adabcd4c47526eb0b78325d2d5c2e459a}
+
+
+Encode the name according to the N\+DN U\+RI Scheme. 
+
+If there are interest selectors, this method will append \char`\"{}?\char`\"{} and add the selectors as a query string. For example, \char`\"{}/test/name?ndn.\+Child\+Selector=1\char`\"{} 
+
+Definition at line 493 of file interest.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/interest.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/interest.\+cpp\end{DoxyCompactItemize}

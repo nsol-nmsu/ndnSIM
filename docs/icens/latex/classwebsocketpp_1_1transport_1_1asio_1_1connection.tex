@@ -1,0 +1,671 @@
+\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection}{}\section{websocketpp\+:\+:transport\+:\+:asio\+:\+:connection$<$ config $>$ Class Template Reference}
+\label{classwebsocketpp_1_1transport_1_1asio_1_1connection}\index{websocketpp\+::transport\+::asio\+::connection$<$ config $>$@{websocketpp\+::transport\+::asio\+::connection$<$ config $>$}}
+
+
+Boost Asio based connection transport component.  
+
+
+
+
+{\ttfamily \#include $<$connection.\+hpp$>$}
+
+Inheritance diagram for websocketpp\+:\+:transport\+:\+:asio\+:\+:connection$<$ config $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.648208cm]{classwebsocketpp_1_1transport_1_1asio_1_1connection}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection}{connection}$<$ \hyperlink{classconfig}{config} $>$ \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8d3c48e550b2570f65cf84de034068c8}{type}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8d3c48e550b2570f65cf84de034068c8}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8d3c48e550b2570f65cf84de034068c8}
+
+\begin{DoxyCompactList}\small\item\em Type of this connection transport component. \end{DoxyCompactList}\item 
+typedef lib\+::shared\+\_\+ptr$<$ \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8d3c48e550b2570f65cf84de034068c8}{type} $>$ \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa6f25556860a154c4dacb4dac1dce8e4}{ptr}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa6f25556860a154c4dacb4dac1dce8e4}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa6f25556860a154c4dacb4dac1dce8e4}
+
+\begin{DoxyCompactList}\small\item\em Type of a shared pointer to this connection transport component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_a690393b3da13e389cf025f88a3d38f3f}{config\+::socket\+\_\+type\+::socket\+\_\+con\+\_\+type} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a85712056cec173324f790a92a0d94021}{socket\+\_\+con\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a85712056cec173324f790a92a0d94021}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a85712056cec173324f790a92a0d94021}
+
+\begin{DoxyCompactList}\small\item\em Type of the socket connection component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1connection_a2aa605c27a476eba644e062dc5bc4f6d}{socket\+\_\+con\+\_\+type\+::ptr} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2a0647a77eebc0e37111a4d39e6dc726}{socket\+\_\+con\+\_\+ptr}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2a0647a77eebc0e37111a4d39e6dc726}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2a0647a77eebc0e37111a4d39e6dc726}
+
+\begin{DoxyCompactList}\small\item\em Type of a shared pointer to the socket connection component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::alog\+\_\+type} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a457470621386c06374aa3bd189a4715e}{alog\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a457470621386c06374aa3bd189a4715e}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a457470621386c06374aa3bd189a4715e}
+
+\begin{DoxyCompactList}\small\item\em Type of this transport\textquotesingle{}s access logging policy. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::elog\+\_\+type} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1d2ac8c55817ecadf12be51f49578ca5}{elog\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1d2ac8c55817ecadf12be51f49578ca5}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1d2ac8c55817ecadf12be51f49578ca5}
+
+\begin{DoxyCompactList}\small\item\em Type of this transport\textquotesingle{}s error logging policy. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1http_1_1parser_1_1request}{config\+::request\+\_\+type} {\bfseries request\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_abe1fcb3f42039ea64c0fd3bf42b7c026}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_abe1fcb3f42039ea64c0fd3bf42b7c026}
+
+\item 
+typedef request\+\_\+type\+::ptr {\bfseries request\+\_\+ptr}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a3580e74fb64d30d32f9cac3af47e4954}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a3580e74fb64d30d32f9cac3af47e4954}
+
+\item 
+typedef \hyperlink{classwebsocketpp_1_1http_1_1parser_1_1response}{config\+::response\+\_\+type} {\bfseries response\+\_\+type}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a493602c4469c407f3a94edf71ed9705e}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a493602c4469c407f3a94edf71ed9705e}
+
+\item 
+typedef response\+\_\+type\+::ptr {\bfseries response\+\_\+ptr}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2ff953856756493592411577bb4640d2}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2ff953856756493592411577bb4640d2}
+
+\item 
+typedef boost\+::asio\+::io\+\_\+service $\ast$ \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a0276cb30af3a21d73b585d07cf6170a1}{io\+\_\+service\+\_\+ptr}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a0276cb30af3a21d73b585d07cf6170a1}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a0276cb30af3a21d73b585d07cf6170a1}
+
+\begin{DoxyCompactList}\small\item\em Type of a pointer to the A\+S\+IO io\+\_\+service being used. \end{DoxyCompactList}\item 
+typedef lib\+::shared\+\_\+ptr$<$ boost\+::asio\+::io\+\_\+service\+::strand $>$ \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a790e0c6b0cd50d26d7e803d4e274fe90}{strand\+\_\+ptr}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a790e0c6b0cd50d26d7e803d4e274fe90}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a790e0c6b0cd50d26d7e803d4e274fe90}
+
+\begin{DoxyCompactList}\small\item\em Type of a pointer to the A\+S\+IO io\+\_\+service\+::strand being used. \end{DoxyCompactList}\item 
+typedef lib\+::shared\+\_\+ptr$<$ boost\+::asio\+::deadline\+\_\+timer $>$ \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}{timer\+\_\+ptr}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}
+
+\begin{DoxyCompactList}\small\item\em Type of a pointer to the A\+S\+IO timer class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries connection} (bool is\+\_\+server, \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a457470621386c06374aa3bd189a4715e}{alog\+\_\+type} \&alog, \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1d2ac8c55817ecadf12be51f49578ca5}{elog\+\_\+type} \&elog)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_aff25718cc376e7d473d4e46c12e22551}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_aff25718cc376e7d473d4e46c12e22551}
+
+\item 
+\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa6f25556860a154c4dacb4dac1dce8e4}{ptr} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac190efbc8cfd2654bc07b5b9382c36cc}{get\+\_\+shared} ()\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac190efbc8cfd2654bc07b5b9382c36cc}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac190efbc8cfd2654bc07b5b9382c36cc}
+
+\begin{DoxyCompactList}\small\item\em Get a shared pointer to this component. \end{DoxyCompactList}\item 
+bool {\bfseries is\+\_\+secure} () const\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_aaca175de7022aa0840bad7429c8988fd}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_aaca175de7022aa0840bad7429c8988fd}
+
+\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac71341129ff5389fa84cd9ef13c8c05e}{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler} (tcp\+\_\+init\+\_\+handler h)
+\begin{DoxyCompactList}\small\item\em Sets the tcp pre init handler. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_abb0254e3207691c45c9ca7061352a90a}{set\+\_\+tcp\+\_\+init\+\_\+handler} (tcp\+\_\+init\+\_\+handler h)
+\begin{DoxyCompactList}\small\item\em Sets the tcp pre init handler (deprecated) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a069b63faee90061ed4fa4e66d221ac18}{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler} (tcp\+\_\+init\+\_\+handler h)
+\begin{DoxyCompactList}\small\item\em Sets the tcp post init handler. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9638063c7c8c90c74d97008dacd81095}{set\+\_\+proxy} (std\+::string const \&\hyperlink{classwebsocketpp_1_1uri}{uri}, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Set the proxy to connect through (exception free) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8bd4c1b8ffbe04230249567e3217acfb}{set\+\_\+proxy} (std\+::string const \&\hyperlink{classwebsocketpp_1_1uri}{uri})\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8bd4c1b8ffbe04230249567e3217acfb}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8bd4c1b8ffbe04230249567e3217acfb}
+
+\begin{DoxyCompactList}\small\item\em Set the proxy to connect through (exception) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a99ee9d4f4043a2e3b2225cb1f03a56d1}{set\+\_\+proxy\+\_\+basic\+\_\+auth} (std\+::string const \&username, std\+::string const \&password, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Set the basic auth credentials to use (exception free) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a0a42cbcc12974d71c0ea91d12da6b72e}{set\+\_\+proxy\+\_\+basic\+\_\+auth} (std\+::string const \&username, std\+::string const \&password)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a0a42cbcc12974d71c0ea91d12da6b72e}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a0a42cbcc12974d71c0ea91d12da6b72e}
+
+\begin{DoxyCompactList}\small\item\em Set the basic auth credentials to use (exception) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1617e51dd915164bd80d0a24b19e7763}{set\+\_\+proxy\+\_\+timeout} (long duration, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Set the proxy timeout duration (exception free) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a01368cd677c09dfb7e47261180ebba82}{set\+\_\+proxy\+\_\+timeout} (long duration)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a01368cd677c09dfb7e47261180ebba82}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a01368cd677c09dfb7e47261180ebba82}
+
+\begin{DoxyCompactList}\small\item\em Set the proxy timeout duration (exception) \end{DoxyCompactList}\item 
+std\+::string const  \& {\bfseries get\+\_\+proxy} () const\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a302c81fe0bb6fd86b8860109adc363c7}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a302c81fe0bb6fd86b8860109adc363c7}
+
+\item 
+std\+::string \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac16d6ae60ee14176130dc92d12a30b61}{get\+\_\+remote\+\_\+endpoint} () const
+\begin{DoxyCompactList}\small\item\em Get the remote endpoint address. \end{DoxyCompactList}\item 
+\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{connection\+\_\+hdl} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_af9931e0ac551bc307ca7d16061484998}{get\+\_\+handle} () const\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_af9931e0ac551bc307ca7d16061484998}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_af9931e0ac551bc307ca7d16061484998}
+
+\begin{DoxyCompactList}\small\item\em Get the connection handle. \end{DoxyCompactList}\item 
+\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}{timer\+\_\+ptr} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_ab9db04550ee6b3dd2643cd7d23cda3f1}{set\+\_\+timer} (long duration, \hyperlink{namespacewebsocketpp_1_1transport_a946cc56ff41139f3002149c15fd87bc9}{timer\+\_\+handler} callback)
+\begin{DoxyCompactList}\small\item\em Call back a function after a period of time. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a72742278fc366815d31e110f973f4cdf}{handle\+\_\+timer} (\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}{timer\+\_\+ptr}, \hyperlink{namespacewebsocketpp_1_1transport_a946cc56ff41139f3002149c15fd87bc9}{timer\+\_\+handler} callback, boost\+::system\+::error\+\_\+code const \&ec)
+\begin{DoxyCompactList}\small\item\em Timer callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a790e0c6b0cd50d26d7e803d4e274fe90}{strand\+\_\+ptr} \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1d636545ad5cc7d78ddcff414fd55d0a}{get\+\_\+strand} ()\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1d636545ad5cc7d78ddcff414fd55d0a}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1d636545ad5cc7d78ddcff414fd55d0a}
+
+\begin{DoxyCompactList}\small\item\em Get a pointer to this connection\textquotesingle{}s strand. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_ae09d85b808498f06bcc8d938c9107e8e}{init} (\hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} callback)
+\begin{DoxyCompactList}\small\item\em Initialize transport for reading. \end{DoxyCompactList}\item 
+lib\+::error\+\_\+code \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2397c24d0ab9b344d70328788de721d4}{proxy\+\_\+init} (std\+::string const \&authority)
+\begin{DoxyCompactList}\small\item\em initialize the proxy buffers and http parsers \end{DoxyCompactList}\item 
+lib\+::error\+\_\+code \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a6432e2cbcb4e7781a6910dd7c9aa05e6}{init\+\_\+asio} (\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a0276cb30af3a21d73b585d07cf6170a1}{io\+\_\+service\+\_\+ptr} io\+\_\+service)
+\begin{DoxyCompactList}\small\item\em Finish constructing the transport. \end{DoxyCompactList}\item 
+void {\bfseries handle\+\_\+pre\+\_\+init} (lib\+::error\+\_\+code const \&ec)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_afbf08bd7b0fe30f9cdfaf0bce23f8172}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_afbf08bd7b0fe30f9cdfaf0bce23f8172}
+
+\item 
+void {\bfseries post\+\_\+init} ()\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a04f0f581681c9e263e3fd2e4ce1552ea}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a04f0f581681c9e263e3fd2e4ce1552ea}
+
+\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8c21e2814d440c6fe49a4514f6cf5ff1}{handle\+\_\+post\+\_\+init\+\_\+timeout} (\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}{timer\+\_\+ptr}, \hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} callback, lib\+::error\+\_\+code const \&ec)
+\begin{DoxyCompactList}\small\item\em Post init timeout callback. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a6782049b9d8b324d85da34dd9e426950}{handle\+\_\+post\+\_\+init} (\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}{timer\+\_\+ptr} post\+\_\+timer, \hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} callback, lib\+::error\+\_\+code const \&ec)
+\begin{DoxyCompactList}\small\item\em Post init timeout callback. \end{DoxyCompactList}\item 
+void {\bfseries proxy\+\_\+write} ()\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a64771b77883083daab921469fed0cffa}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a64771b77883083daab921469fed0cffa}
+
+\item 
+void {\bfseries handle\+\_\+proxy\+\_\+timeout} (\hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} callback, lib\+::error\+\_\+code const \&ec)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a5bf6d19bdada66f4880182f632fe88e0}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a5bf6d19bdada66f4880182f632fe88e0}
+
+\item 
+void {\bfseries handle\+\_\+proxy\+\_\+write} (\hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} callback, boost\+::system\+::error\+\_\+code const \&ec)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9cae467d224b74665a9fa8e56c68c961}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9cae467d224b74665a9fa8e56c68c961}
+
+\item 
+void {\bfseries proxy\+\_\+read} (\hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} callback)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a37efcf4f20e4291bb62174cdd4093730}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a37efcf4f20e4291bb62174cdd4093730}
+
+\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a930a6861560e076dae30957404902f69}{handle\+\_\+proxy\+\_\+read} (\hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} callback, boost\+::system\+::error\+\_\+code const \&ec, size\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Proxy read callback. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1ed9a4a93e753c4b84118760195f484c}{async\+\_\+read\+\_\+at\+\_\+least} (size\+\_\+t num\+\_\+bytes, char $\ast$buf, size\+\_\+t len, \hyperlink{namespacewebsocketpp_1_1transport_a3a9b2ed54dfcc6ebe7d7e6b4c02f53fb}{read\+\_\+handler} handler)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1ed9a4a93e753c4b84118760195f484c}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1ed9a4a93e753c4b84118760195f484c}
+
+\begin{DoxyCompactList}\small\item\em read at least num\+\_\+bytes bytes into buf and then call handler. \end{DoxyCompactList}\item 
+void {\bfseries handle\+\_\+async\+\_\+read} (boost\+::system\+::error\+\_\+code const \&ec, size\+\_\+t bytes\+\_\+transferred)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a307feb9703c4f7ca50cb9750b5a47c0e}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a307feb9703c4f7ca50cb9750b5a47c0e}
+
+\item 
+void {\bfseries async\+\_\+write} (const char $\ast$buf, size\+\_\+t len, \hyperlink{namespacewebsocketpp_1_1transport_addf5d728159e7aa2bce2a0df947b1560}{write\+\_\+handler} handler)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9c17ab9142868c2dd2ff74c478173bb3}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9c17ab9142868c2dd2ff74c478173bb3}
+
+\item 
+void {\bfseries async\+\_\+write} (std\+::vector$<$ \hyperlink{structwebsocketpp_1_1transport_1_1buffer}{buffer} $>$ const \&bufs, \hyperlink{namespacewebsocketpp_1_1transport_addf5d728159e7aa2bce2a0df947b1560}{write\+\_\+handler} handler)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9f62627d2a0fd05278a0fb1d8761911b}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9f62627d2a0fd05278a0fb1d8761911b}
+
+\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a80d39c294a7888db4d55d46dac5b1fbc}{handle\+\_\+async\+\_\+write} (boost\+::system\+::error\+\_\+code const \&ec, size\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Async write callback. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac6dae6a18678187b7da35f5b064c9ddd}{set\+\_\+handle} (\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{connection\+\_\+hdl} hdl)
+\begin{DoxyCompactList}\small\item\em Set Connection Handle. \end{DoxyCompactList}\item 
+lib\+::error\+\_\+code \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2fc9b41450047e40a3b5476c0e3bf853}{interrupt} (\hyperlink{namespacewebsocketpp_1_1transport_a8090563b066d7e8e31f7165be18dee51}{interrupt\+\_\+handler} handler)
+\begin{DoxyCompactList}\small\item\em Trigger the on\+\_\+interrupt handler. \end{DoxyCompactList}\item 
+lib\+::error\+\_\+code {\bfseries dispatch} (\hyperlink{namespacewebsocketpp_1_1transport_a6658447b2e10f4c712dd792aad0e0c78}{dispatch\+\_\+handler} handler)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a660c671234223eb60517d26bbbc0268a}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a660c671234223eb60517d26bbbc0268a}
+
+\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a7a3767d922bb2cc97f71dd2fb2f0e903}{async\+\_\+shutdown} (\hyperlink{namespacewebsocketpp_1_1transport_af39aff6fc4cb76f7df0d5322b734d156}{shutdown\+\_\+handler} callback)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a7a3767d922bb2cc97f71dd2fb2f0e903}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a7a3767d922bb2cc97f71dd2fb2f0e903}
+
+\begin{DoxyCompactList}\small\item\em close and clean up the underlying socket \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9386ad48e8b2137987205bc4e831edfb}{handle\+\_\+async\+\_\+shutdown\+\_\+timeout} (\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}{timer\+\_\+ptr}, \hyperlink{namespacewebsocketpp_1_1transport_aeae75e675c1a334b3b33ab7120b480a5}{init\+\_\+handler} callback, lib\+::error\+\_\+code const \&ec)
+\begin{DoxyCompactList}\small\item\em Async shutdown timeout handler. \end{DoxyCompactList}\item 
+void {\bfseries handle\+\_\+async\+\_\+shutdown} (\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa725ead0a0f3733f7f7e57076f194081}{timer\+\_\+ptr} shutdown\+\_\+timer, \hyperlink{namespacewebsocketpp_1_1transport_af39aff6fc4cb76f7df0d5322b734d156}{shutdown\+\_\+handler} callback, boost\+::system\+::error\+\_\+code const \&ec)\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1fbedbbe3a41e438119f64548c4968b5}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1fbedbbe3a41e438119f64548c4968b5}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries endpoint$<$ config $>$}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_ad7f0fad4f6837f8f4e97cf905b3a231f}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_ad7f0fad4f6837f8f4e97cf905b3a231f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename config$>$\\*
+class websocketpp\+::transport\+::asio\+::connection$<$ config $>$}
+
+Boost Asio based connection transport component. 
+
+\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection}{transport\+::asio\+::connection} implements a connection transport component using Boost A\+S\+IO that works with the \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{transport\+::asio\+::endpoint} endpoint transport component. 
+
+Definition at line 67 of file connection.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!get\+\_\+remote\+\_\+endpoint@{get\+\_\+remote\+\_\+endpoint}}
+\index{get\+\_\+remote\+\_\+endpoint@{get\+\_\+remote\+\_\+endpoint}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{get\+\_\+remote\+\_\+endpoint() const}{get\_remote\_endpoint() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ std\+::string {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::get\+\_\+remote\+\_\+endpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac16d6ae60ee14176130dc92d12a30b61}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac16d6ae60ee14176130dc92d12a30b61}
+
+
+Get the remote endpoint address. 
+
+The iostream transport has no information about the ultimate remote endpoint. It will return the string \char`\"{}iostream transport\char`\"{}. To indicate this.
+
+T\+O\+DO\+: allow user settable remote endpoint addresses if this seems useful
+
+\begin{DoxyReturn}{Returns}
+A string identifying the address of the remote endpoint 
+\end{DoxyReturn}
+
+
+Definition at line 265 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!handle\+\_\+async\+\_\+shutdown\+\_\+timeout@{handle\+\_\+async\+\_\+shutdown\+\_\+timeout}}
+\index{handle\+\_\+async\+\_\+shutdown\+\_\+timeout@{handle\+\_\+async\+\_\+shutdown\+\_\+timeout}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{handle\+\_\+async\+\_\+shutdown\+\_\+timeout(timer\+\_\+ptr, init\+\_\+handler callback, lib\+::error\+\_\+code const \&ec)}{handle\_async\_shutdown\_timeout(timer\_ptr, init\_handler callback, lib::error\_code const \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::handle\+\_\+async\+\_\+shutdown\+\_\+timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf timer\+\_\+ptr}}]{, }
+\item[{{\bf init\+\_\+handler}}]{callback, }
+\item[{lib\+::error\+\_\+code const \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9386ad48e8b2137987205bc4e831edfb}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9386ad48e8b2137987205bc4e831edfb}
+
+
+Async shutdown timeout handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shutdown\+\_\+timer} & A pointer to the timer to keep it in scope \\
+\hline
+{\em callback} & The function to call back \\
+\hline
+{\em ec} & The status code \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 1039 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!handle\+\_\+async\+\_\+write@{handle\+\_\+async\+\_\+write}}
+\index{handle\+\_\+async\+\_\+write@{handle\+\_\+async\+\_\+write}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{handle\+\_\+async\+\_\+write(boost\+::system\+::error\+\_\+code const \&ec, size\+\_\+t)}{handle\_async\_write(boost::system::error\_code const \&ec, size\_t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::handle\+\_\+async\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{boost\+::system\+::error\+\_\+code const \&}]{ec, }
+\item[{size\+\_\+t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a80d39c294a7888db4d55d46dac5b1fbc}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a80d39c294a7888db4d55d46dac5b1fbc}
+
+
+Async write callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ec} & The status code \\
+\hline
+{\em bytes\+\_\+transferred} & The number of bytes read \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 937 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!handle\+\_\+post\+\_\+init@{handle\+\_\+post\+\_\+init}}
+\index{handle\+\_\+post\+\_\+init@{handle\+\_\+post\+\_\+init}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{handle\+\_\+post\+\_\+init(timer\+\_\+ptr post\+\_\+timer, init\+\_\+handler callback, lib\+::error\+\_\+code const \&ec)}{handle\_post\_init(timer\_ptr post\_timer, init\_handler callback, lib::error\_code const \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::handle\+\_\+post\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf timer\+\_\+ptr}}]{post\+\_\+timer, }
+\item[{{\bf init\+\_\+handler}}]{callback, }
+\item[{lib\+::error\+\_\+code const \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a6782049b9d8b324d85da34dd9e426950}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a6782049b9d8b324d85da34dd9e426950}
+
+
+Post init timeout callback. 
+
+The timer pointer is included to ensure the timer isn\textquotesingle{}t destroyed until after it has expired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em post\+\_\+timer} & Pointer to the timer in question \\
+\hline
+{\em callback} & The function to call back \\
+\hline
+{\em ec} & The status code \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 554 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!handle\+\_\+post\+\_\+init\+\_\+timeout@{handle\+\_\+post\+\_\+init\+\_\+timeout}}
+\index{handle\+\_\+post\+\_\+init\+\_\+timeout@{handle\+\_\+post\+\_\+init\+\_\+timeout}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{handle\+\_\+post\+\_\+init\+\_\+timeout(timer\+\_\+ptr, init\+\_\+handler callback, lib\+::error\+\_\+code const \&ec)}{handle\_post\_init\_timeout(timer\_ptr, init\_handler callback, lib::error\_code const \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::handle\+\_\+post\+\_\+init\+\_\+timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf timer\+\_\+ptr}}]{, }
+\item[{{\bf init\+\_\+handler}}]{callback, }
+\item[{lib\+::error\+\_\+code const \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8c21e2814d440c6fe49a4514f6cf5ff1}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a8c21e2814d440c6fe49a4514f6cf5ff1}
+
+
+Post init timeout callback. 
+
+The timer pointer is included to ensure the timer isn\textquotesingle{}t destroyed until after it has expired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em post\+\_\+timer} & Pointer to the timer in question \\
+\hline
+{\em callback} & The function to call back \\
+\hline
+{\em ec} & The status code \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 518 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!handle\+\_\+proxy\+\_\+read@{handle\+\_\+proxy\+\_\+read}}
+\index{handle\+\_\+proxy\+\_\+read@{handle\+\_\+proxy\+\_\+read}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{handle\+\_\+proxy\+\_\+read(init\+\_\+handler callback, boost\+::system\+::error\+\_\+code const \&ec, size\+\_\+t)}{handle\_proxy\_read(init\_handler callback, boost::system::error\_code const \&ec, size\_t)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::handle\+\_\+proxy\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf init\+\_\+handler}}]{callback, }
+\item[{boost\+::system\+::error\+\_\+code const \&}]{ec, }
+\item[{size\+\_\+t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a930a6861560e076dae30957404902f69}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a930a6861560e076dae30957404902f69}
+
+
+Proxy read callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+handler} & The function to call back \\
+\hline
+{\em ec} & The status code \\
+\hline
+{\em bytes\+\_\+transferred} & The number of bytes read \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 724 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!handle\+\_\+timer@{handle\+\_\+timer}}
+\index{handle\+\_\+timer@{handle\+\_\+timer}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{handle\+\_\+timer(timer\+\_\+ptr, timer\+\_\+handler callback, boost\+::system\+::error\+\_\+code const \&ec)}{handle\_timer(timer\_ptr, timer\_handler callback, boost::system::error\_code const \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::handle\+\_\+timer (
+\begin{DoxyParamCaption}
+\item[{{\bf timer\+\_\+ptr}}]{, }
+\item[{{\bf timer\+\_\+handler}}]{callback, }
+\item[{boost\+::system\+::error\+\_\+code const \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a72742278fc366815d31e110f973f4cdf}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a72742278fc366815d31e110f973f4cdf}
+
+
+Timer callback. 
+
+The timer pointer is included to ensure the timer isn\textquotesingle{}t destroyed until after it has expired.
+
+T\+O\+DO\+: candidate for protected status
+
+
+\begin{DoxyParams}{Parameters}
+{\em post\+\_\+timer} & Pointer to the timer in question \\
+\hline
+{\em callback} & The function to call back \\
+\hline
+{\em ec} & The status code \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 333 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!init@{init}}
+\index{init@{init}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{init(init\+\_\+handler callback)}{init(init\_handler callback)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::init (
+\begin{DoxyParamCaption}
+\item[{{\bf init\+\_\+handler}}]{callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_ae09d85b808498f06bcc8d938c9107e8e}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_ae09d85b808498f06bcc8d938c9107e8e}
+
+
+Initialize transport for reading. 
+
+init\+\_\+asio is called once immediately after construction to initialize boost\+::asio components to the io\+\_\+service
+
+The transport initialization sequence consists of the following steps\+:
+\begin{DoxyItemize}
+\item Pre-\/init\+: the underlying socket is initialized to the point where bytes may be written. No bytes are actually written in this stage
+\item Proxy negotiation\+: if a proxy is set, a request is made to it to start a tunnel to the final destination. This stage ends when the proxy is ready to forward the next byte to the remote endpoint.
+\item Post-\/init\+: Perform any i/o with the remote endpoint, such as setting up tunnels for encryption. This stage ends when the connection is ready to read or write the Web\+Socket handshakes. At this point the original callback function is called. 
+\end{DoxyItemize}
+
+Definition at line 370 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!init\+\_\+asio@{init\+\_\+asio}}
+\index{init\+\_\+asio@{init\+\_\+asio}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{init\+\_\+asio(io\+\_\+service\+\_\+ptr io\+\_\+service)}{init\_asio(io\_service\_ptr io\_service)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ lib\+::error\+\_\+code {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::init\+\_\+asio (
+\begin{DoxyParamCaption}
+\item[{{\bf io\+\_\+service\+\_\+ptr}}]{io\+\_\+service}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a6432e2cbcb4e7781a6910dd7c9aa05e6}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a6432e2cbcb4e7781a6910dd7c9aa05e6}
+
+
+Finish constructing the transport. 
+
+init\+\_\+asio is called once immediately after construction to initialize boost\+::asio components to the io\+\_\+service.
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+\_\+service} & A pointer to the io\+\_\+service to register with this connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code for the success or failure of the initialization 
+\end{DoxyReturn}
+
+
+Definition at line 421 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{interrupt(interrupt\+\_\+handler handler)}{interrupt(interrupt\_handler handler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ lib\+::error\+\_\+code {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::interrupt (
+\begin{DoxyParamCaption}
+\item[{{\bf interrupt\+\_\+handler}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2fc9b41450047e40a3b5476c0e3bf853}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2fc9b41450047e40a3b5476c0e3bf853}
+
+
+Trigger the on\+\_\+interrupt handler. 
+
+This needs to be thread safe 
+
+Definition at line 972 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!proxy\+\_\+init@{proxy\+\_\+init}}
+\index{proxy\+\_\+init@{proxy\+\_\+init}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{proxy\+\_\+init(std\+::string const \&authority)}{proxy\_init(std::string const \&authority)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ lib\+::error\+\_\+code {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::proxy\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{authority}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2397c24d0ab9b344d70328788de721d4}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a2397c24d0ab9b344d70328788de721d4}
+
+
+initialize the proxy buffers and http parsers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em authority} & The address of the server we want the proxy to tunnel to in the format of a U\+RI authority (host\+:port)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status code indicating what errors occurred, if any 
+\end{DoxyReturn}
+
+
+Definition at line 397 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!set\+\_\+handle@{set\+\_\+handle}}
+\index{set\+\_\+handle@{set\+\_\+handle}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+handle(connection\+\_\+hdl hdl)}{set\_handle(connection\_hdl hdl)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::set\+\_\+handle (
+\begin{DoxyParamCaption}
+\item[{{\bf connection\+\_\+hdl}}]{hdl}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac6dae6a18678187b7da35f5b064c9ddd}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac6dae6a18678187b7da35f5b064c9ddd}
+
+
+Set Connection Handle. 
+
+See \hyperlink{connection__hdl_8hpp_source}{common/connection\+\_\+hdl.\+hpp} for information
+
+
+\begin{DoxyParams}{Parameters}
+{\em hdl} & A connection\+\_\+hdl that the transport will use to refer to itself \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 963 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!set\+\_\+proxy@{set\+\_\+proxy}}
+\index{set\+\_\+proxy@{set\+\_\+proxy}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+proxy(std\+::string const \&uri, lib\+::error\+\_\+code \&ec)}{set\_proxy(std::string const \&uri, lib::error\_code \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::set\+\_\+proxy (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{uri, }
+\item[{lib\+::error\+\_\+code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9638063c7c8c90c74d97008dacd81095}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a9638063c7c8c90c74d97008dacd81095}
+
+
+Set the proxy to connect through (exception free) 
+
+The U\+RI passed should be a complete U\+RI including scheme. For example\+: \href{http://proxy.example.com:8080/}{\tt http\+://proxy.\+example.\+com\+:8080/}
+
+The proxy must be set up as an explicit (C\+O\+N\+N\+E\+CT) proxy allowed to connect to the port you specify. Traffic to the proxy is not encrypted.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uri} & The full U\+RI of the proxy to connect to.\\
+\hline
+{\em ec} & A status value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 173 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!set\+\_\+proxy\+\_\+basic\+\_\+auth@{set\+\_\+proxy\+\_\+basic\+\_\+auth}}
+\index{set\+\_\+proxy\+\_\+basic\+\_\+auth@{set\+\_\+proxy\+\_\+basic\+\_\+auth}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+proxy\+\_\+basic\+\_\+auth(std\+::string const \&username, std\+::string const \&password, lib\+::error\+\_\+code \&ec)}{set\_proxy\_basic\_auth(std::string const \&username, std::string const \&password, lib::error\_code \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::set\+\_\+proxy\+\_\+basic\+\_\+auth (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{username, }
+\item[{std\+::string const \&}]{password, }
+\item[{lib\+::error\+\_\+code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a99ee9d4f4043a2e3b2225cb1f03a56d1}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a99ee9d4f4043a2e3b2225cb1f03a56d1}
+
+
+Set the basic auth credentials to use (exception free) 
+
+The U\+RI passed should be a complete U\+RI including scheme. For example\+: \href{http://proxy.example.com:8080/}{\tt http\+://proxy.\+example.\+com\+:8080/}
+
+The proxy must be set up as an explicit proxy
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username to send\\
+\hline
+{\em password} & The password to send\\
+\hline
+{\em ec} & A status value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 201 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!set\+\_\+proxy\+\_\+timeout@{set\+\_\+proxy\+\_\+timeout}}
+\index{set\+\_\+proxy\+\_\+timeout@{set\+\_\+proxy\+\_\+timeout}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+proxy\+\_\+timeout(long duration, lib\+::error\+\_\+code \&ec)}{set\_proxy\_timeout(long duration, lib::error\_code \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::set\+\_\+proxy\+\_\+timeout (
+\begin{DoxyParamCaption}
+\item[{long}]{duration, }
+\item[{lib\+::error\+\_\+code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1617e51dd915164bd80d0a24b19e7763}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a1617e51dd915164bd80d0a24b19e7763}
+
+
+Set the proxy timeout duration (exception free) 
+
+Duration is in milliseconds. Default value is based on the transport config
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & The number of milliseconds to wait before aborting the proxy connection.\\
+\hline
+{\em ec} & A status value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 234 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!set\+\_\+tcp\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+init\+\_\+handler}}
+\index{set\+\_\+tcp\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+init\+\_\+handler}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+tcp\+\_\+init\+\_\+handler(tcp\+\_\+init\+\_\+handler h)}{set\_tcp\_init\_handler(tcp\_init\_handler h)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::set\+\_\+tcp\+\_\+init\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{tcp\+\_\+init\+\_\+handler}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_abb0254e3207691c45c9ca7061352a90a}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_abb0254e3207691c45c9ca7061352a90a}
+
+
+Sets the tcp pre init handler (deprecated) 
+
+The tcp pre init handler is called after the raw tcp connection has been established but before any additional wrappers (proxy connects, T\+LS handshakes, etc) have been performed.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000047}{Deprecated}]Use set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler instead\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The handler to call on tcp pre init. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 142 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler}}
+\index{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler(tcp\+\_\+init\+\_\+handler h)}{set\_tcp\_post\_init\_handler(tcp\_init\_handler h)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{tcp\+\_\+init\+\_\+handler}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_a069b63faee90061ed4fa4e66d221ac18}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_a069b63faee90061ed4fa4e66d221ac18}
+
+
+Sets the tcp post init handler. 
+
+The tcp post init handler is called after the tcp connection has been established and all additional wrappers (proxy connects, T\+LS handshakes, etc have been performed. This is fired before any bytes are read or any Web\+Socket specific handshake logic has been performed.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The handler to call on tcp post init. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 157 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler}}
+\index{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler(tcp\+\_\+init\+\_\+handler h)}{set\_tcp\_pre\_init\_handler(tcp\_init\_handler h)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ void {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{tcp\+\_\+init\+\_\+handler}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac71341129ff5389fa84cd9ef13c8c05e}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_ac71341129ff5389fa84cd9ef13c8c05e}
+
+
+Sets the tcp pre init handler. 
+
+The tcp pre init handler is called after the raw tcp connection has been established but before any additional wrappers (proxy connects, T\+LS handshakes, etc) have been performed.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The handler to call on tcp pre init. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 128 of file connection.\+hpp.
+
+\index{websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}!set\+\_\+timer@{set\+\_\+timer}}
+\index{set\+\_\+timer@{set\+\_\+timer}!websocketpp\+::transport\+::asio\+::connection@{websocketpp\+::transport\+::asio\+::connection}}
+\subsubsection[{\texorpdfstring{set\+\_\+timer(long duration, timer\+\_\+handler callback)}{set\_timer(long duration, timer\_handler callback)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config $>$ {\bf timer\+\_\+ptr} {\bf websocketpp\+::transport\+::asio\+::connection}$<$ {\bf config} $>$\+::set\+\_\+timer (
+\begin{DoxyParamCaption}
+\item[{long}]{duration, }
+\item[{{\bf timer\+\_\+handler}}]{callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1connection_ab9db04550ee6b3dd2643cd7d23cda3f1}{}\label{classwebsocketpp_1_1transport_1_1asio_1_1connection_ab9db04550ee6b3dd2643cd7d23cda3f1}
+
+
+Call back a function after a period of time. 
+
+Sets a timer that calls back a function after the specified period of milliseconds. Returns a handle that can be used to cancel the timer. A cancelled timer will return the error code \hyperlink{namespacewebsocketpp_1_1transport_1_1error_a8d371a2562d813e5a2e106e2694d4fb0a887436887a8732e48f7c67bd85bb6f64}{error\+::operation\+\_\+aborted} A timer that expired will return no error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & Length of time to wait in milliseconds\\
+\hline
+{\em callback} & The function to call back when the timer has expired\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle that can be used to cancel the timer if it is no longer needed. 
+\end{DoxyReturn}
+
+
+Definition at line 297 of file connection.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/websocketpp/websocketpp/transport/asio/connection.\+hpp\end{DoxyCompactItemize}

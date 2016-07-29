@@ -1,0 +1,194 @@
+\hypertarget{classnfd_1_1cs_1_1Cs}{}\section{nfd\+:\+:cs\+:\+:Cs Class Reference}
+\label{classnfd_1_1cs_1_1Cs}\index{nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}}
+
+
+represents the Content\+Store  
+
+
+
+
+{\ttfamily \#include $<$cs.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:cs\+:\+:Cs\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1cs_1_1Cs}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfd_1_1cs_1_1Cs_1_1EntryFromEntryImpl}{Entry\+From\+Entry\+Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ void(const \hyperlink{classndn_1_1Interest}{Interest} \&, const \hyperlink{classndn_1_1Data}{Data} \&data)$>$ {\bfseries Hit\+Callback}\hypertarget{classnfd_1_1cs_1_1Cs_a573a36f89c522f5c2741a041de422203}{}\label{classnfd_1_1cs_1_1Cs_a573a36f89c522f5c2741a041de422203}
+
+\item 
+typedef std\+::function$<$ void(const \hyperlink{classndn_1_1Interest}{Interest} \&)$>$ {\bfseries Miss\+Callback}\hypertarget{classnfd_1_1cs_1_1Cs_a0796d1b69145688ce47867dc8e7de050}{}\label{classnfd_1_1cs_1_1Cs_a0796d1b69145688ce47867dc8e7de050}
+
+\item 
+typedef boost\+::transform\+\_\+iterator$<$ \hyperlink{structnfd_1_1cs_1_1Cs_1_1EntryFromEntryImpl}{Entry\+From\+Entry\+Impl}, iterator, const \hyperlink{classnfd_1_1cs_1_1Entry}{Entry} \& $>$ \hyperlink{classnfd_1_1cs_1_1Cs_a59777b86bdfb8755c9e0429fb1317a1d}{const\+\_\+iterator}\hypertarget{classnfd_1_1cs_1_1Cs_a59777b86bdfb8755c9e0429fb1317a1d}{}\label{classnfd_1_1cs_1_1Cs_a59777b86bdfb8755c9e0429fb1317a1d}
+
+\begin{DoxyCompactList}\small\item\em Content\+Store iterator (public A\+PI) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Cs} (size\+\_\+t n\+Max\+Packets=10, unique\+\_\+ptr$<$ \hyperlink{classnfd_1_1cs_1_1Policy}{Policy} $>$ policy=make\+Default\+Policy())\hypertarget{classnfd_1_1cs_1_1Cs_aad71470b49971de2a96ba8c3971c9cd3}{}\label{classnfd_1_1cs_1_1Cs_aad71470b49971de2a96ba8c3971c9cd3}
+
+\item 
+bool \hyperlink{classnfd_1_1cs_1_1Cs_a9bd9e71e9881a1b4cb3368d80396a6d6}{insert} (const \hyperlink{classndn_1_1Data}{Data} \&data, bool is\+Unsolicited=false)
+\begin{DoxyCompactList}\small\item\em inserts a Data packet \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1cs_1_1Cs_ae0a0b3c7f06b1764d183dc7090a51bfb}{find} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const Hit\+Callback \&hit\+Callback, const Miss\+Callback \&miss\+Callback) const
+\begin{DoxyCompactList}\small\item\em finds the best matching Data packet \end{DoxyCompactList}\item 
+void {\bfseries erase} (const \hyperlink{classndn_1_1Name}{Name} \&exact\+Name)\hypertarget{classnfd_1_1cs_1_1Cs_a996f18ffe113914f7ec44591b6b31c63}{}\label{classnfd_1_1cs_1_1Cs_a996f18ffe113914f7ec44591b6b31c63}
+
+\item 
+void \hyperlink{classnfd_1_1cs_1_1Cs_abd6dc8617159910983a56440ccf659a5}{set\+Limit} (size\+\_\+t n\+Max\+Packets)\hypertarget{classnfd_1_1cs_1_1Cs_abd6dc8617159910983a56440ccf659a5}{}\label{classnfd_1_1cs_1_1Cs_abd6dc8617159910983a56440ccf659a5}
+
+\begin{DoxyCompactList}\small\item\em changes capacity (in number of packets) \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnfd_1_1cs_1_1Cs_a4241a4c6d68fb889491432831eee5abe}{get\+Limit} () const
+\item 
+void \hyperlink{classnfd_1_1cs_1_1Cs_a72946e983564cd2c992bfcfb8ed93e62}{set\+Policy} (unique\+\_\+ptr$<$ \hyperlink{classnfd_1_1cs_1_1Policy}{Policy} $>$ policy)
+\begin{DoxyCompactList}\small\item\em changes cs replacement policy \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1cs_1_1Policy}{Policy} $\ast$ \hyperlink{classnfd_1_1cs_1_1Cs_a2bcf86fe2a4763ff433afbad80730ef4}{get\+Policy} () const
+\item 
+size\+\_\+t \hyperlink{classnfd_1_1cs_1_1Cs_a38361ebbc6eef772d5b4ba4b209c0814}{size} () const
+\item 
+\hyperlink{classnfd_1_1cs_1_1Cs_a59777b86bdfb8755c9e0429fb1317a1d}{const\+\_\+iterator} {\bfseries begin} () const\hypertarget{classnfd_1_1cs_1_1Cs_ad85d986d758ccea7d61b9fb1cdd849b9}{}\label{classnfd_1_1cs_1_1Cs_ad85d986d758ccea7d61b9fb1cdd849b9}
+
+\item 
+\hyperlink{classnfd_1_1cs_1_1Cs_a59777b86bdfb8755c9e0429fb1317a1d}{const\+\_\+iterator} {\bfseries end} () const\hypertarget{classnfd_1_1cs_1_1Cs_ad1acb9b4fc7948e2012ef5f8761d4e22}{}\label{classnfd_1_1cs_1_1Cs_ad1acb9b4fc7948e2012ef5f8761d4e22}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void dump()\hypertarget{classnfd_1_1cs_1_1Cs_ab0b9630c26ee5eddee0bdfbc399c7b90}{}\label{classnfd_1_1cs_1_1Cs_ab0b9630c26ee5eddee0bdfbc399c7b90}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the Content\+Store 
+
+Definition at line 65 of file cs.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}!find@{find}}
+\index{find@{find}!nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}}
+\subsubsection[{\texorpdfstring{find(const Interest \&interest, const Hit\+Callback \&hit\+Callback, const Miss\+Callback \&miss\+Callback) const}{find(const Interest \&interest, const HitCallback \&hitCallback, const MissCallback \&missCallback) const}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::cs\+::\+Cs\+::find (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest, }
+\item[{const Hit\+Callback \&}]{hit\+Callback, }
+\item[{const Miss\+Callback \&}]{miss\+Callback}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1cs_1_1Cs_ae0a0b3c7f06b1764d183dc7090a51bfb}{}\label{classnfd_1_1cs_1_1Cs_ae0a0b3c7f06b1764d183dc7090a51bfb}
+
+
+finds the best matching Data packet 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & the Interest for lookup \\
+\hline
+{\em hit\+Callback} & a callback if a match is found; must not be empty \\
+\hline
+{\em miss\+Callback} & a callback if there\textquotesingle{}s no match; must not be empty \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+A lookup invokes either callback exactly once. The callback may be invoked either before or after \hyperlink{classnfd_1_1cs_1_1Cs_ae0a0b3c7f06b1764d183dc7090a51bfb}{find()} returns 
+\end{DoxyNote}
+
+
+Definition at line 120 of file cs.\+cpp.
+
+\index{nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}!get\+Limit@{get\+Limit}}
+\index{get\+Limit@{get\+Limit}!nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}}
+\subsubsection[{\texorpdfstring{get\+Limit() const}{getLimit() const}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t nfd\+::cs\+::\+Cs\+::get\+Limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1cs_1_1Cs_a4241a4c6d68fb889491432831eee5abe}{}\label{classnfd_1_1cs_1_1Cs_a4241a4c6d68fb889491432831eee5abe}
+\begin{DoxyReturn}{Returns}
+capacity (in number of packets) 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file cs.\+cpp.
+
+\index{nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}!get\+Policy@{get\+Policy}}
+\index{get\+Policy@{get\+Policy}!nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}}
+\subsubsection[{\texorpdfstring{get\+Policy() const}{getPolicy() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Policy}$\ast$ nfd\+::cs\+::\+Cs\+::get\+Policy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1cs_1_1Cs_a2bcf86fe2a4763ff433afbad80730ef4}{}\label{classnfd_1_1cs_1_1Cs_a2bcf86fe2a4763ff433afbad80730ef4}
+\begin{DoxyReturn}{Returns}
+cs replacement policy 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file cs.\+hpp.
+
+\index{nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}!insert@{insert}}
+\index{insert@{insert}!nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}}
+\subsubsection[{\texorpdfstring{insert(const Data \&data, bool is\+Unsolicited=false)}{insert(const Data \&data, bool isUnsolicited=false)}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::cs\+::\+Cs\+::insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data, }
+\item[{bool}]{is\+Unsolicited = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1Cs_a9bd9e71e9881a1b4cb3368d80396a6d6}{}\label{classnfd_1_1cs_1_1Cs_a9bd9e71e9881a1b4cb3368d80396a6d6}
+
+
+inserts a Data packet 
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file cs.\+cpp.
+
+\index{nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}!set\+Policy@{set\+Policy}}
+\index{set\+Policy@{set\+Policy}!nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}}
+\subsubsection[{\texorpdfstring{set\+Policy(unique\+\_\+ptr$<$ Policy $>$ policy)}{setPolicy(unique\_ptr< Policy > policy)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::cs\+::\+Cs\+::set\+Policy (
+\begin{DoxyParamCaption}
+\item[{unique\+\_\+ptr$<$ {\bf Policy} $>$}]{policy}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1cs_1_1Cs_a72946e983564cd2c992bfcfb8ed93e62}{}\label{classnfd_1_1cs_1_1Cs_a72946e983564cd2c992bfcfb8ed93e62}
+
+
+changes cs replacement policy 
+
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classnfd_1_1cs_1_1Cs_a38361ebbc6eef772d5b4ba4b209c0814}{size()} == 0 
+\end{DoxyPrecond}
+
+
+Definition at line 72 of file cs.\+cpp.
+
+\index{nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}!size@{size}}
+\index{size@{size}!nfd\+::cs\+::\+Cs@{nfd\+::cs\+::\+Cs}}
+\subsubsection[{\texorpdfstring{size() const}{size() const}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t nfd\+::cs\+::\+Cs\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1cs_1_1Cs_a38361ebbc6eef772d5b4ba4b209c0814}{}\label{classnfd_1_1cs_1_1Cs_a38361ebbc6eef772d5b4ba4b209c0814}
+\begin{DoxyReturn}{Returns}
+number of stored packets 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file cs.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/\hyperlink{cs_8hpp}{cs.\+hpp}\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/cs.\+cpp\end{DoxyCompactItemize}

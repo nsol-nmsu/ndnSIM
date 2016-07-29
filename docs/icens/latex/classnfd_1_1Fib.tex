@@ -1,0 +1,148 @@
+\hypertarget{classnfd_1_1Fib}{}\section{nfd\+:\+:Fib Class Reference}
+\label{classnfd_1_1Fib}\index{nfd\+::\+Fib@{nfd\+::\+Fib}}
+
+
+represents the F\+IB  
+
+
+
+
+{\ttfamily \#include $<$fib.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Fib\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1Fib}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1Fib_1_1const__iterator}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Fib} (\hyperlink{classnfd_1_1NameTree}{Name\+Tree} \&name\+Tree)\hypertarget{classnfd_1_1Fib_a1ed3dd88fe19112ce99be346e87cecbf}{}\label{classnfd_1_1Fib_a1ed3dd88fe19112ce99be346e87cecbf}
+
+\item 
+size\+\_\+t {\bfseries size} () const\hypertarget{classnfd_1_1Fib_ae240e9ad4bff8b3816577115a552c8e6}{}\label{classnfd_1_1Fib_ae240e9ad4bff8b3816577115a552c8e6}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ \hyperlink{classnfd_1_1Fib_a51e0149d3ab81eec744117a8d5fefa69}{find\+Longest\+Prefix\+Match} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const\hypertarget{classnfd_1_1Fib_a51e0149d3ab81eec744117a8d5fefa69}{}\label{classnfd_1_1Fib_a51e0149d3ab81eec744117a8d5fefa69}
+
+\begin{DoxyCompactList}\small\item\em performs a longest prefix match \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ \hyperlink{classnfd_1_1Fib_a4cd178cf106684c16ba657e7fd3e742f}{find\+Longest\+Prefix\+Match} (const \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry) const\hypertarget{classnfd_1_1Fib_a4cd178cf106684c16ba657e7fd3e742f}{}\label{classnfd_1_1Fib_a4cd178cf106684c16ba657e7fd3e742f}
+
+\begin{DoxyCompactList}\small\item\em performs a longest prefix match \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ \hyperlink{classnfd_1_1Fib_a178a7ec2c7c4e5c7f22a97f5ac45fb8a}{find\+Longest\+Prefix\+Match} (const \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} \&measurements\+Entry) const\hypertarget{classnfd_1_1Fib_a178a7ec2c7c4e5c7f22a97f5ac45fb8a}{}\label{classnfd_1_1Fib_a178a7ec2c7c4e5c7f22a97f5ac45fb8a}
+
+\begin{DoxyCompactList}\small\item\em performs a longest prefix match \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$ {\bfseries find\+Exact\+Match} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const\hypertarget{classnfd_1_1Fib_a88f5d7c6690190fa81ea5315cf98fa31}{}\label{classnfd_1_1Fib_a88f5d7c6690190fa81ea5315cf98fa31}
+
+\item 
+std\+::pair$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} $>$, bool $>$ \hyperlink{classnfd_1_1Fib_a1e208bef265495cd9bab55e17e80045a}{insert} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em inserts a F\+IB entry for prefix If an entry for exact same prefix exists, that entry is returned. \end{DoxyCompactList}\item 
+void {\bfseries erase} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)\hypertarget{classnfd_1_1Fib_a0356aa509016ea589ae519bdfaaf0786}{}\label{classnfd_1_1Fib_a0356aa509016ea589ae519bdfaaf0786}
+
+\item 
+void {\bfseries erase} (const \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} \&entry)\hypertarget{classnfd_1_1Fib_abff4d733b3f681ab819fa35e48a4e9bb}{}\label{classnfd_1_1Fib_abff4d733b3f681ab819fa35e48a4e9bb}
+
+\item 
+void \hyperlink{classnfd_1_1Fib_a272b675df2961dd1ab3ea3cbb2e87810}{remove\+Next\+Hop\+From\+All\+Entries} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)
+\begin{DoxyCompactList}\small\item\em removes the Next\+Hop record for face in all entrites \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1Fib_1_1const__iterator}{const\+\_\+iterator} \hyperlink{classnfd_1_1Fib_ae50d2c9a662b44f029d6a14f9e43a5cc}{begin} () const
+\begin{DoxyCompactList}\small\item\em returns an iterator pointing to the first F\+IB entry \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1Fib_1_1const__iterator}{const\+\_\+iterator} \hyperlink{classnfd_1_1Fib_add14e734eb70e1ab3fe2fabf9526a963}{end} () const
+\begin{DoxyCompactList}\small\item\em returns an iterator referring to the past-\/the-\/end F\+IB entry \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the F\+IB 
+
+Definition at line 44 of file fib.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Fib@{nfd\+::\+Fib}!begin@{begin}}
+\index{begin@{begin}!nfd\+::\+Fib@{nfd\+::\+Fib}}
+\subsubsection[{\texorpdfstring{begin() const}{begin() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fib\+::const\+\_\+iterator} nfd\+::\+Fib\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1Fib_ae50d2c9a662b44f029d6a14f9e43a5cc}{}\label{classnfd_1_1Fib_ae50d2c9a662b44f029d6a14f9e43a5cc}
+
+
+returns an iterator pointing to the first F\+IB entry 
+
+\begin{DoxyNote}{Note}
+Iteration order is implementation-\/specific and is undefined 
+
+The returned iterator may get invalidated if F\+IB or another Name\+Tree-\/based table is modified 
+\end{DoxyNote}
+
+
+Definition at line 180 of file fib.\+cpp.
+
+\index{nfd\+::\+Fib@{nfd\+::\+Fib}!end@{end}}
+\index{end@{end}!nfd\+::\+Fib@{nfd\+::\+Fib}}
+\subsubsection[{\texorpdfstring{end() const}{end() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fib\+::const\+\_\+iterator} nfd\+::\+Fib\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1Fib_add14e734eb70e1ab3fe2fabf9526a963}{}\label{classnfd_1_1Fib_add14e734eb70e1ab3fe2fabf9526a963}
+
+
+returns an iterator referring to the past-\/the-\/end F\+IB entry 
+
+\begin{DoxyNote}{Note}
+The returned iterator may get invalidated if F\+IB or another Name\+Tree-\/based table is modified 
+\end{DoxyNote}
+
+
+Definition at line 172 of file fib.\+hpp.
+
+\index{nfd\+::\+Fib@{nfd\+::\+Fib}!insert@{insert}}
+\index{insert@{insert}!nfd\+::\+Fib@{nfd\+::\+Fib}}
+\subsubsection[{\texorpdfstring{insert(const Name \&prefix)}{insert(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ shared\+\_\+ptr$<$ {\bf fib\+::\+Entry} $>$, bool $>$ nfd\+::\+Fib\+::insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Fib_a1e208bef265495cd9bab55e17e80045a}{}\label{classnfd_1_1Fib_a1e208bef265495cd9bab55e17e80045a}
+
+
+inserts a F\+IB entry for prefix If an entry for exact same prefix exists, that entry is returned. 
+
+\begin{DoxyReturn}{Returns}
+\{ the entry, and true for new entry, false for existing entry \} 
+\end{DoxyReturn}
+
+
+Definition at line 120 of file fib.\+cpp.
+
+\index{nfd\+::\+Fib@{nfd\+::\+Fib}!remove\+Next\+Hop\+From\+All\+Entries@{remove\+Next\+Hop\+From\+All\+Entries}}
+\index{remove\+Next\+Hop\+From\+All\+Entries@{remove\+Next\+Hop\+From\+All\+Entries}!nfd\+::\+Fib@{nfd\+::\+Fib}}
+\subsubsection[{\texorpdfstring{remove\+Next\+Hop\+From\+All\+Entries(shared\+\_\+ptr$<$ Face $>$ face)}{removeNextHopFromAllEntries(shared\_ptr< Face > face)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Fib\+::remove\+Next\+Hop\+From\+All\+Entries (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Fib_a272b675df2961dd1ab3ea3cbb2e87810}{}\label{classnfd_1_1Fib_a272b675df2961dd1ab3ea3cbb2e87810}
+
+
+removes the Next\+Hop record for face in all entrites 
+
+This is usually invoked when face goes away. Removing the last Next\+Hop in a F\+IB entry will erase the F\+IB entry.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000026}{Todo}]change parameter type to \hyperlink{classnfd_1_1Face}{Face}\& \end{DoxyRefDesc}
+
+
+Definition at line 159 of file fib.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/fib.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/fib.\+cpp\end{DoxyCompactItemize}

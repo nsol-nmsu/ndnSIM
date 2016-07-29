@@ -1,0 +1,71 @@
+\hypertarget{classnfd_1_1rib_1_1Nrd}{}\section{nfd\+:\+:rib\+:\+:Nrd Class Reference}
+\label{classnfd_1_1rib_1_1Nrd}\index{nfd\+::rib\+::\+Nrd@{nfd\+::rib\+::\+Nrd}}
+
+
+Class representing N\+RD (N\+FD R\+IB Manager) instance This class can be used to initialize all components of N\+RD.  
+
+
+
+
+{\ttfamily \#include $<$nrd.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:rib\+:\+:Nrd\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1rib_1_1Nrd}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1rib_1_1Nrd_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1rib_1_1Nrd_a63fbb0f5fa0a3ce17d10ab15f1a56d2a}{Nrd} (const std\+::string \&config\+File, \hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \&key\+Chain)\hypertarget{classnfd_1_1rib_1_1Nrd_a63fbb0f5fa0a3ce17d10ab15f1a56d2a}{}\label{classnfd_1_1rib_1_1Nrd_a63fbb0f5fa0a3ce17d10ab15f1a56d2a}
+
+\begin{DoxyCompactList}\small\item\em Create N\+RD instance using absolute or relative path to {\ttfamily config\+File}. \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1rib_1_1Nrd_a0ce62bd0c85c6b2d776b26dd341a47b8}{Nrd} (const Config\+Section \&\hyperlink{classconfig}{config}, \hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \&key\+Chain)
+\begin{DoxyCompactList}\small\item\em Create N\+RD instance using a parsed Config\+Section {\ttfamily config} This version of the constructor is more appropriate for integrated environments, such as N\+S-\/3 or android. \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1rib_1_1Nrd_a0c7f7cde09a1932ac12542191c9b1326}{$\sim$\+Nrd} ()\hypertarget{classnfd_1_1rib_1_1Nrd_a0c7f7cde09a1932ac12542191c9b1326}{}\label{classnfd_1_1rib_1_1Nrd_a0c7f7cde09a1932ac12542191c9b1326}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1Nrd_acd2d364ad2b111e41e823cebb4b82cae}{initialize} ()\hypertarget{classnfd_1_1rib_1_1Nrd_acd2d364ad2b111e41e823cebb4b82cae}{}\label{classnfd_1_1rib_1_1Nrd_acd2d364ad2b111e41e823cebb4b82cae}
+
+\begin{DoxyCompactList}\small\item\em Perform initialization of N\+FD instance After initialization, N\+FD instance can be started by invoking run on global\+Io\+Service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing N\+RD (N\+FD R\+IB Manager) instance This class can be used to initialize all components of N\+RD. 
+
+Definition at line 45 of file nrd.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::rib\+::\+Nrd@{nfd\+::rib\+::\+Nrd}!Nrd@{Nrd}}
+\index{Nrd@{Nrd}!nfd\+::rib\+::\+Nrd@{nfd\+::rib\+::\+Nrd}}
+\subsubsection[{\texorpdfstring{Nrd(const Config\+Section \&config, ndn\+::\+Key\+Chain \&key\+Chain)}{Nrd(const ConfigSection \&config, ndn::KeyChain \&keyChain)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::rib\+::\+Nrd\+::\+Nrd (
+\begin{DoxyParamCaption}
+\item[{const Config\+Section \&}]{config, }
+\item[{{\bf ndn\+::\+Key\+Chain} \&}]{key\+Chain}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1Nrd_a0ce62bd0c85c6b2d776b26dd341a47b8}{}\label{classnfd_1_1rib_1_1Nrd_a0ce62bd0c85c6b2d776b26dd341a47b8}
+
+
+Create N\+RD instance using a parsed Config\+Section {\ttfamily config} This version of the constructor is more appropriate for integrated environments, such as N\+S-\/3 or android. 
+
+\begin{DoxyNote}{Note}
+When using this version of the constructor, error messages will include \char`\"{}internal\+://nfd.\+conf\char`\"{} when referring to configuration errors. 
+\end{DoxyNote}
+
+
+Definition at line 49 of file nrd.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/nrd.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/nrd.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\hypertarget{classnfd_1_1UnixStreamChannel}{}\section{nfd\+:\+:Unix\+Stream\+Channel Class Reference}
+\label{classnfd_1_1UnixStreamChannel}\index{nfd\+::\+Unix\+Stream\+Channel@{nfd\+::\+Unix\+Stream\+Channel}}
+
+
+Class implementing a local channel to create faces.  
+
+
+
+
+{\ttfamily \#include $<$unix-\/stream-\/channel.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Unix\+Stream\+Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1UnixStreamChannel}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnfd_1_1UnixStreamChannel_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em Unix\+Stream\+Channel-\/related error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1UnixStreamChannel_a732ad8738a8c8528c6d1bfd7efad1f9f}{Unix\+Stream\+Channel} (const unix\+\_\+stream\+::\+Endpoint \&endpoint)
+\begin{DoxyCompactList}\small\item\em Create Unix\+Stream channel for the specified endpoint. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1UnixStreamChannel_a384797f0d08b3dee389b62703ebe45c6}{listen} (const \hyperlink{classnfd_1_1Channel_a47f1a8874228ad9dfa38b4e96f6f8d57}{Face\+Created\+Callback} \&on\+Face\+Created, const \hyperlink{classnfd_1_1Channel_a090bac376b438fb150ce740c2839375b}{Connect\+Failed\+Callback} \&on\+Accept\+Failed, int backlog=boost\+::asio\+::local\+::stream\+\_\+protocol\+::acceptor\+::max\+\_\+connections)
+\begin{DoxyCompactList}\small\item\em Enable listening on the local endpoint, accept connections, and create faces when a connection is made. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Listening} () const\hypertarget{classnfd_1_1UnixStreamChannel_a7d2ad099926fa094fa17b65fc4865e38}{}\label{classnfd_1_1UnixStreamChannel_a7d2ad099926fa094fa17b65fc4865e38}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class implementing a local channel to create faces. 
+
+\hyperlink{classnfd_1_1Channel}{Channel} can create faces as a response to incoming I\+PC connections (\hyperlink{classnfd_1_1UnixStreamChannel_a384797f0d08b3dee389b62703ebe45c6}{Unix\+Stream\+Channel\+::listen} needs to be called for that to work). 
+
+Definition at line 42 of file unix-\/stream-\/channel.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::\+Unix\+Stream\+Channel@{nfd\+::\+Unix\+Stream\+Channel}!Unix\+Stream\+Channel@{Unix\+Stream\+Channel}}
+\index{Unix\+Stream\+Channel@{Unix\+Stream\+Channel}!nfd\+::\+Unix\+Stream\+Channel@{nfd\+::\+Unix\+Stream\+Channel}}
+\subsubsection[{\texorpdfstring{Unix\+Stream\+Channel(const unix\+\_\+stream\+::\+Endpoint \&endpoint)}{UnixStreamChannel(const unix\_stream::Endpoint \&endpoint)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::\+Unix\+Stream\+Channel\+::\+Unix\+Stream\+Channel (
+\begin{DoxyParamCaption}
+\item[{const unix\+\_\+stream\+::\+Endpoint \&}]{endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classnfd_1_1UnixStreamChannel_a732ad8738a8c8528c6d1bfd7efad1f9f}{}\label{classnfd_1_1UnixStreamChannel_a732ad8738a8c8528c6d1bfd7efad1f9f}
+
+
+Create Unix\+Stream channel for the specified endpoint. 
+
+To enable creation of faces upon incoming connections, one needs to explicitly call \hyperlink{classnfd_1_1UnixStreamChannel_a384797f0d08b3dee389b62703ebe45c6}{Unix\+Stream\+Channel\+::listen} method. 
+
+Definition at line 37 of file unix-\/stream-\/channel.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Unix\+Stream\+Channel@{nfd\+::\+Unix\+Stream\+Channel}!listen@{listen}}
+\index{listen@{listen}!nfd\+::\+Unix\+Stream\+Channel@{nfd\+::\+Unix\+Stream\+Channel}}
+\subsubsection[{\texorpdfstring{listen(const Face\+Created\+Callback \&on\+Face\+Created, const Connect\+Failed\+Callback \&on\+Accept\+Failed, int backlog=boost\+::asio\+::local\+::stream\+\_\+protocol\+::acceptor\+::max\+\_\+connections)}{listen(const FaceCreatedCallback \&onFaceCreated, const ConnectFailedCallback \&onAcceptFailed, int backlog=boost::asio::local::stream\_protocol::acceptor::max\_connections)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Unix\+Stream\+Channel\+::listen (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Face\+Created, }
+\item[{const {\bf Connect\+Failed\+Callback} \&}]{on\+Accept\+Failed, }
+\item[{int}]{backlog = {\ttfamily boost\+:\+:asio\+:\+:local\+:\+:stream\+\_\+protocol\+:\+:acceptor\+:\+:max\+\_\+connections}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1UnixStreamChannel_a384797f0d08b3dee389b62703ebe45c6}{}\label{classnfd_1_1UnixStreamChannel_a384797f0d08b3dee389b62703ebe45c6}
+
+
+Enable listening on the local endpoint, accept connections, and create faces when a connection is made. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Face\+Created} & Callback to notify successful creation of the face \\
+\hline
+{\em on\+Accept\+Failed} & Callback to notify when channel fails (accept call returns an error) \\
+\hline
+{\em backlog} & The maximum length of the queue of pending incoming connections \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file unix-\/stream-\/channel.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/unix-\/stream-\/channel.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/unix-\/stream-\/channel.\+cpp\end{DoxyCompactItemize}

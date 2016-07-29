@@ -1,0 +1,167 @@
+\hypertarget{classndn_1_1nfd_1_1ControlCommand}{}\section{ndn\+:\+:nfd\+:\+:Control\+Command Class Reference}
+\label{classndn_1_1nfd_1_1ControlCommand}\index{ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}}
+
+
+base class of N\+FD \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command}  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/control-\/command.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:nfd\+:\+:Control\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{classndn_1_1nfd_1_1ControlCommand}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1ArgumentError}{Argument\+Error}
+\begin{DoxyCompactList}\small\item\em represents an error in \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1FieldValidator}{Field\+Validator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1nfd_1_1ControlCommand_a7efcc3711d39f3711ddbffb2c71e751b}{validate\+Request} (const \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters) const
+\begin{DoxyCompactList}\small\item\em validate request parameters \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1nfd_1_1ControlCommand_a6baa3e092320f93cb09df2ed7464baf8}{apply\+Defaults\+To\+Request} (\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters) const\hypertarget{classndn_1_1nfd_1_1ControlCommand_a6baa3e092320f93cb09df2ed7464baf8}{}\label{classndn_1_1nfd_1_1ControlCommand_a6baa3e092320f93cb09df2ed7464baf8}
+
+\begin{DoxyCompactList}\small\item\em apply default values to missing fields in request \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1nfd_1_1ControlCommand_a479414f06f65e7ad819c94e365fa0981}{validate\+Response} (const \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters) const
+\begin{DoxyCompactList}\small\item\em validate response parameters \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1nfd_1_1ControlCommand_a85f0c6e0e4318fe9ed9e372346dc4a7a}{apply\+Defaults\+To\+Response} (\hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters) const\hypertarget{classndn_1_1nfd_1_1ControlCommand_a85f0c6e0e4318fe9ed9e372346dc4a7a}{}\label{classndn_1_1nfd_1_1ControlCommand_a85f0c6e0e4318fe9ed9e372346dc4a7a}
+
+\begin{DoxyCompactList}\small\item\em apply default values to missing fields in response \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1nfd_1_1ControlCommand_a15e3d7d929f606def9762481a3ce36ec}{get\+Request\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&command\+Prefix, const \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters) const
+\begin{DoxyCompactList}\small\item\em construct the \hyperlink{classndn_1_1Name}{Name} for a request \hyperlink{classndn_1_1Interest}{Interest} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Control\+Command} (const std\+::string \&module, const std\+::string \&verb)\hypertarget{classndn_1_1nfd_1_1ControlCommand_a0e0d448267aa4472a88b7103e3090d10}{}\label{classndn_1_1nfd_1_1ControlCommand_a0e0d448267aa4472a88b7103e3090d10}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1FieldValidator}{Field\+Validator} \hyperlink{classndn_1_1nfd_1_1ControlCommand_af936f10c7dbe8edd1af548290d74efb0}{m\+\_\+request\+Validator}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1FieldValidator}{Field\+Validator} for request \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1FieldValidator}{Field\+Validator} \hyperlink{classndn_1_1nfd_1_1ControlCommand_ae8a955d269aef120eb407f9354ce9dbe}{m\+\_\+response\+Validator}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1FieldValidator}{Field\+Validator} for response \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+base class of N\+FD \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/ControlCommand}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Control\+Command} 
+\end{DoxySeeAlso}
+
+
+Definition at line 35 of file nfd-\/control-\/command.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}!get\+Request\+Name@{get\+Request\+Name}}
+\index{get\+Request\+Name@{get\+Request\+Name}!ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}}
+\subsubsection[{\texorpdfstring{get\+Request\+Name(const Name \&command\+Prefix, const Control\+Parameters \&parameters) const}{getRequestName(const Name \&commandPrefix, const ControlParameters \&parameters) const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::nfd\+::\+Control\+Command\+::get\+Request\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{command\+Prefix, }
+\item[{const {\bf Control\+Parameters} \&}]{parameters}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1nfd_1_1ControlCommand_a15e3d7d929f606def9762481a3ce36ec}{}\label{classndn_1_1nfd_1_1ControlCommand_a15e3d7d929f606def9762481a3ce36ec}
+
+
+construct the \hyperlink{classndn_1_1Name}{Name} for a request \hyperlink{classndn_1_1Interest}{Interest} 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1ArgumentError}{Argument\+Error}} & if parameters are invalid \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 57 of file nfd-\/control-\/command.\+cpp.
+
+\index{ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}!validate\+Request@{validate\+Request}}
+\index{validate\+Request@{validate\+Request}!ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}}
+\subsubsection[{\texorpdfstring{validate\+Request(const Control\+Parameters \&parameters) const}{validateRequest(const ControlParameters \&parameters) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::nfd\+::\+Control\+Command\+::validate\+Request (
+\begin{DoxyParamCaption}
+\item[{const {\bf Control\+Parameters} \&}]{parameters}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1nfd_1_1ControlCommand_a7efcc3711d39f3711ddbffb2c71e751b}{}\label{classndn_1_1nfd_1_1ControlCommand_a7efcc3711d39f3711ddbffb2c71e751b}
+
+
+validate request parameters 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1ArgumentError}{Argument\+Error}} & if parameters are invalid \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \hyperlink{classndn_1_1nfd_1_1StrategyChoiceUnsetCommand_a5360f25cb41ea386e0de3f59cb139205}{ndn\+::nfd\+::\+Strategy\+Choice\+Unset\+Command}, \hyperlink{classndn_1_1nfd_1_1FaceLocalControlCommand_aab9e0ea4747e94f2a15121f9533e8d25}{ndn\+::nfd\+::\+Face\+Local\+Control\+Command}, and \hyperlink{classndn_1_1nfd_1_1FaceDestroyCommand_aeac676bf2e0a282bb66401fd0e28bf7d}{ndn\+::nfd\+::\+Face\+Destroy\+Command}.
+
+
+
+Definition at line 35 of file nfd-\/control-\/command.\+cpp.
+
+\index{ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}!validate\+Response@{validate\+Response}}
+\index{validate\+Response@{validate\+Response}!ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}}
+\subsubsection[{\texorpdfstring{validate\+Response(const Control\+Parameters \&parameters) const}{validateResponse(const ControlParameters \&parameters) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::nfd\+::\+Control\+Command\+::validate\+Response (
+\begin{DoxyParamCaption}
+\item[{const {\bf Control\+Parameters} \&}]{parameters}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1nfd_1_1ControlCommand_a479414f06f65e7ad819c94e365fa0981}{}\label{classndn_1_1nfd_1_1ControlCommand_a479414f06f65e7ad819c94e365fa0981}
+
+
+validate response parameters 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1ArgumentError}{Argument\+Error}} & if parameters are invalid \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \hyperlink{classndn_1_1nfd_1_1RibUnregisterCommand_af709649c210d15654a34ef01b436cccb}{ndn\+::nfd\+::\+Rib\+Unregister\+Command}, \hyperlink{classndn_1_1nfd_1_1RibRegisterCommand_a2f0b8f3e6d3e76e24b7e3a92d1e5436c}{ndn\+::nfd\+::\+Rib\+Register\+Command}, \hyperlink{classndn_1_1nfd_1_1StrategyChoiceUnsetCommand_aa8258b5552a202d02b3e997506d4de25}{ndn\+::nfd\+::\+Strategy\+Choice\+Unset\+Command}, \hyperlink{classndn_1_1nfd_1_1FibRemoveNextHopCommand_ab86cd9bd9eb9903c7c76f5f8e636b55a}{ndn\+::nfd\+::\+Fib\+Remove\+Next\+Hop\+Command}, \hyperlink{classndn_1_1nfd_1_1FibAddNextHopCommand_abc246a14883158916698fba84edaf222}{ndn\+::nfd\+::\+Fib\+Add\+Next\+Hop\+Command}, \hyperlink{classndn_1_1nfd_1_1FaceLocalControlCommand_a29f7eaef6c002089a83e46880577518c}{ndn\+::nfd\+::\+Face\+Local\+Control\+Command}, \hyperlink{classndn_1_1nfd_1_1FaceDestroyCommand_a4c1b0b12dce8d11f355231a0ba983e85}{ndn\+::nfd\+::\+Face\+Destroy\+Command}, and \hyperlink{classndn_1_1nfd_1_1FaceCreateCommand_a4863aa04cc67d85d285eb40a38633ef4}{ndn\+::nfd\+::\+Face\+Create\+Command}.
+
+
+
+Definition at line 46 of file nfd-\/control-\/command.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}!m\+\_\+request\+Validator@{m\+\_\+request\+Validator}}
+\index{m\+\_\+request\+Validator@{m\+\_\+request\+Validator}!ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}}
+\subsubsection[{\texorpdfstring{m\+\_\+request\+Validator}{m\_requestValidator}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Field\+Validator} ndn\+::nfd\+::\+Control\+Command\+::m\+\_\+request\+Validator\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classndn_1_1nfd_1_1ControlCommand_af936f10c7dbe8edd1af548290d74efb0}{}\label{classndn_1_1nfd_1_1ControlCommand_af936f10c7dbe8edd1af548290d74efb0}
+
+
+\hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1FieldValidator}{Field\+Validator} for request \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters}. 
+
+Constructor of subclass should populate this validator. 
+
+Definition at line 121 of file nfd-\/control-\/command.\+hpp.
+
+\index{ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}!m\+\_\+response\+Validator@{m\+\_\+response\+Validator}}
+\index{m\+\_\+response\+Validator@{m\+\_\+response\+Validator}!ndn\+::nfd\+::\+Control\+Command@{ndn\+::nfd\+::\+Control\+Command}}
+\subsubsection[{\texorpdfstring{m\+\_\+response\+Validator}{m\_responseValidator}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Field\+Validator} ndn\+::nfd\+::\+Control\+Command\+::m\+\_\+response\+Validator\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classndn_1_1nfd_1_1ControlCommand_ae8a955d269aef120eb407f9354ce9dbe}{}\label{classndn_1_1nfd_1_1ControlCommand_ae8a955d269aef120eb407f9354ce9dbe}
+
+
+\hyperlink{classndn_1_1nfd_1_1ControlCommand_1_1FieldValidator}{Field\+Validator} for response \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters}. 
+
+Constructor of subclass should populate this validator. 
+
+Definition at line 126 of file nfd-\/control-\/command.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/control-\/command.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/control-\/command.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\hypertarget{classndn_1_1security_1_1conf_1_1KeyLocatorChecker}{}\section{ndn\+:\+:security\+:\+:conf\+:\+:Key\+Locator\+Checker Class Reference}
+\label{classndn_1_1security_1_1conf_1_1KeyLocatorChecker}\index{ndn\+::security\+::conf\+::\+Key\+Locator\+Checker@{ndn\+::security\+::conf\+::\+Key\+Locator\+Checker}}
+
+
+\hyperlink{classndn_1_1security_1_1conf_1_1KeyLocatorChecker}{Key\+Locator\+Checker} is one of the classes used by \hyperlink{classndn_1_1ValidatorConfig}{Validator\+Config}.  
+
+
+
+
+{\ttfamily \#include $<$key-\/locator-\/checker.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:security\+:\+:conf\+:\+:Key\+Locator\+Checker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.170324cm]{classndn_1_1security_1_1conf_1_1KeyLocatorChecker}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Relation} \{ {\bfseries R\+E\+L\+A\+T\+I\+O\+N\+\_\+\+E\+Q\+U\+AL}, 
+{\bfseries R\+E\+L\+A\+T\+I\+O\+N\+\_\+\+I\+S\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+OF}, 
+{\bfseries R\+E\+L\+A\+T\+I\+O\+N\+\_\+\+I\+S\+\_\+\+S\+T\+R\+I\+C\+T\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+OF}
+ \}\hypertarget{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_ae68dd51e9bb9305e09c7f44db209f5d7}{}\label{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_ae68dd51e9bb9305e09c7f44db209f5d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries check} (const \hyperlink{classndn_1_1Data}{Data} \&data, const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \&key\+Locator, std\+::string \&fail\+Info)\hypertarget{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_ae3407232aa09497b01c37b5f8df355e0}{}\label{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_ae3407232aa09497b01c37b5f8df355e0}
+
+\item 
+bool {\bfseries check} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \&key\+Locator, std\+::string \&fail\+Info)\hypertarget{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_abbf30cf2f3b64fdf9d9388ec8dc62126}{}\label{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_abbf30cf2f3b64fdf9d9388ec8dc62126}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries check} (const \hyperlink{classndn_1_1Name}{Name} \&packet\+Name, const \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} \&key\+Locator, std\+::string \&fail\+Info)=0\hypertarget{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_a5125f8c02082fa6f4aadbc5d83ae5696}{}\label{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_a5125f8c02082fa6f4aadbc5d83ae5696}
+
+\item 
+bool {\bfseries check\+Relation} (const Relation \&relation, const \hyperlink{classndn_1_1Name}{Name} \&name1, const \hyperlink{classndn_1_1Name}{Name} \&name2)\hypertarget{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_a97fc5059773c6fc70d384f22499b61f5}{}\label{classndn_1_1security_1_1conf_1_1KeyLocatorChecker_a97fc5059773c6fc70d384f22499b61f5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1security_1_1conf_1_1KeyLocatorChecker}{Key\+Locator\+Checker} is one of the classes used by \hyperlink{classndn_1_1ValidatorConfig}{Validator\+Config}. 
+
+The \hyperlink{classndn_1_1ValidatorConfig}{Validator\+Config} class consists of a set of rules. The \hyperlink{classndn_1_1security_1_1conf_1_1KeyLocatorChecker}{Key\+Locator\+Checker} class is part of a rule and is used to check if the \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} field of a packet satisfy the requirements. 
+
+Definition at line 51 of file key-\/locator-\/checker.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/conf/key-\/locator-\/checker.\+hpp\end{DoxyCompactItemize}

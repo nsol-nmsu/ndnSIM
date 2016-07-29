@@ -1,0 +1,61 @@
+\hypertarget{classnfd_1_1SegmentPublisher}{}\section{nfd\+:\+:Segment\+Publisher$<$ Face\+Base $>$ Class Template Reference}
+\label{classnfd_1_1SegmentPublisher}\index{nfd\+::\+Segment\+Publisher$<$ Face\+Base $>$@{nfd\+::\+Segment\+Publisher$<$ Face\+Base $>$}}
+
+
+provides a publisher of Status Dataset or other segmented octet stream  
+
+
+
+
+{\ttfamily \#include $<$segment-\/publisher.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Segment\+Publisher$<$ Face\+Base $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1SegmentPublisher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Segment\+Publisher} (Face\+Base \&face, const \hyperlink{classndn_1_1Name}{Name} \&prefix, \hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \&key\+Chain, const time\+::milliseconds \&freshness\+Period=get\+Default\+Freshness())\hypertarget{classnfd_1_1SegmentPublisher_a46931e4de442961831e1c21ffeba3426}{}\label{classnfd_1_1SegmentPublisher_a46931e4de442961831e1c21ffeba3426}
+
+\item 
+void {\bfseries publish} ()\hypertarget{classnfd_1_1SegmentPublisher_a81ce3ad82ac679313edcc7f2e271222b}{}\label{classnfd_1_1SegmentPublisher_a81ce3ad82ac679313edcc7f2e271222b}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t {\bfseries get\+Max\+Segment\+Size} ()\hypertarget{classnfd_1_1SegmentPublisher_a6d5d152fb9cd17bdd35ef2399e4ec72c}{}\label{classnfd_1_1SegmentPublisher_a6d5d152fb9cd17bdd35ef2399e4ec72c}
+
+\item 
+static constexpr time\+::milliseconds {\bfseries get\+Default\+Freshness} ()\hypertarget{classnfd_1_1SegmentPublisher_a0757ccc18742681aed6f1b3036b40b32}{}\label{classnfd_1_1SegmentPublisher_a0757ccc18742681aed6f1b3036b40b32}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual size\+\_\+t \hyperlink{classnfd_1_1SegmentPublisher_a7d83ea5b2b9f1aab3ee00469aca16d58}{generate} (ndn\+::\+Encoding\+Buffer \&out\+Buffer)=0\hypertarget{classnfd_1_1SegmentPublisher_a7d83ea5b2b9f1aab3ee00469aca16d58}{}\label{classnfd_1_1SegmentPublisher_a7d83ea5b2b9f1aab3ee00469aca16d58}
+
+\begin{DoxyCompactList}\small\item\em In a derived class, write the octets into out\+Buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Face\+Base$>$\\*
+class nfd\+::\+Segment\+Publisher$<$ Face\+Base $>$}
+
+provides a publisher of Status Dataset or other segmented octet stream 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/StatusDataset}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Status\+Dataset} 
+\end{DoxySeeAlso}
+
+
+Definition at line 40 of file segment-\/publisher.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/core/segment-\/publisher.\+hpp\end{DoxyCompactItemize}

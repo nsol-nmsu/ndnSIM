@@ -1,0 +1,135 @@
+\hypertarget{classnfd_1_1tests_1_1LimitedIo}{}\section{nfd\+:\+:tests\+:\+:Limited\+Io Class Reference}
+\label{classnfd_1_1tests_1_1LimitedIo}\index{nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}}
+
+
+provides IO operations limit and/or time limit for unit testing  
+
+
+
+
+{\ttfamily \#include $<$limited-\/io.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:tests\+:\+:Limited\+Io\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1tests_1_1LimitedIo}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3}{Stop\+Reason} \{ \hyperlink{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3adba390cf6fd1660870ce5190a7aaf610}{N\+O\+\_\+\+W\+O\+RK}, 
+\hyperlink{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3a8711760959e8bda432c512032054012c}{E\+X\+C\+E\+E\+D\+\_\+\+O\+PS}, 
+\hyperlink{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3ab46a7a46c20f25a2980a518c070f526a}{E\+X\+C\+E\+E\+D\+\_\+\+T\+I\+ME}, 
+\hyperlink{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3a6e956ccf8acf978942ab68d04ddb5deb}{E\+X\+C\+E\+P\+T\+I\+ON}
+ \}\begin{DoxyCompactList}\small\item\em indicates why .run returns \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1tests_1_1LimitedIo_ac6439ea56d2e60cf4264f90728ee4b19}{Limited\+Io} (\hyperlink{classnfd_1_1tests_1_1UnitTestTimeFixture}{Unit\+Test\+Time\+Fixture} $\ast$uttf)\hypertarget{classnfd_1_1tests_1_1LimitedIo_ac6439ea56d2e60cf4264f90728ee4b19}{}\label{classnfd_1_1tests_1_1LimitedIo_ac6439ea56d2e60cf4264f90728ee4b19}
+
+\begin{DoxyCompactList}\small\item\em construct with \hyperlink{classnfd_1_1tests_1_1UnitTestTimeFixture}{Unit\+Test\+Time\+Fixture} \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3}{Stop\+Reason} \hyperlink{classnfd_1_1tests_1_1LimitedIo_a141fc07273128fab881105214beb7e92}{run} (int n\+Ops\+Limit, const time\+::nanoseconds \&time\+Limit, const time\+::nanoseconds \&tick=time\+::milliseconds(1))
+\begin{DoxyCompactList}\small\item\em g\+\_\+io.\+run() with operation count and/or time limit \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1tests_1_1LimitedIo_ad5920fbb88db8b67f1e0c5444bbb7c95}{after\+Op} ()\hypertarget{classnfd_1_1tests_1_1LimitedIo_ad5920fbb88db8b67f1e0c5444bbb7c95}{}\label{classnfd_1_1tests_1_1LimitedIo_ad5920fbb88db8b67f1e0c5444bbb7c95}
+
+\begin{DoxyCompactList}\small\item\em count an operation \end{DoxyCompactList}\item 
+const std\+::exception \& {\bfseries get\+Last\+Exception} () const\hypertarget{classnfd_1_1tests_1_1LimitedIo_abfca3fc6d244fefa4782339ff5004164}{}\label{classnfd_1_1tests_1_1LimitedIo_abfca3fc6d244fefa4782339ff5004164}
+
+\item 
+void \hyperlink{classnfd_1_1tests_1_1LimitedIo_aee68ffc90812a46771df78271b349921}{defer} (const time\+::nanoseconds \&d)
+\begin{DoxyCompactList}\small\item\em defer for specified duration \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bfseries U\+N\+L\+I\+M\+I\+T\+E\+D\+\_\+\+O\+PS} = std\+::numeric\+\_\+limits$<$int$>$\+::max()\hypertarget{classnfd_1_1tests_1_1LimitedIo_a7860e2c6f71684afecffbd5f19ccaed3}{}\label{classnfd_1_1tests_1_1LimitedIo_a7860e2c6f71684afecffbd5f19ccaed3}
+
+\item 
+static const time\+::nanoseconds {\bfseries U\+N\+L\+I\+M\+I\+T\+E\+D\+\_\+\+T\+I\+ME} = time\+::nanoseconds\+::min()\hypertarget{classnfd_1_1tests_1_1LimitedIo_a61351a86c02f38bb5ca0fb094f6cf607}{}\label{classnfd_1_1tests_1_1LimitedIo_a61351a86c02f38bb5ca0fb094f6cf607}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provides IO operations limit and/or time limit for unit testing 
+
+Definition at line 38 of file limited-\/io.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}!Stop\+Reason@{Stop\+Reason}}
+\index{Stop\+Reason@{Stop\+Reason}!nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}}
+\subsubsection[{\texorpdfstring{Stop\+Reason}{StopReason}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf nfd\+::tests\+::\+Limited\+Io\+::\+Stop\+Reason}}\hypertarget{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3}{}\label{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3}
+
+
+indicates why .run returns 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+O\+\_\+\+W\+O\+RK@{N\+O\+\_\+\+W\+O\+RK}!nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}}\index{nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}!N\+O\+\_\+\+W\+O\+RK@{N\+O\+\_\+\+W\+O\+RK}}\item[{\em 
+N\+O\+\_\+\+W\+O\+RK\hypertarget{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3adba390cf6fd1660870ce5190a7aaf610}{}\label{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3adba390cf6fd1660870ce5190a7aaf610}
+}]g\+\_\+io.\+run() returns normally because there\textquotesingle{}s no work to do \index{E\+X\+C\+E\+E\+D\+\_\+\+O\+PS@{E\+X\+C\+E\+E\+D\+\_\+\+O\+PS}!nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}}\index{nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}!E\+X\+C\+E\+E\+D\+\_\+\+O\+PS@{E\+X\+C\+E\+E\+D\+\_\+\+O\+PS}}\item[{\em 
+E\+X\+C\+E\+E\+D\+\_\+\+O\+PS\hypertarget{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3a8711760959e8bda432c512032054012c}{}\label{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3a8711760959e8bda432c512032054012c}
+}].\hyperlink{classnfd_1_1tests_1_1LimitedIo_ad5920fbb88db8b67f1e0c5444bbb7c95}{after\+Op()} has been invoked n\+Ops\+Limit times \index{E\+X\+C\+E\+E\+D\+\_\+\+T\+I\+ME@{E\+X\+C\+E\+E\+D\+\_\+\+T\+I\+ME}!nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}}\index{nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}!E\+X\+C\+E\+E\+D\+\_\+\+T\+I\+ME@{E\+X\+C\+E\+E\+D\+\_\+\+T\+I\+ME}}\item[{\em 
+E\+X\+C\+E\+E\+D\+\_\+\+T\+I\+ME\hypertarget{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3ab46a7a46c20f25a2980a518c070f526a}{}\label{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3ab46a7a46c20f25a2980a518c070f526a}
+}]n\+Time\+Limit has elapsed \index{E\+X\+C\+E\+P\+T\+I\+ON@{E\+X\+C\+E\+P\+T\+I\+ON}!nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}}\index{nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}!E\+X\+C\+E\+P\+T\+I\+ON@{E\+X\+C\+E\+P\+T\+I\+ON}}\item[{\em 
+E\+X\+C\+E\+P\+T\+I\+ON\hypertarget{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3a6e956ccf8acf978942ab68d04ddb5deb}{}\label{classnfd_1_1tests_1_1LimitedIo_adbe63f8389fb55a9267d5291c48319c3a6e956ccf8acf978942ab68d04ddb5deb}
+}]an exception is thrown \end{description}
+\end{Desc}
+
+
+Definition at line 48 of file limited-\/io.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}!defer@{defer}}
+\index{defer@{defer}!nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}}
+\subsubsection[{\texorpdfstring{defer(const time\+::nanoseconds \&d)}{defer(const time::nanoseconds \&d)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::tests\+::\+Limited\+Io\+::defer (
+\begin{DoxyParamCaption}
+\item[{const time\+::nanoseconds \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1tests_1_1LimitedIo_aee68ffc90812a46771df78271b349921}{}\label{classnfd_1_1tests_1_1LimitedIo_aee68ffc90812a46771df78271b349921}
+
+
+defer for specified duration 
+
+equivalent to .run(\+U\+N\+L\+I\+M\+I\+T\+E\+D\+\_\+\+O\+P\+S, d) 
+
+Definition at line 82 of file limited-\/io.\+hpp.
+
+\index{nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}!run@{run}}
+\index{run@{run}!nfd\+::tests\+::\+Limited\+Io@{nfd\+::tests\+::\+Limited\+Io}}
+\subsubsection[{\texorpdfstring{run(int n\+Ops\+Limit, const time\+::nanoseconds \&time\+Limit, const time\+::nanoseconds \&tick=time\+::milliseconds(1))}{run(int nOpsLimit, const time::nanoseconds \&timeLimit, const time::nanoseconds \&tick=time::milliseconds(1))}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Limited\+Io\+::\+Stop\+Reason} nfd\+::tests\+::\+Limited\+Io\+::run (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Ops\+Limit, }
+\item[{const time\+::nanoseconds \&}]{time\+Limit, }
+\item[{const time\+::nanoseconds \&}]{tick = {\ttfamily time\+:\+:milliseconds(1)}}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1tests_1_1LimitedIo_a141fc07273128fab881105214beb7e92}{}\label{classnfd_1_1tests_1_1LimitedIo_a141fc07273128fab881105214beb7e92}
+
+
+g\+\_\+io.\+run() with operation count and/or time limit 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Ops\+Limit} & operation count limit, pass U\+N\+L\+I\+M\+I\+T\+E\+D\+\_\+\+O\+PS for no limit \\
+\hline
+{\em time\+Limit} & time limit, pass U\+N\+L\+I\+M\+I\+T\+E\+D\+\_\+\+T\+I\+ME for no limit \\
+\hline
+{\em tick} & if this \hyperlink{classnfd_1_1tests_1_1LimitedIo}{Limited\+Io} is constructed with \hyperlink{classnfd_1_1tests_1_1UnitTestTimeFixture}{Unit\+Test\+Time\+Fixture}, this is passed to .advance\+Clocks(), otherwise ignored \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file limited-\/io.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/limited-\/io.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/limited-\/io.\+cpp\end{DoxyCompactItemize}

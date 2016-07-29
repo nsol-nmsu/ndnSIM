@@ -1,0 +1,221 @@
+\hypertarget{classnfdc_1_1Nfdc}{}\section{nfdc\+:\+:Nfdc Class Reference}
+\label{classnfdc_1_1Nfdc}\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+Inheritance diagram for nfdc\+:\+:Nfdc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfdc_1_1Nfdc}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfdc_1_1Nfdc_1_1Error}{Error}
+\item 
+class \hyperlink{classnfdc_1_1Nfdc_1_1FaceIdFetcher}{Face\+Id\+Fetcher}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Nfdc} (\hyperlink{classndn_1_1Face}{ndn\+::\+Face} \&face)\hypertarget{classnfdc_1_1Nfdc_ad3febaa55711bc50a4559dcab5f902ce}{}\label{classnfdc_1_1Nfdc_ad3febaa55711bc50a4559dcab5f902ce}
+
+\item 
+bool {\bfseries dispatch} (const std\+::string \&cmd)\hypertarget{classnfdc_1_1Nfdc_ad2bcb22925037193bf209985eebf7a30}{}\label{classnfdc_1_1Nfdc_ad2bcb22925037193bf209985eebf7a30}
+
+\item 
+void \hyperlink{classnfdc_1_1Nfdc_a263c05fe12729146b99480d6b0c31cc1}{fib\+Add\+Next\+Hop} ()
+\begin{DoxyCompactList}\small\item\em Adds a nexthop to a F\+IB entry. \end{DoxyCompactList}\item 
+void \hyperlink{classnfdc_1_1Nfdc_a11236dbfbcb3ead96cead12756ec9501}{fib\+Remove\+Next\+Hop} ()
+\begin{DoxyCompactList}\small\item\em Removes a nexthop from an existing F\+IB entry. \end{DoxyCompactList}\item 
+void \hyperlink{classnfdc_1_1Nfdc_ace29388d8001dc8b98f184ddb5d2b6d8}{rib\+Register\+Prefix} ()
+\begin{DoxyCompactList}\small\item\em Registers name to the given face\+Id or face\+Uri. \end{DoxyCompactList}\item 
+void \hyperlink{classnfdc_1_1Nfdc_a512d31343edffd32bb33162b735a0a76}{rib\+Unregister\+Prefix} ()
+\begin{DoxyCompactList}\small\item\em Unregisters name from the given face\+Id/face\+Uri. \end{DoxyCompactList}\item 
+void \hyperlink{classnfdc_1_1Nfdc_a32265a4addbb381b233f7157afd8c68c}{face\+Create} ()
+\begin{DoxyCompactList}\small\item\em Creates new face. \end{DoxyCompactList}\item 
+void \hyperlink{classnfdc_1_1Nfdc_a9ff70019cf602a7c1ef511784b7b520e}{face\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroys face. \end{DoxyCompactList}\item 
+void \hyperlink{classnfdc_1_1Nfdc_ab1a957c98a28ac8c4631f1971abc3b88}{strategy\+Choice\+Set} ()
+\begin{DoxyCompactList}\small\item\em Sets the strategy for a namespace. \end{DoxyCompactList}\item 
+void \hyperlink{classnfdc_1_1Nfdc_aa62591be3bb9d3e6e4c8be6d0b79eefe}{strategy\+Choice\+Unset} ()
+\begin{DoxyCompactList}\small\item\em Unset the strategy for a namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ {\bfseries m\+\_\+program\+Name}\hypertarget{classnfdc_1_1Nfdc_a20730ca8aafce5ef966fdbccabb3978b}{}\label{classnfdc_1_1Nfdc_a20730ca8aafce5ef966fdbccabb3978b}
+
+\item 
+const char $\ast$const  $\ast$ {\bfseries m\+\_\+command\+Line\+Arguments}\hypertarget{classnfdc_1_1Nfdc_ad98e4c597b9e77f6f6c03bbd17ba8b8d}{}\label{classnfdc_1_1Nfdc_ad98e4c597b9e77f6f6c03bbd17ba8b8d}
+
+\item 
+int {\bfseries m\+\_\+n\+Options}\hypertarget{classnfdc_1_1Nfdc_aa1c8b79372608ae19371dbc3c6c3fab5}{}\label{classnfdc_1_1Nfdc_aa1c8b79372608ae19371dbc3c6c3fab5}
+
+\item 
+uint64\+\_\+t {\bfseries m\+\_\+flags}\hypertarget{classnfdc_1_1Nfdc_a57b597d3090790bfa476ede000dd99bc}{}\label{classnfdc_1_1Nfdc_a57b597d3090790bfa476ede000dd99bc}
+
+\item 
+uint64\+\_\+t {\bfseries m\+\_\+cost}\hypertarget{classnfdc_1_1Nfdc_ad74d372b3902484179140cd7de68360f}{}\label{classnfdc_1_1Nfdc_ad74d372b3902484179140cd7de68360f}
+
+\item 
+uint64\+\_\+t {\bfseries m\+\_\+face\+Id}\hypertarget{classnfdc_1_1Nfdc_ae770fe8a351118c87fbbd0ebd5a1a9ea}{}\label{classnfdc_1_1Nfdc_ae770fe8a351118c87fbbd0ebd5a1a9ea}
+
+\item 
+uint64\+\_\+t {\bfseries m\+\_\+origin}\hypertarget{classnfdc_1_1Nfdc_ab5cc4398d69e0892d463b30d00a6cdfb}{}\label{classnfdc_1_1Nfdc_ab5cc4398d69e0892d463b30d00a6cdfb}
+
+\item 
+ndn\+::time\+::milliseconds {\bfseries m\+\_\+expires}\hypertarget{classnfdc_1_1Nfdc_a6129b1d15b8ddf9dbb12d38a8d86a68f}{}\label{classnfdc_1_1Nfdc_a6129b1d15b8ddf9dbb12d38a8d86a68f}
+
+\item 
+std\+::string {\bfseries m\+\_\+name}\hypertarget{classnfdc_1_1Nfdc_ae43ce0fc02d868549679413d14dcfcf7}{}\label{classnfdc_1_1Nfdc_ae43ce0fc02d868549679413d14dcfcf7}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const ndn\+::time\+::milliseconds {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+OD} = ndn\+::time\+::milliseconds\+::max()\hypertarget{classnfdc_1_1Nfdc_a26e3782d15e46ed5b286f0924017b6e1}{}\label{classnfdc_1_1Nfdc_a26e3782d15e46ed5b286f0924017b6e1}
+
+\item 
+static const uint64\+\_\+t {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+ST} = 0\hypertarget{classnfdc_1_1Nfdc_ade835283748afb9117f3fd64268e0eda}{}\label{classnfdc_1_1Nfdc_ade835283748afb9117f3fd64268e0eda}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 40 of file nfdc.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}!face\+Create@{face\+Create}}
+\index{face\+Create@{face\+Create}!nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+\subsubsection[{\texorpdfstring{face\+Create()}{faceCreate()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::face\+Create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfdc_1_1Nfdc_a32265a4addbb381b233f7157afd8c68c}{}\label{classnfdc_1_1Nfdc_a32265a4addbb381b233f7157afd8c68c}
+
+
+Creates new face. 
+
+This command allows creation of U\+DP unicast and T\+CP faces only
+
+cmd format\+: uri 
+
+Definition at line 429 of file nfdc.\+cpp.
+
+\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}!face\+Destroy@{face\+Destroy}}
+\index{face\+Destroy@{face\+Destroy}!nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+\subsubsection[{\texorpdfstring{face\+Destroy()}{faceDestroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::face\+Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfdc_1_1Nfdc_a9ff70019cf602a7c1ef511784b7b520e}{}\label{classnfdc_1_1Nfdc_a9ff70019cf602a7c1ef511784b7b520e}
+
+
+Destroys face. 
+
+cmd format\+: face\+Id$\vert$face\+Uri 
+
+Definition at line 457 of file nfdc.\+cpp.
+
+\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}!fib\+Add\+Next\+Hop@{fib\+Add\+Next\+Hop}}
+\index{fib\+Add\+Next\+Hop@{fib\+Add\+Next\+Hop}!nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+\subsubsection[{\texorpdfstring{fib\+Add\+Next\+Hop()}{fibAddNextHop()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::fib\+Add\+Next\+Hop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfdc_1_1Nfdc_a263c05fe12729146b99480d6b0c31cc1}{}\label{classnfdc_1_1Nfdc_a263c05fe12729146b99480d6b0c31cc1}
+
+
+Adds a nexthop to a F\+IB entry. 
+
+If the F\+IB entry does not exist, it is inserted automatically
+
+cmd format\+: \mbox{[}-\/c cost\mbox{]} name face\+Id$\vert$face\+Uri 
+
+Definition at line 317 of file nfdc.\+cpp.
+
+\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}!fib\+Remove\+Next\+Hop@{fib\+Remove\+Next\+Hop}}
+\index{fib\+Remove\+Next\+Hop@{fib\+Remove\+Next\+Hop}!nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+\subsubsection[{\texorpdfstring{fib\+Remove\+Next\+Hop()}{fibRemoveNextHop()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::fib\+Remove\+Next\+Hop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfdc_1_1Nfdc_a11236dbfbcb3ead96cead12756ec9501}{}\label{classnfdc_1_1Nfdc_a11236dbfbcb3ead96cead12756ec9501}
+
+
+Removes a nexthop from an existing F\+IB entry. 
+
+If the last nexthop record in a F\+IB entry is removed, the F\+IB entry is also deleted
+
+cmd format\+: name face\+Id 
+
+Definition at line 341 of file nfdc.\+cpp.
+
+\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}!rib\+Register\+Prefix@{rib\+Register\+Prefix}}
+\index{rib\+Register\+Prefix@{rib\+Register\+Prefix}!nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+\subsubsection[{\texorpdfstring{rib\+Register\+Prefix()}{ribRegisterPrefix()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::rib\+Register\+Prefix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfdc_1_1Nfdc_ace29388d8001dc8b98f184ddb5d2b6d8}{}\label{classnfdc_1_1Nfdc_ace29388d8001dc8b98f184ddb5d2b6d8}
+
+
+Registers name to the given face\+Id or face\+Uri. 
+
+cmd format\+: \mbox{[}-\/I\mbox{]} \mbox{[}-\/C\mbox{]} \mbox{[}-\/c cost\mbox{]} name face\+Id$\vert$face\+Uri 
+
+Definition at line 364 of file nfdc.\+cpp.
+
+\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}!rib\+Unregister\+Prefix@{rib\+Unregister\+Prefix}}
+\index{rib\+Unregister\+Prefix@{rib\+Unregister\+Prefix}!nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+\subsubsection[{\texorpdfstring{rib\+Unregister\+Prefix()}{ribUnregisterPrefix()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::rib\+Unregister\+Prefix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfdc_1_1Nfdc_a512d31343edffd32bb33162b735a0a76}{}\label{classnfdc_1_1Nfdc_a512d31343edffd32bb33162b735a0a76}
+
+
+Unregisters name from the given face\+Id/face\+Uri. 
+
+cmd format\+: name face\+Id/face\+Uri 
+
+Definition at line 393 of file nfdc.\+cpp.
+
+\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}!strategy\+Choice\+Set@{strategy\+Choice\+Set}}
+\index{strategy\+Choice\+Set@{strategy\+Choice\+Set}!nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+\subsubsection[{\texorpdfstring{strategy\+Choice\+Set()}{strategyChoiceSet()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::strategy\+Choice\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfdc_1_1Nfdc_ab1a957c98a28ac8c4631f1971abc3b88}{}\label{classnfdc_1_1Nfdc_ab1a957c98a28ac8c4631f1971abc3b88}
+
+
+Sets the strategy for a namespace. 
+
+cmd format\+: name strategy 
+
+Definition at line 477 of file nfdc.\+cpp.
+
+\index{nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}!strategy\+Choice\+Unset@{strategy\+Choice\+Unset}}
+\index{strategy\+Choice\+Unset@{strategy\+Choice\+Unset}!nfdc\+::\+Nfdc@{nfdc\+::\+Nfdc}}
+\subsubsection[{\texorpdfstring{strategy\+Choice\+Unset()}{strategyChoiceUnset()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfdc\+::\+Nfdc\+::strategy\+Choice\+Unset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfdc_1_1Nfdc_aa62591be3bb9d3e6e4c8be6d0b79eefe}{}\label{classnfdc_1_1Nfdc_aa62591be3bb9d3e6e4c8be6d0b79eefe}
+
+
+Unset the strategy for a namespace. 
+
+cmd format\+: name strategy 
+
+Definition at line 495 of file nfdc.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/nfdc.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/nfdc.\+cpp\end{DoxyCompactItemize}

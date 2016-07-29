@@ -1,0 +1,244 @@
+\hypertarget{classndn_1_1MetaInfo}{}\section{ndn\+:\+:Meta\+Info Class Reference}
+\label{classndn_1_1MetaInfo}\index{ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}}
+
+
+{\ttfamily \#include $<$meta-\/info.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1MetaInfo_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1MetaInfo_ae27aba59adaf71130809d705be43fb8b}{Meta\+Info} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1MetaInfo_ae27aba59adaf71130809d705be43fb8b}{}\label{classndn_1_1MetaInfo_ae27aba59adaf71130809d705be43fb8b}
+
+\begin{DoxyCompactList}\small\item\em Create from wire encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t {\bfseries wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const\hypertarget{classndn_1_1MetaInfo_ac046b0042190a5366a28bd8e0f15b549}{}\label{classndn_1_1MetaInfo_ac046b0042190a5366a28bd8e0f15b549}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& {\bfseries wire\+Encode} () const\hypertarget{classndn_1_1MetaInfo_a9a8ed0a3bba525f0a333ebba074c24d2}{}\label{classndn_1_1MetaInfo_a9a8ed0a3bba525f0a333ebba074c24d2}
+
+\item 
+void \hyperlink{classndn_1_1MetaInfo_a17dc52b30e227d97f3e31394c013c1fa}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\item 
+uint32\+\_\+t {\bfseries get\+Type} () const\hypertarget{classndn_1_1MetaInfo_ad77be09078e54f9ed5ecdbacdb1d97ab}{}\label{classndn_1_1MetaInfo_ad77be09078e54f9ed5ecdbacdb1d97ab}
+
+\item 
+\hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \& \hyperlink{classndn_1_1MetaInfo_a6df94440a24ff6778d2d8bc2a13816e9}{set\+Type} (uint32\+\_\+t type)
+\begin{DoxyCompactList}\small\item\em set Content\+Type \end{DoxyCompactList}\item 
+const time\+::milliseconds \& {\bfseries get\+Freshness\+Period} () const\hypertarget{classndn_1_1MetaInfo_adc93e8e49551fc10eb439923d4c7a712}{}\label{classndn_1_1MetaInfo_adc93e8e49551fc10eb439923d4c7a712}
+
+\item 
+\hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \& {\bfseries set\+Freshness\+Period} (const time\+::milliseconds \&freshness\+Period)\hypertarget{classndn_1_1MetaInfo_a700ea635f94fb8ec1e0f0b09a72b65eb}{}\label{classndn_1_1MetaInfo_a700ea635f94fb8ec1e0f0b09a72b65eb}
+
+\item 
+const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \& {\bfseries get\+Final\+Block\+Id} () const\hypertarget{classndn_1_1MetaInfo_af371ed43ca8a59f89f2c97fd5fbf298b}{}\label{classndn_1_1MetaInfo_af371ed43ca8a59f89f2c97fd5fbf298b}
+
+\item 
+\hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \& {\bfseries set\+Final\+Block\+Id} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&final\+Block\+Id)\hypertarget{classndn_1_1MetaInfo_ae64c04d0b5251847e4fc670fe7239c23}{}\label{classndn_1_1MetaInfo_ae64c04d0b5251847e4fc670fe7239c23}
+
+\item 
+const std\+::list$<$ \hyperlink{classndn_1_1Block}{Block} $>$ \& \hyperlink{classndn_1_1MetaInfo_adfda91bf9c51c47a15f24005e13f224e}{get\+App\+Meta\+Info} () const
+\begin{DoxyCompactList}\small\item\em Get all app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} items. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \& \hyperlink{classndn_1_1MetaInfo_a6a65c2ce327d81ea2f19d089010d4d08}{set\+App\+Meta\+Info} (const std\+::list$<$ \hyperlink{classndn_1_1Block}{Block} $>$ \&info)
+\begin{DoxyCompactList}\small\item\em Set app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} items. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \& \hyperlink{classndn_1_1MetaInfo_a67f61b669bb025ffad7b9c960c61c821}{add\+App\+Meta\+Info} (const \hyperlink{classndn_1_1Block}{Block} \&block)
+\begin{DoxyCompactList}\small\item\em Add an app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} item. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1MetaInfo_aff0dfe058a669d717ed57322531cd974}{remove\+App\+Meta\+Info} (uint32\+\_\+t tlv\+Type)
+\begin{DoxyCompactList}\small\item\em Remove a first app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} item with type {\ttfamily tlv\+Type}. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} $\ast$ \hyperlink{classndn_1_1MetaInfo_aa2c999c783dd3d0078d495418df5c40e}{find\+App\+Meta\+Info} (uint32\+\_\+t tlv\+Type) const
+\begin{DoxyCompactList}\small\item\em Find a first app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} item of type {\ttfamily tlv\+Type}. \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \&other) const\hypertarget{classndn_1_1MetaInfo_aac1c87fb66feb3def2cd04a9903a8ee3}{}\label{classndn_1_1MetaInfo_aac1c87fb66feb3def2cd04a9903a8ee3}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \&other) const\hypertarget{classndn_1_1MetaInfo_a1b4ea8eb036a34837e9d7362678a203c}{}\label{classndn_1_1MetaInfo_a1b4ea8eb036a34837e9d7362678a203c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} holds the meta info which is signed inside the data packet.
+
+The class allows experimentation with application-\/defined meta information blocks, which slightly violates N\+D\+N-\/\+T\+LV specification. When using the application-\/defined meta information blocks be aware that this may result in packet drop (N\+FD and previous versions of ndn-\/cxx will gracefully accept such packet).
+
+The following definition of \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} block is assumed in this implementation (compared to the N\+D\+N-\/\+T\+LV spec, definition extended to allow optional App\+Meta\+Info T\+LV blocks)\+: \begin{DoxyVerb}MetaInfo ::= META-INFO-TYPE TLV-LENGTH
+               ContentType?
+               FreshnessPeriod?
+               FinalBlockId?
+               AppMetaInfo*
+
+AppMetaInfo ::= any TLV block with type in the restricted application range [128, 252]
+\end{DoxyVerb}
+
+
+Note that App\+Meta\+Info blocks are application-\/defined and must have T\+LV type from the restricted application range \mbox{[}128, 252\mbox{]}. 
+
+Definition at line 56 of file meta-\/info.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}!add\+App\+Meta\+Info@{add\+App\+Meta\+Info}}
+\index{add\+App\+Meta\+Info@{add\+App\+Meta\+Info}!ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}}
+\subsubsection[{\texorpdfstring{add\+App\+Meta\+Info(const Block \&block)}{addAppMetaInfo(const Block \&block)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Info} \& ndn\+::\+Meta\+Info\+::add\+App\+Meta\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1MetaInfo_a67f61b669bb025ffad7b9c960c61c821}{}\label{classndn_1_1MetaInfo_a67f61b669bb025ffad7b9c960c61c821}
+
+
+Add an app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} item. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1MetaInfo_1_1Error}{Error}} & if {\ttfamily block} has type not in the application range (\href{http://named-data.net/doc/ndn-tlv/types.html}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/types.\+html})\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+Warning\+: Experimental A\+PI, which may change or disappear in the future
+
+If \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} is decoded from wire and set\+Type, set\+Freshness\+Period, or set\+Final\+Block\+Id is called before $\ast$\+App\+Meta\+Info, all app-\/defined blocks will be lost 
+\end{DoxyNote}
+
+
+Definition at line 91 of file meta-\/info.\+cpp.
+
+\index{ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}!find\+App\+Meta\+Info@{find\+App\+Meta\+Info}}
+\index{find\+App\+Meta\+Info@{find\+App\+Meta\+Info}!ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}}
+\subsubsection[{\texorpdfstring{find\+App\+Meta\+Info(uint32\+\_\+t tlv\+Type) const}{findAppMetaInfo(uint32\_t tlvType) const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block} $\ast$ ndn\+::\+Meta\+Info\+::find\+App\+Meta\+Info (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{tlv\+Type}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1MetaInfo_aa2c999c783dd3d0078d495418df5c40e}{}\label{classndn_1_1MetaInfo_aa2c999c783dd3d0078d495418df5c40e}
+
+
+Find a first app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} item of type {\ttfamily tlv\+Type}. 
+
+\begin{DoxyReturn}{Returns}
+N\+U\+LL if an item is not found, otherwise const pointer to the item
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1MetaInfo_1_1Error}{Error}} & if {\ttfamily tlv\+Type} is not in the application range (\href{http://named-data.net/doc/ndn-tlv/types.html}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/types.\+html})\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+Warning\+: Experimental A\+PI, which may change or disappear in the future
+
+If \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} is decoded from wire and set\+Type, set\+Freshness\+Period, or set\+Final\+Block\+Id is called before $\ast$\+App\+Meta\+Info, all app-\/defined blocks will be lost 
+\end{DoxyNote}
+
+
+Definition at line 117 of file meta-\/info.\+cpp.
+
+\index{ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}!get\+App\+Meta\+Info@{get\+App\+Meta\+Info}}
+\index{get\+App\+Meta\+Info@{get\+App\+Meta\+Info}!ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}}
+\subsubsection[{\texorpdfstring{get\+App\+Meta\+Info() const}{getAppMetaInfo() const}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::list$<$ {\bf Block} $>$ \& ndn\+::\+Meta\+Info\+::get\+App\+Meta\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1MetaInfo_adfda91bf9c51c47a15f24005e13f224e}{}\label{classndn_1_1MetaInfo_adfda91bf9c51c47a15f24005e13f224e}
+
+
+Get all app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} items. 
+
+\begin{DoxyNote}{Note}
+Warning\+: Experimental A\+PI, which may change or disappear in the future
+
+If \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} is decoded from wire and set\+Type, set\+Freshness\+Period, or set\+Final\+Block\+Id is called before $\ast$\+App\+Meta\+Info, all app-\/defined blocks will be lost 
+\end{DoxyNote}
+
+
+Definition at line 71 of file meta-\/info.\+cpp.
+
+\index{ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}!remove\+App\+Meta\+Info@{remove\+App\+Meta\+Info}}
+\index{remove\+App\+Meta\+Info@{remove\+App\+Meta\+Info}!ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}}
+\subsubsection[{\texorpdfstring{remove\+App\+Meta\+Info(uint32\+\_\+t tlv\+Type)}{removeAppMetaInfo(uint32\_t tlvType)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Meta\+Info\+::remove\+App\+Meta\+Info (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{tlv\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1MetaInfo_aff0dfe058a669d717ed57322531cd974}{}\label{classndn_1_1MetaInfo_aff0dfe058a669d717ed57322531cd974}
+
+
+Remove a first app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} item with type {\ttfamily tlv\+Type}. 
+
+\begin{DoxyReturn}{Returns}
+true if an item was deleted
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Warning\+: Experimental A\+PI, which may change or disappear in the future
+
+If \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} is decoded from wire and set\+Type, set\+Freshness\+Period, or set\+Final\+Block\+Id is called before $\ast$\+App\+Meta\+Info, all app-\/defined blocks will be lost 
+\end{DoxyNote}
+
+
+Definition at line 103 of file meta-\/info.\+cpp.
+
+\index{ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}!set\+App\+Meta\+Info@{set\+App\+Meta\+Info}}
+\index{set\+App\+Meta\+Info@{set\+App\+Meta\+Info}!ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}}
+\subsubsection[{\texorpdfstring{set\+App\+Meta\+Info(const std\+::list$<$ Block $>$ \&info)}{setAppMetaInfo(const std::list< Block > \&info)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Info} \& ndn\+::\+Meta\+Info\+::set\+App\+Meta\+Info (
+\begin{DoxyParamCaption}
+\item[{const std\+::list$<$ {\bf Block} $>$ \&}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1MetaInfo_a6a65c2ce327d81ea2f19d089010d4d08}{}\label{classndn_1_1MetaInfo_a6a65c2ce327d81ea2f19d089010d4d08}
+
+
+Set app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} items. 
+
+This method will replace all existing app-\/defined \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} items, if they existed.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1MetaInfo_1_1Error}{Error}} & if some block in {\ttfamily info} has type not in the application range (\href{http://named-data.net/doc/ndn-tlv/types.html}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/types.\+html})\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+Warning\+: Experimental A\+PI, which may change or disappear in the future
+
+If \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} is decoded from wire and set\+Type, set\+Freshness\+Period, or set\+Final\+Block\+Id is called before $\ast$\+App\+Meta\+Info, all app-\/defined blocks will be lost 
+\end{DoxyNote}
+
+
+Definition at line 77 of file meta-\/info.\+cpp.
+
+\index{ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}}
+\subsubsection[{\texorpdfstring{set\+Type(uint32\+\_\+t type)}{setType(uint32\_t type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Info} \& ndn\+::\+Meta\+Info\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1MetaInfo_a6df94440a24ff6778d2d8bc2a13816e9}{}\label{classndn_1_1MetaInfo_a6df94440a24ff6778d2d8bc2a13816e9}
+
+
+set Content\+Type 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & a code defined in \hyperlink{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204b}{tlv\+::\+Content\+Type\+Value} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file meta-\/info.\+cpp.
+
+\index{ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}!wire\+Decode@{wire\+Decode}}
+\index{wire\+Decode@{wire\+Decode}!ndn\+::\+Meta\+Info@{ndn\+::\+Meta\+Info}}
+\subsubsection[{\texorpdfstring{wire\+Decode(const Block \&wire)}{wireDecode(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Meta\+Info\+::wire\+Decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1MetaInfo_a17dc52b30e227d97f3e31394c013c1fa}{}\label{classndn_1_1MetaInfo_a17dc52b30e227d97f3e31394c013c1fa}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]May or may not throw exception later... \end{DoxyRefDesc}
+
+
+Definition at line 192 of file meta-\/info.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/meta-\/info.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/meta-\/info.\+cpp\end{DoxyCompactItemize}

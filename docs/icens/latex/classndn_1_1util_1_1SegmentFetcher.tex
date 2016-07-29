@@ -1,0 +1,170 @@
+\hypertarget{classndn_1_1util_1_1SegmentFetcher}{}\section{ndn\+:\+:util\+:\+:Segment\+Fetcher Class Reference}
+\label{classndn_1_1util_1_1SegmentFetcher}\index{ndn\+::util\+::\+Segment\+Fetcher@{ndn\+::util\+::\+Segment\+Fetcher}}
+
+
+Utility class to fetch latest version of the segmented data.  
+
+
+
+
+{\ttfamily \#include $<$segment-\/fetcher.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:Segment\+Fetcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1SegmentFetcher}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classndn_1_1util_1_1SegmentFetcher_ab0c2acc6a38f821994e7edff486a271d}{Error\+Code} \{ {\bfseries I\+N\+T\+E\+R\+E\+S\+T\+\_\+\+T\+I\+M\+E\+O\+UT} = 1, 
+{\bfseries D\+A\+T\+A\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+S\+E\+G\+M\+E\+NT} = 2, 
+{\bfseries S\+E\+G\+M\+E\+N\+T\+\_\+\+V\+E\+R\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL} = 3
+ \}\hypertarget{classndn_1_1util_1_1SegmentFetcher_ab0c2acc6a38f821994e7edff486a271d}{}\label{classndn_1_1util_1_1SegmentFetcher_ab0c2acc6a38f821994e7edff486a271d}
+\begin{DoxyCompactList}\small\item\em Error codes that can be passed to Error\+Callback. \end{DoxyCompactList}
+\item 
+typedef function$<$ void(const Const\+Buffer\+Ptr \&data)$>$ {\bfseries Complete\+Callback}\hypertarget{classndn_1_1util_1_1SegmentFetcher_ae8957a72e4a0a08db73493cbfad8ce16}{}\label{classndn_1_1util_1_1SegmentFetcher_ae8957a72e4a0a08db73493cbfad8ce16}
+
+\item 
+typedef function$<$ bool(const \hyperlink{classndn_1_1Data}{Data} \&data)$>$ {\bfseries Verify\+Segment}\hypertarget{classndn_1_1util_1_1SegmentFetcher_aae72e118b736e67b4bb63495d6b63b7c}{}\label{classndn_1_1util_1_1SegmentFetcher_aae72e118b736e67b4bb63495d6b63b7c}
+
+\item 
+typedef function$<$ void(uint32\+\_\+t code, const std\+::string \&msg)$>$ {\bfseries Error\+Callback}\hypertarget{classndn_1_1util_1_1SegmentFetcher_a73ca53735fde44120c03a45686ca19a5}{}\label{classndn_1_1util_1_1SegmentFetcher_a73ca53735fde44120c03a45686ca19a5}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classndn_1_1util_1_1SegmentFetcher_a9f7c6f519893f5fe8bd822ed2adfc516}{fetch} (\hyperlink{classndn_1_1Face}{Face} \&face, const \hyperlink{classndn_1_1Interest}{Interest} \&base\+Interest, const Verify\+Segment \&verify\+Segment, const Complete\+Callback \&complete\+Callback, const Error\+Callback \&error\+Callback)
+\begin{DoxyCompactList}\small\item\em Initiate segment fetching. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility class to fetch latest version of the segmented data. 
+
+\hyperlink{classndn_1_1util_1_1SegmentFetcher}{Segment\+Fetcher} assumes that the data is named /$<$prefix$>$/$<$version$>$/$<$segment$>$, where\+:
+\begin{DoxyItemize}
+\item $<$prefix$>$ is the specified prefix,
+\item $<$version$>$ is an unknown version that needs to be discovered, and
+\item $<$segment$>$ is a segment number (number of segments is unknown and is controlled by {\ttfamily Final\+Block\+Id} field in at least the last \hyperlink{classndn_1_1Data}{Data} packet
+\end{DoxyItemize}
+
+The following logic is implemented in \hyperlink{classndn_1_1util_1_1SegmentFetcher}{Segment\+Fetcher}\+:
+
+
+\begin{DoxyEnumerate}
+\item Express first interest to discover version\+:
+\end{DoxyEnumerate}
+
+\begin{quote}
+\begin{quote}
+\hyperlink{classndn_1_1Interest}{Interest}\+: /$<$prefix$>$?Child\+Selector=1\&Must\+Be\+Fresh=yes \end{quote}
+\end{quote}
+
+
+
+\begin{DoxyEnumerate}
+\item Infer the latest version of \hyperlink{classndn_1_1Data}{Data}\+: $<$version$>$ = \hyperlink{classndn_1_1Data_a14ed396d06bf43b86e4b0a67a4866303}{Data.\+get\+Name()}.get(-\/2)
+\item If segment number in the retrieved packet == 0, go to step 5.
+\item Send \hyperlink{classndn_1_1Interest}{Interest} for segment 0\+:
+\end{DoxyEnumerate}
+
+\begin{quote}
+\begin{quote}
+\hyperlink{classndn_1_1Interest}{Interest}\+: /$<$prefix$>$/$<$version$>$/$<$segment=0$>$ \end{quote}
+\end{quote}
+
+
+
+\begin{DoxyEnumerate}
+\item Keep sending Interests for the next segment while the retrieved \hyperlink{classndn_1_1Data}{Data} does not have Final\+Block\+Id or Final\+Block\+Id != \hyperlink{classndn_1_1Data_a14ed396d06bf43b86e4b0a67a4866303}{Data.\+get\+Name()}.get(-\/1).
+\end{DoxyEnumerate}
+
+\begin{quote}
+\begin{quote}
+\hyperlink{classndn_1_1Interest}{Interest}\+: /$<$prefix$>$/$<$version$>$/$<$segment=(N+1))$>$ \end{quote}
+\end{quote}
+
+
+
+\begin{DoxyEnumerate}
+\item Fire on\+Completion callback with memory block that combines content part from all segmented objects.
+\end{DoxyEnumerate}
+
+If an error occurs during the fetching process, an error callback is fired with a proper error code. The following errors are possible\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily I\+N\+T\+E\+R\+E\+S\+T\+\_\+\+T\+I\+M\+E\+O\+UT}\+: if any of the Interests times out
+\item {\ttfamily D\+A\+T\+A\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+S\+E\+G\+M\+E\+NT}\+: if any of the retrieved \hyperlink{classndn_1_1Data}{Data} packets don\textquotesingle{}t have segment as a last component of the name (not counting implicit digest)
+\item {\ttfamily S\+E\+G\+M\+E\+N\+T\+\_\+\+V\+E\+R\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL}\+: if any retrieved segment fails user-\/provided validation
+\end{DoxyItemize}
+
+In order to validate individual segments, an Verify\+Segment callback needs to be specified. If the callback returns false, fetching process is aborted with S\+E\+G\+M\+E\+N\+T\+\_\+\+V\+E\+R\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL. If data validation is not required, provided Dont\+Verify\+Segment() functor can be used.
+
+Examples\+: \begin{DoxyVerb}void
+onComplete(const ConstBufferPtr& data)
+{
+  ...
+}
+
+void
+onError(uint32_t errorCode, const std::string& errorMsg)
+{
+  ...
+}
+
+...
+SegmentFetcher::fetch(face, Interest("/data/prefix", time::seconds(1000)),
+                      DontVerifySegment(),
+                      bind(&onComplete, this, _1),
+                      bind(&onError, this, _1, _2));\end{DoxyVerb}
+ 
+
+Definition at line 112 of file segment-\/fetcher.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+Segment\+Fetcher@{ndn\+::util\+::\+Segment\+Fetcher}!fetch@{fetch}}
+\index{fetch@{fetch}!ndn\+::util\+::\+Segment\+Fetcher@{ndn\+::util\+::\+Segment\+Fetcher}}
+\subsubsection[{\texorpdfstring{fetch(\+Face \&face, const Interest \&base\+Interest, const Verify\+Segment \&verify\+Segment, const Complete\+Callback \&complete\+Callback, const Error\+Callback \&error\+Callback)}{fetch(Face \&face, const Interest \&baseInterest, const VerifySegment \&verifySegment, const CompleteCallback \&completeCallback, const ErrorCallback \&errorCallback)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::util\+::\+Segment\+Fetcher\+::fetch (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face, }
+\item[{const {\bf Interest} \&}]{base\+Interest, }
+\item[{const Verify\+Segment \&}]{verify\+Segment, }
+\item[{const Complete\+Callback \&}]{complete\+Callback, }
+\item[{const Error\+Callback \&}]{error\+Callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1util_1_1SegmentFetcher_a9f7c6f519893f5fe8bd822ed2adfc516}{}\label{classndn_1_1util_1_1SegmentFetcher_a9f7c6f519893f5fe8bd822ed2adfc516}
+
+
+Initiate segment fetching. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & Reference to the \hyperlink{classndn_1_1Face}{Face} that should be used to fetch data \\
+\hline
+{\em base\+Interest} & An \hyperlink{classndn_1_1Interest}{Interest} for the initial segment of requested data. This interest may include custom Interest\+Lifetime and selectors that will propagate to all subsequent Interests. The only exception is that the initial \hyperlink{classndn_1_1Interest}{Interest} will be forced to include \char`\"{}\+Child\+Selector=1\char`\"{} and \char`\"{}\+Must\+Be\+Fresh=true\char`\"{} selectors, which will be turned off in subsequent Interests. \\
+\hline
+{\em verify\+Segment} & Functor to be called when \hyperlink{classndn_1_1Data}{Data} segment is received. If functor return false, fetching will be aborted with S\+E\+G\+M\+E\+N\+T\+\_\+\+V\+E\+R\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+F\+A\+IL error \\
+\hline
+{\em complete\+Callback} & Callback to be fired when all segments are fetched \\
+\hline
+{\em error\+Callback} & Callback to be fired when an error occurs (\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Errors) 
+\end{DoxySeeAlso}
+
+
+Definition at line 42 of file segment-\/fetcher.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/segment-\/fetcher.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/segment-\/fetcher.\+cpp\end{DoxyCompactItemize}

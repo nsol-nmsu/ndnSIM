@@ -1,0 +1,107 @@
+\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture}{}\section{ndn\+:\+:util\+:\+:tests\+:\+:End\+To\+End\+Fixture Class Reference}
+\label{classndn_1_1util_1_1tests_1_1EndToEndFixture}\index{ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture@{ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture}}
+Inheritance diagram for ndn\+:\+:util\+:\+:tests\+:\+:End\+To\+End\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1tests_1_1EndToEndFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classndn_1_1util_1_1tests_1_1EndToEndFixture_a36a9dfe46c7672821e80d998c0fd06f3}{deliver\+Notification} (const std\+::string \&msg)\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a36a9dfe46c7672821e80d998c0fd06f3}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a36a9dfe46c7672821e80d998c0fd06f3}
+
+\begin{DoxyCompactList}\small\item\em post one notification and deliver to subscriber \end{DoxyCompactList}\item 
+void {\bfseries after\+Notification} (const \hyperlink{classndn_1_1util_1_1tests_1_1SimpleNotification}{Simple\+Notification} \&notification)\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_ab744c0b2a19663e3220d9a03d7f14d38}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_ab744c0b2a19663e3220d9a03d7f14d38}
+
+\item 
+void {\bfseries after\+Timeout} ()\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_aeb52097a9170045eeeccd8b0a23417b9}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_aeb52097a9170045eeeccd8b0a23417b9}
+
+\item 
+void {\bfseries after\+Decode\+Error} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a76b1da7e6eacbaf7d4dfcb85794fcf15}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a76b1da7e6eacbaf7d4dfcb85794fcf15}
+
+\item 
+bool \hyperlink{classndn_1_1util_1_1tests_1_1EndToEndFixture_ac0595a8aa7308f75d77485b4027cc374}{has\+Initial\+Request} () const
+\item 
+uint64\+\_\+t \hyperlink{classndn_1_1util_1_1tests_1_1EndToEndFixture_add9135f58c1e90e2ba4b0dd99c2935f2}{get\+Request\+Seq\+No} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries stream\+Prefix}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a6467695f2c33c47924a3d10aa69258c0}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a6467695f2c33c47924a3d10aa69258c0}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face} $>$ {\bfseries publisher\+Face}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_ae6091d617a2e9d995baf7e96eb48853d}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_ae6091d617a2e9d995baf7e96eb48853d}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries publisher\+Key\+Chain}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_ad4ec647b45eee50e13d9e1576a8a03a0}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_ad4ec647b45eee50e13d9e1576a8a03a0}
+
+\item 
+\hyperlink{classndn_1_1util_1_1NotificationStream}{util\+::\+Notification\+Stream}$<$ \hyperlink{classndn_1_1util_1_1tests_1_1SimpleNotification}{Simple\+Notification} $>$ {\bfseries notification\+Stream}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a06747b661a8f63b8a5e788e24b2b2f5e}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a06747b661a8f63b8a5e788e24b2b2f5e}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face} $>$ {\bfseries subscriber\+Face}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a21ced3df1d2463fd3a996c2112c86813}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a21ced3df1d2463fd3a996c2112c86813}
+
+\item 
+\hyperlink{classndn_1_1util_1_1NotificationSubscriber}{util\+::\+Notification\+Subscriber}$<$ \hyperlink{classndn_1_1util_1_1tests_1_1SimpleNotification}{Simple\+Notification} $>$ {\bfseries subscriber}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_ab0c7bbd791e9b2b3632ff9d7cf42da97}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_ab0c7bbd791e9b2b3632ff9d7cf42da97}
+
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Connection}{util\+::signal\+::\+Connection} {\bfseries notification\+Conn}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_abb0cb1217198a010f942774df059b31b}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_abb0cb1217198a010f942774df059b31b}
+
+\item 
+uint64\+\_\+t {\bfseries last\+Delivered\+Seq\+No}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a5d9461cf5fa9417092dd5632a45b7113}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a5d9461cf5fa9417092dd5632a45b7113}
+
+\item 
+\hyperlink{classndn_1_1util_1_1tests_1_1SimpleNotification}{Simple\+Notification} {\bfseries last\+Notification}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a74b6f78da447c9bb0c43d43f38deda0f}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a74b6f78da447c9bb0c43d43f38deda0f}
+
+\item 
+bool {\bfseries has\+Timeout}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a27c7f3831f4b26ea89975fc802373379}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a27c7f3831f4b26ea89975fc802373379}
+
+\item 
+\hyperlink{classndn_1_1Data}{Data} {\bfseries last\+Decode\+Error\+Data}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_a41bdd449881483e89d8345841656ca0b}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_a41bdd449881483e89d8345841656ca0b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 42 of file notification-\/subscriber.\+t.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture@{ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture}!get\+Request\+Seq\+No@{get\+Request\+Seq\+No}}
+\index{get\+Request\+Seq\+No@{get\+Request\+Seq\+No}!ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture@{ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture}}
+\subsubsection[{\texorpdfstring{get\+Request\+Seq\+No() const}{getRequestSeqNo() const}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture\+::get\+Request\+Seq\+No (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_add9135f58c1e90e2ba4b0dd99c2935f2}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_add9135f58c1e90e2ba4b0dd99c2935f2}
+\begin{DoxyReturn}{Returns}
+sequence number of the continuation request sent from subscriber\+Face or 0 if there\textquotesingle{}s no such request as sole sent \hyperlink{classndn_1_1Interest}{Interest} 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file notification-\/subscriber.\+t.\+cpp.
+
+\index{ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture@{ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture}!has\+Initial\+Request@{has\+Initial\+Request}}
+\index{has\+Initial\+Request@{has\+Initial\+Request}!ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture@{ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture}}
+\subsubsection[{\texorpdfstring{has\+Initial\+Request() const}{hasInitialRequest() const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::util\+::tests\+::\+End\+To\+End\+Fixture\+::has\+Initial\+Request (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1tests_1_1EndToEndFixture_ac0595a8aa7308f75d77485b4027cc374}{}\label{classndn_1_1util_1_1tests_1_1EndToEndFixture_ac0595a8aa7308f75d77485b4027cc374}
+\begin{DoxyReturn}{Returns}
+true if subscriber\+Face has an initial request (first sent \hyperlink{classndn_1_1Interest}{Interest}) 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file notification-\/subscriber.\+t.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/tests/unit-\/tests/util/notification-\/subscriber.\+t.\+cpp\end{DoxyCompactItemize}

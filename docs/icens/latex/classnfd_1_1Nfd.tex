@@ -1,0 +1,88 @@
+\hypertarget{classnfd_1_1Nfd}{}\section{nfd\+:\+:Nfd Class Reference}
+\label{classnfd_1_1Nfd}\index{nfd\+::\+Nfd@{nfd\+::\+Nfd}}
+
+
+Class representing N\+FD instance This class can be used to initialize all components of N\+FD.  
+
+
+
+
+{\ttfamily \#include $<$nfd.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Nfd\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1Nfd}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1Nfd_a211e8becbe3fe3105bd9de6a0f575b81}{Nfd} (const std\+::string \&config\+File, \hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \&key\+Chain)\hypertarget{classnfd_1_1Nfd_a211e8becbe3fe3105bd9de6a0f575b81}{}\label{classnfd_1_1Nfd_a211e8becbe3fe3105bd9de6a0f575b81}
+
+\begin{DoxyCompactList}\small\item\em Create N\+FD instance using absolute or relative path to {\ttfamily config\+File}. \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1Nfd_a817ec8458a763866dd847be9d3333e16}{Nfd} (const Config\+Section \&\hyperlink{classconfig}{config}, \hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} \&key\+Chain)
+\begin{DoxyCompactList}\small\item\em Create N\+FD instance using a parsed Config\+Section {\ttfamily config} This version of the constructor is more appropriate for integrated environments, such as N\+S-\/3 or android. \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1Nfd_a378e7a2371fddeef8e83648d5fe6bbae}{$\sim$\+Nfd} ()\hypertarget{classnfd_1_1Nfd_a378e7a2371fddeef8e83648d5fe6bbae}{}\label{classnfd_1_1Nfd_a378e7a2371fddeef8e83648d5fe6bbae}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Nfd_a1a9f9224facbd45652d51d618060259a}{initialize} ()\hypertarget{classnfd_1_1Nfd_a1a9f9224facbd45652d51d618060259a}{}\label{classnfd_1_1Nfd_a1a9f9224facbd45652d51d618060259a}
+
+\begin{DoxyCompactList}\small\item\em Perform initialization of N\+FD instance After initialization, N\+FD instance can be started by invoking run on global\+Io\+Service. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Nfd_a3c4b08b8ebf1711d032a64a3a7e89226}{reload\+Config\+File} ()
+\begin{DoxyCompactList}\small\item\em Reload configuration file and apply update (if any) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing N\+FD instance This class can be used to initialize all components of N\+FD. 
+
+Definition at line 49 of file nfd.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{nfd\+::\+Nfd@{nfd\+::\+Nfd}!Nfd@{Nfd}}
+\index{Nfd@{Nfd}!nfd\+::\+Nfd@{nfd\+::\+Nfd}}
+\subsubsection[{\texorpdfstring{Nfd(const Config\+Section \&config, ndn\+::\+Key\+Chain \&key\+Chain)}{Nfd(const ConfigSection \&config, ndn::KeyChain \&keyChain)}}]{\setlength{\rightskip}{0pt plus 5cm}nfd\+::\+Nfd\+::\+Nfd (
+\begin{DoxyParamCaption}
+\item[{const Config\+Section \&}]{config, }
+\item[{{\bf ndn\+::\+Key\+Chain} \&}]{key\+Chain}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Nfd_a817ec8458a763866dd847be9d3333e16}{}\label{classnfd_1_1Nfd_a817ec8458a763866dd847be9d3333e16}
+
+
+Create N\+FD instance using a parsed Config\+Section {\ttfamily config} This version of the constructor is more appropriate for integrated environments, such as N\+S-\/3 or android. 
+
+\begin{DoxyNote}{Note}
+When using this version of the constructor, error messages will include \char`\"{}internal\+://nfd.\+conf\char`\"{} when referring to configuration errors. 
+\end{DoxyNote}
+
+
+Definition at line 55 of file nfd.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Nfd@{nfd\+::\+Nfd}!reload\+Config\+File@{reload\+Config\+File}}
+\index{reload\+Config\+File@{reload\+Config\+File}!nfd\+::\+Nfd@{nfd\+::\+Nfd}}
+\subsubsection[{\texorpdfstring{reload\+Config\+File()}{reloadConfigFile()}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Nfd\+::reload\+Config\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Nfd_a3c4b08b8ebf1711d032a64a3a7e89226}{}\label{classnfd_1_1Nfd_a3c4b08b8ebf1711d032a64a3a7e89226}
+
+
+Reload configuration file and apply update (if any) 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000023}{Todo}]Reopen log file \end{DoxyRefDesc}
+
+
+Definition at line 177 of file nfd.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/nfd.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/nfd.\+cpp\end{DoxyCompactItemize}

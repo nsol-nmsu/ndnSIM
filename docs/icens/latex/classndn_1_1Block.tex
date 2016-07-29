@@ -1,0 +1,458 @@
+\hypertarget{classndn_1_1Block}{}\section{ndn\+:\+:Block Class Reference}
+\label{classndn_1_1Block}\index{ndn\+::\+Block@{ndn\+::\+Block}}
+
+
+Class representing a wire element of N\+D\+N-\/\+T\+LV packet format.  
+
+
+
+
+{\ttfamily \#include $<$block.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Block\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1Block}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Block_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \hyperlink{classndn_1_1Block}{Block} $>$ {\bfseries element\+\_\+container}\hypertarget{classndn_1_1Block_a7c5cffe0b8268f9774c3ff38e7118c0d}{}\label{classndn_1_1Block_a7c5cffe0b8268f9774c3ff38e7118c0d}
+
+\item 
+typedef element\+\_\+container\+::iterator {\bfseries element\+\_\+iterator}\hypertarget{classndn_1_1Block_afe0edbb9359c13ecb792eb04ac078183}{}\label{classndn_1_1Block_afe0edbb9359c13ecb792eb04ac078183}
+
+\item 
+typedef element\+\_\+container\+::const\+\_\+iterator {\bfseries element\+\_\+const\+\_\+iterator}\hypertarget{classndn_1_1Block_a058e29abe602859b6691dc5154076f6c}{}\label{classndn_1_1Block_a058e29abe602859b6691dc5154076f6c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Block_af56e7495815f8101b68c388dee5fcd6a}{Block} ()\hypertarget{classndn_1_1Block_af56e7495815f8101b68c388dee5fcd6a}{}\label{classndn_1_1Block_af56e7495815f8101b68c388dee5fcd6a}
+
+\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{classndn_1_1Block}{Block}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_a58577a748aca79b32689b89b94fe0f51}{Block} (const Encoding\+Buffer \&buffer)\hypertarget{classndn_1_1Block_a58577a748aca79b32689b89b94fe0f51}{}\label{classndn_1_1Block_a58577a748aca79b32689b89b94fe0f51}
+
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} based on Encoding\+Buffer object. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_aa6d75dc5f772c8e46067965906b05fca}{Block} (const Const\+Buffer\+Ptr \&buffer)\hypertarget{classndn_1_1Block_aa6d75dc5f772c8e46067965906b05fca}{}\label{classndn_1_1Block_aa6d75dc5f772c8e46067965906b05fca}
+
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} from the raw buffer with Type-\/\+Length parsing. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_a887825d59e4ba38f381efc635bdaa7f7}{Block} (const Const\+Buffer\+Ptr \&buffer, const Buffer\+::const\+\_\+iterator \&begin, const Buffer\+::const\+\_\+iterator \&end, bool verify\+Length=true)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} from a buffer, directly specifying boundaries of the block within the buffer. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_a5c848761bfe52866f08bb8c03437781a}{Block} (const \hyperlink{classndn_1_1Block}{Block} \&block, const Buffer\+::const\+\_\+iterator \&begin, const Buffer\+::const\+\_\+iterator \&end, bool verify\+Length=true)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} from existing block (reusing the underlying buffer), directly specifying boundaries of the block within the buffer. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_a41c3215c4f0cc1314fba773eeda20067}{Block} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t maxlength)\hypertarget{classndn_1_1Block_a41c3215c4f0cc1314fba773eeda20067}{}\label{classndn_1_1Block_a41c3215c4f0cc1314fba773eeda20067}
+
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} from the raw buffer with Type-\/\+Length parsing. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_ace218230282ebcdc43f6b45c507c0139}{Block} (const void $\ast$buffer, size\+\_\+t maxlength)\hypertarget{classndn_1_1Block_ace218230282ebcdc43f6b45c507c0139}{}\label{classndn_1_1Block_ace218230282ebcdc43f6b45c507c0139}
+
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} from the raw buffer with Type-\/\+Length parsing. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_af9fd18155dd3cbb5dd2bd60be9def7ab}{Block} (const Const\+Buffer\+Ptr \&wire, uint32\+\_\+t type, const Buffer\+::const\+\_\+iterator \&begin, const Buffer\+::const\+\_\+iterator \&end, const Buffer\+::const\+\_\+iterator \&value\+Begin, const Buffer\+::const\+\_\+iterator \&value\+End)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} from the wire buffer (no parsing) \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_a97934c3f4c4f266ab90240a3f35099cb}{Block} (uint32\+\_\+t type)\hypertarget{classndn_1_1Block_a97934c3f4c4f266ab90240a3f35099cb}{}\label{classndn_1_1Block_a97934c3f4c4f266ab90240a3f35099cb}
+
+\begin{DoxyCompactList}\small\item\em Create \hyperlink{classndn_1_1Block}{Block} of a specific type with empty wire buffer. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_a55231dda72f6f5b1cef02595dbcc13f1}{Block} (uint32\+\_\+t type, const Const\+Buffer\+Ptr \&value)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} of a specific type with the specified value. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_aac5b4d1d5b3385705f365ed4038596ea}{Block} (uint32\+\_\+t type, const \hyperlink{classndn_1_1Block}{Block} \&value)
+\begin{DoxyCompactList}\small\item\em Create a nested \hyperlink{classndn_1_1Block}{Block} of a specific type with the specified value. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block_ae64ea93c21f9cb32d87826bacddb2803}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (static bool \hyperlink{classndn_1_1Block_af540ada44f352d3cbc246a8f878488e1}{from\+Buffer}(const Const\+Buffer\+Ptr \&buffer, size\+\_\+t offset, \hyperlink{classndn_1_1Block}{Block} \&block))
+\item 
+\hyperlink{classndn_1_1Block_a9eeb693e2a40621a60eca01b0fcc3298}{D\+E\+P\+R\+E\+C\+A\+T\+ED} (static bool \hyperlink{classndn_1_1Block_af540ada44f352d3cbc246a8f878488e1}{from\+Buffer}(const uint8\+\_\+t $\ast$buffer, size\+\_\+t max\+Size, \hyperlink{classndn_1_1Block}{Block} \&block))
+\item 
+bool \hyperlink{classndn_1_1Block_a286543db272aaa16f2e5eca5468252f7}{empty} () const\hypertarget{classndn_1_1Block_a286543db272aaa16f2e5eca5468252f7}{}\label{classndn_1_1Block_a286543db272aaa16f2e5eca5468252f7}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classndn_1_1Block}{Block} is empty. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Block_a122eed3977a6010c923484d4d37defdf}{has\+Wire} () const\hypertarget{classndn_1_1Block_a122eed3977a6010c923484d4d37defdf}{}\label{classndn_1_1Block_a122eed3977a6010c923484d4d37defdf}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classndn_1_1Block}{Block} has fully encoded wire. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Block_ad539aff0e8eff97348b8501b5413d017}{reset} ()\hypertarget{classndn_1_1Block_ad539aff0e8eff97348b8501b5413d017}{}\label{classndn_1_1Block_ad539aff0e8eff97348b8501b5413d017}
+
+\begin{DoxyCompactList}\small\item\em Reset wire buffer of the element. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Block_a2642f44d6e5edebfa446dfaf690a8d7e}{reset\+Wire} ()\hypertarget{classndn_1_1Block_a2642f44d6e5edebfa446dfaf690a8d7e}{}\label{classndn_1_1Block_a2642f44d6e5edebfa446dfaf690a8d7e}
+
+\begin{DoxyCompactList}\small\item\em Reset wire buffer but keep sub elements (if any) \end{DoxyCompactList}\item 
+Buffer\+::const\+\_\+iterator {\bfseries begin} () const\hypertarget{classndn_1_1Block_a440a9b59bc4161c89f995b4002059e42}{}\label{classndn_1_1Block_a440a9b59bc4161c89f995b4002059e42}
+
+\item 
+Buffer\+::const\+\_\+iterator {\bfseries end} () const\hypertarget{classndn_1_1Block_a52df38d6684c53a8726f4339e7c1bfcb}{}\label{classndn_1_1Block_a52df38d6684c53a8726f4339e7c1bfcb}
+
+\item 
+const uint8\+\_\+t $\ast$ {\bfseries wire} () const\hypertarget{classndn_1_1Block_a1e6e928d45ca64739624f25f8a7a48c9}{}\label{classndn_1_1Block_a1e6e928d45ca64739624f25f8a7a48c9}
+
+\item 
+size\+\_\+t {\bfseries size} () const\hypertarget{classndn_1_1Block_a44474fd4ad6b2af883404ffe927b6c6d}{}\label{classndn_1_1Block_a44474fd4ad6b2af883404ffe927b6c6d}
+
+\item 
+uint32\+\_\+t {\bfseries type} () const\hypertarget{classndn_1_1Block_a2ad4ad43c0cdafcb0310dcef9a7f5829}{}\label{classndn_1_1Block_a2ad4ad43c0cdafcb0310dcef9a7f5829}
+
+\item 
+bool \hyperlink{classndn_1_1Block_ae930b8bee844ef303bb79ba73edb1e1e}{has\+Value} () const\hypertarget{classndn_1_1Block_ae930b8bee844ef303bb79ba73edb1e1e}{}\label{classndn_1_1Block_ae930b8bee844ef303bb79ba73edb1e1e}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classndn_1_1Block}{Block} has value block (no type and length are encoded) \end{DoxyCompactList}\item 
+Buffer\+::const\+\_\+iterator {\bfseries value\+\_\+begin} () const\hypertarget{classndn_1_1Block_a8066c2fae25b22a8645cc5bee959b7b1}{}\label{classndn_1_1Block_a8066c2fae25b22a8645cc5bee959b7b1}
+
+\item 
+Buffer\+::const\+\_\+iterator {\bfseries value\+\_\+end} () const\hypertarget{classndn_1_1Block_a5ff4750860c848f9aa30ac6e30cae065}{}\label{classndn_1_1Block_a5ff4750860c848f9aa30ac6e30cae065}
+
+\item 
+const uint8\+\_\+t $\ast$ {\bfseries value} () const\hypertarget{classndn_1_1Block_acdc228e2f7e54c48b4dc39ca5d23cc54}{}\label{classndn_1_1Block_acdc228e2f7e54c48b4dc39ca5d23cc54}
+
+\item 
+size\+\_\+t {\bfseries value\+\_\+size} () const\hypertarget{classndn_1_1Block_a5bb6c627f7e3d54fd9edb5f1036c58e3}{}\label{classndn_1_1Block_a5bb6c627f7e3d54fd9edb5f1036c58e3}
+
+\item 
+void \hyperlink{classndn_1_1Block_ad0639ee88657cf843974fc265c137816}{parse} () const
+\begin{DoxyCompactList}\small\item\em Parse wire buffer into subblocks. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Block_a7e59e477411c399e1bbc59e27ccef50c}{encode} ()\hypertarget{classndn_1_1Block_a7e59e477411c399e1bbc59e27ccef50c}{}\label{classndn_1_1Block_a7e59e477411c399e1bbc59e27ccef50c}
+
+\begin{DoxyCompactList}\small\item\em Encode subblocks into wire buffer. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Block_ad863b30e2f979bc0b156c6f8fe77d568}{get} (uint32\+\_\+t type) const\hypertarget{classndn_1_1Block_ad863b30e2f979bc0b156c6f8fe77d568}{}\label{classndn_1_1Block_ad863b30e2f979bc0b156c6f8fe77d568}
+
+\begin{DoxyCompactList}\small\item\em Get the first subelement of the requested type. \end{DoxyCompactList}\item 
+element\+\_\+const\+\_\+iterator {\bfseries find} (uint32\+\_\+t type) const\hypertarget{classndn_1_1Block_a29f7c7bebf6071e413118fbebfffeb05}{}\label{classndn_1_1Block_a29f7c7bebf6071e413118fbebfffeb05}
+
+\item 
+void \hyperlink{classndn_1_1Block_a44165fec47ee9a27cdc2031a84fa6981}{remove} (uint32\+\_\+t type)
+\begin{DoxyCompactList}\small\item\em remove all subelements of {\ttfamily type} \end{DoxyCompactList}\item 
+element\+\_\+iterator {\bfseries erase} (element\+\_\+const\+\_\+iterator position)\hypertarget{classndn_1_1Block_a386cf1aa6b81c27b71a22802e2dd2c69}{}\label{classndn_1_1Block_a386cf1aa6b81c27b71a22802e2dd2c69}
+
+\item 
+element\+\_\+iterator {\bfseries erase} (element\+\_\+const\+\_\+iterator first, element\+\_\+const\+\_\+iterator last)\hypertarget{classndn_1_1Block_a1e8f4b40713995d036a0d14d65919a62}{}\label{classndn_1_1Block_a1e8f4b40713995d036a0d14d65919a62}
+
+\item 
+void {\bfseries push\+\_\+back} (const \hyperlink{classndn_1_1Block}{Block} \&element)\hypertarget{classndn_1_1Block_a5abf8fb2848c0b6e483159a87c8ff2d3}{}\label{classndn_1_1Block_a5abf8fb2848c0b6e483159a87c8ff2d3}
+
+\item 
+element\+\_\+iterator \hyperlink{classndn_1_1Block_af6f007399923508abe22956001ac126f}{insert} (element\+\_\+const\+\_\+iterator pos, const \hyperlink{classndn_1_1Block}{Block} \&element)
+\begin{DoxyCompactList}\small\item\em insert Insert a new element in a specific position \end{DoxyCompactList}\item 
+const element\+\_\+container \& \hyperlink{classndn_1_1Block_a31c10d3ed1f089c4a1992199cd9560fb}{elements} () const\hypertarget{classndn_1_1Block_a31c10d3ed1f089c4a1992199cd9560fb}{}\label{classndn_1_1Block_a31c10d3ed1f089c4a1992199cd9560fb}
+
+\begin{DoxyCompactList}\small\item\em Get all subelements. \end{DoxyCompactList}\item 
+element\+\_\+const\+\_\+iterator {\bfseries elements\+\_\+begin} () const\hypertarget{classndn_1_1Block_a2beab657d9922795a0391fc5099b8cb2}{}\label{classndn_1_1Block_a2beab657d9922795a0391fc5099b8cb2}
+
+\item 
+element\+\_\+const\+\_\+iterator {\bfseries elements\+\_\+end} () const\hypertarget{classndn_1_1Block_a48601275647ba09143d76b3008ef0957}{}\label{classndn_1_1Block_a48601275647ba09143d76b3008ef0957}
+
+\item 
+size\+\_\+t {\bfseries elements\+\_\+size} () const\hypertarget{classndn_1_1Block_a0522f46bc75719a7ea1775e127b47efa}{}\label{classndn_1_1Block_a0522f46bc75719a7ea1775e127b47efa}
+
+\item 
+\hyperlink{classndn_1_1Block}{Block} {\bfseries block\+From\+Value} () const\hypertarget{classndn_1_1Block_a34cfc9ac7c41ea4636889cf497a47aa3}{}\label{classndn_1_1Block_a34cfc9ac7c41ea4636889cf497a47aa3}
+
+\item 
+shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Buffer}{Buffer} $>$ \hyperlink{classndn_1_1Block_a37add7fbb26925ace2dee112b72402ed}{get\+Buffer} () const\hypertarget{classndn_1_1Block_a37add7fbb26925ace2dee112b72402ed}{}\label{classndn_1_1Block_a37add7fbb26925ace2dee112b72402ed}
+
+\begin{DoxyCompactList}\small\item\em Get underlying buffer. \end{DoxyCompactList}\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1Block}{Block} \&other) const\hypertarget{classndn_1_1Block_a6efca3ad00df5c534dda5083340262c6}{}\label{classndn_1_1Block_a6efca3ad00df5c534dda5083340262c6}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1Block}{Block} \&other) const\hypertarget{classndn_1_1Block_a38aae95e11a16f6f63aaf58f09a78769}{}\label{classndn_1_1Block_a38aae95e11a16f6f63aaf58f09a78769}
+
+\item 
+{\bfseries operator boost\+::asio\+::const\+\_\+buffer} () const\hypertarget{classndn_1_1Block_a8ad59b02d3103ce9fbc0b6a8d0de2c2e}{}\label{classndn_1_1Block_a8ad59b02d3103ce9fbc0b6a8d0de2c2e}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classndn_1_1Block}{Block} \hyperlink{classndn_1_1Block_ab8597954477e226870ebfe852b71eaef}{from\+Stream} (std\+::istream \&is)\hypertarget{classndn_1_1Block_ab8597954477e226870ebfe852b71eaef}{}\label{classndn_1_1Block_ab8597954477e226870ebfe852b71eaef}
+
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{classndn_1_1Block}{Block} from an input stream. \end{DoxyCompactList}\item 
+static std\+::tuple$<$ bool, \hyperlink{classndn_1_1Block}{Block} $>$ \hyperlink{classndn_1_1Block_af540ada44f352d3cbc246a8f878488e1}{from\+Buffer} (Const\+Buffer\+Ptr buffer, size\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Try to construct block from \hyperlink{classndn_1_1Buffer}{Buffer}. \end{DoxyCompactList}\item 
+static std\+::tuple$<$ bool, \hyperlink{classndn_1_1Block}{Block} $>$ \hyperlink{classndn_1_1Block_a1bf94a97bafd1c0e3f7b21bc71416b1b}{from\+Buffer} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t max\+Size)
+\begin{DoxyCompactList}\small\item\em Try to construct block from raw buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ const \hyperlink{classndn_1_1Buffer}{Buffer} $>$ {\bfseries m\+\_\+buffer}\hypertarget{classndn_1_1Block_ac0023f090d7234a775c4302ba23de184}{}\label{classndn_1_1Block_ac0023f090d7234a775c4302ba23de184}
+
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+type}\hypertarget{classndn_1_1Block_a1a4cca123da57c80b3c29f6aa0b15bd3}{}\label{classndn_1_1Block_a1a4cca123da57c80b3c29f6aa0b15bd3}
+
+\item 
+Buffer\+::const\+\_\+iterator {\bfseries m\+\_\+begin}\hypertarget{classndn_1_1Block_abc9812a66e688edf22d41b1750ac9040}{}\label{classndn_1_1Block_abc9812a66e688edf22d41b1750ac9040}
+
+\item 
+Buffer\+::const\+\_\+iterator {\bfseries m\+\_\+end}\hypertarget{classndn_1_1Block_a5c9a3a22457f887d380ae211c368b012}{}\label{classndn_1_1Block_a5c9a3a22457f887d380ae211c368b012}
+
+\item 
+uint32\+\_\+t {\bfseries m\+\_\+size}\hypertarget{classndn_1_1Block_a4f1f7e7cddf836b12d208fc04ce3d705}{}\label{classndn_1_1Block_a4f1f7e7cddf836b12d208fc04ce3d705}
+
+\item 
+Buffer\+::const\+\_\+iterator {\bfseries m\+\_\+value\+\_\+begin}\hypertarget{classndn_1_1Block_a649bfb7edd21c79e379df42a414f4845}{}\label{classndn_1_1Block_a649bfb7edd21c79e379df42a414f4845}
+
+\item 
+Buffer\+::const\+\_\+iterator {\bfseries m\+\_\+value\+\_\+end}\hypertarget{classndn_1_1Block_a686b4210558100794d093345b03c1b44}{}\label{classndn_1_1Block_a686b4210558100794d093345b03c1b44}
+
+\item 
+element\+\_\+container {\bfseries m\+\_\+sub\+Blocks}\hypertarget{classndn_1_1Block_a2abe20c179a8c13999e469497b4fb62b}{}\label{classndn_1_1Block_a2abe20c179a8c13999e469497b4fb62b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a wire element of N\+D\+N-\/\+T\+LV packet format. 
+
+Definition at line 43 of file block.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Block@{ndn\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{Block(const Const\+Buffer\+Ptr \&buffer, const Buffer\+::const\+\_\+iterator \&begin, const Buffer\+::const\+\_\+iterator \&end, bool verify\+Length=true)}{Block(const ConstBufferPtr \&buffer, const Buffer::const\_iterator \&begin, const Buffer::const\_iterator \&end, bool verifyLength=true)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Block\+::\+Block (
+\begin{DoxyParamCaption}
+\item[{const Const\+Buffer\+Ptr \&}]{buffer, }
+\item[{const Buffer\+::const\+\_\+iterator \&}]{begin, }
+\item[{const Buffer\+::const\+\_\+iterator \&}]{end, }
+\item[{bool}]{verify\+Length = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Block_a887825d59e4ba38f381efc635bdaa7f7}{}\label{classndn_1_1Block_a887825d59e4ba38f381efc635bdaa7f7}
+
+
+Create a \hyperlink{classndn_1_1Block}{Block} from a buffer, directly specifying boundaries of the block within the buffer. 
+
+This overload will automatically detect type and position of the value within the block 
+
+Definition at line 102 of file block.\+cpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{Block(const Block \&block, const Buffer\+::const\+\_\+iterator \&begin, const Buffer\+::const\+\_\+iterator \&end, bool verify\+Length=true)}{Block(const Block \&block, const Buffer::const\_iterator \&begin, const Buffer::const\_iterator \&end, bool verifyLength=true)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Block\+::\+Block (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block, }
+\item[{const Buffer\+::const\+\_\+iterator \&}]{begin, }
+\item[{const Buffer\+::const\+\_\+iterator \&}]{end, }
+\item[{bool}]{verify\+Length = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Block_a5c848761bfe52866f08bb8c03437781a}{}\label{classndn_1_1Block_a5c848761bfe52866f08bb8c03437781a}
+
+
+Create a \hyperlink{classndn_1_1Block}{Block} from existing block (reusing the underlying buffer), directly specifying boundaries of the block within the buffer. 
+
+This overload will automatically detect type and position of the value within the block 
+
+Definition at line 122 of file block.\+cpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{Block(const Const\+Buffer\+Ptr \&wire, uint32\+\_\+t type, const Buffer\+::const\+\_\+iterator \&begin, const Buffer\+::const\+\_\+iterator \&end, const Buffer\+::const\+\_\+iterator \&value\+Begin, const Buffer\+::const\+\_\+iterator \&value\+End)}{Block(const ConstBufferPtr \&wire, uint32\_t type, const Buffer::const\_iterator \&begin, const Buffer::const\_iterator \&end, const Buffer::const\_iterator \&valueBegin, const Buffer::const\_iterator \&valueEnd)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Block\+::\+Block (
+\begin{DoxyParamCaption}
+\item[{const Const\+Buffer\+Ptr \&}]{wire, }
+\item[{uint32\+\_\+t}]{type, }
+\item[{const Buffer\+::const\+\_\+iterator \&}]{begin, }
+\item[{const Buffer\+::const\+\_\+iterator \&}]{end, }
+\item[{const Buffer\+::const\+\_\+iterator \&}]{value\+Begin, }
+\item[{const Buffer\+::const\+\_\+iterator \&}]{value\+End}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Block_af9fd18155dd3cbb5dd2bd60be9def7ab}{}\label{classndn_1_1Block_af9fd18155dd3cbb5dd2bd60be9def7ab}
+
+
+Create a \hyperlink{classndn_1_1Block}{Block} from the wire buffer (no parsing) 
+
+This overload does not do any parsing 
+
+Definition at line 70 of file block.\+cpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{Block(uint32\+\_\+t type, const Const\+Buffer\+Ptr \&value)}{Block(uint32\_t type, const ConstBufferPtr \&value)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Block\+::\+Block (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{type, }
+\item[{const Const\+Buffer\+Ptr \&}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Block_a55231dda72f6f5b1cef02595dbcc13f1}{}\label{classndn_1_1Block_a55231dda72f6f5b1cef02595dbcc13f1}
+
+
+Create a \hyperlink{classndn_1_1Block}{Block} of a specific type with the specified value. 
+
+The underlying buffer holds only value Additional operations are needed to construct wire encoding, one need to prepend the wire buffer with type and value-\/length V\+A\+R-\/\+N\+U\+M\+B\+E\+Rs 
+
+Definition at line 200 of file block.\+cpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!Block@{Block}}
+\index{Block@{Block}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{Block(uint32\+\_\+t type, const Block \&value)}{Block(uint32\_t type, const Block \&value)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Block\+::\+Block (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{type, }
+\item[{const {\bf Block} \&}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Block_aac5b4d1d5b3385705f365ed4038596ea}{}\label{classndn_1_1Block_aac5b4d1d5b3385705f365ed4038596ea}
+
+
+Create a nested \hyperlink{classndn_1_1Block}{Block} of a specific type with the specified value. 
+
+The underlying buffer holds only value. Additional operations are needed to construct wire encoding, one need to prepend the wire buffer with type and value-\/length V\+A\+R-\/\+N\+U\+M\+B\+E\+Rs 
+
+Definition at line 211 of file block.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Block@{ndn\+::\+Block}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(static bool from\+Buffer(const Const\+Buffer\+Ptr \&buffer, size\+\_\+t offset, Block \&block))}{DEPRECATED(static bool fromBuffer(const ConstBufferPtr \&buffer, size\_t offset, Block \&block))}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Block\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{static bool }]{from\+Bufferconst Const\+Buffer\+Ptr \&buffer, size\+\_\+t offset, Block \&block}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Block_ae64ea93c21f9cb32d87826bacddb2803}{}\label{classndn_1_1Block_ae64ea93c21f9cb32d87826bacddb2803}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000010}{Deprecated}]use \hyperlink{classndn_1_1Block_af540ada44f352d3cbc246a8f878488e1}{from\+Buffer(\+Const\+Buffer\+Ptr, size\+\_\+t)} \end{DoxyRefDesc}
+
+
+Definition at line 152 of file block.\+hpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+ED@{D\+E\+P\+R\+E\+C\+A\+T\+ED}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D(static bool from\+Buffer(const uint8\+\_\+t $\ast$buffer, size\+\_\+t max\+Size, Block \&block))}{DEPRECATED(static bool fromBuffer(const uint8\_t *buffer, size\_t maxSize, Block \&block))}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Block\+::\+D\+E\+P\+R\+E\+C\+A\+T\+ED (
+\begin{DoxyParamCaption}
+\item[{static bool }]{from\+Bufferconst uint8\+\_\+t $\ast$buffer, size\+\_\+t max\+Size, Block \&block}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1Block_a9eeb693e2a40621a60eca01b0fcc3298}{}\label{classndn_1_1Block_a9eeb693e2a40621a60eca01b0fcc3298}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000011}{Deprecated}]use \hyperlink{classndn_1_1Block_a1bf94a97bafd1c0e3f7b21bc71416b1b}{from\+Buffer(const uint8\+\_\+t$\ast$, size\+\_\+t)} \end{DoxyRefDesc}
+
+
+Definition at line 176 of file block.\+hpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!from\+Buffer@{from\+Buffer}}
+\index{from\+Buffer@{from\+Buffer}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{from\+Buffer(\+Const\+Buffer\+Ptr buffer, size\+\_\+t offset)}{fromBuffer(ConstBufferPtr buffer, size\_t offset)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::tuple$<$ bool, {\bf Block} $>$ ndn\+::\+Block\+::from\+Buffer (
+\begin{DoxyParamCaption}
+\item[{Const\+Buffer\+Ptr}]{buffer, }
+\item[{size\+\_\+t}]{offset}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1Block_af540ada44f352d3cbc246a8f878488e1}{}\label{classndn_1_1Block_af540ada44f352d3cbc246a8f878488e1}
+
+
+Try to construct block from \hyperlink{classndn_1_1Buffer}{Buffer}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the buffer to construct block from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+buffer is passed by value because the constructed block takes shared ownership of the buffer 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & offset from beginning of {\ttfamily buffer} to construct \hyperlink{classndn_1_1Block}{Block} from\\
+\hline
+\end{DoxyParams}
+This method does not throw upon decoding error. This method does not copy the bytes.
+
+\begin{DoxyReturn}{Returns}
+true and the \hyperlink{classndn_1_1Block}{Block}, if \hyperlink{classndn_1_1Block}{Block} is successfully created; otherwise false 
+\end{DoxyReturn}
+
+
+Definition at line 253 of file block.\+cpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!from\+Buffer@{from\+Buffer}}
+\index{from\+Buffer@{from\+Buffer}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{from\+Buffer(const uint8\+\_\+t $\ast$buffer, size\+\_\+t max\+Size)}{fromBuffer(const uint8\_t *buffer, size\_t maxSize)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::tuple$<$ bool, {\bf Block} $>$ ndn\+::\+Block\+::from\+Buffer (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{max\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1Block_a1bf94a97bafd1c0e3f7b21bc71416b1b}{}\label{classndn_1_1Block_a1bf94a97bafd1c0e3f7b21bc71416b1b}
+
+
+Try to construct block from raw buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the raw buffer to copy bytes from \\
+\hline
+{\em max\+Size} & the maximum size of constructed block; {\ttfamily buffer} must have a size of at least {\ttfamily max\+Size} \\
+\hline
+\end{DoxyParams}
+This method does not throw upon decoding error. This method copies the bytes into a new \hyperlink{classndn_1_1Buffer}{Buffer}.
+
+\begin{DoxyReturn}{Returns}
+true and the \hyperlink{classndn_1_1Block}{Block}, if \hyperlink{classndn_1_1Block}{Block} is successfully created; otherwise false 
+\end{DoxyReturn}
+
+
+Definition at line 276 of file block.\+cpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!insert@{insert}}
+\index{insert@{insert}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{insert(element\+\_\+const\+\_\+iterator pos, const Block \&element)}{insert(element\_const\_iterator pos, const Block \&element)}}]{\setlength{\rightskip}{0pt plus 5cm}Block\+::element\+\_\+iterator ndn\+::\+Block\+::insert (
+\begin{DoxyParamCaption}
+\item[{Block\+::element\+\_\+const\+\_\+iterator}]{pos, }
+\item[{const {\bf Block} \&}]{element}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Block_af6f007399923508abe22956001ac126f}{}\label{classndn_1_1Block_af6f007399923508abe22956001ac126f}
+
+
+insert Insert a new element in a specific position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position to insert the new element \\
+\hline
+{\em element} & Element to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An iterator that points to the first of the newly inserted elements. 
+\end{DoxyReturn}
+
+
+Definition at line 575 of file block.\+cpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!parse@{parse}}
+\index{parse@{parse}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{parse() const}{parse() const}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Block\+::parse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Block_ad0639ee88657cf843974fc265c137816}{}\label{classndn_1_1Block_ad0639ee88657cf843974fc265c137816}
+
+
+Parse wire buffer into subblocks. 
+
+This method is not really const, but it does not modify any data. It simply parses contents of the buffer into subblocks 
+
+Definition at line 322 of file block.\+cpp.
+
+\index{ndn\+::\+Block@{ndn\+::\+Block}!remove@{remove}}
+\index{remove@{remove}!ndn\+::\+Block@{ndn\+::\+Block}}
+\subsubsection[{\texorpdfstring{remove(uint32\+\_\+t type)}{remove(uint32\_t type)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Block\+::remove (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Block_a44165fec47ee9a27cdc2031a84fa6981}{}\label{classndn_1_1Block_a44165fec47ee9a27cdc2031a84fa6981}
+
+
+remove all subelements of {\ttfamily type} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & T\+L\+V-\/\+T\+Y\+PE of subelements to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{classndn_1_1Block_ad0639ee88657cf843974fc265c137816}{parse()} has been invoked 
+\end{DoxyPrecond}
+
+
+Definition at line 427 of file block.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/block.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/block.\+cpp\end{DoxyCompactItemize}

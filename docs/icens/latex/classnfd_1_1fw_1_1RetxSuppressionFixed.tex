@@ -1,0 +1,46 @@
+\hypertarget{classnfd_1_1fw_1_1RetxSuppressionFixed}{}\section{nfd\+:\+:fw\+:\+:Retx\+Suppression\+Fixed Class Reference}
+\label{classnfd_1_1fw_1_1RetxSuppressionFixed}\index{nfd\+::fw\+::\+Retx\+Suppression\+Fixed@{nfd\+::fw\+::\+Retx\+Suppression\+Fixed}}
+
+
+a retransmission suppression decision algorithm that suppresses retransmissions within a fixed duration  
+
+
+
+
+{\ttfamily \#include $<$retx-\/suppression-\/fixed.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fw\+:\+:Retx\+Suppression\+Fixed\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1fw_1_1RetxSuppressionFixed}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Retx\+Suppression\+Fixed} (const time\+::milliseconds \&min\+Retx\+Interval=D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+T\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL)\hypertarget{classnfd_1_1fw_1_1RetxSuppressionFixed_aa84f6650feb3259a0b66aafce723f15b}{}\label{classnfd_1_1fw_1_1RetxSuppressionFixed_aa84f6650feb3259a0b66aafce723f15b}
+
+\item 
+virtual \hyperlink{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82}{Result} \hyperlink{classnfd_1_1fw_1_1RetxSuppressionFixed_ab8e03d6a534f30807dea7460d51113f9}{decide} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry) const D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1fw_1_1RetxSuppressionFixed_ab8e03d6a534f30807dea7460d51113f9}{}\label{classnfd_1_1fw_1_1RetxSuppressionFixed_ab8e03d6a534f30807dea7460d51113f9}
+
+\begin{DoxyCompactList}\small\item\em determines whether Interest is a retransmission, and if so, whether it shall be forwarded or suppressed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const time\+::milliseconds {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+N\+\_\+\+R\+E\+T\+X\+\_\+\+I\+N\+T\+E\+R\+V\+AL}\hypertarget{classnfd_1_1fw_1_1RetxSuppressionFixed_a3ad1da4d03fcb282507de13935ff3b78}{}\label{classnfd_1_1fw_1_1RetxSuppressionFixed_a3ad1da4d03fcb282507de13935ff3b78}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+a retransmission suppression decision algorithm that suppresses retransmissions within a fixed duration 
+
+Definition at line 37 of file retx-\/suppression-\/fixed.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/retx-\/suppression-\/fixed.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/retx-\/suppression-\/fixed.\+cpp\end{DoxyCompactItemize}

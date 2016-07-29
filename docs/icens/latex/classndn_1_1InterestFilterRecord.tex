@@ -1,0 +1,80 @@
+\hypertarget{classndn_1_1InterestFilterRecord}{}\section{ndn\+:\+:Interest\+Filter\+Record Class Reference}
+\label{classndn_1_1InterestFilterRecord}\index{ndn\+::\+Interest\+Filter\+Record@{ndn\+::\+Interest\+Filter\+Record}}
+Inheritance diagram for ndn\+:\+:Interest\+Filter\+Record\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1InterestFilterRecord}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void(const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&, const \hyperlink{classndn_1_1Interest}{Interest} \&)$>$ {\bfseries Interest\+Callback}\hypertarget{classndn_1_1InterestFilterRecord_acfa2e872886a7d6c265df5320af5b88d}{}\label{classndn_1_1InterestFilterRecord_acfa2e872886a7d6c265df5320af5b88d}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Interest\+Filter\+Record} (const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \&filter, const Interest\+Callback \&after\+Interest)\hypertarget{classndn_1_1InterestFilterRecord_a779a0a0b4fb55ef5bbf995ec97f156f3}{}\label{classndn_1_1InterestFilterRecord_a779a0a0b4fb55ef5bbf995ec97f156f3}
+
+\item 
+bool \hyperlink{classndn_1_1InterestFilterRecord_aa00dd1680ddb1adb1f23180df6daf162}{does\+Match} (const \hyperlink{classndn_1_1Name}{Name} \&name) const
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classndn_1_1Interest}{Interest} name matches the filter. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1InterestFilterRecord_af73a65d6946e835539af391e13e86533}{invoke\+Interest\+Callback} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest) const
+\begin{DoxyCompactList}\small\item\em invokes the Interest\+Callback \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1InterestFilter}{Interest\+Filter} \& {\bfseries get\+Filter} () const\hypertarget{classndn_1_1InterestFilterRecord_a8c1740c8257e6fbb4aef3df66d694a3c}{}\label{classndn_1_1InterestFilterRecord_a8c1740c8257e6fbb4aef3df66d694a3c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file interest-\/filter-\/record.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Interest\+Filter\+Record@{ndn\+::\+Interest\+Filter\+Record}!does\+Match@{does\+Match}}
+\index{does\+Match@{does\+Match}!ndn\+::\+Interest\+Filter\+Record@{ndn\+::\+Interest\+Filter\+Record}}
+\subsubsection[{\texorpdfstring{does\+Match(const Name \&name) const}{doesMatch(const Name \&name) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Interest\+Filter\+Record\+::does\+Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1InterestFilterRecord_aa00dd1680ddb1adb1f23180df6daf162}{}\label{classndn_1_1InterestFilterRecord_aa00dd1680ddb1adb1f23180df6daf162}
+
+
+Check if \hyperlink{classndn_1_1Interest}{Interest} name matches the filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file interest-\/filter-\/record.\+hpp.
+
+\index{ndn\+::\+Interest\+Filter\+Record@{ndn\+::\+Interest\+Filter\+Record}!invoke\+Interest\+Callback@{invoke\+Interest\+Callback}}
+\index{invoke\+Interest\+Callback@{invoke\+Interest\+Callback}!ndn\+::\+Interest\+Filter\+Record@{ndn\+::\+Interest\+Filter\+Record}}
+\subsubsection[{\texorpdfstring{invoke\+Interest\+Callback(const Interest \&interest) const}{invokeInterestCallback(const Interest \&interest) const}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Interest\+Filter\+Record\+::invoke\+Interest\+Callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interest} \&}]{interest}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1InterestFilterRecord_af73a65d6946e835539af391e13e86533}{}\label{classndn_1_1InterestFilterRecord_af73a65d6946e835539af391e13e86533}
+
+
+invokes the Interest\+Callback 
+
+\begin{DoxyNote}{Note}
+If the Data\+Callback is an empty function, this method does nothing. 
+\end{DoxyNote}
+
+
+Definition at line 57 of file interest-\/filter-\/record.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/detail/interest-\/filter-\/record.\+hpp\end{DoxyCompactItemize}

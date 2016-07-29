@@ -1,0 +1,96 @@
+\hypertarget{classnfd_1_1pit_1_1SitEntry}{}\section{nfd\+:\+:pit\+:\+:Sit\+Entry Class Reference}
+\label{classnfd_1_1pit_1_1SitEntry}\index{nfd\+::pit\+::\+Sit\+Entry@{nfd\+::pit\+::\+Sit\+Entry}}
+
+
+represents a P\+IT entry  
+
+
+
+
+{\ttfamily \#include $<$sit-\/entry.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:pit\+:\+:Sit\+Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1pit_1_1SitEntry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Sit\+Entry} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classnfd_1_1pit_1_1SitEntry_a51421758f91dec6efea3b32134206382}{}\label{classnfd_1_1pit_1_1SitEntry_a51421758f91dec6efea3b32134206382}
+
+\item 
+void {\bfseries forward\+Interest} (shared\+\_\+ptr$<$ const \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1pit_1_1SitEntry_a62b571e8abec9ed3afc1938151ab0ec2}{}\label{classnfd_1_1pit_1_1SitEntry_a62b571e8abec9ed3afc1938151ab0ec2}
+
+\item 
+time\+::steady\+\_\+clock\+::\+Time\+Point {\bfseries get\+Last\+Forwarded} () const\hypertarget{classnfd_1_1pit_1_1SitEntry_af5d6883995bb9f368a3db6ccea7a347e}{}\label{classnfd_1_1pit_1_1SitEntry_af5d6883995bb9f368a3db6ccea7a347e}
+
+\item 
+const Sit\+In\+Record\+Collection \& {\bfseries get\+In\+Records} () const\hypertarget{classnfd_1_1pit_1_1SitEntry_a830b15f7da3a989b4ea62ed18850e6c4}{}\label{classnfd_1_1pit_1_1SitEntry_a830b15f7da3a989b4ea62ed18850e6c4}
+
+\item 
+Sit\+In\+Record\+Collection\+::iterator \hyperlink{classnfd_1_1pit_1_1SitEntry_a40e84adf9b5fa79ebb3d05dc60b22dc8}{insert\+Or\+Update\+In\+Record} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest)
+\begin{DoxyCompactList}\small\item\em inserts a \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face, and updates it with interest \end{DoxyCompactList}\item 
+Sit\+In\+Record\+Collection\+::const\+\_\+iterator \hyperlink{classnfd_1_1pit_1_1SitEntry_adc4e8f648650e5125c3a72704d544ee0}{get\+In\+Record} (const \hyperlink{classnfd_1_1Face}{Face} \&face) const
+\begin{DoxyCompactList}\small\item\em get the \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Sit\+In\+Record\+Collection {\bfseries m\+\_\+in\+Records}\hypertarget{classnfd_1_1pit_1_1SitEntry_a1dd93cc11f91b2fb4388d5e2a3c41cb7}{}\label{classnfd_1_1pit_1_1SitEntry_a1dd93cc11f91b2fb4388d5e2a3c41cb7}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+represents a P\+IT entry 
+
+Definition at line 43 of file sit-\/entry.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::pit\+::\+Sit\+Entry@{nfd\+::pit\+::\+Sit\+Entry}!get\+In\+Record@{get\+In\+Record}}
+\index{get\+In\+Record@{get\+In\+Record}!nfd\+::pit\+::\+Sit\+Entry@{nfd\+::pit\+::\+Sit\+Entry}}
+\subsubsection[{\texorpdfstring{get\+In\+Record(const Face \&face) const}{getInRecord(const Face \&face) const}}]{\setlength{\rightskip}{0pt plus 5cm}Sit\+In\+Record\+Collection\+::const\+\_\+iterator nfd\+::pit\+::\+Sit\+Entry\+::get\+In\+Record (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face} \&}]{face}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1pit_1_1SitEntry_adc4e8f648650e5125c3a72704d544ee0}{}\label{classnfd_1_1pit_1_1SitEntry_adc4e8f648650e5125c3a72704d544ee0}
+
+
+get the \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face 
+
+\begin{DoxyReturn}{Returns}
+an iterator to the \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record}, or .end if it does not exist 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file sit-\/entry.\+cpp.
+
+\index{nfd\+::pit\+::\+Sit\+Entry@{nfd\+::pit\+::\+Sit\+Entry}!insert\+Or\+Update\+In\+Record@{insert\+Or\+Update\+In\+Record}}
+\index{insert\+Or\+Update\+In\+Record@{insert\+Or\+Update\+In\+Record}!nfd\+::pit\+::\+Sit\+Entry@{nfd\+::pit\+::\+Sit\+Entry}}
+\subsubsection[{\texorpdfstring{insert\+Or\+Update\+In\+Record(shared\+\_\+ptr$<$ Face $>$ face, const Interest \&interest)}{insertOrUpdateInRecord(shared\_ptr< Face > face, const Interest \&interest)}}]{\setlength{\rightskip}{0pt plus 5cm}Sit\+In\+Record\+Collection\+::iterator nfd\+::pit\+::\+Sit\+Entry\+::insert\+Or\+Update\+In\+Record (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf Face} $>$}]{face, }
+\item[{const {\bf Interest} \&}]{interest}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1pit_1_1SitEntry_a40e84adf9b5fa79ebb3d05dc60b22dc8}{}\label{classnfd_1_1pit_1_1SitEntry_a40e84adf9b5fa79ebb3d05dc60b22dc8}
+
+
+inserts a \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face, and updates it with interest 
+
+If \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} for face exists, the existing one is updated. This method does not add the Nonce as a seen Nonce. \begin{DoxyReturn}{Returns}
+an iterator to the \hyperlink{classnfd_1_1pit_1_1InRecord}{In\+Record} 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file sit-\/entry.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/sit-\/entry.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/sit-\/entry.\+cpp\end{DoxyCompactItemize}

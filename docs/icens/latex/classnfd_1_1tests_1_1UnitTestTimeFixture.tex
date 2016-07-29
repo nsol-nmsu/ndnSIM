@@ -1,0 +1,90 @@
+\hypertarget{classnfd_1_1tests_1_1UnitTestTimeFixture}{}\section{nfd\+:\+:tests\+:\+:Unit\+Test\+Time\+Fixture Class Reference}
+\label{classnfd_1_1tests_1_1UnitTestTimeFixture}\index{nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture@{nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture}}
+
+
+a base test fixture that overrides steady clock and system clock  
+
+
+
+
+{\ttfamily \#include $<$test-\/common.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:tests\+:\+:Unit\+Test\+Time\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.772152cm]{classnfd_1_1tests_1_1UnitTestTimeFixture}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnfd_1_1tests_1_1UnitTestTimeFixture_a87111cf01f8dd8e06a39f4c4ef3a3d50}{advance\+Clocks} (const time\+::nanoseconds \&tick, size\+\_\+t n\+Ticks=1)
+\begin{DoxyCompactList}\small\item\em advance steady and system clocks \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1tests_1_1UnitTestTimeFixture_a3c2b185e8496ceceed3a5dfffb1d6196}{advance\+Clocks} (const time\+::nanoseconds \&tick, const time\+::nanoseconds \&total)
+\begin{DoxyCompactList}\small\item\em advance steady and system clocks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1time_1_1UnitTestClock}{time\+::\+Unit\+Test\+Steady\+Clock} $>$ {\bfseries steady\+Clock}\hypertarget{classnfd_1_1tests_1_1UnitTestTimeFixture_a7dd77b909be1a90faea14bd3d6593a5d}{}\label{classnfd_1_1tests_1_1UnitTestTimeFixture_a7dd77b909be1a90faea14bd3d6593a5d}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1time_1_1UnitTestClock}{time\+::\+Unit\+Test\+System\+Clock} $>$ {\bfseries system\+Clock}\hypertarget{classnfd_1_1tests_1_1UnitTestTimeFixture_a7bae4e329602ed9d7003b113b1d69458}{}\label{classnfd_1_1tests_1_1UnitTestTimeFixture_a7bae4e329602ed9d7003b113b1d69458}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Limited\+Io}\hypertarget{classnfd_1_1tests_1_1UnitTestTimeFixture_ad6ac15f32c5781d8f98b5288973e0c9b}{}\label{classnfd_1_1tests_1_1UnitTestTimeFixture_ad6ac15f32c5781d8f98b5288973e0c9b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a base test fixture that overrides steady clock and system clock 
+
+Definition at line 65 of file test-\/common.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture@{nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture}!advance\+Clocks@{advance\+Clocks}}
+\index{advance\+Clocks@{advance\+Clocks}!nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture@{nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture}}
+\subsubsection[{\texorpdfstring{advance\+Clocks(const time\+::nanoseconds \&tick, size\+\_\+t n\+Ticks=1)}{advanceClocks(const time::nanoseconds \&tick, size\_t nTicks=1)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture\+::advance\+Clocks (
+\begin{DoxyParamCaption}
+\item[{const time\+::nanoseconds \&}]{tick, }
+\item[{size\+\_\+t}]{n\+Ticks = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classnfd_1_1tests_1_1UnitTestTimeFixture_a87111cf01f8dd8e06a39f4c4ef3a3d50}{}\label{classnfd_1_1tests_1_1UnitTestTimeFixture_a87111cf01f8dd8e06a39f4c4ef3a3d50}
+
+
+advance steady and system clocks 
+
+Clocks are advanced in increments of {\ttfamily tick} for {\ttfamily n\+Ticks} ticks. After each tick, global io\+\_\+service is polled to process pending I/O events.
+
+Exceptions thrown during I/O events are propagated to the caller. Clock advancing would stop in case of an exception. 
+
+Definition at line 89 of file test-\/common.\+hpp.
+
+\index{nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture@{nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture}!advance\+Clocks@{advance\+Clocks}}
+\index{advance\+Clocks@{advance\+Clocks}!nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture@{nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture}}
+\subsubsection[{\texorpdfstring{advance\+Clocks(const time\+::nanoseconds \&tick, const time\+::nanoseconds \&total)}{advanceClocks(const time::nanoseconds \&tick, const time::nanoseconds \&total)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::tests\+::\+Unit\+Test\+Time\+Fixture\+::advance\+Clocks (
+\begin{DoxyParamCaption}
+\item[{const time\+::nanoseconds \&}]{tick, }
+\item[{const time\+::nanoseconds \&}]{total}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classnfd_1_1tests_1_1UnitTestTimeFixture_a3c2b185e8496ceceed3a5dfffb1d6196}{}\label{classnfd_1_1tests_1_1UnitTestTimeFixture_a3c2b185e8496ceceed3a5dfffb1d6196}
+
+
+advance steady and system clocks 
+
+Clocks are advanced in increments of {\ttfamily tick} for {\ttfamily total} time. The last increment might be shorter than {\ttfamily tick}. After each tick, global io\+\_\+service is polled to process pending I/O events.
+
+Exceptions thrown during I/O events are propagated to the caller. Clock advancing would stop in case of an exception. 
+
+Definition at line 106 of file test-\/common.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/test-\/common.\+hpp\end{DoxyCompactItemize}

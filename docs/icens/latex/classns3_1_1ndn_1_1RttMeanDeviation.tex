@@ -1,0 +1,168 @@
+\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation}{}\section{ns3\+:\+:ndn\+:\+:Rtt\+Mean\+Deviation Class Reference}
+\label{classns3_1_1ndn_1_1RttMeanDeviation}\index{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}}
+
+
+The modified version of \char`\"{}\+Mean-\/-\/\+Deviation\char`\"{} R\+TT estimator, as discussed by Van Jacobson that better suits N\+DN communication model.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/rtt-\/mean-\/deviation.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Rtt\+Mean\+Deviation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1RttMeanDeviation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rtt\+Mean\+Deviation} (const \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation}{Rtt\+Mean\+Deviation} \&)\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_ae8aa34671660414ccb2abe299bf53e22}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_ae8aa34671660414ccb2abe299bf53e22}
+
+\item 
+virtual Type\+Id {\bfseries Get\+Instance\+Type\+Id} (void) const\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_a9916ec7ac4b9852977fa8b347cd437e9}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_a9916ec7ac4b9852977fa8b347cd437e9}
+
+\item 
+void \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_accd6536614537e19c1cef85e4ecf8368}{Sent\+Seq} (Sequence\+Number32 seq, uint32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Note that a particular sequence has been sent. \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_a291b9b4a6847dbc64898aea22c49e206}{Ack\+Seq} (Sequence\+Number32 ack\+Seq)
+\begin{DoxyCompactList}\small\item\em Note that a particular ack sequence has been received. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_ab175e70e52d5e239fc4c21ee5d2aa557}{Measurement} (Time measure)
+\begin{DoxyCompactList}\small\item\em Add a new measurement to the estimator. Pure virtual function. \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_ab7df92b998bac93fcfc533e0d422f061}{Retransmit\+Timeout} ()
+\begin{DoxyCompactList}\small\item\em Returns the estimated R\+TO. Pure virtual function. \end{DoxyCompactList}\item 
+Ptr$<$ \hyperlink{classns3_1_1ndn_1_1RttEstimator}{Rtt\+Estimator} $>$ {\bfseries Copy} () const\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_a0152da8ee79006c0a3565db565e67a5a}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_a0152da8ee79006c0a3565db565e67a5a}
+
+\item 
+void \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation_ac1abf1a3e9fb761a25a640a010edefaf}{Reset} ()\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_ac1abf1a3e9fb761a25a640a010edefaf}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_ac1abf1a3e9fb761a25a640a010edefaf}
+
+\begin{DoxyCompactList}\small\item\em Resets the estimation to its initial state. \end{DoxyCompactList}\item 
+void {\bfseries Gain} (double g)\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_a453ecc5c1950669856aae6970032ca37}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_a453ecc5c1950669856aae6970032ca37}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_abb003c5ae613753243e34c12530c34d4}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_abb003c5ae613753243e34c12530c34d4}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The modified version of \char`\"{}\+Mean-\/-\/\+Deviation\char`\"{} R\+TT estimator, as discussed by Van Jacobson that better suits N\+DN communication model. 
+
+This class implements the \char`\"{}\+Mean-\/-\/\+Deviation\char`\"{} R\+TT estimator, as discussed by Van Jacobson and Michael J. Karels, in \char`\"{}\+Congestion Avoidance and Control\char`\"{}, S\+I\+G\+C\+O\+MM 88, Appendix A 
+
+Definition at line 47 of file ndn-\/rtt-\/mean-\/deviation.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}!Ack\+Seq@{Ack\+Seq}}
+\index{Ack\+Seq@{Ack\+Seq}!ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}}
+\subsubsection[{\texorpdfstring{Ack\+Seq(\+Sequence\+Number32 ack\+Seq)}{AckSeq(SequenceNumber32 ackSeq)}}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\+::ndn\+::\+Rtt\+Mean\+Deviation\+::\+Ack\+Seq (
+\begin{DoxyParamCaption}
+\item[{Sequence\+Number32}]{ack\+Seq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_a291b9b4a6847dbc64898aea22c49e206}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_a291b9b4a6847dbc64898aea22c49e206}
+
+
+Note that a particular ack sequence has been received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ack\+Seq} & the ack sequence number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The measured R\+TT for this ack. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1RttEstimator_a950ad5e00fc80522219811ab0f14b4c8}{ns3\+::ndn\+::\+Rtt\+Estimator}.
+
+
+
+Definition at line 164 of file ndn-\/rtt-\/mean-\/deviation.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}}
+\subsubsection[{\texorpdfstring{Measurement(\+Time measure)}{Measurement(Time measure)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Rtt\+Mean\+Deviation\+::\+Measurement (
+\begin{DoxyParamCaption}
+\item[{Time}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_ab175e70e52d5e239fc4c21ee5d2aa557}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_ab175e70e52d5e239fc4c21ee5d2aa557}
+
+
+Add a new measurement to the estimator. Pure virtual function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & the new R\+TT measure. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classns3_1_1ndn_1_1RttEstimator_ad0a023a78ab3412cd3cc115d3e3f20f8}{ns3\+::ndn\+::\+Rtt\+Estimator}.
+
+
+
+Definition at line 83 of file ndn-\/rtt-\/mean-\/deviation.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}!Retransmit\+Timeout@{Retransmit\+Timeout}}
+\index{Retransmit\+Timeout@{Retransmit\+Timeout}!ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}}
+\subsubsection[{\texorpdfstring{Retransmit\+Timeout()}{RetransmitTimeout()}}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\+::ndn\+::\+Rtt\+Mean\+Deviation\+::\+Retransmit\+Timeout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_ab7df92b998bac93fcfc533e0d422f061}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_ab7df92b998bac93fcfc533e0d422f061}
+
+
+Returns the estimated R\+TO. Pure virtual function. 
+
+\begin{DoxyReturn}{Returns}
+the estimated R\+TO. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1ndn_1_1RttEstimator_a2a698a250c27dc78e9fdfcbacf3bfb34}{ns3\+::ndn\+::\+Rtt\+Estimator}.
+
+
+
+Definition at line 106 of file ndn-\/rtt-\/mean-\/deviation.\+cpp.
+
+\index{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}!Sent\+Seq@{Sent\+Seq}}
+\index{Sent\+Seq@{Sent\+Seq}!ns3\+::ndn\+::\+Rtt\+Mean\+Deviation@{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}}
+\subsubsection[{\texorpdfstring{Sent\+Seq(\+Sequence\+Number32 seq, uint32\+\_\+t size)}{SentSeq(SequenceNumber32 seq, uint32\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Rtt\+Mean\+Deviation\+::\+Sent\+Seq (
+\begin{DoxyParamCaption}
+\item[{Sequence\+Number32}]{seq, }
+\item[{uint32\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1RttMeanDeviation_accd6536614537e19c1cef85e4ecf8368}{}\label{classns3_1_1ndn_1_1RttMeanDeviation_accd6536614537e19c1cef85e4ecf8368}
+
+
+Note that a particular sequence has been sent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & the packet sequence number. \\
+\hline
+{\em size} & the packet size. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1RttEstimator_ab1e5b96ab70fa4c33689868f16879c09}{ns3\+::ndn\+::\+Rtt\+Estimator}.
+
+
+
+Definition at line 146 of file ndn-\/rtt-\/mean-\/deviation.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/ndn-\/rtt-\/mean-\/deviation.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/ndn-\/rtt-\/mean-\/deviation.\+cpp\end{DoxyCompactItemize}

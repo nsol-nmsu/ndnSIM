@@ -1,0 +1,85 @@
+\hypertarget{classndn_1_1nfd_1_1Controller}{}\section{ndn\+:\+:nfd\+:\+:Controller Class Reference}
+\label{classndn_1_1nfd_1_1Controller}\index{ndn\+::nfd\+::\+Controller@{ndn\+::nfd\+::\+Controller}}
+
+
+N\+FD Management protocol -\/ \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} client.  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/controller.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:nfd\+:\+:Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1nfd_1_1Controller}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void(const \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&)$>$ \hyperlink{classndn_1_1nfd_1_1Controller_a7dde1f6afdc8f2b58bc3dc6b4661a4f4}{Command\+Succeed\+Callback}\hypertarget{classndn_1_1nfd_1_1Controller_a7dde1f6afdc8f2b58bc3dc6b4661a4f4}{}\label{classndn_1_1nfd_1_1Controller_a7dde1f6afdc8f2b58bc3dc6b4661a4f4}
+
+\begin{DoxyCompactList}\small\item\em a callback on command success \end{DoxyCompactList}\item 
+typedef function$<$ void(uint32\+\_\+t, const std\+::string \&)$>$ \hyperlink{classndn_1_1nfd_1_1Controller_ad1a5fe51dfacb28c3fb624f03e9f50bb}{Command\+Fail\+Callback}\hypertarget{classndn_1_1nfd_1_1Controller_ad1a5fe51dfacb28c3fb624f03e9f50bb}{}\label{classndn_1_1nfd_1_1Controller_ad1a5fe51dfacb28c3fb624f03e9f50bb}
+
+\begin{DoxyCompactList}\small\item\em a callback on command failure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1nfd_1_1Controller_a2b22f4896f0d4109cce8bf446eae5b6e}{Controller} (\hyperlink{classndn_1_1Face}{Face} \&face, \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} \&key\+Chain)\hypertarget{classndn_1_1nfd_1_1Controller_a2b22f4896f0d4109cce8bf446eae5b6e}{}\label{classndn_1_1nfd_1_1Controller_a2b22f4896f0d4109cce8bf446eae5b6e}
+
+\begin{DoxyCompactList}\small\item\em construct a \hyperlink{classndn_1_1nfd_1_1Controller}{Controller} that uses face for transport, and uses the passed Key\+Chain to sign commands \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Command $>$ }\\void \hyperlink{classndn_1_1nfd_1_1Controller_a7c4bec1a46efde45f0196f1bf3e97e90}{start} (const \hyperlink{classndn_1_1nfd_1_1ControlParameters}{Control\+Parameters} \&parameters, const \hyperlink{classndn_1_1nfd_1_1Controller_a7dde1f6afdc8f2b58bc3dc6b4661a4f4}{Command\+Succeed\+Callback} \&on\+Success, const \hyperlink{classndn_1_1nfd_1_1Controller_ad1a5fe51dfacb28c3fb624f03e9f50bb}{Command\+Fail\+Callback} \&on\+Failure, const \hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options} \&options=\hyperlink{classndn_1_1nfd_1_1CommandOptions}{Command\+Options}())\hypertarget{classndn_1_1nfd_1_1Controller_a7c4bec1a46efde45f0196f1bf3e97e90}{}\label{classndn_1_1nfd_1_1Controller_a7c4bec1a46efde45f0196f1bf3e97e90}
+
+\begin{DoxyCompactList}\small\item\em start command execution \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \hyperlink{classndn_1_1nfd_1_1Controller_a0d52c3cd0677c88e2bb519510a4e50a3}{E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = 10060
+\begin{DoxyCompactList}\small\item\em error code for timeout \end{DoxyCompactList}\item 
+static const uint32\+\_\+t \hyperlink{classndn_1_1nfd_1_1Controller_a18e418f22fb63806938362c0e7201143}{E\+R\+R\+O\+R\+\_\+\+S\+E\+R\+V\+ER} = 500\hypertarget{classndn_1_1nfd_1_1Controller_a18e418f22fb63806938362c0e7201143}{}\label{classndn_1_1nfd_1_1Controller_a18e418f22fb63806938362c0e7201143}
+
+\begin{DoxyCompactList}\small\item\em error code for server error \end{DoxyCompactList}\item 
+static const uint32\+\_\+t \hyperlink{classndn_1_1nfd_1_1Controller_a1bb9e1924c4d94cdbe69ec3d0eb22557}{E\+R\+R\+O\+R\+\_\+\+L\+B\+O\+U\+ND} = 400\hypertarget{classndn_1_1nfd_1_1Controller_a1bb9e1924c4d94cdbe69ec3d0eb22557}{}\label{classndn_1_1nfd_1_1Controller_a1bb9e1924c4d94cdbe69ec3d0eb22557}
+
+\begin{DoxyCompactList}\small\item\em inclusive lower bound of error codes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Face}{Face} \& {\bfseries m\+\_\+face}\hypertarget{classndn_1_1nfd_1_1Controller_a33e90f5eb0213b69d57525446577d5e3}{}\label{classndn_1_1nfd_1_1Controller_a33e90f5eb0213b69d57525446577d5e3}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} \& {\bfseries m\+\_\+key\+Chain}\hypertarget{classndn_1_1nfd_1_1Controller_a3ec5c32106e1876acbf8493c463eeaef}{}\label{classndn_1_1nfd_1_1Controller_a3ec5c32106e1876acbf8493c463eeaef}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+FD Management protocol -\/ \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} client. 
+
+Definition at line 41 of file nfd-\/controller.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{ndn\+::nfd\+::\+Controller@{ndn\+::nfd\+::\+Controller}!E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT}}
+\index{E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT@{E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT}!ndn\+::nfd\+::\+Controller@{ndn\+::nfd\+::\+Controller}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT}{ERROR\_TIMEOUT}}]{\setlength{\rightskip}{0pt plus 5cm}const uint32\+\_\+t ndn\+::nfd\+::\+Controller\+::\+E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT = 10060\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1nfd_1_1Controller_a0d52c3cd0677c88e2bb519510a4e50a3}{}\label{classndn_1_1nfd_1_1Controller_a0d52c3cd0677c88e2bb519510a4e50a3}
+
+
+error code for timeout 
+
+\begin{DoxyNote}{Note}
+comes from \href{http://msdn.microsoft.com/en-us/library/windows/desktop/ms740668.aspx}{\tt http\+://msdn.\+microsoft.\+com/en-\/us/library/windows/desktop/ms740668.\+aspx} 
+\end{DoxyNote}
+
+
+Definition at line 88 of file nfd-\/controller.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/controller.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/controller.\+cpp\end{DoxyCompactItemize}

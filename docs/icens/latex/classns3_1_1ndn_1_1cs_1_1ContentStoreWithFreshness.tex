@@ -1,0 +1,81 @@
+\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness}{}\section{ns3\+:\+:ndn\+:\+:cs\+:\+:Content\+Store\+With\+Freshness$<$ Policy $>$ Class Template Reference}
+\label{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness}\index{ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness$<$ Policy $>$@{ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness$<$ Policy $>$}}
+
+
+Special content store realization that honors Freshness parameter in Data packets.  
+
+
+
+
+{\ttfamily \#include $<$content-\/store-\/with-\/freshness.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:cs\+:\+:Content\+Store\+With\+Freshness$<$ Policy $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.638905cm]{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl}{Content\+Store\+Impl}$<$ ndn\+S\+I\+M\+::multi\+\_\+policy\+\_\+traits$<$ boost\+::mpl\+::vector2$<$ Policy, ndn\+S\+I\+M\+::freshness\+\_\+policy\+\_\+traits $>$ $>$ $>$ {\bfseries super}\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a2caf4ce9d5a0edadc8fe5951074c3343}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a2caf4ce9d5a0edadc8fe5951074c3343}
+
+\item 
+typedef super\+::policy\+\_\+container\+::template index$<$ 1 $>$\+::type {\bfseries freshness\+\_\+policy\+\_\+container}\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a6d0100d1e61a640e42fe8c5538d42210}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a6d0100d1e61a640e42fe8c5538d42210}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a93b66c531203bfd201ec24aba47b6964}{Print} (std\+::ostream \&os) const\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a93b66c531203bfd201ec24aba47b6964}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a93b66c531203bfd201ec24aba47b6964}
+
+\begin{DoxyCompactList}\small\item\em Print out content store entries. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a9251bd764c52de8201da5de8259983df}{Add} (shared\+\_\+ptr$<$ const Data $>$ data)
+\begin{DoxyCompactList}\small\item\em Add a new content to the content store. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a32b9b090ab6911360387fe59a6a0c021}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a32b9b090ab6911360387fe59a6a0c021}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Policy$>$\\*
+class ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness$<$ Policy $>$}
+
+Special content store realization that honors Freshness parameter in Data packets. 
+
+Definition at line 39 of file content-\/store-\/with-\/freshness.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness@{ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness}!Add@{Add}}
+\index{Add@{Add}!ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness@{ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness}}
+\subsubsection[{\texorpdfstring{Add(shared\+\_\+ptr$<$ const Data $>$ data)}{Add(shared\_ptr< const Data > data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Policy $>$ bool {\bf ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness}$<$ Policy $>$\+::Add (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a9251bd764c52de8201da5de8259983df}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a9251bd764c52de8201da5de8259983df}
+
+
+Add a new content to the content store. 
+
+\begin{DoxyReturn}{Returns}
+true if an existing entry was updated, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_adb15b99cef032bd661f44447be1c9d68}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ ndn\+S\+I\+M\+::multi\+\_\+policy\+\_\+traits$<$ boost\+::mpl\+::vector2$<$ Policy, ndn\+S\+I\+M\+::freshness\+\_\+policy\+\_\+traits $>$ $>$ $>$}.
+
+
+
+Definition at line 100 of file content-\/store-\/with-\/freshness.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/cs/content-\/store-\/with-\/freshness.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{classnfd_1_1MulticastUdpFace}{}\section{nfd\+:\+:Multicast\+Udp\+Face Class Reference}
+\label{classnfd_1_1MulticastUdpFace}\index{nfd\+::\+Multicast\+Udp\+Face@{nfd\+::\+Multicast\+Udp\+Face}}
+
+
+Implementation of \hyperlink{classnfd_1_1Face}{Face} abstraction that uses multicast U\+DP as underlying transport mechanism.  
+
+
+
+
+{\ttfamily \#include $<$multicast-\/udp-\/face.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Multicast\+Udp\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.589744cm]{classnfd_1_1MulticastUdpFace}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1MulticastUdpFace_a35b2236e2bac6af5d94551376f27dcda}{Multicast\+Udp\+Face} (const protocol\+::endpoint \&multicast\+Group, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&local\+Uri, protocol\+::socket recv\+Socket, protocol\+::socket send\+Socket)\hypertarget{classnfd_1_1MulticastUdpFace_a35b2236e2bac6af5d94551376f27dcda}{}\label{classnfd_1_1MulticastUdpFace_a35b2236e2bac6af5d94551376f27dcda}
+
+\begin{DoxyCompactList}\small\item\em Creates a U\+D\+P-\/based face for multicast communication. \end{DoxyCompactList}\item 
+const protocol\+::endpoint \& {\bfseries get\+Multicast\+Group} () const\hypertarget{classnfd_1_1MulticastUdpFace_ab96635d72e30a573cbc20aecc6a6f589}{}\label{classnfd_1_1MulticastUdpFace_ab96635d72e30a573cbc20aecc6a6f589}
+
+\item 
+void \hyperlink{classnfd_1_1MulticastUdpFace_a2186605c595d500b913fb060240f6a94}{send\+Interest} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classnfd_1_1MulticastUdpFace_a2186605c595d500b913fb060240f6a94}{}\label{classnfd_1_1MulticastUdpFace_a2186605c595d500b913fb060240f6a94}
+
+\begin{DoxyCompactList}\small\item\em send an Interest \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1MulticastUdpFace_a26ba1a0b0ee6ce18fadebbbf9222ff32}{send\+Data} (const \hyperlink{classndn_1_1Data}{Data} \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em send a Data \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of \hyperlink{classnfd_1_1Face}{Face} abstraction that uses multicast U\+DP as underlying transport mechanism. 
+
+Definition at line 37 of file multicast-\/udp-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Multicast\+Udp\+Face@{nfd\+::\+Multicast\+Udp\+Face}!send\+Data@{send\+Data}}
+\index{send\+Data@{send\+Data}!nfd\+::\+Multicast\+Udp\+Face@{nfd\+::\+Multicast\+Udp\+Face}}
+\subsubsection[{\texorpdfstring{send\+Data(const Data \&data) D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{sendData(const Data \&data) DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Multicast\+Udp\+Face\+::send\+Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1MulticastUdpFace_a26ba1a0b0ee6ce18fadebbbf9222ff32}{}\label{classnfd_1_1MulticastUdpFace_a26ba1a0b0ee6ce18fadebbbf9222ff32}
+
+
+send a Data 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000018}{Todo}]After this face implements duplicate suppression, on\+Send\+Data should be emitted only when data is actually sent out. See also \#2555 \end{DoxyRefDesc}
+
+
+Implements \hyperlink{classnfd_1_1Face_aad3b0b13c6e181548445e1401a535b75}{nfd\+::\+Face}.
+
+
+
+Definition at line 58 of file multicast-\/udp-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/multicast-\/udp-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/multicast-\/udp-\/face.\+cpp\end{DoxyCompactItemize}

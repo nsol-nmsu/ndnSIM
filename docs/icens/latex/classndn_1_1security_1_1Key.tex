@@ -1,0 +1,295 @@
+\hypertarget{classndn_1_1security_1_1Key}{}\section{ndn\+:\+:security\+:\+:Key Class Reference}
+\label{classndn_1_1security_1_1Key}\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+
+
+represents a key  
+
+
+
+
+{\ttfamily \#include $<$key.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1security_1_1Key_a28037d60a70b8fe6110e9bbc4c67bd35}{Key} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1security_1_1Key_abc89b5d69b84f4328e39390c980d6e87}{get\+Name} () const\hypertarget{classndn_1_1security_1_1Key_abc89b5d69b84f4328e39390c980d6e87}{}\label{classndn_1_1security_1_1Key_abc89b5d69b84f4328e39390c980d6e87}
+
+\begin{DoxyCompactList}\small\item\em Get the name of the key. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1security_1_1Key_ac34b967ab510fdc50954d2088e87edae}{get\+Identity} () const\hypertarget{classndn_1_1security_1_1Key_ac34b967ab510fdc50954d2088e87edae}{}\label{classndn_1_1security_1_1Key_ac34b967ab510fdc50954d2088e87edae}
+
+\begin{DoxyCompactList}\small\item\em Get the name of the belonging identity. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \& \hyperlink{classndn_1_1security_1_1Key_a69d411b8acca98d8eaf6bb95ffc0f464}{get\+Key\+Id} () const\hypertarget{classndn_1_1security_1_1Key_a69d411b8acca98d8eaf6bb95ffc0f464}{}\label{classndn_1_1security_1_1Key_a69d411b8acca98d8eaf6bb95ffc0f464}
+
+\begin{DoxyCompactList}\small\item\em Get the key id of the key. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \& \hyperlink{classndn_1_1security_1_1Key_ad0310b46e0da4e040fcdc81efe7c36d3}{get\+Public\+Key} () const\hypertarget{classndn_1_1security_1_1Key_ad0310b46e0da4e040fcdc81efe7c36d3}{}\label{classndn_1_1security_1_1Key_ad0310b46e0da4e040fcdc81efe7c36d3}
+
+\begin{DoxyCompactList}\small\item\em Get public key. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \hyperlink{classndn_1_1security_1_1Key_ac8d4be4de6fab5a64e475a9f822f89f3}{get\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&cert\+Name) const
+\begin{DoxyCompactList}\small\item\em Get a certificate. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1security_1_1CertificateContainer}{Certificate\+Container} \& \hyperlink{classndn_1_1security_1_1Key_aee45639a40689efef18d5a56531d8f11}{get\+Certificates} () const\hypertarget{classndn_1_1security_1_1Key_aee45639a40689efef18d5a56531d8f11}{}\label{classndn_1_1security_1_1Key_aee45639a40689efef18d5a56531d8f11}
+
+\begin{DoxyCompactList}\small\item\em Get all the certificates for this key. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \& \hyperlink{classndn_1_1security_1_1Key_af6f712310047a8f0fba11e9a76ccf5c5}{get\+Default\+Certificate} () const
+\begin{DoxyCompactList}\small\item\em Get the default certificate for this \hyperlink{classndn_1_1security_1_1Key}{Key}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Key_a1a086f956d559c17c5fac147bd82c8cf}{operator bool} () const\hypertarget{classndn_1_1security_1_1Key_a1a086f956d559c17c5fac147bd82c8cf}{}\label{classndn_1_1security_1_1Key_a1a086f956d559c17c5fac147bd82c8cf}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classndn_1_1security_1_1Key}{Key} instance is valid. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1security_1_1Key_aaf9dab68be2d09e86794449d381d2178}{operator!} () const\hypertarget{classndn_1_1security_1_1Key_aaf9dab68be2d09e86794449d381d2178}{}\label{classndn_1_1security_1_1Key_aaf9dab68be2d09e86794449d381d2178}
+
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classndn_1_1security_1_1Key}{Key} instance is invalid. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1Key_aa7fe309c5dca6f1a99c9da3fb183d455}{remove\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&cert\+Name)
+\begin{DoxyCompactList}\small\item\em Remove a certificate. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \& \hyperlink{classndn_1_1security_1_1Key_a0a3bedae717541c4bfc677cc41116207}{set\+Default\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&cert\+Name)
+\begin{DoxyCompactList}\small\item\em Set the default certificate. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \& \hyperlink{classndn_1_1security_1_1Key_a8ce36a3e607c1ddf19872ad1651f404c}{set\+Default\+Certificate} (const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate)
+\begin{DoxyCompactList}\small\item\em Set the default certificate. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1Key_ad11f26d64846944ab7f42e9b96399d10}{Key} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id, shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1PibImpl}{Pib\+Impl} $>$ impl)
+\begin{DoxyCompactList}\small\item\em Create an Key\+Entry with {\ttfamily identity\+Name} and {\ttfamily key\+Id}. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1Key_ad70bf0ea07312b373be7db8e1e209762}{validity\+Check} () const
+\begin{DoxyCompactList}\small\item\em Check the validity of this instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: void add\+Certificate(const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}\& certificate)\hypertarget{classndn_1_1security_1_1Key_aa0e01042be006e2a9e942c15a070bc45}{}\label{classndn_1_1security_1_1Key_aa0e01042be006e2a9e942c15a070bc45}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: \hyperlink{classndn_1_1security_1_1Key}{Key}(const \hyperlink{classndn_1_1Name}{Name}\& identity\+Name\hypertarget{classndn_1_1security_1_1Key_a0cfe07cafa495a19e20e33970640bd53}{}\label{classndn_1_1security_1_1Key_a0cfe07cafa495a19e20e33970640bd53}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \& {\bfseries key\+Id}\hypertarget{classndn_1_1security_1_1Key_a60c6c52b1530f3c29308bef7fa478f1f}{}\label{classndn_1_1security_1_1Key_a60c6c52b1530f3c29308bef7fa478f1f}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \& {\bfseries public\+Key}\hypertarget{classndn_1_1security_1_1Key_a30e0e5f1e3aabd7c02d164e619bfdb96}{}\label{classndn_1_1security_1_1Key_a30e0e5f1e3aabd7c02d164e619bfdb96}
+
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} const \hyperlink{classndn_1_1PublicKey}{Public\+Key} shared\+\_\+ptr$<$ \hyperlink{classndn_1_1security_1_1PibImpl}{Pib\+Impl} $>$ {\bfseries impl}\hypertarget{classndn_1_1security_1_1Key_a9ff95a9c6de273df523e7fdd6e3edcf3}{}\label{classndn_1_1security_1_1Key_a9ff95a9c6de273df523e7fdd6e3edcf3}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Identity}\hypertarget{classndn_1_1security_1_1Key_a0356b07ec7295ba08eb3f7364cce24c3}{}\label{classndn_1_1security_1_1Key_a0356b07ec7295ba08eb3f7364cce24c3}
+
+\item 
+class {\bfseries Key\+Container}\hypertarget{classndn_1_1security_1_1Key_ab0f6d8e87c0bfe8bad96d644f6776370}{}\label{classndn_1_1security_1_1Key_ab0f6d8e87c0bfe8bad96d644f6776370}
+
+\item 
+class {\bfseries Key\+Chain}\hypertarget{classndn_1_1security_1_1Key_a4575cb0348247df0457c276b54b06764}{}\label{classndn_1_1security_1_1Key_a4575cb0348247df0457c276b54b06764}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a key 
+
+\hyperlink{classndn_1_1security_1_1Key}{Key} is at the second level in P\+IB\textquotesingle{}s Identity-\/\+Key-\/\+Certificate hierarchy. An \hyperlink{classndn_1_1security_1_1Key}{Key} has a \hyperlink{classndn_1_1Name}{Name} (identity + key\+Id), and contains one or more certificates, one of which is set as the default certificate of this key. A certificate can be directly accessed from a \hyperlink{classndn_1_1security_1_1Key}{Key} object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1PibImpl_1_1Error}{Pib\+Impl\+::\+Error}} & when underlying implementation has non-\/semantic error. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 45 of file key.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}!Key@{Key}}
+\index{Key@{Key}!ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+\subsubsection[{\texorpdfstring{Key()}{Key()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::security\+::\+Key\+::\+Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Key_a28037d60a70b8fe6110e9bbc4c67bd35}{}\label{classndn_1_1security_1_1Key_a28037d60a70b8fe6110e9bbc4c67bd35}
+
+
+Default Constructor. 
+
+\hyperlink{classndn_1_1security_1_1Key}{Key} created using this default constructor is just a place holder. It must obtain an actual instance from \hyperlink{classndn_1_1security_1_1Identity_a9645d0e8550da95f067d18b95150f208}{Identity\+::get\+Key}(...). A typical usage would be for exception handling\+:
+
+\hyperlink{classndn_1_1security_1_1Key}{Key} key; try \{ key = \hyperlink{classndn_1_1security_1_1Identity_a9645d0e8550da95f067d18b95150f208}{Identity.\+get\+Key}(...); \} catch (\hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}\&) \{ ... \}
+
+A \hyperlink{classndn_1_1security_1_1Key}{Key} instance created using the constructor is invalid. Calling a member method on an invalid \hyperlink{classndn_1_1security_1_1Key}{Key} instance may cause an std\+::domain\+\_\+error. 
+
+Definition at line 29 of file key.\+cpp.
+
+\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}!Key@{Key}}
+\index{Key@{Key}!ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+\subsubsection[{\texorpdfstring{Key(const Name \&identity\+Name, const name\+::\+Component \&key\+Id, shared\+\_\+ptr$<$ Pib\+Impl $>$ impl)}{Key(const Name \&identityName, const name::Component \&keyId, shared\_ptr< PibImpl > impl)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::security\+::\+Key\+::\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id, }
+\item[{shared\+\_\+ptr$<$ {\bf Pib\+Impl} $>$}]{impl}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Key_ad11f26d64846944ab7f42e9b96399d10}{}\label{classndn_1_1security_1_1Key_ad11f26d64846944ab7f42e9b96399d10}
+
+
+Create an Key\+Entry with {\ttfamily identity\+Name} and {\ttfamily key\+Id}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name of the \hyperlink{classndn_1_1security_1_1Identity}{Identity}. \\
+\hline
+{\em key\+Id} & The key id of the key. \\
+\hline
+{\em impl} & The actual backend implementation. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the key does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 54 of file key.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}!get\+Certificate@{get\+Certificate}}
+\index{get\+Certificate@{get\+Certificate}!ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+\subsubsection[{\texorpdfstring{get\+Certificate(const Name \&cert\+Name) const}{getCertificate(const Name \&certName) const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Identity\+Certificate} ndn\+::security\+::\+Key\+::get\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{cert\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1Key_ac8d4be4de6fab5a64e475a9f822f89f3}{}\label{classndn_1_1security_1_1Key_ac8d4be4de6fab5a64e475a9f822f89f3}
+
+
+Get a certificate. 
+
+\begin{DoxyReturn}{Returns}
+the certificate 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the certificate does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 130 of file key.\+cpp.
+
+\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}!get\+Default\+Certificate@{get\+Default\+Certificate}}
+\index{get\+Default\+Certificate@{get\+Default\+Certificate}!ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+\subsubsection[{\texorpdfstring{get\+Default\+Certificate() const}{getDefaultCertificate() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Identity\+Certificate} \& ndn\+::security\+::\+Key\+::get\+Default\+Certificate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1Key_af6f712310047a8f0fba11e9a76ccf5c5}{}\label{classndn_1_1security_1_1Key_af6f712310047a8f0fba11e9a76ccf5c5}
+
+
+Get the default certificate for this \hyperlink{classndn_1_1security_1_1Key}{Key}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the default certificate does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 170 of file key.\+cpp.
+
+\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}!remove\+Certificate@{remove\+Certificate}}
+\index{remove\+Certificate@{remove\+Certificate}!ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+\subsubsection[{\texorpdfstring{remove\+Certificate(const Name \&cert\+Name)}{removeCertificate(const Name \&certName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+::remove\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{cert\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Key_aa7fe309c5dca6f1a99c9da3fb183d455}{}\label{classndn_1_1security_1_1Key_aa7fe309c5dca6f1a99c9da3fb183d455}
+
+
+Remove a certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert\+Name} & The name of the certificate to delete. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 118 of file key.\+cpp.
+
+\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}!set\+Default\+Certificate@{set\+Default\+Certificate}}
+\index{set\+Default\+Certificate@{set\+Default\+Certificate}!ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+\subsubsection[{\texorpdfstring{set\+Default\+Certificate(const Name \&cert\+Name)}{setDefaultCertificate(const Name \&certName)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Identity\+Certificate} \& ndn\+::security\+::\+Key\+::set\+Default\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{cert\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Key_a0a3bedae717541c4bfc677cc41116207}{}\label{classndn_1_1security_1_1Key_a0a3bedae717541c4bfc677cc41116207}
+
+
+Set the default certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert\+Name} & The name of the default certificate of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the default certificate 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the certificate does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 152 of file key.\+cpp.
+
+\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}!set\+Default\+Certificate@{set\+Default\+Certificate}}
+\index{set\+Default\+Certificate@{set\+Default\+Certificate}!ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+\subsubsection[{\texorpdfstring{set\+Default\+Certificate(const Identity\+Certificate \&certificate)}{setDefaultCertificate(const IdentityCertificate \&certificate)}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Identity\+Certificate} \& ndn\+::security\+::\+Key\+::set\+Default\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Identity\+Certificate} \&}]{certificate}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1Key_a8ce36a3e607c1ddf19872ad1651f404c}{}\label{classndn_1_1security_1_1Key_a8ce36a3e607c1ddf19872ad1651f404c}
+
+
+Set the default certificate. 
+
+If the certificate does not exist, add it and set it as the default certificate of the key. If the certificate exists, simply set it as the default certificate of the key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em certificate} & The certificate to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the default certificate 
+\end{DoxyReturn}
+
+
+Definition at line 163 of file key.\+cpp.
+
+\index{ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}!validity\+Check@{validity\+Check}}
+\index{validity\+Check@{validity\+Check}!ndn\+::security\+::\+Key@{ndn\+::security\+::\+Key}}
+\subsubsection[{\texorpdfstring{validity\+Check() const}{validityCheck() const}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+::validity\+Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1security_1_1Key_ad70bf0ea07312b373be7db8e1e209762}{}\label{classndn_1_1security_1_1Key_ad70bf0ea07312b373be7db8e1e209762}
+
+
+Check the validity of this instance. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::domain\+\_\+error} & if the instance is invalid \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 194 of file key.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/key.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/key.\+cpp\end{DoxyCompactItemize}

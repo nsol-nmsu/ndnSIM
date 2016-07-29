@@ -1,0 +1,166 @@
+\hypertarget{classndn_1_1nfd_1_1ForwarderStatus}{}\section{ndn\+:\+:nfd\+:\+:Forwarder\+Status Class Reference}
+\label{classndn_1_1nfd_1_1ForwarderStatus}\index{ndn\+::nfd\+::\+Forwarder\+Status@{ndn\+::nfd\+::\+Forwarder\+Status}}
+
+
+represents N\+FD Forwarder Status  
+
+
+
+
+{\ttfamily \#include $<$nfd-\/forwarder-\/status.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1ForwarderStatus_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Forwarder\+Status} (const \hyperlink{classndn_1_1Block}{Block} \&payload)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_acecd6a667778a1103a0958509e7ee517}{}\label{classndn_1_1nfd_1_1ForwarderStatus_acecd6a667778a1103a0958509e7ee517}
+
+\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1nfd_1_1ForwarderStatus_a158408b8bc2d76348e07a322a3b8c480}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder) const
+\begin{DoxyCompactList}\small\item\em prepend \hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} as a Content block to the encoder \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1nfd_1_1ForwarderStatus_a86b1a85f4ac0e6fd1ea927eefe1e9bdb}{wire\+Encode} () const
+\begin{DoxyCompactList}\small\item\em encode \hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} as a Content block \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1nfd_1_1ForwarderStatus_abfc1230b9ffd67d88c09ead2e64aa68f}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em decode \hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} from a Content block \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Nfd\+Version} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a0b8fd7119eaddfce9e51dfae6241ea05}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a0b8fd7119eaddfce9e51dfae6241ea05}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+Nfd\+Version} (const std\+::string \&nfd\+Version)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a6eb55490fa15fbdda42ae55950d6e49f}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a6eb55490fa15fbdda42ae55950d6e49f}
+
+\item 
+const time\+::system\+\_\+clock\+::\+Time\+Point \& {\bfseries get\+Start\+Timestamp} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a4f42518ad11e445f5f4118b77e1826a5}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a4f42518ad11e445f5f4118b77e1826a5}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+Start\+Timestamp} (const time\+::system\+\_\+clock\+::\+Time\+Point \&start\+Timestamp)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_aaf02e527b16c962bd3af2ba9b9b1b485}{}\label{classndn_1_1nfd_1_1ForwarderStatus_aaf02e527b16c962bd3af2ba9b9b1b485}
+
+\item 
+const time\+::system\+\_\+clock\+::\+Time\+Point \& {\bfseries get\+Current\+Timestamp} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_aec3a32a66b8b4d49dc6749624b601bdf}{}\label{classndn_1_1nfd_1_1ForwarderStatus_aec3a32a66b8b4d49dc6749624b601bdf}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+Current\+Timestamp} (const time\+::system\+\_\+clock\+::\+Time\+Point \&current\+Timestamp)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a1d1627d02bb2035f04795ad81803d7da}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a1d1627d02bb2035f04795ad81803d7da}
+
+\item 
+size\+\_\+t {\bfseries get\+N\+Name\+Tree\+Entries} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_aacaca2baf33f36816e146323f9e02c60}{}\label{classndn_1_1nfd_1_1ForwarderStatus_aacaca2baf33f36816e146323f9e02c60}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+Name\+Tree\+Entries} (size\+\_\+t n\+Name\+Tree\+Entries)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a35ecb81dcc8ada7fcbf78ea5ee8e37fc}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a35ecb81dcc8ada7fcbf78ea5ee8e37fc}
+
+\item 
+size\+\_\+t {\bfseries get\+N\+Fib\+Entries} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a55b4d7955c3c1a4f516df159da1cc0f0}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a55b4d7955c3c1a4f516df159da1cc0f0}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+Fib\+Entries} (size\+\_\+t n\+Fib\+Entries)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_adbc53565db484c43e0146ac99957a471}{}\label{classndn_1_1nfd_1_1ForwarderStatus_adbc53565db484c43e0146ac99957a471}
+
+\item 
+size\+\_\+t {\bfseries get\+N\+Pit\+Entries} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a129cb39e548b8a9abd56b7cfd4c1dc7d}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a129cb39e548b8a9abd56b7cfd4c1dc7d}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+Pit\+Entries} (size\+\_\+t n\+Pit\+Entries)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a397e52c6776750a96586c28a1bac920d}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a397e52c6776750a96586c28a1bac920d}
+
+\item 
+size\+\_\+t {\bfseries get\+N\+Measurements\+Entries} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a738695471a1a2dc938b09fa644f99bc1}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a738695471a1a2dc938b09fa644f99bc1}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+Measurements\+Entries} (size\+\_\+t n\+Measurements\+Entries)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_acf0238b61304a525c75f2b5d7d228e5d}{}\label{classndn_1_1nfd_1_1ForwarderStatus_acf0238b61304a525c75f2b5d7d228e5d}
+
+\item 
+size\+\_\+t {\bfseries get\+N\+Cs\+Entries} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a01055a923a2d6ae9dd5d61b6621b25a0}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a01055a923a2d6ae9dd5d61b6621b25a0}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+Cs\+Entries} (size\+\_\+t n\+Cs\+Entries)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a08d394305f25703d1b909ac39fcbaef3}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a08d394305f25703d1b909ac39fcbaef3}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+In\+Interests} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_ace76960d86ce1530d6e60727adbab72e}{}\label{classndn_1_1nfd_1_1ForwarderStatus_ace76960d86ce1530d6e60727adbab72e}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+In\+Interests} (uint64\+\_\+t n\+In\+Interests)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a92eaf16ffeda5a8c85fdb82938870ce0}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a92eaf16ffeda5a8c85fdb82938870ce0}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+In\+Datas} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a42c1817c5376b914163e02943106bab5}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a42c1817c5376b914163e02943106bab5}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+In\+Datas} (uint64\+\_\+t n\+In\+Datas)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a0fc87290dcb6d90e9e8ce625899362f8}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a0fc87290dcb6d90e9e8ce625899362f8}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+Out\+Interests} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a7139ac436ee14683fbeaadc01ad51fc1}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a7139ac436ee14683fbeaadc01ad51fc1}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+Out\+Interests} (uint64\+\_\+t n\+Out\+Interests)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a83df3f90858bac8a033717f7923ab2f9}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a83df3f90858bac8a033717f7923ab2f9}
+
+\item 
+uint64\+\_\+t {\bfseries get\+N\+Out\+Datas} () const\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_ad2f584545caee4073d497bc78de4b43c}{}\label{classndn_1_1nfd_1_1ForwarderStatus_ad2f584545caee4073d497bc78de4b43c}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} \& {\bfseries set\+N\+Out\+Datas} (uint64\+\_\+t n\+Out\+Datas)\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_ab642da7a9e2499265b7d154d88dfb820}{}\label{classndn_1_1nfd_1_1ForwarderStatus_ab642da7a9e2499265b7d154d88dfb820}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents N\+FD Forwarder Status 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/projects/nfd/wiki/ForwarderStatus}{\tt http\+://redmine.\+named-\/data.\+net/projects/nfd/wiki/\+Forwarder\+Status} 
+\end{DoxySeeAlso}
+
+
+Definition at line 36 of file nfd-\/forwarder-\/status.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::nfd\+::\+Forwarder\+Status@{ndn\+::nfd\+::\+Forwarder\+Status}!wire\+Decode@{wire\+Decode}}
+\index{wire\+Decode@{wire\+Decode}!ndn\+::nfd\+::\+Forwarder\+Status@{ndn\+::nfd\+::\+Forwarder\+Status}}
+\subsubsection[{\texorpdfstring{wire\+Decode(const Block \&wire)}{wireDecode(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::nfd\+::\+Forwarder\+Status\+::wire\+Decode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_abfc1230b9ffd67d88c09ead2e64aa68f}{}\label{classndn_1_1nfd_1_1ForwarderStatus_abfc1230b9ffd67d88c09ead2e64aa68f}
+
+
+decode \hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} from a Content block 
+
+The outermost Content element isn\textquotesingle{}t part of Forward\+Status structure. 
+
+Definition at line 116 of file nfd-\/forwarder-\/status.\+cpp.
+
+\index{ndn\+::nfd\+::\+Forwarder\+Status@{ndn\+::nfd\+::\+Forwarder\+Status}!wire\+Encode@{wire\+Encode}}
+\index{wire\+Encode@{wire\+Encode}!ndn\+::nfd\+::\+Forwarder\+Status@{ndn\+::nfd\+::\+Forwarder\+Status}}
+\subsubsection[{\texorpdfstring{wire\+Encode(\+Encoding\+Impl$<$ T\+A\+G $>$ \&encoder) const}{wireEncode(EncodingImpl< TAG > \&encoder) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$encoding\+::\+Tag T\+AG$>$ size\+\_\+t ndn\+::nfd\+::\+Forwarder\+Status\+::wire\+Encode (
+\begin{DoxyParamCaption}
+\item[{{\bf Encoding\+Impl}$<$ T\+AG $>$ \&}]{encoder}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a158408b8bc2d76348e07a322a3b8c480}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a158408b8bc2d76348e07a322a3b8c480}
+
+
+prepend \hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} as a Content block to the encoder 
+
+The outermost Content element isn\textquotesingle{}t part of Forward\+Status structure. 
+
+Definition at line 58 of file nfd-\/forwarder-\/status.\+cpp.
+
+\index{ndn\+::nfd\+::\+Forwarder\+Status@{ndn\+::nfd\+::\+Forwarder\+Status}!wire\+Encode@{wire\+Encode}}
+\index{wire\+Encode@{wire\+Encode}!ndn\+::nfd\+::\+Forwarder\+Status@{ndn\+::nfd\+::\+Forwarder\+Status}}
+\subsubsection[{\texorpdfstring{wire\+Encode() const}{wireEncode() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block} \& ndn\+::nfd\+::\+Forwarder\+Status\+::wire\+Encode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1nfd_1_1ForwarderStatus_a86b1a85f4ac0e6fd1ea927eefe1e9bdb}{}\label{classndn_1_1nfd_1_1ForwarderStatus_a86b1a85f4ac0e6fd1ea927eefe1e9bdb}
+
+
+encode \hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{Forwarder\+Status} as a Content block 
+
+The outermost Content element isn\textquotesingle{}t part of Forward\+Status structure. 
+
+Definition at line 100 of file nfd-\/forwarder-\/status.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/forwarder-\/status.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/management/nfd-\/forwarder-\/status.\+cpp\end{DoxyCompactItemize}

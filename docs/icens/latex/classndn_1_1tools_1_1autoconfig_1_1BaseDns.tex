@@ -1,0 +1,97 @@
+\hypertarget{classndn_1_1tools_1_1autoconfig_1_1BaseDns}{}\section{ndn\+:\+:tools\+:\+:autoconfig\+:\+:Base\+Dns Class Reference}
+\label{classndn_1_1tools_1_1autoconfig_1_1BaseDns}\index{ndn\+::tools\+::autoconfig\+::\+Base\+Dns@{ndn\+::tools\+::autoconfig\+::\+Base\+Dns}}
+
+
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base}{Base} class for stages that use D\+N\+S-\/based guessing.  
+
+
+
+
+{\ttfamily \#include $<$base-\/dns.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:tools\+:\+:autoconfig\+:\+:Base\+Dns\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.771044cm]{classndn_1_1tools_1_1autoconfig_1_1BaseDns}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1tools_1_1autoconfig_1_1BaseDns_1_1Error}{Error}
+\item 
+union \hyperlink{unionndn_1_1tools_1_1autoconfig_1_1BaseDns_1_1QueryAnswer}{Query\+Answer}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Base\+Dns} (\hyperlink{classndn_1_1Face}{Face} \&face, \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} \&key\+Chain, const \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}{Next\+Stage\+Callback} \&next\+Stage\+On\+Failure)\hypertarget{classndn_1_1tools_1_1autoconfig_1_1BaseDns_a56bc40ad4af9115bee29f61b945ef713}{}\label{classndn_1_1tools_1_1autoconfig_1_1BaseDns_a56bc40ad4af9115bee29f61b945ef713}
+
+\item 
+std\+::string \hyperlink{classndn_1_1tools_1_1autoconfig_1_1BaseDns_a334f3f261aa393cffa549c64d2718dcf}{query\+Srv\+Rr} (const std\+::string \&fqdn)
+\begin{DoxyCompactList}\small\item\em Send D\+NS S\+RV request for a {\ttfamily fqdn} fully qualified domain name. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1tools_1_1autoconfig_1_1BaseDns_aef6589557c571a388e42f9fd592f7499}{query\+Srv\+Rr\+Search} ()
+\begin{DoxyCompactList}\small\item\em Send D\+NS S\+RV request using search domain list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base}{Base} class for stages that use D\+N\+S-\/based guessing. 
+
+Definition at line 38 of file base-\/dns.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::tools\+::autoconfig\+::\+Base\+Dns@{ndn\+::tools\+::autoconfig\+::\+Base\+Dns}!query\+Srv\+Rr@{query\+Srv\+Rr}}
+\index{query\+Srv\+Rr@{query\+Srv\+Rr}!ndn\+::tools\+::autoconfig\+::\+Base\+Dns@{ndn\+::tools\+::autoconfig\+::\+Base\+Dns}}
+\subsubsection[{\texorpdfstring{query\+Srv\+Rr(const std\+::string \&fqdn)}{querySrvRr(const std::string \&fqdn)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ndn\+::tools\+::autoconfig\+::\+Base\+Dns\+::query\+Srv\+Rr (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{fqdn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1BaseDns_a334f3f261aa393cffa549c64d2718dcf}{}\label{classndn_1_1tools_1_1autoconfig_1_1BaseDns_a334f3f261aa393cffa549c64d2718dcf}
+
+
+Send D\+NS S\+RV request for a {\ttfamily fqdn} fully qualified domain name. 
+
+\begin{DoxyReturn}{Returns}
+Face\+Uri of the hub from the requested S\+RV record 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1tools_1_1autoconfig_1_1BaseDns_1_1Error}{Error}} & if query returns nothing or S\+RV record cannot be parsed \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 53 of file base-\/dns.\+cpp.
+
+\index{ndn\+::tools\+::autoconfig\+::\+Base\+Dns@{ndn\+::tools\+::autoconfig\+::\+Base\+Dns}!query\+Srv\+Rr\+Search@{query\+Srv\+Rr\+Search}}
+\index{query\+Srv\+Rr\+Search@{query\+Srv\+Rr\+Search}!ndn\+::tools\+::autoconfig\+::\+Base\+Dns@{ndn\+::tools\+::autoconfig\+::\+Base\+Dns}}
+\subsubsection[{\texorpdfstring{query\+Srv\+Rr\+Search()}{querySrvRrSearch()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ndn\+::tools\+::autoconfig\+::\+Base\+Dns\+::query\+Srv\+Rr\+Search (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1BaseDns_aef6589557c571a388e42f9fd592f7499}{}\label{classndn_1_1tools_1_1autoconfig_1_1BaseDns_aef6589557c571a388e42f9fd592f7499}
+
+
+Send D\+NS S\+RV request using search domain list. 
+
+\begin{DoxyReturn}{Returns}
+Face\+Uri of the hub from the requested S\+RV record 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1tools_1_1autoconfig_1_1BaseDns_1_1Error}{Error}} & if query returns nothing or S\+RV record cannot be parsed \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 80 of file base-\/dns.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/base-\/dns.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/base-\/dns.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{classnfd_1_1tests_1_1DummyProtocolFactory}{}\section{nfd\+:\+:tests\+:\+:Dummy\+Protocol\+Factory Class Reference}
+\label{classnfd_1_1tests_1_1DummyProtocolFactory}\index{nfd\+::tests\+::\+Dummy\+Protocol\+Factory@{nfd\+::tests\+::\+Dummy\+Protocol\+Factory}}
+Inheritance diagram for nfd\+:\+:tests\+:\+:Dummy\+Protocol\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1tests_1_1DummyProtocolFactory}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classnfd_1_1tests_1_1DummyProtocolFactory_af5e5941643b9910c8e07f14112367dc2}{create\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&uri, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const \hyperlink{namespacenfd_a6d4b91580c829552a452c53458381b0f}{Face\+Created\+Callback} \&on\+Created, const \hyperlink{namespacenfd_ae87d4f07de26f4939691439b51f2dd83}{Face\+Connect\+Failed\+Callback} \&on\+Connect\+Failed)
+\begin{DoxyCompactList}\small\item\em Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. \end{DoxyCompactList}\item 
+virtual void {\bfseries add\+Channel} (const std\+::string \&channel\+Uri)\hypertarget{classnfd_1_1tests_1_1DummyProtocolFactory_a399a9117fa81e5daeadf207c8883d06c}{}\label{classnfd_1_1tests_1_1DummyProtocolFactory_a399a9117fa81e5daeadf207c8883d06c}
+
+\item 
+virtual std\+::list$<$ shared\+\_\+ptr$<$ const \hyperlink{classnfd_1_1Channel}{Channel} $>$ $>$ {\bfseries get\+Channels} () const\hypertarget{classnfd_1_1tests_1_1DummyProtocolFactory_afb03d03261a1e054e7a977c644a3b951}{}\label{classnfd_1_1tests_1_1DummyProtocolFactory_afb03d03261a1e054e7a977c644a3b951}
+
+\item 
+virtual size\+\_\+t {\bfseries get\+N\+Channels} () const\hypertarget{classnfd_1_1tests_1_1DummyProtocolFactory_a8ef57176b2546247e2b36e2a0c2ddd08}{}\label{classnfd_1_1tests_1_1DummyProtocolFactory_a8ef57176b2546247e2b36e2a0c2ddd08}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 56 of file channel-\/status-\/common.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::tests\+::\+Dummy\+Protocol\+Factory@{nfd\+::tests\+::\+Dummy\+Protocol\+Factory}!create\+Face@{create\+Face}}
+\index{create\+Face@{create\+Face}!nfd\+::tests\+::\+Dummy\+Protocol\+Factory@{nfd\+::tests\+::\+Dummy\+Protocol\+Factory}}
+\subsubsection[{\texorpdfstring{create\+Face(const Face\+Uri \&uri, ndn\+::nfd\+::\+Face\+Persistency persistency, const Face\+Created\+Callback \&on\+Created, const Face\+Connect\+Failed\+Callback \&on\+Connect\+Failed)}{createFace(const FaceUri \&uri, ndn::nfd::FacePersistency persistency, const FaceCreatedCallback \&onCreated, const FaceConnectFailedCallback \&onConnectFailed)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void nfd\+::tests\+::\+Dummy\+Protocol\+Factory\+::create\+Face (
+\begin{DoxyParamCaption}
+\item[{const {\bf Face\+Uri} \&}]{uri, }
+\item[{{\bf ndn\+::nfd\+::\+Face\+Persistency}}]{persistency, }
+\item[{const {\bf Face\+Created\+Callback} \&}]{on\+Created, }
+\item[{const {\bf Face\+Connect\+Failed\+Callback} \&}]{on\+Connect\+Failed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classnfd_1_1tests_1_1DummyProtocolFactory_af5e5941643b9910c8e07f14112367dc2}{}\label{classnfd_1_1tests_1_1DummyProtocolFactory_af5e5941643b9910c8e07f14112367dc2}
+
+
+Try to create \hyperlink{classnfd_1_1Face}{Face} using the supplied Face\+Uri. 
+
+This method should automatically choose channel, based on supplied Face\+Uri and create face.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Error} & Factory does not support connect operation \\
+\hline
+{\em Error} & specified {\ttfamily persistency} is not supported \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classnfd_1_1ProtocolFactory_ae7399319c46091b401a3de37d0a5b693}{nfd\+::\+Protocol\+Factory}.
+
+
+
+Definition at line 66 of file channel-\/status-\/common.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/mgmt/channel-\/status-\/common.\+hpp\end{DoxyCompactItemize}

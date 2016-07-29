@@ -1,0 +1,330 @@
+\hypertarget{classndn_1_1util_1_1Digest}{}\section{ndn\+:\+:util\+:\+:Digest$<$ Hash $>$ Class Template Reference}
+\label{classndn_1_1util_1_1Digest}\index{ndn\+::util\+::\+Digest$<$ Hash $>$@{ndn\+::util\+::\+Digest$<$ Hash $>$}}
+
+
+provides a digest calculation  
+
+
+
+
+{\ttfamily \#include $<$digest.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1util_1_1Digest_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Hash {\bfseries Hash\+Function}\hypertarget{classndn_1_1util_1_1Digest_a3f72a073f84f1c612322c0163421f6d5}{}\label{classndn_1_1util_1_1Digest_a3f72a073f84f1c612322c0163421f6d5}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+C\+O\+N\+C\+E\+P\+T\+\_\+\+A\+S\+S\+E\+RT} ((\hyperlink{classndn_1_1Hashable}{Hashable}$<$ Hash $>$))\hypertarget{classndn_1_1util_1_1Digest_a3a7b9097dc8c43cea19219e71fd2cc82}{}\label{classndn_1_1util_1_1Digest_a3a7b9097dc8c43cea19219e71fd2cc82}
+
+\item 
+\hyperlink{classndn_1_1util_1_1Digest_ab63645c16bd55cdd45a76152b1f1043b}{Digest} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Create digest of the input stream {\ttfamily }. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1Digest_afbdb1470bb66c7e4fe7089e33d3aa365}{reset} ()\hypertarget{classndn_1_1util_1_1Digest_afbdb1470bb66c7e4fe7089e33d3aa365}{}\label{classndn_1_1util_1_1Digest_afbdb1470bb66c7e4fe7089e33d3aa365}
+
+\begin{DoxyCompactList}\small\item\em Discard the current state and start a new digest. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1Digest_aca5cc47adb72f06204b887283e5ec3ca}{empty} () const
+\begin{DoxyCompactList}\small\item\em Check if digest is empty. \end{DoxyCompactList}\item 
+Const\+Buffer\+Ptr \hyperlink{classndn_1_1util_1_1Digest_a1ea2b67f5821fd877eea58aa35e24263}{compute\+Digest} ()
+\begin{DoxyCompactList}\small\item\em Obtain the digest. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1Digest_a7457951b0ce7d56cf73fdfa419aaa0d9}{operator==} (\hyperlink{classndn_1_1util_1_1Digest}{Digest}$<$ Hash $>$ \&digest)
+\begin{DoxyCompactList}\small\item\em Check if supplied digest equal to this digest. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1Digest_af0bfdd780453813aa72b0b69314a4a80}{operator!=} (\hyperlink{classndn_1_1util_1_1Digest}{Digest}$<$ Hash $>$ \&digest)
+\begin{DoxyCompactList}\small\item\em Check if supplied digest is not equal to this digest. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1Digest}{Digest}$<$ Hash $>$ \& \hyperlink{classndn_1_1util_1_1Digest_a5e27d1e8a75d3e011018c695172c958e}{operator$<$$<$} (\hyperlink{classndn_1_1util_1_1Digest}{Digest}$<$ Hash $>$ \&src)
+\begin{DoxyCompactList}\small\item\em Add existing digest to digest calculation. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1Digest}{Digest}$<$ Hash $>$ \& \hyperlink{classndn_1_1util_1_1Digest_a8b73026f46f94360262a41357006149d}{operator$<$$<$} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Add string to digest calculation. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1Digest}{Digest}$<$ Hash $>$ \& \hyperlink{classndn_1_1util_1_1Digest_a425ece0f5f891be90cbebc68519c848d}{operator$<$$<$} (const \hyperlink{classndn_1_1Block}{Block} \&block)
+\begin{DoxyCompactList}\small\item\em Add block to digest calculation. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1Digest}{Digest}$<$ Hash $>$ \& \hyperlink{classndn_1_1util_1_1Digest_a0fefd3d8e6baf30e767977f426316aa3}{operator$<$$<$} (uint64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Add uint64\+\_\+t value to digest calculation. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1Digest_a93c5278069cba589cf6436b66dba5942}{update} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Add a buffer to digest calculation. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1util_1_1Digest_a87984295371dfc27e712c8aac0013b0b}{to\+String} ()
+\begin{DoxyCompactList}\small\item\em Convert digest to std\+::string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Const\+Buffer\+Ptr \hyperlink{classndn_1_1util_1_1Digest_a264d27d1a4189335be91ec701cebe895}{compute\+Digest} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Compute one-\/time digest. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Hash$>$\\*
+class ndn\+::util\+::\+Digest$<$ Hash $>$}
+
+provides a digest calculation 
+
+Take S\+H\+A256 as an example\+:
+
+Digest$<$\+Crypto\+P\+P\+::\+S\+H\+A256$>$ digest; digest.\+update(buf1, size1); digest.\+update(buf2, size2); ... Const\+Buffer\+Ptr result = digest.\+compute\+Digest();
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/issues/1934}{\tt http\+://redmine.\+named-\/data.\+net/issues/1934} 
+\end{DoxySeeAlso}
+
+
+Definition at line 47 of file digest.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!Digest@{Digest}}
+\index{Digest@{Digest}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{Digest(std\+::istream \&is)}{Digest(std::istream \&is)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::{\bf Digest} (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{is}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1util_1_1Digest_ab63645c16bd55cdd45a76152b1f1043b}{}\label{classndn_1_1util_1_1Digest_ab63645c16bd55cdd45a76152b1f1043b}
+
+
+Create digest of the input stream {\ttfamily }. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & input stream \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file digest.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!compute\+Digest@{compute\+Digest}}
+\index{compute\+Digest@{compute\+Digest}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{compute\+Digest()}{computeDigest()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ Const\+Buffer\+Ptr {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::compute\+Digest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Digest_a1ea2b67f5821fd877eea58aa35e24263}{}\label{classndn_1_1util_1_1Digest_a1ea2b67f5821fd877eea58aa35e24263}
+
+
+Obtain the digest. 
+
+Note this digest is finalized once this method is invoked. 
+
+Definition at line 73 of file digest.\+cpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!compute\+Digest@{compute\+Digest}}
+\index{compute\+Digest@{compute\+Digest}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{compute\+Digest(const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)}{computeDigest(const uint8\_t *buffer, size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ Const\+Buffer\+Ptr {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::compute\+Digest (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1util_1_1Digest_a264d27d1a4189335be91ec701cebe895}{}\label{classndn_1_1util_1_1Digest_a264d27d1a4189335be91ec701cebe895}
+
+
+Compute one-\/time digest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the input buffer \\
+\hline
+{\em size} & the size of the input buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+digest computed according to the Hash\+Algorithm 
+\end{DoxyReturn}
+
+
+Definition at line 138 of file digest.\+cpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!empty@{empty}}
+\index{empty@{empty}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{empty() const}{empty() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash$>$ bool {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1Digest_aca5cc47adb72f06204b887283e5ec3ca}{}\label{classndn_1_1util_1_1Digest_aca5cc47adb72f06204b887283e5ec3ca}
+
+
+Check if digest is empty. 
+
+An empty digest means nothing has been taken into calculation. 
+
+Definition at line 85 of file digest.\+hpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{operator"!=(\+Digest$<$ Hash $>$ \&digest)}{operator!=(Digest< Hash > \&digest)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash$>$ bool {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{{\bf Digest}$<$ Hash $>$ \&}]{digest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1Digest_af0bfdd780453813aa72b0b69314a4a80}{}\label{classndn_1_1util_1_1Digest_af0bfdd780453813aa72b0b69314a4a80}
+
+
+Check if supplied digest is not equal to this digest. 
+
+Note that this method will invoke \hyperlink{classndn_1_1util_1_1Digest_a1ea2b67f5821fd877eea58aa35e24263}{compute\+Digest()}. Once this method is invoked, both this digest and the supplied digest are finalized.
+
+\begin{DoxyWarning}{Warning}
+This method cannot be used in security related context because it is vulnerable to timing attack 
+\end{DoxyWarning}
+
+
+Definition at line 120 of file digest.\+hpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(const std\+::string \&str)}{operator<<(const std::string \&str)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ {\bf Digest}$<$ Hash $>$ \& {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Digest_a8b73026f46f94360262a41357006149d}{}\label{classndn_1_1util_1_1Digest_a8b73026f46f94360262a41357006149d}
+
+
+Add string to digest calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & string to put into digest \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file digest.\+cpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(const Block \&block)}{operator<<(const Block \&block)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ {\bf Digest}$<$ Hash $>$ \& {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Digest_a425ece0f5f891be90cbebc68519c848d}{}\label{classndn_1_1util_1_1Digest_a425ece0f5f891be90cbebc68519c848d}
+
+
+Add block to digest calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & to put into digest \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 107 of file digest.\+cpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(uint64\+\_\+t value)}{operator<<(uint64\_t value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ {\bf Digest}$<$ Hash $>$ \& {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Digest_a0fefd3d8e6baf30e767977f426316aa3}{}\label{classndn_1_1util_1_1Digest_a0fefd3d8e6baf30e767977f426316aa3}
+
+
+Add uint64\+\_\+t value to digest calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & uint64\+\_\+t value to put into digest \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 116 of file digest.\+cpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+Digest$<$ Hash $>$ \&src)}{operator<<(Digest< Hash > \&src)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ {\bf Digest}$<$ Hash $>$ \& {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Digest}$<$ Hash $>$ \&}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Digest_a5e27d1e8a75d3e011018c695172c958e}{}\label{classndn_1_1util_1_1Digest_a5e27d1e8a75d3e011018c695172c958e}
+
+
+Add existing digest to digest calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & digest to combine with\\
+\hline
+\end{DoxyParams}
+The result of this combination is hash (hash (...)) Note that this method will invoke \hyperlink{classndn_1_1util_1_1Digest_a1ea2b67f5821fd877eea58aa35e24263}{compute\+Digest()}. Once this method is invoked, the supplied digest is fixed. 
+
+Definition at line 88 of file digest.\+cpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!operator==@{operator==}}
+\index{operator==@{operator==}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{operator==(\+Digest$<$ Hash $>$ \&digest)}{operator==(Digest< Hash > \&digest)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ bool {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Digest}$<$ Hash $>$ \&}]{digest}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Digest_a7457951b0ce7d56cf73fdfa419aaa0d9}{}\label{classndn_1_1util_1_1Digest_a7457951b0ce7d56cf73fdfa419aaa0d9}
+
+
+Check if supplied digest equal to this digest. 
+
+Note that this method will invoke \hyperlink{classndn_1_1util_1_1Digest_a1ea2b67f5821fd877eea58aa35e24263}{compute\+Digest()}. Once this method is invoked, both this digest and the supplied digest are finalized.
+
+\begin{DoxyWarning}{Warning}
+This method cannot be used in security related context because it is vulnerable to timing attack 
+\end{DoxyWarning}
+
+
+Definition at line 81 of file digest.\+cpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{to\+String()}{toString()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ std\+::string {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Digest_a87984295371dfc27e712c8aac0013b0b}{}\label{classndn_1_1util_1_1Digest_a87984295371dfc27e712c8aac0013b0b}
+
+
+Convert digest to std\+::string. 
+
+Note that this method will invoke \hyperlink{classndn_1_1util_1_1Digest_a1ea2b67f5821fd877eea58aa35e24263}{compute\+Digest()}. Once this method is invoked, the digest is finalized. 
+
+Definition at line 150 of file digest.\+cpp.
+
+\index{ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}!update@{update}}
+\index{update@{update}!ndn\+::util\+::\+Digest@{ndn\+::util\+::\+Digest}}
+\subsubsection[{\texorpdfstring{update(const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)}{update(const uint8\_t *buffer, size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Hash $>$ void {\bf ndn\+::util\+::\+Digest}$<$ Hash $>$\+::update (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1util_1_1Digest_a93c5278069cba589cf6436b66dba5942}{}\label{classndn_1_1util_1_1Digest_a93c5278069cba589cf6436b66dba5942}
+
+
+Add a buffer to digest calculation. 
+
+Update the state of the digest if it is not finalized and mark the digest as In\+Process.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the input buffer \\
+\hline
+{\em size} & the size of the input buffer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1util_1_1Digest_1_1Error}{Error}} & if the digest has been finalized. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 125 of file digest.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/digest.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/digest.\+cpp\end{DoxyCompactItemize}

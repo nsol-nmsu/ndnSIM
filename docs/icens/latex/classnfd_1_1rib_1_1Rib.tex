@@ -1,0 +1,187 @@
+\hypertarget{classnfd_1_1rib_1_1Rib}{}\section{nfd\+:\+:rib\+:\+:Rib Class Reference}
+\label{classnfd_1_1rib_1_1Rib}\index{nfd\+::rib\+::\+Rib@{nfd\+::rib\+::\+Rib}}
+
+
+represents the R\+IB  
+
+
+
+
+{\ttfamily \#include $<$rib.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:rib\+:\+:Rib\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1rib_1_1Rib}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ $>$ {\bfseries Rib\+Entry\+List}\hypertarget{classnfd_1_1rib_1_1Rib_a5fcdc337eb7937bbe8f8b3db0b92a926}{}\label{classnfd_1_1rib_1_1Rib_a5fcdc337eb7937bbe8f8b3db0b92a926}
+
+\item 
+typedef std\+::map$<$ \hyperlink{classndn_1_1Name}{Name}, shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ $>$ {\bfseries Rib\+Table}\hypertarget{classnfd_1_1rib_1_1Rib_a739da39e96a0b1bcbbb3e5c220d39256}{}\label{classnfd_1_1rib_1_1Rib_a739da39e96a0b1bcbbb3e5c220d39256}
+
+\item 
+typedef Rib\+Table\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}\hypertarget{classnfd_1_1rib_1_1Rib_aa2c6ea85098c6f867addddf969aeca47}{}\label{classnfd_1_1rib_1_1Rib_aa2c6ea85098c6f867addddf969aeca47}
+
+\item 
+typedef std\+::map$<$ uint64\+\_\+t, std\+::list$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ $>$ $>$ {\bfseries Face\+Lookup\+Table}\hypertarget{classnfd_1_1rib_1_1Rib_a500050fce207ee037b842ab2d189f2b0}{}\label{classnfd_1_1rib_1_1Rib_a500050fce207ee037b842ab2d189f2b0}
+
+\item 
+typedef bool($\ast$ {\bfseries Route\+Compare\+Predicate}) (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&, const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&)\hypertarget{classnfd_1_1rib_1_1Rib_ab077be972e35174988d851c69f927b54}{}\label{classnfd_1_1rib_1_1Rib_ab077be972e35174988d851c69f927b54}
+
+\item 
+typedef std\+::set$<$ \hyperlink{classnfd_1_1rib_1_1Route}{Route}, Route\+Compare\+Predicate $>$ {\bfseries Route\+Set}\hypertarget{classnfd_1_1rib_1_1Rib_a5e841b06200417b115c972eb81fcf9b2}{}\label{classnfd_1_1rib_1_1Rib_a5e841b06200417b115c972eb81fcf9b2}
+
+\item 
+typedef function$<$ void()$>$ {\bfseries Update\+Success\+Callback}\hypertarget{classnfd_1_1rib_1_1Rib_ade7af23c4f09754473b15047ff140607}{}\label{classnfd_1_1rib_1_1Rib_ade7af23c4f09754473b15047ff140607}
+
+\item 
+typedef function$<$ void(uint32\+\_\+t code, const std\+::string \&error)$>$ {\bfseries Update\+Failure\+Callback}\hypertarget{classnfd_1_1rib_1_1Rib_a9d6fd8cbf4a7ccb12e67f817134f88f4}{}\label{classnfd_1_1rib_1_1Rib_a9d6fd8cbf4a7ccb12e67f817134f88f4}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Fib\+Updater} (\hyperlink{classnfd_1_1rib_1_1FibUpdater}{Fib\+Updater} $\ast$updater)\hypertarget{classnfd_1_1rib_1_1Rib_a67cf91745a5b2c0cdd24874afed1ad6f}{}\label{classnfd_1_1rib_1_1Rib_a67cf91745a5b2c0cdd24874afed1ad6f}
+
+\item 
+const\+\_\+iterator {\bfseries find} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const\hypertarget{classnfd_1_1rib_1_1Rib_aca3547d2f2355a40c1f2a5d297ea56ea}{}\label{classnfd_1_1rib_1_1Rib_aca3547d2f2355a40c1f2a5d297ea56ea}
+
+\item 
+\hyperlink{classnfd_1_1rib_1_1Route}{Route} $\ast$ {\bfseries find} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route) const\hypertarget{classnfd_1_1rib_1_1Rib_ae8b16b2eae924eb9e4a0c5e8bcb971ca}{}\label{classnfd_1_1rib_1_1Rib_ae8b16b2eae924eb9e4a0c5e8bcb971ca}
+
+\item 
+const\+\_\+iterator {\bfseries begin} () const\hypertarget{classnfd_1_1rib_1_1Rib_aab2bfd8d7930d5ea91fffad8b189adc7}{}\label{classnfd_1_1rib_1_1Rib_aab2bfd8d7930d5ea91fffad8b189adc7}
+
+\item 
+const\+\_\+iterator {\bfseries end} () const\hypertarget{classnfd_1_1rib_1_1Rib_af99217970188e31c944afdd4a36bc96c}{}\label{classnfd_1_1rib_1_1Rib_af99217970188e31c944afdd4a36bc96c}
+
+\item 
+size\+\_\+t {\bfseries size} () const\hypertarget{classnfd_1_1rib_1_1Rib_aee1e4153f1b9110e6fee9ba95c484874}{}\label{classnfd_1_1rib_1_1Rib_aee1e4153f1b9110e6fee9ba95c484874}
+
+\item 
+bool {\bfseries empty} () const\hypertarget{classnfd_1_1rib_1_1Rib_ad4b97ee5a9e10ad73580fe0d937eaa58}{}\label{classnfd_1_1rib_1_1Rib_ad4b97ee5a9e10ad73580fe0d937eaa58}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ {\bfseries find\+Parent} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const\hypertarget{classnfd_1_1rib_1_1Rib_afe77d9761f25a63b5a6735d5a029759c}{}\label{classnfd_1_1rib_1_1Rib_afe77d9761f25a63b5a6735d5a029759c}
+
+\item 
+std\+::list$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ $>$ \hyperlink{classnfd_1_1rib_1_1Rib_a4e342d0ce64703adee1f20453161ec7e}{find\+Descendants} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const
+\begin{DoxyCompactList}\small\item\em finds namespaces under the passed prefix \end{DoxyCompactList}\item 
+std\+::list$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ $>$ \hyperlink{classnfd_1_1rib_1_1Rib_af3e7449ba58f8765c89273a39089e5fe}{find\+Descendants\+For\+Non\+Inserted\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const
+\begin{DoxyCompactList}\small\item\em finds namespaces under the passed prefix \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1Rib_aeee7690ba0d79b680ccff0847eb5b7f9}{begin\+Apply\+Update} (const \hyperlink{classnfd_1_1rib_1_1RibUpdate}{Rib\+Update} \&update, const Update\+Success\+Callback \&on\+Success, const Update\+Failure\+Callback \&on\+Failure)
+\begin{DoxyCompactList}\small\item\em passes the provided \hyperlink{classnfd_1_1rib_1_1RibUpdateBatch}{Rib\+Update\+Batch} to \hyperlink{classnfd_1_1rib_1_1FibUpdater}{Fib\+Updater} to calculate and send Fib\+Updates. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1Rib_a84fd78393198287d353ec1a8263847fd}{begin\+Remove\+Face} (uint64\+\_\+t face\+Id)\hypertarget{classnfd_1_1rib_1_1Rib_a84fd78393198287d353ec1a8263847fd}{}\label{classnfd_1_1rib_1_1Rib_a84fd78393198287d353ec1a8263847fd}
+
+\begin{DoxyCompactList}\small\item\em starts the F\+IB update process when a face has been destroyed \end{DoxyCompactList}\item 
+void {\bfseries on\+Fib\+Update\+Success} (const \hyperlink{classnfd_1_1rib_1_1RibUpdateBatch}{Rib\+Update\+Batch} \&batch, const Rib\+Update\+List \&inherited\+Routes, const Rib\+::\+Update\+Success\+Callback \&on\+Success)\hypertarget{classnfd_1_1rib_1_1Rib_a26e9a7fd75c918f1f3f271d17ffcb658}{}\label{classnfd_1_1rib_1_1Rib_a26e9a7fd75c918f1f3f271d17ffcb658}
+
+\item 
+void {\bfseries on\+Fib\+Update\+Failure} (const Rib\+::\+Update\+Failure\+Callback \&on\+Failure, uint32\+\_\+t code, const std\+::string \&error)\hypertarget{classnfd_1_1rib_1_1Rib_a44fc28758976a0df1e909f706e396cdc}{}\label{classnfd_1_1rib_1_1Rib_a44fc28758976a0df1e909f706e396cdc}
+
+\item 
+void {\bfseries on\+Route\+Expiration} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)\hypertarget{classnfd_1_1rib_1_1Rib_ab4993a19563130662251c05e00db0755}{}\label{classnfd_1_1rib_1_1Rib_ab4993a19563130662251c05e00db0755}
+
+\item 
+void {\bfseries insert} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)\hypertarget{classnfd_1_1rib_1_1Rib_a9f7776a706639c7f80117232db393c1e}{}\label{classnfd_1_1rib_1_1Rib_a9f7776a706639c7f80117232db393c1e}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad1\+\_\+\+\_\+}\+: void erase(const \hyperlink{classndn_1_1Name}{Name}\& prefix\hypertarget{classnfd_1_1rib_1_1Rib_aee3a6fa864f2264e2e647da99e2751b5}{}\label{classnfd_1_1rib_1_1Rib_aee3a6fa864f2264e2e647da99e2751b5}
+
+\item 
+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \& {\bfseries route}\hypertarget{classnfd_1_1rib_1_1Rib_a1b809d20cbfa39b3f9e686d2be55c0bc}{}\label{classnfd_1_1rib_1_1Rib_a1b809d20cbfa39b3f9e686d2be55c0bc}
+
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{ndn\+::util\+::signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1rib_1_1Rib}{Rib}, \hyperlink{classndn_1_1Name}{Name} $>$ {\bfseries after\+Insert\+Entry}\hypertarget{classnfd_1_1rib_1_1Rib_a6a3e0fb7349da66036e86c2dcac80fe3}{}\label{classnfd_1_1rib_1_1Rib_a6a3e0fb7349da66036e86c2dcac80fe3}
+
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{ndn\+::util\+::signal\+::\+Signal}$<$ \hyperlink{classnfd_1_1rib_1_1Rib}{Rib}, \hyperlink{classndn_1_1Name}{Name} $>$ {\bfseries after\+Erase\+Entry}\hypertarget{classnfd_1_1rib_1_1Rib_ac4cce07959649f30257828805790b12a}{}\label{classnfd_1_1rib_1_1Rib_ac4cce07959649f30257828805790b12a}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Fib\+Updater}\hypertarget{classnfd_1_1rib_1_1Rib_a13369f16e6c2c4446cd5fcfc302cc4a7}{}\label{classnfd_1_1rib_1_1Rib_a13369f16e6c2c4446cd5fcfc302cc4a7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the R\+IB 
+
+Definition at line 45 of file rib.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::rib\+::\+Rib@{nfd\+::rib\+::\+Rib}!begin\+Apply\+Update@{begin\+Apply\+Update}}
+\index{begin\+Apply\+Update@{begin\+Apply\+Update}!nfd\+::rib\+::\+Rib@{nfd\+::rib\+::\+Rib}}
+\subsubsection[{\texorpdfstring{begin\+Apply\+Update(const Rib\+Update \&update, const Update\+Success\+Callback \&on\+Success, const Update\+Failure\+Callback \&on\+Failure)}{beginApplyUpdate(const RibUpdate \&update, const UpdateSuccessCallback \&onSuccess, const UpdateFailureCallback \&onFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::rib\+::\+Rib\+::begin\+Apply\+Update (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rib\+Update} \&}]{update, }
+\item[{const Update\+Success\+Callback \&}]{on\+Success, }
+\item[{const Update\+Failure\+Callback \&}]{on\+Failure}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1Rib_aeee7690ba0d79b680ccff0847eb5b7f9}{}\label{classnfd_1_1rib_1_1Rib_aeee7690ba0d79b680ccff0847eb5b7f9}
+
+
+passes the provided \hyperlink{classnfd_1_1rib_1_1RibUpdateBatch}{Rib\+Update\+Batch} to \hyperlink{classnfd_1_1rib_1_1FibUpdater}{Fib\+Updater} to calculate and send Fib\+Updates. 
+
+If the F\+IB is updated successfully, on\+Fib\+Update\+Success() will be called, and the R\+IB will be updated
+
+If the F\+IB update fails, on\+Fib\+Update\+Failure() will be called, and the R\+IB will not be updated. 
+
+Definition at line 338 of file rib.\+cpp.
+
+\index{nfd\+::rib\+::\+Rib@{nfd\+::rib\+::\+Rib}!find\+Descendants@{find\+Descendants}}
+\index{find\+Descendants@{find\+Descendants}!nfd\+::rib\+::\+Rib@{nfd\+::rib\+::\+Rib}}
+\subsubsection[{\texorpdfstring{find\+Descendants(const Name \&prefix) const}{findDescendants(const Name \&prefix) const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ shared\+\_\+ptr$<$ {\bf Rib\+Entry} $>$ $>$ nfd\+::rib\+::\+Rib\+::find\+Descendants (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1rib_1_1Rib_a4e342d0ce64703adee1f20453161ec7e}{}\label{classnfd_1_1rib_1_1Rib_a4e342d0ce64703adee1f20453161ec7e}
+
+
+finds namespaces under the passed prefix 
+
+\begin{DoxyReturn}{Returns}
+\{ a list of entries which are under the passed prefix \} 
+\end{DoxyReturn}
+
+
+Definition at line 214 of file rib.\+cpp.
+
+\index{nfd\+::rib\+::\+Rib@{nfd\+::rib\+::\+Rib}!find\+Descendants\+For\+Non\+Inserted\+Name@{find\+Descendants\+For\+Non\+Inserted\+Name}}
+\index{find\+Descendants\+For\+Non\+Inserted\+Name@{find\+Descendants\+For\+Non\+Inserted\+Name}!nfd\+::rib\+::\+Rib@{nfd\+::rib\+::\+Rib}}
+\subsubsection[{\texorpdfstring{find\+Descendants\+For\+Non\+Inserted\+Name(const Name \&prefix) const}{findDescendantsForNonInsertedName(const Name \&prefix) const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$ shared\+\_\+ptr$<$ {\bf Rib\+Entry} $>$ $>$ nfd\+::rib\+::\+Rib\+::find\+Descendants\+For\+Non\+Inserted\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1rib_1_1Rib_af3e7449ba58f8765c89273a39089e5fe}{}\label{classnfd_1_1rib_1_1Rib_af3e7449ba58f8765c89273a39089e5fe}
+
+
+finds namespaces under the passed prefix 
+
+\begin{DoxyNote}{Note}
+Unlike find\+Descendants, needs to find where prefix would fit in tree before collecting list of descendant prefixes
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+\{ a list of entries which would be under the passed prefix if the prefix existed in the R\+IB \} 
+\end{DoxyReturn}
+
+
+Definition at line 236 of file rib.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/rib.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/rib.\+cpp\end{DoxyCompactItemize}

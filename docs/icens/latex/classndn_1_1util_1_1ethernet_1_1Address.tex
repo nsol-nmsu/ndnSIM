@@ -1,0 +1,104 @@
+\hypertarget{classndn_1_1util_1_1ethernet_1_1Address}{}\section{ndn\+:\+:util\+:\+:ethernet\+:\+:Address Class Reference}
+\label{classndn_1_1util_1_1ethernet_1_1Address}\index{ndn\+::util\+::ethernet\+::\+Address@{ndn\+::util\+::ethernet\+::\+Address}}
+
+
+represents an Ethernet hardware address  
+
+
+
+
+{\ttfamily \#include $<$ethernet.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:ethernet\+:\+:Address\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1ethernet_1_1Address}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1ethernet_1_1Address_a8d0f500f84b54c803592e37a91bba78d}{Address} ()\hypertarget{classndn_1_1util_1_1ethernet_1_1Address_a8d0f500f84b54c803592e37a91bba78d}{}\label{classndn_1_1util_1_1ethernet_1_1Address_a8d0f500f84b54c803592e37a91bba78d}
+
+\begin{DoxyCompactList}\small\item\em Constructs a null Ethernet address (00\+:00\+:00\+:00\+:00\+:00) \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1ethernet_1_1Address_a35d32ce8924810313f1676840e1054b0}{Address} (uint8\+\_\+t a1, uint8\+\_\+t a2, uint8\+\_\+t a3, uint8\+\_\+t a4, uint8\+\_\+t a5, uint8\+\_\+t a6)\hypertarget{classndn_1_1util_1_1ethernet_1_1Address_a35d32ce8924810313f1676840e1054b0}{}\label{classndn_1_1util_1_1ethernet_1_1Address_a35d32ce8924810313f1676840e1054b0}
+
+\begin{DoxyCompactList}\small\item\em Constructs a new Ethernet address with the given octets. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1ethernet_1_1Address_a93377f2324bc08997dc60b268dd23c1b}{Address} (const uint8\+\_\+t octets\mbox{[}A\+D\+D\+R\+\_\+\+L\+EN\mbox{]})\hypertarget{classndn_1_1util_1_1ethernet_1_1Address_a93377f2324bc08997dc60b268dd23c1b}{}\label{classndn_1_1util_1_1ethernet_1_1Address_a93377f2324bc08997dc60b268dd23c1b}
+
+\begin{DoxyCompactList}\small\item\em Constructs a new Ethernet address with the given octets. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1ethernet_1_1Address_ad8a0e75a1f31311c0685c43b91997575}{is\+Broadcast} () const\hypertarget{classndn_1_1util_1_1ethernet_1_1Address_ad8a0e75a1f31311c0685c43b91997575}{}\label{classndn_1_1util_1_1ethernet_1_1Address_ad8a0e75a1f31311c0685c43b91997575}
+
+\begin{DoxyCompactList}\small\item\em True if this is a broadcast address (ff\+:ff\+:ff\+:ff\+:ff\+:ff) \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1ethernet_1_1Address_afdce728acfa10a429de9ee7df584d0b9}{is\+Multicast} () const\hypertarget{classndn_1_1util_1_1ethernet_1_1Address_afdce728acfa10a429de9ee7df584d0b9}{}\label{classndn_1_1util_1_1ethernet_1_1Address_afdce728acfa10a429de9ee7df584d0b9}
+
+\begin{DoxyCompactList}\small\item\em True if this is a multicast address. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1ethernet_1_1Address_a45e7b0d3314801c60aecfa0bb8744de7}{is\+Null} () const\hypertarget{classndn_1_1util_1_1ethernet_1_1Address_a45e7b0d3314801c60aecfa0bb8744de7}{}\label{classndn_1_1util_1_1ethernet_1_1Address_a45e7b0d3314801c60aecfa0bb8744de7}
+
+\begin{DoxyCompactList}\small\item\em True if this is a null address (00\+:00\+:00\+:00\+:00\+:00) \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classndn_1_1util_1_1ethernet_1_1Address_a84377159293ae92142f41482e41aeeeb}{to\+String} (char sep=\textquotesingle{}\+:\textquotesingle{}) const
+\begin{DoxyCompactList}\small\item\em Converts the address to a human-\/readable string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classndn_1_1util_1_1ethernet_1_1Address}{Address} \hyperlink{classndn_1_1util_1_1ethernet_1_1Address_a3e7b9517a8e47a4f9cee785d27606ff1}{from\+String} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Creates an \hyperlink{classndn_1_1util_1_1ethernet_1_1Address}{Address} from a string containing an Ethernet address in hexadecimal notation, with colons or hyphens as separators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents an Ethernet hardware address 
+
+Definition at line 53 of file ethernet.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::ethernet\+::\+Address@{ndn\+::util\+::ethernet\+::\+Address}!from\+String@{from\+String}}
+\index{from\+String@{from\+String}!ndn\+::util\+::ethernet\+::\+Address@{ndn\+::util\+::ethernet\+::\+Address}}
+\subsubsection[{\texorpdfstring{from\+String(const std\+::string \&str)}{fromString(const std::string \&str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Address} ndn\+::util\+::ethernet\+::\+Address\+::from\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1util_1_1ethernet_1_1Address_a3e7b9517a8e47a4f9cee785d27606ff1}{}\label{classndn_1_1util_1_1ethernet_1_1Address_a3e7b9517a8e47a4f9cee785d27606ff1}
+
+
+Creates an \hyperlink{classndn_1_1util_1_1ethernet_1_1Address}{Address} from a string containing an Ethernet address in hexadecimal notation, with colons or hyphens as separators. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be parsed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always an instance of \hyperlink{classndn_1_1util_1_1ethernet_1_1Address}{Address}, which will be null if the parsing fails 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file ethernet.\+cpp.
+
+\index{ndn\+::util\+::ethernet\+::\+Address@{ndn\+::util\+::ethernet\+::\+Address}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!ndn\+::util\+::ethernet\+::\+Address@{ndn\+::util\+::ethernet\+::\+Address}}
+\subsubsection[{\texorpdfstring{to\+String(char sep=\textquotesingle{}\+:\textquotesingle{}) const}{toString(char sep=':') const}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ndn\+::util\+::ethernet\+::\+Address\+::to\+String (
+\begin{DoxyParamCaption}
+\item[{char}]{sep = {\ttfamily \textquotesingle{}\+:\textquotesingle{}}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1util_1_1ethernet_1_1Address_a84377159293ae92142f41482e41aeeeb}{}\label{classndn_1_1util_1_1ethernet_1_1Address_a84377159293ae92142f41482e41aeeeb}
+
+
+Converts the address to a human-\/readable string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sep} & A character used to visually separate the octets, usually \textquotesingle{}\+:\textquotesingle{} (the default value) or \textquotesingle{}-\/\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file ethernet.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/ethernet.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/ethernet.\+cpp\end{DoxyCompactItemize}

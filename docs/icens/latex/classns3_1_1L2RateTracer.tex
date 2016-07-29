@@ -1,0 +1,104 @@
+\hypertarget{classns3_1_1L2RateTracer}{}\section{ns3\+:\+:L2\+Rate\+Tracer Class Reference}
+\label{classns3_1_1L2RateTracer}\index{ns3\+::\+L2\+Rate\+Tracer@{ns3\+::\+L2\+Rate\+Tracer}}
+
+
+Tracer to collect link-\/layer rate information about links.  
+
+
+
+
+{\ttfamily \#include $<$l2-\/rate-\/tracer.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:L2\+Rate\+Tracer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1L2RateTracer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1L2RateTracer_aaac3b675fe828684b648ab7c756e811a}{L2\+Rate\+Tracer} (std\+::shared\+\_\+ptr$<$ std\+::ostream $>$ os, Ptr$<$ Node $>$ node)\hypertarget{classns3_1_1L2RateTracer_aaac3b675fe828684b648ab7c756e811a}{}\label{classns3_1_1L2RateTracer_aaac3b675fe828684b648ab7c756e811a}
+
+\begin{DoxyCompactList}\small\item\em Network layer tracer constructor. \end{DoxyCompactList}\item 
+void {\bfseries Set\+Averaging\+Period} (const Time \&period)\hypertarget{classns3_1_1L2RateTracer_ab16892cfefc246d658e8fc3f61743bf5}{}\label{classns3_1_1L2RateTracer_ab16892cfefc246d658e8fc3f61743bf5}
+
+\item 
+virtual void {\bfseries Print\+Header} (std\+::ostream \&os) const\hypertarget{classns3_1_1L2RateTracer_a46952f96a0a2f8366ea04ce74cbb20ae}{}\label{classns3_1_1L2RateTracer_a46952f96a0a2f8366ea04ce74cbb20ae}
+
+\item 
+virtual void {\bfseries Print} (std\+::ostream \&os) const\hypertarget{classns3_1_1L2RateTracer_a9e4a624aea5f2223180b85d8d459928a}{}\label{classns3_1_1L2RateTracer_a9e4a624aea5f2223180b85d8d459928a}
+
+\item 
+virtual void {\bfseries Drop} (Ptr$<$ const Packet $>$)\hypertarget{classns3_1_1L2RateTracer_a97719ef882cba2a4c8a1a649992244a2}{}\label{classns3_1_1L2RateTracer_a97719ef882cba2a4c8a1a649992244a2}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classns3_1_1L2RateTracer_a3067dfb72e5848a95bbd0ee170f9fc9f}{Install\+All} (const std\+::string \&file, Time averaging\+Period=Seconds(0.\+5))
+\begin{DoxyCompactList}\small\item\em Helper method to install tracers on all simulation nodes. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1L2RateTracer_a5409b6229e07e67304eeddebbabf9cf2}{Destroy} ()
+\begin{DoxyCompactList}\small\item\em Explicit request to remove all statically created tracers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Tracer to collect link-\/layer rate information about links. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000048}{Todo}]Finish implementation \end{DoxyRefDesc}
+
+
+Definition at line 39 of file l2-\/rate-\/tracer.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::\+L2\+Rate\+Tracer@{ns3\+::\+L2\+Rate\+Tracer}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!ns3\+::\+L2\+Rate\+Tracer@{ns3\+::\+L2\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Destroy()}{Destroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::\+L2\+Rate\+Tracer\+::\+Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1L2RateTracer_a5409b6229e07e67304eeddebbabf9cf2}{}\label{classns3_1_1L2RateTracer_a5409b6229e07e67304eeddebbabf9cf2}
+
+
+Explicit request to remove all statically created tracers. 
+
+This method can be helpful if simulation scenario contains several independent run, or if it is desired to do a postprocessing of the resulting data 
+
+Definition at line 42 of file l2-\/rate-\/tracer.\+cpp.
+
+\index{ns3\+::\+L2\+Rate\+Tracer@{ns3\+::\+L2\+Rate\+Tracer}!Install\+All@{Install\+All}}
+\index{Install\+All@{Install\+All}!ns3\+::\+L2\+Rate\+Tracer@{ns3\+::\+L2\+Rate\+Tracer}}
+\subsubsection[{\texorpdfstring{Install\+All(const std\+::string \&file, Time averaging\+Period=\+Seconds(0.\+5))}{InstallAll(const std::string \&file, Time averagingPeriod=Seconds(0.5))}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::\+L2\+Rate\+Tracer\+::\+Install\+All (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{Time}]{averaging\+Period = {\ttfamily Seconds(0.5)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1L2RateTracer_a3067dfb72e5848a95bbd0ee170f9fc9f}{}\label{classns3_1_1L2RateTracer_a3067dfb72e5848a95bbd0ee170f9fc9f}
+
+
+Helper method to install tracers on all simulation nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File to which traces will be written \\
+\hline
+{\em averaging\+Period} & Defines averaging period for the rate calculation, as well as how often data will be written into the trace file (default, every half second)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a tuple of reference to output stream and list of tracers. !!! Attention !!! This tuple needs to be preserved for the lifetime of simulation, otherwise S\+E\+G\+F\+A\+U\+L\+Ts are inevitable 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file l2-\/rate-\/tracer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/l2-\/rate-\/tracer.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/utils/tracers/l2-\/rate-\/tracer.\+cpp\end{DoxyCompactItemize}

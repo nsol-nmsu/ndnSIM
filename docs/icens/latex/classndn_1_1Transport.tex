@@ -1,0 +1,145 @@
+\hypertarget{classndn_1_1Transport}{}\section{ndn\+:\+:Transport Class Reference}
+\label{classndn_1_1Transport}\index{ndn\+::\+Transport@{ndn\+::\+Transport}}
+Inheritance diagram for ndn\+:\+:Transport\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.424242cm]{classndn_1_1Transport}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Transport_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void(const \hyperlink{classndn_1_1Block}{Block} \&wire)$>$ {\bfseries Receive\+Callback}\hypertarget{classndn_1_1Transport_a5fe0a601f488200564b84cc2a3a73816}{}\label{classndn_1_1Transport_a5fe0a601f488200564b84cc2a3a73816}
+
+\item 
+typedef function$<$ void()$>$ {\bfseries Error\+Callback}\hypertarget{classndn_1_1Transport_a261ec353089c446242afed151df3ad41}{}\label{classndn_1_1Transport_a261ec353089c446242afed151df3ad41}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1Transport_ad0b3158586d56cea4d434f099736a949}{connect} (boost\+::asio\+::io\+\_\+service \&io\+\_\+service, const Receive\+Callback \&receive\+Callback)
+\begin{DoxyCompactList}\small\item\em Connect transport. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1Transport_abc3f2284b41a11fb808c70edbdc0a9c6}{close} ()=0\hypertarget{classndn_1_1Transport_abc3f2284b41a11fb808c70edbdc0a9c6}{}\label{classndn_1_1Transport_abc3f2284b41a11fb808c70edbdc0a9c6}
+
+\begin{DoxyCompactList}\small\item\em Close the connection. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1Transport_ac24f9ec11dc2ac4569e5504eebd5cfa7}{send} (const \hyperlink{classndn_1_1Block}{Block} \&wire)=0
+\begin{DoxyCompactList}\small\item\em Send block of data from. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1Transport_aa27593978570e95a5793b2af0dac3568}{send} (const \hyperlink{classndn_1_1Block}{Block} \&header, const \hyperlink{classndn_1_1Block}{Block} \&payload)=0
+\begin{DoxyCompactList}\small\item\em Alternative version of sending data, applying scatter/gather I/O concept. \end{DoxyCompactList}\item 
+virtual void {\bfseries pause} ()=0\hypertarget{classndn_1_1Transport_aeabd403322f1ac1c4e4295c0e24ede6e}{}\label{classndn_1_1Transport_aeabd403322f1ac1c4e4295c0e24ede6e}
+
+\item 
+virtual void {\bfseries resume} ()=0\hypertarget{classndn_1_1Transport_a2bcf1317565c1241c731416a131b642c}{}\label{classndn_1_1Transport_a2bcf1317565c1241c731416a131b642c}
+
+\item 
+bool {\bfseries is\+Connected} ()\hypertarget{classndn_1_1Transport_ab0ae19c4d7aa852b72049a6fc5bfe236}{}\label{classndn_1_1Transport_ab0ae19c4d7aa852b72049a6fc5bfe236}
+
+\item 
+bool {\bfseries is\+Expecting\+Data} ()\hypertarget{classndn_1_1Transport_a4f69b6bd3088760cb38b6a7c2e5452c8}{}\label{classndn_1_1Transport_a4f69b6bd3088760cb38b6a7c2e5452c8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries receive} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1Transport_a8351e7b61901941b2f4b1e9768e081c7}{}\label{classndn_1_1Transport_a8351e7b61901941b2f4b1e9768e081c7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::asio\+::io\+\_\+service $\ast$ {\bfseries m\+\_\+io\+Service}\hypertarget{classndn_1_1Transport_a0c9957768b4dbc793d584e2508d2b129}{}\label{classndn_1_1Transport_a0c9957768b4dbc793d584e2508d2b129}
+
+\item 
+bool {\bfseries m\+\_\+is\+Connected}\hypertarget{classndn_1_1Transport_af8ce46528d96aacd99b432d6c2aee5af}{}\label{classndn_1_1Transport_af8ce46528d96aacd99b432d6c2aee5af}
+
+\item 
+bool {\bfseries m\+\_\+is\+Expecting\+Data}\hypertarget{classndn_1_1Transport_a9ac943937fe557b6101a01d47ac8e846}{}\label{classndn_1_1Transport_a9ac943937fe557b6101a01d47ac8e846}
+
+\item 
+Receive\+Callback {\bfseries m\+\_\+receive\+Callback}\hypertarget{classndn_1_1Transport_aa054e238dae973d3dfbc6e6d9f69a8f2}{}\label{classndn_1_1Transport_aa054e238dae973d3dfbc6e6d9f69a8f2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file transport.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Transport@{ndn\+::\+Transport}!connect@{connect}}
+\index{connect@{connect}!ndn\+::\+Transport@{ndn\+::\+Transport}}
+\subsubsection[{\texorpdfstring{connect(boost\+::asio\+::io\+\_\+service \&io\+\_\+service, const Receive\+Callback \&receive\+Callback)}{connect(boost::asio::io\_service \&io\_service, const ReceiveCallback \&receiveCallback)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Transport\+::connect (
+\begin{DoxyParamCaption}
+\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service, }
+\item[{const Receive\+Callback \&}]{receive\+Callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1Transport_ad0b3158586d56cea4d434f099736a949}{}\label{classndn_1_1Transport_ad0b3158586d56cea4d434f099736a949}
+
+
+Connect transport. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em boost\+::system\+::system\+\_\+error} & if connection cannot be established \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \hyperlink{classndn_1_1UnixTransport_acc1c4c6db549a02de32873e2f6d028ba}{ndn\+::\+Unix\+Transport}, and \hyperlink{classndn_1_1TcpTransport_ad8f8e670980297f940d9b73b4d0ae0df}{ndn\+::\+Tcp\+Transport}.
+
+
+
+Definition at line 132 of file transport.\+hpp.
+
+\index{ndn\+::\+Transport@{ndn\+::\+Transport}!send@{send}}
+\index{send@{send}!ndn\+::\+Transport@{ndn\+::\+Transport}}
+\subsubsection[{\texorpdfstring{send(const Block \&wire)=0}{send(const Block \&wire)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Transport\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1Transport_ac24f9ec11dc2ac4569e5504eebd5cfa7}{}\label{classndn_1_1Transport_ac24f9ec11dc2ac4569e5504eebd5cfa7}
+
+
+Send block of data from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wire} & through the transport\\
+\hline
+{\em wire} & A block of data to send \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1UnixTransport_adabc1cec2e4869fbf2ae339f3d86300b}{ndn\+::\+Unix\+Transport}, \hyperlink{classndn_1_1TcpTransport_a0df4d53a96c59f51114e4edfafda1230}{ndn\+::\+Tcp\+Transport}, and \hyperlink{classndn_1_1util_1_1DummyClientFace_1_1Transport_a5644627bcc07ee795d8b55bc79208257}{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport}.
+
+\index{ndn\+::\+Transport@{ndn\+::\+Transport}!send@{send}}
+\index{send@{send}!ndn\+::\+Transport@{ndn\+::\+Transport}}
+\subsubsection[{\texorpdfstring{send(const Block \&header, const Block \&payload)=0}{send(const Block \&header, const Block \&payload)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Transport\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{header, }
+\item[{const {\bf Block} \&}]{payload}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1Transport_aa27593978570e95a5793b2af0dac3568}{}\label{classndn_1_1Transport_aa27593978570e95a5793b2af0dac3568}
+
+
+Alternative version of sending data, applying scatter/gather I/O concept. 
+
+Two non-\/consecutive memory blocks will be send out together, e.\+g., as part of the same message in datagram-\/oriented transports. 
+
+Implemented in \hyperlink{classndn_1_1UnixTransport_ad77f8d8adf009f79f1d8a92a217b413b}{ndn\+::\+Unix\+Transport}, \hyperlink{classndn_1_1util_1_1DummyClientFace_1_1Transport_a0c82633be8b1459268376b8eb64edab8}{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport}, and \hyperlink{classndn_1_1TcpTransport_ae2143d6783befe974adbc0372fcc6849}{ndn\+::\+Tcp\+Transport}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/transport/transport.\+hpp\end{DoxyCompactItemize}

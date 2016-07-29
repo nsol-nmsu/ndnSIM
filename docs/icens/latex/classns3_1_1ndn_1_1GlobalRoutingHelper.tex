@@ -1,0 +1,198 @@
+\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper}{}\section{ns3\+:\+:ndn\+:\+:Global\+Routing\+Helper Class Reference}
+\label{classns3_1_1ndn_1_1GlobalRoutingHelper}\index{ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}}
+
+
+Helper for \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/global-\/routing-\/helper.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_a68947c9762ed7795368fcca7b35bf6c5}{Install} (Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Install \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface on a node. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_a4ca724f151dc7dcc9a6176b58825de10}{Install} (const Node\+Container \&nodes)
+\begin{DoxyCompactList}\small\item\em Install \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface on nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_ae7f137af43179eddc6c1abc02ad8a3d5}{Install\+All} ()\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_ae7f137af43179eddc6c1abc02ad8a3d5}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_ae7f137af43179eddc6c1abc02ad8a3d5}
+
+\begin{DoxyCompactList}\small\item\em Install \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface on all nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_a812967d38e09d1fcf673248581ecef9c}{Add\+Origin} (const std\+::string \&prefix, Ptr$<$ Node $>$ node)
+\begin{DoxyCompactList}\small\item\em Add `prefix\textquotesingle{} as origin on `node\textquotesingle{}. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_ae5090ca7825ecc9b266f3e17710b5ffd}{Add\+Origins} (const std\+::string \&prefix, const Node\+Container \&nodes)
+\begin{DoxyCompactList}\small\item\em Add `prefix\textquotesingle{} as origin on all `nodes\textquotesingle{}. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_a452ca5ef0c3cdcaae29abc743708c17e}{Add\+Origin} (const std\+::string \&prefix, const std\+::string \&node\+Name)
+\begin{DoxyCompactList}\small\item\em Add `prefix\textquotesingle{} as origin on node `node\+Name\textquotesingle{}. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_a7fa8e98bb8605fcb65238f4ae16c212b}{Add\+Origins\+For\+All} ()\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_a7fa8e98bb8605fcb65238f4ae16c212b}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_a7fa8e98bb8605fcb65238f4ae16c212b}
+
+\begin{DoxyCompactList}\small\item\em Add origin to each node based on the node\textquotesingle{}s name (using Names class) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_abf4e3691826eec2835f04320947319e3}{Calculate\+Routes} ()
+\begin{DoxyCompactList}\small\item\em Calculate for every node shortest path trees and install routes to all prefix origins. \end{DoxyCompactList}\item 
+static void \hyperlink{classns3_1_1ndn_1_1GlobalRoutingHelper_ae33fb34aa3ba3485a01932e5dc17eb23}{Calculate\+All\+Possible\+Routes} ()
+\begin{DoxyCompactList}\small\item\em Calculate all possible next-\/hop independent alternative routes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper for \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface. 
+
+Definition at line 39 of file ndn-\/global-\/routing-\/helper.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}!Add\+Origin@{Add\+Origin}}
+\index{Add\+Origin@{Add\+Origin}!ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Origin(const std\+::string \&prefix, Ptr$<$ Node $>$ node)}{AddOrigin(const std::string \&prefix, Ptr< Node > node)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Routing\+Helper\+::\+Add\+Origin (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{prefix, }
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_a812967d38e09d1fcf673248581ecef9c}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_a812967d38e09d1fcf673248581ecef9c}
+
+
+Add `prefix\textquotesingle{} as origin on `node\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & Prefix that is originated by node, e.\+g., node is a producer for this prefix \\
+\hline
+{\em node} & Pointer to a node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 178 of file ndn-\/global-\/routing-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}!Add\+Origin@{Add\+Origin}}
+\index{Add\+Origin@{Add\+Origin}!ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Origin(const std\+::string \&prefix, const std\+::string \&node\+Name)}{AddOrigin(const std::string \&prefix, const std::string \&nodeName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Routing\+Helper\+::\+Add\+Origin (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{prefix, }
+\item[{const std\+::string \&}]{node\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_a452ca5ef0c3cdcaae29abc743708c17e}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_a452ca5ef0c3cdcaae29abc743708c17e}
+
+
+Add `prefix\textquotesingle{} as origin on node `node\+Name\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & Prefix that is originated by node, e.\+g., node is a producer for this prefix \\
+\hline
+{\em node\+Name} & Name of the node that is associated with Ptr$<$\+Node$>$ using ns3\+::\+Names \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 196 of file ndn-\/global-\/routing-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}!Add\+Origins@{Add\+Origins}}
+\index{Add\+Origins@{Add\+Origins}!ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}}
+\subsubsection[{\texorpdfstring{Add\+Origins(const std\+::string \&prefix, const Node\+Container \&nodes)}{AddOrigins(const std::string \&prefix, const NodeContainer \&nodes)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Routing\+Helper\+::\+Add\+Origins (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{prefix, }
+\item[{const Node\+Container \&}]{nodes}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_ae5090ca7825ecc9b266f3e17710b5ffd}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_ae5090ca7825ecc9b266f3e17710b5ffd}
+
+
+Add `prefix\textquotesingle{} as origin on all `nodes\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & Prefix that is originated by nodes \\
+\hline
+{\em nodes} & Node\+Container \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 188 of file ndn-\/global-\/routing-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}!Calculate\+All\+Possible\+Routes@{Calculate\+All\+Possible\+Routes}}
+\index{Calculate\+All\+Possible\+Routes@{Calculate\+All\+Possible\+Routes}!ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}}
+\subsubsection[{\texorpdfstring{Calculate\+All\+Possible\+Routes()}{CalculateAllPossibleRoutes()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Routing\+Helper\+::\+Calculate\+All\+Possible\+Routes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_ae33fb34aa3ba3485a01932e5dc17eb23}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_ae33fb34aa3ba3485a01932e5dc17eb23}
+
+
+Calculate all possible next-\/hop independent alternative routes. 
+
+Refer to the implementation for more details.
+
+Note that this method is highly experimental and should be used with caution (very time consuming). Implementation of route calculation is heavily based on Boost Graph Library See \href{http://www.boost.org/doc/libs/1_49_0/libs/graph/doc/table_of_contents.html}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+49\+\_\+0/libs/graph/doc/table\+\_\+of\+\_\+contents.\+html} for more details
+
+Definition at line 283 of file ndn-\/global-\/routing-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}!Calculate\+Routes@{Calculate\+Routes}}
+\index{Calculate\+Routes@{Calculate\+Routes}!ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}}
+\subsubsection[{\texorpdfstring{Calculate\+Routes()}{CalculateRoutes()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Routing\+Helper\+::\+Calculate\+Routes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_abf4e3691826eec2835f04320947319e3}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_abf4e3691826eec2835f04320947319e3}
+
+
+Calculate for every node shortest path trees and install routes to all prefix origins. 
+
+Implementation of route calculation is heavily based on Boost Graph Library See \href{http://www.boost.org/doc/libs/1_49_0/libs/graph/doc/table_of_contents.html}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+49\+\_\+0/libs/graph/doc/table\+\_\+of\+\_\+contents.\+html} for more details
+
+Definition at line 218 of file ndn-\/global-\/routing-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}}
+\subsubsection[{\texorpdfstring{Install(\+Ptr$<$ Node $>$ node)}{Install(Ptr< Node > node)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Routing\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_a68947c9762ed7795368fcca7b35bf6c5}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_a68947c9762ed7795368fcca7b35bf6c5}
+
+
+Install \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface on a node. 
+
+Note that \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} will also be installed on all connected nodes and channels
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node to install \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file ndn-\/global-\/routing-\/helper.\+cpp.
+
+\index{ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}!Install@{Install}}
+\index{Install@{Install}!ns3\+::ndn\+::\+Global\+Routing\+Helper@{ns3\+::ndn\+::\+Global\+Routing\+Helper}}
+\subsubsection[{\texorpdfstring{Install(const Node\+Container \&nodes)}{Install(const NodeContainer \&nodes)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Global\+Routing\+Helper\+::\+Install (
+\begin{DoxyParamCaption}
+\item[{const Node\+Container \&}]{nodes}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1GlobalRoutingHelper_a4ca724f151dc7dcc9a6176b58825de10}{}\label{classns3_1_1ndn_1_1GlobalRoutingHelper_a4ca724f151dc7dcc9a6176b58825de10}
+
+
+Install \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface on nodes. 
+
+Note that \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} will also be installed on all connected nodes and channels
+
+
+\begin{DoxyParams}{Parameters}
+{\em nodes} & Node\+Container to install \hyperlink{classns3_1_1ndn_1_1GlobalRouter}{Global\+Router} interface \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 164 of file ndn-\/global-\/routing-\/helper.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/global-\/routing-\/helper.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/helper/ndn-\/global-\/routing-\/helper.\+cpp\end{DoxyCompactItemize}

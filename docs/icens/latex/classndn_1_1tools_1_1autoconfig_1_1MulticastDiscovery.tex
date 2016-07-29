@@ -1,0 +1,74 @@
+\hypertarget{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery}{}\section{ndn\+:\+:tools\+:\+:autoconfig\+:\+:Multicast\+Discovery Class Reference}
+\label{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery}\index{ndn\+::tools\+::autoconfig\+::\+Multicast\+Discovery@{ndn\+::tools\+::autoconfig\+::\+Multicast\+Discovery}}
+
+
+Multicast discovery stage.  
+
+
+
+
+{\ttfamily \#include $<$multicast-\/discovery.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:tools\+:\+:autoconfig\+:\+:Multicast\+Discovery\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery_a47ed6c664d87e47d4f4ccf60f1326019}{Multicast\+Discovery} (\hyperlink{classndn_1_1Face}{Face} \&face, \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} \&key\+Chain, const \hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a1b9466e64370f1ead34b754096562445}{Next\+Stage\+Callback} \&next\+Stage\+On\+Failure)
+\begin{DoxyCompactList}\small\item\em Create multicast discovery stage. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery_aca15c0651f4fed07e6d886100f315fbe}{start} () D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE\hypertarget{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery_aca15c0651f4fed07e6d886100f315fbe}{}\label{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery_aca15c0651f4fed07e6d886100f315fbe}
+
+\begin{DoxyCompactList}\small\item\em Start the stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Multicast discovery stage. 
+
+
+\begin{DoxyItemize}
+\item Request
+
+The end host sends an \hyperlink{classndn_1_1Interest}{Interest} over a multicast face.
+
+\hyperlink{classndn_1_1Interest}{Interest} \hyperlink{classndn_1_1Name}{Name} is /localhop/ndn-\/autoconf/hub.
+\item Response
+
+A producer app on the H\+UB answer this \hyperlink{classndn_1_1Interest}{Interest} with a \hyperlink{classndn_1_1Data}{Data} packet that contains a T\+L\+V-\/encoded Uri block. The value of this block is the U\+RI for the H\+UB, preferably a U\+DP tunnel. 
+\end{DoxyItemize}
+
+Definition at line 50 of file multicast-\/discovery.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::tools\+::autoconfig\+::\+Multicast\+Discovery@{ndn\+::tools\+::autoconfig\+::\+Multicast\+Discovery}!Multicast\+Discovery@{Multicast\+Discovery}}
+\index{Multicast\+Discovery@{Multicast\+Discovery}!ndn\+::tools\+::autoconfig\+::\+Multicast\+Discovery@{ndn\+::tools\+::autoconfig\+::\+Multicast\+Discovery}}
+\subsubsection[{\texorpdfstring{Multicast\+Discovery(\+Face \&face, Key\+Chain \&key\+Chain, const Next\+Stage\+Callback \&next\+Stage\+On\+Failure)}{MulticastDiscovery(Face \&face, KeyChain \&keyChain, const NextStageCallback \&nextStageOnFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::tools\+::autoconfig\+::\+Multicast\+Discovery\+::\+Multicast\+Discovery (
+\begin{DoxyParamCaption}
+\item[{{\bf Face} \&}]{face, }
+\item[{{\bf Key\+Chain} \&}]{key\+Chain, }
+\item[{const {\bf Next\+Stage\+Callback} \&}]{next\+Stage\+On\+Failure}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery_a47ed6c664d87e47d4f4ccf60f1326019}{}\label{classndn_1_1tools_1_1autoconfig_1_1MulticastDiscovery_a47ed6c664d87e47d4f4ccf60f1326019}
+
+
+Create multicast discovery stage. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1tools_1_1autoconfig_1_1Base_a4d378253464c3fde9a499ccafb944153}{Base\+::\+Base} 
+\end{DoxySeeAlso}
+
+
+Definition at line 36 of file multicast-\/discovery.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/multicast-\/discovery.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tools/ndn-\/autoconfig/multicast-\/discovery.\+cpp\end{DoxyCompactItemize}

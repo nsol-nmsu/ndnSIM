@@ -1,0 +1,164 @@
+\hypertarget{classnfd_1_1ConfigFile}{}\section{nfd\+:\+:Config\+File Class Reference}
+\label{classnfd_1_1ConfigFile}\index{nfd\+::\+Config\+File@{nfd\+::\+Config\+File}}
+Inheritance diagram for nfd\+:\+:Config\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1ConfigFile}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1ConfigFile_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Config\+File} (\hyperlink{namespacenfd_a5b37a7c021db2aa61fe8780e1b42c02c}{Unknown\+Config\+Section\+Handler} unknown\+Section\+Callback=throw\+Error\+On\+Unknown\+Section)\hypertarget{classnfd_1_1ConfigFile_a53054cecce77483b28c5ff12f8de87fe}{}\label{classnfd_1_1ConfigFile_a53054cecce77483b28c5ff12f8de87fe}
+
+\item 
+void \hyperlink{classnfd_1_1ConfigFile_abceef4dbc4745b3fdb971454e59745a0}{add\+Section\+Handler} (const std\+::string \&section\+Name, \hyperlink{namespacenfd_ae90d10c3eaad87418aa1dc2ad251aec5}{Config\+Section\+Handler} subscriber)\hypertarget{classnfd_1_1ConfigFile_abceef4dbc4745b3fdb971454e59745a0}{}\label{classnfd_1_1ConfigFile_abceef4dbc4745b3fdb971454e59745a0}
+
+\begin{DoxyCompactList}\small\item\em setup notification of configuration file sections \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1ConfigFile_a45691945cab4e710fbbd31d720981ead}{parse} (const std\+::string \&filename, bool is\+Dry\+Run)
+\item 
+void \hyperlink{classnfd_1_1ConfigFile_a8889a64acd3a073778448436e3aaaf49}{parse} (const std\+::string \&input, bool is\+Dry\+Run, const std\+::string \&filename)
+\item 
+void \hyperlink{classnfd_1_1ConfigFile_a5d7eae035df50308f6328a8de0085686}{parse} (std\+::istream \&input, bool is\+Dry\+Run, const std\+::string \&filename)
+\item 
+void \hyperlink{classnfd_1_1ConfigFile_a69749f921026e615181c7df3933f490b}{parse} (const Config\+Section \&\hyperlink{classconfig}{config}, bool is\+Dry\+Run, const std\+::string \&filename)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries throw\+Error\+On\+Unknown\+Section} (const std\+::string \&filename, const std\+::string \&section\+Name, const Config\+Section \&section, bool is\+Dry\+Run)\hypertarget{classnfd_1_1ConfigFile_a423737cfaf3a9437dbc21c1eb912a9c3}{}\label{classnfd_1_1ConfigFile_a423737cfaf3a9437dbc21c1eb912a9c3}
+
+\item 
+static void {\bfseries ignore\+Unknown\+Section} (const std\+::string \&filename, const std\+::string \&section\+Name, const Config\+Section \&section, bool is\+Dry\+Run)\hypertarget{classnfd_1_1ConfigFile_aa41acea4cbf184b6c6947728fcc1f8fc}{}\label{classnfd_1_1ConfigFile_aa41acea4cbf184b6c6947728fcc1f8fc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 47 of file config-\/file.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Config\+File@{nfd\+::\+Config\+File}!parse@{parse}}
+\index{parse@{parse}!nfd\+::\+Config\+File@{nfd\+::\+Config\+File}}
+\subsubsection[{\texorpdfstring{parse(const std\+::string \&filename, bool is\+Dry\+Run)}{parse(const std::string \&filename, bool isDryRun)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Config\+File\+::parse (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{bool}]{is\+Dry\+Run}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1ConfigFile_a45691945cab4e710fbbd31d720981ead}{}\label{classnfd_1_1ConfigFile_a45691945cab4e710fbbd31d720981ead}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & file to parse \\
+\hline
+{\em is\+Dry\+Run} & true if performing a dry run of configuration, false otherwise \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & if file not found \\
+\hline
+{\em \hyperlink{classnfd_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & if parse error \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 68 of file config-\/file.\+cpp.
+
+\index{nfd\+::\+Config\+File@{nfd\+::\+Config\+File}!parse@{parse}}
+\index{parse@{parse}!nfd\+::\+Config\+File@{nfd\+::\+Config\+File}}
+\subsubsection[{\texorpdfstring{parse(const std\+::string \&input, bool is\+Dry\+Run, const std\+::string \&filename)}{parse(const std::string \&input, bool isDryRun, const std::string \&filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Config\+File\+::parse (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{input, }
+\item[{bool}]{is\+Dry\+Run, }
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1ConfigFile_a8889a64acd3a073778448436e3aaaf49}{}\label{classnfd_1_1ConfigFile_a8889a64acd3a073778448436e3aaaf49}
+
+\begin{DoxyParams}{Parameters}
+{\em input} & configuration (as a string) to parse \\
+\hline
+{\em is\+Dry\+Run} & true if performing a dry run of configuration, false otherwise \\
+\hline
+{\em filename} & logical filename of the config file, can appear in error messages \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & if file not found \\
+\hline
+{\em \hyperlink{classnfd_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & if parse error \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 83 of file config-\/file.\+cpp.
+
+\index{nfd\+::\+Config\+File@{nfd\+::\+Config\+File}!parse@{parse}}
+\index{parse@{parse}!nfd\+::\+Config\+File@{nfd\+::\+Config\+File}}
+\subsubsection[{\texorpdfstring{parse(std\+::istream \&input, bool is\+Dry\+Run, const std\+::string \&filename)}{parse(std::istream \&input, bool isDryRun, const std::string \&filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Config\+File\+::parse (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{input, }
+\item[{bool}]{is\+Dry\+Run, }
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1ConfigFile_a5d7eae035df50308f6328a8de0085686}{}\label{classnfd_1_1ConfigFile_a5d7eae035df50308f6328a8de0085686}
+
+\begin{DoxyParams}{Parameters}
+{\em input} & stream to parse \\
+\hline
+{\em is\+Dry\+Run} & true if performing a dry run of configuration, false otherwise \\
+\hline
+{\em filename} & logical filename of the config file, can appear in error messages \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & if parse error \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 91 of file config-\/file.\+cpp.
+
+\index{nfd\+::\+Config\+File@{nfd\+::\+Config\+File}!parse@{parse}}
+\index{parse@{parse}!nfd\+::\+Config\+File@{nfd\+::\+Config\+File}}
+\subsubsection[{\texorpdfstring{parse(const Config\+Section \&config, bool is\+Dry\+Run, const std\+::string \&filename)}{parse(const ConfigSection \&config, bool isDryRun, const std::string \&filename)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Config\+File\+::parse (
+\begin{DoxyParamCaption}
+\item[{const Config\+Section \&}]{config, }
+\item[{bool}]{is\+Dry\+Run, }
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1ConfigFile_a69749f921026e615181c7df3933f490b}{}\label{classnfd_1_1ConfigFile_a69749f921026e615181c7df3933f490b}
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Config\+Section that needs to be processed \\
+\hline
+{\em is\+Dry\+Run} & true if performing a dry run of configuration, false otherwise \\
+\hline
+{\em filename} & logical filename of the config file, can appear in error messages \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classnfd_1_1ConfigFile_1_1Error}{Config\+File\+::\+Error}} & if parse error \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 110 of file config-\/file.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/core/config-\/file.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/core/config-\/file.\+cpp\end{DoxyCompactItemize}

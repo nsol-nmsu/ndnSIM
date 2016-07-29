@@ -1,0 +1,185 @@
+\hypertarget{classndn_1_1encoding_1_1Estimator}{}\section{ndn\+:\+:encoding\+:\+:Estimator Class Reference}
+\label{classndn_1_1encoding_1_1Estimator}\index{ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}}
+
+
+Helper class to estimate size of T\+LV encoding Interface of this class (mostly) matches interface of \hyperlink{classndn_1_1encoding_1_1Encoder}{Encoder} class.  
+
+
+
+
+{\ttfamily \#include $<$estimator.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:encoding\+:\+:Estimator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1encoding_1_1Estimator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1encoding_1_1Estimator_a1fd365e6cda48ffd0492a7a352706668}{Estimator} (size\+\_\+t total\+Reserve=0, size\+\_\+t reserve\+From\+Back=0)
+\begin{DoxyCompactList}\small\item\em Create instance of the estimator. \end{DoxyCompactList}\item 
+{\bfseries Estimator} (const \hyperlink{classndn_1_1encoding_1_1Estimator}{Estimator} \&)=delete\hypertarget{classndn_1_1encoding_1_1Estimator_aab3e79b18f73f13589baf13c3c02ec64}{}\label{classndn_1_1encoding_1_1Estimator_aab3e79b18f73f13589baf13c3c02ec64}
+
+\item 
+\hyperlink{classndn_1_1encoding_1_1Estimator}{Estimator} \& {\bfseries operator=} (const \hyperlink{classndn_1_1encoding_1_1Estimator}{Estimator} \&)=delete\hypertarget{classndn_1_1encoding_1_1Estimator_ab849b89cb4b81f55ab4565dc8a42a151}{}\label{classndn_1_1encoding_1_1Estimator_ab849b89cb4b81f55ab4565dc8a42a151}
+
+\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a39cf79cd67fc918ef727db358ee3e8ee}{prepend\+Byte} (uint8\+\_\+t value)\hypertarget{classndn_1_1encoding_1_1Estimator_a39cf79cd67fc918ef727db358ee3e8ee}{}\label{classndn_1_1encoding_1_1Estimator_a39cf79cd67fc918ef727db358ee3e8ee}
+
+\begin{DoxyCompactList}\small\item\em Prepend a byte. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a24f80ee4ba79600b9db1803df986cc10}{append\+Byte} (uint8\+\_\+t value)\hypertarget{classndn_1_1encoding_1_1Estimator_a24f80ee4ba79600b9db1803df986cc10}{}\label{classndn_1_1encoding_1_1Estimator_a24f80ee4ba79600b9db1803df986cc10}
+
+\begin{DoxyCompactList}\small\item\em Append a byte. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a5263f790932d92faaa8ac688ad30a521}{prepend\+Byte\+Array} (const uint8\+\_\+t $\ast$array, size\+\_\+t length)\hypertarget{classndn_1_1encoding_1_1Estimator_a5263f790932d92faaa8ac688ad30a521}{}\label{classndn_1_1encoding_1_1Estimator_a5263f790932d92faaa8ac688ad30a521}
+
+\begin{DoxyCompactList}\small\item\em Prepend a byte array {\ttfamily array} of length {\ttfamily length}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a81462ef7003dd66cf50a9688085c883b}{append\+Byte\+Array} (const uint8\+\_\+t $\ast$array, size\+\_\+t length)\hypertarget{classndn_1_1encoding_1_1Estimator_a81462ef7003dd66cf50a9688085c883b}{}\label{classndn_1_1encoding_1_1Estimator_a81462ef7003dd66cf50a9688085c883b}
+
+\begin{DoxyCompactList}\small\item\em Append a byte array {\ttfamily array} of length {\ttfamily length}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Iterator $>$ }\\size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a34d843dfd17929640616a4ef83f4baac}{prepend\+Range} (Iterator first, Iterator last)\hypertarget{classndn_1_1encoding_1_1Estimator_a34d843dfd17929640616a4ef83f4baac}{}\label{classndn_1_1encoding_1_1Estimator_a34d843dfd17929640616a4ef83f4baac}
+
+\begin{DoxyCompactList}\small\item\em Prepend range of bytes from the range \mbox{[}{\ttfamily first}, {\ttfamily last}) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Iterator $>$ }\\size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a19e76a87c255c55e04ddd5eb4e596c61}{append\+Range} (Iterator first, Iterator last)\hypertarget{classndn_1_1encoding_1_1Estimator_a19e76a87c255c55e04ddd5eb4e596c61}{}\label{classndn_1_1encoding_1_1Estimator_a19e76a87c255c55e04ddd5eb4e596c61}
+
+\begin{DoxyCompactList}\small\item\em Append range of bytes from the range \mbox{[}{\ttfamily first}, {\ttfamily last}) \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_ad8d5cc05afe2e7b8a8c8dc52ff0f2526}{prepend\+Var\+Number} (uint64\+\_\+t var\+Number)
+\begin{DoxyCompactList}\small\item\em Prepend Var\+Number {\ttfamily var\+Number} of N\+DN T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a42d28118ac2fe7579cd3c8193c0cc8d4}{append\+Var\+Number} (uint64\+\_\+t var\+Number)
+\begin{DoxyCompactList}\small\item\em Prepend Var\+Number {\ttfamily var\+Number} of N\+DN T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a41034618ececa932567f1d177bff8873}{prepend\+Non\+Negative\+Integer} (uint64\+\_\+t integer)
+\begin{DoxyCompactList}\small\item\em Prepend non-\/negative integer {\ttfamily integer} of N\+DN T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a141127e742121ec02ee8be0597c13293}{append\+Non\+Negative\+Integer} (uint64\+\_\+t integer)
+\begin{DoxyCompactList}\small\item\em Append non-\/negative integer {\ttfamily integer} of N\+DN T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_ab89fee5df712b133d926ccea15d4e75d}{prepend\+Byte\+Array\+Block} (uint32\+\_\+t type, const uint8\+\_\+t $\ast$array, size\+\_\+t array\+Size)\hypertarget{classndn_1_1encoding_1_1Estimator_ab89fee5df712b133d926ccea15d4e75d}{}\label{classndn_1_1encoding_1_1Estimator_ab89fee5df712b133d926ccea15d4e75d}
+
+\begin{DoxyCompactList}\small\item\em Prepend T\+LV block of type {\ttfamily type} and value from buffer {\ttfamily array} of size {\ttfamily array\+Size}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a1ede30aca96662db626e1e687b74f5ba}{append\+Byte\+Array\+Block} (uint32\+\_\+t type, const uint8\+\_\+t $\ast$array, size\+\_\+t array\+Size)\hypertarget{classndn_1_1encoding_1_1Estimator_a1ede30aca96662db626e1e687b74f5ba}{}\label{classndn_1_1encoding_1_1Estimator_a1ede30aca96662db626e1e687b74f5ba}
+
+\begin{DoxyCompactList}\small\item\em Append T\+LV block of type {\ttfamily type} and value from buffer {\ttfamily array} of size {\ttfamily array\+Size}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a137538e8d4e30519c107b3522f63024b}{prepend\+Block} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1encoding_1_1Estimator_a137538e8d4e30519c107b3522f63024b}{}\label{classndn_1_1encoding_1_1Estimator_a137538e8d4e30519c107b3522f63024b}
+
+\begin{DoxyCompactList}\small\item\em Prepend T\+LV block {\ttfamily block}. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classndn_1_1encoding_1_1Estimator_a2403da16becfdfc6154abe5009f8cb88}{append\+Block} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1encoding_1_1Estimator_a2403da16becfdfc6154abe5009f8cb88}{}\label{classndn_1_1encoding_1_1Estimator_a2403da16becfdfc6154abe5009f8cb88}
+
+\begin{DoxyCompactList}\small\item\em Append T\+LV block {\ttfamily block}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class to estimate size of T\+LV encoding Interface of this class (mostly) matches interface of \hyperlink{classndn_1_1encoding_1_1Encoder}{Encoder} class. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1encoding_1_1Encoder}{Encoder} 
+\end{DoxySeeAlso}
+
+
+Definition at line 36 of file estimator.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}!Estimator@{Estimator}}
+\index{Estimator@{Estimator}!ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}}
+\subsubsection[{\texorpdfstring{Estimator(size\+\_\+t total\+Reserve=0, size\+\_\+t reserve\+From\+Back=0)}{Estimator(size\_t totalReserve=0, size\_t reserveFromBack=0)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::encoding\+::\+Estimator\+::\+Estimator (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{total\+Reserve = {\ttfamily 0}, }
+\item[{size\+\_\+t}]{reserve\+From\+Back = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1encoding_1_1Estimator_a1fd365e6cda48ffd0492a7a352706668}{}\label{classndn_1_1encoding_1_1Estimator_a1fd365e6cda48ffd0492a7a352706668}
+
+
+Create instance of the estimator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Reserve} & not used (for compatibility with the \hyperlink{classndn_1_1encoding_1_1Encoder}{Encoder}) \\
+\hline
+{\em total\+From\+Back} & not used (for compatibility with the \hyperlink{classndn_1_1encoding_1_1Encoder}{Encoder}) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file estimator.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}!append\+Non\+Negative\+Integer@{append\+Non\+Negative\+Integer}}
+\index{append\+Non\+Negative\+Integer@{append\+Non\+Negative\+Integer}!ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}}
+\subsubsection[{\texorpdfstring{append\+Non\+Negative\+Integer(uint64\+\_\+t integer)}{appendNonNegativeInteger(uint64\_t integer)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::encoding\+::\+Estimator\+::append\+Non\+Negative\+Integer (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{integer}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Estimator_a141127e742121ec02ee8be0597c13293}{}\label{classndn_1_1encoding_1_1Estimator_a141127e742121ec02ee8be0597c13293}
+
+
+Append non-\/negative integer {\ttfamily integer} of N\+DN T\+LV encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 98 of file estimator.\+cpp.
+
+\index{ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}!append\+Var\+Number@{append\+Var\+Number}}
+\index{append\+Var\+Number@{append\+Var\+Number}!ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}}
+\subsubsection[{\texorpdfstring{append\+Var\+Number(uint64\+\_\+t var\+Number)}{appendVarNumber(uint64\_t varNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::encoding\+::\+Estimator\+::append\+Var\+Number (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{var\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Estimator_a42d28118ac2fe7579cd3c8193c0cc8d4}{}\label{classndn_1_1encoding_1_1Estimator_a42d28118ac2fe7579cd3c8193c0cc8d4}
+
+
+Prepend Var\+Number {\ttfamily var\+Number} of N\+DN T\+LV encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 74 of file estimator.\+cpp.
+
+\index{ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}!prepend\+Non\+Negative\+Integer@{prepend\+Non\+Negative\+Integer}}
+\index{prepend\+Non\+Negative\+Integer@{prepend\+Non\+Negative\+Integer}!ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}}
+\subsubsection[{\texorpdfstring{prepend\+Non\+Negative\+Integer(uint64\+\_\+t integer)}{prependNonNegativeInteger(uint64\_t integer)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::encoding\+::\+Estimator\+::prepend\+Non\+Negative\+Integer (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{integer}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Estimator_a41034618ececa932567f1d177bff8873}{}\label{classndn_1_1encoding_1_1Estimator_a41034618ececa932567f1d177bff8873}
+
+
+Prepend non-\/negative integer {\ttfamily integer} of N\+DN T\+LV encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 81 of file estimator.\+cpp.
+
+\index{ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}!prepend\+Var\+Number@{prepend\+Var\+Number}}
+\index{prepend\+Var\+Number@{prepend\+Var\+Number}!ndn\+::encoding\+::\+Estimator@{ndn\+::encoding\+::\+Estimator}}
+\subsubsection[{\texorpdfstring{prepend\+Var\+Number(uint64\+\_\+t var\+Number)}{prependVarNumber(uint64\_t varNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t ndn\+::encoding\+::\+Estimator\+::prepend\+Var\+Number (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{var\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1encoding_1_1Estimator_ad8d5cc05afe2e7b8a8c8dc52ff0f2526}{}\label{classndn_1_1encoding_1_1Estimator_ad8d5cc05afe2e7b8a8c8dc52ff0f2526}
+
+
+Prepend Var\+Number {\ttfamily var\+Number} of N\+DN T\+LV encoding. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://named-data.net/doc/ndn-tlv/}{\tt http\+://named-\/data.\+net/doc/ndn-\/tlv/} 
+\end{DoxySeeAlso}
+
+
+Definition at line 57 of file estimator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/estimator.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/encoding/estimator.\+cpp\end{DoxyCompactItemize}

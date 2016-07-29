@@ -1,0 +1,61 @@
+\hypertarget{classndn_1_1time_1_1UnitTestClock}{}\section{ndn\+:\+:time\+:\+:Unit\+Test\+Clock$<$ Base\+Clock $>$ Class Template Reference}
+\label{classndn_1_1time_1_1UnitTestClock}\index{ndn\+::time\+::\+Unit\+Test\+Clock$<$ Base\+Clock $>$@{ndn\+::time\+::\+Unit\+Test\+Clock$<$ Base\+Clock $>$}}
+
+
+Clock that can be used in unit tests for time-\/dependent tests independent of wall clock.  
+
+
+
+
+{\ttfamily \#include $<$time-\/unit-\/test-\/clock.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:time\+:\+:Unit\+Test\+Clock$<$ Base\+Clock $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1time_1_1UnitTestClock}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Unit\+Test\+Clock} (const nanoseconds \&start\+Time=\hyperlink{classndn_1_1time_1_1UnitTestClockTraits}{Unit\+Test\+Clock\+Traits}$<$ Base\+Clock $>$\+::get\+Default\+Start\+Time())\hypertarget{classndn_1_1time_1_1UnitTestClock_a546a67be3934f63ed036b9585b362af5}{}\label{classndn_1_1time_1_1UnitTestClock_a546a67be3934f63ed036b9585b362af5}
+
+\item 
+void \hyperlink{classndn_1_1time_1_1UnitTestClock_adc17792822d600b77b7a5b59e285a59f}{advance} (const nanoseconds \&duration)\hypertarget{classndn_1_1time_1_1UnitTestClock_adc17792822d600b77b7a5b59e285a59f}{}\label{classndn_1_1time_1_1UnitTestClock_adc17792822d600b77b7a5b59e285a59f}
+
+\begin{DoxyCompactList}\small\item\em Advance unit test clock by {\ttfamily duration}. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1time_1_1UnitTestClock_a9b84b834f21257f7cfd43fa30c8147ef}{set\+Now} (const nanoseconds \&time\+Since\+Epoch)\hypertarget{classndn_1_1time_1_1UnitTestClock_a9b84b834f21257f7cfd43fa30c8147ef}{}\label{classndn_1_1time_1_1UnitTestClock_a9b84b834f21257f7cfd43fa30c8147ef}
+
+\begin{DoxyCompactList}\small\item\em Explicitly set clock to {\ttfamily time\+Since\+Epoch}. \end{DoxyCompactList}\item 
+virtual std\+::string {\bfseries get\+Since} () const\hypertarget{classndn_1_1time_1_1UnitTestClock_ab135f14fc7c54eb371d0cb05f52a4961}{}\label{classndn_1_1time_1_1UnitTestClock_ab135f14fc7c54eb371d0cb05f52a4961}
+
+\item 
+virtual Base\+Clock\+::time\+\_\+point {\bfseries get\+Now} () const\hypertarget{classndn_1_1time_1_1UnitTestClock_a76c2bcd5b2d307759c0084d2e331b3af}{}\label{classndn_1_1time_1_1UnitTestClock_a76c2bcd5b2d307759c0084d2e331b3af}
+
+\item 
+virtual boost\+::posix\+\_\+time\+::time\+\_\+duration {\bfseries to\+Posix\+Duration} (const typename Base\+Clock\+::duration \&duration) const\hypertarget{classndn_1_1time_1_1UnitTestClock_af5ffc5de986d875e2ade2faea2c1d000}{}\label{classndn_1_1time_1_1UnitTestClock_af5ffc5de986d875e2ade2faea2c1d000}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Base\+Clock$>$\\*
+class ndn\+::time\+::\+Unit\+Test\+Clock$<$ Base\+Clock $>$}
+
+Clock that can be used in unit tests for time-\/dependent tests independent of wall clock. 
+
+This clock should be explicitly advanced with \hyperlink{classndn_1_1time_1_1UnitTestClock_adc17792822d600b77b7a5b59e285a59f}{Unit\+Test\+Clock$<$\+Base\+Clock$>$\+::advance()} or set with \hyperlink{classndn_1_1time_1_1UnitTestClock_a9b84b834f21257f7cfd43fa30c8147ef}{Unit\+Test\+Clock$<$\+Base\+Clock$>$\+::set\+Now()} methods.
+
+\begin{DoxyNote}{Note}
+Default start time is determined by \hyperlink{classndn_1_1time_1_1UnitTestClockTraits}{Unit\+Test\+Clock\+Traits} 
+\end{DoxyNote}
+
+
+Definition at line 74 of file time-\/unit-\/test-\/clock.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/time-\/unit-\/test-\/clock.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/time-\/unit-\/test-\/clock.\+cpp\end{DoxyCompactItemize}

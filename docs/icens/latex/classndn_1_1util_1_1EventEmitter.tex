@@ -1,0 +1,75 @@
+\hypertarget{classndn_1_1util_1_1EventEmitter}{}\section{ndn\+:\+:util\+:\+:Event\+Emitter$<$ T\+Args $>$ Class Template Reference}
+\label{classndn_1_1util_1_1EventEmitter}\index{ndn\+::util\+::\+Event\+Emitter$<$ T\+Args $>$@{ndn\+::util\+::\+Event\+Emitter$<$ T\+Args $>$}}
+
+
+provides a lightweight event system  
+
+
+
+
+{\ttfamily \#include $<$event-\/emitter.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:Event\+Emitter$<$ T\+Args $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1EventEmitter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ void(const T\+Args \&...)$>$ \hyperlink{classndn_1_1util_1_1EventEmitter_ad8d47433bcb8c1dbb94a4b6c92362423}{Handler}\hypertarget{classndn_1_1util_1_1EventEmitter_ad8d47433bcb8c1dbb94a4b6c92362423}{}\label{classndn_1_1util_1_1EventEmitter_ad8d47433bcb8c1dbb94a4b6c92362423}
+
+\begin{DoxyCompactList}\small\item\em represents a handler that can subscribe to the event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classndn_1_1util_1_1EventEmitter_a1cce5c1df26b2914125f66be1914533d}{operator+=} (const \hyperlink{classndn_1_1util_1_1EventEmitter_ad8d47433bcb8c1dbb94a4b6c92362423}{Handler} \&handler)\hypertarget{classndn_1_1util_1_1EventEmitter_a1cce5c1df26b2914125f66be1914533d}{}\label{classndn_1_1util_1_1EventEmitter_a1cce5c1df26b2914125f66be1914533d}
+
+\begin{DoxyCompactList}\small\item\em subscribes to the event \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1util_1_1EventEmitter_aec8e56515afa9d7a3d63362db6389fba}{is\+Empty} () const
+\item 
+void \hyperlink{classndn_1_1util_1_1EventEmitter_a38df8a7e57e188e91b70374f29fbba89}{clear} ()\hypertarget{classndn_1_1util_1_1EventEmitter_a38df8a7e57e188e91b70374f29fbba89}{}\label{classndn_1_1util_1_1EventEmitter_a38df8a7e57e188e91b70374f29fbba89}
+
+\begin{DoxyCompactList}\small\item\em clears all subscriptions \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1util_1_1EventEmitter_acf11bda10db9558547fc59695db6c8e7}{operator()} (const T\+Args \&...args) const\hypertarget{classndn_1_1util_1_1EventEmitter_acf11bda10db9558547fc59695db6c8e7}{}\label{classndn_1_1util_1_1EventEmitter_acf11bda10db9558547fc59695db6c8e7}
+
+\begin{DoxyCompactList}\small\item\em triggers the event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename ... T\+Args$>$\\*
+class ndn\+::util\+::\+Event\+Emitter$<$ T\+Args $>$}
+
+provides a lightweight event system 
+
+To declare an event\+: Event\+Emitter$<$\+T\+Args$>$ on\+Event\+Name; To subscribe to an event\+: event\+Source-\/$>$on\+Event\+Name += event\+Handler; Multiple functions can subscribe to the same event. To trigger an event\+: on\+Event\+Name(args); To clear event subscriptions\+: on\+Event\+Name.\+clear();
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000044}{Deprecated}]use Signal instead \end{DoxyRefDesc}
+
+
+Definition at line 47 of file event-\/emitter.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+Event\+Emitter@{ndn\+::util\+::\+Event\+Emitter}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!ndn\+::util\+::\+Event\+Emitter@{ndn\+::util\+::\+Event\+Emitter}}
+\subsubsection[{\texorpdfstring{is\+Empty() const}{isEmpty() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename ... T\+Args$>$ bool {\bf ndn\+::util\+::\+Event\+Emitter}$<$ T\+Args $>$\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1util_1_1EventEmitter_aec8e56515afa9d7a3d63362db6389fba}{}\label{classndn_1_1util_1_1EventEmitter_aec8e56515afa9d7a3d63362db6389fba}
+\begin{DoxyReturn}{Returns}
+true if there is no subscription, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file event-\/emitter.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/event-\/emitter.\+hpp\end{DoxyCompactItemize}

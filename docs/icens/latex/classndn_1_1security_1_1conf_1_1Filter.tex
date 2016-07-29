@@ -1,0 +1,46 @@
+\hypertarget{classndn_1_1security_1_1conf_1_1Filter}{}\section{ndn\+:\+:security\+:\+:conf\+:\+:Filter Class Reference}
+\label{classndn_1_1security_1_1conf_1_1Filter}\index{ndn\+::security\+::conf\+::\+Filter@{ndn\+::security\+::conf\+::\+Filter}}
+
+
+\hyperlink{classndn_1_1security_1_1conf_1_1Filter}{Filter} is one of the classes used by \hyperlink{classndn_1_1ValidatorConfig}{Validator\+Config}.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:security\+:\+:conf\+:\+:Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1security_1_1conf_1_1Filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries match} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classndn_1_1security_1_1conf_1_1Filter_a0b856b5a4e4f4f7ca7b45b9c7b37dbc6}{}\label{classndn_1_1security_1_1conf_1_1Filter_a0b856b5a4e4f4f7ca7b45b9c7b37dbc6}
+
+\item 
+bool {\bfseries match} (const \hyperlink{classndn_1_1Interest}{Interest} \&interest)\hypertarget{classndn_1_1security_1_1conf_1_1Filter_ab389d7aae8e7859be45fc25ebee38d0a}{}\label{classndn_1_1security_1_1conf_1_1Filter_ab389d7aae8e7859be45fc25ebee38d0a}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries match\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name)=0\hypertarget{classndn_1_1security_1_1conf_1_1Filter_a9c9f33c854434233ae6e280cdb3477fd}{}\label{classndn_1_1security_1_1conf_1_1Filter_a9c9f33c854434233ae6e280cdb3477fd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1security_1_1conf_1_1Filter}{Filter} is one of the classes used by \hyperlink{classndn_1_1ValidatorConfig}{Validator\+Config}. 
+
+The \hyperlink{classndn_1_1ValidatorConfig}{Validator\+Config} class consists of a set of rules. The \hyperlink{classndn_1_1security_1_1conf_1_1Filter}{Filter} class is a part of a rule and is used to match packet. Matched packets will be checked against the checkers defined in the rule. 
+
+Definition at line 48 of file filter.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/conf/filter.\+hpp\end{DoxyCompactItemize}

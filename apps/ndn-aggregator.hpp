@@ -38,11 +38,11 @@ namespace ndn {
 
 /**
  * @ingroup ndn-apps
- * @brief A payloaded interest application for Smart Grid simulation
- *
- * A simple Interest-sink applia simple Interest-sink application,
- * which aggregates incoming Interest and forwards to a compute node
- * Payload in Interests are concatenated before forwarding to compute layer
+ * @brief An application that concatenates payloaded interests at the aggregation
+ * of the Smart Grid architecture. At specified intervals (configurable by user), a single payload interest
+ * is sent upstream to the compute layer. The size of the payload equals the total
+ * bytes received within the configured wait interval. Install on nodes at the aggregation layer
+ * of the Smart Grid architecture (iCenS)
  */
 class Aggregator : public App {
 public:
@@ -59,11 +59,16 @@ public:
   virtual void
   OnData(shared_ptr<const Data> contentObject);
 
-  // aggregate payloads from all received interests and forward upstream
+  /**
+   * @brief Aggregate payloads from all received interests and forward upstream
+   */
   void
   ScheduleAggPackets();
 
-  // send aggreagated payloaded interest
+  /**
+   * @brief Actually send aggregated payloaded interest. The payload
+   * size is the total bytes received in the configured time interval
+   */
   void
   SendAggInterest();
 
@@ -190,6 +195,7 @@ private:
                                                                   member<SeqTimeout, Time,
                                                                          &SeqTimeout::time>>>> {
   };
+  /// @endcond
 
   SeqTimeoutsContainer m_seqTimeouts; ///< \brief multi-index for the set of SeqTimeout structs
 

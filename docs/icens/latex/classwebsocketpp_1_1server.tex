@@ -1,0 +1,138 @@
+\hypertarget{classwebsocketpp_1_1server}{}\section{websocketpp\+:\+:server$<$ config $>$ Class Template Reference}
+\label{classwebsocketpp_1_1server}\index{websocketpp\+::server$<$ config $>$@{websocketpp\+::server$<$ config $>$}}
+
+
+Server endpoint role based on the given config.  
+
+
+
+
+{\ttfamily \#include $<$server\+\_\+endpoint.\+hpp$>$}
+
+Inheritance diagram for websocketpp\+:\+:server$<$ config $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.218391cm]{classwebsocketpp_1_1server}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classwebsocketpp_1_1server}{server}$<$ \hyperlink{classconfig}{config} $>$ \hyperlink{classwebsocketpp_1_1server_a265fd3d99141089206f0053c6b842790}{type}\hypertarget{classwebsocketpp_1_1server_a265fd3d99141089206f0053c6b842790}{}\label{classwebsocketpp_1_1server_a265fd3d99141089206f0053c6b842790}
+
+\begin{DoxyCompactList}\small\item\em Type of this endpoint. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1concurrency_1_1none}{config\+::concurrency\+\_\+type} \hyperlink{classwebsocketpp_1_1server_ad389e3f96682b13a16f2bf01568eeabd}{concurrency\+\_\+type}\hypertarget{classwebsocketpp_1_1server_ad389e3f96682b13a16f2bf01568eeabd}{}\label{classwebsocketpp_1_1server_ad389e3f96682b13a16f2bf01568eeabd}
+
+\begin{DoxyCompactList}\small\item\em Type of the endpoint concurrency component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{config\+::transport\+\_\+type} \hyperlink{classwebsocketpp_1_1server_a762a51efebd0c0f87918f0369434f04f}{transport\+\_\+type}\hypertarget{classwebsocketpp_1_1server_a762a51efebd0c0f87918f0369434f04f}{}\label{classwebsocketpp_1_1server_a762a51efebd0c0f87918f0369434f04f}
+
+\begin{DoxyCompactList}\small\item\em Type of the endpoint transport component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1connection}{connection}$<$ \hyperlink{classconfig}{config} $>$ \hyperlink{classwebsocketpp_1_1server_a82d3d94b70a49b2073c9b3378ec7047c}{connection\+\_\+type}\hypertarget{classwebsocketpp_1_1server_a82d3d94b70a49b2073c9b3378ec7047c}{}\label{classwebsocketpp_1_1server_a82d3d94b70a49b2073c9b3378ec7047c}
+
+\begin{DoxyCompactList}\small\item\em Type of the connections this server will create. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1connection_ab910d42e3bde91546183cc54642f32ab}{connection\+\_\+type\+::ptr} \hyperlink{classwebsocketpp_1_1server_a0b93f09ceae3d1dafd2f7b1da759c2ad}{connection\+\_\+ptr}\hypertarget{classwebsocketpp_1_1server_a0b93f09ceae3d1dafd2f7b1da759c2ad}{}\label{classwebsocketpp_1_1server_a0b93f09ceae3d1dafd2f7b1da759c2ad}
+
+\begin{DoxyCompactList}\small\item\em Type of a shared pointer to the connections this server will create. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a75f3102766fd3ba8230e99a2b0e00457}{transport\+\_\+type\+::transport\+\_\+con\+\_\+type} \hyperlink{classwebsocketpp_1_1server_a0515060720d024fb5d0ee7db1b4498a6}{transport\+\_\+con\+\_\+type}\hypertarget{classwebsocketpp_1_1server_a0515060720d024fb5d0ee7db1b4498a6}{}\label{classwebsocketpp_1_1server_a0515060720d024fb5d0ee7db1b4498a6}
+
+\begin{DoxyCompactList}\small\item\em Type of the connection transport component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1connection_aa6f25556860a154c4dacb4dac1dce8e4}{transport\+\_\+con\+\_\+type\+::ptr} \hyperlink{classwebsocketpp_1_1server_af23763a1899c4636299f59f130570aab}{transport\+\_\+con\+\_\+ptr}\hypertarget{classwebsocketpp_1_1server_af23763a1899c4636299f59f130570aab}{}\label{classwebsocketpp_1_1server_af23763a1899c4636299f59f130570aab}
+
+\begin{DoxyCompactList}\small\item\em Type of a shared pointer to the connection transport component. \end{DoxyCompactList}\item 
+typedef \hyperlink{classwebsocketpp_1_1endpoint}{endpoint}$<$ \hyperlink{classwebsocketpp_1_1server_a82d3d94b70a49b2073c9b3378ec7047c}{connection\+\_\+type}, \hyperlink{classconfig}{config} $>$ \hyperlink{classwebsocketpp_1_1server_a40f4d4bb132daf5164ccc290e9dbceb7}{endpoint\+\_\+type}\hypertarget{classwebsocketpp_1_1server_a40f4d4bb132daf5164ccc290e9dbceb7}{}\label{classwebsocketpp_1_1server_a40f4d4bb132daf5164ccc290e9dbceb7}
+
+\begin{DoxyCompactList}\small\item\em Type of the endpoint component of this server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classwebsocketpp_1_1server_a0b93f09ceae3d1dafd2f7b1da759c2ad}{connection\+\_\+ptr} \hyperlink{classwebsocketpp_1_1server_a9146c63ed1afb5bdec29eca52c487226}{get\+\_\+connection} ()
+\begin{DoxyCompactList}\small\item\em Create and initialize a new connection. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1server_a0204a7d444144f7ea5b8bbcf14689fc1}{start\+\_\+accept} (lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Starts the server\textquotesingle{}s async connection acceptance loop (exception free) \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1server_ab61bcdf9fd532fe7ebd934f8d84fdfea}{start\+\_\+accept} ()
+\begin{DoxyCompactList}\small\item\em Starts the server\textquotesingle{}s async connection acceptance loop. \end{DoxyCompactList}\item 
+void \hyperlink{classwebsocketpp_1_1server_aa24feb1c5d2bde47de8b11f5369c54d4}{handle\+\_\+accept} (\hyperlink{classwebsocketpp_1_1server_a0b93f09ceae3d1dafd2f7b1da759c2ad}{connection\+\_\+ptr} con, lib\+::error\+\_\+code const \&ec)\hypertarget{classwebsocketpp_1_1server_aa24feb1c5d2bde47de8b11f5369c54d4}{}\label{classwebsocketpp_1_1server_aa24feb1c5d2bde47de8b11f5369c54d4}
+
+\begin{DoxyCompactList}\small\item\em Handler callback for start\+\_\+accept. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename config$>$\\*
+class websocketpp\+::server$<$ config $>$}
+
+Server endpoint role based on the given config. 
+
+Definition at line 44 of file server\+\_\+endpoint.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{websocketpp\+::server@{websocketpp\+::server}!get\+\_\+connection@{get\+\_\+connection}}
+\index{get\+\_\+connection@{get\+\_\+connection}!websocketpp\+::server@{websocketpp\+::server}}
+\subsubsection[{\texorpdfstring{get\+\_\+connection()}{get\_connection()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config$>$ {\bf connection\+\_\+ptr} {\bf websocketpp\+::server}$<$ {\bf config} $>$\+::get\+\_\+connection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1server_a9146c63ed1afb5bdec29eca52c487226}{}\label{classwebsocketpp_1_1server_a9146c63ed1afb5bdec29eca52c487226}
+
+
+Create and initialize a new connection. 
+
+The connection will be initialized and ready to begin. Call its start() method to begin the processing loop.
+
+Note\+: The connection must either be started or terminated using connection\+::terminate in order to avoid memory leaks.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the new connection. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file server\+\_\+endpoint.\+hpp.
+
+\index{websocketpp\+::server@{websocketpp\+::server}!start\+\_\+accept@{start\+\_\+accept}}
+\index{start\+\_\+accept@{start\+\_\+accept}!websocketpp\+::server@{websocketpp\+::server}}
+\subsubsection[{\texorpdfstring{start\+\_\+accept(lib\+::error\+\_\+code \&ec)}{start\_accept(lib::error\_code \&ec)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config$>$ void {\bf websocketpp\+::server}$<$ {\bf config} $>$\+::start\+\_\+accept (
+\begin{DoxyParamCaption}
+\item[{lib\+::error\+\_\+code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1server_a0204a7d444144f7ea5b8bbcf14689fc1}{}\label{classwebsocketpp_1_1server_a0204a7d444144f7ea5b8bbcf14689fc1}
+
+
+Starts the server\textquotesingle{}s async connection acceptance loop (exception free) 
+
+Initiates the server connection acceptance loop. Must be called after listen. This method will have no effect until the underlying io\+\_\+service starts running. It may be called after the io\+\_\+service is already running.
+
+Refer to documentation for the transport policy you are using for instructions on how to stop this acceptance loop.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em ec} & A status code indicating an error, if any. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file server\+\_\+endpoint.\+hpp.
+
+\index{websocketpp\+::server@{websocketpp\+::server}!start\+\_\+accept@{start\+\_\+accept}}
+\index{start\+\_\+accept@{start\+\_\+accept}!websocketpp\+::server@{websocketpp\+::server}}
+\subsubsection[{\texorpdfstring{start\+\_\+accept()}{start\_accept()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename config$>$ void {\bf websocketpp\+::server}$<$ {\bf config} $>$\+::start\+\_\+accept (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classwebsocketpp_1_1server_ab61bcdf9fd532fe7ebd934f8d84fdfea}{}\label{classwebsocketpp_1_1server_ab61bcdf9fd532fe7ebd934f8d84fdfea}
+
+
+Starts the server\textquotesingle{}s async connection acceptance loop. 
+
+Initiates the server connection acceptance loop. Must be called after listen. This method will have no effect until the underlying io\+\_\+service starts running. It may be called after the io\+\_\+service is already running.
+
+Refer to documentation for the transport policy you are using for instructions on how to stop this acceptance loop. 
+
+Definition at line 128 of file server\+\_\+endpoint.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/websocketpp/websocketpp/roles/server\+\_\+endpoint.\+hpp\end{DoxyCompactItemize}

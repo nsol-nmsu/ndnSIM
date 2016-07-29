@@ -1,0 +1,67 @@
+\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture}{}\section{nfd\+:\+:tests\+:\+:Periodical\+Insertion\+Fixture Class Reference}
+\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture}\index{nfd\+::tests\+::\+Periodical\+Insertion\+Fixture@{nfd\+::tests\+::\+Periodical\+Insertion\+Fixture}}
+
+
+A Fixture that periodically inserts Nonces.  
+
+
+Inheritance diagram for nfd\+:\+:tests\+:\+:Periodical\+Insertion\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1tests_1_1PeriodicalInsertionFixture}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Rate} (size\+\_\+t n\+Nonces\+Per\+Lifetime)\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_af30831f17a5d7f6280912949a1bd4552}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_af30831f17a5d7f6280912949a1bd4552}
+
+\item 
+void {\bfseries add\+Nonce} ()\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a43efa5a145b7cf7ca404c2a8febc1b79}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a43efa5a145b7cf7ca404c2a8febc1b79}
+
+\item 
+void \hyperlink{classnfd_1_1tests_1_1PeriodicalInsertionFixture_aa0ef37879c95d0dbff0b8b3995ba7671}{advance\+Clocks\+By\+Lifetime} (float t)\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_aa0ef37879c95d0dbff0b8b3995ba7671}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_aa0ef37879c95d0dbff0b8b3995ba7671}
+
+\begin{DoxyCompactList}\small\item\em advance clocks by L\+I\+F\+E\+T\+I\+M\+E$\ast$t \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1DeadNonceList}{Dead\+Nonce\+List} {\bfseries dnl}\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a393f4e63d2375818be61672d4f3bba32}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a393f4e63d2375818be61672d4f3bba32}
+
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries name}\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_af77efff15f24fb9e25ee15de14fcc597}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_af77efff15f24fb9e25ee15de14fcc597}
+
+\item 
+uint32\+\_\+t {\bfseries last\+Nonce}\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_ae53d93955dba74c4a10e60d7594e42d8}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_ae53d93955dba74c4a10e60d7594e42d8}
+
+\item 
+size\+\_\+t {\bfseries add\+Nonce\+Batch}\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_afeda23eac63ae670efb88b5121802c54}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_afeda23eac63ae670efb88b5121802c54}
+
+\item 
+time\+::nanoseconds {\bfseries add\+Nonce\+Interval}\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a8ad4d0c6442f5273bde3956c85cb7a3c}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a8ad4d0c6442f5273bde3956c85cb7a3c}
+
+\item 
+time\+::nanoseconds {\bfseries time\+Unit}\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_aa6b770e7b7d40a95c29439b45534281b}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_aa6b770e7b7d40a95c29439b45534281b}
+
+\item 
+\hyperlink{classnfd_1_1scheduler_1_1ScopedEventId}{scheduler\+::\+Scoped\+Event\+Id} {\bfseries add\+Nonce\+Event}\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a846c58133f10181b533049670ec72ecd}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a846c58133f10181b533049670ec72ecd}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const time\+::nanoseconds {\bfseries L\+I\+F\+E\+T\+I\+ME} = time\+::milliseconds(200)\hypertarget{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a4a2acf18f7e72bd6f4e2c2a4a2955879}{}\label{classnfd_1_1tests_1_1PeriodicalInsertionFixture_a4a2acf18f7e72bd6f4e2c2a4a2955879}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Fixture that periodically inserts Nonces. 
+
+Definition at line 59 of file dead-\/nonce-\/list.\+t.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/table/dead-\/nonce-\/list.\+t.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\hypertarget{classnfd_1_1UdpFace}{}\section{nfd\+:\+:Udp\+Face Class Reference}
+\label{classnfd_1_1UdpFace}\index{nfd\+::\+Udp\+Face@{nfd\+::\+Udp\+Face}}
+
+
+Implementation of \hyperlink{classnfd_1_1Face}{Face} abstraction that uses unicast U\+DP as underlying transport mechanism.  
+
+
+
+
+{\ttfamily \#include $<$udp-\/face.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Udp\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classnfd_1_1UdpFace}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Udp\+Face} (const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&remote\+Uri, const \hyperlink{classndn_1_1util_1_1FaceUri}{Face\+Uri} \&local\+Uri, protocol\+::socket socket, \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} persistency, const time\+::seconds \&idle\+Timeout)\hypertarget{classnfd_1_1UdpFace_a5f0e13cf1083f9a937960a7b2bef8a41}{}\label{classnfd_1_1UdpFace_a5f0e13cf1083f9a937960a7b2bef8a41}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1FaceStatus}{ndn\+::nfd\+::\+Face\+Status} \hyperlink{classnfd_1_1UdpFace_ad914a7f6b37b7da25a5246e23461b402}{get\+Face\+Status} () const D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Udp\+Channel}\hypertarget{classnfd_1_1UdpFace_a348056e43e76dd8e7f2b8e093a08b7e9}{}\label{classnfd_1_1UdpFace_a348056e43e76dd8e7f2b8e093a08b7e9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of \hyperlink{classnfd_1_1Face}{Face} abstraction that uses unicast U\+DP as underlying transport mechanism. 
+
+Definition at line 38 of file udp-\/face.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Udp\+Face@{nfd\+::\+Udp\+Face}!get\+Face\+Status@{get\+Face\+Status}}
+\index{get\+Face\+Status@{get\+Face\+Status}!nfd\+::\+Udp\+Face@{nfd\+::\+Udp\+Face}}
+\subsubsection[{\texorpdfstring{get\+Face\+Status() const D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{getFaceStatus() const DECL\_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ndn\+::nfd\+::\+Face\+Status} nfd\+::\+Udp\+Face\+::get\+Face\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classnfd_1_1UdpFace_ad914a7f6b37b7da25a5246e23461b402}{}\label{classnfd_1_1UdpFace_ad914a7f6b37b7da25a5246e23461b402}
+\begin{DoxyReturn}{Returns}
+Face\+Status data structure filled with the current \hyperlink{classnfd_1_1Face}{Face} status 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classnfd_1_1Face_a7ee5b5181e2e0c11b77d9b051b17755d}{nfd\+::\+Face}.
+
+
+
+Definition at line 75 of file udp-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/udp-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/face/udp-\/face.\+cpp\end{DoxyCompactItemize}

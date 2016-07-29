@@ -1,0 +1,141 @@
+\hypertarget{classndn_1_1TcpTransport}{}\section{ndn\+:\+:Tcp\+Transport Class Reference}
+\label{classndn_1_1TcpTransport}\index{ndn\+::\+Tcp\+Transport@{ndn\+::\+Tcp\+Transport}}
+Inheritance diagram for ndn\+:\+:Tcp\+Transport\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1TcpTransport}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Tcp\+Transport} (const std\+::string \&host, const std\+::string \&port=\char`\"{}6363\char`\"{})\hypertarget{classndn_1_1TcpTransport_a1f88e912c3ced924c37390d25ef7d8a8}{}\label{classndn_1_1TcpTransport_a1f88e912c3ced924c37390d25ef7d8a8}
+
+\item 
+virtual void \hyperlink{classndn_1_1TcpTransport_ad8f8e670980297f940d9b73b4d0ae0df}{connect} (boost\+::asio\+::io\+\_\+service \&io\+Service, const Receive\+Callback \&receive\+Callback)
+\begin{DoxyCompactList}\small\item\em Connect transport. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1TcpTransport_a0e692d8e563726c20166b11a664aeb35}{close} ()\hypertarget{classndn_1_1TcpTransport_a0e692d8e563726c20166b11a664aeb35}{}\label{classndn_1_1TcpTransport_a0e692d8e563726c20166b11a664aeb35}
+
+\begin{DoxyCompactList}\small\item\em Close the connection. \end{DoxyCompactList}\item 
+virtual void {\bfseries pause} ()\hypertarget{classndn_1_1TcpTransport_a8de59ccdd068a4c21449ac5d6a9644d9}{}\label{classndn_1_1TcpTransport_a8de59ccdd068a4c21449ac5d6a9644d9}
+
+\item 
+virtual void {\bfseries resume} ()\hypertarget{classndn_1_1TcpTransport_af5e251ffe96f23c025a8b07553e3cea1}{}\label{classndn_1_1TcpTransport_af5e251ffe96f23c025a8b07553e3cea1}
+
+\item 
+virtual void \hyperlink{classndn_1_1TcpTransport_a0df4d53a96c59f51114e4edfafda1230}{send} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Send block of data from. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1TcpTransport_ae2143d6783befe974adbc0372fcc6849}{send} (const \hyperlink{classndn_1_1Block}{Block} \&header, const \hyperlink{classndn_1_1Block}{Block} \&payload)
+\begin{DoxyCompactList}\small\item\em Alternative version of sending data, applying scatter/gather I/O concept. \end{DoxyCompactList}\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE std\+::string {\bfseries get\+Default\+Socket\+Host\+And\+Port} (const \hyperlink{classndn_1_1ConfigFile}{Config\+File} \&\hyperlink{classconfig}{config})\hypertarget{classndn_1_1TcpTransport_a079c75bb67bb406ec5a0deaaa1919c33}{}\label{classndn_1_1TcpTransport_a079c75bb67bb406ec5a0deaaa1919c33}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static shared\+\_\+ptr$<$ \hyperlink{classndn_1_1TcpTransport}{Tcp\+Transport} $>$ {\bfseries create} (const \hyperlink{classndn_1_1ConfigFile}{Config\+File} \&\hyperlink{classconfig}{config})\hypertarget{classndn_1_1TcpTransport_a529cd5f8106370fd0b7af8cda2b4e347}{}\label{classndn_1_1TcpTransport_a529cd5f8106370fd0b7af8cda2b4e347}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+I\+V\+A\+TE {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: static std\+::pair$<$std\+::string\hypertarget{classndn_1_1TcpTransport_ac879855f81db3819c5e34243b5e506bd}{}\label{classndn_1_1TcpTransport_ac879855f81db3819c5e34243b5e506bd}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Stream\+Transport\+Impl$<$ Tcp\+Transport, boost\+::asio\+::ip\+::tcp $>$}\hypertarget{classndn_1_1TcpTransport_afbc05a97fd2433bffc22769036fe690e}{}\label{classndn_1_1TcpTransport_afbc05a97fd2433bffc22769036fe690e}
+
+\item 
+class {\bfseries Stream\+Transport\+With\+Resolver\+Impl$<$ Tcp\+Transport, boost\+::asio\+::ip\+::tcp $>$}\hypertarget{classndn_1_1TcpTransport_a43cac047bedaecbf33a6e796903b9525}{}\label{classndn_1_1TcpTransport_a43cac047bedaecbf33a6e796903b9525}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 39 of file tcp-\/transport.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Tcp\+Transport@{ndn\+::\+Tcp\+Transport}!connect@{connect}}
+\index{connect@{connect}!ndn\+::\+Tcp\+Transport@{ndn\+::\+Tcp\+Transport}}
+\subsubsection[{\texorpdfstring{connect(boost\+::asio\+::io\+\_\+service \&io\+Service, const Receive\+Callback \&receive\+Callback)}{connect(boost::asio::io\_service \&ioService, const ReceiveCallback \&receiveCallback)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Tcp\+Transport\+::connect (
+\begin{DoxyParamCaption}
+\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service, }
+\item[{const Receive\+Callback \&}]{receive\+Callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1TcpTransport_ad8f8e670980297f940d9b73b4d0ae0df}{}\label{classndn_1_1TcpTransport_ad8f8e670980297f940d9b73b4d0ae0df}
+
+
+Connect transport. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em boost\+::system\+::system\+\_\+error} & if connection cannot be established \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \hyperlink{classndn_1_1Transport_ad0b3158586d56cea4d434f099736a949}{ndn\+::\+Transport}.
+
+
+
+Definition at line 80 of file tcp-\/transport.\+cpp.
+
+\index{ndn\+::\+Tcp\+Transport@{ndn\+::\+Tcp\+Transport}!send@{send}}
+\index{send@{send}!ndn\+::\+Tcp\+Transport@{ndn\+::\+Tcp\+Transport}}
+\subsubsection[{\texorpdfstring{send(const Block \&wire)}{send(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Tcp\+Transport\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1TcpTransport_a0df4d53a96c59f51114e4edfafda1230}{}\label{classndn_1_1TcpTransport_a0df4d53a96c59f51114e4edfafda1230}
+
+
+Send block of data from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wire} & through the transport\\
+\hline
+{\em wire} & A block of data to send \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Transport_ac24f9ec11dc2ac4569e5504eebd5cfa7}{ndn\+::\+Transport}.
+
+
+
+Definition at line 94 of file tcp-\/transport.\+cpp.
+
+\index{ndn\+::\+Tcp\+Transport@{ndn\+::\+Tcp\+Transport}!send@{send}}
+\index{send@{send}!ndn\+::\+Tcp\+Transport@{ndn\+::\+Tcp\+Transport}}
+\subsubsection[{\texorpdfstring{send(const Block \&header, const Block \&payload)}{send(const Block \&header, const Block \&payload)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Tcp\+Transport\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{header, }
+\item[{const {\bf Block} \&}]{payload}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1TcpTransport_ae2143d6783befe974adbc0372fcc6849}{}\label{classndn_1_1TcpTransport_ae2143d6783befe974adbc0372fcc6849}
+
+
+Alternative version of sending data, applying scatter/gather I/O concept. 
+
+Two non-\/consecutive memory blocks will be send out together, e.\+g., as part of the same message in datagram-\/oriented transports. 
+
+Implements \hyperlink{classndn_1_1Transport_aa27593978570e95a5793b2af0dac3568}{ndn\+::\+Transport}.
+
+
+
+Definition at line 101 of file tcp-\/transport.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/transport/tcp-\/transport.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/transport/tcp-\/transport.\+cpp\end{DoxyCompactItemize}

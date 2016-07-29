@@ -1,0 +1,326 @@
+\hypertarget{classnfd_1_1NameTree}{}\section{nfd\+:\+:Name\+Tree Class Reference}
+\label{classnfd_1_1NameTree}\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+
+
+Class Name Tree.  
+
+
+
+
+{\ttfamily \#include $<$name-\/tree.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Name\+Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1NameTree}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnfd_1_1NameTree_1_1const__iterator}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Iterator\+Type} \{ {\bfseries F\+U\+L\+L\+\_\+\+E\+N\+U\+M\+E\+R\+A\+T\+E\+\_\+\+T\+Y\+PE}, 
+{\bfseries P\+A\+R\+T\+I\+A\+L\+\_\+\+E\+N\+U\+M\+E\+R\+A\+T\+E\+\_\+\+T\+Y\+PE}, 
+{\bfseries F\+I\+N\+D\+\_\+\+A\+L\+L\+\_\+\+M\+A\+T\+C\+H\+E\+S\+\_\+\+T\+Y\+PE}
+ \}\hypertarget{classnfd_1_1NameTree_a574472390f3fbb72d7165bdde1179132}{}\label{classnfd_1_1NameTree_a574472390f3fbb72d7165bdde1179132}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Name\+Tree} (size\+\_\+t n\+Buckets=1024)\hypertarget{classnfd_1_1NameTree_a4538dc8de85dc2babeedc180e7e35d35}{}\label{classnfd_1_1NameTree_a4538dc8de85dc2babeedc180e7e35d35}
+
+\item 
+size\+\_\+t \hyperlink{classnfd_1_1NameTree_a63c93c095960a049891c366c00e20f9c}{size} () const\hypertarget{classnfd_1_1NameTree_a63c93c095960a049891c366c00e20f9c}{}\label{classnfd_1_1NameTree_a63c93c095960a049891c366c00e20f9c}
+
+\begin{DoxyCompactList}\small\item\em Get the number of occupied entries in the Name Tree. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classnfd_1_1NameTree_ace51ed4f02b30c819c27ea9e7a0e6e3d}{get\+N\+Buckets} () const
+\begin{DoxyCompactList}\small\item\em Get the number of buckets in the Name Tree (N\+P\+HT) \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1NameTree_a9adcf39d2d2a37ce28b6f6ca3488abfa}{dump} (std\+::ostream \&output) const\hypertarget{classnfd_1_1NameTree_a9adcf39d2d2a37ce28b6f6ca3488abfa}{}\label{classnfd_1_1NameTree_a9adcf39d2d2a37ce28b6f6ca3488abfa}
+
+\begin{DoxyCompactList}\small\item\em Dump all the information stored in the Name Tree for debugging. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ \hyperlink{classnfd_1_1NameTree_a166ca6cd5a5f52966b577f78e63aba5f}{lookup} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)
+\begin{DoxyCompactList}\small\item\em Look for the Name Tree Entry that contains this name prefix. \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1NameTree_a50c347f2e99cc80129c4c3480cdd262e}{erase\+Entry\+If\+Empty} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ entry)
+\begin{DoxyCompactList}\small\item\em Delete a Name Tree Entry if this entry is empty. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ \hyperlink{classnfd_1_1NameTree_a710d1559c2f536f56254a39cd7fe8251}{get} (const \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} \&fib\+Entry) const\hypertarget{classnfd_1_1NameTree_a710d1559c2f536f56254a39cd7fe8251}{}\label{classnfd_1_1NameTree_a710d1559c2f536f56254a39cd7fe8251}
+
+\begin{DoxyCompactList}\small\item\em get \hyperlink{classnfd_1_1NameTree}{Name\+Tree} entry from attached F\+IB entry \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ \hyperlink{classnfd_1_1NameTree_a97c31ea45ea8660d556bf50ef9a9641c}{get} (const \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry) const\hypertarget{classnfd_1_1NameTree_a97c31ea45ea8660d556bf50ef9a9641c}{}\label{classnfd_1_1NameTree_a97c31ea45ea8660d556bf50ef9a9641c}
+
+\begin{DoxyCompactList}\small\item\em get \hyperlink{classnfd_1_1NameTree}{Name\+Tree} entry from attached P\+IT entry \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ \hyperlink{classnfd_1_1NameTree_a56bb59b46a62a82960676eb44d38367a}{get} (const \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} \&measurements\+Entry) const\hypertarget{classnfd_1_1NameTree_a56bb59b46a62a82960676eb44d38367a}{}\label{classnfd_1_1NameTree_a56bb59b46a62a82960676eb44d38367a}
+
+\begin{DoxyCompactList}\small\item\em get \hyperlink{classnfd_1_1NameTree}{Name\+Tree} entry from attached \hyperlink{classnfd_1_1Measurements}{Measurements} entry \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ \hyperlink{classnfd_1_1NameTree_ae9677eece1035045d2a8d2ef121f7115}{get} (const \hyperlink{classnfd_1_1strategy__choice_1_1Entry}{strategy\+\_\+choice\+::\+Entry} \&strategy\+Choice\+Entry) const\hypertarget{classnfd_1_1NameTree_ae9677eece1035045d2a8d2ef121f7115}{}\label{classnfd_1_1NameTree_ae9677eece1035045d2a8d2ef121f7115}
+
+\begin{DoxyCompactList}\small\item\em get \hyperlink{classnfd_1_1NameTree}{Name\+Tree} entry from attached \hyperlink{classnfd_1_1StrategyChoice}{Strategy\+Choice} entry \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ \hyperlink{classnfd_1_1NameTree_a5dae86cf528e6b16650fe486f028df66}{find\+Exact\+Match} (const \hyperlink{classndn_1_1Name}{Name} \&prefix) const
+\begin{DoxyCompactList}\small\item\em Exact match lookup for the given name prefix. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ \hyperlink{classnfd_1_1NameTree_a153fa29e38116ec87b1f7862a2009bec}{find\+Longest\+Prefix\+Match} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const name\+\_\+tree\+::\+Entry\+Selector \&entry\+Selector=\hyperlink{structnfd_1_1name__tree_1_1AnyEntry}{name\+\_\+tree\+::\+Any\+Entry}()) const
+\begin{DoxyCompactList}\small\item\em Longest prefix matching for the given name. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ {\bfseries find\+Longest\+Prefix\+Match} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1name__tree_1_1Entry}{name\+\_\+tree\+::\+Entry} $>$ entry, const name\+\_\+tree\+::\+Entry\+Selector \&entry\+Selector=\hyperlink{structnfd_1_1name__tree_1_1AnyEntry}{name\+\_\+tree\+::\+Any\+Entry}()) const\hypertarget{classnfd_1_1NameTree_a42b0a800b45adea4187ece88879bd519}{}\label{classnfd_1_1NameTree_a42b0a800b45adea4187ece88879bd519}
+
+\item 
+boost\+::iterator\+\_\+range$<$ \hyperlink{classnfd_1_1NameTree_1_1const__iterator}{const\+\_\+iterator} $>$ \hyperlink{classnfd_1_1NameTree_a75fc1eb178c45c28fff7beef6004642a}{find\+All\+Matches} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const name\+\_\+tree\+::\+Entry\+Selector \&entry\+Selector=\hyperlink{structnfd_1_1name__tree_1_1AnyEntry}{name\+\_\+tree\+::\+Any\+Entry}()) const
+\begin{DoxyCompactList}\small\item\em Enumerate all the name prefixes that satisfy the prefix and entry\+Selector. \end{DoxyCompactList}\item 
+boost\+::iterator\+\_\+range$<$ \hyperlink{classnfd_1_1NameTree_1_1const__iterator}{const\+\_\+iterator} $>$ \hyperlink{classnfd_1_1NameTree_a16fe7c43112b4a4d4ebcdfe506da1c9f}{full\+Enumerate} (const name\+\_\+tree\+::\+Entry\+Selector \&entry\+Selector=\hyperlink{structnfd_1_1name__tree_1_1AnyEntry}{name\+\_\+tree\+::\+Any\+Entry}()) const
+\begin{DoxyCompactList}\small\item\em Enumerate all entries, optionally filtered by an Entry\+Selector. \end{DoxyCompactList}\item 
+boost\+::iterator\+\_\+range$<$ \hyperlink{classnfd_1_1NameTree_1_1const__iterator}{const\+\_\+iterator} $>$ \hyperlink{classnfd_1_1NameTree_a96dc37902fe104b08bd8a27f15302acd}{partial\+Enumerate} (const \hyperlink{classndn_1_1Name}{Name} \&prefix, const name\+\_\+tree\+::\+Entry\+Sub\+Tree\+Selector \&entry\+Sub\+Tree\+Selector=\hyperlink{structnfd_1_1name__tree_1_1AnyEntrySubTree}{name\+\_\+tree\+::\+Any\+Entry\+Sub\+Tree}()) const
+\begin{DoxyCompactList}\small\item\em Enumerate all entries under a prefix, optionally filtered by an Entry\+Sub\+Tree\+Selector. \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1NameTree_1_1const__iterator}{const\+\_\+iterator} \hyperlink{classnfd_1_1NameTree_a6e3e53b6941440e161fa77fbf9ac8eb1}{begin} () const
+\begin{DoxyCompactList}\small\item\em Get an iterator pointing to the first \hyperlink{classnfd_1_1NameTree}{Name\+Tree} entry. \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1NameTree_1_1const__iterator}{const\+\_\+iterator} \hyperlink{classnfd_1_1NameTree_a8f1e47eae802d18bbae9882f541f8fb5}{end} () const
+\begin{DoxyCompactList}\small\item\em Get an iterator referring to the past-\/the-\/end F\+IB entry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class Name Tree. 
+
+Definition at line 79 of file name-\/tree.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!begin@{begin}}
+\index{begin@{begin}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{begin() const}{begin() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name\+Tree\+::const\+\_\+iterator} nfd\+::\+Name\+Tree\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1NameTree_a6e3e53b6941440e161fa77fbf9ac8eb1}{}\label{classnfd_1_1NameTree_a6e3e53b6941440e161fa77fbf9ac8eb1}
+
+
+Get an iterator pointing to the first \hyperlink{classnfd_1_1NameTree}{Name\+Tree} entry. 
+
+\begin{DoxyNote}{Note}
+Iteration order is implementation-\/specific and is undefined 
+
+The returned iterator may get invalidated when \hyperlink{classnfd_1_1NameTree}{Name\+Tree} is modified 
+\end{DoxyNote}
+
+
+Definition at line 372 of file name-\/tree.\+hpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!end@{end}}
+\index{end@{end}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{end() const}{end() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name\+Tree\+::const\+\_\+iterator} nfd\+::\+Name\+Tree\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1NameTree_a8f1e47eae802d18bbae9882f541f8fb5}{}\label{classnfd_1_1NameTree_a8f1e47eae802d18bbae9882f541f8fb5}
+
+
+Get an iterator referring to the past-\/the-\/end F\+IB entry. 
+
+\begin{DoxyNote}{Note}
+Iteration order is implementation-\/specific and is undefined 
+
+The returned iterator may get invalidated when \hyperlink{classnfd_1_1NameTree}{Name\+Tree} is modified 
+\end{DoxyNote}
+
+
+Definition at line 378 of file name-\/tree.\+hpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!erase\+Entry\+If\+Empty@{erase\+Entry\+If\+Empty}}
+\index{erase\+Entry\+If\+Empty@{erase\+Entry\+If\+Empty}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{erase\+Entry\+If\+Empty(shared\+\_\+ptr$<$ name\+\_\+tree\+::\+Entry $>$ entry)}{eraseEntryIfEmpty(shared\_ptr< name\_tree::Entry > entry)}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::\+Name\+Tree\+::erase\+Entry\+If\+Empty (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ {\bf name\+\_\+tree\+::\+Entry} $>$}]{entry}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1NameTree_a50c347f2e99cc80129c4c3480cdd262e}{}\label{classnfd_1_1NameTree_a50c347f2e99cc80129c4c3480cdd262e}
+
+
+Delete a Name Tree Entry if this entry is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & The entry to be deleted if empty. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function must be called after a table entry is detached from Name Tree entry. The function deletes a Name Tree entry if nothing is attached to it and it has no children, then repeats the same process on its ancestors. 
+
+Existing iterators, except those pointing to deleted entries, are unaffected. 
+\end{DoxyNote}
+
+
+Definition at line 327 of file name-\/tree.\+cpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!find\+All\+Matches@{find\+All\+Matches}}
+\index{find\+All\+Matches@{find\+All\+Matches}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{find\+All\+Matches(const Name \&prefix, const name\+\_\+tree\+::\+Entry\+Selector \&entry\+Selector=name\+\_\+tree\+::\+Any\+Entry()) const}{findAllMatches(const Name \&prefix, const name\_tree::EntrySelector \&entrySelector=name\_tree::AnyEntry()) const}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::iterator\+\_\+range$<$ {\bf Name\+Tree\+::const\+\_\+iterator} $>$ nfd\+::\+Name\+Tree\+::find\+All\+Matches (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const name\+\_\+tree\+::\+Entry\+Selector \&}]{entry\+Selector = {\ttfamily {\bf name\+\_\+tree\+::\+Any\+Entry}()}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1NameTree_a75fc1eb178c45c28fff7beef6004642a}{}\label{classnfd_1_1NameTree_a75fc1eb178c45c28fff7beef6004642a}
+
+
+Enumerate all the name prefixes that satisfy the prefix and entry\+Selector. 
+
+\begin{DoxyReturn}{Returns}
+an unspecified type that have .\hyperlink{classnfd_1_1NameTree_a6e3e53b6941440e161fa77fbf9ac8eb1}{begin()} and .\hyperlink{classnfd_1_1NameTree_a8f1e47eae802d18bbae9882f541f8fb5}{end()} methods and is usable with range-\/based for
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{auto}&& allMatches = nt.findAllMatches(Name(\textcolor{stringliteral}{"/A/B/C"}));
+\textcolor{keywordflow}{for} (\textcolor{keyword}{const} name\_tree::Entry& nte : allMatches) \{
+  ...
+\}
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+Iteration order is implementation-\/specific and is undefined 
+
+The returned iterator may get invalidated when \hyperlink{classnfd_1_1NameTree}{Name\+Tree} is modified 
+\end{DoxyNote}
+
+
+Definition at line 454 of file name-\/tree.\+cpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!find\+Exact\+Match@{find\+Exact\+Match}}
+\index{find\+Exact\+Match@{find\+Exact\+Match}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{find\+Exact\+Match(const Name \&prefix) const}{findExactMatch(const Name \&prefix) const}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf name\+\_\+tree\+::\+Entry} $>$ nfd\+::\+Name\+Tree\+::find\+Exact\+Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1NameTree_a5dae86cf528e6b16650fe486f028df66}{}\label{classnfd_1_1NameTree_a5dae86cf528e6b16650fe486f028df66}
+
+
+Exact match lookup for the given name prefix. 
+
+\begin{DoxyReturn}{Returns}
+a null shared\+\_\+ptr if this prefix is not found; otherwise return the Name Tree Entry address 
+\end{DoxyReturn}
+
+
+Definition at line 243 of file name-\/tree.\+cpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!find\+Longest\+Prefix\+Match@{find\+Longest\+Prefix\+Match}}
+\index{find\+Longest\+Prefix\+Match@{find\+Longest\+Prefix\+Match}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{find\+Longest\+Prefix\+Match(const Name \&prefix, const name\+\_\+tree\+::\+Entry\+Selector \&entry\+Selector=name\+\_\+tree\+::\+Any\+Entry()) const}{findLongestPrefixMatch(const Name \&prefix, const name\_tree::EntrySelector \&entrySelector=name\_tree::AnyEntry()) const}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf name\+\_\+tree\+::\+Entry} $>$ nfd\+::\+Name\+Tree\+::find\+Longest\+Prefix\+Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const name\+\_\+tree\+::\+Entry\+Selector \&}]{entry\+Selector = {\ttfamily {\bf name\+\_\+tree\+::\+Any\+Entry}()}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1NameTree_a153fa29e38116ec87b1f7862a2009bec}{}\label{classnfd_1_1NameTree_a153fa29e38116ec87b1f7862a2009bec}
+
+
+Longest prefix matching for the given name. 
+
+Starts from the full name string, reduce the number of name component by one each time, until an Entry is found. 
+
+Definition at line 275 of file name-\/tree.\+cpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!full\+Enumerate@{full\+Enumerate}}
+\index{full\+Enumerate@{full\+Enumerate}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{full\+Enumerate(const name\+\_\+tree\+::\+Entry\+Selector \&entry\+Selector=name\+\_\+tree\+::\+Any\+Entry()) const}{fullEnumerate(const name\_tree::EntrySelector \&entrySelector=name\_tree::AnyEntry()) const}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::iterator\+\_\+range$<$ {\bf Name\+Tree\+::const\+\_\+iterator} $>$ nfd\+::\+Name\+Tree\+::full\+Enumerate (
+\begin{DoxyParamCaption}
+\item[{const name\+\_\+tree\+::\+Entry\+Selector \&}]{entry\+Selector = {\ttfamily {\bf name\+\_\+tree\+::\+Any\+Entry}()}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1NameTree_a16fe7c43112b4a4d4ebcdfe506da1c9f}{}\label{classnfd_1_1NameTree_a16fe7c43112b4a4d4ebcdfe506da1c9f}
+
+
+Enumerate all entries, optionally filtered by an Entry\+Selector. 
+
+\begin{DoxyReturn}{Returns}
+an unspecified type that have .\hyperlink{classnfd_1_1NameTree_a6e3e53b6941440e161fa77fbf9ac8eb1}{begin()} and .\hyperlink{classnfd_1_1NameTree_a8f1e47eae802d18bbae9882f541f8fb5}{end()} methods and is usable with range-\/based for
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{auto}&& enumerable = nt.fullEnumerate();
+\textcolor{keywordflow}{for} (\textcolor{keyword}{const} name\_tree::Entry& nte : enumerable) \{
+  ...
+\}
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+Iteration order is implementation-\/specific and is undefined 
+
+The returned iterator may get invalidated when \hyperlink{classnfd_1_1NameTree}{Name\+Tree} is modified 
+\end{DoxyNote}
+
+
+Definition at line 406 of file name-\/tree.\+cpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!get\+N\+Buckets@{get\+N\+Buckets}}
+\index{get\+N\+Buckets@{get\+N\+Buckets}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{get\+N\+Buckets() const}{getNBuckets() const}}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t nfd\+::\+Name\+Tree\+::get\+N\+Buckets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1NameTree_ace51ed4f02b30c819c27ea9e7a0e6e3d}{}\label{classnfd_1_1NameTree_ace51ed4f02b30c819c27ea9e7a0e6e3d}
+
+
+Get the number of buckets in the Name Tree (N\+P\+HT) 
+
+The number of buckets is the one that used to create the hash table, i.\+e., m\+\_\+n\+Buckets. 
+
+Definition at line 342 of file name-\/tree.\+hpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!lookup@{lookup}}
+\index{lookup@{lookup}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{lookup(const Name \&prefix)}{lookup(const Name \&prefix)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf name\+\_\+tree\+::\+Entry} $>$ nfd\+::\+Name\+Tree\+::lookup (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1NameTree_a166ca6cd5a5f52966b577f78e63aba5f}{}\label{classnfd_1_1NameTree_a166ca6cd5a5f52966b577f78e63aba5f}
+
+
+Look for the Name Tree Entry that contains this name prefix. 
+
+Starts from the shortest name prefix, and then increase the number of name components by one each time. All non-\/existing Name Tree Entries will be created. 
+\begin{DoxyParams}{Parameters}
+{\em prefix} & The querying name prefix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the Name Tree Entry that contains this full name prefix. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Existing iterators are unaffected. 
+\end{DoxyNote}
+
+
+Definition at line 205 of file name-\/tree.\+cpp.
+
+\index{nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}!partial\+Enumerate@{partial\+Enumerate}}
+\index{partial\+Enumerate@{partial\+Enumerate}!nfd\+::\+Name\+Tree@{nfd\+::\+Name\+Tree}}
+\subsubsection[{\texorpdfstring{partial\+Enumerate(const Name \&prefix, const name\+\_\+tree\+::\+Entry\+Sub\+Tree\+Selector \&entry\+Sub\+Tree\+Selector=name\+\_\+tree\+::\+Any\+Entry\+Sub\+Tree()) const}{partialEnumerate(const Name \&prefix, const name\_tree::EntrySubTreeSelector \&entrySubTreeSelector=name\_tree::AnyEntrySubTree()) const}}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::iterator\+\_\+range$<$ {\bf Name\+Tree\+::const\+\_\+iterator} $>$ nfd\+::\+Name\+Tree\+::partial\+Enumerate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{const name\+\_\+tree\+::\+Entry\+Sub\+Tree\+Selector \&}]{entry\+Sub\+Tree\+Selector = {\ttfamily {\bf name\+\_\+tree\+::\+Any\+Entry\+Sub\+Tree}()}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1NameTree_a96dc37902fe104b08bd8a27f15302acd}{}\label{classnfd_1_1NameTree_a96dc37902fe104b08bd8a27f15302acd}
+
+
+Enumerate all entries under a prefix, optionally filtered by an Entry\+Sub\+Tree\+Selector. 
+
+\begin{DoxyReturn}{Returns}
+an unspecified type that have .\hyperlink{classnfd_1_1NameTree_a6e3e53b6941440e161fa77fbf9ac8eb1}{begin()} and .\hyperlink{classnfd_1_1NameTree_a8f1e47eae802d18bbae9882f541f8fb5}{end()} methods and is usable with range-\/based for
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{auto}&& enumerable = nt.partialEnumerate(Name(\textcolor{stringliteral}{"/A/B/C"}));
+\textcolor{keywordflow}{for} (\textcolor{keyword}{const} name\_tree::Entry& nte : enumerable) \{
+  ...
+\}
+\end{DoxyCode}
+ \begin{DoxyNote}{Note}
+Iteration order is implementation-\/specific and is undefined 
+
+The returned iterator may get invalidated when \hyperlink{classnfd_1_1NameTree}{Name\+Tree} is modified 
+\end{DoxyNote}
+
+
+Definition at line 425 of file name-\/tree.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/name-\/tree.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/name-\/tree.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,277 @@
+\hypertarget{classnfd_1_1rib_1_1RibEntry}{}\section{nfd\+:\+:rib\+:\+:Rib\+Entry Class Reference}
+\label{classnfd_1_1rib_1_1RibEntry}\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+
+
+represents a R\+IB entry, which contains one or more Routes with the same prefix  
+
+
+
+
+{\ttfamily \#include $<$rib-\/entry.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:rib\+:\+:Rib\+Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1rib_1_1RibEntry}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list$<$ \hyperlink{classnfd_1_1rib_1_1Route}{Route} $>$ {\bfseries Route\+List}\hypertarget{classnfd_1_1rib_1_1RibEntry_aca6d6b237253217607305566de6d5e3c}{}\label{classnfd_1_1rib_1_1RibEntry_aca6d6b237253217607305566de6d5e3c}
+
+\item 
+typedef Route\+List\+::iterator {\bfseries iterator}\hypertarget{classnfd_1_1rib_1_1RibEntry_aedefd0da57d4eb19f5b8245792c6df71}{}\label{classnfd_1_1rib_1_1RibEntry_aedefd0da57d4eb19f5b8245792c6df71}
+
+\item 
+typedef Route\+List\+::const\+\_\+iterator {\bfseries const\+\_\+iterator}\hypertarget{classnfd_1_1rib_1_1RibEntry_accf7e4282b566a2804cbb067407d4713}{}\label{classnfd_1_1rib_1_1RibEntry_accf7e4282b566a2804cbb067407d4713}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries set\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&prefix)\hypertarget{classnfd_1_1rib_1_1RibEntry_ad2097ce5f2624a786c3e0cc93d3d5190}{}\label{classnfd_1_1rib_1_1RibEntry_ad2097ce5f2624a786c3e0cc93d3d5190}
+
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& {\bfseries get\+Name} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_a80b19ad3f4d3fed0579a400a741875f3}{}\label{classnfd_1_1rib_1_1RibEntry_a80b19ad3f4d3fed0579a400a741875f3}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ {\bfseries get\+Parent} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_a2b75e8fed9d754db8f506258457da0ac}{}\label{classnfd_1_1rib_1_1RibEntry_a2b75e8fed9d754db8f506258457da0ac}
+
+\item 
+bool {\bfseries has\+Parent} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_a903a3732fffe83669e103d2dd1492758}{}\label{classnfd_1_1rib_1_1RibEntry_a903a3732fffe83669e103d2dd1492758}
+
+\item 
+void {\bfseries add\+Child} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ child)\hypertarget{classnfd_1_1rib_1_1RibEntry_aa97ca7a3cdf7e0b385d1fc7e68990495}{}\label{classnfd_1_1rib_1_1RibEntry_aa97ca7a3cdf7e0b385d1fc7e68990495}
+
+\item 
+void {\bfseries remove\+Child} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ child)\hypertarget{classnfd_1_1rib_1_1RibEntry_ab7cfe352932611e58690d26bfa4d2c5c}{}\label{classnfd_1_1rib_1_1RibEntry_ab7cfe352932611e58690d26bfa4d2c5c}
+
+\item 
+const std\+::list$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1rib_1_1RibEntry}{Rib\+Entry} $>$ $>$ \& {\bfseries get\+Children} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_a85f52774be9360b7a6352847c249ef22}{}\label{classnfd_1_1rib_1_1RibEntry_a85f52774be9360b7a6352847c249ef22}
+
+\item 
+bool {\bfseries has\+Children} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_aa352e8ed67c6f72b9a7b5fdef8de9a5f}{}\label{classnfd_1_1rib_1_1RibEntry_aa352e8ed67c6f72b9a7b5fdef8de9a5f}
+
+\item 
+bool \hyperlink{classnfd_1_1rib_1_1RibEntry_a479b1406baa96acda2ea4643b45159b4}{insert\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)
+\begin{DoxyCompactList}\small\item\em inserts a new route into the entry\textquotesingle{}s route list If another route already exists with the same face\+Id and origin, the new route is not inserted. \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1rib_1_1RibEntry_a6e5849679727e8c47869dd459ff9654b}{erase\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)\hypertarget{classnfd_1_1rib_1_1RibEntry_a6e5849679727e8c47869dd459ff9654b}{}\label{classnfd_1_1rib_1_1RibEntry_a6e5849679727e8c47869dd459ff9654b}
+
+\begin{DoxyCompactList}\small\item\em erases a \hyperlink{classnfd_1_1rib_1_1Route}{Route} with the same face\+Id and origin \end{DoxyCompactList}\item 
+iterator \hyperlink{classnfd_1_1rib_1_1RibEntry_ab9a1ea3e7652a45d18ac8c296212c564}{erase\+Route} (Route\+List\+::iterator route)
+\begin{DoxyCompactList}\small\item\em erases a \hyperlink{classnfd_1_1rib_1_1Route}{Route} with the passed iterator \end{DoxyCompactList}\item 
+bool {\bfseries has\+Face\+Id} (const uint64\+\_\+t face\+Id) const\hypertarget{classnfd_1_1rib_1_1RibEntry_a0ed2140185ebd9b793d7010b94d65c3d}{}\label{classnfd_1_1rib_1_1RibEntry_a0ed2140185ebd9b793d7010b94d65c3d}
+
+\item 
+Route\+List \& {\bfseries get\+Routes} ()\hypertarget{classnfd_1_1rib_1_1RibEntry_a2ebf550637e02944919703a628f82b23}{}\label{classnfd_1_1rib_1_1RibEntry_a2ebf550637e02944919703a628f82b23}
+
+\item 
+size\+\_\+t {\bfseries get\+N\+Routes} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_a5654d1d822e2f0c71c165bc81e05eca3}{}\label{classnfd_1_1rib_1_1RibEntry_a5654d1d822e2f0c71c165bc81e05eca3}
+
+\item 
+iterator {\bfseries find\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)\hypertarget{classnfd_1_1rib_1_1RibEntry_a17454cdf5f55d934c00e833bcfdf301e}{}\label{classnfd_1_1rib_1_1RibEntry_a17454cdf5f55d934c00e833bcfdf301e}
+
+\item 
+const\+\_\+iterator {\bfseries find\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route) const\hypertarget{classnfd_1_1rib_1_1RibEntry_ab8f111d73beaa1fca110e9986266afa0}{}\label{classnfd_1_1rib_1_1RibEntry_ab8f111d73beaa1fca110e9986266afa0}
+
+\item 
+bool {\bfseries has\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)\hypertarget{classnfd_1_1rib_1_1RibEntry_adb22892a49ce974b17d537cbe509aba1}{}\label{classnfd_1_1rib_1_1RibEntry_adb22892a49ce974b17d537cbe509aba1}
+
+\item 
+void {\bfseries add\+Inherited\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)\hypertarget{classnfd_1_1rib_1_1RibEntry_a181c7679d8cbabe84728b74aabe74629}{}\label{classnfd_1_1rib_1_1RibEntry_a181c7679d8cbabe84728b74aabe74629}
+
+\item 
+void {\bfseries remove\+Inherited\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route)\hypertarget{classnfd_1_1rib_1_1RibEntry_a28f37bff182c049b0241ebacaaa8030b}{}\label{classnfd_1_1rib_1_1RibEntry_a28f37bff182c049b0241ebacaaa8030b}
+
+\item 
+const Route\+List \& \hyperlink{classnfd_1_1rib_1_1RibEntry_a39ac937096952d817038166eba9677ef}{get\+Inherited\+Routes} () const
+\begin{DoxyCompactList}\small\item\em Returns the routes this namespace has inherited. The inherited routes returned represent inherited routes this namespace has in the F\+IB. \end{DoxyCompactList}\item 
+Route\+List\+::const\+\_\+iterator \hyperlink{classnfd_1_1rib_1_1RibEntry_a102cc102a37a0e4c96d7faf64232cb73}{find\+Inherited\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route) const
+\begin{DoxyCompactList}\small\item\em Finds an inherited route with a matching face ID. \end{DoxyCompactList}\item 
+bool \hyperlink{classnfd_1_1rib_1_1RibEntry_afd2774fbd9e67b029755911d888328bd}{has\+Inherited\+Route} (const \hyperlink{classnfd_1_1rib_1_1Route}{Route} \&route) const
+\begin{DoxyCompactList}\small\item\em Determines if the entry has an inherited route with a matching face ID. \end{DoxyCompactList}\item 
+bool {\bfseries has\+Capture} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_ab4e7ea21137b5e295dad80e35d8b2248}{}\label{classnfd_1_1rib_1_1RibEntry_ab4e7ea21137b5e295dad80e35d8b2248}
+
+\item 
+bool \hyperlink{classnfd_1_1rib_1_1RibEntry_aeea7da974220e97208f42540fd634c14}{has\+Child\+Inherit\+On\+Face\+Id} (uint64\+\_\+t face\+Id) const
+\begin{DoxyCompactList}\small\item\em Determines if the entry has an inherited route with the passed face ID and its child inherit flag set. \end{DoxyCompactList}\item 
+const \hyperlink{classnfd_1_1rib_1_1Route}{Route} $\ast$ \hyperlink{classnfd_1_1rib_1_1RibEntry_a14f040972c02c352c7c0987cbb1964e8}{get\+Route\+With\+Lowest\+Cost\+By\+Face\+Id} (uint64\+\_\+t face\+Id) const
+\begin{DoxyCompactList}\small\item\em Returns the route with the lowest cost that has the passed face ID. \end{DoxyCompactList}\item 
+const \hyperlink{classnfd_1_1rib_1_1Route}{Route} $\ast$ {\bfseries get\+Route\+With\+Second\+Lowest\+Cost\+By\+Face\+Id} (uint64\+\_\+t face\+Id) const\hypertarget{classnfd_1_1rib_1_1RibEntry_ac9522ec75114245df81b85c954319ae8}{}\label{classnfd_1_1rib_1_1RibEntry_ac9522ec75114245df81b85c954319ae8}
+
+\item 
+const \hyperlink{classnfd_1_1rib_1_1Route}{Route} $\ast$ \hyperlink{classnfd_1_1rib_1_1RibEntry_a89872006c24dcb470b5e1c7a189168ea}{get\+Route\+With\+Lowest\+Cost\+And\+Child\+Inherit\+By\+Face\+Id} (uint64\+\_\+t face\+Id) const
+\begin{DoxyCompactList}\small\item\em Returns the route with the lowest cost that has the passed face ID and its child inherit flag set. \end{DoxyCompactList}\item 
+const\+\_\+iterator {\bfseries begin} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_a6e47b26490942ad57cb88f26170ef74b}{}\label{classnfd_1_1rib_1_1RibEntry_a6e47b26490942ad57cb88f26170ef74b}
+
+\item 
+const\+\_\+iterator {\bfseries end} () const\hypertarget{classnfd_1_1rib_1_1RibEntry_a2dd0cf394feec1fbe647bcd5e76d048f}{}\label{classnfd_1_1rib_1_1RibEntry_a2dd0cf394feec1fbe647bcd5e76d048f}
+
+\item 
+iterator {\bfseries begin} ()\hypertarget{classnfd_1_1rib_1_1RibEntry_adb1e4d2cebe31e7b477ccea61dcef192}{}\label{classnfd_1_1rib_1_1RibEntry_adb1e4d2cebe31e7b477ccea61dcef192}
+
+\item 
+iterator {\bfseries end} ()\hypertarget{classnfd_1_1rib_1_1RibEntry_a4dcf0fa10ab014d58e1330ea15e837cc}{}\label{classnfd_1_1rib_1_1RibEntry_a4dcf0fa10ab014d58e1330ea15e837cc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a R\+IB entry, which contains one or more Routes with the same prefix 
+
+Definition at line 36 of file rib-\/entry.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}!erase\+Route@{erase\+Route}}
+\index{erase\+Route@{erase\+Route}!nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+\subsubsection[{\texorpdfstring{erase\+Route(\+Route\+List\+::iterator route)}{eraseRoute(RouteList::iterator route)}}]{\setlength{\rightskip}{0pt plus 5cm}Rib\+Entry\+::\+Route\+List\+::iterator nfd\+::rib\+::\+Rib\+Entry\+::erase\+Route (
+\begin{DoxyParamCaption}
+\item[{Route\+List\+::iterator}]{route}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1RibEntry_ab9a1ea3e7652a45d18ac8c296212c564}{}\label{classnfd_1_1rib_1_1RibEntry_ab9a1ea3e7652a45d18ac8c296212c564}
+
+
+erases a \hyperlink{classnfd_1_1rib_1_1Route}{Route} with the passed iterator 
+
+\begin{DoxyReturn}{Returns}
+\{ an iterator to the element that followed the erased iterator \} 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file rib-\/entry.\+cpp.
+
+\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}!find\+Inherited\+Route@{find\+Inherited\+Route}}
+\index{find\+Inherited\+Route@{find\+Inherited\+Route}!nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+\subsubsection[{\texorpdfstring{find\+Inherited\+Route(const Route \&route) const}{findInheritedRoute(const Route \&route) const}}]{\setlength{\rightskip}{0pt plus 5cm}Rib\+Entry\+::\+Route\+List\+::const\+\_\+iterator nfd\+::rib\+::\+Rib\+Entry\+::find\+Inherited\+Route (
+\begin{DoxyParamCaption}
+\item[{const {\bf Route} \&}]{route}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1rib_1_1RibEntry_a102cc102a37a0e4c96d7faf64232cb73}{}\label{classnfd_1_1rib_1_1RibEntry_a102cc102a37a0e4c96d7faf64232cb73}
+
+
+Finds an inherited route with a matching face ID. 
+
+\begin{DoxyReturn}{Returns}
+\{ An iterator to the matching route if one is found; otherwise, an iterator to the end of the entry\textquotesingle{}s inherited route list \} 
+\end{DoxyReturn}
+
+
+Definition at line 146 of file rib-\/entry.\+cpp.
+
+\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}!get\+Inherited\+Routes@{get\+Inherited\+Routes}}
+\index{get\+Inherited\+Routes@{get\+Inherited\+Routes}!nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Inherited\+Routes() const}{getInheritedRoutes() const}}]{\setlength{\rightskip}{0pt plus 5cm}const Rib\+Entry\+::\+Route\+List \& nfd\+::rib\+::\+Rib\+Entry\+::get\+Inherited\+Routes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1rib_1_1RibEntry_a39ac937096952d817038166eba9677ef}{}\label{classnfd_1_1rib_1_1RibEntry_a39ac937096952d817038166eba9677ef}
+
+
+Returns the routes this namespace has inherited. The inherited routes returned represent inherited routes this namespace has in the F\+IB. 
+
+\begin{DoxyReturn}{Returns}
+\{ routes inherited by this namespace \} 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file rib-\/entry.\+hpp.
+
+\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}!get\+Route\+With\+Lowest\+Cost\+And\+Child\+Inherit\+By\+Face\+Id@{get\+Route\+With\+Lowest\+Cost\+And\+Child\+Inherit\+By\+Face\+Id}}
+\index{get\+Route\+With\+Lowest\+Cost\+And\+Child\+Inherit\+By\+Face\+Id@{get\+Route\+With\+Lowest\+Cost\+And\+Child\+Inherit\+By\+Face\+Id}!nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Route\+With\+Lowest\+Cost\+And\+Child\+Inherit\+By\+Face\+Id(uint64\+\_\+t face\+Id) const}{getRouteWithLowestCostAndChildInheritByFaceId(uint64\_t faceId) const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Route} $\ast$ nfd\+::rib\+::\+Rib\+Entry\+::get\+Route\+With\+Lowest\+Cost\+And\+Child\+Inherit\+By\+Face\+Id (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{face\+Id}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1rib_1_1RibEntry_a89872006c24dcb470b5e1c7a189168ea}{}\label{classnfd_1_1rib_1_1RibEntry_a89872006c24dcb470b5e1c7a189168ea}
+
+
+Returns the route with the lowest cost that has the passed face ID and its child inherit flag set. 
+
+\begin{DoxyReturn}{Returns}
+\{ The route with the lowest cost that has the passed face ID and its child inherit flag set \} 
+\end{DoxyReturn}
+
+
+Definition at line 222 of file rib-\/entry.\+cpp.
+
+\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}!get\+Route\+With\+Lowest\+Cost\+By\+Face\+Id@{get\+Route\+With\+Lowest\+Cost\+By\+Face\+Id}}
+\index{get\+Route\+With\+Lowest\+Cost\+By\+Face\+Id@{get\+Route\+With\+Lowest\+Cost\+By\+Face\+Id}!nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+\subsubsection[{\texorpdfstring{get\+Route\+With\+Lowest\+Cost\+By\+Face\+Id(uint64\+\_\+t face\+Id) const}{getRouteWithLowestCostByFaceId(uint64\_t faceId) const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Route} $\ast$ nfd\+::rib\+::\+Rib\+Entry\+::get\+Route\+With\+Lowest\+Cost\+By\+Face\+Id (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{face\+Id}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1rib_1_1RibEntry_a14f040972c02c352c7c0987cbb1964e8}{}\label{classnfd_1_1rib_1_1RibEntry_a14f040972c02c352c7c0987cbb1964e8}
+
+
+Returns the route with the lowest cost that has the passed face ID. 
+
+\begin{DoxyReturn}{Returns}
+\{ The route with the lowest cost that has the passed face ID\} 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file rib-\/entry.\+cpp.
+
+\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}!has\+Child\+Inherit\+On\+Face\+Id@{has\+Child\+Inherit\+On\+Face\+Id}}
+\index{has\+Child\+Inherit\+On\+Face\+Id@{has\+Child\+Inherit\+On\+Face\+Id}!nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+\subsubsection[{\texorpdfstring{has\+Child\+Inherit\+On\+Face\+Id(uint64\+\_\+t face\+Id) const}{hasChildInheritOnFaceId(uint64\_t faceId) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::rib\+::\+Rib\+Entry\+::has\+Child\+Inherit\+On\+Face\+Id (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t}]{face\+Id}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1rib_1_1RibEntry_aeea7da974220e97208f42540fd634c14}{}\label{classnfd_1_1rib_1_1RibEntry_aeea7da974220e97208f42540fd634c14}
+
+
+Determines if the entry has an inherited route with the passed face ID and its child inherit flag set. 
+
+\begin{DoxyReturn}{Returns}
+\{ True, if a matching inherited route is found; otherwise, false. \} 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file rib-\/entry.\+cpp.
+
+\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}!has\+Inherited\+Route@{has\+Inherited\+Route}}
+\index{has\+Inherited\+Route@{has\+Inherited\+Route}!nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+\subsubsection[{\texorpdfstring{has\+Inherited\+Route(const Route \&route) const}{hasInheritedRoute(const Route \&route) const}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::rib\+::\+Rib\+Entry\+::has\+Inherited\+Route (
+\begin{DoxyParamCaption}
+\item[{const {\bf Route} \&}]{route}
+\end{DoxyParamCaption}
+) const}\hypertarget{classnfd_1_1rib_1_1RibEntry_afd2774fbd9e67b029755911d888328bd}{}\label{classnfd_1_1rib_1_1RibEntry_afd2774fbd9e67b029755911d888328bd}
+
+
+Determines if the entry has an inherited route with a matching face ID. 
+
+\begin{DoxyReturn}{Returns}
+\{ True, if a matching inherited route is found; otherwise, false. \} 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file rib-\/entry.\+cpp.
+
+\index{nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}!insert\+Route@{insert\+Route}}
+\index{insert\+Route@{insert\+Route}!nfd\+::rib\+::\+Rib\+Entry@{nfd\+::rib\+::\+Rib\+Entry}}
+\subsubsection[{\texorpdfstring{insert\+Route(const Route \&route)}{insertRoute(const Route \&route)}}]{\setlength{\rightskip}{0pt plus 5cm}bool nfd\+::rib\+::\+Rib\+Entry\+::insert\+Route (
+\begin{DoxyParamCaption}
+\item[{const {\bf Route} \&}]{route}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1rib_1_1RibEntry_a479b1406baa96acda2ea4643b45159b4}{}\label{classnfd_1_1rib_1_1RibEntry_a479b1406baa96acda2ea4643b45159b4}
+
+
+inserts a new route into the entry\textquotesingle{}s route list If another route already exists with the same face\+Id and origin, the new route is not inserted. 
+
+\begin{DoxyReturn}{Returns}
+\{ true if the route is inserted, false otherwise \} 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file rib-\/entry.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/rib-\/entry.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/rib/rib-\/entry.\+cpp\end{DoxyCompactItemize}

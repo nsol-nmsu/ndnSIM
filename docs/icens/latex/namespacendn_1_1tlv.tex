@@ -1,0 +1,318 @@
+\hypertarget{namespacendn_1_1tlv}{}\section{ndn\+:\+:tlv Namespace Reference}
+\label{namespacendn_1_1tlv}\index{ndn\+::tlv@{ndn\+::tlv}}
+
+
+Namespace defining N\+D\+N-\/\+T\+LV related constants and procedures.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1tlv_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em represents an error in T\+LV encoding or decoding \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bfseries Interest} = 5, 
+{\bfseries Data} = 6, 
+{\bfseries Name} = 7, 
+{\bfseries Implicit\+Sha256\+Digest\+Component} = 1, 
+\\*
+{\bfseries Name\+Component} = 8, 
+{\bfseries Selectors} = 9, 
+{\bfseries Nonce} = 10, 
+{\bfseries Subscription} = 11, 
+\\*
+{\bfseries Interest\+Lifetime} = 12, 
+{\bfseries Min\+Suffix\+Components} = 13, 
+{\bfseries Max\+Suffix\+Components} = 14, 
+{\bfseries Publisher\+Public\+Key\+Locator} = 15, 
+\\*
+{\bfseries Exclude} = 16, 
+{\bfseries Child\+Selector} = 17, 
+{\bfseries Must\+Be\+Fresh} = 18, 
+{\bfseries Any} = 19, 
+\\*
+{\bfseries Meta\+Info} = 20, 
+{\bfseries Content} = 21, 
+{\bfseries Signature\+Info} = 22, 
+{\bfseries Signature\+Value} = 23, 
+\\*
+{\bfseries Content\+Type} = 24, 
+{\bfseries Freshness\+Period} = 25, 
+{\bfseries Final\+Block\+Id} = 26, 
+{\bfseries Signature\+Type} = 27, 
+\\*
+{\bfseries Key\+Locator} = 28, 
+{\bfseries Key\+Digest} = 29, 
+{\bfseries Link\+Preference} = 30, 
+{\bfseries Link\+Delegation} = 31, 
+\\*
+{\bfseries Selected\+Delegation} = 32, 
+{\bfseries Payload} = 33, 
+{\bfseries App\+Private\+Block1} = 128, 
+{\bfseries App\+Private\+Block2} = 32767
+ \}\hypertarget{namespacendn_1_1tlv_adb41a14044a0dd68da374db98ca8fa23}{}\label{namespacendn_1_1tlv_adb41a14044a0dd68da374db98ca8fa23}
+
+\item 
+enum {\bfseries Signature\+Type\+Value} \{ {\bfseries Digest\+Sha256} = 0, 
+{\bfseries Signature\+Sha256\+With\+Rsa} = 1, 
+{\bfseries Signature\+Sha256\+With\+Ecdsa} = 3
+ \}\hypertarget{namespacendn_1_1tlv_af03409daf45b893fd14b56fefa2578b5}{}\label{namespacendn_1_1tlv_af03409daf45b893fd14b56fefa2578b5}
+
+\item 
+enum \{ \\*
+{\bfseries Validity\+Period} = 253, 
+{\bfseries Not\+Before} = 254, 
+{\bfseries Not\+After} = 255, 
+{\bfseries Additional\+Description} = 258, 
+\\*
+{\bfseries Description\+Entry} = 512, 
+{\bfseries Description\+Key} = 513, 
+{\bfseries Description\+Value} = 514
+ \}\begin{DoxyCompactList}\small\item\em T\+LV codes for Signature\+Info features. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204b}{Content\+Type\+Value} \{ \hyperlink{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba60ce94ccdd53ff0d849d6f51e5be2011}{Content\+Type\+\_\+\+Blob} = 0, 
+\hyperlink{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba5cae8a36304794226ce4183f1aad4307}{Content\+Type\+\_\+\+Link} = 1, 
+\hyperlink{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba3438d1623c7bcc6f40704be6b4875e9b}{Content\+Type\+\_\+\+Key} = 2, 
+\hyperlink{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204bacd9aaacbd3185c346c4d9e86aa336e17}{Content\+Type\+\_\+\+Nack} = 3
+ \}\begin{DoxyCompactList}\small\item\em indicates a possible value of Content\+Type field \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3}{Subscription\+Value} \{ \hyperlink{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3a405450e35e9a0e4eda742ec299286c18}{Subscription\+\_\+\+None} = 0, 
+\hyperlink{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ae78fa17ea05f890da234cb58ea80c88c}{Subscription\+\_\+\+Soft} = 1, 
+\hyperlink{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ae1da15b8e0086f723112c5af6a7f4369}{Subscription\+\_\+\+Hard} = 2, 
+\hyperlink{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ad6ba91f51c2be4c0ffd56d0d70cbdf55}{Subscription\+\_\+\+Unsub} = 3
+ \}\begin{DoxyCompactList}\small\item\em values for Subscription field \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\bool \hyperlink{namespacendn_1_1tlv_a0eb5fc81577b521080e70e405c5cf727}{read\+Var\+Number} (Input\+Iterator \&begin, const Input\+Iterator \&end, uint64\+\_\+t \&number)
+\begin{DoxyCompactList}\small\item\em Read V\+A\+R-\/\+N\+U\+M\+B\+ER in N\+D\+N-\/\+T\+LV encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\bool \hyperlink{namespacendn_1_1tlv_a354b28ea0e57b0701a93cd32f52e1c50}{read\+Type} (Input\+Iterator \&begin, const Input\+Iterator \&end, uint32\+\_\+t \&type)
+\begin{DoxyCompactList}\small\item\em Read T\+LV Type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\uint64\+\_\+t \hyperlink{namespacendn_1_1tlv_a7c92484c25d1c405655803f215d6f984}{read\+Var\+Number} (Input\+Iterator \&begin, const Input\+Iterator \&end)
+\begin{DoxyCompactList}\small\item\em Read V\+A\+R-\/\+N\+U\+M\+B\+ER in N\+D\+N-\/\+T\+LV encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\uint32\+\_\+t \hyperlink{namespacendn_1_1tlv_acbea9635b2144fab082b6e82400522c8}{read\+Type} (Input\+Iterator \&begin, const Input\+Iterator \&end)
+\begin{DoxyCompactList}\small\item\em Read T\+LV Type. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{namespacendn_1_1tlv_a0fd2b95ee6ef678363f59a74265473fc}{size\+Of\+Var\+Number} (uint64\+\_\+t var\+Number)\hypertarget{namespacendn_1_1tlv_a0fd2b95ee6ef678363f59a74265473fc}{}\label{namespacendn_1_1tlv_a0fd2b95ee6ef678363f59a74265473fc}
+
+\begin{DoxyCompactList}\small\item\em Get number of bytes necessary to hold value of V\+A\+R-\/\+N\+U\+M\+B\+ER. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{namespacendn_1_1tlv_a1241195c732531b6d90acb22e5101ed0}{write\+Var\+Number} (std\+::ostream \&os, uint64\+\_\+t var\+Number)\hypertarget{namespacendn_1_1tlv_a1241195c732531b6d90acb22e5101ed0}{}\label{namespacendn_1_1tlv_a1241195c732531b6d90acb22e5101ed0}
+
+\begin{DoxyCompactList}\small\item\em Write V\+A\+R-\/\+N\+U\+M\+B\+ER to the specified stream. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\uint64\+\_\+t \hyperlink{namespacendn_1_1tlv_afb17980329ebcc5451da54dd16b93253}{read\+Non\+Negative\+Integer} (size\+\_\+t size, Input\+Iterator \&begin, const Input\+Iterator \&end)
+\begin{DoxyCompactList}\small\item\em Read non\+Negative\+Integer in N\+D\+N-\/\+T\+LV encoding. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{namespacendn_1_1tlv_a0195029be1555608135a352a2e075bfb}{size\+Of\+Non\+Negative\+Integer} (uint64\+\_\+t var\+Number)\hypertarget{namespacendn_1_1tlv_a0195029be1555608135a352a2e075bfb}{}\label{namespacendn_1_1tlv_a0195029be1555608135a352a2e075bfb}
+
+\begin{DoxyCompactList}\small\item\em Get number of bytes necessary to hold value of non\+Negative\+Integer. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{namespacendn_1_1tlv_a2ef6eabd116a614c32b4976ae25bf5f4}{write\+Non\+Negative\+Integer} (std\+::ostream \&os, uint64\+\_\+t var\+Number)\hypertarget{namespacendn_1_1tlv_a2ef6eabd116a614c32b4976ae25bf5f4}{}\label{namespacendn_1_1tlv_a2ef6eabd116a614c32b4976ae25bf5f4}
+
+\begin{DoxyCompactList}\small\item\em Write non\+Negative\+Integer to the specified stream. \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\bool {\bfseries read\+Var\+Number$<$ std\+::istream\+\_\+iterator$<$ uint8\+\_\+t $>$ $>$} (std\+::istream\+\_\+iterator$<$ uint8\+\_\+t $>$ \&begin, const std\+::istream\+\_\+iterator$<$ uint8\+\_\+t $>$ \&end, uint64\+\_\+t \&value)\hypertarget{namespacendn_1_1tlv_ab615da10c8425225b977264075ecf129}{}\label{namespacendn_1_1tlv_ab615da10c8425225b977264075ecf129}
+
+\item 
+{\footnotesize template$<$$>$ }\\uint64\+\_\+t {\bfseries read\+Non\+Negative\+Integer$<$ std\+::istream\+\_\+iterator$<$ uint8\+\_\+t $>$ $>$} (size\+\_\+t size, std\+::istream\+\_\+iterator$<$ uint8\+\_\+t $>$ \&begin, const std\+::istream\+\_\+iterator$<$ uint8\+\_\+t $>$ \&end)\hypertarget{namespacendn_1_1tlv_a9feaf130f34503050ce2e8ac2925aefd}{}\label{namespacendn_1_1tlv_a9feaf130f34503050ce2e8ac2925aefd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Namespace defining N\+D\+N-\/\+T\+LV related constants and procedures. 
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{\texorpdfstring{anonymous enum}{anonymous enum}}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\hypertarget{namespacendn_1_1tlv_ab2e929c8e047b57b192e7c4d3ffc2890}{}\label{namespacendn_1_1tlv_ab2e929c8e047b57b192e7c4d3ffc2890}
+
+
+T\+LV codes for \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} features. 
+
+\begin{DoxySeeAlso}{See also}
+docs/tutorials/certificate-\/format.\+rst 
+\end{DoxySeeAlso}
+
+
+Definition at line 106 of file tlv.\+hpp.
+
+\index{ndn\+::tlv@{ndn\+::tlv}!Content\+Type\+Value@{Content\+Type\+Value}}
+\index{Content\+Type\+Value@{Content\+Type\+Value}!ndn\+::tlv@{ndn\+::tlv}}
+\subsubsection[{\texorpdfstring{Content\+Type\+Value}{ContentTypeValue}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ndn\+::tlv\+::\+Content\+Type\+Value}}\hypertarget{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204b}{}\label{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204b}
+
+
+indicates a possible value of Content\+Type field 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Content\+Type\+\_\+\+Blob@{Content\+Type\+\_\+\+Blob}!ndn\+::tlv@{ndn\+::tlv}}\index{ndn\+::tlv@{ndn\+::tlv}!Content\+Type\+\_\+\+Blob@{Content\+Type\+\_\+\+Blob}}\item[{\em 
+Content\+Type\+\_\+\+Blob\hypertarget{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba60ce94ccdd53ff0d849d6f51e5be2011}{}\label{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba60ce94ccdd53ff0d849d6f51e5be2011}
+}]indicates content is the actual data bits \index{Content\+Type\+\_\+\+Link@{Content\+Type\+\_\+\+Link}!ndn\+::tlv@{ndn\+::tlv}}\index{ndn\+::tlv@{ndn\+::tlv}!Content\+Type\+\_\+\+Link@{Content\+Type\+\_\+\+Link}}\item[{\em 
+Content\+Type\+\_\+\+Link\hypertarget{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba5cae8a36304794226ce4183f1aad4307}{}\label{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba5cae8a36304794226ce4183f1aad4307}
+}]indicates content is another name which identifies actual data content \index{Content\+Type\+\_\+\+Key@{Content\+Type\+\_\+\+Key}!ndn\+::tlv@{ndn\+::tlv}}\index{ndn\+::tlv@{ndn\+::tlv}!Content\+Type\+\_\+\+Key@{Content\+Type\+\_\+\+Key}}\item[{\em 
+Content\+Type\+\_\+\+Key\hypertarget{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba3438d1623c7bcc6f40704be6b4875e9b}{}\label{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204ba3438d1623c7bcc6f40704be6b4875e9b}
+}]indicates content is a public key \index{Content\+Type\+\_\+\+Nack@{Content\+Type\+\_\+\+Nack}!ndn\+::tlv@{ndn\+::tlv}}\index{ndn\+::tlv@{ndn\+::tlv}!Content\+Type\+\_\+\+Nack@{Content\+Type\+\_\+\+Nack}}\item[{\em 
+Content\+Type\+\_\+\+Nack\hypertarget{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204bacd9aaacbd3185c346c4d9e86aa336e17}{}\label{namespacendn_1_1tlv_aaa845994b4f59fdab8bf0bbbe51e204bacd9aaacbd3185c346c4d9e86aa336e17}
+}]indicates a producer generated N\+A\+CK \begin{DoxyWarning}{Warning}
+Experimental. Not defined in N\+D\+N-\/\+T\+LV spec. 
+\end{DoxyWarning}
+\end{description}
+\end{Desc}
+
+
+Definition at line 120 of file tlv.\+hpp.
+
+\index{ndn\+::tlv@{ndn\+::tlv}!Subscription\+Value@{Subscription\+Value}}
+\index{Subscription\+Value@{Subscription\+Value}!ndn\+::tlv@{ndn\+::tlv}}
+\subsubsection[{\texorpdfstring{Subscription\+Value}{SubscriptionValue}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ndn\+::tlv\+::\+Subscription\+Value}}\hypertarget{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3}{}\label{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3}
+
+
+values for Subscription field 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Subscription\+\_\+\+None@{Subscription\+\_\+\+None}!ndn\+::tlv@{ndn\+::tlv}}\index{ndn\+::tlv@{ndn\+::tlv}!Subscription\+\_\+\+None@{Subscription\+\_\+\+None}}\item[{\em 
+Subscription\+\_\+\+None\hypertarget{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3a405450e35e9a0e4eda742ec299286c18}{}\label{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3a405450e35e9a0e4eda742ec299286c18}
+}]not a subscription interest \index{Subscription\+\_\+\+Soft@{Subscription\+\_\+\+Soft}!ndn\+::tlv@{ndn\+::tlv}}\index{ndn\+::tlv@{ndn\+::tlv}!Subscription\+\_\+\+Soft@{Subscription\+\_\+\+Soft}}\item[{\em 
+Subscription\+\_\+\+Soft\hypertarget{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ae78fa17ea05f890da234cb58ea80c88c}{}\label{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ae78fa17ea05f890da234cb58ea80c88c}
+}]soft subscription \index{Subscription\+\_\+\+Hard@{Subscription\+\_\+\+Hard}!ndn\+::tlv@{ndn\+::tlv}}\index{ndn\+::tlv@{ndn\+::tlv}!Subscription\+\_\+\+Hard@{Subscription\+\_\+\+Hard}}\item[{\em 
+Subscription\+\_\+\+Hard\hypertarget{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ae1da15b8e0086f723112c5af6a7f4369}{}\label{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ae1da15b8e0086f723112c5af6a7f4369}
+}]hard subscription \index{Subscription\+\_\+\+Unsub@{Subscription\+\_\+\+Unsub}!ndn\+::tlv@{ndn\+::tlv}}\index{ndn\+::tlv@{ndn\+::tlv}!Subscription\+\_\+\+Unsub@{Subscription\+\_\+\+Unsub}}\item[{\em 
+Subscription\+\_\+\+Unsub\hypertarget{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ad6ba91f51c2be4c0ffd56d0d70cbdf55}{}\label{namespacendn_1_1tlv_ae53c9dcbe75ebaaf6af6e90e6a7380e3ad6ba91f51c2be4c0ffd56d0d70cbdf55}
+}]unsubscription \end{description}
+\end{Desc}
+
+
+Definition at line 141 of file tlv.\+hpp.
+
+
+
+\subsection{Function Documentation}
+\index{ndn\+::tlv@{ndn\+::tlv}!read\+Non\+Negative\+Integer@{read\+Non\+Negative\+Integer}}
+\index{read\+Non\+Negative\+Integer@{read\+Non\+Negative\+Integer}!ndn\+::tlv@{ndn\+::tlv}}
+\subsubsection[{\texorpdfstring{read\+Non\+Negative\+Integer(size\+\_\+t size, Input\+Iterator \&begin, const Input\+Iterator \&end)}{readNonNegativeInteger(size\_t size, InputIterator \&begin, const InputIterator \&end)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ uint64\+\_\+t ndn\+::tlv\+::read\+Non\+Negative\+Integer (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size, }
+\item[{Input\+Iterator \&}]{begin, }
+\item[{const Input\+Iterator \&}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespacendn_1_1tlv_afb17980329ebcc5451da54dd16b93253}{}\label{namespacendn_1_1tlv_afb17980329ebcc5451da54dd16b93253}
+
+
+Read non\+Negative\+Integer in N\+D\+N-\/\+T\+LV encoding. 
+
+This call will throw \hyperlink{classndn_1_1tlv_1_1Error}{ndn\+::tlv\+::\+Error} (aka std\+::runtime\+\_\+error) if number cannot be read
+
+Note that after call finished, begin will point to the first byte after the read V\+A\+R-\/\+N\+U\+M\+B\+ER
+
+How many bytes will be read is directly controlled by the size parameter, which can be either 1, 2, 4, or 8. If the value of size is different, then an exception will be thrown. 
+
+Definition at line 454 of file tlv.\+hpp.
+
+\index{ndn\+::tlv@{ndn\+::tlv}!read\+Type@{read\+Type}}
+\index{read\+Type@{read\+Type}!ndn\+::tlv@{ndn\+::tlv}}
+\subsubsection[{\texorpdfstring{read\+Type(\+Input\+Iterator \&begin, const Input\+Iterator \&end, uint32\+\_\+t \&type)}{readType(InputIterator \&begin, const InputIterator \&end, uint32\_t \&type)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ bool ndn\+::tlv\+::read\+Type (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator \&}]{begin, }
+\item[{const Input\+Iterator \&}]{end, }
+\item[{uint32\+\_\+t \&}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespacendn_1_1tlv_a354b28ea0e57b0701a93cd32f52e1c50}{}\label{namespacendn_1_1tlv_a354b28ea0e57b0701a93cd32f52e1c50}
+
+
+Read T\+LV Type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em begin} & Begin (pointer or iterator) of the buffer \\
+\hline
+\mbox{\tt in}  & {\em end} & End (pointer or iterator) of the buffer \\
+\hline
+\mbox{\tt out}  & {\em type} & Read type number\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em This} & call never throws exception\\
+\hline
+\end{DoxyExceptions}
+This call is largely equivalent to \hyperlink{namespacendn_1_1tlv_a0eb5fc81577b521080e70e405c5cf727}{tlv\+::read\+Var\+Number}, but exception will be thrown if type is larger than 2$^\wedge$32-\/1 (type in this library is implemented as uint32\+\_\+t) 
+
+Definition at line 309 of file tlv.\+hpp.
+
+\index{ndn\+::tlv@{ndn\+::tlv}!read\+Type@{read\+Type}}
+\index{read\+Type@{read\+Type}!ndn\+::tlv@{ndn\+::tlv}}
+\subsubsection[{\texorpdfstring{read\+Type(\+Input\+Iterator \&begin, const Input\+Iterator \&end)}{readType(InputIterator \&begin, const InputIterator \&end)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ uint32\+\_\+t ndn\+::tlv\+::read\+Type (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator \&}]{begin, }
+\item[{const Input\+Iterator \&}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespacendn_1_1tlv_acbea9635b2144fab082b6e82400522c8}{}\label{namespacendn_1_1tlv_acbea9635b2144fab082b6e82400522c8}
+
+
+Read T\+LV Type. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em This} & call will throw \hyperlink{classndn_1_1tlv_1_1Error}{ndn\+::tlv\+::\+Error} (aka std\+::runtime\+\_\+error) if number cannot be read\\
+\hline
+\end{DoxyExceptions}
+This call is largely equivalent to \hyperlink{namespacendn_1_1tlv_a0eb5fc81577b521080e70e405c5cf727}{tlv\+::read\+Var\+Number}, but exception will be thrown if type is larger than 2$^\wedge$32-\/1 (type in this library is implemented as uint32\+\_\+t) 
+
+Definition at line 397 of file tlv.\+hpp.
+
+\index{ndn\+::tlv@{ndn\+::tlv}!read\+Var\+Number@{read\+Var\+Number}}
+\index{read\+Var\+Number@{read\+Var\+Number}!ndn\+::tlv@{ndn\+::tlv}}
+\subsubsection[{\texorpdfstring{read\+Var\+Number(\+Input\+Iterator \&begin, const Input\+Iterator \&end, uint64\+\_\+t \&number)}{readVarNumber(InputIterator \&begin, const InputIterator \&end, uint64\_t \&number)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ bool ndn\+::tlv\+::read\+Var\+Number (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator \&}]{begin, }
+\item[{const Input\+Iterator \&}]{end, }
+\item[{uint64\+\_\+t \&}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespacendn_1_1tlv_a0eb5fc81577b521080e70e405c5cf727}{}\label{namespacendn_1_1tlv_a0eb5fc81577b521080e70e405c5cf727}
+
+
+Read V\+A\+R-\/\+N\+U\+M\+B\+ER in N\+D\+N-\/\+T\+LV encoding. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em begin} & Begin (pointer or iterator) of the buffer \\
+\hline
+\mbox{\tt in}  & {\em end} & End (pointer or iterator) of the buffer \\
+\hline
+\mbox{\tt out}  & {\em number} & Read number\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em This} & call never throws exception\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+true if number successfully read from input, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 264 of file tlv.\+hpp.
+
+\index{ndn\+::tlv@{ndn\+::tlv}!read\+Var\+Number@{read\+Var\+Number}}
+\index{read\+Var\+Number@{read\+Var\+Number}!ndn\+::tlv@{ndn\+::tlv}}
+\subsubsection[{\texorpdfstring{read\+Var\+Number(\+Input\+Iterator \&begin, const Input\+Iterator \&end)}{readVarNumber(InputIterator \&begin, const InputIterator \&end)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Input\+Iterator $>$ uint64\+\_\+t ndn\+::tlv\+::read\+Var\+Number (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator \&}]{begin, }
+\item[{const Input\+Iterator \&}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespacendn_1_1tlv_a7c92484c25d1c405655803f215d6f984}{}\label{namespacendn_1_1tlv_a7c92484c25d1c405655803f215d6f984}
+
+
+Read V\+A\+R-\/\+N\+U\+M\+B\+ER in N\+D\+N-\/\+T\+LV encoding. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em This} & call will throw \hyperlink{classndn_1_1tlv_1_1Error}{ndn\+::tlv\+::\+Error} (aka std\+::runtime\+\_\+error) if number cannot be read\\
+\hline
+\end{DoxyExceptions}
+Note that after call finished, begin will point to the first byte after the read V\+A\+R-\/\+N\+U\+M\+B\+ER 
+
+Definition at line 324 of file tlv.\+hpp.
+

@@ -1,0 +1,1092 @@
+\hypertarget{classndn_1_1security_1_1KeyChain}{}\section{ndn\+:\+:security\+:\+:Key\+Chain Class Reference}
+\label{classndn_1_1security_1_1KeyChain}\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+
+
+The packet signing interface.  
+
+
+
+
+{\ttfamily \#include $<$key-\/chain.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:security\+:\+:Key\+Chain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1security_1_1KeyChain}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1security_1_1KeyChain_1_1Error}{Error}
+\item 
+class \hyperlink{classndn_1_1security_1_1KeyChain_1_1MismatchError}{Mismatch\+Error}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1security_1_1KeyChain_1_1Error}{Error} thrown when the supplied T\+PM locator to \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} constructor does not match the locator stored in P\+IB. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef function$<$ unique\+\_\+ptr$<$ \hyperlink{classndn_1_1SecPublicInfo}{Sec\+Public\+Info} $>$const std\+::string \&)$>$ {\bfseries Pib\+Create\+Func}\hypertarget{classndn_1_1security_1_1KeyChain_a61c4bc7504dea92ff86d8d764d2e6032}{}\label{classndn_1_1security_1_1KeyChain_a61c4bc7504dea92ff86d8d764d2e6032}
+
+\item 
+typedef function$<$ unique\+\_\+ptr$<$ \hyperlink{classndn_1_1SecTpm}{Sec\+Tpm} $>$const std\+::string \&)$>$ {\bfseries Tpm\+Create\+Func}\hypertarget{classndn_1_1security_1_1KeyChain_a16e87c0b3e8263365c37c7f1d0baeb19}{}\label{classndn_1_1security_1_1KeyChain_a16e87c0b3e8263365c37c7f1d0baeb19}
+
+\item 
+typedef std\+::map$<$ std\+::string, \hyperlink{classndn_1_1Block}{Block} $>$ {\bfseries Sign\+Params}\hypertarget{classndn_1_1security_1_1KeyChain_a1bb8349eaa4e87d4d3fa2855bf19c0e3}{}\label{classndn_1_1security_1_1KeyChain_a1bb8349eaa4e87d4d3fa2855bf19c0e3}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain_adf8092a8d517e39d9fe2c18fc0fe1f96}{Key\+Chain} ()
+\begin{DoxyCompactList}\small\item\em Constructor to create \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} with default P\+IB and T\+PM. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1KeyChain_a32bd1457d4d52ec769d5115a8903a911}{Key\+Chain} (const std\+::string \&pib\+Locator, const std\+::string \&tpm\+Locator, bool allow\+Reset=false)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} constructor. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1security_1_1KeyChain_a9c50aa4c839df85f22c285c6f1e5c15e}{create\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name, const \hyperlink{classndn_1_1KeyParams}{Key\+Params} \&params=D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+R\+A\+MS)
+\begin{DoxyCompactList}\small\item\em Create an identity by creating a pair of Key-\/\+Signing-\/\+Key (K\+SK) for this identity and a self-\/signed certificate of the K\+SK. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1security_1_1KeyChain_a1b66b39bc8045408dcb4990b1c90f06b}{generate\+Rsa\+Key\+Pair} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name, bool is\+Ksk=false, uint32\+\_\+t key\+Size=2048)
+\begin{DoxyCompactList}\small\item\em Generate a pair of R\+SA keys for the specified identity. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1security_1_1KeyChain_af3ef46d4a94b2777bda04e3615907f6c}{generate\+Ecdsa\+Key\+Pair} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name, bool is\+Ksk=false, uint32\+\_\+t key\+Size=256)
+\begin{DoxyCompactList}\small\item\em Generate a pair of E\+C\+D\+SA keys for the specified identity. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1security_1_1KeyChain_af90c9766ac7c6fc2b219ba10355173fc}{generate\+Rsa\+Key\+Pair\+As\+Default} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name, bool is\+Ksk=false, uint32\+\_\+t key\+Size=2048)
+\begin{DoxyCompactList}\small\item\em Generate a pair of R\+SA keys for the specified identity and set it as default key for the identity. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1security_1_1KeyChain_ab28660230a99ead349de7c6f06a7c691}{generate\+Ecdsa\+Key\+Pair\+As\+Default} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name, bool is\+Ksk, uint32\+\_\+t key\+Size=256)
+\begin{DoxyCompactList}\small\item\em Generate a pair of E\+C\+D\+SA keys for the specified identity and set it as default key for the identity. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ \hyperlink{classndn_1_1security_1_1KeyChain_a536a14c1b3eea7cf72a6e478ad3d28ea}{prepare\+Unsigned\+Identity\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1Name}{Name} \&signing\+Identity, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After, const std\+::vector$<$ \hyperlink{classndn_1_1CertificateSubjectDescription}{Certificate\+Subject\+Description} $>$ \&subject\+Description, const \hyperlink{classndn_1_1Name}{Name} \&cert\+Prefix=D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+E\+F\+IX)
+\begin{DoxyCompactList}\small\item\em prepare an unsigned identity certificate \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ \hyperlink{classndn_1_1security_1_1KeyChain_a06bea75b7883d188257eb1feb056bb3a}{prepare\+Unsigned\+Identity\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key, const \hyperlink{classndn_1_1Name}{Name} \&signing\+Identity, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After, const std\+::vector$<$ \hyperlink{classndn_1_1CertificateSubjectDescription}{Certificate\+Subject\+Description} $>$ \&subject\+Description, const \hyperlink{classndn_1_1Name}{Name} \&cert\+Prefix=D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+E\+F\+IX)
+\begin{DoxyCompactList}\small\item\em prepare an unsigned identity certificate \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_a787253e1e20d5c836e0eb8726285c484}{sign} (\hyperlink{classndn_1_1Data}{Data} \&data, const \hyperlink{classndn_1_1security_1_1SigningInfo}{Signing\+Info} \&params=D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+I\+N\+FO)
+\begin{DoxyCompactList}\small\item\em Sign data according to the supplied signing information. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_a1dd089cd000f2e2766bfec000e96eced}{sign} (\hyperlink{classndn_1_1Interest}{Interest} \&interest, const \hyperlink{classndn_1_1security_1_1SigningInfo}{Signing\+Info} \&params=D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+I\+N\+FO)
+\begin{DoxyCompactList}\small\item\em Sign interest according to the supplied signing information. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Block}{Block} \hyperlink{classndn_1_1security_1_1KeyChain_a92e3ef8eb76208713612370d72187a58}{sign} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Length, const \hyperlink{classndn_1_1security_1_1SigningInfo}{Signing\+Info} \&params)
+\begin{DoxyCompactList}\small\item\em Sign buffer according to the supplied signing information. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classndn_1_1security_1_1KeyChain_a38cd4d4750a9b844953994e0e6731856}{sign} (T \&packet, const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)
+\begin{DoxyCompactList}\small\item\em Sign packet with a particular certificate. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Signature}{Signature} \hyperlink{classndn_1_1security_1_1KeyChain_a70cadd2bfce67770acfba02f1a6cf66d}{sign} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Length, const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)
+\begin{DoxyCompactList}\small\item\em Sign the byte array using a particular certificate. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classndn_1_1security_1_1KeyChain_a12667fcdf3bef2250eb3b523b1e4f987}{sign\+By\+Identity} (T \&packet, const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)
+\begin{DoxyCompactList}\small\item\em Sign packet using the default certificate of a particular identity. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Signature}{Signature} \hyperlink{classndn_1_1security_1_1KeyChain_a77e1edd0663bf184deef4be2566c921b}{sign\+By\+Identity} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Length, const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)
+\begin{DoxyCompactList}\small\item\em Sign the byte array using the default certificate of a particular identity. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_ae68a5ce146b5902e6a2000650b948d14}{sign\+With\+Sha256} (\hyperlink{classndn_1_1Data}{Data} \&data)
+\begin{DoxyCompactList}\small\item\em Set Sha256 weak signature for {\ttfamily data}. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_a093ee12db8424cac208881f477b0476e}{sign\+With\+Sha256} (\hyperlink{classndn_1_1Interest}{Interest} \&interest)
+\begin{DoxyCompactList}\small\item\em Set Sha256 weak signature for {\ttfamily interest}. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ \hyperlink{classndn_1_1security_1_1KeyChain_a99ced46f0a175455f86f175403662412}{self\+Sign} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Generate a self-\/signed certificate for a public key. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_a332ab9ef9cf7044c9f15df3b516e2aae}{self\+Sign} (\hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&cert)
+\begin{DoxyCompactList}\small\item\em Self-\/sign the supplied identity certificate. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_ac5389a6d8c4eac92c7436af9411747a9}{delete\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)
+\begin{DoxyCompactList}\small\item\em delete a certificate. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_a30a89030ae7bf9fc386ff11484b32b06}{delete\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em delete a key. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_a116937444718372fa29e414ab40a6321}{delete\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity)
+\begin{DoxyCompactList}\small\item\em delete an identity. \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1SecuredBag}{Secured\+Bag} $>$ \hyperlink{classndn_1_1security_1_1KeyChain_a0177b228c915bc9f2c4ae57617dd8bfb}{export\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const std\+::string \&password\+Str)
+\begin{DoxyCompactList}\small\item\em export an identity. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1KeyChain_a753d555c36e02dbc77fd7e9a109ae770}{import\+Identity} (const \hyperlink{classndn_1_1SecuredBag}{Secured\+Bag} \&secured\+Bag, const std\+::string \&password\+Str)
+\begin{DoxyCompactList}\small\item\em import an identity. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1SecPublicInfo}{Sec\+Public\+Info} \& {\bfseries get\+Pib} ()\hypertarget{classndn_1_1security_1_1KeyChain_a8d1f43709d1107d17f2ba2217d41f6de}{}\label{classndn_1_1security_1_1KeyChain_a8d1f43709d1107d17f2ba2217d41f6de}
+
+\item 
+const \hyperlink{classndn_1_1SecPublicInfo}{Sec\+Public\+Info} \& {\bfseries get\+Pib} () const\hypertarget{classndn_1_1security_1_1KeyChain_ac1749a190c33f41b16c5ee30af31ee2e}{}\label{classndn_1_1security_1_1KeyChain_ac1749a190c33f41b16c5ee30af31ee2e}
+
+\item 
+\hyperlink{classndn_1_1SecTpm}{Sec\+Tpm} \& {\bfseries get\+Tpm} ()\hypertarget{classndn_1_1security_1_1KeyChain_a965195c7f06b37da5cd2b49f6ae9df52}{}\label{classndn_1_1security_1_1KeyChain_a965195c7f06b37da5cd2b49f6ae9df52}
+
+\item 
+const \hyperlink{classndn_1_1SecTpm}{Sec\+Tpm} \& {\bfseries get\+Tpm} () const\hypertarget{classndn_1_1security_1_1KeyChain_adebbf7d6474ae23f48b59b1b6f70f6e5}{}\label{classndn_1_1security_1_1KeyChain_adebbf7d6474ae23f48b59b1b6f70f6e5}
+
+\item 
+bool {\bfseries does\+Identity\+Exist} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_ac0c3b0b6c89114bfa997378fe6887baf}{}\label{classndn_1_1security_1_1KeyChain_ac0c3b0b6c89114bfa997378fe6887baf}
+
+\item 
+void {\bfseries add\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)\hypertarget{classndn_1_1security_1_1KeyChain_a2e91bc7c941effef105d33a9a0a35b49}{}\label{classndn_1_1security_1_1KeyChain_a2e91bc7c941effef105d33a9a0a35b49}
+
+\item 
+bool {\bfseries does\+Public\+Key\+Exist} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_ab0ef1c37027b72c2a42a6dbe6323cc40}{}\label{classndn_1_1security_1_1KeyChain_ab0ef1c37027b72c2a42a6dbe6323cc40}
+
+\item 
+void {\bfseries add\+Public\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Key\+Type key\+Type, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key\+Der)\hypertarget{classndn_1_1security_1_1KeyChain_ac9d2138f086124f253d38cf5cd429e23}{}\label{classndn_1_1security_1_1KeyChain_ac9d2138f086124f253d38cf5cd429e23}
+
+\item 
+void {\bfseries add\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key\+Der)\hypertarget{classndn_1_1security_1_1KeyChain_a7360bd0d0ff1574bbfac946f5b426fc2}{}\label{classndn_1_1security_1_1KeyChain_a7360bd0d0ff1574bbfac946f5b426fc2}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1PublicKey}{Public\+Key} $>$ {\bfseries get\+Public\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_a2a3d7e885c3ab7b806450bd4a9be60da}{}\label{classndn_1_1security_1_1KeyChain_a2a3d7e885c3ab7b806450bd4a9be60da}
+
+\item 
+bool {\bfseries does\+Certificate\+Exist} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_a3308c61c4c28bb14c6f0a7d3fec52636}{}\label{classndn_1_1security_1_1KeyChain_a3308c61c4c28bb14c6f0a7d3fec52636}
+
+\item 
+void {\bfseries add\+Certificate} (const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate)\hypertarget{classndn_1_1security_1_1KeyChain_a5f22ef6c28437b4456a872a3c389a043}{}\label{classndn_1_1security_1_1KeyChain_a5f22ef6c28437b4456a872a3c389a043}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ {\bfseries get\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_aead1c533e9788fe163bb5bed8f9024ab}{}\label{classndn_1_1security_1_1KeyChain_aead1c533e9788fe163bb5bed8f9024ab}
+
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries get\+Default\+Identity} () const\hypertarget{classndn_1_1security_1_1KeyChain_afe70c758680d45c92ed0ec9833a042a3}{}\label{classndn_1_1security_1_1KeyChain_afe70c758680d45c92ed0ec9833a042a3}
+
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries get\+Default\+Key\+Name\+For\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_a1d03373d90b9512bfca9613d28e44bd3}{}\label{classndn_1_1security_1_1KeyChain_a1d03373d90b9512bfca9613d28e44bd3}
+
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries get\+Default\+Certificate\+Name\+For\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_a3b1ff55f751243d23d7f428f9a0bfc24}{}\label{classndn_1_1security_1_1KeyChain_a3b1ff55f751243d23d7f428f9a0bfc24}
+
+\item 
+void {\bfseries get\+All\+Identities} (std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default) const\hypertarget{classndn_1_1security_1_1KeyChain_a45481c49f262bda78863a86655deffc0}{}\label{classndn_1_1security_1_1KeyChain_a45481c49f262bda78863a86655deffc0}
+
+\item 
+void {\bfseries get\+All\+Key\+Names} (std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default) const\hypertarget{classndn_1_1security_1_1KeyChain_ac93f59296e46c73751d33ea140401ce6}{}\label{classndn_1_1security_1_1KeyChain_ac93f59296e46c73751d33ea140401ce6}
+
+\item 
+void {\bfseries get\+All\+Key\+Names\+Of\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity, std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default) const\hypertarget{classndn_1_1security_1_1KeyChain_a4b10e7f993f9e1da83bcc222e7456c49}{}\label{classndn_1_1security_1_1KeyChain_a4b10e7f993f9e1da83bcc222e7456c49}
+
+\item 
+void {\bfseries get\+All\+Certificate\+Names} (std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default) const\hypertarget{classndn_1_1security_1_1KeyChain_aeee8c2d3e7427c5963d805e5422e1ec2}{}\label{classndn_1_1security_1_1KeyChain_aeee8c2d3e7427c5963d805e5422e1ec2}
+
+\item 
+void {\bfseries get\+All\+Certificate\+Names\+Of\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \&name\+List, bool is\+Default) const\hypertarget{classndn_1_1security_1_1KeyChain_a05ffad31712042991d0f3c1bb3923d1e}{}\label{classndn_1_1security_1_1KeyChain_a05ffad31712042991d0f3c1bb3923d1e}
+
+\item 
+void {\bfseries delete\+Certificate\+Info} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)\hypertarget{classndn_1_1security_1_1KeyChain_a2bffd75409a349e16373de64e4ca1763}{}\label{classndn_1_1security_1_1KeyChain_a2bffd75409a349e16373de64e4ca1763}
+
+\item 
+void {\bfseries delete\+Public\+Key\+Info} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)\hypertarget{classndn_1_1security_1_1KeyChain_a0ff9379ac1c52aa03736ea619c83c4d1}{}\label{classndn_1_1security_1_1KeyChain_a0ff9379ac1c52aa03736ea619c83c4d1}
+
+\item 
+void {\bfseries delete\+Identity\+Info} (const \hyperlink{classndn_1_1Name}{Name} \&identity)\hypertarget{classndn_1_1security_1_1KeyChain_ac8457929c7db8cea47c09148527dcafd}{}\label{classndn_1_1security_1_1KeyChain_ac8457929c7db8cea47c09148527dcafd}
+
+\item 
+void {\bfseries set\+Default\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)\hypertarget{classndn_1_1security_1_1KeyChain_aefa5601936f7655a839e89d461a79dc5}{}\label{classndn_1_1security_1_1KeyChain_aefa5601936f7655a839e89d461a79dc5}
+
+\item 
+void {\bfseries set\+Default\+Key\+Name\+For\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)\hypertarget{classndn_1_1security_1_1KeyChain_a3a8839341e38ccf4bd8b0c73590a964f}{}\label{classndn_1_1security_1_1KeyChain_a3a8839341e38ccf4bd8b0c73590a964f}
+
+\item 
+void {\bfseries set\+Default\+Certificate\+Name\+For\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)\hypertarget{classndn_1_1security_1_1KeyChain_a8c33a5ea8893954066a49f8a84e06fff}{}\label{classndn_1_1security_1_1KeyChain_a8c33a5ea8893954066a49f8a84e06fff}
+
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries get\+New\+Key\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name, bool use\+Ksk)\hypertarget{classndn_1_1security_1_1KeyChain_a945c44be63ad17420b6e35e17f616080}{}\label{classndn_1_1security_1_1KeyChain_a945c44be63ad17420b6e35e17f616080}
+
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries get\+Default\+Certificate\+Name\+For\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_a1745ad8ff868b7c5cc5bf862030a477b}{}\label{classndn_1_1security_1_1KeyChain_a1745ad8ff868b7c5cc5bf862030a477b}
+
+\item 
+\hyperlink{classndn_1_1Name}{Name} {\bfseries get\+Default\+Certificate\+Name} () const\hypertarget{classndn_1_1security_1_1KeyChain_aecded83515c49e7f4c44690375a34169}{}\label{classndn_1_1security_1_1KeyChain_aecded83515c49e7f4c44690375a34169}
+
+\item 
+void {\bfseries add\+Certificate\+As\+Key\+Default} (const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate)\hypertarget{classndn_1_1security_1_1KeyChain_a9a3f955f5d329306eaed8b28d8ffdaaf}{}\label{classndn_1_1security_1_1KeyChain_a9a3f955f5d329306eaed8b28d8ffdaaf}
+
+\item 
+void {\bfseries add\+Certificate\+As\+Identity\+Default} (const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate)\hypertarget{classndn_1_1security_1_1KeyChain_a12262ebf5c75bf213ff11e899ab7ef5f}{}\label{classndn_1_1security_1_1KeyChain_a12262ebf5c75bf213ff11e899ab7ef5f}
+
+\item 
+void {\bfseries add\+Certificate\+As\+System\+Default} (const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate)\hypertarget{classndn_1_1security_1_1KeyChain_a3105d61472dbe12283391f7fc7d0e144}{}\label{classndn_1_1security_1_1KeyChain_a3105d61472dbe12283391f7fc7d0e144}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} $>$ {\bfseries get\+Default\+Certificate} () const\hypertarget{classndn_1_1security_1_1KeyChain_ae1391dba27ad08360d40fe31eb47b1b3}{}\label{classndn_1_1security_1_1KeyChain_ae1391dba27ad08360d40fe31eb47b1b3}
+
+\item 
+void {\bfseries refresh\+Default\+Certificate} ()\hypertarget{classndn_1_1security_1_1KeyChain_ab5e27a0258642941f0dd10f388f9ad7e}{}\label{classndn_1_1security_1_1KeyChain_ab5e27a0258642941f0dd10f388f9ad7e}
+
+\item 
+void {\bfseries set\+Tpm\+Password} (const uint8\+\_\+t $\ast$password, size\+\_\+t password\+Length)\hypertarget{classndn_1_1security_1_1KeyChain_a250ccabafaf1229d0c94ae07ddd08cfe}{}\label{classndn_1_1security_1_1KeyChain_a250ccabafaf1229d0c94ae07ddd08cfe}
+
+\item 
+void {\bfseries reset\+Tpm\+Password} ()\hypertarget{classndn_1_1security_1_1KeyChain_ab770610f08c3c2a9a32534ce064c5f1d}{}\label{classndn_1_1security_1_1KeyChain_ab770610f08c3c2a9a32534ce064c5f1d}
+
+\item 
+void {\bfseries set\+In\+Terminal} (bool in\+Terminal)\hypertarget{classndn_1_1security_1_1KeyChain_afcf4bb8280896b1f95a6c83fff6771f2}{}\label{classndn_1_1security_1_1KeyChain_afcf4bb8280896b1f95a6c83fff6771f2}
+
+\item 
+bool {\bfseries get\+In\+Terminal} () const\hypertarget{classndn_1_1security_1_1KeyChain_a7ecbbb2b93675f82927758d6b8f594a2}{}\label{classndn_1_1security_1_1KeyChain_a7ecbbb2b93675f82927758d6b8f594a2}
+
+\item 
+bool {\bfseries is\+Locked} () const\hypertarget{classndn_1_1security_1_1KeyChain_a00d487606346d283bd11ea094b1bff72}{}\label{classndn_1_1security_1_1KeyChain_a00d487606346d283bd11ea094b1bff72}
+
+\item 
+bool {\bfseries unlock\+Tpm} (const char $\ast$password, size\+\_\+t password\+Length, bool use\+Password)\hypertarget{classndn_1_1security_1_1KeyChain_a8118fba3194815903e0311c5cc31c9de}{}\label{classndn_1_1security_1_1KeyChain_a8118fba3194815903e0311c5cc31c9de}
+
+\item 
+void {\bfseries generate\+Key\+Pair\+In\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1KeyParams}{Key\+Params} \&params)\hypertarget{classndn_1_1security_1_1KeyChain_ad6e98b79b1b3d7a183abd609b996facc}{}\label{classndn_1_1security_1_1KeyChain_ad6e98b79b1b3d7a183abd609b996facc}
+
+\item 
+void {\bfseries delete\+Key\+Pair\+In\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)\hypertarget{classndn_1_1security_1_1KeyChain_a5a0c58de267a06079447f46f7b81857c}{}\label{classndn_1_1security_1_1KeyChain_a5a0c58de267a06079447f46f7b81857c}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classndn_1_1PublicKey}{Public\+Key} $>$ {\bfseries get\+Public\+Key\+From\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name) const\hypertarget{classndn_1_1security_1_1KeyChain_aaa251df44b30a2b0a27f9771e511693e}{}\label{classndn_1_1security_1_1KeyChain_aaa251df44b30a2b0a27f9771e511693e}
+
+\item 
+\hyperlink{classndn_1_1Block}{Block} {\bfseries sign\+In\+Tpm} (const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Digest\+Algorithm digest\+Algorithm)\hypertarget{classndn_1_1security_1_1KeyChain_a45a64a34da45e91885a3eec193908381}{}\label{classndn_1_1security_1_1KeyChain_a45a64a34da45e91885a3eec193908381}
+
+\item 
+Const\+Buffer\+Ptr {\bfseries decrypt\+In\+Tpm} (const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, bool is\+Symmetric)\hypertarget{classndn_1_1security_1_1KeyChain_a5b09a74f6629f05303ba006d67ed80ce}{}\label{classndn_1_1security_1_1KeyChain_a5b09a74f6629f05303ba006d67ed80ce}
+
+\item 
+Const\+Buffer\+Ptr {\bfseries encrypt\+In\+Tpm} (const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, bool is\+Symmetric)\hypertarget{classndn_1_1security_1_1KeyChain_a0c5e6d1b1e292982f3a4812eb2587024}{}\label{classndn_1_1security_1_1KeyChain_a0c5e6d1b1e292982f3a4812eb2587024}
+
+\item 
+void {\bfseries generate\+Symmetric\+Key\+In\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1KeyParams}{Key\+Params} \&params)\hypertarget{classndn_1_1security_1_1KeyChain_aef589f964d340ce194e14798a930c471}{}\label{classndn_1_1security_1_1KeyChain_aef589f964d340ce194e14798a930c471}
+
+\item 
+bool {\bfseries does\+Key\+Exist\+In\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Key\+Class key\+Class) const\hypertarget{classndn_1_1security_1_1KeyChain_a5be2a386d09a5baf48d5db8118fe75b8}{}\label{classndn_1_1security_1_1KeyChain_a5be2a386d09a5baf48d5db8118fe75b8}
+
+\item 
+bool {\bfseries generate\+Random\+Block} (uint8\+\_\+t $\ast$res, size\+\_\+t size) const\hypertarget{classndn_1_1security_1_1KeyChain_a4500c459f7ad727d2fa1fb3536d8cef3}{}\label{classndn_1_1security_1_1KeyChain_a4500c459f7ad727d2fa1fb3536d8cef3}
+
+\item 
+void {\bfseries add\+App\+To\+Acl} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Key\+Class key\+Class, const std\+::string \&app\+Path, Acl\+Type acl)\hypertarget{classndn_1_1security_1_1KeyChain_a57a91a8674a6ed3fe409d6cd0ec93dba}{}\label{classndn_1_1security_1_1KeyChain_a57a91a8674a6ed3fe409d6cd0ec93dba}
+
+\item 
+Const\+Buffer\+Ptr {\bfseries export\+Private\+Key\+Pkcs5\+From\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const std\+::string \&password)\hypertarget{classndn_1_1security_1_1KeyChain_acbe5f444ac8d50b7baa624206f2adde5}{}\label{classndn_1_1security_1_1KeyChain_acbe5f444ac8d50b7baa624206f2adde5}
+
+\item 
+bool {\bfseries import\+Private\+Key\+Pkcs5\+Into\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const uint8\+\_\+t $\ast$buf, size\+\_\+t size, const std\+::string \&password)\hypertarget{classndn_1_1security_1_1KeyChain_a6984294da1cd5e4d10e5871b0e180cc5}{}\label{classndn_1_1security_1_1KeyChain_a6984294da1cd5e4d10e5871b0e180cc5}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Pib\+Type $>$ }\\static void \hyperlink{classndn_1_1security_1_1KeyChain_a97ebf80fef5de44852175f30e8efb60b}{register\+Pib} (std\+::initializer\+\_\+list$<$ std\+::string $>$ aliases)
+\begin{DoxyCompactList}\small\item\em Register a new P\+IB. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Tpm\+Type $>$ }\\static void \hyperlink{classndn_1_1security_1_1KeyChain_afed4b5a5b8016753c99a11a44094a92c}{register\+Tpm} (std\+::initializer\+\_\+list$<$ std\+::string $>$ aliases)
+\begin{DoxyCompactList}\small\item\em Register a new T\+PM. \end{DoxyCompactList}\item 
+static std\+::string \hyperlink{classndn_1_1security_1_1KeyChain_a5241f8ebb00bb8d0f837987fda9e1e05}{get\+Default\+Pib\+Locator} ()\hypertarget{classndn_1_1security_1_1KeyChain_a5241f8ebb00bb8d0f837987fda9e1e05}{}\label{classndn_1_1security_1_1KeyChain_a5241f8ebb00bb8d0f837987fda9e1e05}
+
+\begin{DoxyCompactList}\small\item\em Get default P\+IB locator. \end{DoxyCompactList}\item 
+static unique\+\_\+ptr$<$ \hyperlink{classndn_1_1SecPublicInfo}{Sec\+Public\+Info} $>$ \hyperlink{classndn_1_1security_1_1KeyChain_a1a418fc5d43110ecd7e4af26c4f97a73}{create\+Pib} (const std\+::string \&pib\+Locator)\hypertarget{classndn_1_1security_1_1KeyChain_a1a418fc5d43110ecd7e4af26c4f97a73}{}\label{classndn_1_1security_1_1KeyChain_a1a418fc5d43110ecd7e4af26c4f97a73}
+
+\begin{DoxyCompactList}\small\item\em Create a P\+IB according to {\ttfamily pib\+Locator}. \end{DoxyCompactList}\item 
+static std\+::string \hyperlink{classndn_1_1security_1_1KeyChain_adac28dc851d03104b948b343a89090c9}{get\+Default\+Tpm\+Locator} ()\hypertarget{classndn_1_1security_1_1KeyChain_adac28dc851d03104b948b343a89090c9}{}\label{classndn_1_1security_1_1KeyChain_adac28dc851d03104b948b343a89090c9}
+
+\begin{DoxyCompactList}\small\item\em Get default T\+PM locator. \end{DoxyCompactList}\item 
+static unique\+\_\+ptr$<$ \hyperlink{classndn_1_1SecTpm}{Sec\+Tpm} $>$ \hyperlink{classndn_1_1security_1_1KeyChain_abc6b4896099a73d4588a99c5f3cde9b1}{create\+Tpm} (const std\+::string \&tpm\+Locator)\hypertarget{classndn_1_1security_1_1KeyChain_abc6b4896099a73d4588a99c5f3cde9b1}{}\label{classndn_1_1security_1_1KeyChain_abc6b4896099a73d4588a99c5f3cde9b1}
+
+\begin{DoxyCompactList}\small\item\em Create a T\+PM according to {\ttfamily tpm\+Locator}. \end{DoxyCompactList}\item 
+static tlv\+::\+Signature\+Type\+Value {\bfseries get\+Signature\+Type} (Key\+Type key\+Type, Digest\+Algorithm digest\+Algorithm)\hypertarget{classndn_1_1security_1_1KeyChain_a3c3fccba48db4350a0e48b8cae898944}{}\label{classndn_1_1security_1_1KeyChain_a3c3fccba48db4350a0e48b8cae898944}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classndn_1_1Name}{Name} {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+E\+F\+IX}\hypertarget{classndn_1_1security_1_1KeyChain_a6f8aa6093d23387892cf1673a5645eae}{}\label{classndn_1_1security_1_1KeyChain_a6f8aa6093d23387892cf1673a5645eae}
+
+\item 
+static const \hyperlink{classndn_1_1security_1_1SigningInfo}{Signing\+Info} {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+I\+N\+FO}\hypertarget{classndn_1_1security_1_1KeyChain_aff9b4c0570c4e04e1af73895cbc818c3}{}\label{classndn_1_1security_1_1KeyChain_aff9b4c0570c4e04e1af73895cbc818c3}
+
+\item 
+static const \hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1security_1_1KeyChain_adf4f8fd3353671ac77f02b94530620b1}{D\+I\+G\+E\+S\+T\+\_\+\+S\+H\+A256\+\_\+\+I\+D\+E\+N\+T\+I\+TY}
+\begin{DoxyCompactList}\small\item\em A localhost identity which indicates that signature is generated using S\+H\+A-\/256. \end{DoxyCompactList}\item 
+static const \hyperlink{namespacendn_ae610775b86cefd44fb0d9b171861c964}{Rsa\+Key\+Params} {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+R\+A\+MS}\hypertarget{classndn_1_1security_1_1KeyChain_a17e94be3622f3af0a8676ae38a959889}{}\label{classndn_1_1security_1_1KeyChain_a17e94be3622f3af0a8676ae38a959889}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The packet signing interface. 
+
+Definition at line 48 of file key-\/chain.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!Key\+Chain@{Key\+Chain}}
+\index{Key\+Chain@{Key\+Chain}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{Key\+Chain()}{KeyChain()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::security\+::\+Key\+Chain\+::\+Key\+Chain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_adf8092a8d517e39d9fe2c18fc0fe1f96}{}\label{classndn_1_1security_1_1KeyChain_adf8092a8d517e39d9fe2c18fc0fe1f96}
+
+
+Constructor to create \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} with default P\+IB and T\+PM. 
+
+Default P\+IB and T\+PM are platform-\/dependent and can be overriden system-\/wide or on per-\/use basis.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}]Add detailed description about config file behavior here \end{DoxyRefDesc}
+
+
+Definition at line 120 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!Key\+Chain@{Key\+Chain}}
+\index{Key\+Chain@{Key\+Chain}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{Key\+Chain(const std\+::string \&pib\+Locator, const std\+::string \&tpm\+Locator, bool allow\+Reset=false)}{KeyChain(const std::string \&pibLocator, const std::string \&tpmLocator, bool allowReset=false)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::security\+::\+Key\+Chain\+::\+Key\+Chain (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{pib\+Locator, }
+\item[{const std\+::string \&}]{tpm\+Locator, }
+\item[{bool}]{allow\+Reset = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a32bd1457d4d52ec769d5115a8903a911}{}\label{classndn_1_1security_1_1KeyChain_a32bd1457d4d52ec769d5115a8903a911}
+
+
+\hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} constructor. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://redmine.named-data.net/issues/2260}{\tt http\+://redmine.\+named-\/data.\+net/issues/2260}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em pib\+Locator} & \\
+\hline
+{\em tpm\+Locator} & \\
+\hline
+{\em allow\+Reset} & if true, the P\+IB will be reset when the supplied tpm\+Locator mismatches the one in P\+IB \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 134 of file key-\/chain.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!create\+Identity@{create\+Identity}}
+\index{create\+Identity@{create\+Identity}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{create\+Identity(const Name \&identity\+Name, const Key\+Params \&params=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+R\+A\+M\+S)}{createIdentity(const Name \&identityName, const KeyParams \&params=DEFAULT\_KEY\_PARAMS)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::security\+::\+Key\+Chain\+::create\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name, }
+\item[{const {\bf Key\+Params} \&}]{params = {\ttfamily DEFAULT\+\_\+KEY\+\_\+PARAMS}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a9c50aa4c839df85f22c285c6f1e5c15e}{}\label{classndn_1_1security_1_1KeyChain_a9c50aa4c839df85f22c285c6f1e5c15e}
+
+
+Create an identity by creating a pair of Key-\/\+Signing-\/\+Key (K\+SK) for this identity and a self-\/signed certificate of the K\+SK. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name of the identity. \\
+\hline
+{\em params} & The key parameter if a key needs to be generated for the identity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the default certificate of the identity. 
+\end{DoxyReturn}
+
+
+Definition at line 274 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!delete\+Certificate@{delete\+Certificate}}
+\index{delete\+Certificate@{delete\+Certificate}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{delete\+Certificate(const Name \&certificate\+Name)}{deleteCertificate(const Name \&certificateName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::delete\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{certificate\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_ac5389a6d8c4eac92c7436af9411747a9}{}\label{classndn_1_1security_1_1KeyChain_ac5389a6d8c4eac92c7436af9411747a9}
+
+
+delete a certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em certificate\+Name} & The certificate to be deleted. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1KeyChain_1_1Error}{Key\+Chain\+::\+Error}} & if certificate cannot be deleted. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 811 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!delete\+Identity@{delete\+Identity}}
+\index{delete\+Identity@{delete\+Identity}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{delete\+Identity(const Name \&identity)}{deleteIdentity(const Name \&identity)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::delete\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a116937444718372fa29e414ab40a6321}{}\label{classndn_1_1security_1_1KeyChain_a116937444718372fa29e414ab40a6321}
+
+
+delete an identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The identity to be deleted. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1KeyChain_1_1Error}{Key\+Chain\+::\+Error}} & if identity cannot be deleted. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 824 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!delete\+Key@{delete\+Key}}
+\index{delete\+Key@{delete\+Key}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{delete\+Key(const Name \&key\+Name)}{deleteKey(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::delete\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a30a89030ae7bf9fc386ff11484b32b06}{}\label{classndn_1_1security_1_1KeyChain_a30a89030ae7bf9fc386ff11484b32b06}
+
+
+delete a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The key to be deleted. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1KeyChain_1_1Error}{Key\+Chain\+::\+Error}} & if key cannot be deleted. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 817 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!export\+Identity@{export\+Identity}}
+\index{export\+Identity@{export\+Identity}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{export\+Identity(const Name \&identity, const std\+::string \&password\+Str)}{exportIdentity(const Name \&identity, const std::string \&passwordStr)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Secured\+Bag} $>$ ndn\+::security\+::\+Key\+Chain\+::export\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const std\+::string \&}]{password\+Str}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a0177b228c915bc9f2c4ae57617dd8bfb}{}\label{classndn_1_1security_1_1KeyChain_a0177b228c915bc9f2c4ae57617dd8bfb}
+
+
+export an identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The identity to export. \\
+\hline
+{\em password\+Str} & The password to secure the private key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded export data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if anything goes wrong in exporting. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 601 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!generate\+Ecdsa\+Key\+Pair@{generate\+Ecdsa\+Key\+Pair}}
+\index{generate\+Ecdsa\+Key\+Pair@{generate\+Ecdsa\+Key\+Pair}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{generate\+Ecdsa\+Key\+Pair(const Name \&identity\+Name, bool is\+Ksk=false, uint32\+\_\+t key\+Size=256)}{generateEcdsaKeyPair(const Name \&identityName, bool isKsk=false, uint32\_t keySize=256)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::security\+::\+Key\+Chain\+::generate\+Ecdsa\+Key\+Pair (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name, }
+\item[{bool}]{is\+Ksk = {\ttfamily false}, }
+\item[{uint32\+\_\+t}]{key\+Size = {\ttfamily 256}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_af3ef46d4a94b2777bda04e3615907f6c}{}\label{classndn_1_1security_1_1KeyChain_af3ef46d4a94b2777bda04e3615907f6c}
+
+
+Generate a pair of E\+C\+D\+SA keys for the specified identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name of the identity. \\
+\hline
+{\em is\+Ksk} & true for generating a Key-\/\+Signing-\/\+Key (K\+SK), false for a Data-\/\+Signing-\/\+Key (K\+SK). \\
+\hline
+{\em key\+Size} & The size of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated key name. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1security_1_1KeyChain_a1b66b39bc8045408dcb4990b1c90f06b}{generate\+Rsa\+Key\+Pair} 
+\end{DoxySeeAlso}
+
+
+Definition at line 320 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!generate\+Ecdsa\+Key\+Pair\+As\+Default@{generate\+Ecdsa\+Key\+Pair\+As\+Default}}
+\index{generate\+Ecdsa\+Key\+Pair\+As\+Default@{generate\+Ecdsa\+Key\+Pair\+As\+Default}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{generate\+Ecdsa\+Key\+Pair\+As\+Default(const Name \&identity\+Name, bool is\+Ksk, uint32\+\_\+t key\+Size=256)}{generateEcdsaKeyPairAsDefault(const Name \&identityName, bool isKsk, uint32\_t keySize=256)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::security\+::\+Key\+Chain\+::generate\+Ecdsa\+Key\+Pair\+As\+Default (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name, }
+\item[{bool}]{is\+Ksk, }
+\item[{uint32\+\_\+t}]{key\+Size = {\ttfamily 256}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_ab28660230a99ead349de7c6f06a7c691}{}\label{classndn_1_1security_1_1KeyChain_ab28660230a99ead349de7c6f06a7c691}
+
+
+Generate a pair of E\+C\+D\+SA keys for the specified identity and set it as default key for the identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name of the identity. \\
+\hline
+{\em is\+Ksk} & true for generating a Key-\/\+Signing-\/\+Key (K\+SK), false for a Data-\/\+Signing-\/\+Key (K\+SK). \\
+\hline
+{\em key\+Size} & The size of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated key name. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1security_1_1KeyChain_a1b66b39bc8045408dcb4990b1c90f06b}{generate\+Rsa\+Key\+Pair}, \hyperlink{classndn_1_1security_1_1KeyChain_af3ef46d4a94b2777bda04e3615907f6c}{generate\+Ecdsa\+Key\+Pair}, \hyperlink{classndn_1_1security_1_1KeyChain_af90c9766ac7c6fc2b219ba10355173fc}{generate\+Rsa\+Key\+Pair\+As\+Default} 
+\end{DoxySeeAlso}
+
+
+Definition at line 339 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!generate\+Rsa\+Key\+Pair@{generate\+Rsa\+Key\+Pair}}
+\index{generate\+Rsa\+Key\+Pair@{generate\+Rsa\+Key\+Pair}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{generate\+Rsa\+Key\+Pair(const Name \&identity\+Name, bool is\+Ksk=false, uint32\+\_\+t key\+Size=2048)}{generateRsaKeyPair(const Name \&identityName, bool isKsk=false, uint32\_t keySize=2048)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::security\+::\+Key\+Chain\+::generate\+Rsa\+Key\+Pair (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name, }
+\item[{bool}]{is\+Ksk = {\ttfamily false}, }
+\item[{uint32\+\_\+t}]{key\+Size = {\ttfamily 2048}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a1b66b39bc8045408dcb4990b1c90f06b}{}\label{classndn_1_1security_1_1KeyChain_a1b66b39bc8045408dcb4990b1c90f06b}
+
+
+Generate a pair of R\+SA keys for the specified identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name of the identity. \\
+\hline
+{\em is\+Ksk} & true for generating a Key-\/\+Signing-\/\+Key (K\+SK), false for a Data-\/\+Signing-\/\+Key (K\+SK). \\
+\hline
+{\em key\+Size} & The size of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated key name. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1security_1_1KeyChain_af3ef46d4a94b2777bda04e3615907f6c}{generate\+Ecdsa\+Key\+Pair} 
+\end{DoxySeeAlso}
+
+
+Definition at line 313 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!generate\+Rsa\+Key\+Pair\+As\+Default@{generate\+Rsa\+Key\+Pair\+As\+Default}}
+\index{generate\+Rsa\+Key\+Pair\+As\+Default@{generate\+Rsa\+Key\+Pair\+As\+Default}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{generate\+Rsa\+Key\+Pair\+As\+Default(const Name \&identity\+Name, bool is\+Ksk=false, uint32\+\_\+t key\+Size=2048)}{generateRsaKeyPairAsDefault(const Name \&identityName, bool isKsk=false, uint32\_t keySize=2048)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Name} ndn\+::security\+::\+Key\+Chain\+::generate\+Rsa\+Key\+Pair\+As\+Default (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name, }
+\item[{bool}]{is\+Ksk = {\ttfamily false}, }
+\item[{uint32\+\_\+t}]{key\+Size = {\ttfamily 2048}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_af90c9766ac7c6fc2b219ba10355173fc}{}\label{classndn_1_1security_1_1KeyChain_af90c9766ac7c6fc2b219ba10355173fc}
+
+
+Generate a pair of R\+SA keys for the specified identity and set it as default key for the identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name of the identity. \\
+\hline
+{\em is\+Ksk} & true for generating a Key-\/\+Signing-\/\+Key (K\+SK), false for a Data-\/\+Signing-\/\+Key (K\+SK). \\
+\hline
+{\em key\+Size} & The size of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated key name. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1security_1_1KeyChain_a1b66b39bc8045408dcb4990b1c90f06b}{generate\+Rsa\+Key\+Pair}, \hyperlink{classndn_1_1security_1_1KeyChain_af3ef46d4a94b2777bda04e3615907f6c}{generate\+Ecdsa\+Key\+Pair}, \hyperlink{classndn_1_1security_1_1KeyChain_ab28660230a99ead349de7c6f06a7c691}{generate\+Ecdsa\+Key\+Pair\+As\+Default} 
+\end{DoxySeeAlso}
+
+
+Definition at line 327 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!import\+Identity@{import\+Identity}}
+\index{import\+Identity@{import\+Identity}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{import\+Identity(const Secured\+Bag \&secured\+Bag, const std\+::string \&password\+Str)}{importIdentity(const SecuredBag \&securedBag, const std::string \&passwordStr)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::import\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Secured\+Bag} \&}]{secured\+Bag, }
+\item[{const std\+::string \&}]{password\+Str}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a753d555c36e02dbc77fd7e9a109ae770}{}\label{classndn_1_1security_1_1KeyChain_a753d555c36e02dbc77fd7e9a109ae770}
+
+
+import an identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em secured\+Bag} & The encoded import data. \\
+\hline
+{\em password\+Str} & The password to secure the private key. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 636 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!prepare\+Unsigned\+Identity\+Certificate@{prepare\+Unsigned\+Identity\+Certificate}}
+\index{prepare\+Unsigned\+Identity\+Certificate@{prepare\+Unsigned\+Identity\+Certificate}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{prepare\+Unsigned\+Identity\+Certificate(const Name \&key\+Name, const Name \&signing\+Identity, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After, const std\+::vector$<$ Certificate\+Subject\+Description $>$ \&subject\+Description, const Name \&cert\+Prefix=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+E\+F\+I\+X)}{prepareUnsignedIdentityCertificate(const Name \&keyName, const Name \&signingIdentity, const time::system\_clock::TimePoint \&notBefore, const time::system\_clock::TimePoint \&notAfter, const std::vector< CertificateSubjectDescription > \&subjectDescription, const Name \&certPrefix=DEFAULT\_PREFIX)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Identity\+Certificate} $>$ ndn\+::security\+::\+Key\+Chain\+::prepare\+Unsigned\+Identity\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{const {\bf Name} \&}]{signing\+Identity, }
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{not\+Before, }
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{not\+After, }
+\item[{const std\+::vector$<$ {\bf Certificate\+Subject\+Description} $>$ \&}]{subject\+Description, }
+\item[{const {\bf Name} \&}]{cert\+Prefix = {\ttfamily DEFAULT\+\_\+PREFIX}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a536a14c1b3eea7cf72a6e478ad3d28ea}{}\label{classndn_1_1security_1_1KeyChain_a536a14c1b3eea7cf72a6e478ad3d28ea}
+
+
+prepare an unsigned identity certificate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & \hyperlink{classndn_1_1security_1_1Key}{Key} name, e.\+g., {\ttfamily /$<$identity\+\_\+name$>$/ksk-\/123456}. \\
+\hline
+{\em signing\+Identity} & The signing identity. \\
+\hline
+{\em not\+Before} & Refer to \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}. \\
+\hline
+{\em not\+After} & Refer to \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}. \\
+\hline
+{\em subject\+Description} & Refer to \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}. \\
+\hline
+{\em cert\+Prefix} & Prefix before {\ttfamily K\+EY} component. By default, \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} will infer the certificate name according to the relation between the signing\+Identity and the subject identity. If signing\+Identity is a prefix of the subject identity, {\ttfamily K\+EY} will be inserted after the signing\+Identity, otherwise {\ttfamily K\+EY} is inserted after subject identity (i.\+e., before {\ttfamily ksk-\/....}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}. 
+\end{DoxyReturn}
+
+
+Definition at line 352 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!prepare\+Unsigned\+Identity\+Certificate@{prepare\+Unsigned\+Identity\+Certificate}}
+\index{prepare\+Unsigned\+Identity\+Certificate@{prepare\+Unsigned\+Identity\+Certificate}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{prepare\+Unsigned\+Identity\+Certificate(const Name \&key\+Name, const Public\+Key \&public\+Key, const Name \&signing\+Identity, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+Before, const time\+::system\+\_\+clock\+::\+Time\+Point \&not\+After, const std\+::vector$<$ Certificate\+Subject\+Description $>$ \&subject\+Description, const Name \&cert\+Prefix=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+E\+F\+I\+X)}{prepareUnsignedIdentityCertificate(const Name \&keyName, const PublicKey \&publicKey, const Name \&signingIdentity, const time::system\_clock::TimePoint \&notBefore, const time::system\_clock::TimePoint \&notAfter, const std::vector< CertificateSubjectDescription > \&subjectDescription, const Name \&certPrefix=DEFAULT\_PREFIX)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Identity\+Certificate} $>$ ndn\+::security\+::\+Key\+Chain\+::prepare\+Unsigned\+Identity\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{const {\bf Public\+Key} \&}]{public\+Key, }
+\item[{const {\bf Name} \&}]{signing\+Identity, }
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{not\+Before, }
+\item[{const time\+::system\+\_\+clock\+::\+Time\+Point \&}]{not\+After, }
+\item[{const std\+::vector$<$ {\bf Certificate\+Subject\+Description} $>$ \&}]{subject\+Description, }
+\item[{const {\bf Name} \&}]{cert\+Prefix = {\ttfamily DEFAULT\+\_\+PREFIX}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a06bea75b7883d188257eb1feb056bb3a}{}\label{classndn_1_1security_1_1KeyChain_a06bea75b7883d188257eb1feb056bb3a}
+
+
+prepare an unsigned identity certificate 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & \hyperlink{classndn_1_1security_1_1Key}{Key} name, e.\+g., {\ttfamily /$<$identity\+\_\+name$>$/ksk-\/123456}. \\
+\hline
+{\em public\+Key} & Public key to sign. \\
+\hline
+{\em signing\+Identity} & The signing identity. \\
+\hline
+{\em not\+Before} & Refer to \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}. \\
+\hline
+{\em not\+After} & Refer to \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}. \\
+\hline
+{\em subject\+Description} & Refer to \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}. \\
+\hline
+{\em cert\+Prefix} & Prefix before {\ttfamily K\+EY} component. By default, \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} will infer the certificate name according to the relation between the signing\+Identity and the subject identity. If signing\+Identity is a prefix of the subject identity, {\ttfamily K\+EY} will be inserted after the signing\+Identity, otherwise {\ttfamily K\+EY} is inserted after subject identity (i.\+e., before {\ttfamily ksk-\/....}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate}. 
+\end{DoxyReturn}
+
+
+Definition at line 375 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!register\+Pib@{register\+Pib}}
+\index{register\+Pib@{register\+Pib}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{register\+Pib(std\+::initializer\+\_\+list$<$ std\+::string $>$ aliases)}{registerPib(std::initializer\_list< std::string > aliases)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Pib\+Type $>$ void ndn\+::security\+::\+Key\+Chain\+::register\+Pib (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ std\+::string $>$}]{aliases}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classndn_1_1security_1_1KeyChain_a97ebf80fef5de44852175f30e8efb60b}{}\label{classndn_1_1security_1_1KeyChain_a97ebf80fef5de44852175f30e8efb60b}
+
+
+Register a new P\+IB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aliases} & List of schemes with which this P\+IB will be associated. The first alias in the list is considered a canonical name of the P\+IB instance. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 912 of file key-\/chain.\+hpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!register\+Tpm@{register\+Tpm}}
+\index{register\+Tpm@{register\+Tpm}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{register\+Tpm(std\+::initializer\+\_\+list$<$ std\+::string $>$ aliases)}{registerTpm(std::initializer\_list< std::string > aliases)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Tpm\+Type $>$ void ndn\+::security\+::\+Key\+Chain\+::register\+Tpm (
+\begin{DoxyParamCaption}
+\item[{std\+::initializer\+\_\+list$<$ std\+::string $>$}]{aliases}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classndn_1_1security_1_1KeyChain_afed4b5a5b8016753c99a11a44094a92c}{}\label{classndn_1_1security_1_1KeyChain_afed4b5a5b8016753c99a11a44094a92c}
+
+
+Register a new T\+PM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aliases} & List of schemes with which this T\+PM will be associated The first alias in the list is considered a canonical name of the T\+PM instance. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 921 of file key-\/chain.\+hpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!self\+Sign@{self\+Sign}}
+\index{self\+Sign@{self\+Sign}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{self\+Sign(const Name \&key\+Name)}{selfSign(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Identity\+Certificate} $>$ ndn\+::security\+::\+Key\+Chain\+::self\+Sign (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a99ced46f0a175455f86f175403662412}{}\label{classndn_1_1security_1_1KeyChain_a99ced46f0a175455f86f175403662412}
+
+
+Generate a self-\/signed certificate for a public key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the public key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated certificate, shared\+\_\+ptr$<$\+Identity\+Certificate$>$() if self\+Sign fails 
+\end{DoxyReturn}
+
+
+Definition at line 556 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!self\+Sign@{self\+Sign}}
+\index{self\+Sign@{self\+Sign}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{self\+Sign(\+Identity\+Certificate \&cert)}{selfSign(IdentityCertificate \&cert)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::self\+Sign (
+\begin{DoxyParamCaption}
+\item[{{\bf Identity\+Certificate} \&}]{cert}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a332ab9ef9cf7044c9f15df3b516e2aae}{}\label{classndn_1_1security_1_1KeyChain_a332ab9ef9cf7044c9f15df3b516e2aae}
+
+
+Self-\/sign the supplied identity certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert} & The supplied cert. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecTpm_1_1Error}{Sec\+Tpm\+::\+Error}} & if the private key does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 586 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign@{sign}}
+\index{sign@{sign}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign(\+Data \&data, const Signing\+Info \&params=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+I\+N\+F\+O)}{sign(Data \&data, const SigningInfo \&params=DEFAULT\_SIGNING\_INFO)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::sign (
+\begin{DoxyParamCaption}
+\item[{{\bf Data} \&}]{data, }
+\item[{const {\bf Signing\+Info} \&}]{params = {\ttfamily DEFAULT\+\_\+SIGNING\+\_\+INFO}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a787253e1e20d5c836e0eb8726285c484}{}\label{classndn_1_1security_1_1KeyChain_a787253e1e20d5c836e0eb8726285c484}
+
+
+Sign data according to the supplied signing information. 
+
+This method uses the supplied signing information {\ttfamily params} to create the \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} block\+:
+\begin{DoxyItemize}
+\item it selects a private key and its certificate to sign the packet
+\item sets the \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} field with the certificate name, and
+\item adds other requested information to the \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} block).
+\end{DoxyItemize}
+
+After that, the method assigns the created \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} to the data packets, generate a signature and sets as part of the Signature\+Value block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to sign \\
+\hline
+{\em params} & The signing parameters. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1KeyChain_1_1Error}{Error}} & if signing fails. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1security_1_1SigningInfo}{Signing\+Info} 
+\end{DoxySeeAlso}
+
+
+Definition at line 517 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign@{sign}}
+\index{sign@{sign}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign(\+Interest \&interest, const Signing\+Info \&params=\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+I\+G\+N\+I\+N\+G\+\_\+\+I\+N\+F\+O)}{sign(Interest \&interest, const SigningInfo \&params=DEFAULT\_SIGNING\_INFO)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::sign (
+\begin{DoxyParamCaption}
+\item[{{\bf Interest} \&}]{interest, }
+\item[{const {\bf Signing\+Info} \&}]{params = {\ttfamily DEFAULT\+\_\+SIGNING\+\_\+INFO}}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a1dd089cd000f2e2766bfec000e96eced}{}\label{classndn_1_1security_1_1KeyChain_a1dd089cd000f2e2766bfec000e96eced}
+
+
+Sign interest according to the supplied signing information. 
+
+This method uses the supplied signing information {\ttfamily params} to create the \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} block\+:
+\begin{DoxyItemize}
+\item it selects a private key and its certificate to sign the packet
+\item sets the \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} field with the certificate name, and
+\item adds other requested information to the \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} block).
+\end{DoxyItemize}
+
+After that, the method appends the created \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} to the interest name, generate a signature and appends it as part of the Signature\+Value block to the interest name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & The interest to sign \\
+\hline
+{\em params} & The signing parameters. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1KeyChain_1_1Error}{Error}} & if signing fails. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1security_1_1SigningInfo}{Signing\+Info} 
+\end{DoxySeeAlso}
+
+
+Definition at line 523 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign@{sign}}
+\index{sign@{sign}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign(const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Length, const Signing\+Info \&params)}{sign(const uint8\_t *buffer, size\_t bufferLength, const SigningInfo \&params)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} ndn\+::security\+::\+Key\+Chain\+::sign (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Length, }
+\item[{const {\bf Signing\+Info} \&}]{params}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a92e3ef8eb76208713612370d72187a58}{}\label{classndn_1_1security_1_1KeyChain_a92e3ef8eb76208713612370d72187a58}
+
+
+Sign buffer according to the supplied signing information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to sign \\
+\hline
+{\em buffer\+Length} & The buffer size \\
+\hline
+{\em params} & The signing parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Signature\+Value T\+LV block 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1KeyChain_1_1Error}{Error}} & if signing fails. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classndn_1_1security_1_1SigningInfo}{Signing\+Info} 
+\end{DoxySeeAlso}
+
+
+Definition at line 529 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign@{sign}}
+\index{sign@{sign}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign(\+T \&packet, const Name \&certificate\+Name)}{sign(T \&packet, const Name \&certificateName)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void ndn\+::security\+::\+Key\+Chain\+::sign (
+\begin{DoxyParamCaption}
+\item[{T \&}]{packet, }
+\item[{const {\bf Name} \&}]{certificate\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a38cd4d4750a9b844953994e0e6731856}{}\label{classndn_1_1security_1_1KeyChain_a38cd4d4750a9b844953994e0e6731856}
+
+
+Sign packet with a particular certificate. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000030}{Deprecated}]use sign sign(\+T\&, const Signing\+Info\&) \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The packet to be signed. \\
+\hline
+{\em certificate\+Name} & The certificate name of the key to use for signing. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if certificate does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 898 of file key-\/chain.\+hpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign@{sign}}
+\index{sign@{sign}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign(const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Length, const Name \&certificate\+Name)}{sign(const uint8\_t *buffer, size\_t bufferLength, const Name \&certificateName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signature} ndn\+::security\+::\+Key\+Chain\+::sign (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Length, }
+\item[{const {\bf Name} \&}]{certificate\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a70cadd2bfce67770acfba02f1a6cf66d}{}\label{classndn_1_1security_1_1KeyChain_a70cadd2bfce67770acfba02f1a6cf66d}
+
+
+Sign the byte array using a particular certificate. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000031}{Deprecated}]Use \hyperlink{classndn_1_1security_1_1KeyChain_a92e3ef8eb76208713612370d72187a58}{sign(const uint8\+\_\+t$\ast$, size\+\_\+t, const Signing\+Info\&)} instead \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The byte array to be signed. \\
+\hline
+{\em buffer\+Length} & the length of buffer. \\
+\hline
+{\em certificate\+Name} & The certificate name of the signing key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classndn_1_1Signature}{Signature}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecPublicInfo_1_1Error}{Sec\+Public\+Info\+::\+Error}} & if certificate does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 538 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign\+By\+Identity@{sign\+By\+Identity}}
+\index{sign\+By\+Identity@{sign\+By\+Identity}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign\+By\+Identity(\+T \&packet, const Name \&identity\+Name)}{signByIdentity(T \&packet, const Name \&identityName)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void ndn\+::security\+::\+Key\+Chain\+::sign\+By\+Identity (
+\begin{DoxyParamCaption}
+\item[{T \&}]{packet, }
+\item[{const {\bf Name} \&}]{identity\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a12667fcdf3bef2250eb3b523b1e4f987}{}\label{classndn_1_1security_1_1KeyChain_a12667fcdf3bef2250eb3b523b1e4f987}
+
+
+Sign packet using the default certificate of a particular identity. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000032}{Deprecated}]use sign sign(\+T\&, const Signing\+Info\&) \end{DoxyRefDesc}
+If there is no default certificate of that identity, this method will create a self-\/signed certificate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The packet to be signed. \\
+\hline
+{\em identity\+Name} & The signing identity name. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 905 of file key-\/chain.\+hpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign\+By\+Identity@{sign\+By\+Identity}}
+\index{sign\+By\+Identity@{sign\+By\+Identity}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign\+By\+Identity(const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Length, const Name \&identity\+Name)}{signByIdentity(const uint8\_t *buffer, size\_t bufferLength, const Name \&identityName)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signature} ndn\+::security\+::\+Key\+Chain\+::sign\+By\+Identity (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Length, }
+\item[{const {\bf Name} \&}]{identity\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a77e1edd0663bf184deef4be2566c921b}{}\label{classndn_1_1security_1_1KeyChain_a77e1edd0663bf184deef4be2566c921b}
+
+
+Sign the byte array using the default certificate of a particular identity. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000033}{Deprecated}]use \hyperlink{classndn_1_1security_1_1KeyChain_a92e3ef8eb76208713612370d72187a58}{sign(const uint8\+\_\+t$\ast$, size\+\_\+t, const Signing\+Info\&)} instead \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The byte array to be signed. \\
+\hline
+{\em buffer\+Length} & the length of buffer. \\
+\hline
+{\em identity\+Name} & The identity name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{classndn_1_1Signature}{Signature}. 
+\end{DoxyReturn}
+
+
+Definition at line 748 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign\+With\+Sha256@{sign\+With\+Sha256}}
+\index{sign\+With\+Sha256@{sign\+With\+Sha256}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign\+With\+Sha256(\+Data \&data)}{signWithSha256(Data \&data)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::sign\+With\+Sha256 (
+\begin{DoxyParamCaption}
+\item[{{\bf Data} \&}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_ae68a5ce146b5902e6a2000650b948d14}{}\label{classndn_1_1security_1_1KeyChain_ae68a5ce146b5902e6a2000650b948d14}
+
+
+Set Sha256 weak signature for {\ttfamily data}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000034}{Deprecated}]use sign(\+Data\&, Signing\+Info(\+Signing\+Info\+::\+S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256)) \end{DoxyRefDesc}
+
+
+Definition at line 774 of file key-\/chain.\+cpp.
+
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!sign\+With\+Sha256@{sign\+With\+Sha256}}
+\index{sign\+With\+Sha256@{sign\+With\+Sha256}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{sign\+With\+Sha256(\+Interest \&interest)}{signWithSha256(Interest \&interest)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Key\+Chain\+::sign\+With\+Sha256 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interest} \&}]{interest}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1KeyChain_a093ee12db8424cac208881f477b0476e}{}\label{classndn_1_1security_1_1KeyChain_a093ee12db8424cac208881f477b0476e}
+
+
+Set Sha256 weak signature for {\ttfamily interest}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000035}{Deprecated}]use sign(\+Interest\&, Signing\+Info(\+Signing\+Info\+::\+S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256)) \end{DoxyRefDesc}
+
+
+Definition at line 787 of file key-\/chain.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}!D\+I\+G\+E\+S\+T\+\_\+\+S\+H\+A256\+\_\+\+I\+D\+E\+N\+T\+I\+TY@{D\+I\+G\+E\+S\+T\+\_\+\+S\+H\+A256\+\_\+\+I\+D\+E\+N\+T\+I\+TY}}
+\index{D\+I\+G\+E\+S\+T\+\_\+\+S\+H\+A256\+\_\+\+I\+D\+E\+N\+T\+I\+TY@{D\+I\+G\+E\+S\+T\+\_\+\+S\+H\+A256\+\_\+\+I\+D\+E\+N\+T\+I\+TY}!ndn\+::security\+::\+Key\+Chain@{ndn\+::security\+::\+Key\+Chain}}
+\subsubsection[{\texorpdfstring{D\+I\+G\+E\+S\+T\+\_\+\+S\+H\+A256\+\_\+\+I\+D\+E\+N\+T\+I\+TY}{DIGEST\_SHA256\_IDENTITY}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name} ndn\+::security\+::\+Key\+Chain\+::\+D\+I\+G\+E\+S\+T\+\_\+\+S\+H\+A256\+\_\+\+I\+D\+E\+N\+T\+I\+TY\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classndn_1_1security_1_1KeyChain_adf4f8fd3353671ac77f02b94530620b1}{}\label{classndn_1_1security_1_1KeyChain_adf4f8fd3353671ac77f02b94530620b1}
+
+
+A localhost identity which indicates that signature is generated using S\+H\+A-\/256. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]Passing this as identity is not implemented. \end{DoxyRefDesc}
+
+
+Definition at line 871 of file key-\/chain.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/key-\/chain.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/key-\/chain.\+cpp\end{DoxyCompactItemize}

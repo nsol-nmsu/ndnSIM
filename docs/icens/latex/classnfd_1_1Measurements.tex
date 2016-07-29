@@ -1,0 +1,109 @@
+\hypertarget{classnfd_1_1Measurements}{}\section{nfd\+:\+:Measurements Class Reference}
+\label{classnfd_1_1Measurements}\index{nfd\+::\+Measurements@{nfd\+::\+Measurements}}
+
+
+represents the \hyperlink{classnfd_1_1Measurements}{Measurements} table  
+
+
+
+
+{\ttfamily \#include $<$measurements.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:Measurements\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1Measurements}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Measurements} (\hyperlink{classnfd_1_1NameTree}{Name\+Tree} \&nametree)\hypertarget{classnfd_1_1Measurements_abefa0b718b1264c96fbcaffcd7154864}{}\label{classnfd_1_1Measurements_abefa0b718b1264c96fbcaffcd7154864}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ \hyperlink{classnfd_1_1Measurements_a9bad29e5be58ef5b68fbdb8127360782}{get} (const \hyperlink{classndn_1_1Name}{Name} \&name)\hypertarget{classnfd_1_1Measurements_a9bad29e5be58ef5b68fbdb8127360782}{}\label{classnfd_1_1Measurements_a9bad29e5be58ef5b68fbdb8127360782}
+
+\begin{DoxyCompactList}\small\item\em find or insert a \hyperlink{classnfd_1_1Measurements}{Measurements} entry for {\ttfamily name} \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ \hyperlink{classnfd_1_1Measurements_a1db47ae06c5bdd6ab96098c63ae144fb}{get} (const \hyperlink{classnfd_1_1fib_1_1Entry}{fib\+::\+Entry} \&fib\+Entry)\hypertarget{classnfd_1_1Measurements_a1db47ae06c5bdd6ab96098c63ae144fb}{}\label{classnfd_1_1Measurements_a1db47ae06c5bdd6ab96098c63ae144fb}
+
+\begin{DoxyCompactList}\small\item\em find or insert a \hyperlink{classnfd_1_1Measurements}{Measurements} entry for {\ttfamily fib\+Entry.\+get\+Prefix()} \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ \hyperlink{classnfd_1_1Measurements_a1ee210e05521f5bff5f2465f87598aa6}{get} (const \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry)\hypertarget{classnfd_1_1Measurements_a1ee210e05521f5bff5f2465f87598aa6}{}\label{classnfd_1_1Measurements_a1ee210e05521f5bff5f2465f87598aa6}
+
+\begin{DoxyCompactList}\small\item\em find or insert a \hyperlink{classnfd_1_1Measurements}{Measurements} entry for {\ttfamily pit\+Entry.\+get\+Name()} \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ \hyperlink{classnfd_1_1Measurements_ad6328d4a86c7239668946926dd11d8a2}{get\+Parent} (const \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} \&child)
+\begin{DoxyCompactList}\small\item\em find or insert a \hyperlink{classnfd_1_1Measurements}{Measurements} entry for child\textquotesingle{}s parent \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ \hyperlink{classnfd_1_1Measurements_af200fa0e8d1f7017ab5d13c4c13e925d}{find\+Longest\+Prefix\+Match} (const \hyperlink{classndn_1_1Name}{Name} \&name, const measurements\+::\+Entry\+Predicate \&pred=\hyperlink{classnfd_1_1measurements_1_1AnyEntry}{measurements\+::\+Any\+Entry}()) const\hypertarget{classnfd_1_1Measurements_af200fa0e8d1f7017ab5d13c4c13e925d}{}\label{classnfd_1_1Measurements_af200fa0e8d1f7017ab5d13c4c13e925d}
+
+\begin{DoxyCompactList}\small\item\em perform a longest prefix match for {\ttfamily name} \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ \hyperlink{classnfd_1_1Measurements_a515c80c93d03c48bcfca7015e10cb80b}{find\+Longest\+Prefix\+Match} (const \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry, const measurements\+::\+Entry\+Predicate \&pred=\hyperlink{classnfd_1_1measurements_1_1AnyEntry}{measurements\+::\+Any\+Entry}()) const\hypertarget{classnfd_1_1Measurements_a515c80c93d03c48bcfca7015e10cb80b}{}\label{classnfd_1_1Measurements_a515c80c93d03c48bcfca7015e10cb80b}
+
+\begin{DoxyCompactList}\small\item\em perform a longest prefix match for {\ttfamily pit\+Entry.\+get\+Name()} \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} $>$ \hyperlink{classnfd_1_1Measurements_a0c50825b26e138cad7194b48a5a3694b}{find\+Exact\+Match} (const \hyperlink{classndn_1_1Name}{Name} \&name) const\hypertarget{classnfd_1_1Measurements_a0c50825b26e138cad7194b48a5a3694b}{}\label{classnfd_1_1Measurements_a0c50825b26e138cad7194b48a5a3694b}
+
+\begin{DoxyCompactList}\small\item\em perform an exact match \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1Measurements_a351d846f5320cf3ba7f23de5b4e47ae0}{extend\+Lifetime} (\hyperlink{classnfd_1_1measurements_1_1Entry}{measurements\+::\+Entry} \&entry, const time\+::nanoseconds \&lifetime)
+\begin{DoxyCompactList}\small\item\em extend lifetime of an entry \end{DoxyCompactList}\item 
+size\+\_\+t {\bfseries size} () const\hypertarget{classnfd_1_1Measurements_a0503bd154f4b0886b13255e9ad948427}{}\label{classnfd_1_1Measurements_a0503bd154f4b0886b13255e9ad948427}
+
+\item 
+{\footnotesize template$<$typename K $>$ }\\shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1measurements_1_1Entry}{Entry} $>$ {\bfseries find\+Longest\+Prefix\+Match\+Impl} (const K \&key, const measurements\+::\+Entry\+Predicate \&pred) const\hypertarget{classnfd_1_1Measurements_a22ccf88203dc99196feeddb92be2662b}{}\label{classnfd_1_1Measurements_a22ccf88203dc99196feeddb92be2662b}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static time\+::nanoseconds {\bfseries get\+Initial\+Lifetime} ()\hypertarget{classnfd_1_1Measurements_a1f0a3e475c9a445bae78e42c603b066c}{}\label{classnfd_1_1Measurements_a1f0a3e475c9a445bae78e42c603b066c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the \hyperlink{classnfd_1_1Measurements}{Measurements} table 
+
+Definition at line 75 of file measurements.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::\+Measurements@{nfd\+::\+Measurements}!extend\+Lifetime@{extend\+Lifetime}}
+\index{extend\+Lifetime@{extend\+Lifetime}!nfd\+::\+Measurements@{nfd\+::\+Measurements}}
+\subsubsection[{\texorpdfstring{extend\+Lifetime(measurements\+::\+Entry \&entry, const time\+::nanoseconds \&lifetime)}{extendLifetime(measurements::Entry \&entry, const time::nanoseconds \&lifetime)}}]{\setlength{\rightskip}{0pt plus 5cm}void nfd\+::\+Measurements\+::extend\+Lifetime (
+\begin{DoxyParamCaption}
+\item[{{\bf measurements\+::\+Entry} \&}]{entry, }
+\item[{const time\+::nanoseconds \&}]{lifetime}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Measurements_a351d846f5320cf3ba7f23de5b4e47ae0}{}\label{classnfd_1_1Measurements_a351d846f5320cf3ba7f23de5b4e47ae0}
+
+
+extend lifetime of an entry 
+
+The entry will be kept until at least now()+lifetime. 
+
+Definition at line 134 of file measurements.\+cpp.
+
+\index{nfd\+::\+Measurements@{nfd\+::\+Measurements}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!nfd\+::\+Measurements@{nfd\+::\+Measurements}}
+\subsubsection[{\texorpdfstring{get\+Parent(const measurements\+::\+Entry \&child)}{getParent(const measurements::Entry \&child)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Entry} $>$ nfd\+::\+Measurements\+::get\+Parent (
+\begin{DoxyParamCaption}
+\item[{const {\bf measurements\+::\+Entry} \&}]{child}
+\end{DoxyParamCaption}
+)}\hypertarget{classnfd_1_1Measurements_ad6328d4a86c7239668946926dd11d8a2}{}\label{classnfd_1_1Measurements_ad6328d4a86c7239668946926dd11d8a2}
+
+
+find or insert a \hyperlink{classnfd_1_1Measurements}{Measurements} entry for child\textquotesingle{}s parent 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em nullptr} & if child is the root entry \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 81 of file measurements.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/measurements.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/table/measurements.\+cpp\end{DoxyCompactItemize}

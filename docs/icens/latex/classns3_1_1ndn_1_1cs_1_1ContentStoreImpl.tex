@@ -1,0 +1,135 @@
+\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl}{}\section{ns3\+:\+:ndn\+:\+:cs\+:\+:Content\+Store\+Impl$<$ Policy $>$ Class Template Reference}
+\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl}\index{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ Policy $>$@{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ Policy $>$}}
+
+
+Base implementation of N\+DN content store.  
+
+
+
+
+{\ttfamily \#include $<$content-\/store-\/impl.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:cs\+:\+:Content\+Store\+Impl$<$ Policy $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.083871cm]{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef ndn\+S\+I\+M\+::trie\+\_\+with\+\_\+policy$<$ Name, ndn\+S\+I\+M\+::smart\+\_\+pointer\+\_\+payload\+\_\+traits$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1EntryImpl}{Entry\+Impl}$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl}{Content\+Store\+Impl}$<$ Policy $>$ $>$, \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{Entry} $>$, Policy $>$ {\bfseries super}\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a7613ce1a12718ac8b2bd3c5f9fee86d9}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a7613ce1a12718ac8b2bd3c5f9fee86d9}
+
+\item 
+typedef \hyperlink{classns3_1_1ndn_1_1cs_1_1EntryImpl}{Entry\+Impl}$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl}{Content\+Store\+Impl}$<$ Policy $>$ $>$ {\bfseries entry}\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a1c2bef1c594ea1a292d178536ff4e9b5}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a1c2bef1c594ea1a292d178536ff4e9b5}
+
+\item 
+typedef void($\ast$ {\bfseries Cs\+Entry\+Callback}) (Ptr$<$ const \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{Entry} $>$)\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a909231a206746971cf5f3cfd1aed9298}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a909231a206746971cf5f3cfd1aed9298}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual shared\+\_\+ptr$<$ Data $>$ \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_acb05ee7b500f71f02a462b705d538a91}{Lookup} (shared\+\_\+ptr$<$ const Interest $>$ interest)
+\begin{DoxyCompactList}\small\item\em Find corresponding CS entry for the given interest. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_adb15b99cef032bd661f44447be1c9d68}{Add} (shared\+\_\+ptr$<$ const Data $>$ data)
+\begin{DoxyCompactList}\small\item\em Add a new content to the content store. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a81a3862251332eb480356e8f6e08981e}{Print} (std\+::ostream \&os) const\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a81a3862251332eb480356e8f6e08981e}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a81a3862251332eb480356e8f6e08981e}
+
+\begin{DoxyCompactList}\small\item\em Print out content store entries. \end{DoxyCompactList}\item 
+virtual uint32\+\_\+t \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a05e8ef063fdab495fa1ffbb33d16ca1c}{Get\+Size} () const\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a05e8ef063fdab495fa1ffbb33d16ca1c}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a05e8ef063fdab495fa1ffbb33d16ca1c}
+
+\begin{DoxyCompactList}\small\item\em Get number of entries in content store. \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{Entry} $>$ \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a97c9afaa59b73c1377c210d60018321f}{Begin} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a97c9afaa59b73c1377c210d60018321f}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a97c9afaa59b73c1377c210d60018321f}
+
+\begin{DoxyCompactList}\small\item\em Return first element of content store (no order guaranteed) \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{Entry} $>$ \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_ad21362f6996f388ebcc8a37e79de086b}{End} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_ad21362f6996f388ebcc8a37e79de086b}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_ad21362f6996f388ebcc8a37e79de086b}
+
+\begin{DoxyCompactList}\small\item\em Return item next after last (no order guaranteed) \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{Entry} $>$ {\bfseries Next} (Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{Entry} $>$)\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a734cc52313a2aa6c210d4574f008aa76}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a734cc52313a2aa6c210d4574f008aa76}
+
+\item 
+const super\+::policy\+\_\+container \& {\bfseries Get\+Policy} () const\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a6d9fade9e3ee73ea924fb334887bf60a}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a6d9fade9e3ee73ea924fb334887bf60a}
+
+\item 
+super\+::policy\+\_\+container \& {\bfseries Get\+Policy} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_aa698a9c8f9a5e5e9e0da03ca34ed45d6}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_aa698a9c8f9a5e5e9e0da03ca34ed45d6}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} ()\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a3a764d590d9a911b337c7db2be0b6670}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_a3a764d590d9a911b337c7db2be0b6670}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Policy$>$\\*
+class ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ Policy $>$}
+
+Base implementation of N\+DN content store. 
+
+Definition at line 82 of file content-\/store-\/impl.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl@{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl}!Add@{Add}}
+\index{Add@{Add}!ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl@{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl}}
+\subsubsection[{\texorpdfstring{Add(shared\+\_\+ptr$<$ const Data $>$ data)}{Add(shared\_ptr< const Data > data)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Policy $>$ bool {\bf ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl}$<$ Policy $>$\+::Add (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_adb15b99cef032bd661f44447be1c9d68}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_adb15b99cef032bd661f44447be1c9d68}
+
+
+Add a new content to the content store. 
+
+\begin{DoxyReturn}{Returns}
+true if an existing entry was updated, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classns3_1_1ndn_1_1ContentStore_a5b89794bb1a8dca3d22e7d02182150d3}{ns3\+::ndn\+::\+Content\+Store}.
+
+
+
+Reimplemented in \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a9251bd764c52de8201da5de8259983df}{ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness$<$ Policy $>$}.
+
+
+
+Definition at line 233 of file content-\/store-\/impl.\+hpp.
+
+\index{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl@{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl@{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl}}
+\subsubsection[{\texorpdfstring{Lookup(shared\+\_\+ptr$<$ const Interest $>$ interest)}{Lookup(shared\_ptr< const Interest > interest)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Policy $>$ shared\+\_\+ptr$<$ Data $>$ {\bf ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl}$<$ Policy $>$\+::Lookup (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Interest $>$}]{interest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_acb05ee7b500f71f02a462b705d538a91}{}\label{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_acb05ee7b500f71f02a462b705d538a91}
+
+
+Find corresponding CS entry for the given interest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & Interest for which matching content store entry will be searched\\
+\hline
+\end{DoxyParams}
+If an entry is found, it is promoted to the top of most recent used entries index, \begin{DoxySeeAlso}{See also}
+m\+\_\+content\+Store 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classns3_1_1ndn_1_1ContentStore_a1779f7f6214adcbe0213d85a48d8e94a}{ns3\+::ndn\+::\+Content\+Store}.
+
+
+
+Definition at line 206 of file content-\/store-\/impl.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/cs/content-\/store-\/impl.\+hpp\end{DoxyCompactItemize}

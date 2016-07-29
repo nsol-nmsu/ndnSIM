@@ -1,0 +1,433 @@
+\hypertarget{classndn_1_1Data}{}\section{ndn\+:\+:Data Class Reference}
+\label{classndn_1_1Data}\index{ndn\+::\+Data@{ndn\+::\+Data}}
+
+
+represents a \hyperlink{classndn_1_1Data}{Data} packet  
+
+
+
+
+{\ttfamily \#include $<$data.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classndn_1_1Data}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1Data_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1Data_a06d8fcf5fc51f5f4f359cd6e916d482e}{Data} ()
+\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{classndn_1_1Data}{Data} object. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Data_a8be555bb394287124a28994eee30a97b}{Data} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1Data}{Data} object with the given name. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Data_aee8f3047944fe41717be656e6b2ff76e}{Data} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Create a new \hyperlink{classndn_1_1Data}{Data} object from wire encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$encoding\+::\+Tag T\+AG$>$ }\\size\+\_\+t \hyperlink{classndn_1_1Data_a2a65cdabf6fe41d895b7109bdaaf8bf8}{wire\+Encode} (\hyperlink{classndn_1_1encoding_1_1EncodingImpl}{Encoding\+Impl}$<$ T\+AG $>$ \&encoder, bool want\+Unsigned\+Portion\+Only=false) const
+\begin{DoxyCompactList}\small\item\em Fast encoding or block size estimation. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Data_a59991bec77f7f2a161c049f6efcf79df}{wire\+Encode} () const\hypertarget{classndn_1_1Data_a59991bec77f7f2a161c049f6efcf79df}{}\label{classndn_1_1Data_a59991bec77f7f2a161c049f6efcf79df}
+
+\begin{DoxyCompactList}\small\item\em Encode to a wire format. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Data_ab75caf00f7b730631e72312dfeb42f5d}{wire\+Encode} (Encoding\+Buffer \&encoder, const \hyperlink{classndn_1_1Block}{Block} \&signature\+Value) const
+\begin{DoxyCompactList}\small\item\em Finalize \hyperlink{classndn_1_1Data}{Data} packet encoding with the specified Signature\+Value. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1Data_a0ebfd65a6323221b44a995f15efbfef2}{wire\+Decode} (const \hyperlink{classndn_1_1Block}{Block} \&wire)\hypertarget{classndn_1_1Data_a0ebfd65a6323221b44a995f15efbfef2}{}\label{classndn_1_1Data_a0ebfd65a6323221b44a995f15efbfef2}
+
+\begin{DoxyCompactList}\small\item\em Decode from the wire format. \end{DoxyCompactList}\item 
+bool \hyperlink{classndn_1_1Data_ad2e480ccab6e2024ccb53a23bf88bdbd}{has\+Wire} () const\hypertarget{classndn_1_1Data_ad2e480ccab6e2024ccb53a23bf88bdbd}{}\label{classndn_1_1Data_ad2e480ccab6e2024ccb53a23bf88bdbd}
+
+\begin{DoxyCompactList}\small\item\em Check if \hyperlink{classndn_1_1Data}{Data} is already has wire encoding. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1Data_a14ed396d06bf43b86e4b0a67a4866303}{get\+Name} () const\hypertarget{classndn_1_1Data_a14ed396d06bf43b86e4b0a67a4866303}{}\label{classndn_1_1Data_a14ed396d06bf43b86e4b0a67a4866303}
+
+\begin{DoxyCompactList}\small\item\em Get name of the \hyperlink{classndn_1_1Data}{Data} packet. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Data}{Data} \& \hyperlink{classndn_1_1Data_aedcc1a8147bcc8bb9cc926cfa5ce1a37}{set\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&name)
+\begin{DoxyCompactList}\small\item\em Set name to a copy of the given \hyperlink{classndn_1_1Name}{Name}. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1Data_a5eae643a1c9ba19a1927a73dd0ed2147}{get\+Full\+Name} () const
+\begin{DoxyCompactList}\small\item\em Get full name of \hyperlink{classndn_1_1Data}{Data} packet, including the implicit digest. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \& \hyperlink{classndn_1_1Data_a93c1643864189c0ed5f93a11e90cd546}{get\+Meta\+Info} () const\hypertarget{classndn_1_1Data_a93c1643864189c0ed5f93a11e90cd546}{}\label{classndn_1_1Data_a93c1643864189c0ed5f93a11e90cd546}
+
+\begin{DoxyCompactList}\small\item\em Get \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} block from \hyperlink{classndn_1_1Data}{Data} packet. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Data}{Data} \& \hyperlink{classndn_1_1Data_afb639a24406c68a31e6a7be91f4b2567}{set\+Meta\+Info} (const \hyperlink{classndn_1_1MetaInfo}{Meta\+Info} \&meta\+Info)
+\begin{DoxyCompactList}\small\item\em Set meta\+Info to a copy of the given \hyperlink{classndn_1_1MetaInfo}{Meta\+Info}. \end{DoxyCompactList}\item 
+uint32\+\_\+t {\bfseries get\+Content\+Type} () const\hypertarget{classndn_1_1Data_ad3417e0d2c610aa2b8c40f4c28ffb56f}{}\label{classndn_1_1Data_ad3417e0d2c610aa2b8c40f4c28ffb56f}
+
+\item 
+\hyperlink{classndn_1_1Data}{Data} \& {\bfseries set\+Content\+Type} (uint32\+\_\+t type)\hypertarget{classndn_1_1Data_af892304280cb97b9611057aaebbd8498}{}\label{classndn_1_1Data_af892304280cb97b9611057aaebbd8498}
+
+\item 
+const time\+::milliseconds \& {\bfseries get\+Freshness\+Period} () const\hypertarget{classndn_1_1Data_a9e34e6b95ca87d8d38e2d7d96244d419}{}\label{classndn_1_1Data_a9e34e6b95ca87d8d38e2d7d96244d419}
+
+\item 
+\hyperlink{classndn_1_1Data}{Data} \& {\bfseries set\+Freshness\+Period} (const time\+::milliseconds \&freshness\+Period)\hypertarget{classndn_1_1Data_ab6e99760d28caa0fdeed4d6ef429080b}{}\label{classndn_1_1Data_ab6e99760d28caa0fdeed4d6ef429080b}
+
+\item 
+const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \& {\bfseries get\+Final\+Block\+Id} () const\hypertarget{classndn_1_1Data_a8a07ddd61216d195f30f6c499b336068}{}\label{classndn_1_1Data_a8a07ddd61216d195f30f6c499b336068}
+
+\item 
+\hyperlink{classndn_1_1Data}{Data} \& {\bfseries set\+Final\+Block\+Id} (const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&final\+Block\+Id)\hypertarget{classndn_1_1Data_ac6b89fe5c7108cecb6e42dd92a78307e}{}\label{classndn_1_1Data_ac6b89fe5c7108cecb6e42dd92a78307e}
+
+\item 
+const \hyperlink{classndn_1_1Block}{Block} \& \hyperlink{classndn_1_1Data_a4625b6e020424ace77fcc6bf7e67a46b}{get\+Content} () const
+\begin{DoxyCompactList}\small\item\em Get content \hyperlink{classndn_1_1Block}{Block}. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Data}{Data} \& \hyperlink{classndn_1_1Data_a890a28a89b5c5a87ed6ffbb0fe46819d}{set\+Content} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Set the content from the buffer (buffer will be copied) \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Data}{Data} \& \hyperlink{classndn_1_1Data_a12b67c635114f0caae2ba467be81916e}{set\+Content} (const \hyperlink{classndn_1_1Block}{Block} \&block)
+\begin{DoxyCompactList}\small\item\em Set the content from the block. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Data}{Data} \& \hyperlink{classndn_1_1Data_a0b0e17153731d21fae26cdb1b4c9baa5}{set\+Content} (const Const\+Buffer\+Ptr \&content\+Value)
+\begin{DoxyCompactList}\small\item\em Set the content from the pointer to immutable buffer. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1Signature}{Signature} \& {\bfseries get\+Signature} () const\hypertarget{classndn_1_1Data_a9b429825372814fc931764167fc6412b}{}\label{classndn_1_1Data_a9b429825372814fc931764167fc6412b}
+
+\item 
+\hyperlink{classndn_1_1Data}{Data} \& \hyperlink{classndn_1_1Data_add0d2d3b0f12a3f2af9ab3a01c8edb4e}{set\+Signature} (const \hyperlink{classndn_1_1Signature}{Signature} \&signature)
+\begin{DoxyCompactList}\small\item\em Set the signature to a copy of the given signature. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1Data}{Data} \& {\bfseries set\+Signature\+Value} (const \hyperlink{classndn_1_1Block}{Block} \&value)\hypertarget{classndn_1_1Data_a6b8c466508f3babf62403e01c4f7c376}{}\label{classndn_1_1Data_a6b8c466508f3babf62403e01c4f7c376}
+
+\item 
+\hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{nfd\+::\+Local\+Control\+Header} \& {\bfseries get\+Local\+Control\+Header} ()\hypertarget{classndn_1_1Data_a22ee7187d9e7d7a4284d79d02b36d094}{}\label{classndn_1_1Data_a22ee7187d9e7d7a4284d79d02b36d094}
+
+\item 
+const \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{nfd\+::\+Local\+Control\+Header} \& {\bfseries get\+Local\+Control\+Header} () const\hypertarget{classndn_1_1Data_ad8a12d241cc0635a24baa63aa03b83e0}{}\label{classndn_1_1Data_ad8a12d241cc0635a24baa63aa03b83e0}
+
+\item 
+uint64\+\_\+t {\bfseries get\+Incoming\+Face\+Id} () const\hypertarget{classndn_1_1Data_a61f9369556921f0a49e1d414a81f89b2}{}\label{classndn_1_1Data_a61f9369556921f0a49e1d414a81f89b2}
+
+\item 
+\hyperlink{classndn_1_1Data}{Data} \& {\bfseries set\+Incoming\+Face\+Id} (uint64\+\_\+t incoming\+Face\+Id)\hypertarget{classndn_1_1Data_aaaa9ad0e8e1b429463c8eb3ea6712a02}{}\label{classndn_1_1Data_aaaa9ad0e8e1b429463c8eb3ea6712a02}
+
+\item 
+nfd\+::\+Local\+Control\+Header\+::\+Caching\+Policy {\bfseries get\+Caching\+Policy} () const\hypertarget{classndn_1_1Data_a13a60fe89fc27fe34e6d8c95014fa9c8}{}\label{classndn_1_1Data_a13a60fe89fc27fe34e6d8c95014fa9c8}
+
+\item 
+\hyperlink{classndn_1_1Data}{Data} \& {\bfseries set\+Caching\+Policy} (nfd\+::\+Local\+Control\+Header\+::\+Caching\+Policy caching\+Policy)\hypertarget{classndn_1_1Data_af89347ebcaf22e7d413d08f65ee499d7}{}\label{classndn_1_1Data_af89347ebcaf22e7d413d08f65ee499d7}
+
+\item 
+bool {\bfseries operator==} (const \hyperlink{classndn_1_1Data}{Data} \&other) const\hypertarget{classndn_1_1Data_a95039c5fb9a308a709f0756eca80952d}{}\label{classndn_1_1Data_a95039c5fb9a308a709f0756eca80952d}
+
+\item 
+bool {\bfseries operator!=} (const \hyperlink{classndn_1_1Data}{Data} \&other) const\hypertarget{classndn_1_1Data_a1ab5b2fabb4adce958f7524de0eb1066}{}\label{classndn_1_1Data_a1ab5b2fabb4adce958f7524de0eb1066}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classndn_1_1Data_a37121d76b9f9eaa82616cffc7ecf16da}{on\+Changed} ()\hypertarget{classndn_1_1Data_a37121d76b9f9eaa82616cffc7ecf16da}{}\label{classndn_1_1Data_a37121d76b9f9eaa82616cffc7ecf16da}
+
+\begin{DoxyCompactList}\small\item\em Clear the wire encoding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries nfd\+::\+Local\+Control\+Header}\hypertarget{classndn_1_1Data_af81828ff2bd95549cd703819e64228b2}{}\label{classndn_1_1Data_af81828ff2bd95549cd703819e64228b2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents a \hyperlink{classndn_1_1Data}{Data} packet 
+
+Definition at line 39 of file data.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::\+Data@{ndn\+::\+Data}!Data@{Data}}
+\index{Data@{Data}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{Data()}{Data()}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Data\+::\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Data_a06d8fcf5fc51f5f4f359cd6e916d482e}{}\label{classndn_1_1Data_a06d8fcf5fc51f5f4f359cd6e916d482e}
+
+
+Create an empty \hyperlink{classndn_1_1Data}{Data} object. 
+
+Note that in certain contexts that use Data\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Data}{Data} must be created using {\ttfamily make\+\_\+shared}\+: \begin{DoxyVerb}shared_ptr<Data> data = make_shared<Data>();
+\end{DoxyVerb}
+
+
+Otherwise, Data\+::shared\+\_\+from\+\_\+this() will throw an exception. 
+
+Definition at line 35 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!Data@{Data}}
+\index{Data@{Data}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{Data(const Name \&name)}{Data(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Data\+::\+Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Data_a8be555bb394287124a28994eee30a97b}{}\label{classndn_1_1Data_a8be555bb394287124a28994eee30a97b}
+
+
+Create a new \hyperlink{classndn_1_1Data}{Data} object with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A reference to the name\\
+\hline
+\end{DoxyParams}
+Note that in certain contexts that use Data\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Data}{Data} must be created using {\ttfamily make\+\_\+shared}\+: \begin{DoxyVerb}shared_ptr<Data> data = make_shared<Data>(name);
+\end{DoxyVerb}
+
+
+Otherwise, Data\+::shared\+\_\+from\+\_\+this() will throw an exception. 
+
+Definition at line 40 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!Data@{Data}}
+\index{Data@{Data}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{Data(const Block \&wire)}{Data(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::\+Data\+::\+Data (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1Data_aee8f3047944fe41717be656e6b2ff76e}{}\label{classndn_1_1Data_aee8f3047944fe41717be656e6b2ff76e}
+
+
+Create a new \hyperlink{classndn_1_1Data}{Data} object from wire encoding. 
+
+Note that in certain contexts that use Data\+::shared\+\_\+from\+\_\+this(), \hyperlink{classndn_1_1Data}{Data} must be created using {\ttfamily make\+\_\+shared}\+: \begin{DoxyVerb}shared_ptr<Data> data = make_shared<Data>(wire);
+\end{DoxyVerb}
+
+
+Otherwise, Data\+::shared\+\_\+from\+\_\+this() will throw an exception. 
+
+Definition at line 45 of file data.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Data@{ndn\+::\+Data}!get\+Content@{get\+Content}}
+\index{get\+Content@{get\+Content}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{get\+Content() const}{getContent() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block} \& ndn\+::\+Data\+::get\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Data_a4625b6e020424ace77fcc6bf7e67a46b}{}\label{classndn_1_1Data_a4625b6e020424ace77fcc6bf7e67a46b}
+
+
+Get content \hyperlink{classndn_1_1Block}{Block}. 
+
+To access content value, one can use \hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value()}/value\+\_\+size() or value\+\_\+begin()/value\+\_\+end() methods of the \hyperlink{classndn_1_1Block}{Block} class 
+
+Definition at line 230 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!get\+Full\+Name@{get\+Full\+Name}}
+\index{get\+Full\+Name@{get\+Full\+Name}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{get\+Full\+Name() const}{getFullName() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name} \& ndn\+::\+Data\+::get\+Full\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Data_a5eae643a1c9ba19a1927a73dd0ed2147}{}\label{classndn_1_1Data_a5eae643a1c9ba19a1927a73dd0ed2147}
+
+
+Get full name of \hyperlink{classndn_1_1Data}{Data} packet, including the implicit digest. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1Data_1_1Error}{Error}} & if \hyperlink{classndn_1_1Data}{Data} packet doesn\textquotesingle{}t have a full name yet (wire encoding has not been yet created) \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 179 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!set\+Content@{set\+Content}}
+\index{set\+Content@{set\+Content}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{set\+Content(const uint8\+\_\+t $\ast$buffer, size\+\_\+t buffer\+Size)}{setContent(const uint8\_t *buffer, size\_t bufferSize)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} \& ndn\+::\+Data\+::set\+Content (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Data_a890a28a89b5c5a87ed6ffbb0fe46819d}{}\label{classndn_1_1Data_a890a28a89b5c5a87ed6ffbb0fe46819d}
+
+
+Set the content from the buffer (buffer will be copied) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to first byte of the buffer \\
+\hline
+{\em buffer\+Size} & Size of the buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classndn_1_1Data}{Data} so that you can chain calls to update values. 
+\end{DoxyReturn}
+
+
+Definition at line 241 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!set\+Content@{set\+Content}}
+\index{set\+Content@{set\+Content}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{set\+Content(const Block \&block)}{setContent(const Block \&block)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} \& ndn\+::\+Data\+::set\+Content (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{block}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Data_a12b67c635114f0caae2ba467be81916e}{}\label{classndn_1_1Data_a12b67c635114f0caae2ba467be81916e}
+
+
+Set the content from the block. 
+
+Depending on type of the supplied block, there are two cases\+:
+
+
+\begin{DoxyItemize}
+\item if block.\+type() == tlv\+::\+Content, then block will be used directly as \hyperlink{classndn_1_1Data}{Data} packet\textquotesingle{}s content (no extra copying)
+\item if block.\+type() != tlv\+::\+Content, then this method will create a new \hyperlink{classndn_1_1Block}{Block} with type tlv\+::\+Content and put block as a nested element in the content \hyperlink{classndn_1_1Block}{Block}.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & The \hyperlink{classndn_1_1Block}{Block} containing the content to assign\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classndn_1_1Data}{Data} so that you can chain calls to update values. 
+\end{DoxyReturn}
+
+
+Definition at line 261 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!set\+Content@{set\+Content}}
+\index{set\+Content@{set\+Content}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{set\+Content(const Const\+Buffer\+Ptr \&content\+Value)}{setContent(const ConstBufferPtr \&contentValue)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} \& ndn\+::\+Data\+::set\+Content (
+\begin{DoxyParamCaption}
+\item[{const Const\+Buffer\+Ptr \&}]{content\+Value}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Data_a0b0e17153731d21fae26cdb1b4c9baa5}{}\label{classndn_1_1Data_a0b0e17153731d21fae26cdb1b4c9baa5}
+
+
+Set the content from the pointer to immutable buffer. 
+
+This method will create a \hyperlink{classndn_1_1Block}{Block} with tlv\+::\+Content and set content\+Value as a payload for this block. Note that this method is very different from set\+Content(const \hyperlink{classndn_1_1Block}{Block}\&), since it does not require that payload should be a valid T\+LV element.
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+Value} & The pointer to immutable buffer containing the content to assign\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classndn_1_1Data}{Data} so that you can chain calls to update values. 
+\end{DoxyReturn}
+
+
+Definition at line 251 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!set\+Meta\+Info@{set\+Meta\+Info}}
+\index{set\+Meta\+Info@{set\+Meta\+Info}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{set\+Meta\+Info(const Meta\+Info \&meta\+Info)}{setMetaInfo(const MetaInfo \&metaInfo)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} \& ndn\+::\+Data\+::set\+Meta\+Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Meta\+Info} \&}]{meta\+Info}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Data_afb639a24406c68a31e6a7be91f4b2567}{}\label{classndn_1_1Data_afb639a24406c68a31e6a7be91f4b2567}
+
+
+Set meta\+Info to a copy of the given \hyperlink{classndn_1_1MetaInfo}{Meta\+Info}. 
+
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classndn_1_1Data}{Data} so that you can chain calls to update values. 
+\end{DoxyReturn}
+
+
+Definition at line 194 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{set\+Name(const Name \&name)}{setName(const Name \&name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} \& ndn\+::\+Data\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Data_aedcc1a8147bcc8bb9cc926cfa5ce1a37}{}\label{classndn_1_1Data_aedcc1a8147bcc8bb9cc926cfa5ce1a37}
+
+
+Set name to a copy of the given \hyperlink{classndn_1_1Name}{Name}. 
+
+\begin{DoxyReturn}{Returns}
+This \hyperlink{classndn_1_1Data}{Data} so that you can chain calls to update values 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!set\+Signature@{set\+Signature}}
+\index{set\+Signature@{set\+Signature}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{set\+Signature(const Signature \&signature)}{setSignature(const Signature \&signature)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Data} \& ndn\+::\+Data\+::set\+Signature (
+\begin{DoxyParamCaption}
+\item[{const {\bf Signature} \&}]{signature}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1Data_add0d2d3b0f12a3f2af9ab3a01c8edb4e}{}\label{classndn_1_1Data_add0d2d3b0f12a3f2af9ab3a01c8edb4e}
+
+
+Set the signature to a copy of the given signature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signature} & The signature object which is cloned. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 275 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!wire\+Encode@{wire\+Encode}}
+\index{wire\+Encode@{wire\+Encode}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{wire\+Encode(\+Encoding\+Impl$<$ T\+A\+G $>$ \&encoder, bool want\+Unsigned\+Portion\+Only=false) const}{wireEncode(EncodingImpl< TAG > \&encoder, bool wantUnsignedPortionOnly=false) const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$encoding\+::\+Tag T\+AG$>$ size\+\_\+t ndn\+::\+Data\+::wire\+Encode (
+\begin{DoxyParamCaption}
+\item[{{\bf Encoding\+Impl}$<$ T\+AG $>$ \&}]{encoder, }
+\item[{bool}]{want\+Unsigned\+Portion\+Only = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Data_a2a65cdabf6fe41d895b7109bdaaf8bf8}{}\label{classndn_1_1Data_a2a65cdabf6fe41d895b7109bdaaf8bf8}
+
+
+Fast encoding or block size estimation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder} & Encoding\+Estimator or Encoding\+Buffer instance \\
+\hline
+{\em want\+Unsigned\+Portion\+Only} & Request only unsigned portion to be encoded in block. If true, only \hyperlink{classndn_1_1Name}{Name}, \hyperlink{classndn_1_1MetaInfo}{Meta\+Info}, Content, and \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} blocks will be encoded into the block. Note that there will be no outer T\+LV header of the \hyperlink{classndn_1_1Data}{Data} packet. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file data.\+cpp.
+
+\index{ndn\+::\+Data@{ndn\+::\+Data}!wire\+Encode@{wire\+Encode}}
+\index{wire\+Encode@{wire\+Encode}!ndn\+::\+Data@{ndn\+::\+Data}}
+\subsubsection[{\texorpdfstring{wire\+Encode(\+Encoding\+Buffer \&encoder, const Block \&signature\+Value) const}{wireEncode(EncodingBuffer \&encoder, const Block \&signatureValue) const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Block} \& ndn\+::\+Data\+::wire\+Encode (
+\begin{DoxyParamCaption}
+\item[{Encoding\+Buffer \&}]{encoder, }
+\item[{const {\bf Block} \&}]{signature\+Value}
+\end{DoxyParamCaption}
+) const}\hypertarget{classndn_1_1Data_ab75caf00f7b730631e72312dfeb42f5d}{}\label{classndn_1_1Data_ab75caf00f7b730631e72312dfeb42f5d}
+
+
+Finalize \hyperlink{classndn_1_1Data}{Data} packet encoding with the specified Signature\+Value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoder} & Encoding\+Buffer instance, containing \hyperlink{classndn_1_1Name}{Name}, \hyperlink{classndn_1_1MetaInfo}{Meta\+Info}, Content, and \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} (without outer T\+LV header of the \hyperlink{classndn_1_1Data}{Data} packet). \\
+\hline
+{\em signature\+Value} & Signature\+Value block to be added to \hyperlink{classndn_1_1Data}{Data} packet to finalize the wire encoding\\
+\hline
+\end{DoxyParams}
+This method is intended to be used in concert with Data\+::wire\+Encode(\+Encoding\+Buffer\&, true) method to optimize \hyperlink{classndn_1_1Data}{Data} packet wire format creation\+: \begin{DoxyVerb}Data data;
+...
+EncodingBuffer encoder;
+data.wireEncode(encoder, true);
+...
+Block signatureValue = <sign_over_unsigned_portion>(encoder.buf(), encoder.size());
+data.wireEncode(encoder, signatureValue)\end{DoxyVerb}
+ 
+
+Definition at line 106 of file data.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/data.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/data.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\hypertarget{classndn_1_1util_1_1InMemoryStorageFifo}{}\section{ndn\+:\+:util\+:\+:In\+Memory\+Storage\+Fifo Class Reference}
+\label{classndn_1_1util_1_1InMemoryStorageFifo}\index{ndn\+::util\+::\+In\+Memory\+Storage\+Fifo@{ndn\+::util\+::\+In\+Memory\+Storage\+Fifo}}
+
+
+Provides in-\/memory storage employing F\+I\+FO replacement policy, which is first in first out.  
+
+
+
+
+{\ttfamily \#include $<$in-\/memory-\/storage-\/fifo.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:In\+Memory\+Storage\+Fifo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1util_1_1InMemoryStorageFifo}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries In\+Memory\+Storage\+Fifo} (size\+\_\+t limit=10)\hypertarget{classndn_1_1util_1_1InMemoryStorageFifo_acedf2db4d721dde76c2a87b9fe7c966e}{}\label{classndn_1_1util_1_1InMemoryStorageFifo_acedf2db4d721dde76c2a87b9fe7c966e}
+
+\item 
+virtual void \hyperlink{classndn_1_1util_1_1InMemoryStorageFifo_a702b42a75bc1f487cb5dd792b77595f4}{after\+Insert} (\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$entry)\hypertarget{classndn_1_1util_1_1InMemoryStorageFifo_a702b42a75bc1f487cb5dd792b77595f4}{}\label{classndn_1_1util_1_1InMemoryStorageFifo_a702b42a75bc1f487cb5dd792b77595f4}
+
+\begin{DoxyCompactList}\small\item\em Update the entry after a entry is successfully inserted, add it to the cleanup\+Index. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1util_1_1InMemoryStorageFifo_a7d322970a1c6ec29e2e2728126bb2f9b}{before\+Erase} (\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$entry)\hypertarget{classndn_1_1util_1_1InMemoryStorageFifo_a7d322970a1c6ec29e2e2728126bb2f9b}{}\label{classndn_1_1util_1_1InMemoryStorageFifo_a7d322970a1c6ec29e2e2728126bb2f9b}
+
+\begin{DoxyCompactList}\small\item\em Update the entry or other data structures before a entry is successfully erased, erase it from the cleanup\+Index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: virtual bool \hyperlink{classndn_1_1util_1_1InMemoryStorage_a14036928e195645bf47d8c5686277fd8}{evict\+Item}()\hypertarget{classndn_1_1util_1_1InMemoryStorageFifo_afdf23f9cbe86c7aec7067ad5a999f76d}{}\label{classndn_1_1util_1_1InMemoryStorageFifo_afdf23f9cbe86c7aec7067ad5a999f76d}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Provides in-\/memory storage employing F\+I\+FO replacement policy, which is first in first out. 
+
+Definition at line 37 of file in-\/memory-\/storage-\/fifo.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/in-\/memory-\/storage-\/fifo.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/in-\/memory-\/storage-\/fifo.\+cpp\end{DoxyCompactItemize}

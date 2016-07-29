@@ -1,0 +1,590 @@
+\hypertarget{classndn_1_1security_1_1PibImpl}{}\section{ndn\+:\+:security\+:\+:Pib\+Impl Class Reference}
+\label{classndn_1_1security_1_1PibImpl}\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+
+
+Abstract class of P\+IB implementation.  
+
+
+
+
+{\ttfamily \#include $<$pib-\/impl.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:security\+:\+:Pib\+Impl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1security_1_1PibImpl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1security_1_1PibImpl_1_1Error}{Error}
+\begin{DoxyCompactList}\small\item\em represents a non-\/semantic error \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_a279b5afb508c69b6b2407075f8aa35fb}{set\+Tpm\+Locator} (const std\+::string \&tpm\+Locator)=0
+\begin{DoxyCompactList}\small\item\em Set the corresponding T\+PM information to {\ttfamily tpm\+Locator}. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classndn_1_1security_1_1PibImpl_a4109ca56c200302f2c697c42bc398e47}{get\+Tpm\+Locator} () const =0\hypertarget{classndn_1_1security_1_1PibImpl_a4109ca56c200302f2c697c42bc398e47}{}\label{classndn_1_1security_1_1PibImpl_a4109ca56c200302f2c697c42bc398e47}
+
+\begin{DoxyCompactList}\small\item\em Get T\+PM Locator. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1security_1_1PibImpl_aa08d73cbf54f125b5bf20b5350b9fb28}{has\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity) const =0
+\begin{DoxyCompactList}\small\item\em Check the existence of an identity. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_a23dae9941888e0767db73e6515f9abd6}{add\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity)=0
+\begin{DoxyCompactList}\small\item\em Add an identity. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_a3b02c4cc6602c3f785e5fa54ea37a72b}{remove\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity)=0
+\begin{DoxyCompactList}\small\item\em Remove an identity. \end{DoxyCompactList}\item 
+virtual std\+::set$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \hyperlink{classndn_1_1security_1_1PibImpl_a463e5cc87b00ed28f6776fc7f27dec87}{get\+Identities} () const =0\hypertarget{classndn_1_1security_1_1PibImpl_a463e5cc87b00ed28f6776fc7f27dec87}{}\label{classndn_1_1security_1_1PibImpl_a463e5cc87b00ed28f6776fc7f27dec87}
+
+\begin{DoxyCompactList}\small\item\em Get the name of all the identities. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_a73e6e0b49efeafae5763070d4f9f9fb3}{set\+Default\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity\+Name)=0
+\begin{DoxyCompactList}\small\item\em Set an identity with name {\ttfamily identity\+Name} as the default identity. \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1Name}{Name} \hyperlink{classndn_1_1security_1_1PibImpl_a32b82e06403bc231e84d8b4ea7812cbe}{get\+Default\+Identity} () const =0
+\begin{DoxyCompactList}\small\item\em Get the default identity. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1security_1_1PibImpl_a4b3940f03ec40c8c96b4978961da4655}{has\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id) const =0
+\begin{DoxyCompactList}\small\item\em Check the existence of a key. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_a38647f91826e1a771c6c19e4d391145d}{add\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id, const \hyperlink{classndn_1_1PublicKey}{Public\+Key} \&public\+Key)=0
+\begin{DoxyCompactList}\small\item\em Add a key. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_a66dc209a194383f9bc91ac14c0e6ff6c}{remove\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id)=0
+\begin{DoxyCompactList}\small\item\em Remove a key. \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1PublicKey}{Public\+Key} \hyperlink{classndn_1_1security_1_1PibImpl_a205525ca891259e8958cac739c36cb3f}{get\+Key\+Bits} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id) const =0
+\begin{DoxyCompactList}\small\item\em Get the key bits of a key. \end{DoxyCompactList}\item 
+virtual std\+::set$<$ \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} $>$ \hyperlink{classndn_1_1security_1_1PibImpl_aac898235e4d52f871f7eb2eabfa03b37}{get\+Keys\+Of\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity) const =0
+\begin{DoxyCompactList}\small\item\em Get all the key ids of an identity with name {\ttfamily identity}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_afdfed7ac6608c069315e787934a784f0}{set\+Default\+Key\+Of\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id)=0
+\begin{DoxyCompactList}\small\item\em Set an key with id {\ttfamily key\+Id} as the default key of an identity with name {\ttfamily identity}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \hyperlink{classndn_1_1security_1_1PibImpl_a445023639b32f9acc3ffc54817095687}{get\+Default\+Key\+Of\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity) const =0
+\begin{DoxyCompactList}\small\item\em Get the id of the default key of an identity with name {\ttfamily identity}. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1security_1_1PibImpl_a2317a171218f3ca9dd7b3b12cf4c4877}{has\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&cert\+Name) const =0
+\begin{DoxyCompactList}\small\item\em Check the existence of a certificate with name {\ttfamily cert\+Name}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_a7c2ee99dae327ec8c6f20cb909e50fbe}{add\+Certificate} (const \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \&certificate)=0
+\begin{DoxyCompactList}\small\item\em Add a certificate. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_ae2a84a71d94aeeb2c83c097a433bfb80}{remove\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&cert\+Name)=0
+\begin{DoxyCompactList}\small\item\em Remove a certificate with name {\ttfamily cert\+Name}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \hyperlink{classndn_1_1security_1_1PibImpl_a19d80904297b854b7acea9f4f0639643}{get\+Certificate} (const \hyperlink{classndn_1_1Name}{Name} \&cert\+Name) const =0
+\begin{DoxyCompactList}\small\item\em Get a certificate with name {\ttfamily cert\+Name}. \end{DoxyCompactList}\item 
+virtual std\+::set$<$ \hyperlink{classndn_1_1Name}{Name} $>$ \hyperlink{classndn_1_1security_1_1PibImpl_a2d96fb04107cf46175a87bf14cb8a253}{get\+Certificates\+Of\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id) const =0
+\begin{DoxyCompactList}\small\item\em Get a list of certificate names of a key with id {\ttfamily key\+Id} of {\ttfamily identity}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1security_1_1PibImpl_aef78d5cbcdc4f844129525462cd30097}{set\+Default\+Certificate\+Of\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id, const \hyperlink{classndn_1_1Name}{Name} \&cert\+Name)=0
+\begin{DoxyCompactList}\small\item\em Set a cert with name {\ttfamily cert\+Name} as the default of a key with id  of . \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1IdentityCertificate}{Identity\+Certificate} \hyperlink{classndn_1_1security_1_1PibImpl_a01968d8140cffa5093988db879d09f96}{get\+Default\+Certificate\+Of\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1name_1_1Component}{name\+::\+Component} \&key\+Id) const =0
+\begin{DoxyCompactList}\small\item\em Get the default certificate of a key with id  of . \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class of P\+IB implementation. 
+
+This class defines the interface that an actual P\+IB (e.\+g., one based on sqlite3) implementation should provide. 
+
+Definition at line 37 of file pib-\/impl.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!add\+Certificate@{add\+Certificate}}
+\index{add\+Certificate@{add\+Certificate}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{add\+Certificate(const Identity\+Certificate \&certificate)=0}{addCertificate(const IdentityCertificate \&certificate)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::add\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Identity\+Certificate} \&}]{certificate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a7c2ee99dae327ec8c6f20cb909e50fbe}{}\label{classndn_1_1security_1_1PibImpl_a7c2ee99dae327ec8c6f20cb909e50fbe}
+
+
+Add a certificate. 
+
+If the certificate already exists, do nothing. If the key or identity do not exist, add them as well. If no default certificate of the key has been set, set the added one as default certificate of the key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em certificate} & The certificate to add. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a93b83169bd892d00cb1262ba155403eb}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a5c47be3ec03ad0c7c56658abb9402dc0}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!add\+Identity@{add\+Identity}}
+\index{add\+Identity@{add\+Identity}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{add\+Identity(const Name \&identity)=0}{addIdentity(const Name \&identity)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::add\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a23dae9941888e0767db73e6515f9abd6}{}\label{classndn_1_1security_1_1PibImpl_a23dae9941888e0767db73e6515f9abd6}
+
+
+Add an identity. 
+
+If the identity already exists, do nothing. If no default identity has been set, set the added one as default identity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the identity to add. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a4b43db6f4edbc5866ed600d5834e64d2}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_ada4200e8fd9bb4a46f4538f7c467e798}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!add\+Key@{add\+Key}}
+\index{add\+Key@{add\+Key}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{add\+Key(const Name \&identity, const name\+::\+Component \&key\+Id, const Public\+Key \&public\+Key)=0}{addKey(const Name \&identity, const name::Component \&keyId, const PublicKey \&publicKey)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::add\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id, }
+\item[{const {\bf Public\+Key} \&}]{public\+Key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a38647f91826e1a771c6c19e4d391145d}{}\label{classndn_1_1security_1_1PibImpl_a38647f91826e1a771c6c19e4d391145d}
+
+
+Add a key. 
+
+If the key already exists, do nothing. If the identity does not exist, add the identity as well. If no default key of the identity has been set, set the added one as default key of the identity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonged identity. \\
+\hline
+{\em key\+Id} & The key id component. \\
+\hline
+{\em public\+Key} & The public key bits. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a035e33a50cf5640f13a1081c91475903}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_adc3eba49f7a11410a6369e93e507a84c}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!get\+Certificate@{get\+Certificate}}
+\index{get\+Certificate@{get\+Certificate}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Certificate(const Name \&cert\+Name) const =0}{getCertificate(const Name \&certName) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Identity\+Certificate} ndn\+::security\+::\+Pib\+Impl\+::get\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{cert\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a19d80904297b854b7acea9f4f0639643}{}\label{classndn_1_1security_1_1PibImpl_a19d80904297b854b7acea9f4f0639643}
+
+
+Get a certificate with name {\ttfamily cert\+Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert\+Name} & The name of the certificate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the certificate. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the certificate does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_ab533f7d3795dbcda42481337d78ec132}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a9195c3aa71d64d1280470c92b06215b7}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!get\+Certificates\+Of\+Key@{get\+Certificates\+Of\+Key}}
+\index{get\+Certificates\+Of\+Key@{get\+Certificates\+Of\+Key}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Certificates\+Of\+Key(const Name \&identity, const name\+::\+Component \&key\+Id) const =0}{getCertificatesOfKey(const Name \&identity, const name::Component \&keyId) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::set$<${\bf Name}$>$ ndn\+::security\+::\+Pib\+Impl\+::get\+Certificates\+Of\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a2d96fb04107cf46175a87bf14cb8a253}{}\label{classndn_1_1security_1_1PibImpl_a2d96fb04107cf46175a87bf14cb8a253}
+
+
+Get a list of certificate names of a key with id {\ttfamily key\+Id} of {\ttfamily identity}. 
+
+The returned certificate names can be used to create a \hyperlink{classndn_1_1security_1_1CertificateContainer}{Certificate\+Container}. With certificate name and backend implementation, one can obtain the certificate directly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonging identity. \\
+\hline
+{\em key\+Id} & The key id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The certificate name set. If the key does not exist, return an empty set. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a34c5a873d7241af9bde75c7ab7a513fb}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_acfe65b208ec14b3106c1d7e1ae2542f4}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!get\+Default\+Certificate\+Of\+Key@{get\+Default\+Certificate\+Of\+Key}}
+\index{get\+Default\+Certificate\+Of\+Key@{get\+Default\+Certificate\+Of\+Key}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Default\+Certificate\+Of\+Key(const Name \&identity, const name\+::\+Component \&key\+Id) const =0}{getDefaultCertificateOfKey(const Name \&identity, const name::Component \&keyId) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Identity\+Certificate} ndn\+::security\+::\+Pib\+Impl\+::get\+Default\+Certificate\+Of\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a01968d8140cffa5093988db879d09f96}{}\label{classndn_1_1security_1_1PibImpl_a01968d8140cffa5093988db879d09f96}
+
+
+Get the default certificate of a key with id  of . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonging identity. \\
+\hline
+{\em key\+Id} & The key id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the certificate, null if no default certificate for the key. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the default certificate does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a61dbc8691de8b1ecfc045d803df781d7}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a5d0b5752e9cedb49bfa638515c535b73}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!get\+Default\+Identity@{get\+Default\+Identity}}
+\index{get\+Default\+Identity@{get\+Default\+Identity}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Default\+Identity() const =0}{getDefaultIdentity() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Name} ndn\+::security\+::\+Pib\+Impl\+::get\+Default\+Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a32b82e06403bc231e84d8b4ea7812cbe}{}\label{classndn_1_1security_1_1PibImpl_a32b82e06403bc231e84d8b4ea7812cbe}
+
+
+Get the default identity. 
+
+\begin{DoxyReturn}{Returns}
+The name for the default identity. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if no default identity. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a6e76ec882a8c7fa600706266718b8043}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a04c12353e2b94f87f8d5a86d011a8aa1}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!get\+Default\+Key\+Of\+Identity@{get\+Default\+Key\+Of\+Identity}}
+\index{get\+Default\+Key\+Of\+Identity@{get\+Default\+Key\+Of\+Identity}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Default\+Key\+Of\+Identity(const Name \&identity) const =0}{getDefaultKeyOfIdentity(const Name \&identity) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf name\+::\+Component} ndn\+::security\+::\+Pib\+Impl\+::get\+Default\+Key\+Of\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a445023639b32f9acc3ffc54817095687}{}\label{classndn_1_1security_1_1PibImpl_a445023639b32f9acc3ffc54817095687}
+
+
+Get the id of the default key of an identity with name {\ttfamily identity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonged identity. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if no default key or the identity does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a8482cecd5d8adee8bc0ff17fdb514b4a}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_af3c3a94aea2e4780151cd3718b4db45b}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!get\+Key\+Bits@{get\+Key\+Bits}}
+\index{get\+Key\+Bits@{get\+Key\+Bits}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Key\+Bits(const Name \&identity, const name\+::\+Component \&key\+Id) const =0}{getKeyBits(const Name \&identity, const name::Component \&keyId) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Public\+Key} ndn\+::security\+::\+Pib\+Impl\+::get\+Key\+Bits (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a205525ca891259e8958cac739c36cb3f}{}\label{classndn_1_1security_1_1PibImpl_a205525ca891259e8958cac739c36cb3f}
+
+
+Get the key bits of a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonged identity. \\
+\hline
+{\em key\+Id} & The key id component. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+key bits 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the key does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_ab6608956b24969bc84231c8f5f4cebbc}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_addce370c18992ba81514c43be3f03a0e}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!get\+Keys\+Of\+Identity@{get\+Keys\+Of\+Identity}}
+\index{get\+Keys\+Of\+Identity@{get\+Keys\+Of\+Identity}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Keys\+Of\+Identity(const Name \&identity) const =0}{getKeysOfIdentity(const Name \&identity) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::set$<${\bf name\+::\+Component}$>$ ndn\+::security\+::\+Pib\+Impl\+::get\+Keys\+Of\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_aac898235e4d52f871f7eb2eabfa03b37}{}\label{classndn_1_1security_1_1PibImpl_aac898235e4d52f871f7eb2eabfa03b37}
+
+
+Get all the key ids of an identity with name {\ttfamily identity}. 
+
+The returned key ids can be used to create a \hyperlink{classndn_1_1security_1_1KeyContainer}{Key\+Container}. With key id, identity name, backend implementation, one can create a \hyperlink{classndn_1_1security_1_1Key}{Key} frontend instance.
+
+\begin{DoxyReturn}{Returns}
+the key id name component set. If the identity does not exist, return an empty set. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_adf5f01a4770737f862b3e60d1ccd7b16}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_ab991468dc2995663fb001d8198c47000}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!has\+Certificate@{has\+Certificate}}
+\index{has\+Certificate@{has\+Certificate}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{has\+Certificate(const Name \&cert\+Name) const =0}{hasCertificate(const Name \&certName) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ndn\+::security\+::\+Pib\+Impl\+::has\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{cert\+Name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a2317a171218f3ca9dd7b3b12cf4c4877}{}\label{classndn_1_1security_1_1PibImpl_a2317a171218f3ca9dd7b3b12cf4c4877}
+
+
+Check the existence of a certificate with name {\ttfamily cert\+Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert\+Name} & The name of the certificate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the certificate exists, otherwise false. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a541f131f7adb92ff5d4b1aa387847789}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a2d6282fc69cdb324a44469b4b45531b2}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!has\+Identity@{has\+Identity}}
+\index{has\+Identity@{has\+Identity}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{has\+Identity(const Name \&identity) const =0}{hasIdentity(const Name \&identity) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ndn\+::security\+::\+Pib\+Impl\+::has\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_aa08d73cbf54f125b5bf20b5350b9fb28}{}\label{classndn_1_1security_1_1PibImpl_aa08d73cbf54f125b5bf20b5350b9fb28}
+
+
+Check the existence of an identity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the identity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the identity exists, otherwise false. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_ad322c524755fffae64d5fb78f2215c4e}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a71a8687a58cc8abae3a616e5f9d06b0a}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!has\+Key@{has\+Key}}
+\index{has\+Key@{has\+Key}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{has\+Key(const Name \&identity, const name\+::\+Component \&key\+Id) const =0}{hasKey(const Name \&identity, const name::Component \&keyId) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ndn\+::security\+::\+Pib\+Impl\+::has\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a4b3940f03ec40c8c96b4978961da4655}{}\label{classndn_1_1security_1_1PibImpl_a4b3940f03ec40c8c96b4978961da4655}
+
+
+Check the existence of a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonged identity. \\
+\hline
+{\em key\+Id} & The key id component. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key exists, otherwise false. Return false if the identity does not exist 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a798161982d8fafdcb3f5372b22cc1f48}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_aa7c86b37d300af284318006e7f80da8c}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!remove\+Certificate@{remove\+Certificate}}
+\index{remove\+Certificate@{remove\+Certificate}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{remove\+Certificate(const Name \&cert\+Name)=0}{removeCertificate(const Name \&certName)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::remove\+Certificate (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{cert\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_ae2a84a71d94aeeb2c83c097a433bfb80}{}\label{classndn_1_1security_1_1PibImpl_ae2a84a71d94aeeb2c83c097a433bfb80}
+
+
+Remove a certificate with name {\ttfamily cert\+Name}. 
+
+If the certificate does not exist, do nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert\+Name} & The name of the certificate. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a5aa737382625b9c485709b27b5bf89bb}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_ac757255c5a47b57d3aac547654a1d97d}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!remove\+Identity@{remove\+Identity}}
+\index{remove\+Identity@{remove\+Identity}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{remove\+Identity(const Name \&identity)=0}{removeIdentity(const Name \&identity)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::remove\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a3b02c4cc6602c3f785e5fa54ea37a72b}{}\label{classndn_1_1security_1_1PibImpl_a3b02c4cc6602c3f785e5fa54ea37a72b}
+
+
+Remove an identity. 
+
+If the identity does not exist, do nothing. Remove related keys and certificates as well.
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the identity to remove. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a3fd3e18c163ed344ecbcfa69f3b2b88c}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_af56d5d5ab3f2dffe849afbf07d81f02a}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!remove\+Key@{remove\+Key}}
+\index{remove\+Key@{remove\+Key}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{remove\+Key(const Name \&identity, const name\+::\+Component \&key\+Id)=0}{removeKey(const Name \&identity, const name::Component \&keyId)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::remove\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a66dc209a194383f9bc91ac14c0e6ff6c}{}\label{classndn_1_1security_1_1PibImpl_a66dc209a194383f9bc91ac14c0e6ff6c}
+
+
+Remove a key. 
+
+If the key does not exist, do nothing. Remove related certificates as well.
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonged identity. \\
+\hline
+{\em key\+Id} & The key id component. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a72fcfeecf043d0a932262c148d04d63b}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_acb97cb72374f5ca6fc7e72e378227ad7}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!set\+Default\+Certificate\+Of\+Key@{set\+Default\+Certificate\+Of\+Key}}
+\index{set\+Default\+Certificate\+Of\+Key@{set\+Default\+Certificate\+Of\+Key}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{set\+Default\+Certificate\+Of\+Key(const Name \&identity, const name\+::\+Component \&key\+Id, const Name \&cert\+Name)=0}{setDefaultCertificateOfKey(const Name \&identity, const name::Component \&keyId, const Name \&certName)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::set\+Default\+Certificate\+Of\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id, }
+\item[{const {\bf Name} \&}]{cert\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_aef78d5cbcdc4f844129525462cd30097}{}\label{classndn_1_1security_1_1PibImpl_aef78d5cbcdc4f844129525462cd30097}
+
+
+Set a cert with name {\ttfamily cert\+Name} as the default of a key with id  of . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonging identity. \\
+\hline
+{\em key\+Id} & The key id. \\
+\hline
+{\em cert\+Name} & The name of the certificate. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the certificate with name {\ttfamily cert\+Name} does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_ad4fa1c0a5a8bd8ead5e239e40add6a50}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a8b4489010426f9fdc94bb69857a1e6b4}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!set\+Default\+Identity@{set\+Default\+Identity}}
+\index{set\+Default\+Identity@{set\+Default\+Identity}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{set\+Default\+Identity(const Name \&identity\+Name)=0}{setDefaultIdentity(const Name \&identityName)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::set\+Default\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a73e6e0b49efeafae5763070d4f9f9fb3}{}\label{classndn_1_1security_1_1PibImpl_a73e6e0b49efeafae5763070d4f9f9fb3}
+
+
+Set an identity with name {\ttfamily identity\+Name} as the default identity. 
+
+Since adding an identity only requires the identity name, create the identity if it does not exist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity\+Name} & The name for the default identity. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_acb133f56e0789677c061cc6967345cee}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a4e5f8bd41d7f8e51c0ba2865550f6c69}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!set\+Default\+Key\+Of\+Identity@{set\+Default\+Key\+Of\+Identity}}
+\index{set\+Default\+Key\+Of\+Identity@{set\+Default\+Key\+Of\+Identity}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{set\+Default\+Key\+Of\+Identity(const Name \&identity, const name\+::\+Component \&key\+Id)=0}{setDefaultKeyOfIdentity(const Name \&identity, const name::Component \&keyId)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::set\+Default\+Key\+Of\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity, }
+\item[{const {\bf name\+::\+Component} \&}]{key\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_afdfed7ac6608c069315e787934a784f0}{}\label{classndn_1_1security_1_1PibImpl_afdfed7ac6608c069315e787934a784f0}
+
+
+Set an key with id {\ttfamily key\+Id} as the default key of an identity with name {\ttfamily identity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identity} & The name of the belonged identity. \\
+\hline
+{\em key\+Id} & The key id component. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1security_1_1Pib_1_1Error}{Pib\+::\+Error}} & if the key does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_afc5dd4299663177bb79d85e80debf567}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_aa6ef116cabee1e24e53674b9fec505f3}{ndn\+::security\+::\+Pib\+Memory}.
+
+\index{ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}!set\+Tpm\+Locator@{set\+Tpm\+Locator}}
+\index{set\+Tpm\+Locator@{set\+Tpm\+Locator}!ndn\+::security\+::\+Pib\+Impl@{ndn\+::security\+::\+Pib\+Impl}}
+\subsubsection[{\texorpdfstring{set\+Tpm\+Locator(const std\+::string \&tpm\+Locator)=0}{setTpmLocator(const std::string \&tpmLocator)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::security\+::\+Pib\+Impl\+::set\+Tpm\+Locator (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{tpm\+Locator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classndn_1_1security_1_1PibImpl_a279b5afb508c69b6b2407075f8aa35fb}{}\label{classndn_1_1security_1_1PibImpl_a279b5afb508c69b6b2407075f8aa35fb}
+
+
+Set the corresponding T\+PM information to {\ttfamily tpm\+Locator}. 
+
+If the provided {\ttfamily tpm\+Locator} is different from the existing one, the content in P\+IB will be cleaned up, otherwise nothing will be changed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmp\+Locator} & The name for the new tmp\+Locator \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classndn_1_1security_1_1PibSqlite3_a4fbc2f03f27dde7564431f0fdf81d670}{ndn\+::security\+::\+Pib\+Sqlite3}, and \hyperlink{classndn_1_1security_1_1PibMemory_a6928262565b0525e2f84da55a72f072f}{ndn\+::security\+::\+Pib\+Memory}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/pib-\/impl.\+hpp\end{DoxyCompactItemize}

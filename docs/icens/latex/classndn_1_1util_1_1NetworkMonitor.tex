@@ -1,0 +1,94 @@
+\hypertarget{classndn_1_1util_1_1NetworkMonitor}{}\section{ndn\+:\+:util\+:\+:Network\+Monitor Class Reference}
+\label{classndn_1_1util_1_1NetworkMonitor}\index{ndn\+::util\+::\+Network\+Monitor@{ndn\+::util\+::\+Network\+Monitor}}
+
+
+Network state change monitor.  
+
+
+
+
+{\ttfamily \#include $<$network-\/monitor.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:Network\+Monitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classndn_1_1util_1_1NetworkMonitor}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1util_1_1NetworkMonitor_1_1Error}{Error}
+\item 
+class \hyperlink{classndn_1_1util_1_1NetworkMonitor_1_1Impl}{Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1NetworkMonitor_aef8f9ab0a31e91cf07aa921b7859782c}{Network\+Monitor} (boost\+::asio\+::io\+\_\+service \&io)
+\begin{DoxyCompactList}\small\item\em Construct instance and start monitoring for network state changes. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1util_1_1NetworkMonitor_a597b95735866a797dfd66cd5b6c47921}{$\sim$\+Network\+Monitor} ()\hypertarget{classndn_1_1util_1_1NetworkMonitor_a597b95735866a797dfd66cd5b6c47921}{}\label{classndn_1_1util_1_1NetworkMonitor_a597b95735866a797dfd66cd5b6c47921}
+
+\begin{DoxyCompactList}\small\item\em Terminate network state monitoring. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{Signal}$<$ \hyperlink{classndn_1_1util_1_1NetworkMonitor}{Network\+Monitor} $>$ {\bfseries on\+Network\+State\+Changed}\hypertarget{classndn_1_1util_1_1NetworkMonitor_a761d860b535d7b075afff99b6a486e24}{}\label{classndn_1_1util_1_1NetworkMonitor_a761d860b535d7b075afff99b6a486e24}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Network state change monitor. 
+
+When network change is detected, on\+Network\+State\+Changed signal will be fired. Monitoring is run for the lifetime of the \hyperlink{classndn_1_1util_1_1NetworkMonitor}{Network\+Monitor} instance.
+
+\begin{DoxyNote}{Note}
+Implementation of this class is platform dependent and not all supported platforms are supported\+:
+\begin{DoxyItemize}
+\item OS X\+: C\+F\+Notification\+Center\+Add\+Observer
+\item Linux\+: rtnetlink notifications
+\end{DoxyItemize}
+\end{DoxyNote}
+Network state change detection is not guaranteed to be precise and (zero or more) notifications are expected to be fired for the following events\+:
+\begin{DoxyItemize}
+\item any network interface going up or down
+\item I\+Pv4 or I\+Pv6 address changes on any of the interfaces 
+\end{DoxyItemize}
+
+Definition at line 48 of file network-\/monitor.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::util\+::\+Network\+Monitor@{ndn\+::util\+::\+Network\+Monitor}!Network\+Monitor@{Network\+Monitor}}
+\index{Network\+Monitor@{Network\+Monitor}!ndn\+::util\+::\+Network\+Monitor@{ndn\+::util\+::\+Network\+Monitor}}
+\subsubsection[{\texorpdfstring{Network\+Monitor(boost\+::asio\+::io\+\_\+service \&io)}{NetworkMonitor(boost::asio::io\_service \&io)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::util\+::\+Network\+Monitor\+::\+Network\+Monitor (
+\begin{DoxyParamCaption}
+\item[{boost\+::asio\+::io\+\_\+service \&}]{io}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1util_1_1NetworkMonitor_aef8f9ab0a31e91cf07aa921b7859782c}{}\label{classndn_1_1util_1_1NetworkMonitor_aef8f9ab0a31e91cf07aa921b7859782c}
+
+
+Construct instance and start monitoring for network state changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io} & io\+\_\+service thread that will dispatch events \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1util_1_1NetworkMonitor_1_1Error}{Error}} & when network monitoring is not supported or there is an error starting monitoring \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 242 of file network-\/monitor.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/network-\/monitor.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/network-\/monitor.\+cpp\end{DoxyCompactItemize}

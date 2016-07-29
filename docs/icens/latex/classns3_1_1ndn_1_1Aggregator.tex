@@ -1,0 +1,215 @@
+\hypertarget{classns3_1_1ndn_1_1Aggregator}{}\section{ns3\+:\+:ndn\+:\+:Aggregator Class Reference}
+\label{classns3_1_1ndn_1_1Aggregator}\index{ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}}
+
+
+An application that concatenates payloaded interests at the aggregation of the Smart Grid architecture. At specified intervals (configurable by user), a single payload interest is sent upstream to the compute layer. The size of the payload equals the total bytes received within the configured wait interval. Install on nodes at the aggregation layer of the Smart Grid architecture (i\+CenS)  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/aggregator.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Aggregator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1Aggregator}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Received\+Interest\+Trace\+Callback}) (uint32\+\_\+t, shared\+\_\+ptr$<$ const Interest $>$)\hypertarget{classns3_1_1ndn_1_1Aggregator_a8c8be4a5741cb3134650caff3294d3ab}{}\label{classns3_1_1ndn_1_1Aggregator_a8c8be4a5741cb3134650caff3294d3ab}
+
+\item 
+typedef void($\ast$ {\bfseries Sent\+Interest\+Trace\+Callback}) (uint32\+\_\+t, shared\+\_\+ptr$<$ const Interest $>$)\hypertarget{classns3_1_1ndn_1_1Aggregator_a1e9bf9499a58296d3befbf1f2948f07b}{}\label{classns3_1_1ndn_1_1Aggregator_a1e9bf9499a58296d3befbf1f2948f07b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Aggregator_a80c9a59e3870a53e513fab803c342bb9}{On\+Interest} (shared\+\_\+ptr$<$ const Interest $>$ interest)
+\begin{DoxyCompactList}\small\item\em Method that will be called every time new Interest arrives. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Aggregator_ad9d72ff664a7dd9483abca9050bb78b7}{On\+Data} (shared\+\_\+ptr$<$ const Data $>$ content\+Object)
+\begin{DoxyCompactList}\small\item\em Method that will be called every time new Data arrives. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1Aggregator_af634b71ff0feefd1e9e5d378ae0c012d}{Schedule\+Agg\+Packets} ()\hypertarget{classns3_1_1ndn_1_1Aggregator_af634b71ff0feefd1e9e5d378ae0c012d}{}\label{classns3_1_1ndn_1_1Aggregator_af634b71ff0feefd1e9e5d378ae0c012d}
+
+\begin{DoxyCompactList}\small\item\em Aggregate payloads from all received interests and forward upstream. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1Aggregator_a190d8c2bfe205ebf4d4e421b312dfd2d}{Send\+Agg\+Interest} ()\hypertarget{classns3_1_1ndn_1_1Aggregator_a190d8c2bfe205ebf4d4e421b312dfd2d}{}\label{classns3_1_1ndn_1_1Aggregator_a190d8c2bfe205ebf4d4e421b312dfd2d}
+
+\begin{DoxyCompactList}\small\item\em Actually send aggregated payloaded interest. The payload size is the total bytes received in the configured time interval. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Aggregator_ac488c3a7b4a9d163b4713a0ffe77406a}{Will\+Send\+Out\+Interest} (uint32\+\_\+t sequence\+Number)
+\begin{DoxyCompactList}\small\item\em An event that is fired just before an Interest packet is actually send out (send is inevitable) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Aggregator_ae4689aa121eb210012d9db3a688b925d}{On\+Timeout} (uint32\+\_\+t sequence\+Number)
+\begin{DoxyCompactList}\small\item\em Timeout event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id {\bfseries Get\+Type\+Id} (void)\hypertarget{classns3_1_1ndn_1_1Aggregator_a94222e703ca1551519604a987bcfc046}{}\label{classns3_1_1ndn_1_1Aggregator_a94222e703ca1551519604a987bcfc046}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Aggregator_a938d6e0b6e8b725b167e2a82d5a1a751}{Start\+Application} ()\hypertarget{classns3_1_1ndn_1_1Aggregator_a938d6e0b6e8b725b167e2a82d5a1a751}{}\label{classns3_1_1ndn_1_1Aggregator_a938d6e0b6e8b725b167e2a82d5a1a751}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Start. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1Aggregator_af91381e96cde6ad48cad75794e1b9734}{Stop\+Application} ()\hypertarget{classns3_1_1ndn_1_1Aggregator_af91381e96cde6ad48cad75794e1b9734}{}\label{classns3_1_1ndn_1_1Aggregator_af91381e96cde6ad48cad75794e1b9734}
+
+\begin{DoxyCompactList}\small\item\em Called at time specified by Stop. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1Aggregator_aa9417b981e9ad1708339d172093e14ab}{Check\+Retx\+Timeout} ()\hypertarget{classns3_1_1ndn_1_1Aggregator_aa9417b981e9ad1708339d172093e14ab}{}\label{classns3_1_1ndn_1_1Aggregator_aa9417b981e9ad1708339d172093e14ab}
+
+\begin{DoxyCompactList}\small\item\em Checks if the packet need to be retransmitted becuase of retransmission timer expiration. \end{DoxyCompactList}\item 
+void \hyperlink{classns3_1_1ndn_1_1Aggregator_a23c3235319dd497a4b75575ad4044cf5}{Set\+Retx\+Timer} (Time retx\+Timer)
+\begin{DoxyCompactList}\small\item\em Modifies the frequency of checking the retransmission timeouts. \end{DoxyCompactList}\item 
+Time \hyperlink{classns3_1_1ndn_1_1Aggregator_adc26b819bc5c83308e38886b3f6757e3}{Get\+Retx\+Timer} () const
+\begin{DoxyCompactList}\small\item\em Returns the frequency of checking the retransmission timeouts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Traced\+Callback$<$ uint32\+\_\+t, shared\+\_\+ptr$<$ const Interest $>$ $>$ {\bfseries m\+\_\+received\+Interest}\hypertarget{classns3_1_1ndn_1_1Aggregator_aef2e8414ca6a37b1c0f6b6b8caa42050}{}\label{classns3_1_1ndn_1_1Aggregator_aef2e8414ca6a37b1c0f6b6b8caa42050}
+
+\item 
+Traced\+Callback$<$ uint32\+\_\+t, shared\+\_\+ptr$<$ const Interest $>$ $>$ {\bfseries m\+\_\+sent\+Interest}\hypertarget{classns3_1_1ndn_1_1Aggregator_a350cfe270049c914eee947803b11503f}{}\label{classns3_1_1ndn_1_1Aggregator_a350cfe270049c914eee947803b11503f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An application that concatenates payloaded interests at the aggregation of the Smart Grid architecture. At specified intervals (configurable by user), a single payload interest is sent upstream to the compute layer. The size of the payload equals the total bytes received within the configured wait interval. Install on nodes at the aggregation layer of the Smart Grid architecture (i\+CenS) 
+
+Definition at line 47 of file ndn-\/aggregator.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}!Get\+Retx\+Timer@{Get\+Retx\+Timer}}
+\index{Get\+Retx\+Timer@{Get\+Retx\+Timer}!ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}}
+\subsubsection[{\texorpdfstring{Get\+Retx\+Timer() const}{GetRetxTimer() const}}]{\setlength{\rightskip}{0pt plus 5cm}Time ns3\+::ndn\+::\+Aggregator\+::\+Get\+Retx\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classns3_1_1ndn_1_1Aggregator_adc26b819bc5c83308e38886b3f6757e3}{}\label{classns3_1_1ndn_1_1Aggregator_adc26b819bc5c83308e38886b3f6757e3}
+
+
+Returns the frequency of checking the retransmission timeouts. 
+
+\begin{DoxyReturn}{Returns}
+Timeout defining how frequent retransmission timeouts should be checked 
+\end{DoxyReturn}
+
+
+Definition at line 260 of file ndn-\/aggregator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}!On\+Data@{On\+Data}}
+\index{On\+Data@{On\+Data}!ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}}
+\subsubsection[{\texorpdfstring{On\+Data(shared\+\_\+ptr$<$ const Data $>$ content\+Object)}{OnData(shared\_ptr< const Data > contentObject)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Aggregator\+::\+On\+Data (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1Aggregator_ad9d72ff664a7dd9483abca9050bb78b7}{}\label{classns3_1_1ndn_1_1Aggregator_ad9d72ff664a7dd9483abca9050bb78b7}
+
+
+Method that will be called every time new Data arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content\+Object} & Data header \\
+\hline
+{\em payload} & payload (potentially virtual) of the Data packet (may include packet tags of original packet) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1App_a3f6f593a1557aa22c01bfbab6590b240}{ns3\+::ndn\+::\+App}.
+
+
+
+Definition at line 315 of file ndn-\/aggregator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}!On\+Interest@{On\+Interest}}
+\index{On\+Interest@{On\+Interest}!ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}}
+\subsubsection[{\texorpdfstring{On\+Interest(shared\+\_\+ptr$<$ const Interest $>$ interest)}{OnInterest(shared\_ptr< const Interest > interest)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Aggregator\+::\+On\+Interest (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Interest $>$}]{interest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1Aggregator_a80c9a59e3870a53e513fab803c342bb9}{}\label{classns3_1_1ndn_1_1Aggregator_a80c9a59e3870a53e513fab803c342bb9}
+
+
+Method that will be called every time new Interest arrives. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & Interest header \\
+\hline
+{\em packet} & \char`\"{}\+Payload\char`\"{} of the interests packet. The actual payload should be zero, but packet itself may be useful to get packet tags \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classns3_1_1ndn_1_1App_a7aab3dd5e62169430795a2d6e1060f95}{ns3\+::ndn\+::\+App}.
+
+
+
+Definition at line 138 of file ndn-\/aggregator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}!On\+Timeout@{On\+Timeout}}
+\index{On\+Timeout@{On\+Timeout}!ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}}
+\subsubsection[{\texorpdfstring{On\+Timeout(uint32\+\_\+t sequence\+Number)}{OnTimeout(uint32\_t sequenceNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Aggregator\+::\+On\+Timeout (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{sequence\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1Aggregator_ae4689aa121eb210012d9db3a688b925d}{}\label{classns3_1_1ndn_1_1Aggregator_ae4689aa121eb210012d9db3a688b925d}
+
+
+Timeout event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence\+Number} & time outed sequence number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 303 of file ndn-\/aggregator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}!Set\+Retx\+Timer@{Set\+Retx\+Timer}}
+\index{Set\+Retx\+Timer@{Set\+Retx\+Timer}!ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}}
+\subsubsection[{\texorpdfstring{Set\+Retx\+Timer(\+Time retx\+Timer)}{SetRetxTimer(Time retxTimer)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Aggregator\+::\+Set\+Retx\+Timer (
+\begin{DoxyParamCaption}
+\item[{Time}]{retx\+Timer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classns3_1_1ndn_1_1Aggregator_a23c3235319dd497a4b75575ad4044cf5}{}\label{classns3_1_1ndn_1_1Aggregator_a23c3235319dd497a4b75575ad4044cf5}
+
+
+Modifies the frequency of checking the retransmission timeouts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em retx\+Timer} & Timeout defining how frequent retransmission timeouts should be checked \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 266 of file ndn-\/aggregator.\+cpp.
+
+\index{ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}!Will\+Send\+Out\+Interest@{Will\+Send\+Out\+Interest}}
+\index{Will\+Send\+Out\+Interest@{Will\+Send\+Out\+Interest}!ns3\+::ndn\+::\+Aggregator@{ns3\+::ndn\+::\+Aggregator}}
+\subsubsection[{\texorpdfstring{Will\+Send\+Out\+Interest(uint32\+\_\+t sequence\+Number)}{WillSendOutInterest(uint32\_t sequenceNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Aggregator\+::\+Will\+Send\+Out\+Interest (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{sequence\+Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1Aggregator_ac488c3a7b4a9d163b4713a0ffe77406a}{}\label{classns3_1_1ndn_1_1Aggregator_ac488c3a7b4a9d163b4713a0ffe77406a}
+
+
+An event that is fired just before an Interest packet is actually send out (send is inevitable) 
+
+The reason for \char`\"{}before\char`\"{} even is that in certain cases (when it is possible to satisfy from the local cache), the send call will immediately return data, and if \char`\"{}after\char`\"{} even was used, this after would be called after all processing of incoming data, potentially producing unexpected results. 
+
+Definition at line 242 of file ndn-\/aggregator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/aggregator.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/apps/ndn-\/aggregator.\+cpp\end{DoxyCompactItemize}

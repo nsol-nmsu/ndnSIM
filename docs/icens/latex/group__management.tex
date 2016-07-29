@@ -1,0 +1,182 @@
+\hypertarget{group__management}{}\section{Management}
+\label{group__management}\index{Management@{Management}}
+
+
+Classes and data structures to manage N\+DN forwarder.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1ChannelStatus}{ndn\+::nfd\+::\+Channel\+Status}
+\begin{DoxyCompactList}\small\item\em represents N\+FD Channel Status dataset \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1CommandOptions}{ndn\+::nfd\+::\+Command\+Options}
+\begin{DoxyCompactList}\small\item\em contains options for \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} execution \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1ControlCommand}{ndn\+::nfd\+::\+Control\+Command}
+\begin{DoxyCompactList}\small\item\em base class of N\+FD \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceCreateCommand}{ndn\+::nfd\+::\+Face\+Create\+Command}
+\begin{DoxyCompactList}\small\item\em represents a faces/create command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceDestroyCommand}{ndn\+::nfd\+::\+Face\+Destroy\+Command}
+\begin{DoxyCompactList}\small\item\em represents a faces/destroy command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceLocalControlCommand}{ndn\+::nfd\+::\+Face\+Local\+Control\+Command}
+\begin{DoxyCompactList}\small\item\em Base class for faces/\mbox{[}$\ast$\mbox{]}-\/local-\/control commands. \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceEnableLocalControlCommand}{ndn\+::nfd\+::\+Face\+Enable\+Local\+Control\+Command}
+\begin{DoxyCompactList}\small\item\em represents a faces/enable-\/local-\/control command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceDisableLocalControlCommand}{ndn\+::nfd\+::\+Face\+Disable\+Local\+Control\+Command}
+\begin{DoxyCompactList}\small\item\em represents a faces/disable-\/local-\/control command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FibAddNextHopCommand}{ndn\+::nfd\+::\+Fib\+Add\+Next\+Hop\+Command}
+\begin{DoxyCompactList}\small\item\em represents a fib/add-\/nexthop command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FibRemoveNextHopCommand}{ndn\+::nfd\+::\+Fib\+Remove\+Next\+Hop\+Command}
+\begin{DoxyCompactList}\small\item\em represents a fib/remove-\/nexthop command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1StrategyChoiceSetCommand}{ndn\+::nfd\+::\+Strategy\+Choice\+Set\+Command}
+\begin{DoxyCompactList}\small\item\em represents a strategy-\/choice/set command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1StrategyChoiceUnsetCommand}{ndn\+::nfd\+::\+Strategy\+Choice\+Unset\+Command}
+\begin{DoxyCompactList}\small\item\em represents a strategy-\/choice/set command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1RibRegisterCommand}{ndn\+::nfd\+::\+Rib\+Register\+Command}
+\begin{DoxyCompactList}\small\item\em represents a rib/register command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1RibUnregisterCommand}{ndn\+::nfd\+::\+Rib\+Unregister\+Command}
+\begin{DoxyCompactList}\small\item\em represents a rib/unregister command \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1ControlParameters}{ndn\+::nfd\+::\+Control\+Parameters}
+\begin{DoxyCompactList}\small\item\em represents parameters in a \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} request or response \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1Controller}{ndn\+::nfd\+::\+Controller}
+\begin{DoxyCompactList}\small\item\em N\+FD Management protocol -\/ \hyperlink{classndn_1_1nfd_1_1ControlCommand}{Control\+Command} client. \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceEventNotification}{ndn\+::nfd\+::\+Face\+Event\+Notification}
+\begin{DoxyCompactList}\small\item\em represents a \hyperlink{classndn_1_1Face}{Face} status change notification \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceQueryFilter}{ndn\+::nfd\+::\+Face\+Query\+Filter}
+\begin{DoxyCompactList}\small\item\em represents \hyperlink{classndn_1_1Face}{Face} Query Filter \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceStatus}{ndn\+::nfd\+::\+Face\+Status}
+\begin{DoxyCompactList}\small\item\em represents \hyperlink{classndn_1_1Face}{Face} status \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1FaceTraits}{ndn\+::nfd\+::\+Face\+Traits$<$ C $>$}
+\begin{DoxyCompactList}\small\item\em providers getters and setters of face information fields \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1NextHopRecord}{ndn\+::nfd\+::\+Next\+Hop\+Record}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1FibEntry}{ndn\+::nfd\+::\+Fib\+Entry}
+\item 
+class \hyperlink{classndn_1_1nfd_1_1ForwarderStatus}{ndn\+::nfd\+::\+Forwarder\+Status}
+\begin{DoxyCompactList}\small\item\em represents N\+FD Forwarder Status \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{ndn\+::nfd\+::\+Local\+Control\+Header}
+\begin{DoxyCompactList}\small\item\em Class to handle work with \hyperlink{classndn_1_1nfd_1_1LocalControlHeader}{Local\+Control\+Header}. \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1Route}{ndn\+::nfd\+::\+Route}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1Data}{Data} abstraction for \hyperlink{classndn_1_1nfd_1_1Route}{Route}. \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1RibEntry}{ndn\+::nfd\+::\+Rib\+Entry}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classndn_1_1Data}{Data} abstraction for R\+IB entry. \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1RibFlagsTraits}{ndn\+::nfd\+::\+Rib\+Flags\+Traits$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em implements getters to each R\+IB flag \end{DoxyCompactList}\item 
+class \hyperlink{classndn_1_1nfd_1_1StrategyChoice}{ndn\+::nfd\+::\+Strategy\+Choice}
+\begin{DoxyCompactList}\small\item\em represents N\+FD \hyperlink{classndn_1_1nfd_1_1StrategyChoice}{Strategy\+Choice} dataset \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__management_gaa49e0fd703a14e5bf904d15428fd6059}{ndn\+::nfd\+::\+Face\+Scope} \{ \hyperlink{group__management_ggaa49e0fd703a14e5bf904d15428fd6059ab79946898b7e484062fa9eae0df1e67d}{ndn\+::nfd\+::\+F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+N\+O\+N\+\_\+\+L\+O\+C\+AL} = 0, 
+\hyperlink{group__management_ggaa49e0fd703a14e5bf904d15428fd6059a96a6343f404f0aaea1ab481bdc704f59}{ndn\+::nfd\+::\+F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+L\+O\+C\+AL} = 1
+ \}
+\item 
+enum \hyperlink{group__management_ga05df4b7c484a0fae25d3e65962511bac}{ndn\+::nfd\+::\+Face\+Persistency} \{ \hyperlink{group__management_gga05df4b7c484a0fae25d3e65962511bacaaebdd2e1f8ad08e833602ba66aed6de0}{ndn\+::nfd\+::\+F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT} = 0, 
+\hyperlink{group__management_gga05df4b7c484a0fae25d3e65962511baca96bad6012957ccb9a479076d632d4657}{ndn\+::nfd\+::\+F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+O\+N\+\_\+\+D\+E\+M\+A\+ND} = 1, 
+\hyperlink{group__management_gga05df4b7c484a0fae25d3e65962511bacab48510009b1ffbcc656493c424aa3446}{ndn\+::nfd\+::\+F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+M\+A\+N\+E\+NT} = 2
+ \}
+\item 
+enum \hyperlink{group__management_gaa49a53cb4fe262ed33b001ccbe9c3502}{ndn\+::nfd\+::\+Link\+Type} \{ \hyperlink{group__management_ggaa49a53cb4fe262ed33b001ccbe9c3502adc3535befa39ead35928cf9a5909605a}{ndn\+::nfd\+::\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT} = 0, 
+\hyperlink{group__management_ggaa49a53cb4fe262ed33b001ccbe9c3502acf21238d2c439677204c50eab920a904}{ndn\+::nfd\+::\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+A\+C\+C\+E\+SS} = 1
+ \}
+\item 
+enum {\bfseries Route\+Origin} \{ \\*
+{\bfseries R\+O\+U\+T\+E\+\_\+\+O\+R\+I\+G\+I\+N\+\_\+\+A\+PP} = 0, 
+{\bfseries R\+O\+U\+T\+E\+\_\+\+O\+R\+I\+G\+I\+N\+\_\+\+A\+U\+T\+O\+R\+EG} = 64, 
+{\bfseries R\+O\+U\+T\+E\+\_\+\+O\+R\+I\+G\+I\+N\+\_\+\+C\+L\+I\+E\+NT} = 65, 
+{\bfseries R\+O\+U\+T\+E\+\_\+\+O\+R\+I\+G\+I\+N\+\_\+\+A\+U\+T\+O\+C\+O\+NF} = 66, 
+\\*
+{\bfseries R\+O\+U\+T\+E\+\_\+\+O\+R\+I\+G\+I\+N\+\_\+\+N\+L\+SR} = 128, 
+{\bfseries R\+O\+U\+T\+E\+\_\+\+O\+R\+I\+G\+I\+N\+\_\+\+S\+T\+A\+T\+IC} = 255
+ \}\hypertarget{group__management_gad8a7e51433970880a2662bc78c8aa64c}{}\label{group__management_gad8a7e51433970880a2662bc78c8aa64c}
+
+\item 
+enum {\bfseries Route\+Flags} \{ {\bfseries R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+H\+I\+L\+D\+\_\+\+I\+N\+H\+E\+R\+IT} = 1, 
+{\bfseries R\+O\+U\+T\+E\+\_\+\+F\+L\+A\+G\+\_\+\+C\+A\+P\+T\+U\+RE} = 2
+ \}\hypertarget{group__management_ga378a5a1ad39850874c435b02a9d069dd}{}\label{group__management_ga378a5a1ad39850874c435b02a9d069dd}
+
+\item 
+enum {\bfseries Control\+Parameter\+Field} \{ \\*
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+N\+A\+ME}, 
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+F\+A\+C\+E\+\_\+\+ID}, 
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+U\+RI}, 
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+L\+O\+C\+A\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+F\+E\+A\+T\+U\+RE}, 
+\\*
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+O\+R\+I\+G\+IN}, 
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+C\+O\+ST}, 
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+F\+L\+A\+GS}, 
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+S\+T\+R\+A\+T\+E\+GY}, 
+\\*
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+OD}, 
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+U\+B\+O\+U\+ND}
+ \}\hypertarget{group__management_gaec5bc42bf168e30ec8134951c9d8e384}{}\label{group__management_gaec5bc42bf168e30ec8134951c9d8e384}
+
+\item 
+enum {\bfseries Local\+Control\+Feature} \{ {\bfseries L\+O\+C\+A\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+F\+A\+C\+E\+\_\+\+ID} = 1, 
+{\bfseries L\+O\+C\+A\+L\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+F\+E\+A\+T\+U\+R\+E\+\_\+\+N\+E\+X\+T\+\_\+\+H\+O\+P\+\_\+\+F\+A\+C\+E\+\_\+\+ID} = 2
+ \}\hypertarget{group__management_ga3a4ae997626d42eb2ecb7145abd308a8}{}\label{group__management_ga3a4ae997626d42eb2ecb7145abd308a8}
+
+\item 
+enum {\bfseries Face\+Event\+Kind} \{ {\bfseries F\+A\+C\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+ED} = 1, 
+{\bfseries F\+A\+C\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+S\+T\+R\+O\+Y\+ED} = 2
+ \}\hypertarget{group__management_ga3b6d0a60c7023346dfe65c62bd1c0667}{}\label{group__management_ga3b6d0a60c7023346dfe65c62bd1c0667}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classes and data structures to manage N\+DN forwarder. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\index{Management@{Management}!Face\+Persistency@{Face\+Persistency}}
+\index{Face\+Persistency@{Face\+Persistency}!Management@{Management}}
+\subsubsection[{\texorpdfstring{Face\+Persistency}{FacePersistency}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ndn\+::nfd\+::\+Face\+Persistency}}\hypertarget{group__management_ga05df4b7c484a0fae25d3e65962511bac}{}\label{group__management_ga05df4b7c484a0fae25d3e65962511bac}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT@{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT}!Management@{Management}}\index{Management@{Management}!F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT@{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT}}\item[{\em 
+F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+NT\hypertarget{group__management_gga05df4b7c484a0fae25d3e65962511bacaaebdd2e1f8ad08e833602ba66aed6de0}{}\label{group__management_gga05df4b7c484a0fae25d3e65962511bacaaebdd2e1f8ad08e833602ba66aed6de0}
+}]face is persistent \index{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+O\+N\+\_\+\+D\+E\+M\+A\+ND@{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+O\+N\+\_\+\+D\+E\+M\+A\+ND}!Management@{Management}}\index{Management@{Management}!F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+O\+N\+\_\+\+D\+E\+M\+A\+ND@{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+O\+N\+\_\+\+D\+E\+M\+A\+ND}}\item[{\em 
+F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+O\+N\+\_\+\+D\+E\+M\+A\+ND\hypertarget{group__management_gga05df4b7c484a0fae25d3e65962511baca96bad6012957ccb9a479076d632d4657}{}\label{group__management_gga05df4b7c484a0fae25d3e65962511baca96bad6012957ccb9a479076d632d4657}
+}]face is on-\/demand \index{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+M\+A\+N\+E\+NT@{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+M\+A\+N\+E\+NT}!Management@{Management}}\index{Management@{Management}!F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+M\+A\+N\+E\+NT@{F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+M\+A\+N\+E\+NT}}\item[{\em 
+F\+A\+C\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+C\+Y\+\_\+\+P\+E\+R\+M\+A\+N\+E\+NT\hypertarget{group__management_gga05df4b7c484a0fae25d3e65962511bacab48510009b1ffbcc656493c424aa3446}{}\label{group__management_gga05df4b7c484a0fae25d3e65962511bacab48510009b1ffbcc656493c424aa3446}
+}]face is permanent \end{description}
+\end{Desc}
+
+
+Definition at line 48 of file nfd-\/constants.\+hpp.
+
+\index{Management@{Management}!Face\+Scope@{Face\+Scope}}
+\index{Face\+Scope@{Face\+Scope}!Management@{Management}}
+\subsubsection[{\texorpdfstring{Face\+Scope}{FaceScope}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ndn\+::nfd\+::\+Face\+Scope}}\hypertarget{group__management_gaa49e0fd703a14e5bf904d15428fd6059}{}\label{group__management_gaa49e0fd703a14e5bf904d15428fd6059}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+N\+O\+N\+\_\+\+L\+O\+C\+AL@{F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+N\+O\+N\+\_\+\+L\+O\+C\+AL}!Management@{Management}}\index{Management@{Management}!F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+N\+O\+N\+\_\+\+L\+O\+C\+AL@{F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+N\+O\+N\+\_\+\+L\+O\+C\+AL}}\item[{\em 
+F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+N\+O\+N\+\_\+\+L\+O\+C\+AL\hypertarget{group__management_ggaa49e0fd703a14e5bf904d15428fd6059ab79946898b7e484062fa9eae0df1e67d}{}\label{group__management_ggaa49e0fd703a14e5bf904d15428fd6059ab79946898b7e484062fa9eae0df1e67d}
+}]face is non-\/local \index{F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+L\+O\+C\+AL@{F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+L\+O\+C\+AL}!Management@{Management}}\index{Management@{Management}!F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+L\+O\+C\+AL@{F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+L\+O\+C\+AL}}\item[{\em 
+F\+A\+C\+E\+\_\+\+S\+C\+O\+P\+E\+\_\+\+L\+O\+C\+AL\hypertarget{group__management_ggaa49e0fd703a14e5bf904d15428fd6059a96a6343f404f0aaea1ab481bdc704f59}{}\label{group__management_ggaa49e0fd703a14e5bf904d15428fd6059a96a6343f404f0aaea1ab481bdc704f59}
+}]face is local \end{description}
+\end{Desc}
+
+
+Definition at line 34 of file nfd-\/constants.\+hpp.
+
+\index{Management@{Management}!Link\+Type@{Link\+Type}}
+\index{Link\+Type@{Link\+Type}!Management@{Management}}
+\subsubsection[{\texorpdfstring{Link\+Type}{LinkType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ndn\+::nfd\+::\+Link\+Type}}\hypertarget{group__management_gaa49a53cb4fe262ed33b001ccbe9c3502}{}\label{group__management_gaa49a53cb4fe262ed33b001ccbe9c3502}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT@{L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT}!Management@{Management}}\index{Management@{Management}!L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT@{L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT}}\item[{\em 
+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+I\+N\+T\+\_\+\+T\+O\+\_\+\+P\+O\+I\+NT\hypertarget{group__management_ggaa49a53cb4fe262ed33b001ccbe9c3502adc3535befa39ead35928cf9a5909605a}{}\label{group__management_ggaa49a53cb4fe262ed33b001ccbe9c3502adc3535befa39ead35928cf9a5909605a}
+}]link is point-\/to-\/point \index{L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+A\+C\+C\+E\+SS@{L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+A\+C\+C\+E\+SS}!Management@{Management}}\index{Management@{Management}!L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+A\+C\+C\+E\+SS@{L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+A\+C\+C\+E\+SS}}\item[{\em 
+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+A\+C\+C\+E\+SS\hypertarget{group__management_ggaa49a53cb4fe262ed33b001ccbe9c3502acf21238d2c439677204c50eab920a904}{}\label{group__management_ggaa49a53cb4fe262ed33b001ccbe9c3502acf21238d2c439677204c50eab920a904}
+}]link is multi-\/access \end{description}
+\end{Desc}
+
+
+Definition at line 65 of file nfd-\/constants.\+hpp.
+

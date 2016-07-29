@@ -1,0 +1,152 @@
+\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester}{}\section{nfd\+:\+:fw\+:\+:tests\+:\+:Topology\+Tester Class Reference}
+\label{classnfd_1_1fw_1_1tests_1_1TopologyTester}\index{nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}}
+
+
+builds a topology for forwarding tests  
+
+
+
+
+{\ttfamily \#include $<$topology-\/tester.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fw\+:\+:tests\+:\+:Topology\+Tester\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnfd_1_1fw_1_1tests_1_1TopologyTester}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{Topology\+Node} \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa09028145031342603102240d74d4192}{add\+Forwarder} ()
+\begin{DoxyCompactList}\small\item\em creates a forwarder \end{DoxyCompactList}\item 
+\hyperlink{classnfd_1_1Forwarder}{Forwarder} \& \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_ad093668f9269418b8458056cb9acb213}{get\+Forwarder} (\hyperlink{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{Topology\+Node} i)
+\item 
+{\footnotesize template$<$typename S $>$ }\\void \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_a581f4e8f09d176ab24b632b68ff4d00e}{set\+Strategy} (\hyperlink{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{Topology\+Node} i, \hyperlink{classndn_1_1Name}{Name} prefix=\hyperlink{classndn_1_1Name}{Name}(\char`\"{}ndn\+:/\char`\"{}))
+\begin{DoxyCompactList}\small\item\em sets strategy on forwarder {\ttfamily i} \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyLink}{Topology\+Link} $>$ \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa3e387af7dcd1e7a63d94c7b083d4a40}{add\+Link} (const time\+::nanoseconds \&delay, std\+::initializer\+\_\+list$<$ \hyperlink{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{Topology\+Node} $>$ forwarders)
+\begin{DoxyCompactList}\small\item\em makes a link that interconnects two or more forwarders \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyAppLink}{Topology\+App\+Link} $>$ \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_ab911dbd99dc7f98c4a350566b7cd6b02}{add\+App\+Face} (\hyperlink{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{Topology\+Node} i)\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_ab911dbd99dc7f98c4a350566b7cd6b02}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_ab911dbd99dc7f98c4a350566b7cd6b02}
+
+\begin{DoxyCompactList}\small\item\em makes a link to local application \end{DoxyCompactList}\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyAppLink}{Topology\+App\+Link} $>$ \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_a44db569529405448019ca0b1c93d97da}{add\+App\+Face} (\hyperlink{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{Topology\+Node} i, const \hyperlink{classndn_1_1Name}{Name} \&prefix, uint64\+\_\+t cost=0)\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_a44db569529405448019ca0b1c93d97da}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_a44db569529405448019ca0b1c93d97da}
+
+\begin{DoxyCompactList}\small\item\em makes a link to local application, and register a prefix \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F $>$ }\\void \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_ae7f94267b9dba9be65f489887274ae0b}{register\+Prefix} (\hyperlink{topology-tester_8hpp_a65eed57bba998574cb3a2e62126f33e8}{Topology\+Node} i, shared\+\_\+ptr$<$ F $>$ face, const \hyperlink{classndn_1_1Name}{Name} \&prefix, uint64\+\_\+t cost=0)
+\begin{DoxyCompactList}\small\item\em registers a prefix on a face \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa4241545dd170380ef5c013d49738db8}{add\+Echo\+Producer} (\hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face} \&face, const \hyperlink{classndn_1_1Name}{Name} \&prefix=\char`\"{}/\char`\"{})\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa4241545dd170380ef5c013d49738db8}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa4241545dd170380ef5c013d49738db8}
+
+\begin{DoxyCompactList}\small\item\em creates a producer application that answers every Interest with Data of same Name \end{DoxyCompactList}\item 
+void \hyperlink{classnfd_1_1fw_1_1tests_1_1TopologyTester_a240b16af90600d802bbec56f8455b832}{add\+Interval\+Consumer} (\hyperlink{classndn_1_1util_1_1DummyClientFace}{Dummy\+Client\+Face} \&face, const \hyperlink{classndn_1_1Name}{Name} \&prefix, const time\+::nanoseconds \&interval, size\+\_\+t n)\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_a240b16af90600d802bbec56f8455b832}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_a240b16af90600d802bbec56f8455b832}
+
+\begin{DoxyCompactList}\small\item\em creates a consumer application that sends {\ttfamily n} Interests under {\ttfamily prefix} at {\ttfamily interval} fixed rate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+builds a topology for forwarding tests 
+
+Definition at line 240 of file topology-\/tester.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}!add\+Forwarder@{add\+Forwarder}}
+\index{add\+Forwarder@{add\+Forwarder}!nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}}
+\subsubsection[{\texorpdfstring{add\+Forwarder()}{addForwarder()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Topology\+Node} nfd\+::fw\+::tests\+::\+Topology\+Tester\+::add\+Forwarder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa09028145031342603102240d74d4192}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa09028145031342603102240d74d4192}
+
+
+creates a forwarder 
+
+\begin{DoxyReturn}{Returns}
+index of new forwarder 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file topology-\/tester.\+hpp.
+
+\index{nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}!add\+Link@{add\+Link}}
+\index{add\+Link@{add\+Link}!nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}}
+\subsubsection[{\texorpdfstring{add\+Link(const time\+::nanoseconds \&delay, std\+::initializer\+\_\+list$<$ Topology\+Node $>$ forwarders)}{addLink(const time::nanoseconds \&delay, std::initializer\_list< TopologyNode > forwarders)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<${\bf Topology\+Link}$>$ nfd\+::fw\+::tests\+::\+Topology\+Tester\+::add\+Link (
+\begin{DoxyParamCaption}
+\item[{const time\+::nanoseconds \&}]{delay, }
+\item[{std\+::initializer\+\_\+list$<$ {\bf Topology\+Node} $>$}]{forwarders}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa3e387af7dcd1e7a63d94c7b083d4a40}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_aa3e387af7dcd1e7a63d94c7b083d4a40}
+
+
+makes a link that interconnects two or more forwarders 
+
+A face is created on each of {\ttfamily forwarders} . When a packet is sent onto one of the faces on this link, this packet will be received by all other faces on this link after {\ttfamily delay} . 
+
+Definition at line 284 of file topology-\/tester.\+hpp.
+
+\index{nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}!get\+Forwarder@{get\+Forwarder}}
+\index{get\+Forwarder@{get\+Forwarder}!nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}}
+\subsubsection[{\texorpdfstring{get\+Forwarder(\+Topology\+Node i)}{getForwarder(TopologyNode i)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Forwarder}\& nfd\+::fw\+::tests\+::\+Topology\+Tester\+::get\+Forwarder (
+\begin{DoxyParamCaption}
+\item[{{\bf Topology\+Node}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_ad093668f9269418b8458056cb9acb213}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_ad093668f9269418b8458056cb9acb213}
+\begin{DoxyReturn}{Returns}
+forwarder instance {\ttfamily i} 
+\end{DoxyReturn}
+
+
+Definition at line 257 of file topology-\/tester.\+hpp.
+
+\index{nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}!register\+Prefix@{register\+Prefix}}
+\index{register\+Prefix@{register\+Prefix}!nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}}
+\subsubsection[{\texorpdfstring{register\+Prefix(\+Topology\+Node i, shared\+\_\+ptr$<$ F $>$ face, const Name \&prefix, uint64\+\_\+t cost=0)}{registerPrefix(TopologyNode i, shared\_ptr< F > face, const Name \&prefix, uint64\_t cost=0)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F $>$ void nfd\+::fw\+::tests\+::\+Topology\+Tester\+::register\+Prefix (
+\begin{DoxyParamCaption}
+\item[{{\bf Topology\+Node}}]{i, }
+\item[{shared\+\_\+ptr$<$ F $>$}]{face, }
+\item[{const {\bf Name} \&}]{prefix, }
+\item[{uint64\+\_\+t}]{cost = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_ae7f94267b9dba9be65f489887274ae0b}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_ae7f94267b9dba9be65f489887274ae0b}
+
+
+registers a prefix on a face 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em F} & either \hyperlink{classDummyFace}{Dummy\+Face} or Dummy\+Local\+Face \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 323 of file topology-\/tester.\+hpp.
+
+\index{nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}!set\+Strategy@{set\+Strategy}}
+\index{set\+Strategy@{set\+Strategy}!nfd\+::fw\+::tests\+::\+Topology\+Tester@{nfd\+::fw\+::tests\+::\+Topology\+Tester}}
+\subsubsection[{\texorpdfstring{set\+Strategy(\+Topology\+Node i, Name prefix=\+Name(""ndn\+:/""))}{setStrategy(TopologyNode i, Name prefix=Name("ndn:/"))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename S $>$ void nfd\+::fw\+::tests\+::\+Topology\+Tester\+::set\+Strategy (
+\begin{DoxyParamCaption}
+\item[{{\bf Topology\+Node}}]{i, }
+\item[{{\bf Name}}]{prefix = {\ttfamily {\bf Name}(\char`\"{}ndn\+:/\char`\"{})}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnfd_1_1fw_1_1tests_1_1TopologyTester_a581f4e8f09d176ab24b632b68ff4d00e}{}\label{classnfd_1_1fw_1_1tests_1_1TopologyTester_a581f4e8f09d176ab24b632b68ff4d00e}
+
+
+sets strategy on forwarder {\ttfamily i} 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em the} & strategy type \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+Test scenario can also access \hyperlink{classnfd_1_1StrategyChoice}{Strategy\+Choice} table directly. 
+\end{DoxyNote}
+
+
+Definition at line 268 of file topology-\/tester.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/fw/\hyperlink{topology-tester_8hpp}{topology-\/tester.\+hpp}\end{DoxyCompactItemize}

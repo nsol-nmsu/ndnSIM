@@ -1,0 +1,98 @@
+\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport}{}\section{ndn\+:\+:util\+:\+:Dummy\+Client\+Face\+:\+:Transport Class Reference}
+\label{classndn_1_1util_1_1DummyClientFace_1_1Transport}\index{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport@{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport}}
+Inheritance diagram for ndn\+:\+:util\+:\+:Dummy\+Client\+Face\+:\+:Transport\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1util_1_1DummyClientFace_1_1Transport}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries receive} (const \hyperlink{classndn_1_1Block}{Block} \&block)\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport_a44767843fd2738906491c7df95cb181b}{}\label{classndn_1_1util_1_1DummyClientFace_1_1Transport_a44767843fd2738906491c7df95cb181b}
+
+\item 
+virtual void \hyperlink{classndn_1_1util_1_1DummyClientFace_1_1Transport_a2ae779084c056bf6348de6b3c21ed95b}{close} ()\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport_a2ae779084c056bf6348de6b3c21ed95b}{}\label{classndn_1_1util_1_1DummyClientFace_1_1Transport_a2ae779084c056bf6348de6b3c21ed95b}
+
+\begin{DoxyCompactList}\small\item\em Close the connection. \end{DoxyCompactList}\item 
+virtual void {\bfseries pause} ()\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport_a33ab3e329589f650a8314b71995641a9}{}\label{classndn_1_1util_1_1DummyClientFace_1_1Transport_a33ab3e329589f650a8314b71995641a9}
+
+\item 
+virtual void {\bfseries resume} ()\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport_abcf21b634bfaf77348a7fcb252beedde}{}\label{classndn_1_1util_1_1DummyClientFace_1_1Transport_abcf21b634bfaf77348a7fcb252beedde}
+
+\item 
+virtual void \hyperlink{classndn_1_1util_1_1DummyClientFace_1_1Transport_a5644627bcc07ee795d8b55bc79208257}{send} (const \hyperlink{classndn_1_1Block}{Block} \&wire)
+\begin{DoxyCompactList}\small\item\em Send block of data from. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1util_1_1DummyClientFace_1_1Transport_a0c82633be8b1459268376b8eb64edab8}{send} (const \hyperlink{classndn_1_1Block}{Block} \&header, const \hyperlink{classndn_1_1Block}{Block} \&payload)
+\begin{DoxyCompactList}\small\item\em Alternative version of sending data, applying scatter/gather I/O concept. \end{DoxyCompactList}\item 
+boost\+::asio\+::io\+\_\+service \& {\bfseries get\+Io\+Service} ()\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport_aaadf09b33987d8b824830cc0cd2e1382}{}\label{classndn_1_1util_1_1DummyClientFace_1_1Transport_aaadf09b33987d8b824830cc0cd2e1382}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1util_1_1signal_1_1Signal}{Signal}$<$ \hyperlink{classndn_1_1util_1_1DummyClientFace_1_1Transport}{Transport}, \hyperlink{classndn_1_1Block}{Block} $>$ {\bfseries on\+Send\+Block}\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport_a959269e6d936b9c7723c6e6365d15c4c}{}\label{classndn_1_1util_1_1DummyClientFace_1_1Transport_a959269e6d936b9c7723c6e6365d15c4c}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file dummy-\/client-\/face.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport@{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport}!send@{send}}
+\index{send@{send}!ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport@{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport}}
+\subsubsection[{\texorpdfstring{send(const Block \&wire)}{send(const Block \&wire)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{wire}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport_a5644627bcc07ee795d8b55bc79208257}{}\label{classndn_1_1util_1_1DummyClientFace_1_1Transport_a5644627bcc07ee795d8b55bc79208257}
+
+
+Send block of data from. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wire} & through the transport\\
+\hline
+{\em wire} & A block of data to send \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1Transport_ac24f9ec11dc2ac4569e5504eebd5cfa7}{ndn\+::\+Transport}.
+
+
+
+Definition at line 58 of file dummy-\/client-\/face.\+cpp.
+
+\index{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport@{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport}!send@{send}}
+\index{send@{send}!ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport@{ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport}}
+\subsubsection[{\texorpdfstring{send(const Block \&header, const Block \&payload)}{send(const Block \&header, const Block \&payload)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::util\+::\+Dummy\+Client\+Face\+::\+Transport\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf Block} \&}]{header, }
+\item[{const {\bf Block} \&}]{payload}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1util_1_1DummyClientFace_1_1Transport_a0c82633be8b1459268376b8eb64edab8}{}\label{classndn_1_1util_1_1DummyClientFace_1_1Transport_a0c82633be8b1459268376b8eb64edab8}
+
+
+Alternative version of sending data, applying scatter/gather I/O concept. 
+
+Two non-\/consecutive memory blocks will be send out together, e.\+g., as part of the same message in datagram-\/oriented transports. 
+
+Implements \hyperlink{classndn_1_1Transport_aa27593978570e95a5793b2af0dac3568}{ndn\+::\+Transport}.
+
+
+
+Definition at line 64 of file dummy-\/client-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/dummy-\/client-\/face.\+cpp\end{DoxyCompactItemize}

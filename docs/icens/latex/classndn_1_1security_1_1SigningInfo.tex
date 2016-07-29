@@ -1,0 +1,262 @@
+\hypertarget{classndn_1_1security_1_1SigningInfo}{}\section{ndn\+:\+:security\+:\+:Signing\+Info Class Reference}
+\label{classndn_1_1security_1_1SigningInfo}\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+
+
+Signing parameters passed to \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain}.  
+
+
+
+
+{\ttfamily \#include $<$signing-\/info.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1security_1_1SigningInfo_1_1Error}{Error}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102}{Signer\+Type} \{ \\*
+\hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a9b67fe6a8d2d05ebfd00f7dc8d0e5709}{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL} = 0, 
+\hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102ac7709f4ed71986b8db05fd5318d8fccd}{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+ID} = 1, 
+\hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102aef462253f9ae22d4972c0d388bbabae9}{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+K\+EY} = 2, 
+\hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a3b5e11acb90aee302a82d1a80074da8f}{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+E\+RT} = 3, 
+\\*
+\hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a6e48700d048b1d8a7853ac1d1ce20f56}{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256} = 4
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1security_1_1SigningInfo_ae47077b9fe56adcea180af744cafec00}{Signing\+Info} (\hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102}{Signer\+Type} signer\+Type=\hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a9b67fe6a8d2d05ebfd00f7dc8d0e5709}{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL}, const \hyperlink{classndn_1_1Name}{Name} \&signer\+Name=E\+M\+P\+T\+Y\+\_\+\+N\+A\+ME, const \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} \&signature\+Info=E\+M\+P\+T\+Y\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+I\+N\+FO)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1SigningInfo_aa38bcc1eac9d2cc3a88e415eabf18ce3}{set\+Signing\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity)
+\begin{DoxyCompactList}\small\item\em Set signer as an identity with name {\ttfamily identity}. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1SigningInfo_aa8615a5b2727f51bc8bbe0dd4d8f72c6}{set\+Signing\+Key\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Set signer as a key with name {\ttfamily key\+Name}. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1SigningInfo_a66b8bfd9388242cd31fc68fa65ca8c3e}{set\+Signing\+Cert\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&certificate\+Name)
+\begin{DoxyCompactList}\small\item\em Set signer as a certificate with name {\ttfamily certificate\+Name}. \end{DoxyCompactList}\item 
+void \hyperlink{classndn_1_1security_1_1SigningInfo_a27afb75996dfdb7c116464e27d8a5960}{set\+Sha256\+Signing} ()
+\begin{DoxyCompactList}\small\item\em Set Sha256 as the signing method. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102}{Signer\+Type} \hyperlink{classndn_1_1security_1_1SigningInfo_a7b8fda81988031d797f82e57e9baaa18}{get\+Signer\+Type} () const
+\item 
+const \hyperlink{classndn_1_1Name}{Name} \& \hyperlink{classndn_1_1security_1_1SigningInfo_a47664c823520e07511b43640ce962f1d}{get\+Signer\+Name} () const
+\item 
+void \hyperlink{classndn_1_1security_1_1SigningInfo_ae80c0ede32ff15f512ff0e9a6b284da7}{set\+Digest\+Algorithm} (const Digest\+Algorithm \&algorithm)\hypertarget{classndn_1_1security_1_1SigningInfo_ae80c0ede32ff15f512ff0e9a6b284da7}{}\label{classndn_1_1security_1_1SigningInfo_ae80c0ede32ff15f512ff0e9a6b284da7}
+
+\begin{DoxyCompactList}\small\item\em Set the digest algorithm for public key operations. \end{DoxyCompactList}\item 
+Digest\+Algorithm \hyperlink{classndn_1_1security_1_1SigningInfo_acaac5862d11fecc28d7a80f38e44083a}{get\+Digest\+Algorithm} () const
+\item 
+void \hyperlink{classndn_1_1security_1_1SigningInfo_ac7411915931611c7504e3c7f2beceac6}{set\+Signature\+Info} (const \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} \&signature\+Info)\hypertarget{classndn_1_1security_1_1SigningInfo_ac7411915931611c7504e3c7f2beceac6}{}\label{classndn_1_1security_1_1SigningInfo_ac7411915931611c7504e3c7f2beceac6}
+
+\begin{DoxyCompactList}\small\item\em Set a semi-\/prepared \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info};. \end{DoxyCompactList}\item 
+const \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} \& \hyperlink{classndn_1_1security_1_1SigningInfo_a8722c6607e88086e2acf87b0e1e00449}{get\+Signature\+Info} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classndn_1_1Name}{Name} {\bfseries E\+M\+P\+T\+Y\+\_\+\+N\+A\+ME}\hypertarget{classndn_1_1security_1_1SigningInfo_a4a9fa27cbe43cc055d6af2fe4696fd96}{}\label{classndn_1_1security_1_1SigningInfo_a4a9fa27cbe43cc055d6af2fe4696fd96}
+
+\item 
+static const \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} {\bfseries E\+M\+P\+T\+Y\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+I\+N\+FO}\hypertarget{classndn_1_1security_1_1SigningInfo_af51c0428d47fda5b72f3ce7810a225b2}{}\label{classndn_1_1security_1_1SigningInfo_af51c0428d47fda5b72f3ce7810a225b2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Signing parameters passed to \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain}. 
+
+Definition at line 36 of file signing-\/info.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!Signer\+Type@{Signer\+Type}}
+\index{Signer\+Type@{Signer\+Type}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{Signer\+Type}{SignerType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ndn\+::security\+::\+Signing\+Info\+::\+Signer\+Type}}\hypertarget{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102}{}\label{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL}}\item[{\em 
+S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL\hypertarget{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a9b67fe6a8d2d05ebfd00f7dc8d0e5709}{}\label{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a9b67fe6a8d2d05ebfd00f7dc8d0e5709}
+}]no signer is specified, use default setting or follow the trust schema \index{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+ID@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+ID}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+ID@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+ID}}\item[{\em 
+S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+ID\hypertarget{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102ac7709f4ed71986b8db05fd5318d8fccd}{}\label{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102ac7709f4ed71986b8db05fd5318d8fccd}
+}]signer is an identity, use its default key and default certificate \index{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+K\+EY@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+K\+EY}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+K\+EY@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+K\+EY}}\item[{\em 
+S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+K\+EY\hypertarget{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102aef462253f9ae22d4972c0d388bbabae9}{}\label{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102aef462253f9ae22d4972c0d388bbabae9}
+}]signer is a key, use its default certificate \index{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+E\+RT@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+E\+RT}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+E\+RT@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+E\+RT}}\item[{\em 
+S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+E\+RT\hypertarget{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a3b5e11acb90aee302a82d1a80074da8f}{}\label{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a3b5e11acb90aee302a82d1a80074da8f}
+}]signer is a certificate, use it directly \index{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256@{S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256}}\item[{\em 
+S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256\hypertarget{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a6e48700d048b1d8a7853ac1d1ce20f56}{}\label{classndn_1_1security_1_1SigningInfo_aae7126c0334e630976d1efbaae3c0102a6e48700d048b1d8a7853ac1d1ce20f56}
+}]use sha256 digest, no signer needs to be specified \end{description}
+\end{Desc}
+
+
+Definition at line 49 of file signing-\/info.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!Signing\+Info@{Signing\+Info}}
+\index{Signing\+Info@{Signing\+Info}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{Signing\+Info(\+Signer\+Type signer\+Type=\+S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+L\+L, const Name \&signer\+Name=\+E\+M\+P\+T\+Y\+\_\+\+N\+A\+M\+E, const Signature\+Info \&signature\+Info=\+E\+M\+P\+T\+Y\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+I\+N\+F\+O)}{SigningInfo(SignerType signerType=SIGNER\_TYPE\_NULL, const Name \&signerName=EMPTY\_NAME, const SignatureInfo \&signatureInfo=EMPTY\_SIGNATURE\_INFO)}}]{\setlength{\rightskip}{0pt plus 5cm}ndn\+::security\+::\+Signing\+Info\+::\+Signing\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Signer\+Type}}]{signer\+Type = {\ttfamily {\bf S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+LL}}, }
+\item[{const {\bf Name} \&}]{signer\+Name = {\ttfamily EMPTY\+\_\+NAME}, }
+\item[{const {\bf Signature\+Info} \&}]{signature\+Info = {\ttfamily EMPTY\+\_\+SIGNATURE\+\_\+INFO}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classndn_1_1security_1_1SigningInfo_ae47077b9fe56adcea180af744cafec00}{}\label{classndn_1_1security_1_1SigningInfo_ae47077b9fe56adcea180af744cafec00}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signer\+Type} & The type of signer \\
+\hline
+{\em signer\+Name} & The name of signer; interpretation differs per signer\+Type \\
+\hline
+{\em signature\+Info} & A semi-\/prepared \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} which contains other information except Signature\+Type and \hyperlink{classndn_1_1KeyLocator}{Key\+Locator}. If Signature\+Type and \hyperlink{classndn_1_1KeyLocator}{Key\+Locator} are specified, they may be overwritten by \hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file signing-\/info.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!get\+Digest\+Algorithm@{get\+Digest\+Algorithm}}
+\index{get\+Digest\+Algorithm@{get\+Digest\+Algorithm}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{get\+Digest\+Algorithm() const}{getDigestAlgorithm() const}}]{\setlength{\rightskip}{0pt plus 5cm}Digest\+Algorithm ndn\+::security\+::\+Signing\+Info\+::get\+Digest\+Algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1security_1_1SigningInfo_acaac5862d11fecc28d7a80f38e44083a}{}\label{classndn_1_1security_1_1SigningInfo_acaac5862d11fecc28d7a80f38e44083a}
+\begin{DoxyReturn}{Returns}
+The digest algorithm for public key operations 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file signing-\/info.\+hpp.
+
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!get\+Signature\+Info@{get\+Signature\+Info}}
+\index{get\+Signature\+Info@{get\+Signature\+Info}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{get\+Signature\+Info() const}{getSignatureInfo() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Signature\+Info}\& ndn\+::security\+::\+Signing\+Info\+::get\+Signature\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1security_1_1SigningInfo_a8722c6607e88086e2acf87b0e1e00449}{}\label{classndn_1_1security_1_1SigningInfo_a8722c6607e88086e2acf87b0e1e00449}
+\begin{DoxyReturn}{Returns}
+Semi-\/prepared \hyperlink{classndn_1_1SignatureInfo}{Signature\+Info} 
+\end{DoxyReturn}
+
+
+Definition at line 151 of file signing-\/info.\+hpp.
+
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!get\+Signer\+Name@{get\+Signer\+Name}}
+\index{get\+Signer\+Name@{get\+Signer\+Name}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{get\+Signer\+Name() const}{getSignerName() const}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Name}\& ndn\+::security\+::\+Signing\+Info\+::get\+Signer\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1security_1_1SigningInfo_a47664c823520e07511b43640ce962f1d}{}\label{classndn_1_1security_1_1SigningInfo_a47664c823520e07511b43640ce962f1d}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classndn_1_1Name}{Name} of signer; interpretation differs per signer\+Type 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file signing-\/info.\+hpp.
+
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!get\+Signer\+Type@{get\+Signer\+Type}}
+\index{get\+Signer\+Type@{get\+Signer\+Type}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{get\+Signer\+Type() const}{getSignerType() const}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Signer\+Type} ndn\+::security\+::\+Signing\+Info\+::get\+Signer\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classndn_1_1security_1_1SigningInfo_a7b8fda81988031d797f82e57e9baaa18}{}\label{classndn_1_1security_1_1SigningInfo_a7b8fda81988031d797f82e57e9baaa18}
+\begin{DoxyReturn}{Returns}
+Type of the signer 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file signing-\/info.\+hpp.
+
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!set\+Sha256\+Signing@{set\+Sha256\+Signing}}
+\index{set\+Sha256\+Signing@{set\+Sha256\+Signing}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{set\+Sha256\+Signing()}{setSha256Signing()}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Signing\+Info\+::set\+Sha256\+Signing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1SigningInfo_a27afb75996dfdb7c116464e27d8a5960}{}\label{classndn_1_1security_1_1SigningInfo_a27afb75996dfdb7c116464e27d8a5960}
+
+
+Set Sha256 as the signing method. 
+
+\begin{DoxyPostcond}{Postcondition}
+Reset signer\+Name, also change the signer\+Type to S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+H\+A256 
+\end{DoxyPostcond}
+
+
+Definition at line 61 of file signing-\/info.\+cpp.
+
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!set\+Signing\+Cert\+Name@{set\+Signing\+Cert\+Name}}
+\index{set\+Signing\+Cert\+Name@{set\+Signing\+Cert\+Name}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{set\+Signing\+Cert\+Name(const Name \&certificate\+Name)}{setSigningCertName(const Name \&certificateName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Signing\+Info\+::set\+Signing\+Cert\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{certificate\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1SigningInfo_a66b8bfd9388242cd31fc68fa65ca8c3e}{}\label{classndn_1_1security_1_1SigningInfo_a66b8bfd9388242cd31fc68fa65ca8c3e}
+
+
+Set signer as a certificate with name {\ttfamily certificate\+Name}. 
+
+\begin{DoxyPostcond}{Postcondition}
+Change the signer\+Type to S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+E\+RT 
+\end{DoxyPostcond}
+
+
+Definition at line 54 of file signing-\/info.\+cpp.
+
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!set\+Signing\+Identity@{set\+Signing\+Identity}}
+\index{set\+Signing\+Identity@{set\+Signing\+Identity}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{set\+Signing\+Identity(const Name \&identity)}{setSigningIdentity(const Name \&identity)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Signing\+Info\+::set\+Signing\+Identity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{identity}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1SigningInfo_aa38bcc1eac9d2cc3a88e415eabf18ce3}{}\label{classndn_1_1security_1_1SigningInfo_aa38bcc1eac9d2cc3a88e415eabf18ce3}
+
+
+Set signer as an identity with name {\ttfamily identity}. 
+
+\begin{DoxyPostcond}{Postcondition}
+Change the signer\+Type to S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+ID 
+\end{DoxyPostcond}
+
+
+Definition at line 41 of file signing-\/info.\+cpp.
+
+\index{ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}!set\+Signing\+Key\+Name@{set\+Signing\+Key\+Name}}
+\index{set\+Signing\+Key\+Name@{set\+Signing\+Key\+Name}!ndn\+::security\+::\+Signing\+Info@{ndn\+::security\+::\+Signing\+Info}}
+\subsubsection[{\texorpdfstring{set\+Signing\+Key\+Name(const Name \&key\+Name)}{setSigningKeyName(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::security\+::\+Signing\+Info\+::set\+Signing\+Key\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1security_1_1SigningInfo_aa8615a5b2727f51bc8bbe0dd4d8f72c6}{}\label{classndn_1_1security_1_1SigningInfo_aa8615a5b2727f51bc8bbe0dd4d8f72c6}
+
+
+Set signer as a key with name {\ttfamily key\+Name}. 
+
+\begin{DoxyPostcond}{Postcondition}
+Change the signer\+Type to S\+I\+G\+N\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+K\+EY 
+\end{DoxyPostcond}
+
+
+Definition at line 47 of file signing-\/info.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/signing-\/info.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/signing-\/info.\+cpp\end{DoxyCompactItemize}

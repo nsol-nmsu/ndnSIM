@@ -1,0 +1,59 @@
+\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture}{}\section{nfd\+:\+:tests\+:\+:Face\+Status\+Publisher\+Fixture Class Reference}
+\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture}\index{nfd\+::tests\+::\+Face\+Status\+Publisher\+Fixture@{nfd\+::tests\+::\+Face\+Status\+Publisher\+Fixture}}
+Inheritance diagram for nfd\+:\+:tests\+:\+:Face\+Status\+Publisher\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1tests_1_1FaceStatusPublisherFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries add} (shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ face)\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a76e29c506a931fd947ae1b122d4a9776}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a76e29c506a931fd947ae1b122d4a9776}
+
+\item 
+void {\bfseries validate\+Face\+Status} (const \hyperlink{classndn_1_1Block}{Block} \&status\+Block, const shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ \&reference)\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a56bcac2b0276745da7004f19d13befcf}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a56bcac2b0276745da7004f19d13befcf}
+
+\item 
+void {\bfseries decode\+Face\+Status\+Block} (const \hyperlink{classndn_1_1Data}{Data} \&data)\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a8c51db3ff326170a512f8b72216aed1d}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a8c51db3ff326170a512f8b72216aed1d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnfd_1_1Forwarder}{Forwarder} {\bfseries m\+\_\+forwarder}\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_ad8d3c9a0dc0128ce4942c4a644efadb2}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_ad8d3c9a0dc0128ce4942c4a644efadb2}
+
+\item 
+\hyperlink{classnfd_1_1FaceTable}{Face\+Table} {\bfseries m\+\_\+table}\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a10b2a5990153c96070ebc5ade69e251c}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a10b2a5990153c96070ebc5ade69e251c}
+
+\item 
+shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1InternalFace}{Internal\+Face} $>$ {\bfseries m\+\_\+face}\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a5d89eea61c76483397b8ff6fcf2f9b34}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a5d89eea61c76483397b8ff6fcf2f9b34}
+
+\item 
+\hyperlink{classnfd_1_1FaceStatusPublisher}{Face\+Status\+Publisher} {\bfseries m\+\_\+publisher}\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a500e27b875a78c3257488b0f38e4055a}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a500e27b875a78c3257488b0f38e4055a}
+
+\item 
+ndn\+::\+Encoding\+Buffer {\bfseries m\+\_\+buffer}\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_af8fe94afe2a3f23a08e463422a1cc093}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_af8fe94afe2a3f23a08e463422a1cc093}
+
+\item 
+std\+::list$<$ shared\+\_\+ptr$<$ \hyperlink{classnfd_1_1Face}{Face} $>$ $>$ {\bfseries m\+\_\+reference\+Faces}\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_ae2ffee13f3f9f9e1a77a559a71b3a7e7}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_ae2ffee13f3f9f9e1a77a559a71b3a7e7}
+
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{ndn\+::\+Key\+Chain} {\bfseries m\+\_\+key\+Chain}\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a56491e9597fdd65d2a5c681368e1d3c6}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_a56491e9597fdd65d2a5c681368e1d3c6}
+
+\item 
+bool {\bfseries m\+\_\+finished}\hypertarget{classnfd_1_1tests_1_1FaceStatusPublisherFixture_ac9fb15c2698bbf4593dfa8125a01fd22}{}\label{classnfd_1_1tests_1_1FaceStatusPublisherFixture_ac9fb15c2698bbf4593dfa8125a01fd22}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 102 of file face-\/status-\/publisher-\/common.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/tests/daemon/mgmt/face-\/status-\/publisher-\/common.\+hpp\end{DoxyCompactItemize}

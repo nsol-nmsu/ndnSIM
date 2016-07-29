@@ -1,0 +1,90 @@
+\hypertarget{classnfd_1_1fw_1_1RetxSuppression}{}\section{nfd\+:\+:fw\+:\+:Retx\+Suppression Class Reference}
+\label{classnfd_1_1fw_1_1RetxSuppression}\index{nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}}
+
+
+helper for consumer retransmission suppression  
+
+
+
+
+{\ttfamily \#include $<$retx-\/suppression.\+hpp$>$}
+
+Inheritance diagram for nfd\+:\+:fw\+:\+:Retx\+Suppression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classnfd_1_1fw_1_1RetxSuppression}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82}{Result} \{ \hyperlink{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82ae51a76a93e6e35971891561c8770b763}{N\+EW}, 
+\hyperlink{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82a84808d86908c90a7adf26b5d5cc6bb5a}{F\+O\+R\+W\+A\+RD}, 
+\hyperlink{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82aacf1f63146288f69dab72a76d00e6daa}{S\+U\+P\+P\+R\+E\+SS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82}{Result} \hyperlink{classnfd_1_1fw_1_1RetxSuppression_ac6b02ca243173147a01fb986a262bbd8}{decide} (const \hyperlink{classnfd_1_1Face}{Face} \&in\+Face, const \hyperlink{classndn_1_1Interest}{Interest} \&interest, \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry) const =0\hypertarget{classnfd_1_1fw_1_1RetxSuppression_ac6b02ca243173147a01fb986a262bbd8}{}\label{classnfd_1_1fw_1_1RetxSuppression_ac6b02ca243173147a01fb986a262bbd8}
+
+\begin{DoxyCompactList}\small\item\em determines whether Interest is a retransmission, and if so, whether it shall be forwarded or suppressed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+time\+::steady\+\_\+clock\+::\+Time\+Point \hyperlink{classnfd_1_1fw_1_1RetxSuppression_a447422cf0be8851330e02f2c53ebde0a}{get\+Last\+Outgoing} (const \hyperlink{classnfd_1_1pit_1_1Entry}{pit\+::\+Entry} \&pit\+Entry) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+helper for consumer retransmission suppression 
+
+Definition at line 36 of file retx-\/suppression.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}!Result@{Result}}
+\index{Result@{Result}!nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}}
+\subsubsection[{\texorpdfstring{Result}{Result}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf nfd\+::fw\+::\+Retx\+Suppression\+::\+Result}}\hypertarget{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82}{}\label{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+EW@{N\+EW}!nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}}\index{nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}!N\+EW@{N\+EW}}\item[{\em 
+N\+EW\hypertarget{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82ae51a76a93e6e35971891561c8770b763}{}\label{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82ae51a76a93e6e35971891561c8770b763}
+}]Interest is new (not a retransmission) \index{F\+O\+R\+W\+A\+RD@{F\+O\+R\+W\+A\+RD}!nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}}\index{nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}!F\+O\+R\+W\+A\+RD@{F\+O\+R\+W\+A\+RD}}\item[{\em 
+F\+O\+R\+W\+A\+RD\hypertarget{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82a84808d86908c90a7adf26b5d5cc6bb5a}{}\label{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82a84808d86908c90a7adf26b5d5cc6bb5a}
+}]Interest is retransmission and should be forwarded. \index{S\+U\+P\+P\+R\+E\+SS@{S\+U\+P\+P\+R\+E\+SS}!nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}}\index{nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}!S\+U\+P\+P\+R\+E\+SS@{S\+U\+P\+P\+R\+E\+SS}}\item[{\em 
+S\+U\+P\+P\+R\+E\+SS\hypertarget{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82aacf1f63146288f69dab72a76d00e6daa}{}\label{classnfd_1_1fw_1_1RetxSuppression_af3180f6ce660253c6b415057b817af82aacf1f63146288f69dab72a76d00e6daa}
+}]Interest is retransmission and should be suppressed. \end{description}
+\end{Desc}
+
+
+Definition at line 39 of file retx-\/suppression.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}!get\+Last\+Outgoing@{get\+Last\+Outgoing}}
+\index{get\+Last\+Outgoing@{get\+Last\+Outgoing}!nfd\+::fw\+::\+Retx\+Suppression@{nfd\+::fw\+::\+Retx\+Suppression}}
+\subsubsection[{\texorpdfstring{get\+Last\+Outgoing(const pit\+::\+Entry \&pit\+Entry) const}{getLastOutgoing(const pit::Entry \&pitEntry) const}}]{\setlength{\rightskip}{0pt plus 5cm}time\+::steady\+\_\+clock\+::\+Time\+Point nfd\+::fw\+::\+Retx\+Suppression\+::get\+Last\+Outgoing (
+\begin{DoxyParamCaption}
+\item[{const {\bf pit\+::\+Entry} \&}]{pit\+Entry}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classnfd_1_1fw_1_1RetxSuppression_a447422cf0be8851330e02f2c53ebde0a}{}\label{classnfd_1_1fw_1_1RetxSuppression_a447422cf0be8851330e02f2c53ebde0a}
+\begin{DoxyReturn}{Returns}
+last out-\/record time 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+pit\+Entry has one or more unexpired out-\/records 
+\end{DoxyPrecond}
+
+
+Definition at line 32 of file retx-\/suppression.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/retx-\/suppression.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/\+N\+F\+D/daemon/fw/retx-\/suppression.\+cpp\end{DoxyCompactItemize}

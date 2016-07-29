@@ -1,0 +1,216 @@
+\hypertarget{classndn_1_1SecTpmOsx_1_1Impl}{}\section{ndn\+:\+:Sec\+Tpm\+Osx\+:\+:Impl Class Reference}
+\label{classndn_1_1SecTpmOsx_1_1Impl}\index{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classndn_1_1SecTpmOsx_1_1Impl_a4b743df2d64bef95194959e7987b2ab9}{to\+Internal\+Key\+Name} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Key\+Class key\+Class)
+\begin{DoxyCompactList}\small\item\em Convert N\+DN name of a key to internal name of the key. \end{DoxyCompactList}\item 
+\hyperlink{classndn_1_1CFReleaser}{C\+F\+Releaser}$<$ Sec\+Keychain\+Item\+Ref $>$ \hyperlink{classndn_1_1SecTpmOsx_1_1Impl_a44d2bd8f42079ed4852356fead0d998f}{get\+Key} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Key\+Class key\+Class)
+\begin{DoxyCompactList}\small\item\em Get key. \end{DoxyCompactList}\item 
+C\+F\+Type\+Ref \hyperlink{classndn_1_1SecTpmOsx_1_1Impl_a41f8056d1084dbeb4cc33d5c3209328b}{get\+Sym\+Key\+Type} (Key\+Type key\+Type)
+\begin{DoxyCompactList}\small\item\em Convert key\+Type to M\+AC OS symmetric key key type. \end{DoxyCompactList}\item 
+C\+F\+Type\+Ref \hyperlink{classndn_1_1SecTpmOsx_1_1Impl_a319b844cdbbd625a09fc17f90c760e5d}{get\+Asym\+Key\+Type} (Key\+Type key\+Type)
+\begin{DoxyCompactList}\small\item\em Convert key\+Type to M\+AC OS asymmetirc key type. \end{DoxyCompactList}\item 
+C\+F\+Type\+Ref \hyperlink{classndn_1_1SecTpmOsx_1_1Impl_a6ed271478d84fb445e28577c010efd25}{get\+Key\+Class} (Key\+Class key\+Class)
+\begin{DoxyCompactList}\small\item\em Convert key\+Class to M\+AC OS key class. \end{DoxyCompactList}\item 
+C\+F\+String\+Ref \hyperlink{classndn_1_1SecTpmOsx_1_1Impl_a4040dceeb9303d528c3df1d6e1b2cc71}{get\+Digest\+Algorithm} (Digest\+Algorithm digest\+Algo)
+\begin{DoxyCompactList}\small\item\em Convert digest\+Algo to M\+AC OS algorithm id. \end{DoxyCompactList}\item 
+long \hyperlink{classndn_1_1SecTpmOsx_1_1Impl_ad4c3fa86a22a829b3e984a4af770695e}{get\+Digest\+Size} (Digest\+Algorithm digest\+Algo)
+\begin{DoxyCompactList}\small\item\em Get the digest size of the corresponding algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Sec\+Keychain\+Ref {\bfseries m\+\_\+key\+Chain\+Ref}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_ac110b1c3c8e624c3948b17fd3baf1831}{}\label{classndn_1_1SecTpmOsx_1_1Impl_ac110b1c3c8e624c3948b17fd3baf1831}
+
+\item 
+bool {\bfseries m\+\_\+password\+Set}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_a9cd84747aef36689fd71b7e938e77158}{}\label{classndn_1_1SecTpmOsx_1_1Impl_a9cd84747aef36689fd71b7e938e77158}
+
+\item 
+string {\bfseries m\+\_\+password}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_a1a5d209d24e09f3ff495218f6b11dc6d}{}\label{classndn_1_1SecTpmOsx_1_1Impl_a1a5d209d24e09f3ff495218f6b11dc6d}
+
+\item 
+bool {\bfseries m\+\_\+in\+Terminal}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_acb9ee534075c9c9a1b83be928b8deea2}{}\label{classndn_1_1SecTpmOsx_1_1Impl_acb9ee534075c9c9a1b83be928b8deea2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 156 of file sec-\/tpm-\/osx.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}!get\+Asym\+Key\+Type@{get\+Asym\+Key\+Type}}
+\index{get\+Asym\+Key\+Type@{get\+Asym\+Key\+Type}!ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Asym\+Key\+Type(\+Key\+Type key\+Type)}{getAsymKeyType(KeyType keyType)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+F\+Type\+Ref ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl\+::get\+Asym\+Key\+Type (
+\begin{DoxyParamCaption}
+\item[{Key\+Type}]{key\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_a319b844cdbbd625a09fc17f90c760e5d}{}\label{classndn_1_1SecTpmOsx_1_1Impl_a319b844cdbbd625a09fc17f90c760e5d}
+
+
+Convert key\+Type to M\+AC OS asymmetirc key type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+AC OS key type 
+\end{DoxyReturn}
+
+
+Definition at line 1105 of file sec-\/tpm-\/osx.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}!get\+Digest\+Algorithm@{get\+Digest\+Algorithm}}
+\index{get\+Digest\+Algorithm@{get\+Digest\+Algorithm}!ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Digest\+Algorithm(\+Digest\+Algorithm digest\+Algo)}{getDigestAlgorithm(DigestAlgorithm digestAlgo)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+F\+String\+Ref ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl\+::get\+Digest\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{Digest\+Algorithm}]{digest\+Algo}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_a4040dceeb9303d528c3df1d6e1b2cc71}{}\label{classndn_1_1SecTpmOsx_1_1Impl_a4040dceeb9303d528c3df1d6e1b2cc71}
+
+
+Convert digest\+Algo to M\+AC OS algorithm id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digest\+Algo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+AC OS algorithm id 
+\end{DoxyReturn}
+
+
+Definition at line 1144 of file sec-\/tpm-\/osx.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}!get\+Digest\+Size@{get\+Digest\+Size}}
+\index{get\+Digest\+Size@{get\+Digest\+Size}!ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Digest\+Size(\+Digest\+Algorithm digest\+Algo)}{getDigestSize(DigestAlgorithm digestAlgo)}}]{\setlength{\rightskip}{0pt plus 5cm}long ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl\+::get\+Digest\+Size (
+\begin{DoxyParamCaption}
+\item[{Digest\+Algorithm}]{digest\+Algo}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_ad4c3fa86a22a829b3e984a4af770695e}{}\label{classndn_1_1SecTpmOsx_1_1Impl_ad4c3fa86a22a829b3e984a4af770695e}
+
+
+Get the digest size of the corresponding algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digest\+Algo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+digest size 
+\end{DoxyReturn}
+
+
+Definition at line 1155 of file sec-\/tpm-\/osx.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Key(const Name \&key\+Name, Key\+Class key\+Class)}{getKey(const Name \&keyName, KeyClass keyClass)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+F\+Releaser}$<$ Sec\+Keychain\+Item\+Ref $>$ ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl\+::get\+Key (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{Key\+Class}]{key\+Class}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_a44d2bd8f42079ed4852356fead0d998f}{}\label{classndn_1_1SecTpmOsx_1_1Impl_a44d2bd8f42079ed4852356fead0d998f}
+
+
+Get key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & \\
+\hline
+{\em key\+Class} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the key 
+\end{DoxyReturn}
+
+
+Definition at line 1064 of file sec-\/tpm-\/osx.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}!get\+Key\+Class@{get\+Key\+Class}}
+\index{get\+Key\+Class@{get\+Key\+Class}!ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Key\+Class(\+Key\+Class key\+Class)}{getKeyClass(KeyClass keyClass)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+F\+Type\+Ref ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl\+::get\+Key\+Class (
+\begin{DoxyParamCaption}
+\item[{Key\+Class}]{key\+Class}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_a6ed271478d84fb445e28577c010efd25}{}\label{classndn_1_1SecTpmOsx_1_1Impl_a6ed271478d84fb445e28577c010efd25}
+
+
+Convert key\+Class to M\+AC OS key class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Class} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+AC OS key class 
+\end{DoxyReturn}
+
+
+Definition at line 1129 of file sec-\/tpm-\/osx.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}!get\+Sym\+Key\+Type@{get\+Sym\+Key\+Type}}
+\index{get\+Sym\+Key\+Type@{get\+Sym\+Key\+Type}!ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}}
+\subsubsection[{\texorpdfstring{get\+Sym\+Key\+Type(\+Key\+Type key\+Type)}{getSymKeyType(KeyType keyType)}}]{\setlength{\rightskip}{0pt plus 5cm}C\+F\+Type\+Ref ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl\+::get\+Sym\+Key\+Type (
+\begin{DoxyParamCaption}
+\item[{Key\+Type}]{key\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_a41f8056d1084dbeb4cc33d5c3209328b}{}\label{classndn_1_1SecTpmOsx_1_1Impl_a41f8056d1084dbeb4cc33d5c3209328b}
+
+
+Convert key\+Type to M\+AC OS symmetric key key type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+AC OS key type 
+\end{DoxyReturn}
+
+
+Definition at line 1118 of file sec-\/tpm-\/osx.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}!to\+Internal\+Key\+Name@{to\+Internal\+Key\+Name}}
+\index{to\+Internal\+Key\+Name@{to\+Internal\+Key\+Name}!ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl@{ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl}}
+\subsubsection[{\texorpdfstring{to\+Internal\+Key\+Name(const Name \&key\+Name, Key\+Class key\+Class)}{toInternalKeyName(const Name \&keyName, KeyClass keyClass)}}]{\setlength{\rightskip}{0pt plus 5cm}string ndn\+::\+Sec\+Tpm\+Osx\+::\+Impl\+::to\+Internal\+Key\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{Key\+Class}]{key\+Class}
+\end{DoxyParamCaption}
+)}\hypertarget{classndn_1_1SecTpmOsx_1_1Impl_a4b743df2d64bef95194959e7987b2ab9}{}\label{classndn_1_1SecTpmOsx_1_1Impl_a4b743df2d64bef95194959e7987b2ab9}
+
+
+Convert N\+DN name of a key to internal name of the key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & \\
+\hline
+{\em key\+Class} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the internal key name 
+\end{DoxyReturn}
+
+
+Definition at line 1094 of file sec-\/tpm-\/osx.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/sec-\/tpm-\/osx.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\hypertarget{classns3_1_1ndn_1_1NetDeviceFace}{}\section{ns3\+:\+:ndn\+:\+:Net\+Device\+Face Class Reference}
+\label{classns3_1_1ndn_1_1NetDeviceFace}\index{ns3\+::ndn\+::\+Net\+Device\+Face@{ns3\+::ndn\+::\+Net\+Device\+Face}}
+
+
+Implementation of layer-\/2 (Ethernet) Ndn face.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/net-\/device-\/face.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Net\+Device\+Face\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns3_1_1ndn_1_1NetDeviceFace}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classns3_1_1ndn_1_1NetDeviceFace_af2eed1635de5dc8821ed5fd1f3df1f6d}{Net\+Device\+Face} (Ptr$<$ Node $>$ node, const Ptr$<$ Net\+Device $>$ \&net\+Device)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void {\bfseries send\+Interest} (const Interest \&interest)\hypertarget{classns3_1_1ndn_1_1NetDeviceFace_ab5a21e4074ed8d17f7216e90d00dff80}{}\label{classns3_1_1ndn_1_1NetDeviceFace_ab5a21e4074ed8d17f7216e90d00dff80}
+
+\item 
+virtual void {\bfseries send\+Data} (const Data \&data)\hypertarget{classns3_1_1ndn_1_1NetDeviceFace_a0f287a5d45381eaa94aa5cc724b2ada4}{}\label{classns3_1_1ndn_1_1NetDeviceFace_a0f287a5d45381eaa94aa5cc724b2ada4}
+
+\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1NetDeviceFace_a837ac0a60dcb5b15db9fa08e9756edd9}{close} ()
+\begin{DoxyCompactList}\small\item\em Close the face. \end{DoxyCompactList}\item 
+Ptr$<$ Net\+Device $>$ \hyperlink{classns3_1_1ndn_1_1NetDeviceFace_abe003a2fe6c62b38c89fc2210550bf0c}{Get\+Net\+Device} () const
+\begin{DoxyCompactList}\small\item\em Get Net\+Device associated with the face. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of layer-\/2 (Ethernet) Ndn face. 
+
+This class defines basic functionality of Ndn face. Face is core component responsible for actual delivery of data packet to and from Ndn stack
+
+Ndn\+Net\+Device face is permanently associated with one Net\+Device object and this object cannot be changed for the lifetime of the face
+
+\begin{DoxySeeAlso}{See also}
+Ndn\+App\+Face, Ndn\+Net\+Device\+Face, Ndn\+Ipv4\+Face, Ndn\+Udp\+Face 
+\end{DoxySeeAlso}
+
+
+Definition at line 45 of file ndn-\/net-\/device-\/face.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ns3\+::ndn\+::\+Net\+Device\+Face@{ns3\+::ndn\+::\+Net\+Device\+Face}!Net\+Device\+Face@{Net\+Device\+Face}}
+\index{Net\+Device\+Face@{Net\+Device\+Face}!ns3\+::ndn\+::\+Net\+Device\+Face@{ns3\+::ndn\+::\+Net\+Device\+Face}}
+\subsubsection[{\texorpdfstring{Net\+Device\+Face(\+Ptr$<$ Node $>$ node, const Ptr$<$ Net\+Device $>$ \&net\+Device)}{NetDeviceFace(Ptr< Node > node, const Ptr< NetDevice > \&netDevice)}}]{\setlength{\rightskip}{0pt plus 5cm}ns3\+::ndn\+::\+Net\+Device\+Face\+::\+Net\+Device\+Face (
+\begin{DoxyParamCaption}
+\item[{Ptr$<$ Node $>$}]{node, }
+\item[{const Ptr$<$ Net\+Device $>$ \&}]{net\+Device}
+\end{DoxyParamCaption}
+)}\hypertarget{classns3_1_1ndn_1_1NetDeviceFace_af2eed1635de5dc8821ed5fd1f3df1f6d}{}\label{classns3_1_1ndn_1_1NetDeviceFace_af2eed1635de5dc8821ed5fd1f3df1f6d}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node associated with the face \\
+\hline
+{\em net\+Device} & a smart pointer to Net\+Device object to which this face will be associate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file ndn-\/net-\/device-\/face.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Net\+Device\+Face@{ns3\+::ndn\+::\+Net\+Device\+Face}!close@{close}}
+\index{close@{close}!ns3\+::ndn\+::\+Net\+Device\+Face@{ns3\+::ndn\+::\+Net\+Device\+Face}}
+\subsubsection[{\texorpdfstring{close()}{close()}}]{\setlength{\rightskip}{0pt plus 5cm}void ns3\+::ndn\+::\+Net\+Device\+Face\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classns3_1_1ndn_1_1NetDeviceFace_a837ac0a60dcb5b15db9fa08e9756edd9}{}\label{classns3_1_1ndn_1_1NetDeviceFace_a837ac0a60dcb5b15db9fa08e9756edd9}
+
+
+Close the face. 
+
+This terminates all communication on the face and cause \hyperlink{classnfd_1_1Face_a0f6ac85e5c965d24290f87562022123f}{on\+Fail()} method event to be invoked 
+
+Implements \hyperlink{classnfd_1_1Face_a63f2c417cde23bf09441927951ef86d3}{nfd\+::\+Face}.
+
+
+
+Definition at line 65 of file ndn-\/net-\/device-\/face.\+cpp.
+
+\index{ns3\+::ndn\+::\+Net\+Device\+Face@{ns3\+::ndn\+::\+Net\+Device\+Face}!Get\+Net\+Device@{Get\+Net\+Device}}
+\index{Get\+Net\+Device@{Get\+Net\+Device}!ns3\+::ndn\+::\+Net\+Device\+Face@{ns3\+::ndn\+::\+Net\+Device\+Face}}
+\subsubsection[{\texorpdfstring{Get\+Net\+Device() const}{GetNetDevice() const}}]{\setlength{\rightskip}{0pt plus 5cm}Ptr$<$ Net\+Device $>$ ns3\+::ndn\+::\+Net\+Device\+Face\+::\+Get\+Net\+Device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classns3_1_1ndn_1_1NetDeviceFace_abe003a2fe6c62b38c89fc2210550bf0c}{}\label{classns3_1_1ndn_1_1NetDeviceFace_abe003a2fe6c62b38c89fc2210550bf0c}
+
+
+Get Net\+Device associated with the face. 
+
+\begin{DoxyReturn}{Returns}
+smart pointer to Net\+Device associated with the face 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file ndn-\/net-\/device-\/face.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/ndn-\/net-\/device-\/face.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/ndn-\/net-\/device-\/face.\+cpp\end{DoxyCompactItemize}

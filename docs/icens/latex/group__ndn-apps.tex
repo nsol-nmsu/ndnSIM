@@ -1,0 +1,34 @@
+\hypertarget{group__ndn-apps}{}\section{N\+DN applications}
+\label{group__ndn-apps}\index{N\+D\+N applications@{N\+D\+N applications}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classns3_1_1ndn_1_1Aggregator}{ns3\+::ndn\+::\+Aggregator}
+\begin{DoxyCompactList}\small\item\em An application that concatenates payloaded interests at the aggregation of the Smart Grid architecture. At specified intervals (configurable by user), a single payload interest is sent upstream to the compute layer. The size of the payload equals the total bytes received within the configured wait interval. Install on nodes at the aggregation layer of the Smart Grid architecture (i\+CenS) \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1App}{ns3\+::ndn\+::\+App}
+\begin{DoxyCompactList}\small\item\em Base class that all N\+DN applications should be derived from. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1ConsumerBatches}{ns3\+::ndn\+::\+Consumer\+Batches}
+\begin{DoxyCompactList}\small\item\em Ndn application for sending out Interest packets in batches. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1ConsumerCbr}{ns3\+::ndn\+::\+Consumer\+Cbr}
+\begin{DoxyCompactList}\small\item\em Ndn application for sending out Interest packets at a \char`\"{}constant\char`\"{} rate (Poisson process) \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1ConsumerWindow}{ns3\+::ndn\+::\+Consumer\+Window}
+\begin{DoxyCompactList}\small\item\em Ndn application for sending out Interest packets (window-\/based) \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1ConsumerZipfMandelbrot}{ns3\+::ndn\+::\+Consumer\+Zipf\+Mandelbrot}
+\begin{DoxyCompactList}\small\item\em N\+DN app requesting contents following Zipf-\/\+Mandelbrot Distbituion. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1Consumer}{ns3\+::ndn\+::\+Consumer}
+\begin{DoxyCompactList}\small\item\em N\+DN application for sending out Interest packets. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1SpontaneousProducer}{ns3\+::ndn\+::\+Spontaneous\+Producer}
+\begin{DoxyCompactList}\small\item\em A producer which publishes updates of its data at a fixed frequency. These updates are sent regardless of whether an interest was received or not and nodes which subscribe to the data will receive it. Installed on nodes at the compute layer of Smart Grid architecture (i\+CenS) \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1Producer}{ns3\+::ndn\+::\+Producer}
+\begin{DoxyCompactList}\small\item\em A simple Interest-\/sink applia simple Interest-\/sink application. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1Subscriber}{ns3\+::ndn\+::\+Subscriber}
+\begin{DoxyCompactList}\small\item\em N\+DN application for sending out Interest packets. Installed on nodes at physical layer (prosumers) of the Smart Grid architecture (i\+CenS) \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1Batches}{ns3\+::\+Batches}
+\begin{DoxyCompactList}\small\item\em Class representing sets of (time, number) tuples with support of reading writing to streams. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1RttHistory}{ns3\+::ndn\+::\+Rtt\+History}
+\begin{DoxyCompactList}\small\item\em Helper class to store R\+TT measurements. \end{DoxyCompactList}\item 
+class \hyperlink{classns3_1_1ndn_1_1RttMeanDeviation}{ns3\+::ndn\+::\+Rtt\+Mean\+Deviation}
+\begin{DoxyCompactList}\small\item\em The modified version of \char`\"{}\+Mean-\/-\/\+Deviation\char`\"{} R\+TT estimator, as discussed by Van Jacobson that better suits N\+DN communication model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}

@@ -1,0 +1,56 @@
+\hypertarget{group__FaceLogging}{}\section{Face logging macros}
+\label{group__FaceLogging}\index{Face logging macros@{Face logging macros}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE}(level,  msg)
+\item 
+\#define \hyperlink{group__FaceLogging_gad77782189cee6e6c849c2152b81d5133}{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+C\+E\+\_\+\+T\+R\+A\+CE}(msg)~N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE(T\+R\+A\+CE, msg)\hypertarget{group__FaceLogging_gad77782189cee6e6c849c2152b81d5133}{}\label{group__FaceLogging_gad77782189cee6e6c849c2152b81d5133}
+
+\begin{DoxyCompactList}\small\item\em Log a message at T\+R\+A\+CE level. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FaceLogging_ga1e53e9db0225b9afeefe75d787a9d493}{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+C\+E\+\_\+\+D\+E\+B\+UG}(msg)~N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE(D\+E\+B\+UG, msg)\hypertarget{group__FaceLogging_ga1e53e9db0225b9afeefe75d787a9d493}{}\label{group__FaceLogging_ga1e53e9db0225b9afeefe75d787a9d493}
+
+\begin{DoxyCompactList}\small\item\em Log a message at D\+E\+B\+UG level. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FaceLogging_ga5a42b1131b733c22e2e595643dc53047}{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+C\+E\+\_\+\+I\+N\+FO}(msg)~N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE(I\+N\+FO,  msg)\hypertarget{group__FaceLogging_ga5a42b1131b733c22e2e595643dc53047}{}\label{group__FaceLogging_ga5a42b1131b733c22e2e595643dc53047}
+
+\begin{DoxyCompactList}\small\item\em Log a message at I\+N\+FO level. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FaceLogging_gad32c95f0ac1b6e4fbfd77c48a311caa5}{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+C\+E\+\_\+\+W\+A\+RN}(msg)~N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE(W\+A\+RN,  msg)\hypertarget{group__FaceLogging_gad32c95f0ac1b6e4fbfd77c48a311caa5}{}\label{group__FaceLogging_gad32c95f0ac1b6e4fbfd77c48a311caa5}
+
+\begin{DoxyCompactList}\small\item\em Log a message at W\+A\+RN level. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FaceLogging_ga0ab8768ec566c3427c7541f0eb2256e2}{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+C\+E\+\_\+\+E\+R\+R\+OR}(msg)~N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE(E\+R\+R\+OR, msg)\hypertarget{group__FaceLogging_ga0ab8768ec566c3427c7541f0eb2256e2}{}\label{group__FaceLogging_ga0ab8768ec566c3427c7541f0eb2256e2}
+
+\begin{DoxyCompactList}\small\item\em Log a message at E\+R\+R\+OR level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries nfd\+::\+Face\+::set\+Metric} (uint64\+\_\+t metric)\hypertarget{group__FaceLogging_ga78caf811363354a46578457d2c561b23}{}\label{group__FaceLogging_ga78caf811363354a46578457d2c561b23}
+
+\item 
+uint64\+\_\+t {\bfseries nfd\+::\+Face\+::get\+Metric} () const\hypertarget{group__FaceLogging_ga735b0737c5070df5b484b318491a2276}{}\label{group__FaceLogging_ga735b0737c5070df5b484b318491a2276}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These macros augment the log message with some face-\/specific information, such as the face ID, that are useful to distinguish which face produced the message. It is strongly recommended to use these macros instead of the generic ones for all logging inside \hyperlink{classnfd_1_1Face}{Face} subclasses. 
+
+\subsection{Macro Definition Documentation}
+\index{Face logging macros@{Face logging macros}!N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE@{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE}}
+\index{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE@{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE}!Face logging macros@{Face logging macros}}
+\subsubsection[{\texorpdfstring{N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE}{NFD\_LOG\_FACE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+F\+D\+\_\+\+L\+O\+G\+\_\+\+F\+A\+CE(
+\begin{DoxyParamCaption}
+\item[{}]{level, }
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{group__FaceLogging_ga5b2ebbbfce227237d57053c18c142160}{}\label{group__FaceLogging_ga5b2ebbbfce227237d57053c18c142160}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+NFD\_LOG\_##level(\textcolor{stringliteral}{"[id="} << this->getId() <<            \(\backslash\)
+                  \textcolor{stringliteral}{",local="} << this->getLocalUri() <<   \(\backslash\)
+                  \textcolor{stringliteral}{",remote="} << this->getRemoteUri() << \(\backslash\)
+                  \textcolor{stringliteral}{"] "} << msg)
+\end{DoxyCode}
+
+
+Definition at line 314 of file face.\+hpp.
+

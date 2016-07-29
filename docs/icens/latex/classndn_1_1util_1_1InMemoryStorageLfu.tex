@@ -1,0 +1,60 @@
+\hypertarget{classndn_1_1util_1_1InMemoryStorageLfu}{}\section{ndn\+:\+:util\+:\+:In\+Memory\+Storage\+Lfu Class Reference}
+\label{classndn_1_1util_1_1InMemoryStorageLfu}\index{ndn\+::util\+::\+In\+Memory\+Storage\+Lfu@{ndn\+::util\+::\+In\+Memory\+Storage\+Lfu}}
+
+
+Provides an in-\/memory storage with Least Frequently Used (L\+FU) replacement policy.  
+
+
+
+
+{\ttfamily \#include $<$in-\/memory-\/storage-\/lfu.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:util\+:\+:In\+Memory\+Storage\+Lfu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1util_1_1InMemoryStorageLfu}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries In\+Memory\+Storage\+Lfu} (size\+\_\+t limit=10)\hypertarget{classndn_1_1util_1_1InMemoryStorageLfu_a7823e5eb23d547c65b0ff9de7468d09e}{}\label{classndn_1_1util_1_1InMemoryStorageLfu_a7823e5eb23d547c65b0ff9de7468d09e}
+
+\item 
+virtual void \hyperlink{classndn_1_1util_1_1InMemoryStorageLfu_a9b19f13d5729fcc621b504a653e1f5fd}{after\+Access} (\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$entry)\hypertarget{classndn_1_1util_1_1InMemoryStorageLfu_a9b19f13d5729fcc621b504a653e1f5fd}{}\label{classndn_1_1util_1_1InMemoryStorageLfu_a9b19f13d5729fcc621b504a653e1f5fd}
+
+\begin{DoxyCompactList}\small\item\em Update the entry when the entry is returned by the \hyperlink{classndn_1_1util_1_1InMemoryStorage_a01ee745af540a1d99b5a18c5722d50c5}{find()} function, increment the frequency according to L\+FU. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1util_1_1InMemoryStorageLfu_a0a3d29c447660b16fd98acfef8999b94}{after\+Insert} (\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$entry)\hypertarget{classndn_1_1util_1_1InMemoryStorageLfu_a0a3d29c447660b16fd98acfef8999b94}{}\label{classndn_1_1util_1_1InMemoryStorageLfu_a0a3d29c447660b16fd98acfef8999b94}
+
+\begin{DoxyCompactList}\small\item\em Update the entry after a entry is successfully inserted, add it to the cleanup\+Index. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1util_1_1InMemoryStorageLfu_aa4db4697ec1e382cf0ec8d8d875d8181}{before\+Erase} (\hyperlink{classndn_1_1util_1_1InMemoryStorageEntry}{In\+Memory\+Storage\+Entry} $\ast$entry)\hypertarget{classndn_1_1util_1_1InMemoryStorageLfu_aa4db4697ec1e382cf0ec8d8d875d8181}{}\label{classndn_1_1util_1_1InMemoryStorageLfu_aa4db4697ec1e382cf0ec8d8d875d8181}
+
+\begin{DoxyCompactList}\small\item\em Update the entry or other data structures before a entry is successfully erased, erase it from the cleanup\+Index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+W\+I\+T\+H\+\_\+\+T\+E\+S\+T\+S\+\_\+\+E\+L\+S\+E\+\_\+\+P\+R\+O\+T\+E\+C\+T\+ED {\bfseries \+\_\+\+\_\+pad0\+\_\+\+\_\+}\+: virtual bool \hyperlink{classndn_1_1util_1_1InMemoryStorage_a14036928e195645bf47d8c5686277fd8}{evict\+Item}()\hypertarget{classndn_1_1util_1_1InMemoryStorageLfu_a2f1bc55c9745692241d0ade969c3b8e7}{}\label{classndn_1_1util_1_1InMemoryStorageLfu_a2f1bc55c9745692241d0ade969c3b8e7}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Provides an in-\/memory storage with Least Frequently Used (L\+FU) replacement policy. 
+
+\begin{DoxyNote}{Note}
+The frequency right now is usage count. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\href{https://en.wikipedia.org/w/index.php?title=Least_frequently_used&oldid=604542656}{\tt https\+://en.\+wikipedia.\+org/w/index.\+php?title=\+Least\+\_\+frequently\+\_\+used\&oldid=604542656} 
+\end{DoxySeeAlso}
+
+
+Definition at line 40 of file in-\/memory-\/storage-\/lfu.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/in-\/memory-\/storage-\/lfu.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/in-\/memory-\/storage-\/lfu.\+cpp\end{DoxyCompactItemize}

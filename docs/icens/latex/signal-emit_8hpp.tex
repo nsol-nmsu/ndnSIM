@@ -1,0 +1,93 @@
+\hypertarget{signal-emit_8hpp}{}\section{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/signal-\/emit.hpp File Reference}
+\label{signal-emit_8hpp}\index{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/signal-\/emit.\+hpp@{/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/util/signal-\/emit.\+hpp}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1util_1_1signal_1_1DummyExtraArg}{ndn\+::util\+::signal\+::\+Dummy\+Extra\+Arg}
+\begin{DoxyCompactList}\small\item\em (implementation detail) a filler for extra argument \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacendn}{ndn}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{signal-emit_8hpp_a8fb62b1067899c74f918fc62a099e8e2}{D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}(signal\+Name)
+\begin{DoxyCompactList}\small\item\em (implementation detail) declares a \textquotesingle{}emit\+\_\+signal\+Name\textquotesingle{} method \end{DoxyCompactList}\item 
+\#define \hyperlink{signal-emit_8hpp_a6bb25d95564c12bbcb31449319d7b505}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}(signal\+Name, ...)~emit\+\_\+\#\#signal\+Name(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em (implementation detail) invokes emit\+\_\+signal\+Name method \end{DoxyCompactList}\item 
+\#define \hyperlink{signal-emit_8hpp_a33665abef4d805a760517424509a19c3}{emit\+Signal}(...)~\hyperlink{signal-emit_8hpp_a6bb25d95564c12bbcb31449319d7b505}{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+, \+::\hyperlink{classndn_1_1util_1_1signal_1_1DummyExtraArg}{ndn\+::util\+::signal\+::\+Dummy\+Extra\+Arg}())\hypertarget{signal-emit_8hpp_a33665abef4d805a760517424509a19c3}{}\label{signal-emit_8hpp_a33665abef4d805a760517424509a19c3}
+
+\begin{DoxyCompactList}\small\item\em (implementation detail) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright (c) 2013-\/2014 Regents of the University of California.
+
+This file is part of ndn-\/cxx library (N\+DN C++ library with e\+Xperimental e\+Xtensions).
+
+ndn-\/cxx library is free software\+: you can redistribute it and/or modify it under the terms of the G\+NU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+ndn-\/cxx library is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU Lesser General Public License for more details.
+
+You should have received copies of the G\+NU General Public License and G\+NU Lesser General Public License along with ndn-\/cxx, e.\+g., in C\+O\+P\+Y\+I\+N\+G.\+md file. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}.
+
+See A\+U\+T\+H\+O\+R\+S.\+md for complete list of ndn-\/cxx authors and contributors.
+
+This header provides macros that allows a signal to be emitted from a derived class of its owner.
+
+In \textquotesingle{}protected\textquotesingle{} section of owner class declaration, \hyperlink{signal-emit_8hpp_a8fb62b1067899c74f918fc62a099e8e2}{D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+I\+T(signal\+Name)} From a derived class of owner, this-\/$>$\hyperlink{signal-emit_8hpp_a33665abef4d805a760517424509a19c3}{emit\+Signal(signal\+Name, arg1, arg2)}; 
+
+\subsection{Macro Definition Documentation}
+\index{signal-\/emit.\+hpp@{signal-\/emit.\+hpp}!D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT@{D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT@{D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}!signal-\/emit.\+hpp@{signal-\/emit.\+hpp}}
+\subsubsection[{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}{DECLARE\_SIGNAL\_EMIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{signal\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{signal-emit_8hpp_a8fb62b1067899c74f918fc62a099e8e2}{}\label{signal-emit_8hpp_a8fb62b1067899c74f918fc62a099e8e2}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template}<\textcolor{keyword}{typename} ...TArgs> \(\backslash\)
+  void emit\_##signalName(\textcolor{keyword}{const} TArgs&... args) \(\backslash\)
+  \{ \(\backslash\)
+    signalName(args...); \(\backslash\)
+  \}
+\end{DoxyCode}
+
+
+(implementation detail) declares a \textquotesingle{}emit\+\_\+signal\+Name\textquotesingle{} method 
+
+\begin{DoxyNote}{Note}
+This macro should be used in \textquotesingle{}protected\textquotesingle{} section so that it\textquotesingle{}s accessible by derived classes. 
+
+emit\+\_\+signal\+Name method is implementation detail. Derived classes should use \textquotesingle{}emit\+Signal\textquotesingle{} macro. 
+
+The name \textquotesingle{}emit\+\_\+signal\+Name\textquotesingle{} is an intentional violation of code-\/style rule 2.\+5. 
+
+The method is declared as a template, so that the macro doesn\textquotesingle{}t need argument types. But only argument types that are compatible with Signal declaration will work. 
+\end{DoxyNote}
+
+
+Definition at line 59 of file signal-\/emit.\+hpp.
+
+\index{signal-\/emit.\+hpp@{signal-\/emit.\+hpp}!N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT@{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}}
+\index{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT@{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}!signal-\/emit.\+hpp@{signal-\/emit.\+hpp}}
+\subsubsection[{\texorpdfstring{N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT}{NDN\_CXX\_SIGNAL\_EMIT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+D\+N\+\_\+\+C\+X\+X\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+E\+M\+IT(
+\begin{DoxyParamCaption}
+\item[{}]{signal\+Name, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~emit\+\_\+\#\#signal\+Name(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}\hypertarget{signal-emit_8hpp_a6bb25d95564c12bbcb31449319d7b505}{}\label{signal-emit_8hpp_a6bb25d95564c12bbcb31449319d7b505}
+
+
+(implementation detail) invokes emit\+\_\+signal\+Name method 
+
+\begin{DoxyNote}{Note}
+C99 requires at least one argument to be passed in {\bfseries V\+A\+\_\+\+A\+R\+GS}, thus a Dummy\+Extra\+Arg is expected at the end of {\bfseries V\+A\+\_\+\+A\+R\+GS}, which will be accepted but ignored by Signal\+::operator() overload. 
+\end{DoxyNote}
+
+
+Definition at line 71 of file signal-\/emit.\+hpp.
+

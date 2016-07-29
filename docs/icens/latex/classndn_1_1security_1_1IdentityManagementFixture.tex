@@ -1,0 +1,45 @@
+\hypertarget{classndn_1_1security_1_1IdentityManagementFixture}{}\section{ndn\+:\+:security\+:\+:Identity\+Management\+Fixture Class Reference}
+\label{classndn_1_1security_1_1IdentityManagementFixture}\index{ndn\+::security\+::\+Identity\+Management\+Fixture@{ndn\+::security\+::\+Identity\+Management\+Fixture}}
+
+
+\hyperlink{classndn_1_1security_1_1IdentityManagementFixture}{Identity\+Management\+Fixture} is a test suite level fixture. Test cases in the suite can use this fixture to create identities. Identities added via add\+Identity method are automatically deleted during test teardown.  
+
+
+
+
+{\ttfamily \#include $<$identity-\/management-\/fixture.\+hpp$>$}
+
+Inheritance diagram for ndn\+:\+:security\+:\+:Identity\+Management\+Fixture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.696970cm]{classndn_1_1security_1_1IdentityManagementFixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classndn_1_1security_1_1IdentityManagementFixture_a113c959a4bd54e4685454c69264dbe65}{add\+Identity} (const \hyperlink{classndn_1_1Name}{Name} \&identity, const \hyperlink{classndn_1_1KeyParams}{Key\+Params} \&params=Key\+Chain\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+R\+A\+MS)\hypertarget{classndn_1_1security_1_1IdentityManagementFixture_a113c959a4bd54e4685454c69264dbe65}{}\label{classndn_1_1security_1_1IdentityManagementFixture_a113c959a4bd54e4685454c69264dbe65}
+
+\begin{DoxyCompactList}\small\item\em add identity, return true if succeed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classndn_1_1security_1_1KeyChain}{Key\+Chain} {\bfseries m\+\_\+key\+Chain}\hypertarget{classndn_1_1security_1_1IdentityManagementFixture_a5bcb95f0b775d928dcff1ef6d3668801}{}\label{classndn_1_1security_1_1IdentityManagementFixture_a5bcb95f0b775d928dcff1ef6d3668801}
+
+\item 
+std\+::vector$<$ \hyperlink{classndn_1_1Name}{Name} $>$ {\bfseries m\+\_\+identities}\hypertarget{classndn_1_1security_1_1IdentityManagementFixture_a2fa324781b6bb7ff1efc93399ce355b0}{}\label{classndn_1_1security_1_1IdentityManagementFixture_a2fa324781b6bb7ff1efc93399ce355b0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classndn_1_1security_1_1IdentityManagementFixture}{Identity\+Management\+Fixture} is a test suite level fixture. Test cases in the suite can use this fixture to create identities. Identities added via add\+Identity method are automatically deleted during test teardown. 
+
+Definition at line 39 of file identity-\/management-\/fixture.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/tests/identity-\/management-\/fixture.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/tests/identity-\/management-\/fixture.\+cpp\end{DoxyCompactItemize}

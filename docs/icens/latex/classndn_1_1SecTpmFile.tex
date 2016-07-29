@@ -1,0 +1,614 @@
+\hypertarget{classndn_1_1SecTpmFile}{}\section{ndn\+:\+:Sec\+Tpm\+File Class Reference}
+\label{classndn_1_1SecTpmFile}\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+Inheritance diagram for ndn\+:\+:Sec\+Tpm\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classndn_1_1SecTpmFile}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classndn_1_1SecTpmFile_1_1Error}{Error}
+\item 
+class \hyperlink{classndn_1_1SecTpmFile_1_1Impl}{Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Sec\+Tpm\+File} (const std\+::string \&dir=\char`\"{}\char`\"{})\hypertarget{classndn_1_1SecTpmFile_a02a1dec01a23730c608a15e94be23f53}{}\label{classndn_1_1SecTpmFile_a02a1dec01a23730c608a15e94be23f53}
+
+\item 
+virtual void \hyperlink{classndn_1_1SecTpmFile_a8130c6fd772f9df7c217f2e23a75b0ac}{set\+Tpm\+Password} (const uint8\+\_\+t $\ast$password, size\+\_\+t password\+Length)
+\begin{DoxyCompactList}\small\item\em set password of T\+PM \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecTpmFile_a469d08b7da57d5c57b957654a183c425}{reset\+Tpm\+Password} ()\hypertarget{classndn_1_1SecTpmFile_a469d08b7da57d5c57b957654a183c425}{}\label{classndn_1_1SecTpmFile_a469d08b7da57d5c57b957654a183c425}
+
+\begin{DoxyCompactList}\small\item\em reset password of T\+PM \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecTpmFile_a4a5a4e0967caa1deabfb2c23f737ecb0}{set\+In\+Terminal} (bool in\+Terminal)
+\begin{DoxyCompactList}\small\item\em Set in\+Terminal flag to. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecTpmFile_a78f4e71bfc296ff5087aa651c74540f4}{get\+In\+Terminal} () const\hypertarget{classndn_1_1SecTpmFile_a78f4e71bfc296ff5087aa651c74540f4}{}\label{classndn_1_1SecTpmFile_a78f4e71bfc296ff5087aa651c74540f4}
+
+\begin{DoxyCompactList}\small\item\em Get value of in\+Terminal flag. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecTpmFile_a0bb5839df1c2586fdc23e97cd73900aa}{is\+Locked} ()\hypertarget{classndn_1_1SecTpmFile_a0bb5839df1c2586fdc23e97cd73900aa}{}\label{classndn_1_1SecTpmFile_a0bb5839df1c2586fdc23e97cd73900aa}
+
+\begin{DoxyCompactList}\small\item\em Check if T\+PM is locked. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecTpmFile_ab9eb717a43f2a58c120d55e85ae023c2}{unlock\+Tpm} (const char $\ast$password, size\+\_\+t password\+Length, bool use\+Password)
+\begin{DoxyCompactList}\small\item\em Unlock the T\+PM. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecTpmFile_ab97ec69d98598f394b644bd1eec2f0ba}{generate\+Key\+Pair\+In\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1KeyParams}{Key\+Params} \&params)
+\begin{DoxyCompactList}\small\item\em Generate a pair of asymmetric keys. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecTpmFile_a892dc8d2d5ae781db9d201d89c1c2e92}{delete\+Key\+Pair\+In\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Delete a key pair of asymmetric keys. \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ \hyperlink{classndn_1_1PublicKey}{Public\+Key} $>$ \hyperlink{classndn_1_1SecTpmFile_a03db7dbd71f1de2d3dd007a6ac9ae9d9}{get\+Public\+Key\+From\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Get a public key. \end{DoxyCompactList}\item 
+virtual \hyperlink{classndn_1_1Block}{Block} \hyperlink{classndn_1_1SecTpmFile_a5c0bb1c159f59b17b0b1e1b2255716bd}{sign\+In\+Tpm} (const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Digest\+Algorithm digest\+Algorithm)
+\begin{DoxyCompactList}\small\item\em Sign data. \end{DoxyCompactList}\item 
+virtual Const\+Buffer\+Ptr \hyperlink{classndn_1_1SecTpmFile_afe5abf95ece3735d4e4ebc9318d43e32}{decrypt\+In\+Tpm} (const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, bool is\+Symmetric)
+\begin{DoxyCompactList}\small\item\em Decrypt data. \end{DoxyCompactList}\item 
+virtual Const\+Buffer\+Ptr \hyperlink{classndn_1_1SecTpmFile_ab717c28f93aa7a6a003dcbd2f39638f6}{encrypt\+In\+Tpm} (const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, bool is\+Symmetric)
+\begin{DoxyCompactList}\small\item\em Encrypt data. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecTpmFile_ad18aa031e28e71d5e0040888d0d6664c}{generate\+Symmetric\+Key\+In\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const \hyperlink{classndn_1_1KeyParams}{Key\+Params} \&params)
+\begin{DoxyCompactList}\small\item\em Generate a symmetric key. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecTpmFile_a61c4a0335d537390bef85477499898e5}{does\+Key\+Exist\+In\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Key\+Class key\+Class)
+\begin{DoxyCompactList}\small\item\em Check if a particular key exists. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecTpmFile_a0b47b1652cb625fa8d99df20376e8109}{generate\+Random\+Block} (uint8\+\_\+t $\ast$res, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Generate a random block. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classndn_1_1SecTpmFile_a975872b6f424c74a052e752ad005ca1e}{add\+App\+To\+Acl} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, Key\+Class key\+Class, const std\+::string \&app\+Path, Acl\+Type acl)
+\begin{DoxyCompactList}\small\item\em Add the application into the A\+CL of a particular key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string {\bfseries S\+C\+H\+E\+ME}\hypertarget{classndn_1_1SecTpmFile_af0303378f7e8fde3b7775614acb3c800}{}\label{classndn_1_1SecTpmFile_af0303378f7e8fde3b7775614acb3c800}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string {\bfseries get\+Scheme} ()\hypertarget{classndn_1_1SecTpmFile_aa2ee481fde44b2ac9e66e9a9370027c2}{}\label{classndn_1_1SecTpmFile_aa2ee481fde44b2ac9e66e9a9370027c2}
+
+\item 
+virtual Const\+Buffer\+Ptr \hyperlink{classndn_1_1SecTpmFile_ae0240a307c23799226fa3dea2eeed25a}{export\+Private\+Key\+Pkcs8\+From\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name)
+\begin{DoxyCompactList}\small\item\em Export a private key in P\+K\+CS\#8 format. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecTpmFile_adfe45af85cfca5ed88b49d5b3001e16b}{import\+Private\+Key\+Pkcs8\+Into\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Import a private key from P\+K\+CS\#8 formatted. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classndn_1_1SecTpmFile_a0a4a8bbefb3dfa59af3a862819156379}{import\+Public\+Key\+Pkcs1\+Into\+Tpm} (const \hyperlink{classndn_1_1Name}{Name} \&key\+Name, const uint8\+\_\+t $\ast$buf, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Import a public key in P\+K\+CS\#1 formatted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 35 of file sec-\/tpm-\/file.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!add\+App\+To\+Acl@{add\+App\+To\+Acl}}
+\index{add\+App\+To\+Acl@{add\+App\+To\+Acl}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{add\+App\+To\+Acl(const Name \&key\+Name, Key\+Class key\+Class, const std\+::string \&app\+Path, Acl\+Type acl)}{addAppToAcl(const Name \&keyName, KeyClass keyClass, const std::string \&appPath, AclType acl)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Sec\+Tpm\+File\+::add\+App\+To\+Acl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{Key\+Class}]{key\+Class, }
+\item[{const std\+::string \&}]{app\+Path, }
+\item[{Acl\+Type}]{acl}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a975872b6f424c74a052e752ad005ca1e}{}\label{classndn_1_1SecTpmFile_a975872b6f424c74a052e752ad005ca1e}
+
+
+Add the application into the A\+CL of a particular key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & the name of key \\
+\hline
+{\em key\+Class} & the class of key, e.\+g. Private Key \\
+\hline
+{\em app\+Path} & the absolute path to the application \\
+\hline
+{\em acl} & the new acl of the key \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_a49fe9d4fcdb64160589abb7fb53423ca}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 117 of file sec-\/tpm-\/file.\+hpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!decrypt\+In\+Tpm@{decrypt\+In\+Tpm}}
+\index{decrypt\+In\+Tpm@{decrypt\+In\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{decrypt\+In\+Tpm(const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const Name \&key\+Name, bool is\+Symmetric)}{decryptInTpm(const uint8\_t *data, size\_t dataLength, const Name \&keyName, bool isSymmetric)}}]{\setlength{\rightskip}{0pt plus 5cm}Const\+Buffer\+Ptr ndn\+::\+Sec\+Tpm\+File\+::decrypt\+In\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{data, }
+\item[{size\+\_\+t}]{data\+Length, }
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{bool}]{is\+Symmetric}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_afe5abf95ece3735d4e4ebc9318d43e32}{}\label{classndn_1_1SecTpmFile_afe5abf95ece3735d4e4ebc9318d43e32}
+
+
+Decrypt data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the byte arry to be decrypted. \\
+\hline
+{\em data\+Length} & The length of data. \\
+\hline
+{\em key\+Name} & The name of the decrypting key. \\
+\hline
+{\em is\+Symmetric} & If true symmetric encryption is used, otherwise asymmetric encryption. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decrypted data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecTpm_1_1Error}{Sec\+Tpm\+::\+Error}} & if decryption fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_aac0479a2d251e726e3e1d9f042523302}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 401 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!delete\+Key\+Pair\+In\+Tpm@{delete\+Key\+Pair\+In\+Tpm}}
+\index{delete\+Key\+Pair\+In\+Tpm@{delete\+Key\+Pair\+In\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{delete\+Key\+Pair\+In\+Tpm(const Name \&key\+Name)}{deleteKeyPairInTpm(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Tpm\+File\+::delete\+Key\+Pair\+In\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a892dc8d2d5ae781db9d201d89c1c2e92}{}\label{classndn_1_1SecTpmFile_a892dc8d2d5ae781db9d201d89c1c2e92}
+
+
+Delete a key pair of asymmetric keys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the key pair. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_ac8ab7264a1238207ca0ea5d93fbc7437}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 211 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!does\+Key\+Exist\+In\+Tpm@{does\+Key\+Exist\+In\+Tpm}}
+\index{does\+Key\+Exist\+In\+Tpm@{does\+Key\+Exist\+In\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{does\+Key\+Exist\+In\+Tpm(const Name \&key\+Name, Key\+Class key\+Class)}{doesKeyExistInTpm(const Name \&keyName, KeyClass keyClass)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Sec\+Tpm\+File\+::does\+Key\+Exist\+In\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{Key\+Class}]{key\+Class}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a61c4a0335d537390bef85477499898e5}{}\label{classndn_1_1SecTpmFile_a61c4a0335d537390bef85477499898e5}
+
+
+Check if a particular key exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the key. \\
+\hline
+{\em key\+Class} & The class of the key, e.\+g. K\+E\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+U\+B\+L\+IC, K\+E\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+P\+R\+I\+V\+A\+TE. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key exists, otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_ab4d5e0587257003957c0ff601b656ccb}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 560 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!encrypt\+In\+Tpm@{encrypt\+In\+Tpm}}
+\index{encrypt\+In\+Tpm@{encrypt\+In\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{encrypt\+In\+Tpm(const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const Name \&key\+Name, bool is\+Symmetric)}{encryptInTpm(const uint8\_t *data, size\_t dataLength, const Name \&keyName, bool isSymmetric)}}]{\setlength{\rightskip}{0pt plus 5cm}Const\+Buffer\+Ptr ndn\+::\+Sec\+Tpm\+File\+::encrypt\+In\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{data, }
+\item[{size\+\_\+t}]{data\+Length, }
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{bool}]{is\+Symmetric}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_ab717c28f93aa7a6a003dcbd2f39638f6}{}\label{classndn_1_1SecTpmFile_ab717c28f93aa7a6a003dcbd2f39638f6}
+
+
+Encrypt data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the byte arry to be decrypted. \\
+\hline
+{\em data\+Length} & The length of data. \\
+\hline
+{\em key\+Name} & The name of the encrypting key. \\
+\hline
+{\em is\+Symmetric} & If true symmetric encryption is used, otherwise asymmetric encryption. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encrypted data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecTpm_1_1Error}{Sec\+Tpm\+::\+Error}} & if encryption fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_acb6b0cb176028beeea885d6f3dbf566e}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 463 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!export\+Private\+Key\+Pkcs8\+From\+Tpm@{export\+Private\+Key\+Pkcs8\+From\+Tpm}}
+\index{export\+Private\+Key\+Pkcs8\+From\+Tpm@{export\+Private\+Key\+Pkcs8\+From\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{export\+Private\+Key\+Pkcs8\+From\+Tpm(const Name \&key\+Name)}{exportPrivateKeyPkcs8FromTpm(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}Const\+Buffer\+Ptr ndn\+::\+Sec\+Tpm\+File\+::export\+Private\+Key\+Pkcs8\+From\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_ae0240a307c23799226fa3dea2eeed25a}{}\label{classndn_1_1SecTpmFile_ae0240a307c23799226fa3dea2eeed25a}
+
+
+Export a private key in P\+K\+CS\#8 format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The private key name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The private key info (in P\+K\+CS\#8 format) if exist, otherwise a N\+U\+LL pointer. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_af4eb2f9e9a58751bba27b755e75ca370}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 255 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!generate\+Key\+Pair\+In\+Tpm@{generate\+Key\+Pair\+In\+Tpm}}
+\index{generate\+Key\+Pair\+In\+Tpm@{generate\+Key\+Pair\+In\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{generate\+Key\+Pair\+In\+Tpm(const Name \&key\+Name, const Key\+Params \&params)}{generateKeyPairInTpm(const Name \&keyName, const KeyParams \&params)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Tpm\+File\+::generate\+Key\+Pair\+In\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{const {\bf Key\+Params} \&}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_ab97ec69d98598f394b644bd1eec2f0ba}{}\label{classndn_1_1SecTpmFile_ab97ec69d98598f394b644bd1eec2f0ba}
+
+
+Generate a pair of asymmetric keys. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the key pair. \\
+\hline
+{\em params} & The parameters of key. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecTpm_1_1Error}{Sec\+Tpm\+::\+Error}} & if fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_a2797668238aa960ecbf4c5ef8a87e2be}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 111 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!generate\+Random\+Block@{generate\+Random\+Block}}
+\index{generate\+Random\+Block@{generate\+Random\+Block}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{generate\+Random\+Block(uint8\+\_\+t $\ast$res, size\+\_\+t size)}{generateRandomBlock(uint8\_t *res, size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Sec\+Tpm\+File\+::generate\+Random\+Block (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{res, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a0b47b1652cb625fa8d99df20376e8109}{}\label{classndn_1_1SecTpmFile_a0b47b1652cb625fa8d99df20376e8109}
+
+
+Generate a random block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & The pointer to the generated block \\
+\hline
+{\em size} & The random block size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for success, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_ada4ed9af55fe93bd26d9c4283c34019e}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 588 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!generate\+Symmetric\+Key\+In\+Tpm@{generate\+Symmetric\+Key\+In\+Tpm}}
+\index{generate\+Symmetric\+Key\+In\+Tpm@{generate\+Symmetric\+Key\+In\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{generate\+Symmetric\+Key\+In\+Tpm(const Name \&key\+Name, const Key\+Params \&params)}{generateSymmetricKeyInTpm(const Name \&keyName, const KeyParams \&params)}}]{\setlength{\rightskip}{0pt plus 5cm}void ndn\+::\+Sec\+Tpm\+File\+::generate\+Symmetric\+Key\+In\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{const {\bf Key\+Params} \&}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_ad18aa031e28e71d5e0040888d0d6664c}{}\label{classndn_1_1SecTpmFile_ad18aa031e28e71d5e0040888d0d6664c}
+
+
+Generate a symmetric key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The name of the key. \\
+\hline
+{\em params} & The parameter of the key. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecTpm_1_1Error}{Sec\+Tpm\+::\+Error}} & if key generating fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_a1a3d4df62e4d6eb74b78991069946f06}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 525 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!get\+Public\+Key\+From\+Tpm@{get\+Public\+Key\+From\+Tpm}}
+\index{get\+Public\+Key\+From\+Tpm@{get\+Public\+Key\+From\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{get\+Public\+Key\+From\+Tpm(const Name \&key\+Name)}{getPublicKeyFromTpm(const Name \&keyName)}}]{\setlength{\rightskip}{0pt plus 5cm}shared\+\_\+ptr$<$ {\bf Public\+Key} $>$ ndn\+::\+Sec\+Tpm\+File\+::get\+Public\+Key\+From\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a03db7dbd71f1de2d3dd007a6ac9ae9d9}{}\label{classndn_1_1SecTpmFile_a03db7dbd71f1de2d3dd007a6ac9ae9d9}
+
+
+Get a public key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Name} & The public key name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The public key. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecTpm_1_1Error}{Sec\+Tpm\+::\+Error}} & if public key does not exist in T\+PM. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_aff13bb9e184005f6d3b18aa16271700b}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 224 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!import\+Private\+Key\+Pkcs8\+Into\+Tpm@{import\+Private\+Key\+Pkcs8\+Into\+Tpm}}
+\index{import\+Private\+Key\+Pkcs8\+Into\+Tpm@{import\+Private\+Key\+Pkcs8\+Into\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{import\+Private\+Key\+Pkcs8\+Into\+Tpm(const Name \&key\+Name, const uint8\+\_\+t $\ast$buf, size\+\_\+t size)}{importPrivateKeyPkcs8IntoTpm(const Name \&keyName, const uint8\_t *buf, size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Sec\+Tpm\+File\+::import\+Private\+Key\+Pkcs8\+Into\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_adfe45af85cfca5ed88b49d5b3001e16b}{}\label{classndn_1_1SecTpmFile_adfe45af85cfca5ed88b49d5b3001e16b}
+
+
+Import a private key from P\+K\+CS\#8 formatted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & of size \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+{\em key\+Name} & The private key name. \\
+\hline
+{\em buffer} & Pointer to the first byte of the buffer containing P\+K\+CS\#8-\/encoded private key info \\
+\hline
+{\em buffer\+Size} & Size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if import fails 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_a38cde662778a2a4cdd2911d7c8931d0e}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 265 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!import\+Public\+Key\+Pkcs1\+Into\+Tpm@{import\+Public\+Key\+Pkcs1\+Into\+Tpm}}
+\index{import\+Public\+Key\+Pkcs1\+Into\+Tpm@{import\+Public\+Key\+Pkcs1\+Into\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{import\+Public\+Key\+Pkcs1\+Into\+Tpm(const Name \&key\+Name, const uint8\+\_\+t $\ast$buf, size\+\_\+t size)}{importPublicKeyPkcs1IntoTpm(const Name \&keyName, const uint8\_t *buf, size\_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}bool ndn\+::\+Sec\+Tpm\+File\+::import\+Public\+Key\+Pkcs1\+Into\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{const uint8\+\_\+t $\ast$}]{buffer, }
+\item[{size\+\_\+t}]{buffer\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a0a4a8bbefb3dfa59af3a862819156379}{}\label{classndn_1_1SecTpmFile_a0a4a8bbefb3dfa59af3a862819156379}
+
+
+Import a public key in P\+K\+CS\#1 formatted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & of size \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+{\em key\+Name} & The public key name \\
+\hline
+{\em buffer} & Pointer to the first byte of the buffer containing P\+K\+CS\#1-\/encoded private key info \\
+\hline
+{\em buffer\+Size} & Size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if import fails 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_a66d99ac62036d7ac9369e6a1d6c6e2c7}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 285 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!set\+In\+Terminal@{set\+In\+Terminal}}
+\index{set\+In\+Terminal@{set\+In\+Terminal}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{set\+In\+Terminal(bool in\+Terminal)}{setInTerminal(bool inTerminal)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Sec\+Tpm\+File\+::set\+In\+Terminal (
+\begin{DoxyParamCaption}
+\item[{bool}]{in\+Terminal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a4a5a4e0967caa1deabfb2c23f737ecb0}{}\label{classndn_1_1SecTpmFile_a4a5a4e0967caa1deabfb2c23f737ecb0}
+
+
+Set in\+Terminal flag to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+Terminal} & If the in\+Terminal flag is set, and password is not set, T\+PM may ask for password via terminal. in\+Terminal flag is set by default. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_afa42a8279fc065d472606677f4e1553b}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 65 of file sec-\/tpm-\/file.\+hpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!set\+Tpm\+Password@{set\+Tpm\+Password}}
+\index{set\+Tpm\+Password@{set\+Tpm\+Password}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{set\+Tpm\+Password(const uint8\+\_\+t $\ast$password, size\+\_\+t password\+Length)}{setTpmPassword(const uint8\_t *password, size\_t passwordLength)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ndn\+::\+Sec\+Tpm\+File\+::set\+Tpm\+Password (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{password, }
+\item[{size\+\_\+t}]{password\+Length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a8130c6fd772f9df7c217f2e23a75b0ac}{}\label{classndn_1_1SecTpmFile_a8130c6fd772f9df7c217f2e23a75b0ac}
+
+
+set password of T\+PM 
+
+Password is used to unlock T\+PM when it is locked. You should be cautious when using this method, because remembering password is kind of dangerous.
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The password \\
+\hline
+{\em password\+Length} & The length of password \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_a991200fc09d012168f5c435c9ac53f2f}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 55 of file sec-\/tpm-\/file.\+hpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!sign\+In\+Tpm@{sign\+In\+Tpm}}
+\index{sign\+In\+Tpm@{sign\+In\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{sign\+In\+Tpm(const uint8\+\_\+t $\ast$data, size\+\_\+t data\+Length, const Name \&key\+Name, Digest\+Algorithm digest\+Algorithm)}{signInTpm(const uint8\_t *data, size\_t dataLength, const Name \&keyName, DigestAlgorithm digestAlgorithm)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} ndn\+::\+Sec\+Tpm\+File\+::sign\+In\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{data, }
+\item[{size\+\_\+t}]{data\+Length, }
+\item[{const {\bf Name} \&}]{key\+Name, }
+\item[{Digest\+Algorithm}]{digest\+Algorithm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_a5c0bb1c159f59b17b0b1e1b2255716bd}{}\label{classndn_1_1SecTpmFile_a5c0bb1c159f59b17b0b1e1b2255716bd}
+
+
+Sign data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the byte array to be signed. \\
+\hline
+{\em data\+Length} & The length of data. \\
+\hline
+{\em key\+Name} & The name of the signing key. \\
+\hline
+{\em digest\+Algorithm} & the digest algorithm. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The signature block. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{classndn_1_1SecTpm_1_1Error}{Sec\+Tpm\+::\+Error}} & if signing fails. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_a6f5cc408b3de6ac8b375da21a27e704c}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 305 of file sec-\/tpm-\/file.\+cpp.
+
+\index{ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}!unlock\+Tpm@{unlock\+Tpm}}
+\index{unlock\+Tpm@{unlock\+Tpm}!ndn\+::\+Sec\+Tpm\+File@{ndn\+::\+Sec\+Tpm\+File}}
+\subsubsection[{\texorpdfstring{unlock\+Tpm(const char $\ast$password, size\+\_\+t password\+Length, bool use\+Password)}{unlockTpm(const char *password, size\_t passwordLength, bool usePassword)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ndn\+::\+Sec\+Tpm\+File\+::unlock\+Tpm (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{password, }
+\item[{size\+\_\+t}]{password\+Length, }
+\item[{bool}]{use\+Password}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classndn_1_1SecTpmFile_ab9eb717a43f2a58c120d55e85ae023c2}{}\label{classndn_1_1SecTpmFile_ab9eb717a43f2a58c120d55e85ae023c2}
+
+
+Unlock the T\+PM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The password. \\
+\hline
+{\em password\+Length} & The password size. 0 indicates no password. \\
+\hline
+{\em use\+Password} & True if we want to use the supplied password to unlock the T\+PM. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if T\+PM is unlocked, otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classndn_1_1SecTpm_ae3a84afa288b4c9f26e76844494a35c9}{ndn\+::\+Sec\+Tpm}.
+
+
+
+Definition at line 83 of file sec-\/tpm-\/file.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/sec-\/tpm-\/file.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/ndn-\/cxx/src/security/sec-\/tpm-\/file.\+cpp\end{DoxyCompactItemize}

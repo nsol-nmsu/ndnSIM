@@ -1,0 +1,145 @@
+\hypertarget{classns3_1_1ndn_1_1ContentStore}{}\section{ns3\+:\+:ndn\+:\+:Content\+Store Class Reference}
+\label{classns3_1_1ndn_1_1ContentStore}\index{ns3\+::ndn\+::\+Content\+Store@{ns3\+::ndn\+::\+Content\+Store}}
+
+
+Base class for N\+DN content store.  
+
+
+
+
+{\ttfamily \#include $<$ndn-\/content-\/store.\+hpp$>$}
+
+Inheritance diagram for ns3\+:\+:ndn\+:\+:Content\+Store\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.596538cm]{classns3_1_1ndn_1_1ContentStore}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ {\bfseries Cache\+Hits\+Callback}) (shared\+\_\+ptr$<$ const Interest $>$, shared\+\_\+ptr$<$ const Data $>$)\hypertarget{classns3_1_1ndn_1_1ContentStore_a05ae2b188b68c42084ba64b99ddd3438}{}\label{classns3_1_1ndn_1_1ContentStore_a05ae2b188b68c42084ba64b99ddd3438}
+
+\item 
+typedef void($\ast$ {\bfseries Cache\+Misses\+Callback}) (shared\+\_\+ptr$<$ const Interest $>$)\hypertarget{classns3_1_1ndn_1_1ContentStore_ad4c8b09a75c7f2fd0a6fab0c01acff0d}{}\label{classns3_1_1ndn_1_1ContentStore_ad4c8b09a75c7f2fd0a6fab0c01acff0d}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classns3_1_1ndn_1_1ContentStore_ad51c170246cd8605e737686b1e50f823}{$\sim$\+Content\+Store} ()\hypertarget{classns3_1_1ndn_1_1ContentStore_ad51c170246cd8605e737686b1e50f823}{}\label{classns3_1_1ndn_1_1ContentStore_ad51c170246cd8605e737686b1e50f823}
+
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual shared\+\_\+ptr$<$ Data $>$ \hyperlink{classns3_1_1ndn_1_1ContentStore_a1779f7f6214adcbe0213d85a48d8e94a}{Lookup} (shared\+\_\+ptr$<$ const Interest $>$ interest)=0
+\begin{DoxyCompactList}\small\item\em Find corresponding CS entry for the given interest. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classns3_1_1ndn_1_1ContentStore_a5b89794bb1a8dca3d22e7d02182150d3}{Add} (shared\+\_\+ptr$<$ const Data $>$ data)=0
+\begin{DoxyCompactList}\small\item\em Add a new content to the content store. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classns3_1_1ndn_1_1ContentStore_aedcde1bfcedacd869ecf871dc3939efd}{Print} (std\+::ostream \&os) const =0\hypertarget{classns3_1_1ndn_1_1ContentStore_aedcde1bfcedacd869ecf871dc3939efd}{}\label{classns3_1_1ndn_1_1ContentStore_aedcde1bfcedacd869ecf871dc3939efd}
+
+\begin{DoxyCompactList}\small\item\em Print out content store entries. \end{DoxyCompactList}\item 
+virtual uint32\+\_\+t \hyperlink{classns3_1_1ndn_1_1ContentStore_a17db081106a6c2d9dd188017f7d10000}{Get\+Size} () const =0\hypertarget{classns3_1_1ndn_1_1ContentStore_a17db081106a6c2d9dd188017f7d10000}{}\label{classns3_1_1ndn_1_1ContentStore_a17db081106a6c2d9dd188017f7d10000}
+
+\begin{DoxyCompactList}\small\item\em Get number of entries in content store. \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{cs\+::\+Entry} $>$ \hyperlink{classns3_1_1ndn_1_1ContentStore_ac40f362b20660e8ed128926319d0f5b2}{Begin} ()=0\hypertarget{classns3_1_1ndn_1_1ContentStore_ac40f362b20660e8ed128926319d0f5b2}{}\label{classns3_1_1ndn_1_1ContentStore_ac40f362b20660e8ed128926319d0f5b2}
+
+\begin{DoxyCompactList}\small\item\em Return first element of content store (no order guaranteed) \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{cs\+::\+Entry} $>$ \hyperlink{classns3_1_1ndn_1_1ContentStore_a594d2a548898ef462808a9cbb314c387}{End} ()=0\hypertarget{classns3_1_1ndn_1_1ContentStore_a594d2a548898ef462808a9cbb314c387}{}\label{classns3_1_1ndn_1_1ContentStore_a594d2a548898ef462808a9cbb314c387}
+
+\begin{DoxyCompactList}\small\item\em Return item next after last (no order guaranteed) \end{DoxyCompactList}\item 
+virtual Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{cs\+::\+Entry} $>$ \hyperlink{classns3_1_1ndn_1_1ContentStore_ab0079a0ac5b1efa8d69aeee77c0cac24}{Next} (Ptr$<$ \hyperlink{classns3_1_1ndn_1_1cs_1_1Entry}{cs\+::\+Entry} $>$)=0\hypertarget{classns3_1_1ndn_1_1ContentStore_ab0079a0ac5b1efa8d69aeee77c0cac24}{}\label{classns3_1_1ndn_1_1ContentStore_ab0079a0ac5b1efa8d69aeee77c0cac24}
+
+\begin{DoxyCompactList}\small\item\em Advance the iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Type\+Id \hyperlink{classns3_1_1ndn_1_1ContentStore_a436a18726527fd276fb72315b881e6cc}{Get\+Type\+Id} ()
+\begin{DoxyCompactList}\small\item\em Interface ID. \end{DoxyCompactList}\item 
+static Ptr$<$ \hyperlink{classns3_1_1ndn_1_1ContentStore}{Content\+Store} $>$ \hyperlink{classns3_1_1ndn_1_1ContentStore_ae299e9596f489bfee20cd11429c2423d}{Get\+Content\+Store} (Ptr$<$ Object $>$ node)\hypertarget{classns3_1_1ndn_1_1ContentStore_ae299e9596f489bfee20cd11429c2423d}{}\label{classns3_1_1ndn_1_1ContentStore_ae299e9596f489bfee20cd11429c2423d}
+
+\begin{DoxyCompactList}\small\item\em Static call to cheat python bindings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Traced\+Callback$<$ shared\+\_\+ptr$<$ const Interest $>$, shared\+\_\+ptr$<$ const Data $>$ $>$ \hyperlink{classns3_1_1ndn_1_1ContentStore_a5f11bebf2a8ed2b57902dd44e0179b26}{m\+\_\+cache\+Hits\+Trace}\hypertarget{classns3_1_1ndn_1_1ContentStore_a5f11bebf2a8ed2b57902dd44e0179b26}{}\label{classns3_1_1ndn_1_1ContentStore_a5f11bebf2a8ed2b57902dd44e0179b26}
+
+\begin{DoxyCompactList}\small\item\em trace of cache hits \end{DoxyCompactList}\item 
+Traced\+Callback$<$ shared\+\_\+ptr$<$ const Interest $>$ $>$ \hyperlink{classns3_1_1ndn_1_1ContentStore_a227970bf5b69408d80706cdf5b606d7f}{m\+\_\+cache\+Misses\+Trace}\hypertarget{classns3_1_1ndn_1_1ContentStore_a227970bf5b69408d80706cdf5b606d7f}{}\label{classns3_1_1ndn_1_1ContentStore_a227970bf5b69408d80706cdf5b606d7f}
+
+\begin{DoxyCompactList}\small\item\em trace of cache misses \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for N\+DN content store. 
+
+Particular implementations should implement Lookup, Add, and Print methods 
+
+Definition at line 100 of file ndn-\/content-\/store.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{ns3\+::ndn\+::\+Content\+Store@{ns3\+::ndn\+::\+Content\+Store}!Add@{Add}}
+\index{Add@{Add}!ns3\+::ndn\+::\+Content\+Store@{ns3\+::ndn\+::\+Content\+Store}}
+\subsubsection[{\texorpdfstring{Add(shared\+\_\+ptr$<$ const Data $>$ data)=0}{Add(shared\_ptr< const Data > data)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool ns3\+::ndn\+::\+Content\+Store\+::\+Add (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Data $>$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classns3_1_1ndn_1_1ContentStore_a5b89794bb1a8dca3d22e7d02182150d3}{}\label{classns3_1_1ndn_1_1ContentStore_a5b89794bb1a8dca3d22e7d02182150d3}
+
+
+Add a new content to the content store. 
+
+\begin{DoxyReturn}{Returns}
+true if an existing entry was updated, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_adb15b99cef032bd661f44447be1c9d68}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ Policy $>$}, \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_adb15b99cef032bd661f44447be1c9d68}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ ndn\+S\+I\+M\+::multi\+\_\+policy\+\_\+traits$<$ boost\+::mpl\+::vector2$<$ Policy, ndn\+S\+I\+M\+::lifetime\+\_\+stats\+\_\+policy\+\_\+traits $>$ $>$ $>$}, \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_adb15b99cef032bd661f44447be1c9d68}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ ndn\+S\+I\+M\+::multi\+\_\+policy\+\_\+traits$<$ boost\+::mpl\+::vector2$<$ Policy, ndn\+S\+I\+M\+::freshness\+\_\+policy\+\_\+traits $>$ $>$ $>$}, \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_adb15b99cef032bd661f44447be1c9d68}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ ndn\+S\+I\+M\+::multi\+\_\+policy\+\_\+traits$<$ boost\+::mpl\+::vector2$<$ ndn\+S\+I\+M\+::probability\+\_\+policy\+\_\+traits, Policy $>$ $>$ $>$}, \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_a45ae8dc7e30b96df3b565e69e318e0ab}{ns3\+::ndn\+::cs\+::\+Nocache}, and \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreWithFreshness_a9251bd764c52de8201da5de8259983df}{ns3\+::ndn\+::cs\+::\+Content\+Store\+With\+Freshness$<$ Policy $>$}.
+
+\index{ns3\+::ndn\+::\+Content\+Store@{ns3\+::ndn\+::\+Content\+Store}!Get\+Type\+Id@{Get\+Type\+Id}}
+\index{Get\+Type\+Id@{Get\+Type\+Id}!ns3\+::ndn\+::\+Content\+Store@{ns3\+::ndn\+::\+Content\+Store}}
+\subsubsection[{\texorpdfstring{Get\+Type\+Id()}{GetTypeId()}}]{\setlength{\rightskip}{0pt plus 5cm}Type\+Id ns3\+::ndn\+::\+Content\+Store\+::\+Get\+Type\+Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classns3_1_1ndn_1_1ContentStore_a436a18726527fd276fb72315b881e6cc}{}\label{classns3_1_1ndn_1_1ContentStore_a436a18726527fd276fb72315b881e6cc}
+
+
+Interface ID. 
+
+\begin{DoxyReturn}{Returns}
+interface ID 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file ndn-\/content-\/store.\+cpp.
+
+\index{ns3\+::ndn\+::\+Content\+Store@{ns3\+::ndn\+::\+Content\+Store}!Lookup@{Lookup}}
+\index{Lookup@{Lookup}!ns3\+::ndn\+::\+Content\+Store@{ns3\+::ndn\+::\+Content\+Store}}
+\subsubsection[{\texorpdfstring{Lookup(shared\+\_\+ptr$<$ const Interest $>$ interest)=0}{Lookup(shared\_ptr< const Interest > interest)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual shared\+\_\+ptr$<$Data$>$ ns3\+::ndn\+::\+Content\+Store\+::\+Lookup (
+\begin{DoxyParamCaption}
+\item[{shared\+\_\+ptr$<$ const Interest $>$}]{interest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classns3_1_1ndn_1_1ContentStore_a1779f7f6214adcbe0213d85a48d8e94a}{}\label{classns3_1_1ndn_1_1ContentStore_a1779f7f6214adcbe0213d85a48d8e94a}
+
+
+Find corresponding CS entry for the given interest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interest} & Interest for which matching content store entry will be searched\\
+\hline
+\end{DoxyParams}
+If an entry is found, it is promoted to the top of most recent used entries index, \begin{DoxySeeAlso}{See also}
+m\+\_\+content\+Store 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_acb05ee7b500f71f02a462b705d538a91}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ Policy $>$}, \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_acb05ee7b500f71f02a462b705d538a91}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ ndn\+S\+I\+M\+::multi\+\_\+policy\+\_\+traits$<$ boost\+::mpl\+::vector2$<$ Policy, ndn\+S\+I\+M\+::lifetime\+\_\+stats\+\_\+policy\+\_\+traits $>$ $>$ $>$}, \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_acb05ee7b500f71f02a462b705d538a91}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ ndn\+S\+I\+M\+::multi\+\_\+policy\+\_\+traits$<$ boost\+::mpl\+::vector2$<$ Policy, ndn\+S\+I\+M\+::freshness\+\_\+policy\+\_\+traits $>$ $>$ $>$}, \hyperlink{classns3_1_1ndn_1_1cs_1_1ContentStoreImpl_acb05ee7b500f71f02a462b705d538a91}{ns3\+::ndn\+::cs\+::\+Content\+Store\+Impl$<$ ndn\+S\+I\+M\+::multi\+\_\+policy\+\_\+traits$<$ boost\+::mpl\+::vector2$<$ ndn\+S\+I\+M\+::probability\+\_\+policy\+\_\+traits, Policy $>$ $>$ $>$}, and \hyperlink{classns3_1_1ndn_1_1cs_1_1Nocache_ac2e00baf27c718bd2b766c0e320c5b75}{ns3\+::ndn\+::cs\+::\+Nocache}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/cs/ndn-\/content-\/store.\+hpp\item 
+/home/network/\+N\+S\+O\+L/ndn\+S\+I\+M-\/dev/ns-\/3/src/ndn\+S\+I\+M/model/cs/ndn-\/content-\/store.\+cpp\end{DoxyCompactItemize}
