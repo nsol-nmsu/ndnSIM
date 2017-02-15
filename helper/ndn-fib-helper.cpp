@@ -248,6 +248,14 @@ FibHelper::RemoveRoute(Ptr<Node> node, const Name& prefix, Ptr<Node> otherNode)
 }
 
 void
+FibHelper::RemoveRouteStr(Ptr<Node> node, const std::string& prefix_str, Ptr<Node> otherNode)
+{
+	Name prefix = Name();
+	prefix.append(prefix_str);
+	RemoveRoute(node, prefix, otherNode);
+}
+
+void
 FibHelper::RemoveRoute(const std::string& nodeName, const Name& prefix,
                     const std::string& otherNodeName)
 {

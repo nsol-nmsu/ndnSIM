@@ -143,6 +143,16 @@ public:
   /**
    * @brief remove forwarding entry in FIB (work only with point-to-point links)
    *
+   * \param node Node
+   * \param prefix Routing prefix as a std::string
+   * \param otherNode The other node, to which interests (will be used to infer face id
+   */
+  static void
+  RemoveRouteStr(Ptr<Node> node, const std::string& prefix_str, Ptr<Node> otherNode);
+
+  /**
+   * @brief remove forwarding entry in FIB (work only with point-to-point links)
+   *
    * \param nodeName Node name
    * \param prefix Routing prefix
    * \param otherNode The other node name, to which interests (will be used to infer face id
