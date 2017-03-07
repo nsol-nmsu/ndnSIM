@@ -1,0 +1,13 @@
+0 com_n0 compute
+1 com_n1 compute
+2 com_n2 compute
+3 agg_n0 aggregation
+4 agg_n1 aggregation
+5 agg_n2 aggregation
+6 agg_n3 aggregation
+7 agg_n4 aggregation
+8 agg_n5 aggregation
+9 phy_n0 physical
+10 phy_n1 physical
+11 phy_n2 physical
+12 phy_n3 physical

@@ -65,11 +65,11 @@ main(int argc, char* argv[])
   cmd.Parse(argc, argv);
 
   //--- Count the number of nodes to create
-  ifstream nfile ("src/ndnSIM/examples/test-nodes.txt", std::ios::in);
+  ifstream nfile ("src/ndnSIM/examples/icens-nodes.txt", std::ios::in);
 
   std::string nodeid, nodename, nodetype;
   int nodecount = 0; //number of nodes in topology
-  int numOfPMUs = 2; //number of PMUs
+  int numOfPMUs = 20; //number of PMUs
 
   if (nfile.is_open ()) {
   	while (nfile >> nodeid >> nodename >> nodetype) {
@@ -107,7 +107,7 @@ main(int argc, char* argv[])
   PointToPointHelper p2p;
 
   //--- Get the edges of the graph from file and connect them
-  ifstream efile ("src/ndnSIM/examples/test-edges.txt", std::ios::in);
+  ifstream efile ("src/ndnSIM/examples/icens-edges.txt", std::ios::in);
 
   std::string srcnode, dstnode, bw, delay, edgetype;
 
@@ -178,13 +178,16 @@ main(int argc, char* argv[])
   	aggHelper.SetPrefix("/direct/agg/pmu");
   	aggHelper.SetAttribute("UpstreamPrefix", StringValue("/direct/com/pmu"));
   	aggHelper.SetAttribute("Frequency",  StringValue("0.016"));
+	aggHelper.SetAttribute("Offset", IntegerValue(0));
+	aggHelper.SetAttribute("LifeTime", StringValue("10"));
   	aggHelper.Install(nodes.Get(agg_nodes[i]));
 	// AMI messages
   	aggHelper.SetPrefix("/direct/agg/ami");
   	aggHelper.SetAttribute("UpstreamPrefix", StringValue("/direct/com/ami"));
   	aggHelper.SetAttribute("Frequency",  StringValue("6"));
-        int offset = (rand() % 900) + 100;
-        aggHelper.SetAttribute("Offset", IntegerValue(offset));
+	int offset = (rand() % 900) + 100;
+	aggHelper.SetAttribute("Offset", IntegerValue(offset));
+	aggHelper.SetAttribute("LifeTime", StringValue("10"));
   	aggHelper.Install(nodes.Get(agg_nodes[i]));
 
 	// Setup node to originate prefixes for dynamic routing
@@ -199,18 +202,28 @@ main(int argc, char* argv[])
   ndn::StrategyChoiceHelper::InstallAll("/direct/com/pmu", "/localhost/nfd/strategy/stateful-fw");
   ndn::StrategyChoiceHelper::InstallAll("/direct/com/ami", "/localhost/nfd/strategy/stateful-fw");
 
+/*
+  ndn::StrategyChoiceHelper::InstallAll("/urgent/com/error", "/localhost/nfd/strategy/best-route");
+  ndn::StrategyChoiceHelper::InstallAll("/overlay/com/subscription", "/localhost/nfd/strategy/best-route");
+  ndn::StrategyChoiceHelper::InstallAll("/direct/com/pmu", "/localhost/nfd/strategy/best-route");
+  ndn::StrategyChoiceHelper::InstallAll("/direct/com/ami", "/localhost/nfd/strategy/best-route");
+*/
   // Installing client applications on physical layer nodes
   ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
 
   // Urgent messages are sent by PMUs to compute nodes for error reporting using - "/urgent/com/error"
+
+  // Seed for random offset
+  srand(5);
+
   for (int i=0; i<(int)phy_nodes.size(); i++) {
 	if (i < numOfPMUs) {
 		consumerHelper.SetPrefix("/urgent/com/error/phy" + std::to_string(phy_nodes[i]));
                 consumerHelper.SetAttribute("Frequency", StringValue("360"));
                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 consumerHelper.SetAttribute("PayloadSize", StringValue("60"));
-		//int offset = (rand() % 91) + 1; //random offset between 1 and 91
-	        //consumerHelper.SetAttribute("Offset", IntegerValue(offset));
+		int offset = (rand() % 91) + 1; //random offset between 1 and 91
+	        consumerHelper.SetAttribute("Offset", IntegerValue(offset));
 		consumerHelper.SetAttribute("LifeTime", StringValue("10"));
                 consumerHelper.Install(nodes.Get(phy_nodes[i]));
 	}
@@ -223,8 +236,8 @@ main(int argc, char* argv[])
                 consumerHelper.SetAttribute("Frequency", StringValue("0.016"));
                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 consumerHelper.SetAttribute("PayloadSize", StringValue("90"));
-                //int offset = (rand() % 91) + 1; //random offset between 1 and 91
-                //consumerHelper.SetAttribute("Offset", IntegerValue(offset));
+                consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
+                consumerHelper.SetAttribute("Offset", IntegerValue(0));
                 consumerHelper.SetAttribute("LifeTime", StringValue("10"));
                 consumerHelper.Install(nodes.Get(phy_nodes[i]));
         }
@@ -237,8 +250,7 @@ main(int argc, char* argv[])
                 consumerHelper.SetAttribute("Frequency", StringValue("6"));
                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 consumerHelper.SetAttribute("PayloadSize", StringValue("60"));
-                //int offset = (rand() % 91) + 1; //random offset between 1 and 91
-                //consumerHelper.SetAttribute("Offset", IntegerValue(offset));
+                consumerHelper.SetAttribute("Offset", IntegerValue(0));
                 consumerHelper.SetAttribute("LifeTime", StringValue("10"));
                 consumerHelper.Install(nodes.Get(phy_nodes[i]));
         }
@@ -260,19 +272,46 @@ main(int argc, char* argv[])
   ndn::GlobalRoutingHelper::CalculateRoutes();
   //  ndn::GlobalRoutingHelper::CalculateAllPossibleRoutes();
 
+
+  bool DisableLink = true;
   //Disable and enable half of the links between com to agg nodes, for a number of times during simulation
-  for (int i=0; i<((int)srcedge.size())/2; i++) {
-	Simulator::Schedule(Seconds(120.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-	Simulator::Schedule(Seconds(120.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+  for (int i=0; i<(int)srcedge.size(); i++) {
+	if (DisableLink) {
+		Simulator::Schedule(Seconds(432.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+		Simulator::Schedule(Seconds(432.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
 
-        Simulator::Schedule(Seconds(360.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-        Simulator::Schedule(Seconds(360.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(437.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(437.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
 
-        Simulator::Schedule(Seconds(600.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-        Simulator::Schedule(Seconds(600.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(448.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(448.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
 
-        Simulator::Schedule(Seconds(840.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-        Simulator::Schedule(Seconds(840.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(377.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(377.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+
+                Simulator::Schedule(Seconds(431.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+                Simulator::Schedule(Seconds(431.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+
+                Simulator::Schedule(Seconds(401.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+                Simulator::Schedule(Seconds(401.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+
+                Simulator::Schedule(Seconds(371.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+                Simulator::Schedule(Seconds(371.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+
+                Simulator::Schedule(Seconds(376.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+                Simulator::Schedule(Seconds(376.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+
+                Simulator::Schedule(Seconds(433.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+                Simulator::Schedule(Seconds(433.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+
+                Simulator::Schedule(Seconds(442.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+                Simulator::Schedule(Seconds(442.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+
+		DisableLink = false;
+	}
+	else {
+		DisableLink = true;
+	}
   }
 
   //Open trace file for writing
@@ -317,7 +356,7 @@ main(int argc, char* argv[])
   	Config::ConnectWithoutContext(strcallback, MakeCallback(&SentInterestCallbackAgg));
   }
 
-  Simulator::Stop(Seconds(10.0));
+  Simulator::Stop(Seconds(3600.0));
   Simulator::Run();
   Simulator::Destroy();
 

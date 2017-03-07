@@ -243,8 +243,8 @@ Subscriber::SendPacket()
   shared_ptr<Interest> interest = make_shared<Interest>();
   interest->setNonce(m_rand->GetValue(0, std::numeric_limits<uint32_t>::max()));
   interest->setSubscription(m_subscription);
+  nameWithSequence->appendSequenceNumber(seq);
   if (m_subscription == 0) {
-	nameWithSequence->appendSequenceNumber(seq); //Required for demand-response scheme [payload interest] (also usefule for ndn::AppDelayTracer)
   	interest->setPayload(payload, m_virtualPayloadSize); //add payload to interest
   }
   interest->setName(*nameWithSequence);

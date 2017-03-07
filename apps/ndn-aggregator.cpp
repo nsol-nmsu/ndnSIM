@@ -24,6 +24,8 @@
 #include "ns3/packet.h"
 #include "ns3/simulator.h"
 #include "ns3/integer.h"
+#include "ns3/nstime.h"
+
 
 #include "model/ndn-l3-protocol.hpp"
 #include "helper/ndn-fib-helper.hpp"
@@ -89,7 +91,7 @@ Aggregator::GetTypeId(void)
                     MakeTimeChecker())
 
       .AddAttribute("Offset", "Random offset to randomize sending of interests", IntegerValue(0),
-                    MakeIntegerAccessor(&Aggregator::m_offset), MakeIntegerChecker<int32_t>())
+		    MakeIntegerAccessor(&Aggregator::m_offset), MakeIntegerChecker<int32_t>())
 
       .AddTraceSource("SentInterest", "SentInterest",
                       MakeTraceSourceAccessor(&Aggregator::m_sentInterest),
