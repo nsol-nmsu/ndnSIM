@@ -202,6 +202,7 @@ main(int argc, char* argv[])
   // Installing client applications on physical layer nodes
   ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
 
+/*
   // Urgent messages are sent by PMUs to compute nodes for error reporting using - "/urgent/com/error"
   for (int i=0; i<(int)phy_nodes.size(); i++) {
 	if (i < numOfPMUs) {
@@ -215,7 +216,7 @@ main(int argc, char* argv[])
                 consumerHelper.Install(nodes.Get(phy_nodes[i]));
 	}
   }
-
+*/
   // PMUs sends payload interests to aggregation layer - "/direct/com/pmu"
   for (int i=0; i<(int)phy_nodes.size(); i++) {
         if (i < numOfPMUs) {
@@ -229,7 +230,7 @@ main(int argc, char* argv[])
                 consumerHelper.Install(nodes.Get(phy_nodes[i]));
         }
   }
-
+/*
   // AMIs sends payload interests to aggregation layer - "/direct/com/ami"
   for (int i=0; i<(int)phy_nodes.size(); i++) {
         if (i >= numOfPMUs) {
@@ -255,26 +256,35 @@ main(int argc, char* argv[])
                 consumerHelper.Install(nodes.Get(phy_nodes[i]));
         }
   }
-
+*/
   // Populate routing table for nodes
   ndn::GlobalRoutingHelper::CalculateRoutes();
   //  ndn::GlobalRoutingHelper::CalculateAllPossibleRoutes();
 
+/*
+  bool DisableLink = true;
   //Disable and enable half of the links between com to agg nodes, for a number of times during simulation
-  for (int i=0; i<((int)srcedge.size())/2; i++) {
-	Simulator::Schedule(Seconds(120.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-	Simulator::Schedule(Seconds(120.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+  for (int i=0; i<(int)srcedge.size(); i++) {
+	if (DisableLink) {
+		Simulator::Schedule(Seconds(120.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+		Simulator::Schedule(Seconds(120.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
 
-        Simulator::Schedule(Seconds(360.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-        Simulator::Schedule(Seconds(360.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(360.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(360.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
 
-        Simulator::Schedule(Seconds(600.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-        Simulator::Schedule(Seconds(600.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(600.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(600.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
 
-        Simulator::Schedule(Seconds(840.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-        Simulator::Schedule(Seconds(840.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(840.0), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+        	Simulator::Schedule(Seconds(840.1), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
+
+		DisableLink = false;
+	}
+	else {
+		DisableLink = true;
+	}
   }
-
+*/
   //Open trace file for writing
   tracefile.open("ndn-icens-trace.csv", std::ios::out);
   tracefile << "nodeid, event, name, payloadsize, time" << std::endl;
@@ -317,7 +327,7 @@ main(int argc, char* argv[])
   	Config::ConnectWithoutContext(strcallback, MakeCallback(&SentInterestCallbackAgg));
   }
 
-  Simulator::Stop(Seconds(10.0));
+  Simulator::Stop(Seconds(0.3));
   Simulator::Run();
   Simulator::Destroy();
 

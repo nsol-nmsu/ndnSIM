@@ -177,14 +177,14 @@ main(int argc, char* argv[])
 	// PMU meesages
   	aggHelper.SetPrefix("/direct/agg/pmu");
   	aggHelper.SetAttribute("UpstreamPrefix", StringValue("/direct/com/pmu"));
-  	aggHelper.SetAttribute("Frequency",  StringValue("0.016")); //0.016
+  	aggHelper.SetAttribute("Frequency",  StringValue("0.008"));
 	aggHelper.SetAttribute("Offset", IntegerValue(0));
 	aggHelper.SetAttribute("LifeTime", StringValue("10"));
   	aggHelper.Install(nodes.Get(agg_nodes[i]));
 	// AMI messages
   	aggHelper.SetPrefix("/direct/agg/ami");
   	aggHelper.SetAttribute("UpstreamPrefix", StringValue("/direct/com/ami"));
-  	aggHelper.SetAttribute("Frequency",  StringValue("6")); //6
+  	aggHelper.SetAttribute("Frequency",  StringValue("2"));
 	int offset = (rand() % 900) + 100;
 	aggHelper.SetAttribute("Offset", IntegerValue(offset));
 	aggHelper.SetAttribute("LifeTime", StringValue("10"));
@@ -220,7 +220,7 @@ main(int argc, char* argv[])
   for (int i=0; i<(int)phy_nodes.size(); i++) {
 	if (i < numOfPMUs) {
 		consumerHelper.SetPrefix("/urgent/com/error/phy" + std::to_string(phy_nodes[i]));
-                consumerHelper.SetAttribute("Frequency", StringValue("360"));
+                consumerHelper.SetAttribute("Frequency", StringValue("240"));
                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 consumerHelper.SetAttribute("PayloadSize", StringValue("60"));
 		int offset = (rand() % 91) + 1; //random offset between 1 and 91
@@ -234,7 +234,7 @@ main(int argc, char* argv[])
   for (int i=0; i<(int)phy_nodes.size(); i++) {
         if (i < numOfPMUs) {
                 consumerHelper.SetPrefix("/direct/agg/pmu/phy" + std::to_string(phy_nodes[i]));
-                consumerHelper.SetAttribute("Frequency", StringValue("0.016")); //0.016
+                consumerHelper.SetAttribute("Frequency", StringValue("0.008"));
                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 consumerHelper.SetAttribute("PayloadSize", StringValue("90"));
                 consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
@@ -248,7 +248,7 @@ main(int argc, char* argv[])
   for (int i=0; i<(int)phy_nodes.size(); i++) {
         if (i >= numOfPMUs) {
                 consumerHelper.SetPrefix("/direct/agg/ami/phy" + std::to_string(phy_nodes[i]));
-                consumerHelper.SetAttribute("Frequency", StringValue("6")); //6
+                consumerHelper.SetAttribute("Frequency", StringValue("2"));
                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 consumerHelper.SetAttribute("PayloadSize", StringValue("60"));
                 consumerHelper.SetAttribute("Offset", IntegerValue(0));
@@ -261,10 +261,10 @@ main(int argc, char* argv[])
   for (int i=0; i<(int)phy_nodes.size(); i++) {
         if (i >= numOfPMUs) {
                 consumerHelper.SetPrefix("/overlay/com/subscription");
-                consumerHelper.SetAttribute("Frequency", StringValue("3000")); //3000
+                consumerHelper.SetAttribute("Frequency", StringValue("1500"));
                 consumerHelper.SetAttribute("Subscription", IntegerValue(1));
                 consumerHelper.SetAttribute("Offset", IntegerValue(0));
-                consumerHelper.SetAttribute("LifeTime", StringValue("3010"));
+                consumerHelper.SetAttribute("LifeTime", StringValue("1510"));
                 consumerHelper.Install(nodes.Get(phy_nodes[i]));
         }
   }
