@@ -160,7 +160,7 @@ main(int argc, char* argv[])
   	producerHelper.Install(nodes.Get(com_nodes[i]));
 	// Subscription messages
   	producerHelper.SetPrefix("/overlay/com/subscription");
-  	producerHelper.SetAttribute("Frequency", StringValue("600"));
+  	producerHelper.SetAttribute("Frequency", StringValue("300"));
   	producerHelper.SetAttribute("PayloadSize", StringValue("1024"));
 	producerHelper.Install(nodes.Get(com_nodes[i]));
 
