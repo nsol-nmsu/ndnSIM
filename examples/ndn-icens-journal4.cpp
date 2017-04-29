@@ -215,7 +215,7 @@ main(int argc, char* argv[])
   // Urgent messages are sent by PMUs to compute nodes for error reporting using - "/urgent/com/error"
 
   // Seed for random offset
-  srand(5);
+  srand(20);
 
   for (int i=0; i<(int)phy_nodes.size(); i++) {
 	if (i < numOfPMUs) {
