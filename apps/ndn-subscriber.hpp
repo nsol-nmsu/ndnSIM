@@ -62,7 +62,7 @@ public:
   // From App
   virtual void
   OnData(shared_ptr<const Data> contentObject);
-
+ 
   /**
    * @brief Timeout event
    * @param sequenceNumber time outed sequence number

@@ -97,7 +97,7 @@ main(int argc, char* argv[])
   nfile.close();
 
   // Setting default parameters for PointToPoint links and channels
-  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("5"));
+  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("10"));
 
   // Creating the number of nodes counted in the nodes file
   NodeContainer nodes;
@@ -161,7 +161,7 @@ main(int argc, char* argv[])
 	// Subscription messages
   	producerHelper.SetPrefix("/overlay/com/subscription");
   	producerHelper.SetAttribute("Frequency", StringValue("900"));
-  	producerHelper.SetAttribute("PayloadSize", StringValue("1024"));
+  	producerHelper.SetAttribute("PayloadSize", StringValue("10"));
 	producerHelper.Install(nodes.Get(com_nodes[i]));
 
 	// Setup node to originate prefixes for dynamic routing

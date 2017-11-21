@@ -48,6 +48,9 @@ public:
 
   virtual ~AppLinkService();
 
+void
+DanFree();
+
 public:
   void
   onReceiveInterest(const Interest& interest);
@@ -78,6 +81,10 @@ private:
 private:
   Ptr<Node> m_node;
   Ptr<App> m_app;
+
+//protected:
+  //shared_ptr<const Data> m_data;
+
 };
 
 } // namespace ndn

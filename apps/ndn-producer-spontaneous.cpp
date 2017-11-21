@@ -84,6 +84,7 @@ SpontaneousProducer::SpontaneousProducer()
   :m_firstTime(true)
   , m_subscription(0)
   , m_receivedpayload(0)
+  , m_subDataSize (10)
 {
   NS_LOG_FUNCTION_NOARGS();
 }
@@ -134,13 +135,17 @@ SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
 
   //Normal interest, without a subscription
   if (m_subscription == 0) {
-        SendData(m_prefix);
+        //SendData(m_prefix);
   }
+
 
 }
 
 void
 SpontaneousProducer::SendTimeout(){
+
+	double send_delay = 0.0;
+
         //Do not send initial data before scheduling with the input frequency
         if(m_firstTime) {
             m_firstTime = false;
@@ -148,7 +153,12 @@ SpontaneousProducer::SendTimeout(){
         else {
 	    //Only send data when there is a subscription (1-soft or 2-hard)
 	    if (m_subscription == 1 || m_subscription == 2)
-	    	SendData(m_prefix);
+		//Send multiple chunks of 1Kbyte (1024bytes) data to physical node
+		for (int i=0; i<(int)m_subDataSize; i++) {
+	    		//SendData(m_prefix);
+			send_delay = send_delay + 0.03;
+			Simulator::Schedule(Seconds(send_delay), &SpontaneousProducer::SendData, this, m_prefix);
+		}
 	}
 
         if(m_frequency != 0){
@@ -168,6 +178,8 @@ SpontaneousProducer::SendData(const Name &dataName)
   if (m_subscription == 0 && m_receivedpayload > 0) {
 	m_virtualPayloadSize = 0;
   }
+
+//std::cout << " ack payload= " << m_virtualPayloadSize << std::endl;
 
   auto data = make_shared<Data>();
   data->setName(dataName);
@@ -193,6 +205,8 @@ SpontaneousProducer::SendData(const Name &dataName)
 	NS_LOG_INFO("node(" << GetNode()->GetId() << ") sending DATA for " << data->getName() << " TIME: " << Simulator::Now());
   }
 
+//std::cout << "use count " << data.use_count() << " data content/payload size = " << data->getContent().value_size() << std::endl;
+
   // to create real wire encoding
   data->wireEncode();
 
@@ -201,6 +215,9 @@ SpontaneousProducer::SendData(const Name &dataName)
 
   // Callback for tranmitted subscription data
   m_sentData(GetNode()->GetId(), data);
+
+//std::cout << "APP use count " << data.use_count () << std::endl;
+//m_appLink->DanFree();
 
 }
 

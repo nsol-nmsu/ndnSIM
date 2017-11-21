@@ -47,6 +47,13 @@ AppLinkService::~AppLinkService()
 }
 
 void
+AppLinkService::DanFree()
+{
+//std::cout << "FREE ME!!!!!!!!!!" << std::endl;
+//m_data.reset();
+}
+
+void
 AppLinkService::doSendInterest(const Interest& interest)
 {
   NS_LOG_FUNCTION(this << &interest);
@@ -62,6 +69,8 @@ AppLinkService::doSendData(const Data& data)
 
   // to decouple callbacks
   Simulator::ScheduleNow(&App::OnData, m_app, data.shared_from_this());
+//data.shared_from_this().reset();
+//std::cout << "NDN app service - count " << data.shared_from_this().use_count() << " " << data.getName() << std::endl;
 }
 
 void
@@ -84,7 +93,14 @@ AppLinkService::onReceiveInterest(const Interest& interest)
 void
 AppLinkService::onReceiveData(const Data& data)
 {
+//m_data = data.shared_from_this();
+//const shared_ptr<Data> gg1 = const_pointer_cast<Data>(data.shared_from_this());
+//shared_ptr<const ndn::Data> gg2 = data.shared_from_this();
+
   this->receiveData(data);
+
+//gg2.reset();
+//std::cout << "use count " << gg2.use_count() << std::endl;
 }
 
 void

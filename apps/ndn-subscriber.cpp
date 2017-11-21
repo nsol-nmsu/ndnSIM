@@ -273,6 +273,7 @@ Subscriber::SendPacket()
 void
 Subscriber::OnData(shared_ptr<const Data> data)
 {
+
   if (!m_active)
     return;
 
@@ -283,7 +284,7 @@ Subscriber::OnData(shared_ptr<const Data> data)
   // This could be a problem......
   //uint32_t seq = data->getName().at(-1).toSequenceNumber();
 
-  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << /*m_interestName*/ data->getName() << " TIME: " << Simulator::Now());
+  NS_LOG_INFO("node(" << GetNode()->GetId() << ") < Received DATA for " << data->getName() << " TIME: " << Simulator::Now());
 
   // Callback for received subscription data
   m_receivedData(GetNode()->GetId(), data);
@@ -322,6 +323,10 @@ Subscriber::OnData(shared_ptr<const Data> data)
   	m_rtt->AckSeq(SequenceNumber32(seq));
   }
 
+//data = nullptr;
+
+//data.reset();
+//std::cout << "data received at APP in subscriber " << data->getName() << " count " << data.use_count() << std::endl;
 
 }
 

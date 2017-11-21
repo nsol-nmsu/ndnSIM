@@ -122,6 +122,7 @@ App::OnData(shared_ptr<const Data> data)
 {
   NS_LOG_FUNCTION(this << data);
   m_receivedDatas(data, this, m_face);
+//std::cout << "MAIN APP receives data, use count "  << data.use_count() << " " << data->getName() << std::endl;
 }
 
 void

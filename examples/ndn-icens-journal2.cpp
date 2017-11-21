@@ -97,7 +97,7 @@ main(int argc, char* argv[])
   nfile.close();
 
   // Setting default parameters for PointToPoint links and channels
-  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("5"));
+  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("10"));
 
   // Creating the number of nodes counted in the nodes file
   NodeContainer nodes;
@@ -143,6 +143,9 @@ main(int argc, char* argv[])
   ndn::GlobalRoutingHelper ndnGlobalRoutingHelper;
   ndnGlobalRoutingHelper.Install(nodes);
 
+  // Seed for random AMI offset. This seed produces best unique values
+  srand(1);
+
   // Install server applications on compute nodes
   ndn::AppHelper producerHelper("ns3::ndn::SpontaneousProducer");
   for (int i=0; i<(int)com_nodes.size(); i++) {
@@ -160,7 +163,7 @@ main(int argc, char* argv[])
   	producerHelper.Install(nodes.Get(com_nodes[i]));
 	// Subscription messages
   	producerHelper.SetPrefix("/overlay/com/subscription");
-  	producerHelper.SetAttribute("Frequency", StringValue("600"));
+  	producerHelper.SetAttribute("Frequency", StringValue("3")); //600
   	producerHelper.SetAttribute("PayloadSize", StringValue("1024"));
 	producerHelper.Install(nodes.Get(com_nodes[i]));
 
@@ -214,7 +217,7 @@ main(int argc, char* argv[])
 
   // Urgent messages are sent by PMUs to compute nodes for error reporting using - "/urgent/com/error"
 
-  // Seed for random offset
+  // Seed for random PMU offset. This seed produces best unique values
   srand(10);
 
   for (int i=0; i<(int)phy_nodes.size(); i++) {
@@ -273,6 +276,7 @@ main(int argc, char* argv[])
   //ndn::GlobalRoutingHelper::CalculateRoutes();
   ndn::GlobalRoutingHelper::CalculateAllPossibleRoutes();
 
+/*
   bool DisableLink = true;
   //Disable and enable half of the links between com to agg nodes, for a number of times during simulation
   for (int i=0; i<(int)srcedge.size(); i++) {
@@ -290,6 +294,7 @@ main(int argc, char* argv[])
 		DisableLink = true;
 	}
   }
+*/
 
   //Open trace file for writing
   tracefile.open("ndn-icens-trace.csv", std::ios::out);
@@ -333,7 +338,7 @@ main(int argc, char* argv[])
   	Config::ConnectWithoutContext(strcallback, MakeCallback(&SentInterestCallbackAgg));
   }
 
-  Simulator::Stop(Seconds(3600.0));
+  Simulator::Stop(Seconds(7.0));
   Simulator::Run();
   Simulator::Destroy();
 

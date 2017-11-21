@@ -97,7 +97,7 @@ main(int argc, char* argv[])
   nfile.close();
 
   // Setting default parameters for PointToPoint links and channels
-  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("5"));
+  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("10"));
 
   // Creating the number of nodes counted in the nodes file
   NodeContainer nodes;

@@ -65,7 +65,7 @@ main(int argc, char* argv[])
   cmd.Parse(argc, argv);
 
   //--- Count the number of nodes to create
-  ifstream nfile ("src/ndnSIM/examples/icens-nodes.txt", std::ios::in);
+  ifstream nfile ("src/ndnSIM/examples/icens-nodes2.txt", std::ios::in);
 
   std::string nodeid, nodename, nodetype;
   int nodecount = 0; //number of nodes in topology
@@ -97,7 +97,7 @@ main(int argc, char* argv[])
   nfile.close();
 
   // Setting default parameters for PointToPoint links and channels
-  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("5"));
+  Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("10"));
 
   // Creating the number of nodes counted in the nodes file
   NodeContainer nodes;
@@ -107,7 +107,7 @@ main(int argc, char* argv[])
   PointToPointHelper p2p;
 
   //--- Get the edges of the graph from file and connect them
-  ifstream efile ("src/ndnSIM/examples/icens-edges.txt", std::ios::in);
+  ifstream efile ("src/ndnSIM/examples/icens-edges2.txt", std::ios::in);
 
   std::string srcnode, dstnode, bw, delay, edgetype;
 
@@ -333,7 +333,7 @@ main(int argc, char* argv[])
   	Config::ConnectWithoutContext(strcallback, MakeCallback(&SentInterestCallbackAgg));
   }
 
-  Simulator::Stop(Seconds(3600.0));
+  Simulator::Stop(Seconds(7200.0));
   Simulator::Run();
   Simulator::Destroy();
 

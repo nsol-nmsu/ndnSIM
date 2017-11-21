@@ -58,6 +58,9 @@ main(int argc, char* argv[])
   CommandLine cmd;
   cmd.Parse(argc, argv);
 
+  //GlobalValue::Bind ("SimulatorImplementationType", StringValue ("ns3::RealtimeSimulatorImpl"));
+  //GlobalValue::Bind ("ChecksumEnabled", BooleanValue (true));
+
   // Creating nodes
   NodeContainer nodes;
   nodes.Create(3);
@@ -69,34 +72,62 @@ main(int argc, char* argv[])
 
   // Install NDN stack on all nodes
   ndn::StackHelper ndnHelper;
-  ndnHelper.SetDefaultRoutes(true);
+  //ndnHelper.SetDefaultRoutes(true);
   ndnHelper.InstallAll();
 
+  // Setup dynamic routing
+  ndn::GlobalRoutingHelper ndnGlobalRoutingHelper;
+  ndnGlobalRoutingHelper.Install(nodes);
+
   // Choosing forwarding strategy
-  ndn::StrategyChoiceHelper::InstallAll("/prefix", "/localhost/nfd/strategy/multicast");
+  ndn::StrategyChoiceHelper::InstallAll("/prefix", "/localhost/nfd/strategy/best-route");
 
   // Installing applications
 
+/*
   // Consumer
   ndn::AppHelper consumerHelper("ns3::ndn::ConsumerCbr");
   // Consumer will request /prefix/0, /prefix/1, ...
   consumerHelper.SetPrefix("/prefix");
-  consumerHelper.SetAttribute("Frequency", StringValue("10")); // 10 interests a second
+  consumerHelper.SetAttribute("Frequency", StringValue("100")); // 10 interests a second
   consumerHelper.Install(nodes.Get(0));                        // first node
+*/
 
+ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
+consumerHelper.SetPrefix("/prefix/con");
+consumerHelper.SetAttribute("Frequency", StringValue("1"));
+consumerHelper.SetAttribute("Subscription", IntegerValue(0));
+consumerHelper.SetAttribute("PayloadSize", StringValue("60"));
+consumerHelper.SetAttribute("Offset", IntegerValue(0));
+consumerHelper.SetAttribute("LifeTime", StringValue("1"));
+consumerHelper.Install(nodes.Get(0));
+
+/*
   // Producer
   ndn::AppHelper producerHelper("ns3::ndn::Producer");
   // Producer will reply to all requests starting with /prefix
   producerHelper.SetPrefix("/prefix");
   producerHelper.SetAttribute("PayloadSize", StringValue("1024"));
   producerHelper.Install(nodes.Get(2)); // last node
+*/
 
-  Simulator::Stop(Seconds(20.0));
+ndn::AppHelper producerHelper("ns3::ndn::SpontaneousProducer");
+producerHelper.SetPrefix("/prefix");
+producerHelper.SetAttribute("Frequency", StringValue("0"));
+producerHelper.SetAttribute("PayloadSize", StringValue("1024"));
+producerHelper.Install(nodes.Get(2));
 
+  // Setup node to originate prefixes for dynamic routing
+  ndnGlobalRoutingHelper.AddOrigin("/prefix", nodes.Get(2));
+
+  //ndn::GlobalRoutingHelper::CalculateRoutes();
+  ndn::GlobalRoutingHelper::CalculateAllPossibleRoutes();
+
+  Simulator::Stop(Seconds(2.0));
   Simulator::Run();
   Simulator::Destroy();
-
   return 0;
+
 }
 
 } // namespace ns3
