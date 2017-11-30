@@ -114,7 +114,6 @@ SpontaneousProducer::StopApplication()
 void
 SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
 {
-
   NS_LOG_INFO("SUBSCRIPTION value = " << interest->getSubscription() << " & PAYLOAD = " << interest->getPayloadLength() << " TIME: " << Simulator::Now());
 
   App::OnInterest(interest); // tracing inside

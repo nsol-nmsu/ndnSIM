@@ -208,7 +208,6 @@ Subscriber::StopApplication() // Called at time specified by Stop
 void
 Subscriber::SendPacket()
 {
-
   //Set default size for payload interets
   if (m_subscription == 0 && m_virtualPayloadSize == 0)
 	m_virtualPayloadSize = 4;
