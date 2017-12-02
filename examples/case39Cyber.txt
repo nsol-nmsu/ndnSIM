@@ -107,3 +107,15 @@ BEG_006 #wacsID pmuID
 35 42
 35 46
 END_006
+
+# Link failure
+BEG_100 #fromDevice toDevice timeToStartLinkFail timeToEndLinkFail toDeviceInterface
+3 4 0.0 0.5 1
+17 42 0.0 0.5 1
+END_100
+
+# Background Data injection
+BEG_101 #fromDevice toDevice timeToStartBackgroundData timeToEndBackgroundData dataSize (Mb)
+17 41 1.2 1.5 5
+3 16 1.2 1.5 5
+END_101

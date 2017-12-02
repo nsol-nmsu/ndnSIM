@@ -80,6 +80,9 @@ vector<int> srcedge, dstedge;
 //Trace file
 std::ofstream tracefile;
 
+std::ofstream flowfile;
+
+
 int
 main(int argc, char* argv[])
 {
@@ -93,6 +96,7 @@ main(int argc, char* argv[])
 
   std::string strLine;
   bool gettingNodeCount = false, buildingNetworkTopo = false, attachingWACs = false, attachingPMUs = false, attachingPDCs = false, flowPMUtoPDC = false, flowPMUtoWAC = false;
+  bool failLinks = false;
   std::vector<std::string> netParams;
 
   NodeContainer nodes;
@@ -108,6 +112,8 @@ main(int argc, char* argv[])
 
   ndn::AppHelper producerHelper("ns3::ndn::SpontaneousProducer");
   ndn::AppHelper consumerHelper("ns3::ndn::Subscriber");
+
+  flowfile.open("ndn_all_flows.csv", std::ios::out);
 
   if (configFile.is_open ()) {
         while (std::getline(configFile, strLine)) {
@@ -145,6 +151,10 @@ main(int argc, char* argv[])
 		if(strLine.substr(0,7) == "END_005") { flowPMUtoPDC = false; uniquePMUs.clear(); continue; }
 		if(strLine.substr(0,7) == "BEG_006") { flowPMUtoWAC = true; continue; }
 		if(strLine.substr(0,7) == "END_006") { flowPMUtoWAC = false; continue; }
+		if(strLine.substr(0,7) == "BEG_100") { failLinks = true; continue; }
+                if(strLine.substr(0,7) == "END_100") { failLinks = false; continue; }
+
+
 
 		if(gettingNodeCount == true) {
                         //Getting number of nodes to create
@@ -201,7 +211,7 @@ main(int argc, char* argv[])
 			//Install flow app on PMUs to send data to PDCs
 			if (IsPMUAppInstalled(netParams[1]) == false) {
         			consumerHelper.SetPrefix("/power/pdc/phy" + netParams[1]);
-                		consumerHelper.SetAttribute("Frequency", StringValue("2")); //0.016
+                		consumerHelper.SetAttribute("Frequency", StringValue("0.02")); //0.016 or 0.02
                 		consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 		consumerHelper.SetAttribute("PayloadSize", StringValue("200"));
                 		consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
@@ -214,6 +224,9 @@ main(int argc, char* argv[])
 			flow_pair.first = stoi(netParams[0]);
 			flow_pair.second = stoi(netParams[1]);
 			all_flows.push_back(flow_pair);
+
+			//Write flow to file
+			flowfile << netParams[0] << " " << netParams[1] << " PDC" << std::endl;
 		}
 		else if(flowPMUtoWAC == true) {
 
@@ -233,7 +246,7 @@ main(int argc, char* argv[])
                         //Install flow app on PMUs to send data to WACs
                         if (IsPMUAppInstalled(netParams[1]) == false) {
                                 consumerHelper.SetPrefix("/power/wac/phy" + netParams[1]);
-                                consumerHelper.SetAttribute("Frequency", StringValue("2")); //0.016
+                                consumerHelper.SetAttribute("Frequency", StringValue("0.02")); //0.016 or 0.02
                                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                                 consumerHelper.SetAttribute("PayloadSize", StringValue("200"));
                                 consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
@@ -247,7 +260,19 @@ main(int argc, char* argv[])
                         flow_pair.second = stoi(netParams[1]);
                         all_flows.push_back(flow_pair);
 
-             }
+			//Write flow to file
+                        flowfile << netParams[0] << " " << netParams[1] << " WAC" << std::endl;
+
+                }
+		else if(failLinks == true) {
+
+                        //Schedule the links to fail
+                        netParams = SplitString(strLine);
+
+			Simulator::Schedule(Seconds( ((double)stod(netParams[2])) ), ndn::LinkControlHelper::FailLink, nodes.Get(stoi(netParams[0])), nodes.Get(stoi(netParams[1])));
+                        Simulator::Schedule(Seconds( ((double)stod(netParams[3])) ), ndn::LinkControlHelper::UpLink, nodes.Get(stoi(netParams[0])), nodes.Get(stoi(netParams[1])));
+
+		}
 		else {
 			//std::cout << "reading something else " << strLine << std::endl;
 		}	
@@ -273,25 +298,6 @@ main(int argc, char* argv[])
   ndn::StrategyChoiceHelper::InstallAll("/direct/com/ami", "/localhost/nfd/strategy/best-route");
 */
 
-/*
-  bool DisableLink = true;
-  //Disable and enable half of the links between com to agg nodes, for a number of times during simulation
-  for (int i=0; i<(int)srcedge.size(); i++) {
-	if (DisableLink) {
-
-		for (int j=0; j<360; j++) {
-			int offset = (rand() % 3599) + 1;
-	                Simulator::Schedule(Seconds( ((double)offset) ), ndn::LinkControlHelper::FailLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-                	Simulator::Schedule(Seconds( ((double)offset + 0.1) ), ndn::LinkControlHelper::UpLink, nodes.Get(srcedge[i]), nodes.Get(dstedge[i]));
-		}
-
-		DisableLink = false;
-	}
-	else {
-		DisableLink = true;
-	}
-  }
-*/
 
   //Open trace file for writing
   tracefile.open("ndn-case39cyber-trace.csv", std::ios::out);
@@ -344,7 +350,7 @@ main(int argc, char* argv[])
   //	Config::ConnectWithoutContext(strcallback, MakeCallback(&SentInterestCallbackAgg));
   //}
 
-  Simulator::Stop(Seconds(200.0));
+  Simulator::Stop(Seconds(5.0));
   Simulator::Run();
   Simulator::Destroy();
 
