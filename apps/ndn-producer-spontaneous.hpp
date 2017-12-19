@@ -83,7 +83,7 @@ private:
   Name m_prefixWithoutSequence;
   size_t m_receivedpayload;
   size_t m_subDataSize; //Size of subscription data, in Kbytes
-
+  
   uint32_t m_signature;
   Name m_keyLocator;
 

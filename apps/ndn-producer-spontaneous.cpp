@@ -143,7 +143,7 @@ SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
 void
 SpontaneousProducer::SendTimeout(){
 
-	double send_delay = 0.0;
+	double send_delay = 0.0; //(double)((Simulator::Now().GetNanoSeconds())/1000000000);
 
         //Do not send initial data before scheduling with the input frequency
         if(m_firstTime) {
@@ -155,8 +155,8 @@ SpontaneousProducer::SendTimeout(){
 		//Send multiple chunks of 1Kbyte (1024bytes) data to physical node
 		for (int i=0; i<(int)m_subDataSize; i++) {
 	    		//SendData(m_prefix);
-			send_delay = send_delay + 0.03;
 			Simulator::Schedule(Seconds(send_delay), &SpontaneousProducer::SendData, this, m_prefix);
+			send_delay = send_delay + 0.03;
 		}
 	}
 

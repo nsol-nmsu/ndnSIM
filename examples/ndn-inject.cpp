@@ -92,11 +92,11 @@ main(int argc, char* argv[])
   cmd.Parse(argc, argv);
 
   // Open the configuration file for reading
-  ifstream configFile ("src/ndnSIM/examples/case39Cyber.txt", std::ios::in);
+  ifstream configFile ("src/ndnSIM/examples/case39Cyber2.txt", std::ios::in);
 
   std::string strLine;
   bool gettingNodeCount = false, buildingNetworkTopo = false, attachingWACs = false, attachingPMUs = false, attachingPDCs = false, flowPMUtoPDC = false, flowPMUtoWAC = false;
-  bool failLinks = false, injectData = false;
+  bool failLinks = false;
   std::vector<std::string> netParams;
 
   NodeContainer nodes;
@@ -144,7 +144,6 @@ main(int argc, char* argv[])
  
 			ndn::StrategyChoiceHelper::InstallAll("/power/pdc", "/localhost/nfd/strategy/multicast");
 			ndn::StrategyChoiceHelper::InstallAll("/power/wac", "/localhost/nfd/strategy/multicast");
-			ndn::StrategyChoiceHelper::InstallAll("/power/bgd", "/localhost/nfd/strategy/multicast");
 
 			continue; 
 		}
@@ -154,8 +153,7 @@ main(int argc, char* argv[])
 		if(strLine.substr(0,7) == "END_006") { flowPMUtoWAC = false; continue; }
 		if(strLine.substr(0,7) == "BEG_100") { failLinks = true; continue; }
                 if(strLine.substr(0,7) == "END_100") { failLinks = false; continue; }
-		if(strLine.substr(0,7) == "BEG_101") { injectData = true; continue; }
-                if(strLine.substr(0,7) == "END_101") { injectData = false; continue; }
+
 
 
 		if(gettingNodeCount == true) {
@@ -213,7 +211,7 @@ main(int argc, char* argv[])
 			//Install flow app on PMUs to send data to PDCs
 			if (IsPMUAppInstalled(netParams[1]) == false) {
         			consumerHelper.SetPrefix("/power/pdc/phy" + netParams[1]);
-                		consumerHelper.SetAttribute("Frequency", StringValue("0.02")); //0.016 or 0.02
+                		consumerHelper.SetAttribute("Frequency", StringValue("2")); //0.016 or 0.02
                 		consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 		consumerHelper.SetAttribute("PayloadSize", StringValue("200"));
                 		consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
@@ -248,7 +246,7 @@ main(int argc, char* argv[])
                         //Install flow app on PMUs to send data to WACs
                         if (IsPMUAppInstalled(netParams[1]) == false) {
                                 consumerHelper.SetPrefix("/power/wac/phy" + netParams[1]);
-                                consumerHelper.SetAttribute("Frequency", StringValue("0.02")); //0.016 or 0.02
+                                consumerHelper.SetAttribute("Frequency", StringValue("2")); //0.016 or 0.02
                                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                                 consumerHelper.SetAttribute("PayloadSize", StringValue("200"));
                                 consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
@@ -273,31 +271,6 @@ main(int argc, char* argv[])
 
 			Simulator::Schedule(Seconds( ((double)stod(netParams[2])) ), ndn::LinkControlHelper::FailLink, nodes.Get(stoi(netParams[0])), nodes.Get(stoi(netParams[1])));
                         Simulator::Schedule(Seconds( ((double)stod(netParams[3])) ), ndn::LinkControlHelper::UpLink, nodes.Get(stoi(netParams[0])), nodes.Get(stoi(netParams[1])));
-
-		}
-		else if(injectData == true) {
-
-                        //Schedule the links to fail
-                        netParams = SplitString(strLine);
-
-			//Install app on target node for data injection
-			producerHelper.SetPrefix("/power/bgd");
-                        producerHelper.SetAttribute("Frequency", StringValue("0"));
-                        producerHelper.Install(nodes.Get(std::stoi(netParams[0])));
-
-                        // Setup node to originate prefixes for dynamic routing
-                        ndnGlobalRoutingHelper.AddOrigin("/power/bgd", nodes.Get(std::stoi(netParams[0])));
-
-			consumerHelper.SetPrefix("/power/bgd/phy" + netParams[1]);
-                        consumerHelper.SetAttribute("Frequency", StringValue("0.001")); //0.001 = 1000pps
-                        consumerHelper.SetAttribute("Subscription", IntegerValue(0));
-                        consumerHelper.SetAttribute("PayloadSize", StringValue("1024"));
-                        consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
-                        consumerHelper.SetAttribute("Offset", IntegerValue(0));
-                        consumerHelper.SetAttribute("LifeTime", StringValue("10"));
-                        ApplicationContainer bgdApps = consumerHelper.Install(nodes.Get(std::stoi(netParams[1])));
-                        bgdApps.Start (Seconds (std::stod(netParams[2])));
-                        bgdApps.Stop (Seconds (std::stod(netParams[3])));
 
 		}
 		else {

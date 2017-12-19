@@ -59,7 +59,7 @@ END_002
 
 # RouterID-pmuID
 BEG_003 #fromRouter pmuID
-2 38 5 1 10.0.0.172 255.255.255.252
+2 38 200 1 10.0.0.172 255.255.255.252
 6 39 5 1 10.0.0.176 255.255.255.252
 10 40 5 1 10.0.0.180 255.255.255.252
 17 41 5 1 10.0.0.184 255.255.255.252
@@ -73,38 +73,17 @@ END_003
 
 # RouterID-pdcID
 BEG_004 #fromRouter pdcID
-22 48 5 1 10.0.0.212 255.255.255.252
+2 48 200 1 10.0.0.212 255.255.255.252
 13 49 5 1 10.0.0.216 255.255.255.252
 END_004
 
 # pdcID-pmuIDs Topology
 BEG_005 #pdcID pmuID
 48 38
-48 39
-48 40
-48 41
-48 42
-48 43
-49 43
-49 44
-49 45
-49 46
-49 47
 END_005
 
 # wacsID-pmuIDs Topology
 BEG_006 #wacsID pmuID
-28 39
-28 40
-28 41
-28 42
-28 43
-29 40
-29 45
-29 44
-29 46
-35 38
-35 42
 35 46
 END_006
 
@@ -115,7 +94,7 @@ BEG_100 #fromDevice toDevice timeToStartLinkFail timeToEndLinkFail toDeviceInter
 END_100
 
 # Background Data injection
-BEG_101 #toDevice fromDevice timeToStartBackgroundData timeToEndBackgroundData toDeviceType
-49 47 1.0 2.5 PDC
-30 40 2.0 3.2 WAC
+BEG_101 #fromDevice toDevice timeToStartBackgroundData timeToEndBackgroundData dataSize (Mb)
+17 41 1.2 1.5 5
+3 16 1.2 1.5 5
 END_101
