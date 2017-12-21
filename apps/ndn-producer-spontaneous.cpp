@@ -173,9 +173,9 @@ SpontaneousProducer::SendData(const Name &dataName)
   if (!m_active)
     return;
 
-  //send only ACK (payload size = 0) if payloaded interest was received
+  //send only ACK (payload size = 1) if payloaded interest was received
   if (m_subscription == 0 && m_receivedpayload > 0) {
-	m_virtualPayloadSize = 0;
+	m_virtualPayloadSize = 1;
   }
 
 //std::cout << " ack payload= " << m_virtualPayloadSize << std::endl;

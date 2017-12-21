@@ -144,7 +144,7 @@ main(int argc, char* argv[])
  
 			ndn::StrategyChoiceHelper::InstallAll("/power/pdc", "/localhost/nfd/strategy/multicast");
 			ndn::StrategyChoiceHelper::InstallAll("/power/wac", "/localhost/nfd/strategy/multicast");
-			ndn::StrategyChoiceHelper::InstallAll("/power/bgd", "/localhost/nfd/strategy/multicast");
+			ndn::StrategyChoiceHelper::InstallAll("/power/bgd", "/localhost/nfd/strategy/best-route");
 
 			continue; 
 		}
@@ -294,7 +294,7 @@ main(int argc, char* argv[])
                         consumerHelper.SetAttribute("PayloadSize", StringValue("1024"));
                         consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
                         consumerHelper.SetAttribute("Offset", IntegerValue(0));
-                        consumerHelper.SetAttribute("LifeTime", StringValue("10"));
+                        consumerHelper.SetAttribute("LifeTime", StringValue("1"));
                         ApplicationContainer bgdApps = consumerHelper.Install(nodes.Get(std::stoi(netParams[1])));
                         bgdApps.Start (Seconds (std::stod(netParams[2])));
                         bgdApps.Stop (Seconds (std::stod(netParams[3])));

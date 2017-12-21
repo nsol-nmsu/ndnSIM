@@ -110,12 +110,12 @@ END_006
 
 # Link failure
 BEG_100 #fromDevice toDevice timeToStartLinkFail timeToEndLinkFail toDeviceInterface
-3 4 100.0 100.5 1
-17 42 100.0 100.5 1
+3 4 1.0 1.3 1
+17 42 1.2 1.8 1
 END_100
 
 # Background Data injection
 BEG_101 #toDevice fromDevice timeToStartBackgroundData timeToEndBackgroundData toDeviceType
-49 47 1.0 2.5 PDC
-30 40 2.0 3.2 WAC
+49 47 1.0 1.5 PDC
+30 40 2.2 2.6 WAC
 END_101
