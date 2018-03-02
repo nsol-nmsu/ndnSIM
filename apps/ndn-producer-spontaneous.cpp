@@ -134,7 +134,7 @@ SpontaneousProducer::OnInterest(shared_ptr<const Interest> interest)
 
   //Normal interest, without a subscription
   if (m_subscription == 0) {
-        //SendData(m_prefix);
+        SendData(m_prefix);
   }
 
 

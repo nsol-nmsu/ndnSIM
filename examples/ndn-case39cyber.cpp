@@ -102,6 +102,8 @@ main(int argc, char* argv[])
   NodeContainer nodes;
   int nodeCount = 0;
   std::pair<int,int> flow_pair;
+  int bgdNodeCount = 1;
+  std::string bgdNamePrefix;
 
   // Setting default parameters for PointToPoint links and channels
   Config::SetDefault("ns3::DropTailQueue::MaxPackets", StringValue("10"));
@@ -141,10 +143,6 @@ main(int argc, char* argv[])
 			ndnHelper.InstallAll();
 
 			ndnGlobalRoutingHelper.Install(nodes);
- 
-			ndn::StrategyChoiceHelper::InstallAll("/power/pdc", "/localhost/nfd/strategy/multicast");
-			ndn::StrategyChoiceHelper::InstallAll("/power/wac", "/localhost/nfd/strategy/multicast");
-			ndn::StrategyChoiceHelper::InstallAll("/power/bgd", "/localhost/nfd/strategy/best-route");
 
 			continue; 
 		}
@@ -202,17 +200,17 @@ main(int argc, char* argv[])
 
 			//Install app on unique PDC IDs
 			if (IsPDCAppInstalled(netParams[0]) == false) {
-				producerHelper.SetPrefix("/power/pdc");
+				producerHelper.SetPrefix("/power/pdc/data");
         			producerHelper.SetAttribute("Frequency", StringValue("0"));
         			producerHelper.Install(nodes.Get(std::stoi(netParams[0])));
 
 				// Setup node to originate prefixes for dynamic routing
-  				ndnGlobalRoutingHelper.AddOrigin("/power/pdc", nodes.Get(std::stoi(netParams[0])));
+  				ndnGlobalRoutingHelper.AddOrigin("/power/pdc/data", nodes.Get(std::stoi(netParams[0])));
 			}
 
 			//Install flow app on PMUs to send data to PDCs
 			if (IsPMUAppInstalled(netParams[1]) == false) {
-        			consumerHelper.SetPrefix("/power/pdc/phy" + netParams[1]);
+        			consumerHelper.SetPrefix("/power/pdc/data/phy" + netParams[1]);
                 		consumerHelper.SetAttribute("Frequency", StringValue("0.02")); //0.016 or 0.02
                 		consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                 		consumerHelper.SetAttribute("PayloadSize", StringValue("200"));
@@ -237,17 +235,17 @@ main(int argc, char* argv[])
 
                         //Install app on unique PDC IDs
                         if (IsWACAppInstalled(netParams[0]) == false) {
-                                producerHelper.SetPrefix("/power/wac");
+                                producerHelper.SetPrefix("/power/wac/data");
                                 producerHelper.SetAttribute("Frequency", StringValue("0"));
                                 producerHelper.Install(nodes.Get(std::stoi(netParams[0])));
 
                                 // Setup node to originate prefixes for dynamic routing
-                                ndnGlobalRoutingHelper.AddOrigin("/power/wac", nodes.Get(std::stoi(netParams[0])));
+                                ndnGlobalRoutingHelper.AddOrigin("/power/wac/data", nodes.Get(std::stoi(netParams[0])));
                         }
 
                         //Install flow app on PMUs to send data to WACs
                         if (IsPMUAppInstalled(netParams[1]) == false) {
-                                consumerHelper.SetPrefix("/power/wac/phy" + netParams[1]);
+                                consumerHelper.SetPrefix("/power/wac/data/phy" + netParams[1]);
                                 consumerHelper.SetAttribute("Frequency", StringValue("0.02")); //0.016 or 0.02
                                 consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                                 consumerHelper.SetAttribute("PayloadSize", StringValue("200"));
@@ -277,27 +275,29 @@ main(int argc, char* argv[])
 		}
 		else if(injectData == true) {
 
-                        //Schedule the links to fail
                         netParams = SplitString(strLine);
 
 			//Install app on target node for data injection
-			producerHelper.SetPrefix("/power/bgd");
+			bgdNamePrefix = "/power/bgd/dat" + std::to_string(bgdNodeCount);
+			producerHelper.SetPrefix(bgdNamePrefix);
                         producerHelper.SetAttribute("Frequency", StringValue("0"));
                         producerHelper.Install(nodes.Get(std::stoi(netParams[0])));
 
                         // Setup node to originate prefixes for dynamic routing
-                        ndnGlobalRoutingHelper.AddOrigin("/power/bgd", nodes.Get(std::stoi(netParams[0])));
+                        ndnGlobalRoutingHelper.AddOrigin(bgdNamePrefix, nodes.Get(std::stoi(netParams[0])));
 
-			consumerHelper.SetPrefix("/power/bgd/phy" + netParams[1]);
-                        consumerHelper.SetAttribute("Frequency", StringValue("0.001")); //0.001 = 1000pps
+			consumerHelper.SetPrefix(bgdNamePrefix + "/phy" + netParams[1]);
+                        consumerHelper.SetAttribute("Frequency", StringValue("0.0002")); //0.0002 = 5000pps
                         consumerHelper.SetAttribute("Subscription", IntegerValue(0));
                         consumerHelper.SetAttribute("PayloadSize", StringValue("1024"));
                         consumerHelper.SetAttribute("RetransmitPackets", IntegerValue(0));
                         consumerHelper.SetAttribute("Offset", IntegerValue(0));
-                        consumerHelper.SetAttribute("LifeTime", StringValue("1"));
+                        consumerHelper.SetAttribute("LifeTime", StringValue("5"));
                         ApplicationContainer bgdApps = consumerHelper.Install(nodes.Get(std::stoi(netParams[1])));
                         bgdApps.Start (Seconds (std::stod(netParams[2])));
                         bgdApps.Stop (Seconds (std::stod(netParams[3])));
+
+			bgdNodeCount += 1;
 
 		}
 		else {
@@ -313,18 +313,15 @@ main(int argc, char* argv[])
 
   configFile.close();
 
+
+  //Define the routing strategies per prefix
+  ndn::StrategyChoiceHelper::InstallAll("/power/pdc/data", "/localhost/nfd/strategy/multicast");
+  ndn::StrategyChoiceHelper::InstallAll("/power/wac/data", "/localhost/nfd/strategy/multicast");
+  ndn::StrategyChoiceHelper::InstallAll("/power/bgd", "/localhost/nfd/strategy/best-route");
+
   // Populate routing table for nodes
   //ndn::GlobalRoutingHelper::CalculateRoutes();
   ndn::GlobalRoutingHelper::CalculateAllPossibleRoutes();
-
-
-/*
-  ndn::StrategyChoiceHelper::InstallAll("/urgent/com/error", "/localhost/nfd/strategy/best-route");
-  ndn::StrategyChoiceHelper::InstallAll("/overlay/com/subscription", "/localhost/nfd/strategy/best-route");
-  ndn::StrategyChoiceHelper::InstallAll("/direct/com/pmu", "/localhost/nfd/strategy/best-route");
-  ndn::StrategyChoiceHelper::InstallAll("/direct/com/ami", "/localhost/nfd/strategy/best-route");
-*/
-
 
   //Open trace file for writing
   tracefile.open("ndn-case39cyber-trace.csv", std::ios::out);
@@ -377,7 +374,7 @@ main(int argc, char* argv[])
   //	Config::ConnectWithoutContext(strcallback, MakeCallback(&SentInterestCallbackAgg));
   //}
 
-  Simulator::Stop(Seconds(5.0));
+  Simulator::Stop(Seconds(300.0));
   Simulator::Run();
   Simulator::Destroy();
 
@@ -411,7 +408,11 @@ uint32_t GetSourceNodeID (std::string name) {
         pos = remstr.find("/");
         remstr = remstr.substr(pos+1,string::npos);
 
-	//Find fourth occurence of "/" and get source node ID
+	//Find fourth occurence of "/" and get remaining string to its right
+        pos = remstr.find("/");
+        remstr = remstr.substr(pos+1,string::npos);
+
+	//Find fifth occurence of "/" and get source node ID
         pos = remstr.find("/");
         remstr = remstr.substr(3,pos-3);
 
