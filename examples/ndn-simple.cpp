@@ -123,7 +123,7 @@ producerHelper.Install(nodes.Get(2));
   //ndn::GlobalRoutingHelper::CalculateRoutes();
   ndn::GlobalRoutingHelper::CalculateAllPossibleRoutes();
 
-  Simulator::Stop(Seconds(2.0));
+  Simulator::Stop(Seconds(60.0));
   Simulator::Run();
   Simulator::Destroy();
   return 0;
